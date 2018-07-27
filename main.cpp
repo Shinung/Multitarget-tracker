@@ -27,6 +27,8 @@ const char* keys =
     "{ o  out         |                    | Name of result video file | }"
     "{ sl show_logs   |1                   | Show Trackers logs | }"
     "{ g gpu          |0                   | Use OpenCL acceleration | }"
+	"{ d deploy       |0                   | Specify neural network deploy file(.prototxt) | }"
+	"{ w weights      |0                   | Specify weights of neural network file(.caffemodel) | }"
 };
 
 // ----------------------------------------------------------------------
@@ -83,6 +85,19 @@ int main(int argc, char** argv)
         yolo_detector.Process();
         break;
     }
+
+	case 6:
+	{
+		if (!parser.has("deploy") || !parser.has("weights"))
+		{
+			std::cout << "weights file should specify if deploy file is specified." << std::endl;
+			return -1;
+		}
+
+		CustomSSDMobileNetExample custom_ssd_detector(parser);
+		custom_ssd_detector.Process();
+		break;
+	}
 
     default:
         std::cerr << "Wrong example number!" << std::endl;
