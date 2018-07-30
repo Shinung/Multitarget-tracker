@@ -16,9 +16,10 @@ public:
 	void Detect(cv::UMat& colorFrame);
 
 private:
-	cv::dnn::Net m_net;
-
 	void DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop, regions_t& tmpRegions);
+
+private:
+	cv::dnn::Net m_net;
 
 	static const int InWidth = 300;
 	static const int InHeight = 300;

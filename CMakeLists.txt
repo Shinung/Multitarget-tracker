@@ -123,6 +123,10 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
              Detector/pedestrians/c4-pedestrian-detector.cpp
              Detector/SSDMobileNetDetector.cpp
              Detector/YoloDetector.cpp
+             Detector/SSDCustomNetDetector.cpp
+             Detector/gpu_allocator.cpp
+             Detector/CustomSSD.cpp
+             Detector/SSD.cpp
 
              Tracker/Ctracker.cpp
              Tracker/track.cpp
@@ -152,6 +156,11 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
              Detector/pedestrians/c4-pedestrian-detector.h
              Detector/SSDMobileNetDetector.h
              Detector/YoloDetector.h
+             Detector/SSDCustomNetDetector.h
+             Detector/gpu_allocator.h
+             Detector/common.h
+             Detector/CustomSSD.h
+             Detector/SSD.h
 
              Tracker/Ctracker.h
              Tracker/track.h
@@ -292,7 +301,6 @@ if(USE_CAFFE)
     find_package(CUDA)
     detect_cuDNN()
 
-    add_definitions(-DLPRDETECTION_EXPORTS)
     add_definitions(-DCAFFE_VERSION=1.0.0-rc3)
     add_definitions(-DBOOST_ALL_NO_LIB)
     add_definitions(-DUSE_CUDNN)
@@ -300,8 +308,8 @@ if(USE_CAFFE)
     add_definitions(-DOPENCV_VERSION=3)
     add_definitions(-DCMAKE_WINDOWS_BUILD)
     add_definitions(-DGLOG_NO_ABBREVIATED_SEVERITIES)
-    add_definitions(-DGOOGLE_GLOG_DLL_DECL=__declspec(dllimport))
-    add_definitions(-DGOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport))
+    add_definitions("-DGOOGLE_GLOG_DLL_DECL=__declspec(dllimport)")
+    add_definitions("-DGOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport)")
 
     set(CAFFE_INCLUDE_DIR "" CACHE PATH "Caffe include directory")
     set(CAFFE_LIBS_DIR "" CACHE PATH "Caffe library directory")
@@ -347,6 +355,8 @@ if (CMAKE_COMPILER_IS_GNUCXX)
 else(CMAKE_COMPILER_IS_GNUCXX)
     if(USE_CAFFE)
         set(LIBS
+            ${CAFFE_LIBS_DIR}/caffe.lib
+            ${CAFFE_LIBS_DIR}/caffeproto.lib
             ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_system-vc140-mt-1_61.lib
             ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_thread-vc140-mt-1_61.lib
             ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_filesystem-vc140-mt-1_61.lib

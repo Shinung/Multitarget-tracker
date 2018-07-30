@@ -571,7 +571,7 @@ protected:
 		config["confidenceThreshold"] = "0.5";
 		config["maxCropRatio"] = "3.0";
 		config["dnnTarget"] = "DNN_TARGET_OPENCL_FP16";
-		m_detector = std::unique_ptr<BaseDetector>(CreateDetector(tracking::Detectors::SSD_MobileNet, config, m_useLocalTracking, frame));
+		m_detector = std::unique_ptr<BaseDetector>(CreateDetector(tracking::Detectors::SSD_CustomNet, config, m_useLocalTracking, frame));
 		if (!m_detector.get())
 		{
 			return false;
