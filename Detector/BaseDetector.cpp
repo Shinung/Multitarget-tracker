@@ -4,6 +4,7 @@
 #include "PedestrianDetector.h"
 #include "SSDMobileNetDetector.h"
 #include "YoloDetector.h"
+#include "SSDCustomNetDetector.h"
 
 ///
 /// \brief CreateDetector
@@ -67,6 +68,10 @@ BaseDetector* CreateDetector(
     case tracking::Yolo:
         detector = new YoloDetector(collectPoints, gray);
         break;
+
+	case tracking::SSD_CustomNet:
+		detector = new SSDCustomNetDetector(collectPoints, gray);
+		break;
 
     default:
         break;

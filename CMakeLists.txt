@@ -4,6 +4,80 @@
 cmake_minimum_required(VERSION 2.8)
 project(MultitargetTracker)
 
+################################################################################################
+# Short command for cuDNN detection. Believe it soon will be a part of CUDA toolkit distribution.
+# That's why not FindcuDNN.cmake file, but just the macro
+# Usage:
+#   detect_cuDNN()
+function(detect_cuDNN)
+  set(CUDNN_ROOT "" CACHE PATH "CUDNN root folder")
+
+  find_path(CUDNN_INCLUDE cudnn.h
+            PATHS ${CUDNN_ROOT} $ENV{CUDNN_ROOT} ${CUDA_TOOLKIT_INCLUDE}
+            PATH_SUFFIXES include
+            DOC "Path to cuDNN include directory." )
+           
+  unset(_path_suffixes)
+  if(MSVC AND ${CMAKE_SIZEOF_VOID_P} EQUAL 8)
+    set(_path_suffixes PATH_SUFFIXES lib/x64)
+  else()
+    set(_path_suffixes PATH_SUFFIXES lib/Win32)    
+  endif()
+
+  # dynamic libs have different suffix in mac and linux
+  if(APPLE)
+    set(CUDNN_LIB_NAME "libcudnn.dylib")
+  elseif(MSVC)
+    set(CUDNN_LIB_NAME "cudnn")
+  else()
+    set(CUDNN_LIB_NAME "libcudnn.so")
+  endif()
+
+  get_filename_component(__libpath_hist ${CUDA_CUDART_LIBRARY} PATH)
+  find_library(CUDNN_LIBRARY NAMES ${CUDNN_LIB_NAME}
+   PATHS ${CUDNN_ROOT} $ENV{CUDNN_ROOT} ${CUDNN_INCLUDE} ${__libpath_hist} ${__libpath_hist}/../lib
+   ${_path_suffixes}
+   DOC "Path to cuDNN library.")
+  
+  if(CUDNN_INCLUDE AND CUDNN_LIBRARY)
+    set(HAVE_CUDNN  TRUE PARENT_SCOPE)
+    set(CUDNN_FOUND TRUE PARENT_SCOPE)
+
+    file(READ ${CUDNN_INCLUDE}/cudnn.h CUDNN_VERSION_FILE_CONTENTS)
+
+    # cuDNN v3 and beyond
+    string(REGEX MATCH "define CUDNN_MAJOR * +([0-9]+)"
+           CUDNN_VERSION_MAJOR "${CUDNN_VERSION_FILE_CONTENTS}")
+    string(REGEX REPLACE "define CUDNN_MAJOR * +([0-9]+)" "\\1"
+           CUDNN_VERSION_MAJOR "${CUDNN_VERSION_MAJOR}")
+    string(REGEX MATCH "define CUDNN_MINOR * +([0-9]+)"
+           CUDNN_VERSION_MINOR "${CUDNN_VERSION_FILE_CONTENTS}")
+    string(REGEX REPLACE "define CUDNN_MINOR * +([0-9]+)" "\\1"
+           CUDNN_VERSION_MINOR "${CUDNN_VERSION_MINOR}")
+    string(REGEX MATCH "define CUDNN_PATCHLEVEL * +([0-9]+)"
+           CUDNN_VERSION_PATCH "${CUDNN_VERSION_FILE_CONTENTS}")
+    string(REGEX REPLACE "define CUDNN_PATCHLEVEL * +([0-9]+)" "\\1"
+           CUDNN_VERSION_PATCH "${CUDNN_VERSION_PATCH}")
+
+    if(NOT CUDNN_VERSION_MAJOR)
+      set(CUDNN_VERSION "???")
+    else()
+      set(CUDNN_VERSION "${CUDNN_VERSION_MAJOR}.${CUDNN_VERSION_MINOR}.${CUDNN_VERSION_PATCH}")
+    endif()
+
+    message(STATUS "Found cuDNN: ver. ${CUDNN_VERSION} found (include: ${CUDNN_INCLUDE}, library: ${CUDNN_LIBRARY})")
+
+    string(COMPARE LESS "${CUDNN_VERSION_MAJOR}" 3 cuDNNVersionIncompatible)
+    if(cuDNNVersionIncompatible)
+      message(FATAL_ERROR "cuDNN version >3 is required.")
+    endif()
+
+    set(CUDNN_VERSION "${CUDNN_VERSION}" PARENT_SCOPE)
+    mark_as_advanced(CUDNN_INCLUDE CUDNN_LIBRARY CUDNN_ROOT)
+
+  endif()
+endfunction()
+
 unset(CMAKE_CXX_FLAGS CACHE)
 
 find_package(OpenMP)
@@ -212,6 +286,35 @@ if(USE_OCV_BGFG)
     add_definitions(-DUSE_OCV_BGFG)
 endif(USE_OCV_BGFG)
 
+option(USE_CAFFE "Use Specify Caffe library for Custom trained .caffemodel" OFF)
+
+if(USE_CAFFE)
+    find_package(CUDA)
+    detect_cuDNN()
+
+    add_definitions(-DLPRDETECTION_EXPORTS)
+    add_definitions(-DCAFFE_VERSION=1.0.0-rc3)
+    add_definitions(-DBOOST_ALL_NO_LIB)
+    add_definitions(-DUSE_CUDNN)
+    add_definitions(-DUSE_OPENCV)
+    add_definitions(-DOPENCV_VERSION=3)
+    add_definitions(-DCMAKE_WINDOWS_BUILD)
+    add_definitions(-DGLOG_NO_ABBREVIATED_SEVERITIES)
+    add_definitions(-DGOOGLE_GLOG_DLL_DECL=__declspec(dllimport))
+    add_definitions(-DGOOGLE_GLOG_DLL_DECL_FOR_UNITTESTS=__declspec(dllimport))
+
+    set(CAFFE_INCLUDE_DIR "" CACHE PATH "Caffe include directory")
+    set(CAFFE_LIBS_DIR "" CACHE PATH "Caffe library directory")
+    set(CAFFE_DEPENDENCIES_INCLUDE_DIR "" CACHE PATH "Caffe's dependencies include directory")
+    set(CAFFE_DEPENDENCIES_LIBS_DIR "" CACHE PATH "Caffe's dependencies directory")
+
+    INCLUDE_DIRECTORIES(${CAFFE_INCLUDE_DIR})
+    INCLUDE_DIRECTORIES(${CAFFE_DEPENDENCIES_INCLUDE_DIR})
+    INCLUDE_DIRECTORIES(${CAFFE_DEPENDENCIES_INCLUDE_DIR}/boost-1_61)
+    INCLUDE_DIRECTORIES(${CUDA_INCLUDE_DIRS})
+    INCLUDE_DIRECTORIES(${CUDNN_INCLUDE})
+endif(USE_CAFFE)
+
 # ----------------------------------------------------------------------------  
 # создаем проект
 # ----------------------------------------------------------------------------
@@ -237,13 +340,38 @@ endif(USE_OCV_BGFG)
 
 
 if (CMAKE_COMPILER_IS_GNUCXX)
-set(LIBS
-    ${OpenCV_LIBS}
-#    iconv
-)
+    set(LIBS
+        ${OpenCV_LIBS}
+    #    iconv
+    )
 else(CMAKE_COMPILER_IS_GNUCXX)
-set(LIBS
-    ${OpenCV_LIBS}
-)
+    if(USE_CAFFE)
+        set(LIBS
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_system-vc140-mt-1_61.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_thread-vc140-mt-1_61.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_filesystem-vc140-mt-1_61.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_date_time-vc140-mt-1_61.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_chrono-vc140-mt-1_61.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_atomic-vc140-mt-1_61.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/glog.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/gflags.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/libprotobuf.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffehdf5_hl.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffehdf5.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffezlib.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/snappy_static.lib
+            ${CAFFE_DEPENDENCIES_LIBS_DIR}/libopenblas.dll.a
+            ${CUDA_CUDART_LIBRARY}
+            ${CUDA_curand_LIBRARY}
+            ${CUDA_CUBLAS_LIBRARIES}
+            ${CUDNN_LIBRARY}
+            ${OpenCV_LIBS}
+            ntdll.lib
+        )
+    else(USE_CAFFE)
+        set(LIBS
+            ${OpenCV_LIBS}
+        )
+    endif()
 endif()
 TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${LIBS})
