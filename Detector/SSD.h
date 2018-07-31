@@ -82,6 +82,8 @@ public:
 			   float conf_threshold);
 
     virtual DetectedBBoxes Detect(const Mat& img, int N = 5);
+	
+	const std::vector<std::string>& GetLabels() const;
 
 protected:
 	enum class FILTER

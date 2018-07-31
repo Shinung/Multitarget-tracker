@@ -1,5 +1,94 @@
 #include "SSDCustomNetDetector.h"
 #include "nms.h"
+#include "common.h"
+#include "SSD.h"
+
+using namespace caffe;
+using std::string;
+
+/* By using Go as the HTTP server, we have potentially more CPU threads than
+* available GPUs and more threads can be added on the fly by the Go
+* runtime. Therefore we cannot pin the CPU threads to specific GPUs.  Instead,
+* when a CPU thread is ready for inference it will try to retrieve an
+* execution context from a queue of available GPU contexts and then do a
+* cudaSetDevice() to prepare for execution. Multiple contexts can be allocated
+* per GPU. */
+class ExecContext
+{
+public:
+	friend ScopedContext<ExecContext>;
+
+	static bool IsCompatible(int device)
+	{
+		cudaError_t st = cudaSetDevice(device);
+		if (st != cudaSuccess)
+			return false;
+
+		cuda::DeviceInfo info;
+		if (!info.isCompatible())
+			return false;
+
+		return true;
+	}
+
+	ExecContext(const string& model_file,
+		const string& trained_file,
+		const string& mean_file,
+		const string& mean_value,
+		const string& label_file,
+		float iou_threshold,
+		float ios_threshold,
+		float conf_threshold,
+		int device)
+		: device_(device)
+	{
+		cudaError_t st = cudaSetDevice(device_);
+		if (st != cudaSuccess)
+			throw std::invalid_argument("could not set CUDA device");
+
+		allocator_.reset(new GPUAllocator(1024 * 1024 * 128));
+		caffe_context_.reset(new Caffe);
+		Caffe::Set(caffe_context_.get());
+		detector_.reset(new SSD(model_file, trained_file,
+			mean_file, mean_value,
+			label_file,
+			allocator_.get(),
+			iou_threshold, ios_threshold, conf_threshold));
+
+		Caffe::Set(nullptr);
+	}
+
+	SSD* CaffeClassifier()
+	{
+		return detector_.get();
+	}
+
+private:
+	void Activate()
+	{
+		cudaError_t st = cudaSetDevice(device_);
+		if (st != cudaSuccess)
+			throw std::invalid_argument("could not set CUDA device");
+		allocator_->reset();
+		Caffe::Set(caffe_context_.get());
+	}
+
+	void Deactivate()
+	{
+		Caffe::Set(nullptr);
+	}
+
+private:
+	int device_;
+	std::unique_ptr<GPUAllocator> allocator_;
+	std::unique_ptr<Caffe> caffe_context_;
+	std::unique_ptr<SSD> detector_;
+};
+
+struct CustomSSD_ctx
+{
+	ContextPool<ExecContext> pool;
+};
 
 /// \brief SSDCustomNetDetector::SSDMobileNetDetector
 /// \param collectPoints
@@ -11,13 +100,12 @@ SSDCustomNetDetector::SSDCustomNetDetector(
 )
 	:
 	BaseDetector(collectPoints, colorFrame),
-	m_WHRatio(InWidth / (float)InHeight),
+	m_WHRatio(1.f),
 	m_inScaleFactor(0.007843f),
-	m_meanVal(127.5),
+	m_meanVal(127.5f),
 	m_confidenceThreshold(0.5f),
 	m_maxCropRatio(2.0f)
 {
-
 }
 
 ///
@@ -25,6 +113,7 @@ SSDCustomNetDetector::SSDCustomNetDetector(
 ///
 SSDCustomNetDetector::~SSDCustomNetDetector(void)
 {
+	delete mCTX;
 }
 
 ///
@@ -35,7 +124,9 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 {
 	/* Comment by Roy
 	 * Initialize caffe ssd net
-	 * Refer our SSD class constructor(SSD.h / SSD.cpp)
+	 * Refer classifier_initialize function
+	 * in https://github.com/NVIDIA/gpu-rest-engine/blob/master/caffe/classification.cpp
+	 * and check SSD class's constructor how to initialize caffe model.
 	 */
 }
 
@@ -47,10 +138,10 @@ void SSDCustomNetDetector::Detect(cv::UMat& colorFrame)
 {
 	/* Comment by Roy
 	 * Here for forwarding SSD net to detect objects
-	 * Should be combine well between logic in this method and 'Detect' function in our SSD class
+	 * Should be combine well between logic in this method and 'Detect' method in our SSD class
 	 * This logic is assumed that a frame is cropped by crop ratio and each cropped images will input to SSD net.
 	 * Therefore, our trained net(SSD 512x512) was slow. It would have been bottleneck.
-	 * I hope to improve fps if we'll combine our logic and this.
+	 * I hope to improve fps if we'll combine successfully.
 	 */
 	m_regions.clear();
 
@@ -137,7 +228,7 @@ void SSDCustomNetDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop
 	 * Here is ACTUALLY the phase of forwarding SSD net with cropped images.
 	 * I wouldn't like to remove this code because there are some different way to make results from net-output
 	 * with our SSD class.
-	 * our SSD class will make BBox from each detected object but the other hand, this code will make CRegion.
+	 * our SSD class will make BBox from each detected object but, on the other hand, this code will make CRegion.
 	 * Hence, we should make CRegion from our SSD class to integrate with this code.
 	 */
 

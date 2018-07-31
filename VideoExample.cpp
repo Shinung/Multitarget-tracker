@@ -1,4 +1,12 @@
+#include<glog/logging.h>
+
 #include "VideoExample.h"
+
+void GlobalInitGLOG(char*** pargv)
+{
+	FLAGS_alsologtostderr = 1;
+	::google::InitGoogleLogging(*(pargv)[0]);
+}
 
 ///
 /// \brief VideoExample::VideoExample

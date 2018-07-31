@@ -1,12 +1,13 @@
 #pragma once
 
 #include "BaseDetector.h"
-
 ///
 /// \brief The SSDMobileNetDetector class
 ///
 class SSDCustomNetDetector : public BaseDetector
 {
+	typedef struct CustomSSD_ctx CustomSSD_ctx;
+
 public:
 	SSDCustomNetDetector(bool collectPoints, cv::UMat& colorFrame);
 	~SSDCustomNetDetector(void);
@@ -17,16 +18,13 @@ public:
 
 private:
 	void DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop, regions_t& tmpRegions);
-	void SetMean(const std::string& mean_file, const std::string& mean_value);
-	void WrapInputLayer(std::vector<GpuMat>* input_channels);
-	void Preprocess(const Mat& img,
-		std::vector<GpuMat>* input_channels);
 
 private:
+	CustomSSD_ctx* mCTX;
 	cv::dnn::Net m_net;
 
-	static const int InWidth = 300;
-	static const int InHeight = 300;
+	int InWidth;
+	int InHeight;
 	float m_WHRatio;
 	float m_inScaleFactor;
 	float m_meanVal;

@@ -16,6 +16,13 @@
 // ----------------------------------------------------------------------
 
 ///
+/// \brief Initialization GLOG library
+///
+void GlobalInitGLOG(char*** pargv);
+
+// ----------------------------------------------------------------------
+
+///
 /// \brief The VideoExample class
 ///
 class VideoExample
@@ -570,6 +577,7 @@ protected:
 		config["modelConfiguration"] = mDeploy.c_str();
 		config["modelBinary"] = mWeights.c_str();
 		config["labelMap"] = mLabelMap.c_str();
+		config["meanValue"] = "104,117,123";
 		config["confidenceThreshold"] = "0.5";
 		config["maxCropRatio"] = "3.0";
 		config["dnnTarget"] = "DNN_TARGET_OPENCL_FP16";

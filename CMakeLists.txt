@@ -123,11 +123,12 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
              Detector/pedestrians/c4-pedestrian-detector.cpp
              Detector/SSDMobileNetDetector.cpp
              Detector/YoloDetector.cpp
+### Custom code ###########################################################
              Detector/SSDCustomNetDetector.cpp
              Detector/gpu_allocator.cpp
              Detector/CustomSSD.cpp
              Detector/SSD.cpp
-
+###########################################################################
              Tracker/Ctracker.cpp
              Tracker/track.cpp
              Tracker/HungarianAlg/HungarianAlg.cpp
@@ -156,12 +157,13 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
              Detector/pedestrians/c4-pedestrian-detector.h
              Detector/SSDMobileNetDetector.h
              Detector/YoloDetector.h
+### Custom code ###########################################################
              Detector/SSDCustomNetDetector.h
              Detector/gpu_allocator.h
-             Detector/common.h
              Detector/CustomSSD.h
              Detector/SSD.h
-
+             Detector/common.h
+###########################################################################
              Tracker/Ctracker.h
              Tracker/track.h
              Tracker/HungarianAlg/HungarianAlg.h

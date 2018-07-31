@@ -36,6 +36,7 @@ const char* keys =
 
 int main(int argc, char** argv)
 {
+	GlobalInitGLOG(&argv);
     Help();
 
     cv::CommandLineParser parser(argc, argv, keys);

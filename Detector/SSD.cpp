@@ -119,6 +119,11 @@ DetectedBBoxes SSD::Detect(const Mat& img, int N)
     return detectedBoxes;
 }
 
+const std::vector<std::string>& SSD::GetLabels() const
+{
+	return labels_;
+}
+
 std::vector< std::vector<float> > SSD::Predict(const Mat& img)
 {
     Blob<float>* input_layer = net_->input_blobs()[0];
