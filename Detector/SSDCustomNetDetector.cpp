@@ -17,12 +17,7 @@ SSDCustomNetDetector::SSDCustomNetDetector(
 	m_confidenceThreshold(0.5f),
 	m_maxCropRatio(2.0f)
 {
-	m_classNames = { "background",
-		"aeroplane", "bicycle", "bird", "boat",
-		"bottle", "bus", "car", "cat", "chair",
-		"cow", "diningtable", "dog", "horse",
-		"motorbike", "person", "pottedplant",
-		"sheep", "sofa", "train", "tvmonitor" };
+
 }
 
 ///
@@ -38,48 +33,10 @@ SSDCustomNetDetector::~SSDCustomNetDetector(void)
 ///
 bool SSDCustomNetDetector::Init(const config_t& config)
 {
-	auto modelConfiguration = config.find("modelConfiguration");
-	auto modelBinary = config.find("modelBinary");
-	if (modelConfiguration != config.end() && modelBinary != config.end())
-	{
-		m_net = cv::dnn::readNetFromCaffe(modelConfiguration->second, modelBinary->second);
-	}
-
-	auto dnnTarget = config.find("dnnTarget");
-	if (dnnTarget != config.end())
-	{
-		std::map<std::string, cv::dnn::Target> targets;
-		targets["DNN_TARGET_CPU"] = cv::dnn::DNN_TARGET_CPU;
-		targets["DNN_TARGET_OPENCL"] = cv::dnn::DNN_TARGET_OPENCL;
-#if (CV_VERSION_MAJOR >= 4)
-		targets["DNN_TARGET_OPENCL_FP16"] = cv::dnn::DNN_TARGET_OPENCL_FP16;
-		targets["DNN_TARGET_MYRIAD"] = cv::dnn::DNN_TARGET_MYRIAD;
-#endif
-		auto target = targets.find(dnnTarget->second);
-		if (target != std::end(targets))
-		{
-			m_net.setPreferableTarget(target->second);
-		}
-
-	}
-
-	auto confidenceThreshold = config.find("confidenceThreshold");
-	if (confidenceThreshold != config.end())
-	{
-		m_confidenceThreshold = std::stof(confidenceThreshold->second);
-	}
-
-	auto maxCropRatio = config.find("maxCropRatio");
-	if (maxCropRatio != config.end())
-	{
-		m_maxCropRatio = std::stof(maxCropRatio->second);
-		if (m_maxCropRatio < 1.f)
-		{
-			m_maxCropRatio = 1.f;
-		}
-	}
-
-	return !m_net.empty();
+	/* Comment by Roy
+	 * Initialize caffe ssd net
+	 * Refer our SSD class constructor(SSD.h / SSD.cpp)
+	 */
 }
 
 ///
@@ -88,6 +45,13 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 ///
 void SSDCustomNetDetector::Detect(cv::UMat& colorFrame)
 {
+	/* Comment by Roy
+	 * Here for forwarding SSD net to detect objects
+	 * Should be combine well between logic in this method and 'Detect' function in our SSD class
+	 * This logic is assumed that a frame is cropped by crop ratio and each cropped images will input to SSD net.
+	 * Therefore, our trained net(SSD 512x512) was slow. It would have been bottleneck.
+	 * I hope to improve fps if we'll combine our logic and this.
+	 */
 	m_regions.clear();
 
 	regions_t tmpRegions;
@@ -169,6 +133,14 @@ void SSDCustomNetDetector::Detect(cv::UMat& colorFrame)
 ///
 void SSDCustomNetDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop, regions_t& tmpRegions)
 {
+	/* Comment by Roy
+	 * Here is ACTUALLY the phase of forwarding SSD net with cropped images.
+	 * I wouldn't like to remove this code because there are some different way to make results from net-output
+	 * with our SSD class.
+	 * our SSD class will make BBox from each detected object but the other hand, this code will make CRegion.
+	 * Hence, we should make CRegion from our SSD class to integrate with this code.
+	 */
+
 	//Convert Mat to batch of images
 	cv::Mat inputBlob = cv::dnn::blobFromImage(cv::Mat(colorFrame, crop), m_inScaleFactor, cv::Size(InWidth, InHeight), m_meanVal, false, true);
 

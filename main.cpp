@@ -29,6 +29,7 @@ const char* keys =
     "{ g gpu          |0                   | Use OpenCL acceleration | }"
 	"{ d deploy       |0                   | Specify neural network deploy file(.prototxt) | }"
 	"{ w weights      |0                   | Specify weights of neural network file(.caffemodel) | }"
+	"{ l label-map    |0                   | Specify label map of neural network file(.prototxt) | }"
 };
 
 // ----------------------------------------------------------------------
@@ -88,9 +89,9 @@ int main(int argc, char** argv)
 
 	case 6:
 	{
-		if (!parser.has("deploy") || !parser.has("weights"))
+		if (!parser.has("deploy") || !parser.has("weights") || !parser.has("label-map"))
 		{
-			std::cout << "weights file should specify if deploy file is specified." << std::endl;
+			std::cout << "deploy, weights and label-map file should specify if using custom SSD net" << std::endl;
 			return -1;
 		}
 

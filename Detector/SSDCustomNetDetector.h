@@ -17,6 +17,10 @@ public:
 
 private:
 	void DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop, regions_t& tmpRegions);
+	void SetMean(const std::string& mean_file, const std::string& mean_value);
+	void WrapInputLayer(std::vector<GpuMat>* input_channels);
+	void Preprocess(const Mat& img,
+		std::vector<GpuMat>* input_channels);
 
 private:
 	cv::dnn::Net m_net;

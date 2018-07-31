@@ -554,7 +554,8 @@ public:
 		:
 		VideoExample(parser),
 		mDeploy(parser.get<cv::String>("deploy")),
-		mWeights(parser.get<cv::String>("weights"))
+		mWeights(parser.get<cv::String>("weights")),
+		mLabelMap(parser.get<cv::String>("label-map"))
 	{
 	}
 
@@ -568,6 +569,7 @@ protected:
 		config_t config;
 		config["modelConfiguration"] = mDeploy.c_str();
 		config["modelBinary"] = mWeights.c_str();
+		config["labelMap"] = mLabelMap.c_str();
 		config["confidenceThreshold"] = "0.5";
 		config["maxCropRatio"] = "3.0";
 		config["dnnTarget"] = "DNN_TARGET_OPENCL_FP16";
@@ -640,4 +642,5 @@ protected:
 private:
 	cv::String mDeploy;
 	cv::String mWeights;
+	cv::String mLabelMap;
 };
