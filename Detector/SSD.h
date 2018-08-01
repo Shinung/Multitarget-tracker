@@ -77,8 +77,6 @@ public:
                const std::string& mean_value,
                const std::string& label_file,
                GPUAllocator* allocator,
-			   float iou_threshold,
-			   float ios_threshold,
 			   float conf_threshold);
 
     virtual DetectedBBoxes Detect(const Mat& img, int N = 5);
@@ -106,7 +104,7 @@ private:
     GpuMat mean_;
     std::vector<std::string> labels_;
 
-	float iou_, ios_, conf_;
+	float conf_;
 };
 
 #endif

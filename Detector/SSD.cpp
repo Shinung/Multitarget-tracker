@@ -17,15 +17,11 @@ SSD::SSD(const string& model_file,
                        const string& mean_value,
                        const string& label_file,
                        GPUAllocator* allocator,
-					   float iou_threshold,
-					   float ios_threshold,
 					   float conf_threshold)
     : allocator_(allocator),
-	  iou_(iou_threshold),
-	  ios_(ios_threshold),
 	  conf_(conf_threshold)
 {
-	LOG(INFO) << iou_ << " " << ios_ << " " << conf_;
+	LOG(INFO) << conf_;
     Caffe::set_mode(Caffe::GPU);
 
     /* Load the network. */
