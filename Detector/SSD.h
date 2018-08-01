@@ -82,19 +82,13 @@ public:
 			   float conf_threshold);
 
     virtual DetectedBBoxes Detect(const Mat& img, int N = 5);
+	virtual Mat DetectAsMat(const Mat& img);
 	
 	const std::vector<std::string>& GetLabels() const;
+	const std::string& GetLabel(size_t idx) const;
 
 protected:
-	enum class FILTER
-	{
-		IOS,
-		IOU
-	};
-
     std::vector< std::vector<float> > Predict(const Mat& img);
-
-	void filter_bbox(DetectedBBoxes* boxes, FILTER filter, bool near);
 
 private:
     void SetMean(const std::string& mean_file, const std::string& mean_value);

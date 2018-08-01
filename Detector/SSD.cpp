@@ -119,9 +119,30 @@ DetectedBBoxes SSD::Detect(const Mat& img, int N)
     return detectedBoxes;
 }
 
+Mat SSD::DetectAsMat(const Mat& img)
+{
+	std::vector< std::vector<float> > output = Predict(img);
+	cv::Mat detections(output.size(), 7, CV_32F);
+
+	int r = 0;
+	for (auto objInfo : output)
+	{
+		cv::Mat obj(1, objInfo.size(), CV_32F, objInfo.data());
+		obj.copyTo(detections.row(r));
+		r++;
+	}
+
+	return detections;
+}
+
 const std::vector<std::string>& SSD::GetLabels() const
 {
 	return labels_;
+}
+
+const std::string& SSD::GetLabel(size_t idx) const
+{
+	return labels_[idx];
 }
 
 std::vector< std::vector<float> > SSD::Predict(const Mat& img)
@@ -156,150 +177,8 @@ std::vector< std::vector<float> > SSD::Predict(const Mat& img)
         detections.push_back(detection);
         result += 7;
     }
+
     return detections;
-}
-
-static float RectIOU(const Rect& rect1, const Rect& rect2)
-{
-	Rect intersection = rect1 & rect2;
-
-	if (intersection.empty())
-	{
-		return .0f;
-	}
-
-	float u = static_cast<float>(rect1.area() + rect2.area() - intersection.area());
-	//float u = static_cast<float>((rect1 | rect2).area());
-
-	return intersection.area() / u;
-}
-
-static float RectIOS(const Rect& rect1, const Rect& rect2)
-{
-	Rect intersection = rect1 & rect2;
-
-	if (intersection.empty())
-	{
-		return .0f;
-	}
-
-	const Rect& small = rect1.area() < rect2.area() ? rect1 : rect2;
-
-	return static_cast<float>(intersection.area()) / small.area();
-}
-
-void SSD::filter_bbox(DetectedBBoxes* boxes, FILTER filter, bool near)
-{
-	DetectedBBoxes::iterator left_iter, right_iter;
-	bool flag, lessThan;
-	float ios, iou, diff;
-
-	std::sort(boxes->begin(), boxes->end(),
-		[](const BBox& bbox1, const BBox& bbox2)->bool {
-		return bbox1.mBox.tl().x < bbox2.mBox.tl().x;
-	});
-
-	left_iter = boxes->begin();
-	while (left_iter != boxes->end())
-	{
-		const BBox& left = *left_iter;
-		right_iter = left_iter + 1;
-		if (right_iter == boxes->end())
-		{
-			break;
-		}
-		flag = false;
-		while (right_iter != boxes->end())
-		{
-			DetectedBBoxes::iterator victim;
-			const BBox& right = *right_iter;
-
-			switch (filter)
-			{
-				/*
-				bool definitelyLessThan(float a, float b, float epsilon)
-				{
-				return (b - a) > ((fabs(a) < fabs(b) ? fabs(b) : fabs(a)) * epsilon);
-				}
-				*/
-			case FILTER::IOS:
-				ios = RectIOS(left.mBox, right.mBox);
-				diff = ios - ios_;
-
-				if (near)
-				{
-					if (std::fabsf(diff) < std::numeric_limits<float>::epsilon())
-					{
-						right_iter++;
-						continue;
-					}
-				}
-				else
-				{
-					if(ios < ios_ || std::fabsf(diff) < std::numeric_limits<float>::epsilon())
-					{
-						right_iter++;
-						continue;
-					}
-				}
-
-				break;
-			case FILTER::IOU:
-				iou = RectIOU(left.mBox, right.mBox);
-				diff = iou - iou_;
-
-				if (near)
-				{
-					if (std::fabsf(diff) < std::numeric_limits<float>::epsilon())
-					{
-						right_iter++;
-						continue;
-					}
-				}
-				else
-				{
-					if(iou < iou_ || std::fabsf(diff) < std::numeric_limits<float>::epsilon())
-					{
-						right_iter++;
-						continue;
-					}
-				}
-
-				break;
-			default:
-				break;
-			}
-
-			diff = std::fabsf(left.mConf - right.mConf);
-			if (diff < std::numeric_limits<float>::epsilon())
-			{
-				victim = std::min(left_iter, right_iter,
-					[](const DetectedBBoxes::iterator& left, const DetectedBBoxes::iterator& right)->bool {
-					return (*left).mBox.area() < (*right).mBox.area();
-				});
-			}
-			else
-			{
-				victim = std::min(left_iter, right_iter,
-					[](const DetectedBBoxes::iterator& left, const DetectedBBoxes::iterator& right)->bool {
-					return (*left).mConf < (*right).mConf;
-				});
-			}
-
-			if (std::distance(victim, left_iter) == 0)
-			{
-				left_iter = boxes->erase(left_iter);
-				flag = true;
-				break;
-			}
-			right_iter = boxes->erase(right_iter);
-		}
-
-		if (!flag)
-		{
-			left_iter++;
-		}
-	}
 }
 
 /* Load the mean file in binaryproto format. */
