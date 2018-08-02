@@ -141,6 +141,11 @@ const std::string& SSD::GetLabel(size_t idx) const
 	return labels_[idx];
 }
 
+const cv::Size& SSD::GetInputGeometry() const
+{
+	return input_geometry_;
+}
+
 std::vector< std::vector<float> > SSD::Predict(const Mat& img)
 {
     Blob<float>* input_layer = net_->input_blobs()[0];
@@ -267,16 +272,30 @@ void SSD::Preprocess(const Mat& host_img,
     GpuMat img(host_img, allocator_);
     /* Convert the input image to the input image format of the network. */
     GpuMat sample(allocator_);
-    if (img.channels() == 3 && num_channels_ == 1)
-        cuda::cvtColor(img, sample, CV_BGR2GRAY);
-    else if (img.channels() == 4 && num_channels_ == 1)
-        cuda::cvtColor(img, sample, CV_BGRA2GRAY);
-    else if (img.channels() == 4 && num_channels_ == 3)
-        cuda::cvtColor(img, sample, CV_BGRA2BGR);
-    else if (img.channels() == 1 && num_channels_ == 3)
-        cuda::cvtColor(img, sample, CV_GRAY2BGR);
-    else
-        sample = img;
+
+#if (CV_MAJOR_VERSION > 3)
+	if (img.channels() == 3 && num_channels_ == 1)
+		cuda::cvtColor(img, sample, COLOR_BGR2GRAY);
+	else if (img.channels() == 4 && num_channels_ == 1)
+		cuda::cvtColor(img, sample, COLOR_BGR2GRAY);
+	else if (img.channels() == 4 && num_channels_ == 3)
+		cuda::cvtColor(img, sample, COLOR_BGRA2BGR);
+	else if (img.channels() == 1 && num_channels_ == 3)
+		cuda::cvtColor(img, sample, COLOR_GRAY2BGR);
+	else
+		sample = img;
+#else
+	if (img.channels() == 3 && num_channels_ == 1)
+		cuda::cvtColor(img, sample, CV_BGR2GRAY);
+	else if (img.channels() == 4 && num_channels_ == 1)
+		cuda::cvtColor(img, sample, CV_BGRA2GRAY);
+	else if (img.channels() == 4 && num_channels_ == 3)
+		cuda::cvtColor(img, sample, CV_BGRA2BGR);
+	else if (img.channels() == 1 && num_channels_ == 3)
+		cuda::cvtColor(img, sample, CV_GRAY2BGR);
+	else
+		sample = img;
+#endif
 
     GpuMat sample_resized(allocator_);
     if (sample.size() != input_geometry_)

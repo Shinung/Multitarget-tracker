@@ -84,6 +84,7 @@ public:
 	
 	const std::vector<std::string>& GetLabels() const;
 	const std::string& GetLabel(size_t idx) const;
+	const cv::Size& GetInputGeometry() const;
 
 protected:
     std::vector< std::vector<float> > Predict(const Mat& img);
