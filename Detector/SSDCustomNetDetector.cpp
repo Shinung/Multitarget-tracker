@@ -36,8 +36,6 @@ public:
 		const string& mean_file,
 		const string& mean_value,
 		const string& label_file,
-		float iou_threshold,
-		float ios_threshold,
 		float conf_threshold,
 		int device)
 		: device_(device)
@@ -53,7 +51,7 @@ public:
 			mean_file, mean_value,
 			label_file,
 			allocator_.get(),
-			iou_threshold, ios_threshold, conf_threshold));
+			conf_threshold));
 
 		Caffe::Set(nullptr);
 	}
@@ -128,6 +126,7 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 	 * in https://github.com/NVIDIA/gpu-rest-engine/blob/master/caffe/classification.cpp
 	 * and check SSD class's constructor how to initialize caffe model.
 	 */
+	return false;
 }
 
 ///

@@ -126,7 +126,6 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 ### Custom code ###########################################################
              Detector/SSDCustomNetDetector.cpp
              Detector/gpu_allocator.cpp
-             Detector/CustomSSD.cpp
              Detector/SSD.cpp
 ###########################################################################
              Tracker/Ctracker.cpp
@@ -160,7 +159,6 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 ### Custom code ###########################################################
              Detector/SSDCustomNetDetector.h
              Detector/gpu_allocator.h
-             Detector/CustomSSD.h
              Detector/SSD.h
              Detector/common.h
 ###########################################################################
@@ -317,6 +315,7 @@ if(USE_CAFFE)
     set(CAFFE_LIBS_DIR "" CACHE PATH "Caffe library directory")
     set(CAFFE_DEPENDENCIES_INCLUDE_DIR "" CACHE PATH "Caffe's dependencies include directory")
     set(CAFFE_DEPENDENCIES_LIBS_DIR "" CACHE PATH "Caffe's dependencies directory")
+    set(PYTHON_LIBS_DIR "" CACHE PATH "Python library directory")
 
     INCLUDE_DIRECTORIES(${CAFFE_INCLUDE_DIR})
     INCLUDE_DIRECTORIES(${CAFFE_DEPENDENCIES_INCLUDE_DIR})
@@ -357,21 +356,25 @@ if (CMAKE_COMPILER_IS_GNUCXX)
 else(CMAKE_COMPILER_IS_GNUCXX)
     if(USE_CAFFE)
         set(LIBS
-            ${CAFFE_LIBS_DIR}/caffe.lib
-            ${CAFFE_LIBS_DIR}/caffeproto.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_system-vc140-mt-1_61.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_thread-vc140-mt-1_61.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_filesystem-vc140-mt-1_61.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_date_time-vc140-mt-1_61.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_chrono-vc140-mt-1_61.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_atomic-vc140-mt-1_61.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/glog.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/gflags.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/libprotobuf.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffehdf5_hl.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffehdf5.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffezlib.lib
-            ${CAFFE_DEPENDENCIES_LIBS_DIR}/snappy_static.lib
+            debug ${CAFFE_LIBS_DIR}/caffe-d.lib optimized ${CAFFE_LIBS_DIR}/caffe.lib
+            debug ${CAFFE_LIBS_DIR}/caffeproto-d.lib optimized ${CAFFE_LIBS_DIR}/caffeproto.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_system-vc140-mt-gd-1_61.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_system-vc140-mt-1_61.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_thread-vc140-mt-gd-1_61.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_thread-vc140-mt-1_61.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_filesystem-vc140-mt-gd-1_61.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_filesystem-vc140-mt-1_61.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_chrono-vc140-mt-gd-1_61.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_date_time-vc140-mt-1_61.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_date_time-vc140-mt-gd-1_61.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_chrono-vc140-mt-1_61.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_atomic-vc140-mt-gd-1_61.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_atomic-vc140-mt-1_61.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_python-vc140-mt-gd-1_61.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/boost_python-vc140-mt-1_61.lib
+            ${PYTHON_LIBS_DIR}/python35.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/glogd.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/glog.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/gflagsd.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/gflags.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/libprotobufd.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/libprotobuf.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffehdf5_hl_D.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffehdf5_hl.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffehdf5_D.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffehdf5.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffezlibd.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/caffezlib.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/lmdbd.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/lmdb.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/leveldbd.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/leveldb.lib
+            debug ${CAFFE_DEPENDENCIES_LIBS_DIR}/snappy_staticd.lib optimized ${CAFFE_DEPENDENCIES_LIBS_DIR}/snappy_static.lib
             ${CAFFE_DEPENDENCIES_LIBS_DIR}/libopenblas.dll.a
             ${CUDA_CUDART_LIBRARY}
             ${CUDA_curand_LIBRARY}
