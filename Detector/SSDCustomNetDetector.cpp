@@ -126,7 +126,54 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 	 * in https://github.com/NVIDIA/gpu-rest-engine/blob/master/caffe/classification.cpp
 	 * and check SSD class's constructor how to initialize caffe model.
 	 */
-	return false;
+
+
+	auto modelConfiguration = config.find("modelConfiguration");
+	if (modelConfiguration != config.end())
+	{
+		model_file = modelConfiguration->second;
+	}
+
+	auto modelBinary = config.find("modelBinary");
+	if (modelBinary != config.end())
+	{
+		trained_file = modelBinary->second;
+	}
+
+//	if (modelConfiguration != config.end() && modelBinary != config.end())
+//	{
+//		m_net = cv::dnn::readNetFromCaffe(modelConfiguration->second, modelBinary->second);
+//	}
+
+	auto labelMap = config.find("labelMap");
+
+	auto meanValue = config.find("meanValue");
+	if (meanValue != config.end())
+	{
+		m_meanVal = std::stof(meanValue->second);
+	}
+
+	auto confidenceThreshold = config.find("confidenceThreshold");
+	if (confidenceThreshold != config.end())
+	{
+		m_confidenceThreshold = std::stof(confidenceThreshold->second);
+	}
+
+	auto maxCropRatio = config.find("maxCropRatio");
+	if (maxCropRatio != config.end())
+	{
+		m_maxCropRatio = std::stof(maxCropRatio->second);
+		if (m_maxCropRatio < 1.f)
+		{
+			m_maxCropRatio = 1.f;
+		}
+	}
+
+	// TODO: ExecContext pool
+	// TODO: get size from SSD
+
+
+	return !m_net.empty();
 }
 
 ///
@@ -278,3 +325,4 @@ void SSDCustomNetDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop
 		}
 	}
 }
+
