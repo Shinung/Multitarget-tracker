@@ -88,6 +88,12 @@ struct CustomSSD_ctx
 	ContextPool<ExecContext> pool;
 };
 
+/* Currently, 2 execution contexts are created per GPU. In other words, 2
+* inference tasks can execute in parallel on the same GPU. This helps improve
+* GPU utilization since some kernel operations of inference will not fully use
+* the GPU. */
+constexpr static int kContextsPerDevice = 2;
+
 /// \brief SSDCustomNetDetector::SSDMobileNetDetector
 /// \param collectPoints
 /// \param gray
@@ -171,7 +177,7 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 
 	// TODO: ExecContext pool
 	// TODO: get size from SSD
-
+	
 
 	return !m_net.empty();
 }
