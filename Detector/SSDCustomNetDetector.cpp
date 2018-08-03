@@ -133,33 +133,7 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 	 * and check SSD class's constructor how to initialize caffe model.
 	 */
 
-
-	auto modelConfiguration = config.find("modelConfiguration");
-	if (modelConfiguration != config.end())
-	{
-		model_file = modelConfiguration->second;
-	}
-
-	auto modelBinary = config.find("modelBinary");
-	if (modelBinary != config.end())
-	{
-		trained_file = modelBinary->second;
-	}
-
-//	if (modelConfiguration != config.end() && modelBinary != config.end())
-//	{
-//		m_net = cv::dnn::readNetFromCaffe(modelConfiguration->second, modelBinary->second);
-//	}
-
-	auto labelMap = config.find("labelMap");
-
-	auto meanValue = config.find("meanValue");
-	if (meanValue != config.end())
-	{
-		m_meanVal = std::stof(meanValue->second);
-	}
-
-	auto confidenceThreshold = config.find("confidenceThreshold");
+	auto confidenceThreshold = ;
 	if (confidenceThreshold != config.end())
 	{
 		m_confidenceThreshold = std::stof(confidenceThreshold->second);
@@ -177,7 +151,72 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 
 	// TODO: ExecContext pool
 	// TODO: get size from SSD
-	
+
+	// typedef Size_<int> Size2i;
+	// typedef Size2i Size;
+	// template<typename _Tp> class Size_
+	// _Tp width, _Tp height
+
+	try
+	{
+		int device_count;
+		cudaError_t st = cudaGetDeviceCount(&device_count);
+		if (st != cudaSucces)
+		{
+			throw std::invalid_argument("could not list CUDA devices");
+		}
+
+		// Initialize Localizer
+		ContextPool<ExecContext> pool;
+		for (int dev = 0; dev < device_count; ++dev)
+		{
+			if (!ExecContext::IsCompatible(dev))
+			{
+				LOG(ERROR) << "Skipping device: " << dev;
+				continue;
+			}
+
+			for (int i = 0; i < kContextsPerDevice; ++i)
+			{
+				std::unique_ptr<ExecContext> context(
+						new ExecContext(
+								config.find("modelConfiguration")->second,
+								config.find("modelBinary")->second,
+								"",
+								config.find("meanValue")->second,
+								config.find("labelMap")->second,
+								m_confidenceThreshold,
+								dev
+						)
+				);
+				pool.Push(std::move(context));
+			}
+		}
+
+		if (pool.Size() == 0)
+		{
+			throw std::invalid_argument("no suitable CUDA device");
+		}
+		mCTX = new CustomSSD_ctx{ std::move(pool) };
+
+		{
+			ScopedContext<ExecContext> context(mCTX->pool);
+			SSD* ssd = static_cast<SSD*>(context->CaffeClassifier());
+			InWidth = ssd->GetInputGeometry().width;
+			InHeight = ssd->GetInputGeometry().height;
+		}
+
+		/* Successful CUDA calls can set errno. */
+		errno = 0;
+		return true;
+	}
+	catch (const std::invalid_argument& ex)
+	{
+		LOG(ERROR) << "exception: " << ex.what();
+		errno = EINVAL;
+		return false;
+	}
+
 
 	return !m_net.empty();
 }
