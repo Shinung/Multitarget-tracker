@@ -153,7 +153,7 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 	{
 		int device_count;
 		cudaError_t st = cudaGetDeviceCount(&device_count);
-		if (st != cudaSucces)
+		if (st != cudaSuccess)
 		{
 			throw std::invalid_argument("could not list CUDA devices");
 		}
