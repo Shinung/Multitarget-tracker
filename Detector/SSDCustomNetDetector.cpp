@@ -133,7 +133,7 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 	 * and check SSD class's constructor how to initialize caffe model.
 	 */
 
-	auto confidenceThreshold = ;
+	auto confidenceThreshold = config.find("confidenceThreshold");
 	if (confidenceThreshold != config.end())
 	{
 		m_confidenceThreshold = std::stof(confidenceThreshold->second);
@@ -148,14 +148,6 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 			m_maxCropRatio = 1.f;
 		}
 	}
-
-	// TODO: ExecContext pool
-	// TODO: get size from SSD
-
-	// typedef Size_<int> Size2i;
-	// typedef Size2i Size;
-	// template<typename _Tp> class Size_
-	// _Tp width, _Tp height
 
 	try
 	{
@@ -216,9 +208,6 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 		errno = EINVAL;
 		return false;
 	}
-
-
-	return !m_net.empty();
 }
 
 ///
