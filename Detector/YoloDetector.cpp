@@ -190,7 +190,8 @@ void YoloDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop, region
     m_net.setInput(inputBlob, "data"); //set the network input
 
 #if (CV_VERSION_MAJOR < 4)
-    cv::String outputName = "detection_out";
+    // cv::String outputName = "detection_out";
+	cv::String outputName = cv::String();
 #else
     cv::String outputName = cv::String();
 #endif
