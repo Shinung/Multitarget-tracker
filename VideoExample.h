@@ -475,10 +475,14 @@ protected:
         config_t config;
         //config["modelConfiguration"] = "../data/tiny-yolo.cfg";
         //config["modelBinary"] = "../data/tiny-yolo.weights";
-        config["modelConfiguration"] = "../data/yolov3-tiny.cfg";
-        config["modelBinary"] = "../data/yolov3-tiny.weights";
-        config["classNames"] = "../data/coco.names";
-        config["confidenceThreshold"] = "0.5";
+        //config["modelConfiguration"] = "../data/yolov3-tiny.cfg";
+        //config["modelBinary"] = "../data/yolov3-tiny.weights";
+        //config["classNames"] = "../data/coco.names";
+        config["modelConfiguration"] = "../../data/yolov3-urbantracker.cfg";
+        config["modelBinary"] = "../../data/yolov3-urbantracker_13300.weights";
+        config["classNames"] = "../../data/urbantracker.names";
+
+        config["confidenceThreshold"] = "0.3";
         config["maxCropRatio"] = "3.0";
         config["dnnTarget"] = "DNN_TARGET_OPENCL_FP16";
 

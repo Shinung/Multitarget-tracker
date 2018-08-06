@@ -2,3 +2,4 @@ build
 CMakeLists.txt.user
 .idea*
 cmake-build-debug*
+yolov3-urbantracker_13300.weights
