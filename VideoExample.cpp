@@ -121,7 +121,7 @@ void VideoExample::Process()
 
         if (!writer.isOpened())
         {
-            writer.open(m_outFile, cv::VideoWriter::fourcc('M', 'J', 'P', 'G'), m_fps, m_frameInfo[currFrame].m_frame.size(), true);
+            writer.open(m_outFile, cv::VideoWriter::fourcc('H', '2', '6', '4'), m_fps, m_frameInfo[currFrame].m_frame.size(), true);
         }
 
         int64 t1 = cv::getTickCount();
