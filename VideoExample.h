@@ -482,7 +482,7 @@ protected:
         config["modelBinary"] = "../../data/yolov3-urbantracker_13300.weights";
         config["classNames"] = "../../data/urbantracker.names";
 
-        config["confidenceThreshold"] = "0.3";
+        config["confidenceThreshold"] = "0.2";
         config["maxCropRatio"] = "3.0";
         config["dnnTarget"] = "DNN_TARGET_OPENCL_FP16";
 
