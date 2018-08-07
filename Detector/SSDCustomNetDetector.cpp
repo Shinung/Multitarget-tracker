@@ -312,18 +312,12 @@ void SSDCustomNetDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop
 	 * Hence, we should make CRegion from our SSD class to integrate with this code.
 	 */
 
-	//Convert Mat to batch of images
-	cv::Mat inputBlob = cv::dnn::blobFromImage(cv::Mat(colorFrame, crop), m_inScaleFactor, cv::Size(InWidth, InHeight), m_meanVal, false, true);
+	// get ssd instance from the pool
+    ScopedContext<ExecContext> context(mCTX->pool);
+    SSD* ssd = static_cast<SSD*>(context->CaffeClassifier());
 
-	m_net.setInput(inputBlob, "data"); //set the network input
-
-	cv::Mat detection = m_net.forward("detection_out"); //compute output
-
-														//std::vector<double> layersTimings;
-														//double freq = cv::getTickFrequency() / 1000;
-														//double time = m_net.getPerfProfile(layersTimings) / freq;
-
-	cv::Mat detectionMat(detection.size[2], detection.size[3], CV_32F, detection.ptr<float>());
+    cv::Mat detectionMat = ssd->DetectAsMat(cv::Mat(colorFrame, crop));
+//	cv::Mat detectionMat(detection.size[2], detection.size[3], CV_32F, detection.ptr<float>());
 
 	//cv::Mat frame = colorFrame(crop);
 
