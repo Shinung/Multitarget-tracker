@@ -3,6 +3,8 @@
 #include "common.h"
 #include "SSD.h"
 
+//#define NONCROP
+
 using namespace caffe;
 using std::string;
 
@@ -229,57 +231,62 @@ void SSDCustomNetDetector::Detect(cv::UMat& colorFrame)
 
 	cv::Mat colorMat = colorFrame.getMat(cv::ACCESS_READ);
 
-	int cropHeight = cvRound(m_maxCropRatio * InHeight);
-	int cropWidth = cvRound(m_maxCropRatio * InWidth);
+#ifdef NONCROP
+	cv::Rect crop(0, 0, colorMat.cols, colorMat.rows);
+    DetectInCrop(colorMat, crop, tmpRegions);
+#else
+    int cropHeight = cvRound(m_maxCropRatio * InHeight);
+    int cropWidth = cvRound(m_maxCropRatio * InWidth);
 
-	if (colorFrame.cols / (float)colorFrame.rows > m_WHRatio)
-	{
-		if (m_maxCropRatio <= 0 || cropHeight >= colorFrame.rows)
-		{
-			cropHeight = colorFrame.rows;
-		}
-		cropWidth = cvRound(cropHeight * m_WHRatio);
-	}
-	else
-	{
-		if (m_maxCropRatio <= 0 || cropWidth >= colorFrame.cols)
-		{
-			cropWidth = colorFrame.cols;
-		}
-		cropHeight = cvRound(colorFrame.cols / m_WHRatio);
-	}
+    if (colorFrame.cols / (float)colorFrame.rows > m_WHRatio)
+    {
+        if (m_maxCropRatio <= 0 || cropHeight >= colorFrame.rows)
+        {
+            cropHeight = colorFrame.rows;
+        }
+        cropWidth = cvRound(cropHeight * m_WHRatio);
+    }
+    else
+    {
+        if (m_maxCropRatio <= 0 || cropWidth >= colorFrame.cols)
+        {
+            cropWidth = colorFrame.cols;
+        }
+        cropHeight = cvRound(colorFrame.cols / m_WHRatio);
+    }
 
-	cv::Rect crop(0, 0, cropWidth, cropHeight);
+    cv::Rect crop(0, 0, cropWidth, cropHeight);
 
-	for (; crop.y < colorMat.rows; crop.y += crop.height / 2)
-	{
-		bool needBreakY = false;
-		if (crop.y + crop.height >= colorMat.rows)
-		{
-			crop.y = colorMat.rows - crop.height;
-			needBreakY = true;
-		}
-		for (crop.x = 0; crop.x < colorMat.cols; crop.x += crop.width / 2)
-		{
-			bool needBreakX = false;
-			if (crop.x + crop.width >= colorMat.cols)
-			{
-				crop.x = colorMat.cols - crop.width;
-				needBreakX = true;
-			}
+    for (; crop.y < colorMat.rows; crop.y += crop.height / 2)
+    {
+        bool needBreakY = false;
+        if (crop.y + crop.height >= colorMat.rows)
+        {
+            crop.y = colorMat.rows - crop.height;
+            needBreakY = true;
+        }
+        for (crop.x = 0; crop.x < colorMat.cols; crop.x += crop.width / 2)
+        {
+            bool needBreakX = false;
+            if (crop.x + crop.width >= colorMat.cols)
+            {
+                crop.x = colorMat.cols - crop.width;
+                needBreakX = true;
+            }
 
-			DetectInCrop(colorMat, crop, tmpRegions);
+            DetectInCrop(colorMat, crop, tmpRegions);
 
-			if (needBreakX)
-			{
-				break;
-			}
-		}
-		if (needBreakY)
-		{
-			break;
-		}
-	}
+            if (needBreakX)
+            {
+                break;
+            }
+        }
+        if (needBreakY)
+        {
+            break;
+        }
+    }
+#endif
 
 	nms3<CRegion>(tmpRegions, m_regions, 0.4f,
 		[](const CRegion& reg) -> cv::Rect { return reg.m_rect; },
@@ -335,14 +342,22 @@ void SSDCustomNetDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop
 		{
 			size_t objectClass = (size_t)(detectionMat.at<float>(i, 1));
 
-			int xLeftBottom = cvRound(detectionMat.at<float>(i, 3) * crop.width) + crop.x;
+#ifdef NONCROP
+            int xLeftBottom = cvRound(detectionMat.at<float>(i, 3) * crop.width);
+            int yLeftBottom = cvRound(detectionMat.at<float>(i, 4) * crop.height);
+            int xRightTop = cvRound(detectionMat.at<float>(i, 5) * crop.width);
+            int yRightTop = cvRound(detectionMat.at<float>(i, 6) * crop.height);
+#else
+            int xLeftBottom = cvRound(detectionMat.at<float>(i, 3) * crop.width) + crop.x;
 			int yLeftBottom = cvRound(detectionMat.at<float>(i, 4) * crop.height) + crop.y;
 			int xRightTop = cvRound(detectionMat.at<float>(i, 5) * crop.width) + crop.x;
 			int yRightTop = cvRound(detectionMat.at<float>(i, 6) * crop.height) + crop.y;
+#endif
+
 
 			cv::Rect object(xLeftBottom, yLeftBottom, xRightTop - xLeftBottom, yRightTop - yLeftBottom);
 
-			tmpRegions.push_back(CRegion(object, m_classNames[objectClass], confidence));
+			tmpRegions.push_back(CRegion(object, ssd->GetLabel(objectClass), confidence));
 
 			//cv::rectangle(frame, object, Scalar(0, 255, 0));
 			//std::string label = classNames[objectClass] + ": " + std::to_string(confidence);
