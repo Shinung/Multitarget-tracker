@@ -294,22 +294,86 @@ void CTrack::RectUpdate(
 
     auto Clamp = [](int& v, int& size, int hi) -> bool
     {
-        if (size < 2)
-        {
-            size = 2;
-        }
+		if (size < 2)
+		{
+			size = 2;
+		}
+		else if (v + size > hi - 1)
+		{
+			//v = hi - 1 - size;
+			size = hi - 1 - v;
+			return true;
+		}
+
         if (v < 0)
         {
             v = 0;
             return true;
         }
-        else if (v + size > hi - 1)
-        {
-            v = hi - 1 - size;
-            return true;
-        }
         return false;
     };
+
+	auto MakingRoiSize = [](int width, int height, const cv::Size& frameSize) -> cv::Size
+	{
+		if (width > frameSize.width)
+		{
+			width = frameSize.width;
+		}
+		else if (width < 0)
+		{
+			width = 2;
+		}
+
+		if (height > frameSize.height)
+		{
+			height = frameSize.height;
+		}
+		else if (height < 0)
+		{
+			height = 2;
+		}
+
+		return cv::Size(width, height);
+	};
+
+	auto ClampWithRect = [](cv::Point* rTopLeft, cv::Size* rSize, const cv::Size& frameSize) -> cv::Rect
+	{
+		int x = rTopLeft->x;
+		int y = rTopLeft->y;
+		int w = rSize->width;
+		int h = rSize->height;
+
+		if (rTopLeft->x < 0)
+		{
+			x = 0;
+		}
+		
+		if (rSize->width < 2)
+		{
+			w = 2;
+		}
+		else if (rTopLeft->x + w > frameSize.width - 1)
+		{
+			w = frameSize.width - 1 - x;
+		}
+
+		if (rTopLeft->y < 0)
+		{
+			y = 0;
+		}
+
+		if (rSize->height < 2)
+		{
+			//h = 2;
+			rSize->height = 2;
+		}
+		else if (rTopLeft->y + h > frameSize.height - 1)
+		{
+			h = frameSize.height - 1 - y;
+		}
+
+		return cv::Rect(x, y, w, h);
+	};
 
     switch (m_externalTrackerForLost)
     {
@@ -324,19 +388,15 @@ void CTrack::RectUpdate(
 #ifdef USE_OCV_KCF
         if (!dataCorrect)
         {
-            cv::Size roiSize(std::max(2 * m_predictionRect.width, currFrame.cols / 4), std::min(2 * m_predictionRect.height, currFrame.rows / 4));
-            if (roiSize.width > currFrame.cols)
-            {
-                roiSize.width = currFrame.cols;
-            }
-            if (roiSize.height > currFrame.rows)
-            {
-                roiSize.height = currFrame.rows;
-            }
+            //cv::Size roiSize(std::max(2 * m_predictionRect.width, currFrame.cols / 4), std::min(2 * m_predictionRect.height, currFrame.rows / 4));
+			cv::Size roiSize = MakingRoiSize(std::max(2 * m_predictionRect.width, currFrame.cols / 4), 
+											 std::min(2 * m_predictionRect.height, currFrame.rows / 4),
+											 cv::Size(currFrame.cols, currFrame.rows));
             cv::Point roiTL(m_predictionRect.x + m_predictionRect.width / 2 - roiSize.width / 2, m_predictionRect.y + m_predictionRect.height / 2 - roiSize.height / 2);
-            cv::Rect roiRect(roiTL, roiSize);
+            /*cv::Rect roiRect(roiTL, roiSize);
             Clamp(roiRect.x, roiRect.width, currFrame.cols);
-            Clamp(roiRect.y, roiRect.height, currFrame.rows);
+            Clamp(roiRect.y, roiRect.height, currFrame.rows);*/
+			cv::Rect roiRect = ClampWithRect(&roiTL, &roiSize, cv::Size(currFrame.cols, currFrame.rows));
 
             bool inited = false;
             if (!m_tracker || m_tracker.empty())
