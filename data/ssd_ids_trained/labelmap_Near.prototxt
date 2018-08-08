@@ -1,0 +1,80 @@
+item {
+  name: "none_of_the_above"
+  label: 0
+  display_name: "background"
+}
+item {
+  name: "backpack"
+  label: 1
+  display_name: "backpack"
+}
+item {
+  name: "bench"
+  label: 2
+  display_name: "bench"
+}
+item {
+  name: "bicycle"
+  label: 3
+  display_name: "bicycle"
+}
+item {
+  name: "book"
+  label: 4
+  display_name: "book"
+}
+item {
+  name: "bottle"
+  label: 5
+  display_name: "bottle"
+}
+item {
+  name: "bus"
+  label: 6
+  display_name: "bus"
+}
+item {
+  name: "car"
+  label: 7
+  display_name: "car"
+}
+item {
+  name: "cat"
+  label: 8
+  display_name: "cat"
+}
+item {
+  name: "dog"
+  label: 9
+  display_name: "dog"
+}
+item {
+  name: "handbag"
+  label: 10
+  display_name: "handbag"
+}
+item {
+  name: "horse"
+  label: 11
+  display_name: "horse"
+}
+item {
+  name: "motorcycle"
+  label: 12
+  display_name: "motorcycle"
+}
+item {
+  name: "person"
+  label: 13
+  display_name: "person"
+}
+item {
+  name: "truck"
+  label: 14
+  display_name: "truck"
+}
+item {
+  name: "box"
+  label: 15
+  display_name: "box"
+}
