@@ -352,10 +352,19 @@ void SSDCustomNetDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop
 			int yLeftBottom = cvRound(detectionMat.at<float>(i, 4) * crop.height) + crop.y;
 			int xRightTop = cvRound(detectionMat.at<float>(i, 5) * crop.width) + crop.x;
 			int yRightTop = cvRound(detectionMat.at<float>(i, 6) * crop.height) + crop.y;
+
+			if (xLeftBottom < 0 || yLeftBottom < 0 || xRightTop < 0 || yRightTop < 0)
+			{
+				continue;
+			}
 #endif
+			CHECK_LE(0, xLeftBottom) << "raw: " << detectionMat.at<float>(i, 3);
+			CHECK_LE(0, yLeftBottom) << "raw: " << detectionMat.at<float>(i, 4);
+			CHECK_LE(0, xRightTop) << "raw: " << detectionMat.at<float>(i, 5);
+			CHECK_LE(0, yRightTop) << "raw: " << detectionMat.at<float>(i, 6);
 
-
-			cv::Rect object(xLeftBottom, yLeftBottom, xRightTop - xLeftBottom, yRightTop - yLeftBottom);
+			//cv::Rect object(xLeftBottom, yLeftBottom, xRightTop - xLeftBottom, yRightTop - yLeftBottom);
+			cv::Rect object(cv::Point(xLeftBottom, yLeftBottom), cv::Point(xRightTop, yRightTop));
 
 			tmpRegions.push_back(CRegion(object, ssd->GetLabel(objectClass), confidence));
 

@@ -566,6 +566,14 @@ cv::Rect TKalmanFilter::GetRectPrediction()
     {
 
     }
+
+	if (m_lastRectResult.height < .0f)
+	{
+		std::cout << m_lastRectResult << std::endl;
+		std::cout << cv::Rect(static_cast<int>(m_lastRectResult.x), static_cast<int>(m_lastRectResult.y), static_cast<int>(m_lastRectResult.width), static_cast<int>(m_lastRectResult.height))
+			<< std::endl;
+	}
+
     return cv::Rect(static_cast<int>(m_lastRectResult.x), static_cast<int>(m_lastRectResult.y), static_cast<int>(m_lastRectResult.width), static_cast<int>(m_lastRectResult.height));
 }
 
