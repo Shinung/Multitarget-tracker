@@ -5,5 +5,5 @@ cmake-build-debug*
 yolov3-urbantracker_13300.weights
 
 
-FarNear.caffemodel
-Near.caffemodel
+*.caffemodel
+*.weights
