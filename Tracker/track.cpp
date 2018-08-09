@@ -274,6 +274,30 @@ cv::Rect CTrack::GetLastRect() const
     }
 }
 
+template<typename T>
+T checkSize(int a, int b, const cv::Size& frameSize)
+{
+	if (a > frameSize.width)
+	{
+		a = frameSize.width;
+	}
+	else if (a < 0)
+	{
+		a = 2;
+	}
+
+	if (b > frameSize.height)
+	{
+		b = frameSize.height;
+	}
+	else if (b < 0)
+	{
+		b = 2;
+	}
+
+	return T(a, b);
+}
+
 ///
 /// \brief RectUpdate
 /// \param region
@@ -313,63 +337,41 @@ void CTrack::RectUpdate(
         return false;
     };
 
-	auto MakingRoiSize = [](int width, int height, const cv::Size& frameSize) -> cv::Size
+	auto ClampWithRect = [](const cv::Point& rTopLeft, const cv::Size& rSize, const cv::Size& frameSize) -> cv::Rect
 	{
-		if (width > frameSize.width)
-		{
-			width = frameSize.width;
-		}
-		else if (width < 0)
-		{
-			width = 2;
-		}
-
-		if (height > frameSize.height)
-		{
-			height = frameSize.height;
-		}
-		else if (height < 0)
-		{
-			height = 2;
-		}
-
-		return cv::Size(width, height);
-	};
-
-	auto ClampWithRect = [](cv::Point* rTopLeft, cv::Size* rSize, const cv::Size& frameSize) -> cv::Rect
-	{
-		int x = rTopLeft->x;
-		int y = rTopLeft->y;
-		int w = rSize->width;
-		int h = rSize->height;
-
-		if (rTopLeft->x < 0)
-		{
-			x = 0;
-		}
+		int x = rTopLeft.x;
+		int y = rTopLeft.y;
+		int w = rSize.width;
+		int h = rSize.height;
 		
-		if (rSize->width < 2)
+		if (w < 2)
 		{
 			w = 2;
 		}
-		else if (rTopLeft->x + w > frameSize.width - 1)
+		
+		if (x + w > frameSize.width - 1)
 		{
-			w = frameSize.width - 1 - x;
+			x = frameSize.width - 1 - w;
 		}
 
-		if (rTopLeft->y < 0)
+		if (x < 0)
+		{
+			x = 0;
+		}
+
+		if (h < 2)
+		{
+			h = 2;
+		}
+		
+		if (y + h > frameSize.height - 1)
+		{
+			y = frameSize.height - 1 - h;
+		}
+
+		if (y < 0)
 		{
 			y = 0;
-		}
-
-		if (rSize->height < 2)
-		{
-			//h = 2;
-			rSize->height = 2;
-		}
-		else if (rTopLeft->y + h > frameSize.height - 1)
-		{
-			h = frameSize.height - 1 - y;
 		}
 
 		return cv::Rect(x, y, w, h);
@@ -389,14 +391,17 @@ void CTrack::RectUpdate(
         if (!dataCorrect)
         {
             //cv::Size roiSize(std::max(2 * m_predictionRect.width, currFrame.cols / 4), std::min(2 * m_predictionRect.height, currFrame.rows / 4));
-			cv::Size roiSize = MakingRoiSize(std::max(2 * m_predictionRect.width, currFrame.cols / 4), 
-											 std::min(2 * m_predictionRect.height, currFrame.rows / 4),
-											 cv::Size(currFrame.cols, currFrame.rows));
-            cv::Point roiTL(m_predictionRect.x + m_predictionRect.width / 2 - roiSize.width / 2, m_predictionRect.y + m_predictionRect.height / 2 - roiSize.height / 2);
+			cv::Size roiSize = checkSize<cv::Size>(std::max(2 * m_predictionRect.width, currFrame.cols / 4),
+												   std::min(2 * m_predictionRect.height, currFrame.rows / 4),
+												   cv::Size(currFrame.cols, currFrame.rows));
+            //cv::Point roiTL(m_predictionRect.x + m_predictionRect.width / 2 - roiSize.width / 2, m_predictionRect.y + m_predictionRect.height / 2 - roiSize.height / 2);
+			cv::Point roiTL = checkSize<cv::Point>(m_predictionRect.x + m_predictionRect.width / 2 - roiSize.width / 2,
+												   m_predictionRect.y + m_predictionRect.height / 2 - roiSize.height / 2,
+												   cv::Size(currFrame.cols, currFrame.rows));
             /*cv::Rect roiRect(roiTL, roiSize);
             Clamp(roiRect.x, roiRect.width, currFrame.cols);
             Clamp(roiRect.y, roiRect.height, currFrame.rows);*/
-			cv::Rect roiRect = ClampWithRect(&roiTL, &roiSize, cv::Size(currFrame.cols, currFrame.rows));
+			cv::Rect roiRect = ClampWithRect(roiTL, roiSize, cv::Size(currFrame.cols, currFrame.rows));
 
             bool inited = false;
             if (!m_tracker || m_tracker.empty())
@@ -508,6 +513,11 @@ void CTrack::RectUpdate(
     m_outOfTheFrame = false;
     m_outOfTheFrame |= Clamp(m_predictionRect.x, m_predictionRect.width, currFrame.cols);
     m_outOfTheFrame |= Clamp(m_predictionRect.y, m_predictionRect.height, currFrame.rows);
+
+	if (m_outOfTheFrame)
+	{
+		m_predictionRect = ClampWithRect(m_predictionRect.tl(), m_predictionRect.size(), cv::Size(currFrame.cols, currFrame.rows));
+	}
 
     m_predictionPoint = (m_predictionRect.tl() + m_predictionRect.br()) / 2;
 }
