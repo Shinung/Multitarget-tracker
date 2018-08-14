@@ -1,0 +1,3 @@
+../data/videos/video_1.avi -e=6 --gpu=1 --show_logs=1 -d=../data/ssd_mobilenet_dw/MobileNetSSD_deploy.prototxt -w=../data/MobileNetSSD_deploy.caffemodel -l=../data/ssd_mobilenet_dw/labelmap_voc.prototxt
+
+../data/videos/video_1.avi -e=6 --gpu=1 --show_logs=1 -d=../data/ssd_ids_trained/Deploy_Near.prototxt -w=../data/ssd_ids_trained/Near.caffemodel -l=../data/ssd_ids_trained/labelmap_Near.prototxt

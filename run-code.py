@@ -14,14 +14,14 @@ def run_code(detector, threshold, video_num):
     # ---------------- main setting ---------------- #
 
     # base path setting
-    base_video_path = os.path.join('C:\\hs\\clip\\multitracker\\')
-    base_code_path = os.path.join('C:\\Multitarget-tracker')
+    base_video_path = os.path.join('D:\\Roy\\GitHub\\Multitarget-tracker\\data\\')
+    base_code_path = os.path.join('D:\\Roy\\GitHub\\Multitarget-tracker\\')
 
     # execute file setting
     exefile = 'MultitargetTracker_{0}_{1:.1f}.exe'.format(detector, threshold)
 
     # sorce video folder name setting
-    src_folder_name = 'urban'
+    src_folder_name = 'videos'
     src_video_name = 'video_{0}.avi'.format(video_num)
 
     # ------------- end of main setting ------------- #
@@ -138,8 +138,8 @@ if __name__=='__main__':
 
     # run_code(detector, threshold, video_num)
 
-    # for i in range(1,4):
-    #     run_code('ssd', 0.5, i)
+    #for i in range(1,3):
+    #    run_code('ssd', 0.5, i)
 
-    run_code('ssd', 0.5, 2)
+    run_code('ssd', 0.5, 3)
 

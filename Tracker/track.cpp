@@ -349,14 +349,19 @@ void CTrack::RectUpdate(
 			w = 2;
 		}
 		
-		if (x + w > frameSize.width - 1)
-		{
-			x = frameSize.width - 1 - w;
-		}
-
 		if (x < 0)
 		{
 			x = 0;
+		}		
+		
+		if (x + w > frameSize.width - 1)
+		{
+			x = frameSize.width - 1 - w;
+			if (x < 0)
+			{
+				x = 0;
+				w = frameSize.width - 1;
+			}
 		}
 
 		if (h < 2)
@@ -364,14 +369,19 @@ void CTrack::RectUpdate(
 			h = 2;
 		}
 		
-		if (y + h > frameSize.height - 1)
-		{
-			y = frameSize.height - 1 - h;
-		}
-
 		if (y < 0)
 		{
 			y = 0;
+		}
+		
+		if (y + h > frameSize.height - 1)
+		{
+			y = frameSize.height - 1 - h;
+			if (y < 0)
+			{
+				y = 0;
+				h = frameSize.height - 1;
+			}
 		}
 
 		return cv::Rect(x, y, w, h);
@@ -402,69 +412,80 @@ void CTrack::RectUpdate(
             Clamp(roiRect.x, roiRect.width, currFrame.cols);
             Clamp(roiRect.y, roiRect.height, currFrame.rows);*/
 			cv::Rect roiRect = ClampWithRect(roiTL, roiSize, cv::Size(currFrame.cols, currFrame.rows));
+			cv::Rect frameRect(0, 0, currFrame.cols, currFrame.rows);
 
-            bool inited = false;
-            if (!m_tracker || m_tracker.empty())
-            {
-                CreateExternalTracker();
+			/*if (!frameRect.contains(roiRect.tl()) || frameRect.contains(roiRect.br()))
+			{
+				if (m_tracker && !m_tracker.empty())
+				{
+					m_tracker.release();
+					m_outOfTheFrame = true;
+				}
+			}*/
 
-                cv::Rect2d lastRect(m_predictionRect.x - roiRect.x, m_predictionRect.y - roiRect.y, m_predictionRect.width, m_predictionRect.height);
-                if (m_staticFrame.empty())
-                {
-                    lastRect = cv::Rect2d(m_predictionRect.x - roiRect.x, m_predictionRect.y - roiRect.y, m_predictionRect.width, m_predictionRect.height);
-                }
-                else
-                {
-                    lastRect = cv::Rect2d(m_staticRect.x - roiRect.x, m_staticRect.y - roiRect.y, m_staticRect.width, m_staticRect.height);
-                }
+			bool inited = false;
+			if (!m_tracker || m_tracker.empty())
+			{
+				CreateExternalTracker();
 
-                if (lastRect.x >= 0 &&
-                        lastRect.y >= 0 &&
-                        lastRect.x + lastRect.width < roiRect.width &&
-                        lastRect.y + lastRect.height < roiRect.height &&
-                        lastRect.area() > 0)
-                {
-                    if (m_staticFrame.empty())
-                    {
-                        m_tracker->init(cv::UMat(prevFrame, roiRect), lastRect);
-                    }
-                    else
-                    {
-                        m_tracker->init(cv::UMat(m_staticFrame, roiRect), lastRect);
-                    }
+				cv::Rect2d lastRect(m_predictionRect.x - roiRect.x, m_predictionRect.y - roiRect.y, m_predictionRect.width, m_predictionRect.height);
+				if (m_staticFrame.empty())
+				{
+					lastRect = cv::Rect2d(m_predictionRect.x - roiRect.x, m_predictionRect.y - roiRect.y, m_predictionRect.width, m_predictionRect.height);
+				}
+				else
+				{
+					lastRect = cv::Rect2d(m_staticRect.x - roiRect.x, m_staticRect.y - roiRect.y, m_staticRect.width, m_staticRect.height);
+				}
+
+				if (lastRect.x >= 0 &&
+					lastRect.y >= 0 &&
+					lastRect.x + lastRect.width < roiRect.width &&
+					lastRect.y + lastRect.height < roiRect.height &&
+					lastRect.area() > 0)
+				{
+					if (m_staticFrame.empty())
+					{
+						m_tracker->init(cv::UMat(prevFrame, roiRect), lastRect);
+					}
+					else
+					{
+						m_tracker->init(cv::UMat(m_staticFrame, roiRect), lastRect);
+					}
 #if 0
-                    cv::Mat tmp = cv::UMat(prevFrame, roiRect).getMat(cv::ACCESS_READ).clone();
-                    cv::rectangle(tmp, lastRect, cv::Scalar(255, 255, 255), 2);
-                    cv::imshow("init", tmp);
+					cv::Mat tmp = cv::UMat(prevFrame, roiRect).getMat(cv::ACCESS_READ).clone();
+					cv::rectangle(tmp, lastRect, cv::Scalar(255, 255, 255), 2);
+					cv::imshow("init", tmp);
 #endif
 
-                    inited = true;
-                    m_outOfTheFrame = false;
-                }
-                else
-                {
-                    m_tracker.release();
-                    m_outOfTheFrame = true;
-                }
-            }
-            cv::Rect2d newRect;
-            if (!inited && !m_tracker.empty() && m_tracker->update(cv::UMat(currFrame, roiRect), newRect))
-            {
+					inited = true;
+					m_outOfTheFrame = false;
+				}
+				else
+				{
+					m_tracker.release();
+					m_outOfTheFrame = true;
+				}
+
+				cv::Rect2d newRect;
+				if (!inited && !m_tracker.empty() && m_tracker->update(cv::UMat(currFrame, roiRect), newRect))
+				{
 #if 0
-                cv::Mat tmp2 = cv::UMat(currFrame, roiRect).getMat(cv::ACCESS_READ).clone();
-                cv::rectangle(tmp2, newRect, cv::Scalar(255, 255, 255), 2);
-                cv::imshow("track", tmp2);
+					cv::Mat tmp2 = cv::UMat(currFrame, roiRect).getMat(cv::ACCESS_READ).clone();
+					cv::rectangle(tmp2, newRect, cv::Scalar(255, 255, 255), 2);
+					cv::imshow("track", tmp2);
 #endif
 
-                cv::Rect prect(cvRound(newRect.x) + roiRect.x, cvRound(newRect.y) + roiRect.y, cvRound(newRect.width), cvRound(newRect.height));
+					cv::Rect prect(cvRound(newRect.x) + roiRect.x, cvRound(newRect.y) + roiRect.y, cvRound(newRect.width), cvRound(newRect.height));
 
-                m_predictionRect = m_kalman->Update(prect, true);
+					m_predictionRect = m_kalman->Update(prect, true);
 
-                recalcPrediction = false;
+					recalcPrediction = false;
 
-                m_boundidgRect = cv::Rect();
-                m_lastRegion.m_points.clear();
-            }
+					m_boundidgRect = cv::Rect();
+					m_lastRegion.m_points.clear();
+				}
+			}
         }
         else
         {
