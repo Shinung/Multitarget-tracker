@@ -1,0 +1,578 @@
+\hypertarget{class_s_v_g_port}{}\section{S\+V\+G\+Port Class Reference}
+\label{class_s_v_g_port}\index{S\+V\+G\+Port@{S\+V\+G\+Port}}
+
+
+{\ttfamily \#include $<$gport.\+h$>$}
+
+
+
+Inheritance diagram for S\+V\+G\+Port\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_s_v_g_port__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+V\+G\+Port\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_s_v_g_port__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_v_g_port_ae5600d35d7ba50be4395b575a8d61c79}{S\+V\+G\+Port}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_aa849012cbcbb27a9db820cee968093c9}{Draw\+Arc}} (const \mbox{\hyperlink{class_g_point}{G\+Point}} \&, const int, const double, const double)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a9aba350c03b01d93168882746b18ec07}{Draw\+Circle}} (const \mbox{\hyperlink{class_g_point}{G\+Point}} \&\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}, const int radius)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_ab51984003b6e8f6170ef3fe4ba09b030}{Draw\+Line}} (const int x1, const int y1, const int x2, const int y2)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a16219cfcb3520433a2c402c83b7ac47b}{Draw\+Rect}} (const \mbox{\hyperlink{class_g_rect}{G\+Rect}} \&r)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a94dc5a4fee82bacdd3160ea25827d7bb}{Draw\+Text}} (const int x, const int y, const char $\ast$text)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a3dbd4c8a9df41ccd1d05d362cec289a5}{Set\+Pen\+Width}} (int)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_ac9b98b54d4b9b1e519d2741f5e8be837}{Set\+Current\+Font}} (\mbox{\hyperlink{class_g_base_font}{G\+Base\+Font}} \&font)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a930228d552d729c5aeb0aa8fb731d303}{Start\+Picture}} (char $\ast$pict\+File\+Name)
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a564266843879b682d84b9aefad185662}{End\+Picture}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a75ba37175c0a1fb943e1fd34c1e23f01}{Begin\+Group}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a169f01fd03ef513e6d19df2ceb29234b}{End\+Group}} ()
+\item 
+virtual void \mbox{\hyperlink{class_s_v_g_port_a8b8bcfc066089734819ba861dd5a0834}{Get\+Printing\+Rect}} (\mbox{\hyperlink{class_g_rect}{G\+Rect}} \&r)
+\item 
+virtual void \mbox{\hyperlink{class_g_base_port_ad176b1ff88c4c0a29d51869b13a288d2}{Draw\+Line\+Pts}} (const \mbox{\hyperlink{class_g_point}{G\+Point}} \&pt1, const \mbox{\hyperlink{class_g_point}{G\+Point}} \&pt2)
+\item 
+virtual \mbox{\hyperlink{gport_8h_a595e501a3b83fde14c760260fbfb153f}{G\+Port\+Device}} \mbox{\hyperlink{class_g_base_port_aeca5105700149693465fb5dbc43c9bbc}{Get\+Current\+Device}} ()
+\item 
+virtual void \mbox{\hyperlink{class_g_base_port_a2d6dd3aa5ad82b26ed614e139c2f6b8f}{Get\+Display\+Rect}} (\mbox{\hyperlink{class_g_rect}{G\+Rect}} \&r)
+\item 
+virtual void \mbox{\hyperlink{class_g_base_port_a8ac5424f05a6b6b982e570aae0802087}{Set\+Display\+Rect}} (\mbox{\hyperlink{class_g_rect}{G\+Rect}} \&r)
+\item 
+virtual int \mbox{\hyperlink{class_g_base_port_aeebcbb21b90ae5614d43b0111133932e}{Get\+Pen\+Width}} ()
+\item 
+virtual void \mbox{\hyperlink{class_g_base_port_af13ac2220d4ff90a160294c79d4a2c1b}{Set\+Fill\+Color\+R\+GB}} (int, int, int)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ofstream \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svg\+Stream}}
+\item 
+std\+::string \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{font\+String}}
+\item 
+int \mbox{\hyperlink{class_g_base_port_a9a76c3a8af8d0e9f29035d02d8f038c1}{Pen\+Width}}
+\item 
+\mbox{\hyperlink{gport_8h_a595e501a3b83fde14c760260fbfb153f}{G\+Port\+Device}} \mbox{\hyperlink{class_g_base_port_a14275a027c8665d5fa4941e148a1b46a}{Device}}
+\item 
+\mbox{\hyperlink{class_g_rect}{G\+Rect}} \mbox{\hyperlink{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}{Display\+Rect}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 277 of file gport.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_v_g_port_ae5600d35d7ba50be4395b575a8d61c79}\label{class_s_v_g_port_ae5600d35d7ba50be4395b575a8d61c79}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{S\+V\+G\+Port()}{SVGPort()}}
+{\footnotesize\ttfamily S\+V\+G\+Port\+::\+S\+V\+G\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 231 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+232 \{ 
+233     \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{fontString}} = \textcolor{stringliteral}{"font-family:Times;font-size:12"}; 
+234     \mbox{\hyperlink{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}{DisplayRect}}.\mbox{\hyperlink{class_g_rect_a1fd6fd632b6d3c068382766a0c18340f}{SetRect}} (0, 0, 400, 400);
+235 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{class_s_v_g_port_ae5600d35d7ba50be4395b575a8d61c79_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_v_g_port_a75ba37175c0a1fb943e1fd34c1e23f01}\label{class_s_v_g_port_a75ba37175c0a1fb943e1fd34c1e23f01}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Begin\+Group@{Begin\+Group}}
+\index{Begin\+Group@{Begin\+Group}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Begin\+Group()}{BeginGroup()}}
+{\footnotesize\ttfamily virtual void S\+V\+G\+Port\+::\+Begin\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_ac7aafbb728fe8b61dec2c3f163e2c894}{G\+Base\+Port}}.
+
+
+
+Definition at line 300 of file gport.\+h.
+
+
+\begin{DoxyCode}
+300 \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_aa849012cbcbb27a9db820cee968093c9}\label{class_s_v_g_port_aa849012cbcbb27a9db820cee968093c9}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Draw\+Arc@{Draw\+Arc}}
+\index{Draw\+Arc@{Draw\+Arc}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Draw\+Arc()}{DrawArc()}}
+{\footnotesize\ttfamily virtual void S\+V\+G\+Port\+::\+Draw\+Arc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_g_point}{G\+Point}} \&}]{,  }\item[{const int}]{,  }\item[{const double}]{,  }\item[{const double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_af9375a9f4cd1bc94ac70eb71c437835a}{G\+Base\+Port}}.
+
+
+
+Definition at line 281 of file gport.\+h.
+
+
+\begin{DoxyCode}
+282                                         \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_a9aba350c03b01d93168882746b18ec07}\label{class_s_v_g_port_a9aba350c03b01d93168882746b18ec07}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Draw\+Circle@{Draw\+Circle}}
+\index{Draw\+Circle@{Draw\+Circle}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Draw\+Circle()}{DrawCircle()}}
+{\footnotesize\ttfamily void S\+V\+G\+Port\+::\+Draw\+Circle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_g_point}{G\+Point}} \&}]{pt,  }\item[{const int}]{radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_a7dbdd13c9a8f60537e7915a7991ab0f0}{G\+Base\+Port}}.
+
+
+
+Definition at line 254 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+255 \{
+256 \textcolor{comment}{/*  PostscriptStream << "newpath" << endl;}
+257 \textcolor{comment}{    PostscriptStream << pt.GetX() << " " << -pt.GetY() << " " << radius << " 0 360 arc"         << endl;}
+258 \textcolor{comment}{    PostscriptStream << "stroke"                                        << endl;}
+259 \textcolor{comment}{    PostscriptStream << endl;}
+260 \textcolor{comment}{*/}
+261 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_ab51984003b6e8f6170ef3fe4ba09b030}\label{class_s_v_g_port_ab51984003b6e8f6170ef3fe4ba09b030}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Draw\+Line@{Draw\+Line}}
+\index{Draw\+Line@{Draw\+Line}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Draw\+Line()}{DrawLine()}}
+{\footnotesize\ttfamily void S\+V\+G\+Port\+::\+Draw\+Line (\begin{DoxyParamCaption}\item[{const int}]{x1,  }\item[{const int}]{y1,  }\item[{const int}]{x2,  }\item[{const int}]{y2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_a9e19a5d97e629c3d19be31e1938504c1}{G\+Base\+Port}}.
+
+
+
+Definition at line 237 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+238 \{
+239     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"<path style=\(\backslash\)"stroke:black;"};
+240     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{";stroke-width:"} << \mbox{\hyperlink{class_g_base_port_a9a76c3a8af8d0e9f29035d02d8f038c1}{PenWidth}};
+241     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{";stroke-linecap:square"};
+242     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"\(\backslash\)" "}; 
+243     
+244     
+245     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"d=\(\backslash\)"M"};
+246     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << x1 << \textcolor{stringliteral}{" "} << y1 << \textcolor{stringliteral}{" "} << x2 << \textcolor{stringliteral}{" "} << y2 << \textcolor{stringliteral}{"\(\backslash\)"/>"};
+247 
+248 
+249 \textcolor{comment}{//    svgStream << "<g style=\(\backslash\)"fill:none;stroke:black\(\backslash\)"><path d=\(\backslash\)"M";}
+250 \textcolor{comment}{//    svgStream << x1 << " " << y1 << " " << x2 << " " << y2 << "\(\backslash\)"/>";}
+251 \textcolor{comment}{//    svgStream << "</g>" << endl;}
+252 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_base_port_ad176b1ff88c4c0a29d51869b13a288d2}\label{class_g_base_port_ad176b1ff88c4c0a29d51869b13a288d2}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Draw\+Line\+Pts@{Draw\+Line\+Pts}}
+\index{Draw\+Line\+Pts@{Draw\+Line\+Pts}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Draw\+Line\+Pts()}{DrawLinePts()}}
+{\footnotesize\ttfamily virtual void G\+Base\+Port\+::\+Draw\+Line\+Pts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_g_point}{G\+Point}} \&}]{pt1,  }\item[{const \mbox{\hyperlink{class_g_point}{G\+Point}} \&}]{pt2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 171 of file gport.\+h.
+
+
+\begin{DoxyCode}
+172         \{ \mbox{\hyperlink{class_g_base_port_a9e19a5d97e629c3d19be31e1938504c1}{DrawLine}} (pt1.\mbox{\hyperlink{class_g_point_a1abafe0e52e3f7039bbe0c0acbb5a9a9}{GetX}}(), pt1.\mbox{\hyperlink{class_g_point_a0b40736448fc178ac2406875bd524a2c}{GetY}}(), pt2.\mbox{\hyperlink{class_g_point_a1abafe0e52e3f7039bbe0c0acbb5a9a9}{GetX}}(), pt2.
+      \mbox{\hyperlink{class_g_point_a0b40736448fc178ac2406875bd524a2c}{GetY}}()); \};
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_base_port_ad176b1ff88c4c0a29d51869b13a288d2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_g_base_port_ad176b1ff88c4c0a29d51869b13a288d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_v_g_port_a16219cfcb3520433a2c402c83b7ac47b}\label{class_s_v_g_port_a16219cfcb3520433a2c402c83b7ac47b}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Draw\+Rect@{Draw\+Rect}}
+\index{Draw\+Rect@{Draw\+Rect}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Draw\+Rect()}{DrawRect()}}
+{\footnotesize\ttfamily void S\+V\+G\+Port\+::\+Draw\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_g_rect}{G\+Rect}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_a40b25399150458e4f41d4ed6b2f31f16}{G\+Base\+Port}}.
+
+
+
+Definition at line 264 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+265 \{
+266 \textcolor{comment}{/*  PostscriptStream << r.GetLeft() << " " << -r.GetTop() << " moveto"  << endl;}
+267 \textcolor{comment}{    PostscriptStream << r.GetWidth() << " 0 rlineto"                    << endl;}
+268 \textcolor{comment}{    PostscriptStream << "0 " << -r.GetHeight() << " rlineto"            << endl;}
+269 \textcolor{comment}{    PostscriptStream << -r.GetWidth() << " 0 rlineto"                   << endl;}
+270 \textcolor{comment}{    PostscriptStream << "0 " << r.GetHeight() << " rlineto"             << endl;}
+271 \textcolor{comment}{    PostscriptStream << "closepath"                                     << endl;}
+272 \textcolor{comment}{    PostscriptStream << "stroke"                                        << endl;}
+273 \textcolor{comment}{    PostscriptStream << endl;}
+274 \textcolor{comment}{*/}
+275 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_a94dc5a4fee82bacdd3160ea25827d7bb}\label{class_s_v_g_port_a94dc5a4fee82bacdd3160ea25827d7bb}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Draw\+Text@{Draw\+Text}}
+\index{Draw\+Text@{Draw\+Text}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Draw\+Text()}{DrawText()}}
+{\footnotesize\ttfamily void S\+V\+G\+Port\+::\+Draw\+Text (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y,  }\item[{const char $\ast$}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_a9b947d2575b05f303520fbbe7fd9e350}{G\+Base\+Port}}.
+
+
+
+Definition at line 277 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+278 \{
+279     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"<text x=\(\backslash\)""} << x << \textcolor{stringliteral}{"\(\backslash\)" y=\(\backslash\)""} << y << \textcolor{stringliteral}{"\(\backslash\)" style=\(\backslash\)""} << 
+      \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{fontString}} << \textcolor{stringliteral}{"\(\backslash\)" >"}
+280             << text << \textcolor{stringliteral}{"</text>"} << std::endl;
+281 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_a169f01fd03ef513e6d19df2ceb29234b}\label{class_s_v_g_port_a169f01fd03ef513e6d19df2ceb29234b}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!End\+Group@{End\+Group}}
+\index{End\+Group@{End\+Group}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{End\+Group()}{EndGroup()}}
+{\footnotesize\ttfamily virtual void S\+V\+G\+Port\+::\+End\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_aa5b444d85d6bf8c88bbddb58f7ce8bd4}{G\+Base\+Port}}.
+
+
+
+Definition at line 301 of file gport.\+h.
+
+
+\begin{DoxyCode}
+301 \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_a564266843879b682d84b9aefad185662}\label{class_s_v_g_port_a564266843879b682d84b9aefad185662}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!End\+Picture@{End\+Picture}}
+\index{End\+Picture@{End\+Picture}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{End\+Picture()}{EndPicture()}}
+{\footnotesize\ttfamily void S\+V\+G\+Port\+::\+End\+Picture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_ac14e5cf72682662f8ac24c57e98b1bfa}{G\+Base\+Port}}.
+
+
+
+Definition at line 299 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+300 \{
+301     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"</svg>"} << std::endl;
+302     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}}.close ();
+303 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_base_port_aeca5105700149693465fb5dbc43c9bbc}\label{class_g_base_port_aeca5105700149693465fb5dbc43c9bbc}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Get\+Current\+Device@{Get\+Current\+Device}}
+\index{Get\+Current\+Device@{Get\+Current\+Device}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Get\+Current\+Device()}{GetCurrentDevice()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{gport_8h_a595e501a3b83fde14c760260fbfb153f}{G\+Port\+Device}} G\+Base\+Port\+::\+Get\+Current\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 177 of file gport.\+h.
+
+
+\begin{DoxyCode}
+177 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_base_port_a14275a027c8665d5fa4941e148a1b46a}{Device}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_base_port_a2d6dd3aa5ad82b26ed614e139c2f6b8f}\label{class_g_base_port_a2d6dd3aa5ad82b26ed614e139c2f6b8f}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Get\+Display\+Rect@{Get\+Display\+Rect}}
+\index{Get\+Display\+Rect@{Get\+Display\+Rect}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Get\+Display\+Rect()}{GetDisplayRect()}}
+{\footnotesize\ttfamily virtual void G\+Base\+Port\+::\+Get\+Display\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_rect}{G\+Rect}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 178 of file gport.\+h.
+
+
+\begin{DoxyCode}
+178 \{ r = \mbox{\hyperlink{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}{DisplayRect}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_base_port_aeebcbb21b90ae5614d43b0111133932e}\label{class_g_base_port_aeebcbb21b90ae5614d43b0111133932e}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Get\+Pen\+Width@{Get\+Pen\+Width}}
+\index{Get\+Pen\+Width@{Get\+Pen\+Width}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Get\+Pen\+Width()}{GetPenWidth()}}
+{\footnotesize\ttfamily virtual int G\+Base\+Port\+::\+Get\+Pen\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 182 of file gport.\+h.
+
+
+\begin{DoxyCode}
+182 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_base_port_a9a76c3a8af8d0e9f29035d02d8f038c1}{PenWidth}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_a8b8bcfc066089734819ba861dd5a0834}\label{class_s_v_g_port_a8b8bcfc066089734819ba861dd5a0834}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Get\+Printing\+Rect@{Get\+Printing\+Rect}}
+\index{Get\+Printing\+Rect@{Get\+Printing\+Rect}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Get\+Printing\+Rect()}{GetPrintingRect()}}
+{\footnotesize\ttfamily void S\+V\+G\+Port\+::\+Get\+Printing\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_rect}{G\+Rect}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_af2e9e7d8adf001df68ab3e714dd4242e}{G\+Base\+Port}}.
+
+
+
+Definition at line 306 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+307 \{
+308     r = \mbox{\hyperlink{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}{DisplayRect}};
+309 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_ac9b98b54d4b9b1e519d2741f5e8be837}\label{class_s_v_g_port_ac9b98b54d4b9b1e519d2741f5e8be837}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Set\+Current\+Font@{Set\+Current\+Font}}
+\index{Set\+Current\+Font@{Set\+Current\+Font}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Set\+Current\+Font()}{SetCurrentFont()}}
+{\footnotesize\ttfamily void S\+V\+G\+Port\+::\+Set\+Current\+Font (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_base_font}{G\+Base\+Font}} \&}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_af297609a9f7ed9d29d77072037888f5e}{G\+Base\+Port}}.
+
+
+
+Definition at line 311 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+312 \{
+313     \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{fontString}} = \textcolor{stringliteral}{""};
+314     \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{fontString}} += \textcolor{stringliteral}{"font-family:"};
+315     \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{fontString}} += font.\mbox{\hyperlink{class_g_base_font_a202a60eadc6436354527de8ccd4a983d}{GetName}}();
+316     
+317     \textcolor{keywordtype}{char} buf[32];
+318     sprintf (buf, \textcolor{stringliteral}{";font-size:%d"}, font.\mbox{\hyperlink{class_g_base_font_a62e761a8a0c0f60f01d8a0d451640e69}{GetSize}}());
+319     \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{fontString}} += buf;
+320     
+321     \textcolor{keywordflow}{if} (font.\mbox{\hyperlink{class_g_base_font_aec31b5754f2be8ae2552b2bfd37a76d1}{IsItalic}}())
+322     \{
+323         \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{fontString}} += \textcolor{stringliteral}{";font-style:italic"};
+324     \}
+325     \textcolor{keywordflow}{if} (font.\mbox{\hyperlink{class_g_base_font_a22abd1f8dfcda6124ffedb8dc26bfcd3}{IsBold}}())
+326     \{
+327         \mbox{\hyperlink{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}{fontString}} += \textcolor{stringliteral}{";font-weight:bold"};
+328     \}
+329 
+330 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_v_g_port_ac9b98b54d4b9b1e519d2741f5e8be837_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_base_port_a8ac5424f05a6b6b982e570aae0802087}\label{class_g_base_port_a8ac5424f05a6b6b982e570aae0802087}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Set\+Display\+Rect@{Set\+Display\+Rect}}
+\index{Set\+Display\+Rect@{Set\+Display\+Rect}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Set\+Display\+Rect()}{SetDisplayRect()}}
+{\footnotesize\ttfamily virtual void G\+Base\+Port\+::\+Set\+Display\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_rect}{G\+Rect}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 179 of file gport.\+h.
+
+
+\begin{DoxyCode}
+179 \{ \mbox{\hyperlink{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}{DisplayRect}} = r; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_base_port_af13ac2220d4ff90a160294c79d4a2c1b}\label{class_g_base_port_af13ac2220d4ff90a160294c79d4a2c1b}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Set\+Fill\+Color\+R\+GB@{Set\+Fill\+Color\+R\+GB}}
+\index{Set\+Fill\+Color\+R\+GB@{Set\+Fill\+Color\+R\+GB}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Set\+Fill\+Color\+R\+G\+B()}{SetFillColorRGB()}}
+{\footnotesize\ttfamily virtual void G\+Base\+Port\+::\+Set\+Fill\+Color\+R\+GB (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_postscript_port_ad8157268c1db4307eca36108fdc1aa1e}{G\+Postscript\+Port}}.
+
+
+
+Definition at line 200 of file gport.\+h.
+
+
+\begin{DoxyCode}
+200 \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_a3dbd4c8a9df41ccd1d05d362cec289a5}\label{class_s_v_g_port_a3dbd4c8a9df41ccd1d05d362cec289a5}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Set\+Pen\+Width@{Set\+Pen\+Width}}
+\index{Set\+Pen\+Width@{Set\+Pen\+Width}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Set\+Pen\+Width()}{SetPenWidth()}}
+{\footnotesize\ttfamily virtual void S\+V\+G\+Port\+::\+Set\+Pen\+Width (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_base_port_aa2fd1fbe050cfea5a21afb7d4cecaa61}{G\+Base\+Port}}.
+
+
+
+Definition at line 289 of file gport.\+h.
+
+
+\begin{DoxyCode}
+289 \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_v_g_port_a930228d552d729c5aeb0aa8fb731d303}\label{class_s_v_g_port_a930228d552d729c5aeb0aa8fb731d303}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Start\+Picture@{Start\+Picture}}
+\index{Start\+Picture@{Start\+Picture}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Start\+Picture()}{StartPicture()}}
+{\footnotesize\ttfamily void S\+V\+G\+Port\+::\+Start\+Picture (\begin{DoxyParamCaption}\item[{char $\ast$}]{pict\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_g_base_port_aad9e21ed63c4f04a508e30b7f100fba5}{G\+Base\+Port}}.
+
+
+
+Definition at line 284 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+285 \{
+286     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}}.open (pictFileName);
+287     
+288     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"<?xml version=\(\backslash\)"1.0\(\backslash\)" standalone=\(\backslash\)"no\(\backslash\)"?>"} << std::endl;
+289     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"<!DOCTYPE svg PUBLIC \(\backslash\)"-//W3C//DTD SVG 20010904//EN\(\backslash\)" "} << std::endl;
+290     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"\(\backslash\)"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd\(\backslash\)"> "} << std::endl;
+291 
+292     \mbox{\hyperlink{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}{svgStream}} << \textcolor{stringliteral}{"<svg width=\(\backslash\)""} << \mbox{\hyperlink{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}{DisplayRect}}.\mbox{\hyperlink{class_g_rect_af36a407452070f2e93a25dbafd3b4314}{GetWidth}}() << \textcolor{stringliteral}{"pt\(\backslash\)" "}
+293         << \textcolor{stringliteral}{"height=\(\backslash\)""} << \mbox{\hyperlink{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}{DisplayRect}}.\mbox{\hyperlink{class_g_rect_a8d2b0a2c06688c2dad74bd0789f57d73}{GetHeight}}() << \textcolor{stringliteral}{"pt\(\backslash\)" >"} << std::endl;
+294         
+295 \textcolor{comment}{// <title>test</title>}
+296 \textcolor{comment}{// <desc>test</desc>}
+297 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_s_v_g_port_a930228d552d729c5aeb0aa8fb731d303_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_base_port_a14275a027c8665d5fa4941e148a1b46a}\label{class_g_base_port_a14275a027c8665d5fa4941e148a1b46a}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Device@{Device}}
+\index{Device@{Device}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Device}{Device}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gport_8h_a595e501a3b83fde14c760260fbfb153f}{G\+Port\+Device}} G\+Base\+Port\+::\+Device\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 211 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}\label{class_g_base_port_ac0e1180ebadeed5d3c7d0291db1bdf29}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Display\+Rect@{Display\+Rect}}
+\index{Display\+Rect@{Display\+Rect}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Display\+Rect}{DisplayRect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_rect}{G\+Rect}} G\+Base\+Port\+::\+Display\+Rect\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 212 of file gport.\+h.
+
+\mbox{\Hypertarget{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}\label{class_s_v_g_port_a84d591ffe687b48a18ef8dbfebe9bce4}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!font\+String@{font\+String}}
+\index{font\+String@{font\+String}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{font\+String}{fontString}}
+{\footnotesize\ttfamily std\+::string S\+V\+G\+Port\+::font\+String\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 307 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_base_port_a9a76c3a8af8d0e9f29035d02d8f038c1}\label{class_g_base_port_a9a76c3a8af8d0e9f29035d02d8f038c1}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!Pen\+Width@{Pen\+Width}}
+\index{Pen\+Width@{Pen\+Width}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{Pen\+Width}{PenWidth}}
+{\footnotesize\ttfamily int G\+Base\+Port\+::\+Pen\+Width\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 200 of file gport.\+h.
+
+\mbox{\Hypertarget{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}\label{class_s_v_g_port_ad3e240ca528cd784e138dce907d5d45a}} 
+\index{S\+V\+G\+Port@{S\+V\+G\+Port}!svg\+Stream@{svg\+Stream}}
+\index{svg\+Stream@{svg\+Stream}!S\+V\+G\+Port@{S\+V\+G\+Port}}
+\subsubsection{\texorpdfstring{svg\+Stream}{svgStream}}
+{\footnotesize\ttfamily std\+::ofstream S\+V\+G\+Port\+::svg\+Stream\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 306 of file gport.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\mbox{\hyperlink{gport_8h}{gport.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\mbox{\hyperlink{gport_8cpp}{gport.\+cpp}}\end{DoxyCompactItemize}

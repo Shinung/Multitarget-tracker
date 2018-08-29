@@ -1,0 +1,659 @@
+\hypertarget{class_int_image}{}\section{Int\+Image$<$ T $>$ Class Template Reference}
+\label{class_int_image}\index{Int\+Image$<$ T $>$@{Int\+Image$<$ T $>$}}
+
+
+{\ttfamily \#include $<$c4-\/pedestrian-\/detector.\+h$>$}
+
+
+
+Inheritance diagram for Int\+Image$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_int_image__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Int\+Image$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_int_image__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_int_image_ad5fa7989718f9d3b64f81f2895ffc07f}{Int\+Image}} ()
+\item 
+virtual \mbox{\hyperlink{class_int_image_a5b0fb4fe568e219d01c3b882972e3c77}{$\sim$\+Int\+Image}} ()
+\item 
+virtual void \mbox{\hyperlink{class_int_image_a183a2bb5b576ab7a03010c0fff8f47cb}{Clear}} (void)
+\item 
+void \mbox{\hyperlink{class_int_image_a89eb8fac3fde8d3ce392e5f28c14f8b0}{Set\+Size}} (const int h, const int w)
+\item 
+bool \mbox{\hyperlink{class_int_image_a9e74890b8f45d03e0c4aa335a96849d1}{Load}} (cv\+::\+Mat img)
+\item 
+void \mbox{\hyperlink{class_int_image_a6afc3c902400a1c287206b0f25604bab}{Save}} (const std\+::string \&filename) const
+\item 
+void \mbox{\hyperlink{class_int_image_adc366f59865cefd440c01996fd42d59a}{Swap}} (\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&image2)
+\item 
+void \mbox{\hyperlink{class_int_image_a4b955bc5382ee4745a5ab92fc48b4a6a}{Calc\+Integral\+Image\+In\+Place}} (void)
+\item 
+void \mbox{\hyperlink{class_int_image_a6eb852d06d8365476dba0760d9319e59}{Resize}} (\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&result, const \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{R\+E\+AL}} ratio) const
+\item 
+void \mbox{\hyperlink{class_int_image_a280423236cc08aca573725950e913467}{Resize}} (\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&result, const int height, const int width) const
+\item 
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \& \mbox{\hyperlink{class_int_image_a03a3f6df469a4c8569612cd0df0ff345}{operator=}} (const \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&source)
+\item 
+void \mbox{\hyperlink{class_int_image_a35b8a5c2e64fa3ab50d6b14973f368b8}{Sobel}} (\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{R\+E\+AL}} $>$ \&result, const bool use\+Sqrt, const bool normalize)
+\item 
+void \mbox{\hyperlink{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec}{Create}} (const int \+\_\+nrow, const int \+\_\+ncol)
+\item 
+void \mbox{\hyperlink{class_array2d_c_ae8cbeb3e4fdc3a45cc188ecc1b317919}{Swap}} (\mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$ \&array2)
+\item 
+void \mbox{\hyperlink{class_array2d_c_a5e1d7837fd208699694fc3fc97151df0}{Zero}} (const T t=0)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{R\+E\+AL}} \mbox{\hyperlink{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}{variance}}
+\item 
+int \mbox{\hyperlink{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}{label}}
+\item 
+int \mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}
+\item 
+int \mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}
+\item 
+T $\ast$$\ast$ \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}
+\item 
+T $\ast$ \mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_int_image_ad5d40c163fb0768b5e73a8efc4a6084c}{Int\+Image}} (const \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&source)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Int\+Image$<$ T $>$}
+
+
+
+Definition at line 215 of file c4-\/pedestrian-\/detector.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_int_image_ad5d40c163fb0768b5e73a8efc4a6084c}\label{class_int_image_ad5d40c163fb0768b5e73a8efc4a6084c}} 
+\index{Int\+Image@{Int\+Image}!Int\+Image@{Int\+Image}}
+\index{Int\+Image@{Int\+Image}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Int\+Image()}{IntImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::\mbox{\hyperlink{class_int_image}{Int\+Image}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 218 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+218 \{ \} \textcolor{comment}{// prohibit copy constructor}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_int_image_ad5fa7989718f9d3b64f81f2895ffc07f}\label{class_int_image_ad5fa7989718f9d3b64f81f2895ffc07f}} 
+\index{Int\+Image@{Int\+Image}!Int\+Image@{Int\+Image}}
+\index{Int\+Image@{Int\+Image}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Int\+Image()}{IntImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::\mbox{\hyperlink{class_int_image}{Int\+Image}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 221 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+221 :\mbox{\hyperlink{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}{variance}}(0.0),\mbox{\hyperlink{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}{label}}(-1) \{ \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_int_image_a5b0fb4fe568e219d01c3b882972e3c77}\label{class_int_image_a5b0fb4fe568e219d01c3b882972e3c77}} 
+\index{Int\+Image@{Int\+Image}!````~Int\+Image@{$\sim$\+Int\+Image}}
+\index{````~Int\+Image@{$\sim$\+Int\+Image}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{$\sim$\+Int\+Image()}{~IntImage()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+virtual \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_int_image}{Int\+Image}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 222 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+223     \{
+224         \mbox{\hyperlink{class_int_image_a183a2bb5b576ab7a03010c0fff8f47cb}{Clear}}();
+225     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_int_image_a4b955bc5382ee4745a5ab92fc48b4a6a}\label{class_int_image_a4b955bc5382ee4745a5ab92fc48b4a6a}} 
+\index{Int\+Image@{Int\+Image}!Calc\+Integral\+Image\+In\+Place@{Calc\+Integral\+Image\+In\+Place}}
+\index{Calc\+Integral\+Image\+In\+Place@{Calc\+Integral\+Image\+In\+Place}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Calc\+Integral\+Image\+In\+Place()}{CalcIntegralImageInPlace()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Calc\+Integral\+Image\+In\+Place (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 367 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+370 \{
+371     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=1; i<\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}; i++)   \textcolor{comment}{// process the first line}
+372     \{
+373         \mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}[i] += \mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}[i-1];
+374     \}
+375     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=1; i<\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}; i++)
+376     \{
+377         \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}} partialsum = 0;
+378         T* curp = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i];
+379         T* prep = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i-1];
+380         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}; j++)
+381         \{
+382             partialsum += \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}}(curp[j]);
+383             curp[j] = prep[j] + partialsum;
+384         \}
+385     \}
+386 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_int_image_a4b955bc5382ee4745a5ab92fc48b4a6a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_int_image_a183a2bb5b576ab7a03010c0fff8f47cb}\label{class_int_image_a183a2bb5b576ab7a03010c0fff8f47cb}} 
+\index{Int\+Image@{Int\+Image}!Clear@{Clear}}
+\index{Clear@{Clear}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Clear (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 250 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+251 \{
+252     \mbox{\hyperlink{class_array2d_c_a76a406cfeb9a9f75a1586e0a7b22f63e}{Array2dC<T>::Clear}}();
+253     \mbox{\hyperlink{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}{variance}} = 0.0;
+254     \mbox{\hyperlink{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}{label}} = -1;
+255 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_int_image_a183a2bb5b576ab7a03010c0fff8f47cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec}\label{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec}} 
+\index{Int\+Image@{Int\+Image}!Create@{Create}}
+\index{Create@{Create}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$\+::Create (\begin{DoxyParamCaption}\item[{const int}]{\+\_\+nrow,  }\item[{const int}]{\+\_\+ncol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 170 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+171 \{
+172     assert(\_nrow>0 && \_ncol>0);
+173     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}==\_nrow && \mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}==\_ncol) \textcolor{keywordflow}{return};
+174     \mbox{\hyperlink{class_array2d_c_a76a406cfeb9a9f75a1586e0a7b22f63e}{Clear}}();
+175     \mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}} = \_nrow;
+176     \mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}} = \_ncol;
+177     \mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}} = \textcolor{keyword}{new} T[\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}*\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}];
+178     assert(\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}!=NULL);
+179     \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}} = \textcolor{keyword}{new} T*[\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}];
+180     assert(\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}!=NULL);
+181     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}; i++) \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i] = \mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}} + i * \mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}};
+182 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_int_image_a9e74890b8f45d03e0c4aa335a96849d1}\label{class_int_image_a9e74890b8f45d03e0c4aa335a96849d1}} 
+\index{Int\+Image@{Int\+Image}!Load@{Load}}
+\index{Load@{Load}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Load (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{img }\end{DoxyParamCaption})}
+
+
+
+Definition at line 258 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+259 \{
+260     \textcolor{keywordflow}{if} (img.empty()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+261 
+262     \mbox{\hyperlink{class_int_image_a89eb8fac3fde8d3ce392e5f28c14f8b0}{SetSize}}(img.rows, img.cols);
+263     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0,ih=img.rows,iw=img.cols; i<ih; i++)
+264     \{
+265         T* pdata = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i];
+266         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* pimg = \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*\textcolor{keyword}{>}(img.data+img.step*i);
+267         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<iw; j++) pdata[j] = pimg[j];
+268     \}
+269 
+270     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+271 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{class_int_image_a9e74890b8f45d03e0c4aa335a96849d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_int_image_a03a3f6df469a4c8569612cd0df0ff345}\label{class_int_image_a03a3f6df469a4c8569612cd0df0ff345}} 
+\index{Int\+Image@{Int\+Image}!operator=@{operator=}}
+\index{operator=@{operator=}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \& \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&}]{source }\end{DoxyParamCaption})}
+
+
+
+Definition at line 302 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+303 \{
+304     \textcolor{keywordflow}{if}(&source==\textcolor{keyword}{this}) \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+305     \mbox{\hyperlink{class_int_image_a89eb8fac3fde8d3ce392e5f28c14f8b0}{SetSize}}(source.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}},source.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}});
+306     std::copy(source.\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}},source.\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}+\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}*\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}},\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}});
+307     \mbox{\hyperlink{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}{label}} = source.\mbox{\hyperlink{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}{label}};
+308     \mbox{\hyperlink{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}{variance}} = source.\mbox{\hyperlink{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}{variance}};
+309     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+310 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_int_image_a6eb852d06d8365476dba0760d9319e59}\label{class_int_image_a6eb852d06d8365476dba0760d9319e59}} 
+\index{Int\+Image@{Int\+Image}!Resize@{Resize}}
+\index{Resize@{Resize}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Resize()}{Resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&}]{result,  }\item[{const \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{R\+E\+AL}}}]{ratio }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 313 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+314 \{
+315     \mbox{\hyperlink{class_int_image_a6eb852d06d8365476dba0760d9319e59}{Resize}}(result,\textcolor{keywordtype}{int}(\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}*ratio),\textcolor{keywordtype}{int}(\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}*ratio));
+316 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_int_image_a6eb852d06d8365476dba0760d9319e59_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_int_image_a280423236cc08aca573725950e913467}\label{class_int_image_a280423236cc08aca573725950e913467}} 
+\index{Int\+Image@{Int\+Image}!Resize@{Resize}}
+\index{Resize@{Resize}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Resize()}{Resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&}]{result,  }\item[{const int}]{height,  }\item[{const int}]{width }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 319 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+320 \{
+321     assert(height>0 && width>0);
+322     result.\mbox{\hyperlink{class_int_image_a89eb8fac3fde8d3ce392e5f28c14f8b0}{SetSize}}(height,width);
+323     \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}} ixratio = \mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}*1.0/height, iyratio = \mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}*1.0/width;
+324 
+325     \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}}* p\_y = \textcolor{keyword}{new} \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}}[result.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}];
+326     assert(p\_y!=NULL);
+327     \textcolor{keywordtype}{int}* p\_y0 = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[result.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}];
+328     assert(p\_y0!=NULL);
+329     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<width; i++)
+330     \{
+331         p\_y[i] = i*iyratio;
+332         p\_y0[i] = (int)p\_y[i];
+333         \textcolor{keywordflow}{if}(p\_y0[i]==\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-1) p\_y0[i]--;
+334         p\_y[i] -= p\_y0[i];
+335     \}
+336 
+337     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<height; i++)
+338     \{
+339         \textcolor{keywordtype}{int} x0;
+340         \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}} x;
+341         x = i*ixratio;
+342         x0 = (int)x;
+343         \textcolor{keywordflow}{if}(x0==\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-1) x0--;
+344         x -= x0;
+345         T* rp = result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i];
+346         \textcolor{keyword}{const} T* px0 = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[x0];
+347         \textcolor{keyword}{const} T* px1 = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[x0+1];
+348         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<width; j++)
+349         \{
+350             \textcolor{keywordtype}{int} y0=p\_y0[j];
+351             \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}} y=p\_y[j],fx0,fx1;
+352 
+353             fx0 = \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}}(px0[y0] + y*(px0[y0+1]-px0[y0]));
+354             fx1 = \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}}(px1[y0] + y*(px1[y0+1]-px1[y0]));
+355 
+356             rp[j] = T(fx0 + x*(fx1-fx0));
+357         \}
+358     \}
+359 
+360     \textcolor{keyword}{delete}[] p\_y;
+361     p\_y=NULL;
+362     \textcolor{keyword}{delete}[] p\_y0;
+363     p\_y0=NULL;
+364 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_int_image_a6afc3c902400a1c287206b0f25604bab}\label{class_int_image_a6afc3c902400a1c287206b0f25604bab}} 
+\index{Int\+Image@{Int\+Image}!Save@{Save}}
+\index{Save@{Save}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Save (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 274 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+275 \{
+276 \textcolor{preprocessor}{#if (CV\_VERSION\_MAJOR < 4)}
+277     IplImage* img;
+278 
+279     img = cvCreateImage(cvSize(\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}},\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}),IPL\_DEPTH\_8U,1);
+280     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0,ih=img->height,iw=img->width; i<ih; i++)
+281     \{
+282         T* pdata = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i];
+283         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* pimg = \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*\textcolor{keyword}{>}(img->imageData+img->widthStep*i);
+284         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<iw; j++) pimg[j] = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char})pdata[j];
+285     \}
+286     cvSaveImage(filename.c\_str(),img);
+287     cvReleaseImage(&img);
+288 \textcolor{preprocessor}{#else}
+289     assert(0);
+290 \textcolor{preprocessor}{#endif}
+291 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_int_image_a89eb8fac3fde8d3ce392e5f28c14f8b0}\label{class_int_image_a89eb8fac3fde8d3ce392e5f28c14f8b0}} 
+\index{Int\+Image@{Int\+Image}!Set\+Size@{Set\+Size}}
+\index{Set\+Size@{Set\+Size}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Set\+Size()}{SetSize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Set\+Size (\begin{DoxyParamCaption}\item[{const int}]{h,  }\item[{const int}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 294 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+295 \{
+296     \textcolor{keywordflow}{if}((h == \mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}) && (w == \mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}})) \textcolor{keywordflow}{return};
+297     \mbox{\hyperlink{class_int_image_a183a2bb5b576ab7a03010c0fff8f47cb}{Clear}}();
+298     \mbox{\hyperlink{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec}{Array2dC<T>::Create}}(h,w);
+299 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_int_image_a89eb8fac3fde8d3ce392e5f28c14f8b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_int_image_a35b8a5c2e64fa3ab50d6b14973f368b8}\label{class_int_image_a35b8a5c2e64fa3ab50d6b14973f368b8}} 
+\index{Int\+Image@{Int\+Image}!Sobel@{Sobel}}
+\index{Sobel@{Sobel}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Sobel()}{Sobel()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Sobel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{R\+E\+AL}} $>$ \&}]{result,  }\item[{const bool}]{use\+Sqrt,  }\item[{const bool}]{normalize }\end{DoxyParamCaption})}
+
+
+
+Definition at line 397 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+398 \{
+399     \textcolor{comment}{// compute the Sobel gradient. For now, we just use the very inefficient way. Optimization can be done
+       later}
+400 \textcolor{comment}{// if useSqrt = true, we compute the real Sobel gradient; otherwise, the square of it}
+401 \textcolor{comment}{// if normalize = true, the numbers are normalized to be in 0..255}
+402     result.\mbox{\hyperlink{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec}{Create}}(\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}},\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}});
+403     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}; i++) result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][0] = result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-1] = 0;
+404     std::fill(result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[0],result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[0]+\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}},0.0);
+405     std::fill(result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-1],result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-1]+\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}},0.0);
+406     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=1; i<\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-1; i++)
+407     \{
+408         T* p1 = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i-1];
+409         T* p2 = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i];
+410         T* p3 = \mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i+1];
+411         \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}}* pr = result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i];
+412         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=1; j<\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-1; j++)
+413         \{
+414             \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}} gx =     p1[j-1] - p1[j+1]
+415                           + 2*(p2[j-1]   - p2[j+1])
+416                           +    p3[j-1] - p3[j+1];
+417             \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}} gy =     p1[j-1] - p3[j-1]
+418                           + 2*(p1[j]   - p3[j])
+419                           +    p1[j+1] - p3[j+1];
+420             pr[j] = gx*gx+gy*gy;
+421         \}
+422     \}
+423     \textcolor{keywordflow}{if}(useSqrt || normalize ) \textcolor{comment}{// if we want to normalize the result image, we'd better use the true Sobel
+       gradient}
+424         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=1; i<\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-1; i++)
+425             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=1; j<\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-1; j++)
+426                 result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][j] = sqrt(result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][j]);
+427 
+428     \textcolor{keywordflow}{if}(normalize)
+429     \{
+430         \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}} minv = 1e20, maxv = -minv;
+431         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=1; i<\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-1; i++)
+432         \{
+433             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=1; j<\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-1; j++)
+434             \{
+435                 \textcolor{keywordflow}{if}(result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][j]<minv)
+436                     minv = result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][j];
+437                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][j]>maxv)
+438                     maxv = result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][j];
+439             \}
+440         \}
+441         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}; i++) result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][0] = result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i][\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-1] = minv;
+442         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}; i++) result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[0][i] = result.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-1][i] = minv;
+443         \mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{REAL}} s = 255.0/(maxv-minv);
+444         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}*\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}; i++) result.\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}[i] = (result.\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}[i]-minv)*s;
+445     \}
+446 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_int_image_a35b8a5c2e64fa3ab50d6b14973f368b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_array2d_c_ae8cbeb3e4fdc3a45cc188ecc1b317919}\label{class_array2d_c_ae8cbeb3e4fdc3a45cc188ecc1b317919}} 
+\index{Int\+Image@{Int\+Image}!Swap@{Swap}}
+\index{Swap@{Swap}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Swap()}{Swap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$\+::Swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$ \&}]{array2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 185 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+186 \{
+187     std::swap(\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}},array2.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}});
+188     std::swap(\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}},array2.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}});
+189     std::swap(\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}},array2.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}});
+190     std::swap(\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}},array2.\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}});
+191 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_array2d_c_ae8cbeb3e4fdc3a45cc188ecc1b317919_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_int_image_adc366f59865cefd440c01996fd42d59a}\label{class_int_image_adc366f59865cefd440c01996fd42d59a}} 
+\index{Int\+Image@{Int\+Image}!Swap@{Swap}}
+\index{Swap@{Swap}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Swap()}{Swap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::Swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$ \&}]{image2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 389 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+390 \{
+391     \mbox{\hyperlink{class_array2d_c_ae8cbeb3e4fdc3a45cc188ecc1b317919}{Array2dC<T>::Swap}}(image2);
+392     std::swap(\mbox{\hyperlink{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}{variance}},image2.\mbox{\hyperlink{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}{variance}});
+393     std::swap(\mbox{\hyperlink{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}{label}},image2.\mbox{\hyperlink{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}{label}});
+394 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_int_image_adc366f59865cefd440c01996fd42d59a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_array2d_c_a5e1d7837fd208699694fc3fc97151df0}\label{class_array2d_c_a5e1d7837fd208699694fc3fc97151df0}} 
+\index{Int\+Image@{Int\+Image}!Zero@{Zero}}
+\index{Zero@{Zero}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{Zero()}{Zero()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$\+::Zero (\begin{DoxyParamCaption}\item[{const T}]{t = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 194 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+195 \{
+196     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}>0) std::fill(\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}},\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}+\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}*\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}},t);
+197 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_array2d_c_a5e1d7837fd208699694fc3fc97151df0_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}\label{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}} 
+\index{Int\+Image@{Int\+Image}!buf@{buf}}
+\index{buf@{buf}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T$\ast$ \mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$\+::buf\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 57 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}\label{class_int_image_aeeeaa5da82f21cdc95ab3f941aa405e7}} 
+\index{Int\+Image@{Int\+Image}!label@{label}}
+\index{label@{label}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+int \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::label}
+
+
+
+Definition at line 246 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}\label{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}} 
+\index{Int\+Image@{Int\+Image}!ncol@{ncol}}
+\index{ncol@{ncol}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{ncol}{ncol}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+int \mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$\+::ncol\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 55 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}\label{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}} 
+\index{Int\+Image@{Int\+Image}!nrow@{nrow}}
+\index{nrow@{nrow}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{nrow}{nrow}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+int \mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$\+::nrow\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 54 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}\label{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}} 
+\index{Int\+Image@{Int\+Image}!p@{p}}
+\index{p@{p}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T$\ast$$\ast$ \mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ T $>$\+::p\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 56 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}\label{class_int_image_a2da0267dc732e9e4149e70a05f744fb6}} 
+\index{Int\+Image@{Int\+Image}!variance@{variance}}
+\index{variance@{variance}!Int\+Image@{Int\+Image}}
+\subsubsection{\texorpdfstring{variance}{variance}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{c4-pedestrian-detector_8h_a5821460e95a0800cf9f24c38915cbbde}{R\+E\+AL}} \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ T $>$\+::variance}
+
+
+
+Definition at line 245 of file c4-\/pedestrian-\/detector.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/pedestrians/\mbox{\hyperlink{c4-pedestrian-detector_8h}{c4-\/pedestrian-\/detector.\+h}}\end{DoxyCompactItemize}

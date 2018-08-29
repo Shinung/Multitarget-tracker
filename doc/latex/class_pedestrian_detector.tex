@@ -1,0 +1,627 @@
+\hypertarget{class_pedestrian_detector}{}\section{Pedestrian\+Detector Class Reference}
+\label{class_pedestrian_detector}\index{Pedestrian\+Detector@{Pedestrian\+Detector}}
+
+
+The \mbox{\hyperlink{class_pedestrian_detector}{Pedestrian\+Detector}} class.  
+
+
+
+
+{\ttfamily \#include $<$Pedestrian\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for Pedestrian\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{class_pedestrian_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Pedestrian\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_pedestrian_detector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8c}{Detector\+Types}} \{ \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca47cb01f997c4439468112272761fc7de}{H\+OG}}, 
+\mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca408a85378caa7239ba0ded11495782fd}{C4}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pedestrian_detector_afdf81621958b3bd7083a67c76a535e4a}{Pedestrian\+Detector}} (bool collect\+Points, cv\+::\+U\+Mat \&gray)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pedestrian_detector_afdf81621958b3bd7083a67c76a535e4a}{Pedestrian\+Detector\+::\+Pedestrian\+Detector}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pedestrian_detector_af093451952c64eb107ac2e2aff115b6c}{$\sim$\+Pedestrian\+Detector}} (void)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pedestrian_detector_af093451952c64eb107ac2e2aff115b6c}{Pedestrian\+Detector\+::$\sim$\+Pedestrian\+Detector}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pedestrian_detector_a630d8ad4d8ca2123639e989b01c8dd3e}{Init}} (const \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}} \&config)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pedestrian_detector_a630d8ad4d8ca2123639e989b01c8dd3e}{Pedestrian\+Detector\+::\+Init}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pedestrian_detector_a27a7c2c3b358f6e44a7de71f808597c2}{Detect}} (cv\+::\+U\+Mat \&gray)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_pedestrian_detector_a27a7c2c3b358f6e44a7de71f808597c2}{Pedestrian\+Detector\+::\+Detect}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}{Set\+Min\+Object\+Size}} (cv\+::\+Size min\+Object\+Size)
+\begin{DoxyCompactList}\small\item\em Set\+Min\+Object\+Size. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} \& \mbox{\hyperlink{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}{Get\+Detects}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Detects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}{Collect\+Points}} (\mbox{\hyperlink{class_c_region}{C\+Region}} \&region)
+\begin{DoxyCompactList}\small\item\em Collect\+Points. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}{Calc\+Motion\+Map}} (cv\+::\+Mat frame)
+\begin{DoxyCompactList}\small\item\em Calc\+Motion\+Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\+\_\+regions}}
+\item 
+cv\+::\+Size \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\+\_\+min\+Object\+Size}}
+\item 
+bool \mbox{\hyperlink{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}{m\+\_\+collect\+Points}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\+\_\+motion\+Map}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8c}{Detector\+Types}} \mbox{\hyperlink{class_pedestrian_detector_a4e0492d82780eb31f763972173d56d9d}{m\+\_\+detector\+Type}}
+\item 
+cv\+::\+H\+O\+G\+Descriptor \mbox{\hyperlink{class_pedestrian_detector_ad00796408688b6465fb988796536680d}{m\+\_\+hog}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+hog H\+OG detector \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_detection_scanner}{Detection\+Scanner}} \mbox{\hyperlink{class_pedestrian_detector_a68a45a369623a3492065bdf29e81b29c}{m\+\_\+scanner\+C4}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+scanner\+C4 C4 detector \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_pedestrian_detector_a600b0da8ac472bcd8cb8aeb0e9f87eb7}{H\+U\+M\+A\+N\+\_\+height}} = 108
+\item 
+static const int \mbox{\hyperlink{class_pedestrian_detector_afa7733c965e2d44d6908309b33201d90}{H\+U\+M\+A\+N\+\_\+width}} = 36
+\item 
+static const int \mbox{\hyperlink{class_pedestrian_detector_acdc72a22ba921457147c613ac874b3ed}{H\+U\+M\+A\+N\+\_\+xdiv}} = 9
+\item 
+static const int \mbox{\hyperlink{class_pedestrian_detector_ab2626952044b310482883b506023e6a7}{H\+U\+M\+A\+N\+\_\+ydiv}} = 4
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_pedestrian_detector}{Pedestrian\+Detector}} class. 
+
+Definition at line 9 of file Pedestrian\+Detector.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8c}\label{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8c}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Detector\+Types@{Detector\+Types}}
+\index{Detector\+Types@{Detector\+Types}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{Detector\+Types}{DetectorTypes}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8c}{Pedestrian\+Detector\+::\+Detector\+Types}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+OG@{H\+OG}!Pedestrian\+Detector@{Pedestrian\+Detector}}\index{Pedestrian\+Detector@{Pedestrian\+Detector}!H\+OG@{H\+OG}}}\mbox{\Hypertarget{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca47cb01f997c4439468112272761fc7de}\label{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca47cb01f997c4439468112272761fc7de}} 
+H\+OG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C4@{C4}!Pedestrian\+Detector@{Pedestrian\+Detector}}\index{Pedestrian\+Detector@{Pedestrian\+Detector}!C4@{C4}}}\mbox{\Hypertarget{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca408a85378caa7239ba0ded11495782fd}\label{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca408a85378caa7239ba0ded11495782fd}} 
+C4&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 12 of file Pedestrian\+Detector.\+h.
+
+
+\begin{DoxyCode}
+13     \{
+14         \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca47cb01f997c4439468112272761fc7de}{HOG}},
+15         \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca408a85378caa7239ba0ded11495782fd}{C4}}
+16     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pedestrian_detector_afdf81621958b3bd7083a67c76a535e4a}\label{class_pedestrian_detector_afdf81621958b3bd7083a67c76a535e4a}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{Pedestrian\+Detector()}{PedestrianDetector()}}
+{\footnotesize\ttfamily Pedestrian\+Detector\+::\+Pedestrian\+Detector (\begin{DoxyParamCaption}\item[{bool}]{collect\+Points,  }\item[{cv\+::\+U\+Mat \&}]{gray }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_pedestrian_detector_afdf81621958b3bd7083a67c76a535e4a}{Pedestrian\+Detector\+::\+Pedestrian\+Detector}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collect\+Points} & \\
+\hline
+{\em gray} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file Pedestrian\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+13     :
+14       \mbox{\hyperlink{class_base_detector_a3c85e13a47dd472319dc43c60f0d102a}{BaseDetector}}(collectPoints, gray),
+15       \mbox{\hyperlink{class_pedestrian_detector_a68a45a369623a3492065bdf29e81b29c}{m\_scannerC4}}(\mbox{\hyperlink{class_pedestrian_detector_a600b0da8ac472bcd8cb8aeb0e9f87eb7}{HUMAN\_height}}, \mbox{\hyperlink{class_pedestrian_detector_afa7733c965e2d44d6908309b33201d90}{HUMAN\_width}}, 
+      \mbox{\hyperlink{class_pedestrian_detector_acdc72a22ba921457147c613ac874b3ed}{HUMAN\_xdiv}}, \mbox{\hyperlink{class_pedestrian_detector_ab2626952044b310482883b506023e6a7}{HUMAN\_ydiv}}, 256, 0.8)
+16 \{
+17 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_pedestrian_detector_af093451952c64eb107ac2e2aff115b6c}\label{class_pedestrian_detector_af093451952c64eb107ac2e2aff115b6c}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!````~Pedestrian\+Detector@{$\sim$\+Pedestrian\+Detector}}
+\index{````~Pedestrian\+Detector@{$\sim$\+Pedestrian\+Detector}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{$\sim$\+Pedestrian\+Detector()}{~PedestrianDetector()}}
+{\footnotesize\ttfamily Pedestrian\+Detector\+::$\sim$\+Pedestrian\+Detector (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_pedestrian_detector_af093451952c64eb107ac2e2aff115b6c}{Pedestrian\+Detector\+::$\sim$\+Pedestrian\+Detector}}. 
+
+
+
+Definition at line 22 of file Pedestrian\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+23 \{
+24 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}\label{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Calc\+Motion\+Map@{Calc\+Motion\+Map}}
+\index{Calc\+Motion\+Map@{Calc\+Motion\+Map}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{Calc\+Motion\+Map()}{CalcMotionMap()}}
+{\footnotesize\ttfamily virtual void Base\+Detector\+::\+Calc\+Motion\+Map (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Calc\+Motion\+Map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_motion_detector_aa4e606acafdc33a3104471903e449adc}{Motion\+Detector}}.
+
+
+
+Definition at line 90 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+91     \{
+92         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.size() != frame.size())
+93         \{
+94             \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}} = cv::Mat(frame.size(), CV\_32FC1, cv::Scalar(0, 0, 0));
+95         \}
+96 
+97         cv::Mat foreground(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.size(), CV\_8UC1, cv::Scalar(0, 0, 0));
+98         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}& region : \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}})
+99         \{
+100 \textcolor{preprocessor}{#if (CV\_VERSION\_MAJOR < 4)}
+101             cv::ellipse(foreground,
+102                         cv::RotatedRect((region.m\_rect.tl() + region.m\_rect.br()) / 2, region.m\_rect.size()
+      , 0),
+103                                         cv::Scalar(255, 255, 255), CV\_FILLED);
+104 \textcolor{preprocessor}{#else}
+105             cv::ellipse(foreground,
+106                         cv::RotatedRect((region.m\_rect.tl() + region.m\_rect.br()) / 2, region.m\_rect.size()
+      , 0),
+107                                         cv::Scalar(255, 255, 255), cv::FILLED);
+108 \textcolor{preprocessor}{#endif}
+109         \}
+110 
+111         cv::Mat normFor;
+112         cv::normalize(foreground, normFor, 255, 0, cv::NORM\_MINMAX, \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.type());
+113 
+114         \textcolor{keywordtype}{double} alpha = 0.95;
+115         cv::addWeighted(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}, alpha, normFor, 1 - alpha, 0, 
+      \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}});
+116 
+117         \textcolor{keyword}{const} \textcolor{keywordtype}{int} chans = frame.channels();
+118 
+119         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < frame.rows; ++y)
+120         \{
+121             uchar* imgPtr = frame.ptr(y);
+122             \textcolor{keywordtype}{float}* moPtr = \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{float}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.ptr(y));
+123             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < frame.cols; ++x)
+124             \{
+125                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ci = chans - 1; ci < chans; ++ci)
+126                 \{
+127                     imgPtr[ci] = cv::saturate\_cast<uchar>(imgPtr[ci] + moPtr[0]);
+128                 \}
+129                 imgPtr += chans;
+130                 ++moPtr;
+131             \}
+132         \}
+133     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}\label{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Collect\+Points@{Collect\+Points}}
+\index{Collect\+Points@{Collect\+Points}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{Collect\+Points()}{CollectPoints()}}
+{\footnotesize\ttfamily virtual void Base\+Detector\+::\+Collect\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_region}{C\+Region}} \&}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Collect\+Points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em region} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+65     \{
+66         \textcolor{keyword}{const} \textcolor{keywordtype}{int} yStep = 5;
+67         \textcolor{keyword}{const} \textcolor{keywordtype}{int} xStep = 5;
+68 
+69         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y, yStop = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y + region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.height; y < yStop; y += yStep)
+70         \{
+71             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x, xStop = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x + region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.width; x < xStop; x += xStep)
+72             \{
+73                 \textcolor{keywordflow}{if} (region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.contains(cv::Point(x, y)))
+74                 \{
+75                     region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.push\_back(cv::Point2f(static\_cast<float>(x), static\_cast<float>
+      (y)));
+76                 \}
+77             \}
+78         \}
+79 
+80         \textcolor{keywordflow}{if} (region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.empty())
+81         \{
+82             region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.push\_back(cv::Point2f(region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x + 0.5f * region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.width, region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y + 0.5f * region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.height));
+83         \}
+84     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_pedestrian_detector_a27a7c2c3b358f6e44a7de71f808597c2}\label{class_pedestrian_detector_a27a7c2c3b358f6e44a7de71f808597c2}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Detect@{Detect}}
+\index{Detect@{Detect}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{Detect()}{Detect()}}
+{\footnotesize\ttfamily void Pedestrian\+Detector\+::\+Detect (\begin{DoxyParamCaption}\item[{cv\+::\+U\+Mat \&}]{gray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_pedestrian_detector_a27a7c2c3b358f6e44a7de71f808597c2}{Pedestrian\+Detector\+::\+Detect}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gray} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base_detector_a9c9dedfffb7673fd2995f24bdb9ade18}{Base\+Detector}}.
+
+
+
+Definition at line 76 of file Pedestrian\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+77 \{
+78     std::vector<cv::Rect> foundRects;
+79     std::vector<cv::Rect> filteredRects;
+80 
+81     \textcolor{keywordtype}{int} neighbors = 0;
+82     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_pedestrian_detector_a4e0492d82780eb31f763972173d56d9d}{m\_detectorType}} == \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca47cb01f997c4439468112272761fc7de}{HOG}})
+83     \{
+84         \mbox{\hyperlink{class_pedestrian_detector_ad00796408688b6465fb988796536680d}{m\_hog}}.detectMultiScale(gray, foundRects, 0, cv::Size(8, 8), cv::Size(32, 32), 1.05, 4, \textcolor{keyword}{false});
+85     \}
+86     \textcolor{keywordflow}{else}
+87     \{
+88         \mbox{\hyperlink{class_int_image}{IntImage<double>}} original;
+89         original.\mbox{\hyperlink{class_int_image_a9e74890b8f45d03e0c4aa335a96849d1}{Load}}(gray.getMat(cv::ACCESS\_READ));
+90 
+91         \mbox{\hyperlink{class_pedestrian_detector_a68a45a369623a3492065bdf29e81b29c}{m\_scannerC4}}.\mbox{\hyperlink{class_detection_scanner_aa27d494b253975922d853070aab7ce4d}{FastScan}}(original, foundRects, 2);
+92         neighbors = 1;
+93     \}
+94 
+95     \mbox{\hyperlink{nms_8h_a172e28c9d820b35a79650a1337c6f80c}{nms}}(foundRects, filteredRects, 0.3\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}, neighbors);
+96 
+97     \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}}.clear();
+98     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} rect : filteredRects)
+99     \{
+100         rect.x += cvRound(rect.width * 0.1f);
+101         rect.width = cvRound(rect.width * 0.8f);
+102         rect.y += cvRound(rect.height * 0.07f);
+103         rect.height = cvRound(rect.height * 0.8f);
+104 
+105         \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}}.push\_back(rect);
+106     \}
+107 
+108     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}{m\_collectPoints}})
+109     \{
+110         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& region : \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}})
+111         \{
+112             \mbox{\hyperlink{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}{CollectPoints}}(region);
+113         \}
+114     \}
+115 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pedestrian_detector_a27a7c2c3b358f6e44a7de71f808597c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}\label{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Get\+Detects@{Get\+Detects}}
+\index{Get\+Detects@{Get\+Detects}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{Get\+Detects()}{GetDetects()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}}\& Base\+Detector\+::\+Get\+Detects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Get\+Detects. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+56     \{
+57         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}};
+58     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_pedestrian_detector_a630d8ad4d8ca2123639e989b01c8dd3e}\label{class_pedestrian_detector_a630d8ad4d8ca2123639e989b01c8dd3e}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Init@{Init}}
+\index{Init@{Init}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool Pedestrian\+Detector\+::\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_pedestrian_detector_a630d8ad4d8ca2123639e989b01c8dd3e}{Pedestrian\+Detector\+::\+Init}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cascade\+File\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_detector_a44c53608e9e4e3455ff553d987165260}{Base\+Detector}}.
+
+
+
+Definition at line 31 of file Pedestrian\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+32 \{
+33     \textcolor{keyword}{auto} detectorType = config.find(\textcolor{stringliteral}{"detectorType"});
+34 
+35     \textcolor{keywordflow}{if} (detectorType == config.end())
+36     \{
+37         \mbox{\hyperlink{class_pedestrian_detector_a4e0492d82780eb31f763972173d56d9d}{m\_detectorType}} = \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca47cb01f997c4439468112272761fc7de}{HOG}};
+38     \}
+39     \textcolor{keywordflow}{else}
+40     \{
+41         \mbox{\hyperlink{class_pedestrian_detector_a4e0492d82780eb31f763972173d56d9d}{m\_detectorType}} = (detectorType->second == \textcolor{stringliteral}{"HOG"}) ? \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca47cb01f997c4439468112272761fc7de}{HOG}} : 
+      \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca408a85378caa7239ba0ded11495782fd}{C4}};
+42     \}
+43 
+44     \textcolor{keywordflow}{switch} (\mbox{\hyperlink{class_pedestrian_detector_a4e0492d82780eb31f763972173d56d9d}{m\_detectorType}})
+45     \{
+46     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca47cb01f997c4439468112272761fc7de}{HOG}}:
+47         \mbox{\hyperlink{class_pedestrian_detector_ad00796408688b6465fb988796536680d}{m\_hog}}.setSVMDetector(cv::HOGDescriptor::getDefaultPeopleDetector());
+48         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+49 
+50     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8ca408a85378caa7239ba0ded11495782fd}{C4}}:
+51     \{
+52         \textcolor{keyword}{auto} cascadeFileName1 = config.find(\textcolor{stringliteral}{"cascadeFileName1"});
+53         \textcolor{keyword}{auto} cascadeFileName2 = config.find(\textcolor{stringliteral}{"cascadeFileName2"});
+54         \textcolor{keywordflow}{if} (cascadeFileName1 == config.end() || cascadeFileName2 == config.end())
+55         \{
+56             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+57         \}
+58         \textcolor{keywordflow}{else}
+59         \{
+60             \mbox{\hyperlink{c4-pedestrian-detector_8cpp_a1c2c730891bb9a5800d3761e8cfaa160}{LoadCascade}}(cascadeFileName1->second, cascadeFileName2->second, 
+      \mbox{\hyperlink{class_pedestrian_detector_a68a45a369623a3492065bdf29e81b29c}{m\_scannerC4}});
+61             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+62         \}
+63     \}
+64 
+65     \textcolor{keywordflow}{default}:
+66         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+67     \}
+68 
+69     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+70 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_pedestrian_detector_a630d8ad4d8ca2123639e989b01c8dd3e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}\label{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!Set\+Min\+Object\+Size@{Set\+Min\+Object\+Size}}
+\index{Set\+Min\+Object\+Size@{Set\+Min\+Object\+Size}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{Set\+Min\+Object\+Size()}{SetMinObjectSize()}}
+{\footnotesize\ttfamily void Base\+Detector\+::\+Set\+Min\+Object\+Size (\begin{DoxyParamCaption}\item[{cv\+::\+Size}]{min\+Object\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Set\+Min\+Object\+Size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Object\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+47     \{
+48         \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\_minObjectSize}} = minObjectSize;
+49     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pedestrian_detector_a600b0da8ac472bcd8cb8aeb0e9f87eb7}\label{class_pedestrian_detector_a600b0da8ac472bcd8cb8aeb0e9f87eb7}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!H\+U\+M\+A\+N\+\_\+height@{H\+U\+M\+A\+N\+\_\+height}}
+\index{H\+U\+M\+A\+N\+\_\+height@{H\+U\+M\+A\+N\+\_\+height}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{H\+U\+M\+A\+N\+\_\+height}{HUMAN\_height}}
+{\footnotesize\ttfamily const int Pedestrian\+Detector\+::\+H\+U\+M\+A\+N\+\_\+height = 108\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 39 of file Pedestrian\+Detector.\+h.
+
+\mbox{\Hypertarget{class_pedestrian_detector_afa7733c965e2d44d6908309b33201d90}\label{class_pedestrian_detector_afa7733c965e2d44d6908309b33201d90}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!H\+U\+M\+A\+N\+\_\+width@{H\+U\+M\+A\+N\+\_\+width}}
+\index{H\+U\+M\+A\+N\+\_\+width@{H\+U\+M\+A\+N\+\_\+width}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{H\+U\+M\+A\+N\+\_\+width}{HUMAN\_width}}
+{\footnotesize\ttfamily const int Pedestrian\+Detector\+::\+H\+U\+M\+A\+N\+\_\+width = 36\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 40 of file Pedestrian\+Detector.\+h.
+
+\mbox{\Hypertarget{class_pedestrian_detector_acdc72a22ba921457147c613ac874b3ed}\label{class_pedestrian_detector_acdc72a22ba921457147c613ac874b3ed}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!H\+U\+M\+A\+N\+\_\+xdiv@{H\+U\+M\+A\+N\+\_\+xdiv}}
+\index{H\+U\+M\+A\+N\+\_\+xdiv@{H\+U\+M\+A\+N\+\_\+xdiv}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{H\+U\+M\+A\+N\+\_\+xdiv}{HUMAN\_xdiv}}
+{\footnotesize\ttfamily const int Pedestrian\+Detector\+::\+H\+U\+M\+A\+N\+\_\+xdiv = 9\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 41 of file Pedestrian\+Detector.\+h.
+
+\mbox{\Hypertarget{class_pedestrian_detector_ab2626952044b310482883b506023e6a7}\label{class_pedestrian_detector_ab2626952044b310482883b506023e6a7}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!H\+U\+M\+A\+N\+\_\+ydiv@{H\+U\+M\+A\+N\+\_\+ydiv}}
+\index{H\+U\+M\+A\+N\+\_\+ydiv@{H\+U\+M\+A\+N\+\_\+ydiv}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{H\+U\+M\+A\+N\+\_\+ydiv}{HUMAN\_ydiv}}
+{\footnotesize\ttfamily const int Pedestrian\+Detector\+::\+H\+U\+M\+A\+N\+\_\+ydiv = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 42 of file Pedestrian\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}\label{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!m\+\_\+collect\+Points@{m\+\_\+collect\+Points}}
+\index{m\+\_\+collect\+Points@{m\+\_\+collect\+Points}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+collect\+Points}{m\_collectPoints}}
+{\footnotesize\ttfamily bool Base\+Detector\+::m\+\_\+collect\+Points\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 140 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_pedestrian_detector_a4e0492d82780eb31f763972173d56d9d}\label{class_pedestrian_detector_a4e0492d82780eb31f763972173d56d9d}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!m\+\_\+detector\+Type@{m\+\_\+detector\+Type}}
+\index{m\+\_\+detector\+Type@{m\+\_\+detector\+Type}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+detector\+Type}{m\_detectorType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pedestrian_detector_aa2136624089c144b4ef5f3598de00d8c}{Detector\+Types}} Pedestrian\+Detector\+::m\+\_\+detector\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 26 of file Pedestrian\+Detector.\+h.
+
+\mbox{\Hypertarget{class_pedestrian_detector_ad00796408688b6465fb988796536680d}\label{class_pedestrian_detector_ad00796408688b6465fb988796536680d}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!m\+\_\+hog@{m\+\_\+hog}}
+\index{m\+\_\+hog@{m\+\_\+hog}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+hog}{m\_hog}}
+{\footnotesize\ttfamily cv\+::\+H\+O\+G\+Descriptor Pedestrian\+Detector\+::m\+\_\+hog\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+hog H\+OG detector 
+
+
+
+Definition at line 32 of file Pedestrian\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a651b938c89c94daac4763728637d90c9}\label{class_base_detector_a651b938c89c94daac4763728637d90c9}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!m\+\_\+min\+Object\+Size@{m\+\_\+min\+Object\+Size}}
+\index{m\+\_\+min\+Object\+Size@{m\+\_\+min\+Object\+Size}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+min\+Object\+Size}{m\_minObjectSize}}
+{\footnotesize\ttfamily cv\+::\+Size Base\+Detector\+::m\+\_\+min\+Object\+Size\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 138 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}\label{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!m\+\_\+motion\+Map@{m\+\_\+motion\+Map}}
+\index{m\+\_\+motion\+Map@{m\+\_\+motion\+Map}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+motion\+Map}{m\_motionMap}}
+{\footnotesize\ttfamily cv\+::\+Mat Base\+Detector\+::m\+\_\+motion\+Map\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 142 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a409c20093acba261db8354ca72058fce}\label{class_base_detector_a409c20093acba261db8354ca72058fce}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!m\+\_\+regions@{m\+\_\+regions}}
+\index{m\+\_\+regions@{m\+\_\+regions}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+regions}{m\_regions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} Base\+Detector\+::m\+\_\+regions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 136 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_pedestrian_detector_a68a45a369623a3492065bdf29e81b29c}\label{class_pedestrian_detector_a68a45a369623a3492065bdf29e81b29c}} 
+\index{Pedestrian\+Detector@{Pedestrian\+Detector}!m\+\_\+scanner\+C4@{m\+\_\+scanner\+C4}}
+\index{m\+\_\+scanner\+C4@{m\+\_\+scanner\+C4}!Pedestrian\+Detector@{Pedestrian\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+scanner\+C4}{m\_scannerC4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_detection_scanner}{Detection\+Scanner}} Pedestrian\+Detector\+::m\+\_\+scanner\+C4\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+m\+\_\+scanner\+C4 C4 detector 
+
+
+
+Definition at line 38 of file Pedestrian\+Detector.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\mbox{\hyperlink{_pedestrian_detector_8h}{Pedestrian\+Detector.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\mbox{\hyperlink{_pedestrian_detector_8cpp}{Pedestrian\+Detector.\+cpp}}\end{DoxyCompactItemize}

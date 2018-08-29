@@ -1,0 +1,424 @@
+\hypertarget{gml2nestedsql_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/gml2nestedsql.cpp File Reference}
+\label{gml2nestedsql_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/gml2nestedsql.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/gml2nestedsql.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$G\+T\+L/\+G\+T\+L.\+h$>$}\newline
+{\ttfamily \#include $<$G\+T\+L/dfs.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mygraph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mytree.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for gml2nestedsql.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gml2nestedsql_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmydfs}{mydfs}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gml2nestedsql_8cpp_a46ae30dbab3aaee50a0820226d9e45b0}{Tokenise}} (std\+::string s, std\+::string delimiters, std\+::vector$<$ std\+::string $>$ \&tokens)
+\item 
+string \mbox{\hyperlink{gml2nestedsql_8cpp_a8be8de6ca9a34e14d3b2188f24c2c619}{escape\+\_\+string}} (string s)
+\item 
+void \mbox{\hyperlink{gml2nestedsql_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}{Show\+Time\+Used}} (clock\+\_\+t \&\mbox{\hyperlink{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}}, clock\+\_\+t \&\mbox{\hyperlink{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}})
+\item 
+int \mbox{\hyperlink{gml2nestedsql_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+clock\+\_\+t \mbox{\hyperlink{gml2nestedsql_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}}
+\item 
+clock\+\_\+t \mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{gml2nestedsql_8cpp_a49375392d15f453b5dde490a5ba9e6bf}{left\+\_\+visitation}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{gml2nestedsql_8cpp_ae55c753c0314f90afbec9d88a63047ba}{right\+\_\+visitation}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{gml2nestedsql_8cpp_a021486f59a5a82e4020e5f4ce19b57a9}{num\+\_\+children}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{gml2nestedsql_8cpp_aeeffe275019b0e0529bdbfc726d7824e}{child\+\_\+number}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ string $>$ \mbox{\hyperlink{gml2nestedsql_8cpp_a10cdd7e2573589f34f8a03983f8cd8f8}{path}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{gml2nestedsql_8cpp_af81a36ce49771f5a6ccdc7b43e648f7f}{depth}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gml2nestedsql_8cpp_a8be8de6ca9a34e14d3b2188f24c2c619}\label{gml2nestedsql_8cpp_a8be8de6ca9a34e14d3b2188f24c2c619}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!escape\+\_\+string@{escape\+\_\+string}}
+\index{escape\+\_\+string@{escape\+\_\+string}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{escape\+\_\+string()}{escape\_string()}}
+{\footnotesize\ttfamily string escape\+\_\+string (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file gml2nestedsql.\+cpp.
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordflow}{if} (s.size() == 0) \textcolor{keywordflow}{return} s;
+40     
+41     \textcolor{keywordtype}{string} result = \textcolor{stringliteral}{""};
+42     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0;i<s.size();i++)
+43     \{
+44         \textcolor{keywordflow}{switch} (s[i]) 
+45         \{
+46             \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)0'}:
+47                 result += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'};
+48                 result += \textcolor{charliteral}{'0'};
+49                 \textcolor{keywordflow}{break};
+50             \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)''}:
+51                 result += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'};
+52                 result += \textcolor{stringliteral}{"'"};
+53                 \textcolor{keywordflow}{break};
+54             \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)n'}:
+55                 result += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'};
+56                 result += \textcolor{charliteral}{'n'};
+57                 \textcolor{keywordflow}{break};
+58             \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)r'}:
+59                 result += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'};
+60                 result += \textcolor{charliteral}{'r'};
+61                 \textcolor{keywordflow}{break};
+62             \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'}:
+63                 result += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'};
+64                 result += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'};
+65                 \textcolor{keywordflow}{break};
+66             \textcolor{keywordflow}{case} \textcolor{charliteral}{'"'}:
+67                 result += \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'};
+68                 result += \textcolor{charliteral}{'"'};
+69                 \textcolor{keywordflow}{break};
+70             \textcolor{keywordflow}{default}:
+71                 result += s[i];
+72                 \textcolor{keywordflow}{break};
+73         \}
+74     \}
+75     \textcolor{keywordflow}{return} result;
+76 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{gml2nestedsql_8cpp_ac0f2228420376f4db7e1274f2b41667c}\label{gml2nestedsql_8cpp_ac0f2228420376f4db7e1274f2b41667c}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!main@{main}}
+\index{main@{main}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 142 of file gml2nestedsql.\+cpp.
+
+
+\begin{DoxyCode}
+143 \{
+144     \textcolor{keywordflow}{if} (argc < 2)
+145     \{
+146         cout << \textcolor{stringliteral}{"Usage: graph <file-name>"} << endl;
+147         exit(1);
+148     \}
+149     \textcolor{keywordtype}{char} filename[256];
+150     strcpy (filename, argv[1]);
+151 
+152     \textcolor{comment}{// ---------------------------------------------------------    }
+153     \textcolor{comment}{// Read graph   }
+154 
+155     \mbox{\hyperlink{class_my_tree}{MyTree}} G;
+156     
+157     G.\mbox{\hyperlink{class_my_graph_a5d90ef0fba45bbbdf53a3bfe6f9a7061}{read\_labels\_as\_weights}}();
+158     \mbox{\hyperlink{gml2nestedsql_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}} = clock();
+159     \mbox{\hyperlink{struct_g_m_l__error}{GML\_error}} err  = G.\mbox{\hyperlink{classgraph_ac28cb3468623a480709d3329033d4ec8}{load}} (filename);
+160     \mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}} = clock();
+161     \textcolor{keywordflow}{if} (err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}} != \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}{GML\_OK}})
+162     \{
+163         cerr << \textcolor{stringliteral}{"Error ("} << err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}} << \textcolor{stringliteral}{") loading graph from file \(\backslash\)""} << filename << \textcolor{stringliteral}{"\(\backslash\)""};
+164         \textcolor{keywordflow}{switch} (err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}})
+165         \{
+166             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca6e236398ad4be2c96f938e0f2329c7ca}{GML\_FILE\_NOT\_FOUND}}: cerr << \textcolor{stringliteral}{"A file with that name doesn't exist."}; \textcolor{keywordflow}{
+      break};
+167             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca83553a234a3a319eb4db0ec4b3aef05d}{GML\_TOO\_MANY\_BRACKETS}}: cerr << \textcolor{stringliteral}{"A mismatch of brackets was detected,
+       i.e. there were too many closing brackets (])."}; \textcolor{keywordflow}{break};
+168             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790caa03c5ab19de88ed1a1a2d85edf075164}{GML\_OPEN\_BRACKET}}: cerr << \textcolor{stringliteral}{"Now, there were too many opening brackets ([)"};
+        \textcolor{keywordflow}{break};
+169             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca221df19cbc1f2fea1a52cb139a359e0c}{GML\_TOO\_MANY\_DIGITS}}: cerr << \textcolor{stringliteral}{"The number of digits a integer or
+       floating point value can have is limited to 1024, this should be enough :-)"};  \textcolor{keywordflow}{break};
+170             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3af6ee9ba1b3704ced7c81a576c3eae8}{GML\_PREMATURE\_EOF}}: cerr << \textcolor{stringliteral}{"An EOF occured, where it wasn't expected,
+       e.g. while scanning a string."}; \textcolor{keywordflow}{break};
+171             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3fbf275b928b652ece2645e90bb5557f}{GML\_SYNTAX}}: cerr << \textcolor{stringliteral}{"The file isn't a valid GML file, e.g. a mismatch in the
+       key-value pairs."}; \textcolor{keywordflow}{break};
+172             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}{GML\_UNEXPECTED}}: cerr << \textcolor{stringliteral}{"A character occured, where it makes no sense, e.g.
+       non-numerical characters"}; \textcolor{keywordflow}{break};
+173             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}{GML\_OK}}: \textcolor{keywordflow}{break};
+174         \}
+175         cerr << endl;
+176         exit(1);
+177     \}
+178     \textcolor{keywordflow}{else}
+179     \{
+180         cout << \textcolor{stringliteral}{"Graph read from file \(\backslash\)""} << filename << \textcolor{stringliteral}{"\(\backslash\)" has "} << G.
+      \mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}() << \textcolor{stringliteral}{" nodes and "} << G.\mbox{\hyperlink{classgraph_aa4fcbe7bf572dc800068873ccfb4d95a}{number\_of\_edges}}() << \textcolor{stringliteral}{" edges"} << endl
+      ;
+181     \}
+182     \mbox{\hyperlink{gml2nestedsql_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}{ShowTimeUsed}} (\mbox{\hyperlink{gml2nestedsql_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}}, \mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}});
+183     
+184     \textcolor{comment}{// ---------------------------------------------------------        }
+185     \textcolor{comment}{// Test that it is a tree}
+186     \textcolor{keywordflow}{if} (\mbox{\hyperlink{mytree_8cpp_afdde9e8d6e926b58c0892332e34a0a4f}{is\_tree}} (G))
+187     \{
+188         cout << \textcolor{stringliteral}{"Is a tree"} << endl;
+189     \}
+190     \textcolor{keywordflow}{else}
+191     \{
+192         cout << \textcolor{stringliteral}{"Graph is not a tree"} << endl;
+193           \mbox{\hyperlink{classnode}{node}} v;
+194         \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}}(v,G)
+195             \textcolor{keywordflow}{if} ( v.\mbox{\hyperlink{classnode_a749bfd1316584b96f8c9b0e44ad512f0}{indeg}} () < 1 ) cout << G.\mbox{\hyperlink{class_my_graph_ab92ebd7632157e681a6a7d7873841de7}{get\_node\_label}}(v) << \textcolor{stringliteral}{" has no parent"} << 
+      endl;
+196         \textcolor{keywordflow}{if} (!G.\mbox{\hyperlink{classgraph_a599e2bf967df8a2052a9892c94db98b7}{is\_connected}}() ) 
+197             cout << \textcolor{stringliteral}{"Not connected"};
+198 
+199         exit(1);
+200     \}
+201     
+202     \mbox{\hyperlink{classnode}{node}} root = G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}();
+203 
+204     \textcolor{comment}{// ---------------------------------------------------------        }
+205     \textcolor{comment}{// Assign ids to nodes}
+206     \mbox{\hyperlink{classnode__map}{node\_map<int>}} id (G,0);
+207     
+208     \textcolor{comment}{// Extract id's from name}
+209     \{
+210         \mbox{\hyperlink{classnode}{node}} v;
+211         \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}}(v,G)
+212         \{
+213             \textcolor{keywordtype}{string} s = G.\mbox{\hyperlink{class_my_graph_ab92ebd7632157e681a6a7d7873841de7}{get\_node\_label}}(v);
+214             \textcolor{keywordtype}{int} n = atol (s.c\_str());
+215             \textcolor{keywordtype}{id}[v] = n;
+216         \}
+217     \}
+218     
+219     \textcolor{comment}{// ---------------------------------------------------------        }
+220     \textcolor{comment}{// Compute number of children for each node, and }
+221     \textcolor{comment}{// assign each node its child number}
+222     \{
+223         \mbox{\hyperlink{classnode}{node}} v;
+224         \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}}(v,G)
+225         \{
+226             \mbox{\hyperlink{gml2nestedsql_8cpp_a021486f59a5a82e4020e5f4ce19b57a9}{num\_children}}[v] = 0;
+227             \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{node::adj\_nodes\_iterator}} it = v.
+      \mbox{\hyperlink{classnode_a6cd2febf910bc6572c4aecba6278b100}{adj\_nodes\_begin}}();
+228             \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{node::adj\_nodes\_iterator}} end = v.
+      \mbox{\hyperlink{classnode_a2477fa92c56a19d29464082444a3043a}{adj\_nodes\_end}}();
+229             \textcolor{keywordtype}{int} j = 0;
+230             \textcolor{keywordflow}{while} (it != end)
+231             \{
+232                 j++;
+233                 \mbox{\hyperlink{gml2nestedsql_8cpp_aeeffe275019b0e0529bdbfc726d7824e}{child\_number}}[(*it)] = j;
+234                 \mbox{\hyperlink{gml2nestedsql_8cpp_a021486f59a5a82e4020e5f4ce19b57a9}{num\_children}}[v]++;
+235                 it++;
+236             \}
+237         \}
+238     \}
+239     
+240     \textcolor{comment}{// ---------------------------------------------------------        }
+241     \textcolor{comment}{// Get visitation numbers for SQL queries}
+242 
+243     \mbox{\hyperlink{classmydfs}{mydfs}} d;
+244     d.\mbox{\hyperlink{classdfs_aad21fd0d3036350fd341f877d5747852}{start\_node}} (G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}());
+245     \textcolor{keywordflow}{if} (d.\mbox{\hyperlink{classdfs_a1af70060897529e67910f589b047e576}{check}}(G) != \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}}) 
+246     \{
+247         cerr << \textcolor{stringliteral}{"dfs check failed at "} << \_\_LINE\_\_ << \textcolor{stringliteral}{" in "} << \_\_FILE\_\_  << endl;
+248     \} 
+249     \textcolor{keywordflow}{else} 
+250     \{
+251         \textcolor{keywordflow}{if} (d.\mbox{\hyperlink{classdfs_af0863b8974d5fd58cd0375c78ed8163b}{run}}(G) != \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}}) 
+252         \{
+253             cerr << \textcolor{stringliteral}{"dfs algorithm failed at "} << \_\_LINE\_\_ << \textcolor{stringliteral}{" in "} << \_\_FILE\_\_ << endl;
+254         \} 
+255     \}
+256     
+257     \textcolor{comment}{// ---------------------------------------------------------        }
+258     \textcolor{comment}{// Ensure root path = /}
+259     \mbox{\hyperlink{gml2nestedsql_8cpp_a10cdd7e2573589f34f8a03983f8cd8f8}{path}}[G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}()] = \textcolor{stringliteral}{"/"};
+260     
+261     
+262     \textcolor{comment}{// ---------------------------------------------------------        }
+263     \textcolor{comment}{// SQL Dump}
+264     
+265     ofstream sql(\textcolor{stringliteral}{"tree.sql"});
+266     \mbox{\hyperlink{classnode}{node}} v;
+267     \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}}(v,G)
+268     \{
+269         sql << \textcolor{stringliteral}{"INSERT INTO ncbi\_tree (tax\_id, parent\_id, left\_id, right\_id, path) "};
+270         sql << \textcolor{stringliteral}{"VALUES ("} << \textcolor{keywordtype}{id}[v] << \textcolor{stringliteral}{", "};
+271         
+272         \textcolor{comment}{// Ensure the node label is acceptable to SQL (NCBI names may have quotes, etc.)}
+273 \textcolor{comment}{//      string s = G.get\_node\_label(v);}
+274 \textcolor{comment}{//      sql << "'" << escape\_string (s) << "', ";}
+275         \textcolor{comment}{// For Oracle to work we need to ensure the root of the tree has a NULL parent}
+276         \textcolor{keywordflow}{if} (G.\mbox{\hyperlink{class_my_tree_a6dd1940094f32e411a4107c01a6997fb}{parent}}(v) == v)
+277             sql << \textcolor{stringliteral}{"NULL"};
+278         \textcolor{keywordflow}{else}
+279         \{
+280             sql << \textcolor{keywordtype}{id}[G.\mbox{\hyperlink{class_my_tree_a6dd1940094f32e411a4107c01a6997fb}{parent}}(v)];
+281         \}
+282         
+283         sql <<  \textcolor{stringliteral}{", "} << \mbox{\hyperlink{gml2nestedsql_8cpp_a49375392d15f453b5dde490a5ba9e6bf}{left\_visitation}}[v] << \textcolor{stringliteral}{", "} << 
+      \mbox{\hyperlink{gml2nestedsql_8cpp_ae55c753c0314f90afbec9d88a63047ba}{right\_visitation}}[v] << \textcolor{stringliteral}{", '"} << \mbox{\hyperlink{gml2nestedsql_8cpp_a10cdd7e2573589f34f8a03983f8cd8f8}{path}}[v] << \textcolor{stringliteral}{"');"} << endl;
+284     \}
+285     sql.close();
+286 
+287     \textcolor{keywordflow}{return} 0;
+288 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gml2nestedsql_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gml2nestedsql_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}\label{gml2nestedsql_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!Show\+Time\+Used@{Show\+Time\+Used}}
+\index{Show\+Time\+Used@{Show\+Time\+Used}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{Show\+Time\+Used()}{ShowTimeUsed()}}
+{\footnotesize\ttfamily void Show\+Time\+Used (\begin{DoxyParamCaption}\item[{clock\+\_\+t \&}]{t0,  }\item[{clock\+\_\+t \&}]{t1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file gml2nestedsql.\+cpp.
+
+
+\begin{DoxyCode}
+84 \{
+85     cout << \textcolor{stringliteral}{"CPU time used = "} << (float)(\mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}} - \mbox{\hyperlink{gml2nestedsql_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}})/(float)CLOCKS\_PER\_SEC << \textcolor{stringliteral}{" seconds"} << endl;
+86 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{gml2nestedsql_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gml2nestedsql_8cpp_a46ae30dbab3aaee50a0820226d9e45b0}\label{gml2nestedsql_8cpp_a46ae30dbab3aaee50a0820226d9e45b0}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!Tokenise@{Tokenise}}
+\index{Tokenise@{Tokenise}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{Tokenise()}{Tokenise()}}
+{\footnotesize\ttfamily void Tokenise (\begin{DoxyParamCaption}\item[{std\+::string}]{s,  }\item[{std\+::string}]{delimiters,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{tokens }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file gml2nestedsql.\+cpp.
+
+
+\begin{DoxyCode}
+19 \{
+20     tokens.erase (tokens.begin(), tokens.end());
+21     \textcolor{keywordtype}{int} start, stop;
+22     \textcolor{keywordtype}{int} n = s.length();
+23     start = s.find\_first\_not\_of (delimiters);
+24     \textcolor{keywordflow}{while} ((start >= 0) && (start < n))
+25     \{
+26         stop = s.find\_first\_of (delimiters, start);
+27         \textcolor{keywordflow}{if} ((stop < 0) || (stop > n)) stop = n;
+28         tokens.push\_back (s.substr(start, stop - start));
+29         start = stop + delimiters.length();
+30     \}
+31 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{gml2nestedsql_8cpp_a46ae30dbab3aaee50a0820226d9e45b0_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{gml2nestedsql_8cpp_aeeffe275019b0e0529bdbfc726d7824e}\label{gml2nestedsql_8cpp_aeeffe275019b0e0529bdbfc726d7824e}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!child\+\_\+number@{child\+\_\+number}}
+\index{child\+\_\+number@{child\+\_\+number}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{child\+\_\+number}{child\_number}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ child\+\_\+number}
+
+
+
+Definition at line 91 of file gml2nestedsql.\+cpp.
+
+\mbox{\Hypertarget{gml2nestedsql_8cpp_af81a36ce49771f5a6ccdc7b43e648f7f}\label{gml2nestedsql_8cpp_af81a36ce49771f5a6ccdc7b43e648f7f}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!depth@{depth}}
+\index{depth@{depth}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{depth}{depth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ depth}
+
+
+
+Definition at line 93 of file gml2nestedsql.\+cpp.
+
+\mbox{\Hypertarget{gml2nestedsql_8cpp_a49375392d15f453b5dde490a5ba9e6bf}\label{gml2nestedsql_8cpp_a49375392d15f453b5dde490a5ba9e6bf}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!left\+\_\+visitation@{left\+\_\+visitation}}
+\index{left\+\_\+visitation@{left\+\_\+visitation}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{left\+\_\+visitation}{left\_visitation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ left\+\_\+visitation}
+
+
+
+Definition at line 88 of file gml2nestedsql.\+cpp.
+
+\mbox{\Hypertarget{gml2nestedsql_8cpp_a021486f59a5a82e4020e5f4ce19b57a9}\label{gml2nestedsql_8cpp_a021486f59a5a82e4020e5f4ce19b57a9}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!num\+\_\+children@{num\+\_\+children}}
+\index{num\+\_\+children@{num\+\_\+children}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{num\+\_\+children}{num\_children}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ num\+\_\+children}
+
+
+
+Definition at line 90 of file gml2nestedsql.\+cpp.
+
+\mbox{\Hypertarget{gml2nestedsql_8cpp_a10cdd7e2573589f34f8a03983f8cd8f8}\label{gml2nestedsql_8cpp_a10cdd7e2573589f34f8a03983f8cd8f8}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!path@{path}}
+\index{path@{path}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$string$>$ path}
+
+
+
+Definition at line 92 of file gml2nestedsql.\+cpp.
+
+\mbox{\Hypertarget{gml2nestedsql_8cpp_ae55c753c0314f90afbec9d88a63047ba}\label{gml2nestedsql_8cpp_ae55c753c0314f90afbec9d88a63047ba}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!right\+\_\+visitation@{right\+\_\+visitation}}
+\index{right\+\_\+visitation@{right\+\_\+visitation}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{right\+\_\+visitation}{right\_visitation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ right\+\_\+visitation}
+
+
+
+Definition at line 89 of file gml2nestedsql.\+cpp.
+
+\mbox{\Hypertarget{gml2nestedsql_8cpp_af5fee1efab2775b22e237b85d856d7f8}\label{gml2nestedsql_8cpp_af5fee1efab2775b22e237b85d856d7f8}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!t0@{t0}}
+\index{t0@{t0}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{t0}{t0}}
+{\footnotesize\ttfamily clock\+\_\+t t0}
+
+
+
+Definition at line 78 of file gml2nestedsql.\+cpp.
+
+\mbox{\Hypertarget{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}\label{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}} 
+\index{gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}!t1@{t1}}
+\index{t1@{t1}!gml2nestedsql.\+cpp@{gml2nestedsql.\+cpp}}
+\subsubsection{\texorpdfstring{t1}{t1}}
+{\footnotesize\ttfamily clock\+\_\+t t1}
+
+
+
+Definition at line 79 of file gml2nestedsql.\+cpp.
+

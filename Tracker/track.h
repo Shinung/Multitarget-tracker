@@ -225,6 +225,69 @@ private:
     cv::Ptr<cv::Tracker> m_tracker;
 #endif
 
+	/**
+	 * @brief Checking wx and hy is out of frame size
+	 *
+	 * @param wx width or x coord
+	 * @param hy height or y coord
+	 * @param frameSize image size
+	 * @return cv::Size or cv::Point
+	 * @author Shinung
+	 */
+	template<typename T>
+	T checkSize(int wx, int hy, const cv::Size& frameSize)
+	{
+		if (wx > frameSize.width)
+		{
+			wx = frameSize.width;
+		}
+		else if (wx < 0)
+		{
+			wx = 2;
+		}
+
+		if (hy > frameSize.height)
+		{
+			hy = frameSize.height;
+		}
+		else if (hy < 0)
+		{
+			hy = 2;
+		}
+
+		return T(wx, hy);
+	}
+
+    /**
+     * 
+     * @param region
+     * @param dataCorrect
+     * @param prevFrame
+     * @param currFrame
+	 *
+	 * @bug If predicted rect by Kalman Filter is out of frame then, It will cause crash with exception of OpenCV.
+	 *		This bug will happen when to use not well-trained model so I modified code little bit as below.
+	 * @code{.cpp}
+	 		//cv::Size roiSize(std::max(2 * m_predictionRect.width, currFrame.cols / 4), std::min(2 * m_predictionRect.height, currFrame.rows / 4));
+			cv::Size roiSize = checkSize<cv::Size>(std::max(2 * m_predictionRect.width, currFrame.cols / 4),
+												   std::min(2 * m_predictionRect.height, currFrame.rows / 4),
+												   cv::Size(currFrame.cols, currFrame.rows));
+
+			//cv::Point roiTL(m_predictionRect.x + m_predictionRect.width / 2 - roiSize.width / 2, m_predictionRect.y + m_predictionRect.height / 2 - roiSize.height / 2);
+			cv::Point roiTL = checkSize<cv::Point>(m_predictionRect.x + m_predictionRect.width / 2 - roiSize.width / 2,
+												   m_predictionRect.y + m_predictionRect.height / 2 - roiSize.height / 2,
+												   cv::Size(currFrame.cols, currFrame.rows));
+
+			//cv::Rect roiRect(roiTL, roiSize);
+			//Clamp(roiRect.x, roiRect.width, currFrame.cols);
+			//Clamp(roiRect.y, roiRect.height, currFrame.rows);
+
+			cv::Rect roiRect = ClampWithRect(roiTL, roiSize, cv::Size(currFrame.cols, currFrame.rows));
+			cv::Rect frameRect(0, 0, currFrame.cols, currFrame.rows);
+	 * @endcode
+     * @see checkSize
+	 * @author Shinung
+     */
     void RectUpdate(const CRegion& region, bool dataCorrect, cv::UMat prevFrame, cv::UMat currFrame);
 
     void CreateExternalTracker();

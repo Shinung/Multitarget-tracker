@@ -1,0 +1,18 @@
+<map id="ratio_cut_partition" name="ratio_cut_partition">
+<area shape="rect" id="node2" href="$classalgorithm.html" title="Abstract baseclass for all algoritm&#45;classes. " alt="" coords="219,894,321,1030"/>
+<area shape="rect" id="node3" href="$classnode.html" title="A node in a graph. " alt="" coords="346,799,485,1125"/>
+<area shape="rect" id="node7" href="$classnode__data.html" title="{node_data\n|+ id\l+ pos\l+ edges\l+ hidden\l|}" alt="" coords="487,578,570,699"/>
+<area shape="rect" id="node8" href="$classgraph.html" title="A directed or undirected graph. " alt="" coords="454,5,603,479"/>
+<area shape="rect" id="node9" href="$classnode__map.html" title="{node_map\&lt; int \&gt;\n||+ node_map()\l+ node_map()\l}" alt="" coords="613,916,733,1008"/>
+<area shape="rect" id="node10" href="$classne__map.html" title="{ne_map\&lt; node, int,\l graph, std::allocator\l\&lt; int \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="594,549,735,729"/>
+<area shape="rect" id="node11" href="$classedge__map.html" title="{edge_map\&lt; nodes_t \&gt;\n||+ edge_map()\l+ edge_map()\l}" alt="" coords="763,916,915,1008"/>
+<area shape="rect" id="node12" href="$classne__map.html" title="{ne_map\&lt; edge, nodes\l_t, graph, std::allocator\l\&lt; nodes_t \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="760,549,916,729"/>
+<area shape="rect" id="node13" href="$classnode__map.html" title="{node_map\&lt; nodes_t::\literator \&gt;\n||+ node_map()\l+ node_map()\l}" alt="" coords="940,909,1088,1015"/>
+<area shape="rect" id="node14" href="$classne__map.html" title="{ne_map\&lt; node, nodes\l_t::iterator, graph,\l std::allocator\&lt; nodes\l_t::iterator \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="940,541,1091,736"/>
+<area shape="rect" id="node15" href="$classedge__map.html" title="{edge_map\&lt; int \&gt;\n||+ edge_map()\l+ edge_map()\l}" alt="" coords="1119,916,1239,1008"/>
+<area shape="rect" id="node16" href="$classne__map.html" title="{ne_map\&lt; edge, int,\l graph, std::allocator\l\&lt; int \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="1115,549,1257,729"/>
+<area shape="rect" id="node17" href="$classnode__map.html" title="{node_map\&lt; side_type \&gt;\n||+ node_map()\l+ node_map()\l}" alt="" coords="1277,916,1439,1008"/>
+<area shape="rect" id="node18" href="$classne__map.html" title="{ne_map\&lt; node, side\l_type, graph, std::allocator\l\&lt; side_type \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="1281,549,1459,729"/>
+<area shape="rect" id="node19" href="$classnode__map.html" title="{node_map\&lt; fix_type \&gt;\n||+ node_map()\l+ node_map()\l}" alt="" coords="1477,916,1628,1008"/>
+<area shape="rect" id="node20" href="$classne__map.html" title="{ne_map\&lt; node, fix_type,\l graph, std::allocator\l\&lt; fix_type \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="1483,549,1649,729"/>
+</map>

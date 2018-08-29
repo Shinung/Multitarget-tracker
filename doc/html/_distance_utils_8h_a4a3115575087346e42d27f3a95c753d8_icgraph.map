@@ -1,0 +1,7 @@
+<map id="popcount" name="popcount">
+<area shape="rect" id="node2" href="$class_background_subtractor_su_b_s_e_n_s_e.html#aaa60e2883c2b2cf130820b10104a653b" title="primary model update function; the learning param is used to override the internal learning threshold..." alt="" coords="227,5,448,47"/>
+<area shape="rect" id="node3" href="$_distance_utils_8h.html#ab13812ef6e21af771d6c0a856cd941b0" title="computes the hamming distance between two N&#45;byte vectors using an 8&#45;bit popcount LUT ..." alt="" coords="128,74,179,101"/>
+<area shape="rect" id="node6" href="$_distance_utils_8h.html#aac2e775a57cc0c0630a2f25f278df10b" title="computes the gradient magnitude distance between two N&#45;byte vectors using an 8&#45;bit popcount LUT ..." alt="" coords="128,125,179,151"/>
+<area shape="rect" id="node4" href="$class_background_subtractor_l_o_b_s_t_e_r.html#a0c0faf2754a7a74a6ae56cea47207070" title="primary model update function; the learning param is reinterpreted as an integer and should be &gt; 0 (s..." alt="" coords="232,71,443,112"/>
+<area shape="rect" id="node5" href="$class_l_b_s_p.html#a5d390a2a6f3d94a4edadae3718daf884" title="utility function, used to illustrate the difference between two descriptor images ..." alt="" coords="259,137,416,163"/>
+</map>

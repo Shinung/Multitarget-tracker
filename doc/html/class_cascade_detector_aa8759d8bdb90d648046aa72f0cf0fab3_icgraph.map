@@ -1,0 +1,5 @@
+<map id="CascadeDetector::AddNode" name="CascadeDetector::AddNode">
+<area shape="rect" id="node2" href="$class_detection_scanner.html#a36c4db431f28648b82bd6e55afb67008" title="DetectionScanner::LoadDetector" alt="" coords="236,13,447,39"/>
+<area shape="rect" id="node3" href="$c4-pedestrian-detector_8h.html#a1c2c730891bb9a5800d3761e8cfaa160" title="LoadCascade" alt="" coords="495,13,596,39"/>
+<area shape="rect" id="node4" href="$class_pedestrian_detector.html#a630d8ad4d8ca2123639e989b01c8dd3e" title="PedestrianDetector::Init. " alt="" coords="644,5,777,47"/>
+</map>

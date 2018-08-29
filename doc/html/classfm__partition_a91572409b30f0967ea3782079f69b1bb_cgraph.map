@@ -1,0 +1,14 @@
+<map id="fm_partition::move_manager" name="fm_partition::move_manager">
+<area shape="rect" id="node2" href="$classgraph.html#a42c78e0a9f115655e3ff0efe35ebfc4e" title="graph::number_of_nodes" alt="" coords="180,209,344,235"/>
+<area shape="rect" id="node3" href="$classfm__partition.html#ac1167c6595a9f582ae98c9f555029d9b" title="fm_partition::move\l_vertex" alt="" coords="199,260,325,301"/>
+<area shape="rect" id="node4" href="$classfm__partition.html#ac49d477ecbf512fa375b76a472ec54f8" title="fm_partition::range_up" alt="" coords="793,151,944,178"/>
+<area shape="rect" id="node5" href="$classfm__partition.html#a6dc702df474c4ce60e80b3e5a93b7f4d" title="fm_partition::balance\l_holds" alt="" coords="393,401,535,443"/>
+<area shape="rect" id="node6" href="$classfm__partition.html#a8bd7f2715334e9ec95da8001117fdde5" title="fm_partition::update\l_data_structure_A2B" alt="" coords="392,336,536,377"/>
+<area shape="rect" id="node12" href="$classfm__partition.html#a783174f29d49e7e1ae7f6cf71faa82fb" title="fm_partition::update\l_data_structure_B2A" alt="" coords="392,260,536,301"/>
+<area shape="rect" id="node13" href="$classfm__partition.html#a335722b73c1d6f02d1083e76a3937b01" title="fm_partition::update\l_max_gain" alt="" coords="396,5,532,47"/>
+<area shape="rect" id="node7" href="$classnode.html#a12cb1a2167f5f03c054de5e707d3156f" title="node::adj_edges_iterator" alt="" coords="787,381,951,407"/>
+<area shape="rect" id="node8" href="$classnode.html#a788d3e932a5c164caa5ec82aa47551b2" title="node::adj_edges_begin" alt="" coords="584,355,739,382"/>
+<area shape="rect" id="node9" href="$classnode.html#aa1e7887d29390297580769454f769ad6" title="node::adj_edges_end" alt="" coords="589,406,734,433"/>
+<area shape="rect" id="node10" href="$classfm__partition.html#a270d469ca584ed9adff9fced67743679" title="fm_partition::update\l_bucketB" alt="" coords="593,239,729,280"/>
+<area shape="rect" id="node11" href="$classfm__partition.html#aa4ec83c52916cc6cac23e7a9987427cd" title="fm_partition::update\l_bucketA" alt="" coords="593,173,729,215"/>
+</map>

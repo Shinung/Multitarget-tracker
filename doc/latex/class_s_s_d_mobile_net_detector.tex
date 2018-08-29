@@ -1,0 +1,738 @@
+\hypertarget{class_s_s_d_mobile_net_detector}{}\section{S\+S\+D\+Mobile\+Net\+Detector Class Reference}
+\label{class_s_s_d_mobile_net_detector}\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+
+
+The \mbox{\hyperlink{class_s_s_d_mobile_net_detector}{S\+S\+D\+Mobile\+Net\+Detector}} class.  
+
+
+
+
+{\ttfamily \#include $<$S\+S\+D\+Mobile\+Net\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for S\+S\+D\+Mobile\+Net\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_s_s_d_mobile_net_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+S\+D\+Mobile\+Net\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_s_s_d_mobile_net_detector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a29de895fa6e8a3960837660460e23d41}{S\+S\+D\+Mobile\+Net\+Detector}} (bool collect\+Points, cv\+::\+U\+Mat \&color\+Frame)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a29de895fa6e8a3960837660460e23d41}{S\+S\+D\+Mobile\+Net\+Detector\+::\+S\+S\+D\+Mobile\+Net\+Detector}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_s_d_mobile_net_detector_aab4a87e950c5d0ea2631f8f7d521dc1c}{$\sim$\+S\+S\+D\+Mobile\+Net\+Detector}} (void)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_s_d_mobile_net_detector_aab4a87e950c5d0ea2631f8f7d521dc1c}{S\+S\+D\+Mobile\+Net\+Detector\+::$\sim$\+S\+S\+D\+Mobile\+Net\+Detector}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a2830cbf9b82b159c25fb2796b867eaef}{Init}} (const \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}} \&config)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a2830cbf9b82b159c25fb2796b867eaef}{S\+S\+D\+Mobile\+Net\+Detector\+::\+Init}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a6ac3fd479002779642ed185107d83dea}{Detect}} (cv\+::\+U\+Mat \&color\+Frame)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a6ac3fd479002779642ed185107d83dea}{S\+S\+D\+Mobile\+Net\+Detector\+::\+Detect}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}{Set\+Min\+Object\+Size}} (cv\+::\+Size min\+Object\+Size)
+\begin{DoxyCompactList}\small\item\em Set\+Min\+Object\+Size. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} \& \mbox{\hyperlink{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}{Get\+Detects}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Detects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}{Collect\+Points}} (\mbox{\hyperlink{class_c_region}{C\+Region}} \&region)
+\begin{DoxyCompactList}\small\item\em Collect\+Points. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}{Calc\+Motion\+Map}} (cv\+::\+Mat frame)
+\begin{DoxyCompactList}\small\item\em Calc\+Motion\+Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\+\_\+regions}}
+\item 
+cv\+::\+Size \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\+\_\+min\+Object\+Size}}
+\item 
+bool \mbox{\hyperlink{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}{m\+\_\+collect\+Points}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\+\_\+motion\+Map}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a9c0fe7a122d0b229d84965f472cc6c38}{Detect\+In\+Crop}} (cv\+::\+Mat color\+Frame, const cv\+::\+Rect \&crop, \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} \&tmp\+Regions)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a9c0fe7a122d0b229d84965f472cc6c38}{S\+S\+D\+Mobile\+Net\+Detector\+::\+Detect\+In\+Crop}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::dnn\+::\+Net \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a49cee71e617fd5999e73fbaba9859a71}{m\+\_\+net}}
+\item 
+float \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac4f9e209a12a97a3a8696f1df0d1f046}{m\+\_\+\+W\+H\+Ratio}}
+\item 
+float \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a669234ba12981608ce794634abe2a361}{m\+\_\+in\+Scale\+Factor}}
+\item 
+float \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fda467ac26a8688339d31b14e7e9e20}{m\+\_\+mean\+Val}}
+\item 
+float \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ae854ddcece46a348d20debc470882b3b}{m\+\_\+confidence\+Threshold}}
+\item 
+float \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}{m\+\_\+max\+Crop\+Ratio}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a717ffc431ea4fd25cbc6cb1172cbd7e6}{m\+\_\+class\+Names}}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac77d00e649eb5c0ddbd12229416e98c5}{In\+Width}} = 300
+\item 
+static const int \mbox{\hyperlink{class_s_s_d_mobile_net_detector_afc45ce0049d048598325eda63f10056f}{In\+Height}} = 300
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_s_s_d_mobile_net_detector}{S\+S\+D\+Mobile\+Net\+Detector}} class. 
+
+Definition at line 15 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a29de895fa6e8a3960837660460e23d41}\label{class_s_s_d_mobile_net_detector_a29de895fa6e8a3960837660460e23d41}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{S\+S\+D\+Mobile\+Net\+Detector()}{SSDMobileNetDetector()}}
+{\footnotesize\ttfamily S\+S\+D\+Mobile\+Net\+Detector\+::\+S\+S\+D\+Mobile\+Net\+Detector (\begin{DoxyParamCaption}\item[{bool}]{collect\+Points,  }\item[{cv\+::\+U\+Mat \&}]{color\+Frame }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a29de895fa6e8a3960837660460e23d41}{S\+S\+D\+Mobile\+Net\+Detector\+::\+S\+S\+D\+Mobile\+Net\+Detector}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collect\+Points} & \\
+\hline
+{\em gray} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file S\+S\+D\+Mobile\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+13     :
+14       \mbox{\hyperlink{class_base_detector_a3c85e13a47dd472319dc43c60f0d102a}{BaseDetector}}(collectPoints, colorFrame),
+15       \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac4f9e209a12a97a3a8696f1df0d1f046}{m\_WHRatio}}(\mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac77d00e649eb5c0ddbd12229416e98c5}{InWidth}} / (\textcolor{keywordtype}{float})\mbox{\hyperlink{class_s_s_d_mobile_net_detector_afc45ce0049d048598325eda63f10056f}{InHeight}}),
+16       \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a669234ba12981608ce794634abe2a361}{m\_inScaleFactor}}(0.007843\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}),
+17       \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fda467ac26a8688339d31b14e7e9e20}{m\_meanVal}}(127.5),
+18       \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ae854ddcece46a348d20debc470882b3b}{m\_confidenceThreshold}}(0.5\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}),
+19       \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}{m\_maxCropRatio}}(2.0\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}})
+20 \{
+21     \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a717ffc431ea4fd25cbc6cb1172cbd7e6}{m\_classNames}} = \{ \textcolor{stringliteral}{"background"},
+22                      \textcolor{stringliteral}{"aeroplane"}, \textcolor{stringliteral}{"bicycle"}, \textcolor{stringliteral}{"bird"}, \textcolor{stringliteral}{"boat"},
+23                      \textcolor{stringliteral}{"bottle"}, \textcolor{stringliteral}{"bus"}, \textcolor{stringliteral}{"car"}, \textcolor{stringliteral}{"cat"}, \textcolor{stringliteral}{"chair"},
+24                      \textcolor{stringliteral}{"cow"}, \textcolor{stringliteral}{"diningtable"}, \textcolor{stringliteral}{"dog"}, \textcolor{stringliteral}{"horse"},
+25                      \textcolor{stringliteral}{"motorbike"}, \textcolor{stringliteral}{"person"}, \textcolor{stringliteral}{"pottedplant"},
+26                      \textcolor{stringliteral}{"sheep"}, \textcolor{stringliteral}{"sofa"}, \textcolor{stringliteral}{"train"}, \textcolor{stringliteral}{"tvmonitor"} \};
+27 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_aab4a87e950c5d0ea2631f8f7d521dc1c}\label{class_s_s_d_mobile_net_detector_aab4a87e950c5d0ea2631f8f7d521dc1c}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!````~S\+S\+D\+Mobile\+Net\+Detector@{$\sim$\+S\+S\+D\+Mobile\+Net\+Detector}}
+\index{````~S\+S\+D\+Mobile\+Net\+Detector@{$\sim$\+S\+S\+D\+Mobile\+Net\+Detector}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{$\sim$\+S\+S\+D\+Mobile\+Net\+Detector()}{~SSDMobileNetDetector()}}
+{\footnotesize\ttfamily S\+S\+D\+Mobile\+Net\+Detector\+::$\sim$\+S\+S\+D\+Mobile\+Net\+Detector (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_s_s_d_mobile_net_detector_aab4a87e950c5d0ea2631f8f7d521dc1c}{S\+S\+D\+Mobile\+Net\+Detector\+::$\sim$\+S\+S\+D\+Mobile\+Net\+Detector}}. 
+
+
+
+Definition at line 32 of file S\+S\+D\+Mobile\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+33 \{
+34 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}\label{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!Calc\+Motion\+Map@{Calc\+Motion\+Map}}
+\index{Calc\+Motion\+Map@{Calc\+Motion\+Map}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{Calc\+Motion\+Map()}{CalcMotionMap()}}
+{\footnotesize\ttfamily virtual void Base\+Detector\+::\+Calc\+Motion\+Map (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Calc\+Motion\+Map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_motion_detector_aa4e606acafdc33a3104471903e449adc}{Motion\+Detector}}.
+
+
+
+Definition at line 90 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+91     \{
+92         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.size() != frame.size())
+93         \{
+94             \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}} = cv::Mat(frame.size(), CV\_32FC1, cv::Scalar(0, 0, 0));
+95         \}
+96 
+97         cv::Mat foreground(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.size(), CV\_8UC1, cv::Scalar(0, 0, 0));
+98         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}& region : \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}})
+99         \{
+100 \textcolor{preprocessor}{#if (CV\_VERSION\_MAJOR < 4)}
+101             cv::ellipse(foreground,
+102                         cv::RotatedRect((region.m\_rect.tl() + region.m\_rect.br()) / 2, region.m\_rect.size()
+      , 0),
+103                                         cv::Scalar(255, 255, 255), CV\_FILLED);
+104 \textcolor{preprocessor}{#else}
+105             cv::ellipse(foreground,
+106                         cv::RotatedRect((region.m\_rect.tl() + region.m\_rect.br()) / 2, region.m\_rect.size()
+      , 0),
+107                                         cv::Scalar(255, 255, 255), cv::FILLED);
+108 \textcolor{preprocessor}{#endif}
+109         \}
+110 
+111         cv::Mat normFor;
+112         cv::normalize(foreground, normFor, 255, 0, cv::NORM\_MINMAX, \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.type());
+113 
+114         \textcolor{keywordtype}{double} alpha = 0.95;
+115         cv::addWeighted(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}, alpha, normFor, 1 - alpha, 0, 
+      \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}});
+116 
+117         \textcolor{keyword}{const} \textcolor{keywordtype}{int} chans = frame.channels();
+118 
+119         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < frame.rows; ++y)
+120         \{
+121             uchar* imgPtr = frame.ptr(y);
+122             \textcolor{keywordtype}{float}* moPtr = \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{float}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.ptr(y));
+123             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < frame.cols; ++x)
+124             \{
+125                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ci = chans - 1; ci < chans; ++ci)
+126                 \{
+127                     imgPtr[ci] = cv::saturate\_cast<uchar>(imgPtr[ci] + moPtr[0]);
+128                 \}
+129                 imgPtr += chans;
+130                 ++moPtr;
+131             \}
+132         \}
+133     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}\label{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!Collect\+Points@{Collect\+Points}}
+\index{Collect\+Points@{Collect\+Points}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{Collect\+Points()}{CollectPoints()}}
+{\footnotesize\ttfamily virtual void Base\+Detector\+::\+Collect\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_region}{C\+Region}} \&}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Collect\+Points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em region} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+65     \{
+66         \textcolor{keyword}{const} \textcolor{keywordtype}{int} yStep = 5;
+67         \textcolor{keyword}{const} \textcolor{keywordtype}{int} xStep = 5;
+68 
+69         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y, yStop = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y + region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.height; y < yStop; y += yStep)
+70         \{
+71             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x, xStop = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x + region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.width; x < xStop; x += xStep)
+72             \{
+73                 \textcolor{keywordflow}{if} (region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.contains(cv::Point(x, y)))
+74                 \{
+75                     region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.push\_back(cv::Point2f(static\_cast<float>(x), static\_cast<float>
+      (y)));
+76                 \}
+77             \}
+78         \}
+79 
+80         \textcolor{keywordflow}{if} (region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.empty())
+81         \{
+82             region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.push\_back(cv::Point2f(region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x + 0.5f * region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.width, region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y + 0.5f * region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.height));
+83         \}
+84     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a6ac3fd479002779642ed185107d83dea}\label{class_s_s_d_mobile_net_detector_a6ac3fd479002779642ed185107d83dea}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!Detect@{Detect}}
+\index{Detect@{Detect}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{Detect()}{Detect()}}
+{\footnotesize\ttfamily void S\+S\+D\+Mobile\+Net\+Detector\+::\+Detect (\begin{DoxyParamCaption}\item[{cv\+::\+U\+Mat \&}]{color\+Frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a6ac3fd479002779642ed185107d83dea}{S\+S\+D\+Mobile\+Net\+Detector\+::\+Detect}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gray} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_base_detector_a9c9dedfffb7673fd2995f24bdb9ade18}{Base\+Detector}}.
+
+
+
+Definition at line 90 of file S\+S\+D\+Mobile\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+91 \{
+92     \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}}.clear();
+93 
+94     \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\_t}} tmpRegions;
+95 
+96     cv::Mat colorMat = colorFrame.getMat(cv::ACCESS\_READ);
+97 
+98     \textcolor{keywordtype}{int} cropHeight = cvRound(\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}{m\_maxCropRatio}} * \mbox{\hyperlink{class_s_s_d_mobile_net_detector_afc45ce0049d048598325eda63f10056f}{InHeight}});
+99     \textcolor{keywordtype}{int} cropWidth = cvRound(\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}{m\_maxCropRatio}} * \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac77d00e649eb5c0ddbd12229416e98c5}{InWidth}});
+100 
+101     \textcolor{keywordflow}{if} (colorFrame.cols / (\textcolor{keywordtype}{float})colorFrame.rows > \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac4f9e209a12a97a3a8696f1df0d1f046}{m\_WHRatio}})
+102     \{
+103         \textcolor{keywordflow}{if} (m\_maxCropRatio <= 0 || cropHeight >= colorFrame.rows)
+104         \{
+105             cropHeight = colorFrame.rows;
+106         \}
+107         cropWidth = cvRound(cropHeight * \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac4f9e209a12a97a3a8696f1df0d1f046}{m\_WHRatio}});
+108     \}
+109     \textcolor{keywordflow}{else}
+110     \{
+111         \textcolor{keywordflow}{if} (m\_maxCropRatio <= 0 || cropWidth >= colorFrame.cols)
+112         \{
+113             cropWidth = colorFrame.cols;
+114         \}
+115         cropHeight = cvRound(colorFrame.cols / \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac4f9e209a12a97a3a8696f1df0d1f046}{m\_WHRatio}});
+116     \}
+117 
+118     cv::Rect crop(0, 0, cropWidth, cropHeight);
+119 
+120     \textcolor{keywordflow}{for} (; crop.y < colorMat.rows; crop.y += crop.height / 2)
+121     \{
+122         \textcolor{keywordtype}{bool} needBreakY = \textcolor{keyword}{false};
+123         \textcolor{keywordflow}{if} (crop.y + crop.height >= colorMat.rows)
+124         \{
+125             crop.y = colorMat.rows - crop.height;
+126             needBreakY = \textcolor{keyword}{true};
+127         \}
+128         \textcolor{keywordflow}{for} (crop.x = 0; crop.x < colorMat.cols; crop.x += crop.width / 2)
+129         \{
+130             \textcolor{keywordtype}{bool} needBreakX = \textcolor{keyword}{false};
+131             \textcolor{keywordflow}{if} (crop.x + crop.width >= colorMat.cols)
+132             \{
+133                 crop.x = colorMat.cols - crop.width;
+134                 needBreakX = \textcolor{keyword}{true};
+135             \}
+136 
+137             \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a9c0fe7a122d0b229d84965f472cc6c38}{DetectInCrop}}(colorMat, crop, tmpRegions);
+138 
+139             \textcolor{keywordflow}{if} (needBreakX)
+140             \{
+141                 \textcolor{keywordflow}{break};
+142             \}
+143         \}
+144         \textcolor{keywordflow}{if} (needBreakY)
+145         \{
+146             \textcolor{keywordflow}{break};
+147         \}
+148     \}
+149 
+150     nms3<CRegion>(tmpRegions, \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}}, 0.4f,
+151          [](\textcolor{keyword}{const} \mbox{\hyperlink{class_c_region}{CRegion}}& reg) -> cv::Rect \{ \textcolor{keywordflow}{return} reg.m\_rect; \},
+152     [](\textcolor{keyword}{const} \mbox{\hyperlink{class_c_region}{CRegion}}& reg) -> \textcolor{keywordtype}{float} \{ \textcolor{keywordflow}{return} reg.m\_confidence; \},
+153     [](\textcolor{keyword}{const} \mbox{\hyperlink{class_c_region}{CRegion}}& reg) -> std::string \{ \textcolor{keywordflow}{return} reg.m\_type; \},
+154     0, 0.f);
+155 
+156     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}{m\_collectPoints}})
+157     \{
+158         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& region : \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}})
+159         \{
+160             \mbox{\hyperlink{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}{CollectPoints}}(region);
+161         \}
+162     \}
+163 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_s_d_mobile_net_detector_a6ac3fd479002779642ed185107d83dea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a9c0fe7a122d0b229d84965f472cc6c38}\label{class_s_s_d_mobile_net_detector_a9c0fe7a122d0b229d84965f472cc6c38}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!Detect\+In\+Crop@{Detect\+In\+Crop}}
+\index{Detect\+In\+Crop@{Detect\+In\+Crop}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{Detect\+In\+Crop()}{DetectInCrop()}}
+{\footnotesize\ttfamily void S\+S\+D\+Mobile\+Net\+Detector\+::\+Detect\+In\+Crop (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{color\+Frame,  }\item[{const cv\+::\+Rect \&}]{crop,  }\item[{\mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} \&}]{tmp\+Regions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a9c0fe7a122d0b229d84965f472cc6c38}{S\+S\+D\+Mobile\+Net\+Detector\+::\+Detect\+In\+Crop}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color\+Frame} & \\
+\hline
+{\em crop} & \\
+\hline
+{\em tmp\+Regions} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 171 of file S\+S\+D\+Mobile\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+172 \{
+173     \textcolor{comment}{//Convert Mat to batch of images}
+174     cv::Mat inputBlob = cv::dnn::blobFromImage(cv::Mat(colorFrame, crop), 
+      \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a669234ba12981608ce794634abe2a361}{m\_inScaleFactor}}, cv::Size(\mbox{\hyperlink{class_s_s_d_mobile_net_detector_ac77d00e649eb5c0ddbd12229416e98c5}{InWidth}}, \mbox{\hyperlink{class_s_s_d_mobile_net_detector_afc45ce0049d048598325eda63f10056f}{InHeight}}), 
+      \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fda467ac26a8688339d31b14e7e9e20}{m\_meanVal}}, \textcolor{keyword}{false}, \textcolor{keyword}{true});
+175 
+176     \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a49cee71e617fd5999e73fbaba9859a71}{m\_net}}.setInput(inputBlob, \textcolor{stringliteral}{"data"}); \textcolor{comment}{//set the network input}
+177 
+178     cv::Mat detection = \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a49cee71e617fd5999e73fbaba9859a71}{m\_net}}.forward(\textcolor{stringliteral}{"detection\_out"}); \textcolor{comment}{//compute output}
+179 
+180     \textcolor{comment}{//std::vector<double> layersTimings;}
+181     \textcolor{comment}{//double freq = cv::getTickFrequency() / 1000;}
+182     \textcolor{comment}{//double time = m\_net.getPerfProfile(layersTimings) / freq;}
+183 
+184     cv::Mat detectionMat(detection.size[2], detection.size[3], CV\_32F, detection.ptr<\textcolor{keywordtype}{float}>());
+185 
+186     \textcolor{comment}{//cv::Mat frame = colorFrame(crop);}
+187 
+188     \textcolor{comment}{//ss << "FPS: " << 1000/time << " ; time: " << time << " ms";}
+189     \textcolor{comment}{//putText(frame, ss.str(), Point(20,20), 0, 0.5, Scalar(0,0,255));}
+190     \textcolor{comment}{//std::cout << "Inference time, ms: " << time << endl;}
+191 
+192     \textcolor{comment}{//cv::Point correctPoint((colorFrame.cols - crop.width) / 2, (colorFrame.rows - crop.height) / 2);}
+193 
+194     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < detectionMat.rows; ++i)
+195     \{
+196         \textcolor{keywordtype}{float} confidence = detectionMat.at<\textcolor{keywordtype}{float}>(i, 2);
+197 
+198         \textcolor{keywordflow}{if} (confidence > \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ae854ddcece46a348d20debc470882b3b}{m\_confidenceThreshold}})
+199         \{
+200             \textcolor{keywordtype}{size\_t} objectClass = (size\_t)(detectionMat.at<\textcolor{keywordtype}{float}>(i, 1));
+201 
+202             \textcolor{keywordtype}{int} xLeftBottom = cvRound(detectionMat.at<\textcolor{keywordtype}{float}>(i, 3) * crop.width) + crop.x;
+203             \textcolor{keywordtype}{int} yLeftBottom = cvRound(detectionMat.at<\textcolor{keywordtype}{float}>(i, 4) * crop.height) + crop.y;
+204             \textcolor{keywordtype}{int} xRightTop = cvRound(detectionMat.at<\textcolor{keywordtype}{float}>(i, 5) * crop.width) + crop.x;
+205             \textcolor{keywordtype}{int} yRightTop = cvRound(detectionMat.at<\textcolor{keywordtype}{float}>(i, 6) * crop.height) + crop.y;
+206 
+207             cv::Rect object(xLeftBottom, yLeftBottom, xRightTop - xLeftBottom, yRightTop - yLeftBottom);
+208 
+209             tmpRegions.push\_back(\mbox{\hyperlink{class_c_region}{CRegion}}(\textcolor{keywordtype}{object}, \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a717ffc431ea4fd25cbc6cb1172cbd7e6}{m\_classNames}}[objectClass], confidence))
+      ;
+210 
+211             \textcolor{comment}{//cv::rectangle(frame, object, Scalar(0, 255, 0));}
+212             \textcolor{comment}{//std::string label = classNames[objectClass] + ": " + std::to\_string(confidence);}
+213             \textcolor{comment}{//int baseLine = 0;}
+214             \textcolor{comment}{//cv::Size labelSize = cv::getTextSize(label, cv::FONT\_HERSHEY\_SIMPLEX, 0.5, 1, &baseLine);}
+215             \textcolor{comment}{//cv::rectangle(frame, cv::Rect(cv::Point(xLeftBottom, yLeftBottom - labelSize.height),
+       cv::Size(labelSize.width, labelSize.height + baseLine)), cv::Scalar(255, 255, 255), CV\_FILLED);}
+216             \textcolor{comment}{//cv::putText(frame, label, Point(xLeftBottom, yLeftBottom), cv::FONT\_HERSHEY\_SIMPLEX, 0.5,
+       cv::Scalar(0,0,0));}
+217         \}
+218     \}
+219 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_s_s_d_mobile_net_detector_a9c0fe7a122d0b229d84965f472cc6c38_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}\label{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!Get\+Detects@{Get\+Detects}}
+\index{Get\+Detects@{Get\+Detects}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{Get\+Detects()}{GetDetects()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}}\& Base\+Detector\+::\+Get\+Detects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Get\+Detects. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+56     \{
+57         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}};
+58     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a2830cbf9b82b159c25fb2796b867eaef}\label{class_s_s_d_mobile_net_detector_a2830cbf9b82b159c25fb2796b867eaef}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!Init@{Init}}
+\index{Init@{Init}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool S\+S\+D\+Mobile\+Net\+Detector\+::\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a2830cbf9b82b159c25fb2796b867eaef}{S\+S\+D\+Mobile\+Net\+Detector\+::\+Init}}. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_base_detector_a44c53608e9e4e3455ff553d987165260}{Base\+Detector}}.
+
+
+
+Definition at line 40 of file S\+S\+D\+Mobile\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+41 \{
+42     \textcolor{keyword}{auto} modelConfiguration = config.find(\textcolor{stringliteral}{"modelConfiguration"});
+43     \textcolor{keyword}{auto} modelBinary = config.find(\textcolor{stringliteral}{"modelBinary"});
+44     \textcolor{keywordflow}{if} (modelConfiguration != config.end() && modelBinary != config.end())
+45     \{
+46         \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a49cee71e617fd5999e73fbaba9859a71}{m\_net}} = cv::dnn::readNetFromCaffe(modelConfiguration->second, modelBinary->second);
+47     \}
+48 
+49     \textcolor{keyword}{auto} dnnTarget = config.find(\textcolor{stringliteral}{"dnnTarget"});
+50     \textcolor{keywordflow}{if} (dnnTarget != config.end())
+51     \{
+52         std::map<std::string, cv::dnn::Target> targets;
+53         targets[\textcolor{stringliteral}{"DNN\_TARGET\_CPU"}] = cv::dnn::DNN\_TARGET\_CPU;
+54         targets[\textcolor{stringliteral}{"DNN\_TARGET\_OPENCL"}] = cv::dnn::DNN\_TARGET\_OPENCL;
+55 \textcolor{preprocessor}{#if (CV\_VERSION\_MAJOR >= 4)}
+56         targets[\textcolor{stringliteral}{"DNN\_TARGET\_OPENCL\_FP16"}] = cv::dnn::DNN\_TARGET\_OPENCL\_FP16;
+57         targets[\textcolor{stringliteral}{"DNN\_TARGET\_MYRIAD"}] = cv::dnn::DNN\_TARGET\_MYRIAD;
+58 \textcolor{preprocessor}{#endif}
+59         \textcolor{keyword}{auto} target = targets.find(dnnTarget->second);
+60         \textcolor{keywordflow}{if} (target != std::end(targets))
+61         \{
+62             \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a49cee71e617fd5999e73fbaba9859a71}{m\_net}}.setPreferableTarget(target->second);
+63         \}
+64 
+65     \}
+66 
+67     \textcolor{keyword}{auto} confidenceThreshold = config.find(\textcolor{stringliteral}{"confidenceThreshold"});
+68     \textcolor{keywordflow}{if} (confidenceThreshold != config.end())
+69     \{
+70         \mbox{\hyperlink{class_s_s_d_mobile_net_detector_ae854ddcece46a348d20debc470882b3b}{m\_confidenceThreshold}} = std::stof(confidenceThreshold->second);
+71     \}
+72 
+73     \textcolor{keyword}{auto} maxCropRatio = config.find(\textcolor{stringliteral}{"maxCropRatio"});
+74     \textcolor{keywordflow}{if} (maxCropRatio != config.end())
+75     \{
+76         \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}{m\_maxCropRatio}} = std::stof(maxCropRatio->second);
+77         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}{m\_maxCropRatio}} < 1.\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}})
+78         \{
+79             \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}{m\_maxCropRatio}} = 1.f;
+80         \}
+81     \}
+82 
+83     \textcolor{keywordflow}{return} !\mbox{\hyperlink{class_s_s_d_mobile_net_detector_a49cee71e617fd5999e73fbaba9859a71}{m\_net}}.empty();
+84 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_s_s_d_mobile_net_detector_a2830cbf9b82b159c25fb2796b867eaef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}\label{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!Set\+Min\+Object\+Size@{Set\+Min\+Object\+Size}}
+\index{Set\+Min\+Object\+Size@{Set\+Min\+Object\+Size}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{Set\+Min\+Object\+Size()}{SetMinObjectSize()}}
+{\footnotesize\ttfamily void Base\+Detector\+::\+Set\+Min\+Object\+Size (\begin{DoxyParamCaption}\item[{cv\+::\+Size}]{min\+Object\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Set\+Min\+Object\+Size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Object\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+47     \{
+48         \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\_minObjectSize}} = minObjectSize;
+49     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_afc45ce0049d048598325eda63f10056f}\label{class_s_s_d_mobile_net_detector_afc45ce0049d048598325eda63f10056f}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!In\+Height@{In\+Height}}
+\index{In\+Height@{In\+Height}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{In\+Height}{InHeight}}
+{\footnotesize\ttfamily const int S\+S\+D\+Mobile\+Net\+Detector\+::\+In\+Height = 300\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 31 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_ac77d00e649eb5c0ddbd12229416e98c5}\label{class_s_s_d_mobile_net_detector_ac77d00e649eb5c0ddbd12229416e98c5}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!In\+Width@{In\+Width}}
+\index{In\+Width@{In\+Width}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{In\+Width}{InWidth}}
+{\footnotesize\ttfamily const int S\+S\+D\+Mobile\+Net\+Detector\+::\+In\+Width = 300\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 30 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a717ffc431ea4fd25cbc6cb1172cbd7e6}\label{class_s_s_d_mobile_net_detector_a717ffc431ea4fd25cbc6cb1172cbd7e6}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+class\+Names@{m\+\_\+class\+Names}}
+\index{m\+\_\+class\+Names@{m\+\_\+class\+Names}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+class\+Names}{m\_classNames}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ S\+S\+D\+Mobile\+Net\+Detector\+::m\+\_\+class\+Names\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 37 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}\label{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+collect\+Points@{m\+\_\+collect\+Points}}
+\index{m\+\_\+collect\+Points@{m\+\_\+collect\+Points}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+collect\+Points}{m\_collectPoints}}
+{\footnotesize\ttfamily bool Base\+Detector\+::m\+\_\+collect\+Points\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 140 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_ae854ddcece46a348d20debc470882b3b}\label{class_s_s_d_mobile_net_detector_ae854ddcece46a348d20debc470882b3b}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+confidence\+Threshold@{m\+\_\+confidence\+Threshold}}
+\index{m\+\_\+confidence\+Threshold@{m\+\_\+confidence\+Threshold}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+confidence\+Threshold}{m\_confidenceThreshold}}
+{\footnotesize\ttfamily float S\+S\+D\+Mobile\+Net\+Detector\+::m\+\_\+confidence\+Threshold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 35 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a669234ba12981608ce794634abe2a361}\label{class_s_s_d_mobile_net_detector_a669234ba12981608ce794634abe2a361}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+in\+Scale\+Factor@{m\+\_\+in\+Scale\+Factor}}
+\index{m\+\_\+in\+Scale\+Factor@{m\+\_\+in\+Scale\+Factor}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+in\+Scale\+Factor}{m\_inScaleFactor}}
+{\footnotesize\ttfamily float S\+S\+D\+Mobile\+Net\+Detector\+::m\+\_\+in\+Scale\+Factor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 33 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}\label{class_s_s_d_mobile_net_detector_a5fb35dca36d36fb75c65d1846fe65233}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+max\+Crop\+Ratio@{m\+\_\+max\+Crop\+Ratio}}
+\index{m\+\_\+max\+Crop\+Ratio@{m\+\_\+max\+Crop\+Ratio}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+max\+Crop\+Ratio}{m\_maxCropRatio}}
+{\footnotesize\ttfamily float S\+S\+D\+Mobile\+Net\+Detector\+::m\+\_\+max\+Crop\+Ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 36 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a5fda467ac26a8688339d31b14e7e9e20}\label{class_s_s_d_mobile_net_detector_a5fda467ac26a8688339d31b14e7e9e20}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+mean\+Val@{m\+\_\+mean\+Val}}
+\index{m\+\_\+mean\+Val@{m\+\_\+mean\+Val}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+mean\+Val}{m\_meanVal}}
+{\footnotesize\ttfamily float S\+S\+D\+Mobile\+Net\+Detector\+::m\+\_\+mean\+Val\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a651b938c89c94daac4763728637d90c9}\label{class_base_detector_a651b938c89c94daac4763728637d90c9}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+min\+Object\+Size@{m\+\_\+min\+Object\+Size}}
+\index{m\+\_\+min\+Object\+Size@{m\+\_\+min\+Object\+Size}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+min\+Object\+Size}{m\_minObjectSize}}
+{\footnotesize\ttfamily cv\+::\+Size Base\+Detector\+::m\+\_\+min\+Object\+Size\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 138 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}\label{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+motion\+Map@{m\+\_\+motion\+Map}}
+\index{m\+\_\+motion\+Map@{m\+\_\+motion\+Map}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+motion\+Map}{m\_motionMap}}
+{\footnotesize\ttfamily cv\+::\+Mat Base\+Detector\+::m\+\_\+motion\+Map\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 142 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_a49cee71e617fd5999e73fbaba9859a71}\label{class_s_s_d_mobile_net_detector_a49cee71e617fd5999e73fbaba9859a71}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+net@{m\+\_\+net}}
+\index{m\+\_\+net@{m\+\_\+net}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+net}{m\_net}}
+{\footnotesize\ttfamily cv\+::dnn\+::\+Net S\+S\+D\+Mobile\+Net\+Detector\+::m\+\_\+net\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 26 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a409c20093acba261db8354ca72058fce}\label{class_base_detector_a409c20093acba261db8354ca72058fce}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+regions@{m\+\_\+regions}}
+\index{m\+\_\+regions@{m\+\_\+regions}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+regions}{m\_regions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} Base\+Detector\+::m\+\_\+regions\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 136 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_s_s_d_mobile_net_detector_ac4f9e209a12a97a3a8696f1df0d1f046}\label{class_s_s_d_mobile_net_detector_ac4f9e209a12a97a3a8696f1df0d1f046}} 
+\index{S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}!m\+\_\+\+W\+H\+Ratio@{m\+\_\+\+W\+H\+Ratio}}
+\index{m\+\_\+\+W\+H\+Ratio@{m\+\_\+\+W\+H\+Ratio}!S\+S\+D\+Mobile\+Net\+Detector@{S\+S\+D\+Mobile\+Net\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+\+W\+H\+Ratio}{m\_WHRatio}}
+{\footnotesize\ttfamily float S\+S\+D\+Mobile\+Net\+Detector\+::m\+\_\+\+W\+H\+Ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 32 of file S\+S\+D\+Mobile\+Net\+Detector.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\mbox{\hyperlink{_s_s_d_mobile_net_detector_8h}{S\+S\+D\+Mobile\+Net\+Detector.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\mbox{\hyperlink{_s_s_d_mobile_net_detector_8cpp}{S\+S\+D\+Mobile\+Net\+Detector.\+cpp}}\end{DoxyCompactItemize}

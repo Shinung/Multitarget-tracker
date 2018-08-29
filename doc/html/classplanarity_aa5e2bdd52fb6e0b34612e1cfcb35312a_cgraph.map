@@ -1,0 +1,6 @@
+<map id="planarity::up_until_marked" name="planarity::up_until_marked">
+<area shape="rect" id="node2" href="$classnode.html#a12cb1a2167f5f03c054de5e707d3156f" title="node::adj_edges_iterator" alt="" coords="380,26,544,52"/>
+<area shape="rect" id="node3" href="$classnode.html#a788d3e932a5c164caa5ec82aa47551b2" title="node::adj_edges_begin" alt="" coords="177,26,332,52"/>
+<area shape="rect" id="node4" href="$classnode.html#aa1e7887d29390297580769454f769ad6" title="node::adj_edges_end" alt="" coords="182,76,327,103"/>
+<area shape="rect" id="node5" href="$classnode.html#a13dbd1809a33a5efede64a359e53a363" title="node::opposite" alt="" coords="201,127,308,154"/>
+</map>

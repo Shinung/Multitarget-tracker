@@ -1,0 +1,5 @@
+<map id="LBSP::validateROI" name="LBSP::validateROI">
+<area shape="rect" id="node2" href="$class_background_subtractor_l_b_s_p.html#a34dc38d3d925d46d289c750786f232dc" title="sets the ROI to be used for descriptor extraction (note: this function will reinit the model and retu..." alt="" coords="201,5,386,47"/>
+<area shape="rect" id="node3" href="$class_background_subtractor_l_o_b_s_t_e_r.html#a452bea31dcbd2e10efc701cc2cd25776" title="(re)initiaization method; needs to be called before starting background subtraction ..." alt="" coords="188,71,399,112"/>
+<area shape="rect" id="node4" href="$class_background_subtractor_su_b_s_e_n_s_e.html#ac84aa66030b04a72435ef473cf0e6a3f" title="(re)initiaization method; needs to be called before starting background subtraction ..." alt="" coords="183,136,404,177"/>
+</map>

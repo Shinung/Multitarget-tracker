@@ -1,0 +1,62 @@
+\hypertarget{gpu__allocator_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/gpu\+\_\+allocator.cpp File Reference}
+\label{gpu__allocator_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/gpu\+\_\+allocator.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/gpu\+\_\+allocator.\+cpp}}
+{\ttfamily \#include \char`\"{}gpu\+\_\+allocator.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cuda\+\_\+runtime.\+h$>$}\newline
+Include dependency graph for gpu\+\_\+allocator.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gpu__allocator_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gpu__allocator_8cpp_a450f9d8af07bfe2f313dbe3a78738a5e}{A\+L\+I\+G\+N\+M\+E\+NT}}~(128$\ast$1024)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{gpu__allocator_8cpp_a9b5b2c4640739b3faa5bdeae80af1e42}{align\+\_\+up}} (unsigned int v, unsigned int alignment)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gpu__allocator_8cpp_a450f9d8af07bfe2f313dbe3a78738a5e}\label{gpu__allocator_8cpp_a450f9d8af07bfe2f313dbe3a78738a5e}} 
+\index{gpu\+\_\+allocator.\+cpp@{gpu\+\_\+allocator.\+cpp}!A\+L\+I\+G\+N\+M\+E\+NT@{A\+L\+I\+G\+N\+M\+E\+NT}}
+\index{A\+L\+I\+G\+N\+M\+E\+NT@{A\+L\+I\+G\+N\+M\+E\+NT}!gpu\+\_\+allocator.\+cpp@{gpu\+\_\+allocator.\+cpp}}
+\subsubsection{\texorpdfstring{A\+L\+I\+G\+N\+M\+E\+NT}{ALIGNMENT}}
+{\footnotesize\ttfamily \#define A\+L\+I\+G\+N\+M\+E\+NT~(128$\ast$1024)}
+
+
+
+Definition at line 8 of file gpu\+\_\+allocator.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gpu__allocator_8cpp_a9b5b2c4640739b3faa5bdeae80af1e42}\label{gpu__allocator_8cpp_a9b5b2c4640739b3faa5bdeae80af1e42}} 
+\index{gpu\+\_\+allocator.\+cpp@{gpu\+\_\+allocator.\+cpp}!align\+\_\+up@{align\+\_\+up}}
+\index{align\+\_\+up@{align\+\_\+up}!gpu\+\_\+allocator.\+cpp@{gpu\+\_\+allocator.\+cpp}}
+\subsubsection{\texorpdfstring{align\+\_\+up()}{align\_up()}}
+{\footnotesize\ttfamily static int align\+\_\+up (\begin{DoxyParamCaption}\item[{unsigned int}]{v,  }\item[{unsigned int}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 26 of file gpu\+\_\+allocator.\+cpp.
+
+
+\begin{DoxyCode}
+27 \{
+28     \textcolor{keywordflow}{return} ((v + alignment - 1) / alignment) * alignment;
+29 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gpu__allocator_8cpp_a9b5b2c4640739b3faa5bdeae80af1e42_icgraph}
+\end{center}
+\end{figure}

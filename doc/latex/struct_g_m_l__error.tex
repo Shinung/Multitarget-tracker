@@ -1,0 +1,91 @@
+\hypertarget{struct_g_m_l__error}{}\section{G\+M\+L\+\_\+error Struct Reference}
+\label{struct_g_m_l__error}\index{G\+M\+L\+\_\+error@{G\+M\+L\+\_\+error}}
+
+
+Reason and position of an error in a G\+ML file.  
+
+
+
+
+{\ttfamily \#include $<$gml\+\_\+scanner.\+h$>$}
+
+
+
+Collaboration diagram for G\+M\+L\+\_\+error\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{struct_g_m_l__error__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790c}{G\+M\+L\+\_\+error\+\_\+value}} \mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\+\_\+num}}
+\item 
+int \mbox{\hyperlink{struct_g_m_l__error_a4e9d11b6501f91a982af87f45962b7b3}{line}}
+\item 
+int \mbox{\hyperlink{struct_g_m_l__error_a0708757bcd78a82077a0577982f2c433}{column}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reason and position of an error in a G\+ML file. 
+
+When an error occurs while parsing the structure of a G\+ML file {\ttfamily \mbox{\hyperlink{struct_g_m_l__error}{G\+M\+L\+\_\+error}}} is used to return the type and position of the error detected. Position is specified by {\ttfamily line} and {\ttfamily column}, but might be somewhat imprecise. However at least the line number should not differ too much from the real position.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgraph_ac28cb3468623a480709d3329033d4ec8}{graph\+::load}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 52 of file gml\+\_\+scanner.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_g_m_l__error_a0708757bcd78a82077a0577982f2c433}\label{struct_g_m_l__error_a0708757bcd78a82077a0577982f2c433}} 
+\index{G\+M\+L\+\_\+error@{G\+M\+L\+\_\+error}!column@{column}}
+\index{column@{column}!G\+M\+L\+\_\+error@{G\+M\+L\+\_\+error}}
+\subsubsection{\texorpdfstring{column}{column}}
+{\footnotesize\ttfamily int G\+M\+L\+\_\+error\+::column}
+
+Contains the column, where the error was detected. 
+
+Definition at line 89 of file gml\+\_\+scanner.\+h.
+
+\mbox{\Hypertarget{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}\label{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}} 
+\index{G\+M\+L\+\_\+error@{G\+M\+L\+\_\+error}!err\+\_\+num@{err\+\_\+num}}
+\index{err\+\_\+num@{err\+\_\+num}!G\+M\+L\+\_\+error@{G\+M\+L\+\_\+error}}
+\subsubsection{\texorpdfstring{err\+\_\+num}{err\_num}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790c}{G\+M\+L\+\_\+error\+\_\+value}} G\+M\+L\+\_\+error\+::err\+\_\+num}
+
+Contains the error description as symbolic constant\+: 
+\begin{DoxyItemize}
+\item {\ttfamily G\+M\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}\+: A file with that name doesn\textquotesingle{}t exist. 
+\item {\ttfamily G\+M\+L\+\_\+\+OK}\+: No error \+:-\/) 
+\item {\ttfamily G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+B\+R\+A\+C\+K\+E\+TS}\+: A mismatch of brackets was detected, i.\+e. there were too many closing brackets ({\ttfamily \mbox{]}}). 
+\item {\ttfamily G\+M\+L\+\_\+\+O\+P\+E\+N\+\_\+\+B\+R\+A\+C\+K\+ET}\+: Now, there were too many opening brackets ({\ttfamily \mbox{[}}) 
+\item {\ttfamily G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+I\+G\+I\+TS}\+: The number of digits a integer or floating point value can have is limited to 1024, this should be enough \+:-\/) 
+\item {\ttfamily G\+M\+L\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OF}\+: An E\+OF occured, where it wasn\textquotesingle{}t expected, e.\+g. while scanning a string. 
+\item {\ttfamily G\+M\+L\+\_\+\+S\+Y\+N\+T\+AX}\+: The file isn\textquotesingle{}t a valid G\+ML file, e.\+g. a mismatch in the key-\/value pairs. 
+\item {\ttfamily G\+M\+L\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED}\+: A character occured, where it makes no sense, e.\+g. non-\/numerical characters in numbers or keys beginning with numbers 
+\end{DoxyItemize}
+
+Definition at line 77 of file gml\+\_\+scanner.\+h.
+
+\mbox{\Hypertarget{struct_g_m_l__error_a4e9d11b6501f91a982af87f45962b7b3}\label{struct_g_m_l__error_a4e9d11b6501f91a982af87f45962b7b3}} 
+\index{G\+M\+L\+\_\+error@{G\+M\+L\+\_\+error}!line@{line}}
+\index{line@{line}!G\+M\+L\+\_\+error@{G\+M\+L\+\_\+error}}
+\subsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily int G\+M\+L\+\_\+error\+::line}
+
+Contains the line, where the error was detected. This will usually be near the line where the error really is located. 
+
+Definition at line 84 of file gml\+\_\+scanner.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{gml__scanner_8h}{gml\+\_\+scanner.\+h}}\end{DoxyCompactItemize}

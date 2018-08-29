@@ -1,0 +1,10 @@
+<map id="planar_embedding::operator=" name="planar_embedding::operator=">
+<area shape="rect" id="node2" href="$classplanar__embedding.html#af87cba1fc6c770acc347c8196ab12469" title="planar_embedding::init" alt="" coords="267,5,419,32"/>
+<area shape="rect" id="node3" href="$classplanar__embedding.html#a151a1e7cf6cfbbd0a09c467ec8bc61d1" title="planar_embedding::adjacency" alt="" coords="246,56,441,83"/>
+<area shape="rect" id="node4" href="$classsymlist.html#a525b8d44af5d771fe15916372515cce0" title="Start iteration through elements of list. " alt="" coords="292,107,395,133"/>
+<area shape="rect" id="node5" href="$classsymlist.html#a7283589fa01f79d722f8256d7a6a7883" title="End of iteration through elements of list. " alt="" coords="297,157,390,184"/>
+<area shape="rect" id="node6" href="$classplanar__embedding.html#aaba1216e3c7497267573cc56b4368929" title="planar_embedding::pos" alt="" coords="265,208,421,235"/>
+<area shape="rect" id="node9" href="$classplanar__embedding.html#a20da54f43d855cf81bdd5b09839c4295" title="planar_embedding::push_back" alt="" coords="244,259,443,285"/>
+<area shape="rect" id="node7" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="491,183,588,209"/>
+<area shape="rect" id="node8" href="$classedge.html#a97563b611261478ee19c6ce055f1a3ee" title="edge::target" alt="" coords="494,233,585,260"/>
+</map>

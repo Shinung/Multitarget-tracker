@@ -1,0 +1,7 @@
+<map id="graph::del_edge" name="graph::del_edge">
+<area shape="rect" id="node2" href="$classgraph.html#a2cd0986dc5bcbfdbf0635c39e610784b" title="graph::pre_del_edge\l_handler" alt="" coords="172,5,311,47"/>
+<area shape="rect" id="node3" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="193,71,290,98"/>
+<area shape="rect" id="node4" href="$classedge.html#a97563b611261478ee19c6ce055f1a3ee" title="edge::target" alt="" coords="196,122,287,149"/>
+<area shape="rect" id="node5" href="$classedge.html#abcd4eeaf23327d026beac9ee1d0fa7e9" title="edge::remove_from" alt="" coords="176,173,307,199"/>
+<area shape="rect" id="node6" href="$classgraph.html#ab9ac8bcc7288986de69cd467beb33600" title="graph::post_del_edge\l_handler" alt="" coords="168,224,315,265"/>
+</map>

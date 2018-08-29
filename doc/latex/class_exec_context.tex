@@ -1,0 +1,247 @@
+\hypertarget{class_exec_context}{}\section{Exec\+Context Class Reference}
+\label{class_exec_context}\index{Exec\+Context@{Exec\+Context}}
+
+
+Collaboration diagram for Exec\+Context\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{class_exec_context__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_exec_context_a88e6438e9e4bba24c27aa02ee5d40bd5}{Exec\+Context}} (const string \&model\+\_\+file, const string \&trained\+\_\+file, const string \&mean\+\_\+file, const string \&mean\+\_\+value, const string \&label\+\_\+file, float conf\+\_\+threshold, int device)
+\item 
+\mbox{\hyperlink{class_s_s_d}{S\+SD}} $\ast$ \mbox{\hyperlink{class_exec_context_a6c596880b2a6a4c8df7e8ca639f2a1b7}{Caffe\+Classifier}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_exec_context_ae0873cef48079986d31639654f915bd0}{Is\+Compatible}} (int device)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+friend \mbox{\hyperlink{class_exec_context_a5d1035fff84318aecd7d6b30c34c66f5}{Scoped\+Context$<$ Exec\+Context $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_exec_context_aad6945417b4a10d9ed0d338d16a1f105}{Activate}} ()
+\item 
+void \mbox{\hyperlink{class_exec_context_a91a52dd30a857c8e71ea98976a9d44c2}{Deactivate}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_exec_context_a05d01fbf5236f59519a9708580c175da}{device\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_g_p_u_allocator}{G\+P\+U\+Allocator}} $>$ \mbox{\hyperlink{class_exec_context_aa91ffaae541ca563b5aabb2f2a1c53b5}{allocator\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ Caffe $>$ \mbox{\hyperlink{class_exec_context_a6561f67a969e8b38001d488e4937515f}{caffe\+\_\+context\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_s_s_d}{S\+SD}} $>$ \mbox{\hyperlink{class_exec_context_acfecd6b6e282a7b7c67451dedd8bacae}{detector\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+By using Go as the H\+T\+TP server, we have potentially more C\+PU threads than available G\+P\+Us and more threads can be added on the fly by the Go runtime. Therefore we cannot pin the C\+PU threads to specific G\+P\+Us. Instead, when a C\+PU thread is ready for inference it will try to retrieve an execution context from a queue of available G\+PU contexts and then do a cuda\+Set\+Device() to prepare for execution. Multiple contexts can be allocated per G\+PU. -\/ From \href{https://github.com/NVIDIA/gpu-rest-engine}{\tt N\+V\+I\+D\+I\+A/gpu-\/rest-\/engine}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://github.com/NVIDIA/gpu-rest-engine}{\tt https\+://github.\+com/\+N\+V\+I\+D\+I\+A/gpu-\/rest-\/engine} 
+
+forked\+: \href{https://github.com/Shinung/gpu-rest-engine/tree/ssd_gre}{\tt https\+://github.\+com/\+Shinung/gpu-\/rest-\/engine/tree/ssd\+\_\+gre} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Shinung 
+\end{DoxyAuthor}
+
+
+Definition at line 24 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_exec_context_a88e6438e9e4bba24c27aa02ee5d40bd5}\label{class_exec_context_a88e6438e9e4bba24c27aa02ee5d40bd5}} 
+\index{Exec\+Context@{Exec\+Context}!Exec\+Context@{Exec\+Context}}
+\index{Exec\+Context@{Exec\+Context}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{Exec\+Context()}{ExecContext()}}
+{\footnotesize\ttfamily Exec\+Context\+::\+Exec\+Context (\begin{DoxyParamCaption}\item[{const string \&}]{model\+\_\+file,  }\item[{const string \&}]{trained\+\_\+file,  }\item[{const string \&}]{mean\+\_\+file,  }\item[{const string \&}]{mean\+\_\+value,  }\item[{const string \&}]{label\+\_\+file,  }\item[{float}]{conf\+\_\+threshold,  }\item[{int}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 42 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+49         : \mbox{\hyperlink{class_exec_context_a05d01fbf5236f59519a9708580c175da}{device\_}}(device)
+50     \{
+51         cudaError\_t st = cudaSetDevice(\mbox{\hyperlink{class_exec_context_a05d01fbf5236f59519a9708580c175da}{device\_}});
+52         \textcolor{keywordflow}{if} (st != cudaSuccess)
+53             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"could not set CUDA device"});
+54 
+55         \mbox{\hyperlink{class_exec_context_aa91ffaae541ca563b5aabb2f2a1c53b5}{allocator\_}}.reset(\textcolor{keyword}{new} \mbox{\hyperlink{class_g_p_u_allocator}{GPUAllocator}}(1024 * 1024 * 128));
+56         \mbox{\hyperlink{class_exec_context_a6561f67a969e8b38001d488e4937515f}{caffe\_context\_}}.reset(\textcolor{keyword}{new} Caffe);
+57         Caffe::Set(\mbox{\hyperlink{class_exec_context_a6561f67a969e8b38001d488e4937515f}{caffe\_context\_}}.get());
+58         \mbox{\hyperlink{class_exec_context_acfecd6b6e282a7b7c67451dedd8bacae}{detector\_}}.reset(\textcolor{keyword}{new} \mbox{\hyperlink{class_s_s_d}{SSD}}(model\_file, trained\_file,
+59             mean\_file, mean\_value,
+60             label\_file,
+61             \mbox{\hyperlink{class_exec_context_aa91ffaae541ca563b5aabb2f2a1c53b5}{allocator\_}}.get(),
+62             conf\_threshold));
+63 
+64         Caffe::Set(\textcolor{keyword}{nullptr});
+65     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_exec_context_aad6945417b4a10d9ed0d338d16a1f105}\label{class_exec_context_aad6945417b4a10d9ed0d338d16a1f105}} 
+\index{Exec\+Context@{Exec\+Context}!Activate@{Activate}}
+\index{Activate@{Activate}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily void Exec\+Context\+::\+Activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 73 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+74     \{
+75         cudaError\_t st = cudaSetDevice(\mbox{\hyperlink{class_exec_context_a05d01fbf5236f59519a9708580c175da}{device\_}});
+76         \textcolor{keywordflow}{if} (st != cudaSuccess)
+77             \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"could not set CUDA device"});
+78         \mbox{\hyperlink{class_exec_context_aa91ffaae541ca563b5aabb2f2a1c53b5}{allocator\_}}->reset();
+79         Caffe::Set(\mbox{\hyperlink{class_exec_context_a6561f67a969e8b38001d488e4937515f}{caffe\_context\_}}.get());
+80     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_exec_context_a6c596880b2a6a4c8df7e8ca639f2a1b7}\label{class_exec_context_a6c596880b2a6a4c8df7e8ca639f2a1b7}} 
+\index{Exec\+Context@{Exec\+Context}!Caffe\+Classifier@{Caffe\+Classifier}}
+\index{Caffe\+Classifier@{Caffe\+Classifier}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{Caffe\+Classifier()}{CaffeClassifier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_s_d}{S\+SD}}$\ast$ Exec\+Context\+::\+Caffe\+Classifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 67 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+68     \{
+69         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_exec_context_acfecd6b6e282a7b7c67451dedd8bacae}{detector\_}}.get();
+70     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_exec_context_a6c596880b2a6a4c8df7e8ca639f2a1b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_exec_context_a91a52dd30a857c8e71ea98976a9d44c2}\label{class_exec_context_a91a52dd30a857c8e71ea98976a9d44c2}} 
+\index{Exec\+Context@{Exec\+Context}!Deactivate@{Deactivate}}
+\index{Deactivate@{Deactivate}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{Deactivate()}{Deactivate()}}
+{\footnotesize\ttfamily void Exec\+Context\+::\+Deactivate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definition at line 82 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+83     \{
+84         Caffe::Set(\textcolor{keyword}{nullptr});
+85     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_exec_context_ae0873cef48079986d31639654f915bd0}\label{class_exec_context_ae0873cef48079986d31639654f915bd0}} 
+\index{Exec\+Context@{Exec\+Context}!Is\+Compatible@{Is\+Compatible}}
+\index{Is\+Compatible@{Is\+Compatible}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{Is\+Compatible()}{IsCompatible()}}
+{\footnotesize\ttfamily static bool Exec\+Context\+::\+Is\+Compatible (\begin{DoxyParamCaption}\item[{int}]{device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 29 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+30     \{
+31         cudaError\_t st = cudaSetDevice(device);
+32         \textcolor{keywordflow}{if} (st != cudaSuccess)
+33             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+34 
+35         cuda::DeviceInfo info;
+36         \textcolor{keywordflow}{if} (!info.isCompatible())
+37             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+38 
+39         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+40     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_exec_context_ae0873cef48079986d31639654f915bd0_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_exec_context_aa91ffaae541ca563b5aabb2f2a1c53b5}\label{class_exec_context_aa91ffaae541ca563b5aabb2f2a1c53b5}} 
+\index{Exec\+Context@{Exec\+Context}!allocator\+\_\+@{allocator\+\_\+}}
+\index{allocator\+\_\+@{allocator\+\_\+}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{allocator\+\_\+}{allocator\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_g_p_u_allocator}{G\+P\+U\+Allocator}}$>$ Exec\+Context\+::allocator\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 89 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+\mbox{\Hypertarget{class_exec_context_a6561f67a969e8b38001d488e4937515f}\label{class_exec_context_a6561f67a969e8b38001d488e4937515f}} 
+\index{Exec\+Context@{Exec\+Context}!caffe\+\_\+context\+\_\+@{caffe\+\_\+context\+\_\+}}
+\index{caffe\+\_\+context\+\_\+@{caffe\+\_\+context\+\_\+}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{caffe\+\_\+context\+\_\+}{caffe\_context\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$Caffe$>$ Exec\+Context\+::caffe\+\_\+context\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 90 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+\mbox{\Hypertarget{class_exec_context_acfecd6b6e282a7b7c67451dedd8bacae}\label{class_exec_context_acfecd6b6e282a7b7c67451dedd8bacae}} 
+\index{Exec\+Context@{Exec\+Context}!detector\+\_\+@{detector\+\_\+}}
+\index{detector\+\_\+@{detector\+\_\+}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{detector\+\_\+}{detector\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_s_s_d}{S\+SD}}$>$ Exec\+Context\+::detector\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 91 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+\mbox{\Hypertarget{class_exec_context_a05d01fbf5236f59519a9708580c175da}\label{class_exec_context_a05d01fbf5236f59519a9708580c175da}} 
+\index{Exec\+Context@{Exec\+Context}!device\+\_\+@{device\+\_\+}}
+\index{device\+\_\+@{device\+\_\+}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{device\+\_\+}{device\_}}
+{\footnotesize\ttfamily int Exec\+Context\+::device\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 88 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+\mbox{\Hypertarget{class_exec_context_a5d1035fff84318aecd7d6b30c34c66f5}\label{class_exec_context_a5d1035fff84318aecd7d6b30c34c66f5}} 
+\index{Exec\+Context@{Exec\+Context}!Scoped\+Context$<$ Exec\+Context $>$@{Scoped\+Context$<$ Exec\+Context $>$}}
+\index{Scoped\+Context$<$ Exec\+Context $>$@{Scoped\+Context$<$ Exec\+Context $>$}!Exec\+Context@{Exec\+Context}}
+\subsubsection{\texorpdfstring{Scoped\+Context$<$ Exec\+Context $>$}{ScopedContext< ExecContext >}}
+{\footnotesize\ttfamily friend Exec\+Context\+::\+Scoped\+Context$<$ \mbox{\hyperlink{class_exec_context}{Exec\+Context}} $>$}
+
+
+
+Definition at line 27 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\mbox{\hyperlink{_s_s_d_custom_net_detector_8cpp}{S\+S\+D\+Custom\+Net\+Detector.\+cpp}}\end{DoxyCompactItemize}

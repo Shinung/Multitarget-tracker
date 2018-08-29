@@ -1,0 +1,6 @@
+<map id="pq_node" name="pq_node">
+<area shape="rect" id="node2" href="$classdirection__indicator.html" title="{direction_indicator\n|&#45; direction\l|&#45; direction_indicator()\l&#45; kind()\l&#45; write()\l&#45; P()\l&#45; Q()\l&#45; D()\l&#45; L()\l}" alt="" coords="5,519,148,685"/>
+<area shape="rect" id="node3" href="$classp__node.html" title="{p_node\n|&#45; full_sons\l&#45; partial_sons\l&#45; child_count\l&#45; partial_count\l&#45; full_count\l|&#45; p_node()\l&#45; p_node()\l&#45; partial()\l&#45; full()\l&#45; kind()\l&#45; write()\l&#45; clear()\l&#45; P()\l&#45; Q()\l&#45; D()\l&#45; L()\l}" alt="" coords="173,461,277,743"/>
+<area shape="rect" id="node4" href="$classpq__leaf.html" title="{pq_leaf\n|&#45; other_id\l&#45; e\l|+ pq_leaf()\l&#45; kind()\l&#45; write()\l&#45; P()\l&#45; Q()\l&#45; D()\l&#45; L()\l}" alt="" coords="301,512,383,692"/>
+<area shape="rect" id="node5" href="$classq__node.html" title="{q_node\n|&#45; pert_begin\l&#45; pert_end\l&#45; partial_pos\l&#45; pert_cons\l&#45; partial_count\l&#45; full_count\l|&#45; q_node()\l&#45; partial()\l&#45; full()\l&#45; kind()\l&#45; write()\l&#45; clear()\l&#45; P()\l&#45; Q()\l&#45; D()\l&#45; L()\l&#45; pertinent()\l&#45; merge()\l&#45; turn()\l}" alt="" coords="407,439,511,765"/>
+</map>

@@ -1,0 +1,990 @@
+\hypertarget{_distance_utils_8h}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Subsense/\+Distance\+Utils.h File Reference}
+\label{_distance_utils_8h}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Subsense/\+Distance\+Utils.\+h@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Subsense/\+Distance\+Utils.\+h}}
+{\ttfamily \#include $<$opencv2/core/types\+\_\+c.\+h$>$}\newline
+Include dependency graph for Distance\+Utils.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{_distance_utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_distance_utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, size\+\_\+t $>$\+::type \mbox{\hyperlink{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703}{L1dist}} (T a, T b)
+\begin{DoxyCompactList}\small\item\em computes the L1 distance between two integer values \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+floating\+\_\+point$<$ T $>$\+::value, float $>$\+::type \mbox{\hyperlink{_distance_utils_8h_a0d029bf0fe4557acb66fed94d80d02f1}{L1dist}} (T a, T b)
+\begin{DoxyCompactList}\small\item\em computes the L1 distance between two float values \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_a0c9c69badc14ad52f84c924826c8f412}{L1dist}} (const T $\ast$a, const T $\ast$b) -\/$>$ decltype(L1dist($\ast$a, $\ast$b))
+\begin{DoxyCompactList}\small\item\em computes the L1 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_a35a5e3eee79697aa83e5955343051385}{L1dist}} (const T $\ast$a, const T $\ast$b, size\+\_\+t n\+Elements, const uchar $\ast$m=N\+U\+LL) -\/$>$ decltype(L1dist$<$ n\+Channels $>$(a, b))
+\begin{DoxyCompactList}\small\item\em computes the L1 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_aaeb0b4e41894b43dd839cb273b8131a2}{L1dist}} (const T $\ast$a, const T $\ast$b, size\+\_\+t n\+Elements, size\+\_\+t n\+Channels, const uchar $\ast$m=N\+U\+LL) -\/$>$ decltype(L1dist$<$ 3 $>$(a, b, n\+Elements, m))
+\begin{DoxyCompactList}\small\item\em computes the L1 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_a6f78ab3fadb020f26b58a38443f116fc}{L1dist\+\_\+}} (const cv\+::\+Vec$<$ T, n\+Channels $>$ \&a, const cv\+::\+Vec$<$ T, n\+Channels $>$ \&b) -\/$>$ decltype(\mbox{\hyperlink{_distance_utils_8h_aaeb0b4e41894b43dd839cb273b8131a2}{L1dist}}$<$ n\+Channels, T $>$((T $\ast$)(0),(T $\ast$)(0)))
+\begin{DoxyCompactList}\small\item\em computes the L1 distance between two opencv vectors \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28}{L2sqrdist}} (T a, T b) -\/$>$ decltype(\mbox{\hyperlink{_distance_utils_8h_aaeb0b4e41894b43dd839cb273b8131a2}{L1dist}}(a, b))
+\begin{DoxyCompactList}\small\item\em computes the squared L2 distance between two generic variables \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_ad1f38be237c1ac20984c217ffcd05e06}{L2sqrdist}} (const T $\ast$a, const T $\ast$b) -\/$>$ decltype(L2sqrdist($\ast$a, $\ast$b))
+\begin{DoxyCompactList}\small\item\em computes the squared L2 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_a2768651c38cec33e9f3396d2cadf35ac}{L2sqrdist}} (const T $\ast$a, const T $\ast$b, size\+\_\+t n\+Elements, const uchar $\ast$m=N\+U\+LL) -\/$>$ decltype(L2sqrdist$<$ n\+Channels $>$(a, b))
+\begin{DoxyCompactList}\small\item\em computes the squared L2 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_ac3cd461fb3fc3f673a5f94616f4e5a1d}{L2sqrdist}} (const T $\ast$a, const T $\ast$b, size\+\_\+t n\+Elements, size\+\_\+t n\+Channels, const uchar $\ast$m=N\+U\+LL) -\/$>$ decltype(L2sqrdist$<$ 3 $>$(a, b, n\+Elements, m))
+\begin{DoxyCompactList}\small\item\em computes the squared L2 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_a9076f7ac1b6e7b73267d375e16b4bacc}{L2sqrdist\+\_\+}} (const cv\+::\+Vec$<$ T, n\+Channels $>$ \&a, const cv\+::\+Vec$<$ T, n\+Channels $>$ \&b) -\/$>$ decltype(\mbox{\hyperlink{_distance_utils_8h_ac3cd461fb3fc3f673a5f94616f4e5a1d}{L2sqrdist}}$<$ n\+Channels, T $>$((T $\ast$)(0),(T $\ast$)(0)))
+\begin{DoxyCompactList}\small\item\em computes the squared L2 distance between two opencv vectors \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static float \mbox{\hyperlink{_distance_utils_8h_a2d0d83af4f531dd9efd02c49f933e3c1}{L2dist}} (const T $\ast$a, const T $\ast$b)
+\begin{DoxyCompactList}\small\item\em computes the L2 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static float \mbox{\hyperlink{_distance_utils_8h_a0946803eb395e595338918d8fc025f9f}{L2dist}} (const T $\ast$a, const T $\ast$b, size\+\_\+t n\+Elements, const uchar $\ast$m=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em computes the L2 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static float \mbox{\hyperlink{_distance_utils_8h_a4cd0dfe8a6e560bcea47a93e9554c8d0}{L2dist}} (const T $\ast$a, const T $\ast$b, size\+\_\+t n\+Elements, size\+\_\+t n\+Channels, const uchar $\ast$m=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em computes the squared L2 distance between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static float \mbox{\hyperlink{_distance_utils_8h_a68040991132b7843d1cdf4d8a51bb653}{L2dist\+\_\+}} (const cv\+::\+Vec$<$ T, n\+Channels $>$ \&a, const cv\+::\+Vec$<$ T, n\+Channels $>$ \&b)
+\begin{DoxyCompactList}\small\item\em computes the L2 distance between two opencv vectors \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, size\+\_\+t $>$\+::type \mbox{\hyperlink{_distance_utils_8h_af3822b8138620148507ee6ed7e2b7c0c}{cdist}} (const T $\ast$curr, const T $\ast$bg)
+\begin{DoxyCompactList}\small\item\em computes the color distortion between two integer arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+floating\+\_\+point$<$ T $>$\+::value, float $>$\+::type \mbox{\hyperlink{_distance_utils_8h_a5e01674303b459557a6daadc4ab8bb4b}{cdist}} (const T $\ast$curr, const T $\ast$bg)
+\begin{DoxyCompactList}\small\item\em computes the color distortion between two float arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_a35325acc69e0828f3cab90c17075c818}{cdist}} (const T $\ast$a, const T $\ast$b, size\+\_\+t n\+Elements, const uchar $\ast$m=N\+U\+LL) -\/$>$ decltype(cdist$<$ n\+Channels $>$(a, b))
+\begin{DoxyCompactList}\small\item\em computes the color distortion between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_a843c1c10d20b70f48e32c6d66b8db478}{cdist}} (const T $\ast$a, const T $\ast$b, size\+\_\+t n\+Elements, size\+\_\+t n\+Channels, const uchar $\ast$m=N\+U\+LL) -\/$>$ decltype(cdist$<$ 3 $>$(a, b, n\+Elements, m))
+\begin{DoxyCompactList}\small\item\em computes the color distortion between two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static auto \mbox{\hyperlink{_distance_utils_8h_ac65ad7a36f2a1f9f11948b76e1181460}{cdist\+\_\+}} (const cv\+::\+Vec$<$ T, n\+Channels $>$ \&a, const cv\+::\+Vec$<$ T, n\+Channels $>$ \&b) -\/$>$ decltype(\mbox{\hyperlink{_distance_utils_8h_a843c1c10d20b70f48e32c6d66b8db478}{cdist}}$<$ n\+Channels, T $>$((T $\ast$)(0),(T $\ast$)(0)))
+\begin{DoxyCompactList}\small\item\em computes the color distortion between two opencv vectors \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static T \mbox{\hyperlink{_distance_utils_8h_a64c0e3ac17d6870887d9fabbee7209e9}{cmixdist}} (T o\+L1\+Distance, T o\+C\+Distortion)
+\begin{DoxyCompactList}\small\item\em computes a color distortion-\/distance mix using two generic distances \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+integral$<$ T $>$\+::value, size\+\_\+t $>$\+::type \mbox{\hyperlink{_distance_utils_8h_a477de1d7e1b0cb8f2f4445657af61772}{cmixdist}} (const T $\ast$curr, const T $\ast$bg)
+\begin{DoxyCompactList}\small\item\em computes a color distoirtion-\/distance mix using two generic arrays \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static std\+::enable\+\_\+if$<$ std\+::is\+\_\+floating\+\_\+point$<$ T $>$\+::value, float $>$\+::type \mbox{\hyperlink{_distance_utils_8h_a12621768c13a5dbf03759cbb8838cf82}{cmixdist}} (const T $\ast$curr, const T $\ast$bg)
+\item 
+{\footnotesize template$<$typename T $>$ }\\static size\+\_\+t \mbox{\hyperlink{_distance_utils_8h_a4a3115575087346e42d27f3a95c753d8}{popcount}} (T x)
+\begin{DoxyCompactList}\small\item\em computes the population count of an N-\/byte vector using an 8-\/bit popcount L\+UT \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static size\+\_\+t \mbox{\hyperlink{_distance_utils_8h_ab13812ef6e21af771d6c0a856cd941b0}{hdist}} (T a, T b)
+\begin{DoxyCompactList}\small\item\em computes the hamming distance between two N-\/byte vectors using an 8-\/bit popcount L\+UT \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\static size\+\_\+t \mbox{\hyperlink{_distance_utils_8h_aac2e775a57cc0c0630a2f25f278df10b}{gdist}} (T a, T b)
+\begin{DoxyCompactList}\small\item\em computes the gradient magnitude distance between two N-\/byte vectors using an 8-\/bit popcount L\+UT \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static size\+\_\+t \mbox{\hyperlink{_distance_utils_8h_a9c4e3af1d96b29a51190eceb93f37417}{popcount}} (const T $\ast$x)
+\begin{DoxyCompactList}\small\item\em computes the population count of a (n\+Channels$\ast$N)-\/byte vector using an 8-\/bit popcount L\+UT \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static size\+\_\+t \mbox{\hyperlink{_distance_utils_8h_af7bbb8cfb6afb4f30aa11c2e35d7768e}{hdist}} (const T $\ast$a, const T $\ast$b)
+\begin{DoxyCompactList}\small\item\em computes the hamming distance between two (n\+Channels$\ast$N)-\/byte vectors using an 8-\/bit popcount L\+UT \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t n\+Channels, typename T $>$ }\\static size\+\_\+t \mbox{\hyperlink{_distance_utils_8h_a355f1acfc79b8246bd29052423c63ff0}{gdist}} (const T $\ast$a, const T $\ast$b)
+\begin{DoxyCompactList}\small\item\em computes the gradient magnitude distance between two (n\+Channels$\ast$N)-\/byte vectors using an 8-\/bit popcount L\+UT \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const uchar \mbox{\hyperlink{_distance_utils_8h_a989c6705049f6e12d6cf6314ec471732}{popcount\+\_\+\+L\+U\+T8}} \mbox{[}256\mbox{]}
+\begin{DoxyCompactList}\small\item\em popcount L\+UT for 8-\/bit vectors \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_distance_utils_8h_af3822b8138620148507ee6ed7e2b7c0c}\label{_distance_utils_8h_af3822b8138620148507ee6ed7e2b7c0c}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!cdist@{cdist}}
+\index{cdist@{cdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{cdist()}{cdist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+integral$<$T$>$\+::value,size\+\_\+t$>$\+::type cdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{curr,  }\item[{const T $\ast$}]{bg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the color distortion between two integer arrays 
+
+
+
+Definition at line 164 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+164                                                                                                            
+                                           \{
+165     static\_assert(nChannels>1,\textcolor{stringliteral}{"cdist: requires more than one channel"});
+166     \textcolor{keywordtype}{size\_t} curr\_sqr = 0;
+167     \textcolor{keywordtype}{bool} bSkip = \textcolor{keyword}{true};
+168     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c) \{
+169         curr\_sqr += curr[c]*curr[c];
+170         bSkip = bSkip&(bg[c]<=0);
+171     \}
+172     \textcolor{keywordflow}{if}(bSkip)
+173         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{size\_t})sqrt((\textcolor{keywordtype}{float})curr\_sqr);
+174     \textcolor{keywordtype}{size\_t} bg\_sqr = 0;
+175     \textcolor{keywordtype}{size\_t} mix = 0;
+176     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c) \{
+177         bg\_sqr += bg[c]*bg[c];
+178         mix += curr[c]*bg[c];
+179     \}
+180     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{size\_t})sqrt(curr\_sqr-((\textcolor{keywordtype}{float})(mix*mix)/bg\_sqr));
+181 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a5e01674303b459557a6daadc4ab8bb4b}\label{_distance_utils_8h_a5e01674303b459557a6daadc4ab8bb4b}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!cdist@{cdist}}
+\index{cdist@{cdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{cdist()}{cdist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+floating\+\_\+point$<$T$>$\+::value,float$>$\+::type cdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{curr,  }\item[{const T $\ast$}]{bg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the color distortion between two float arrays 
+
+
+
+Definition at line 184 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+184                                                                                                            
+                                                \{
+185     static\_assert(nChannels>1,\textcolor{stringliteral}{"cdist: requires more than one channel"});
+186     \textcolor{keywordtype}{float} curr\_sqr = 0;
+187     \textcolor{keywordtype}{bool} bSkip = \textcolor{keyword}{true};
+188     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c) \{
+189         curr\_sqr += (float)curr[c]*curr[c];
+190         bSkip = bSkip&(bg[c]<=0);
+191     \}
+192     \textcolor{keywordflow}{if}(bSkip)
+193         \textcolor{keywordflow}{return} sqrt(curr\_sqr);
+194     \textcolor{keywordtype}{float} bg\_sqr = 0;
+195     \textcolor{keywordtype}{float} mix = 0;
+196     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c) \{
+197         bg\_sqr += (float)bg[c]*bg[c];
+198         mix += (float)curr[c]*bg[c];
+199     \}
+200     \textcolor{keywordflow}{return} sqrt(curr\_sqr-((mix*mix)/bg\_sqr));
+201 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a35325acc69e0828f3cab90c17075c818}\label{_distance_utils_8h_a35325acc69e0828f3cab90c17075c818}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!cdist@{cdist}}
+\index{cdist@{cdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{cdist()}{cdist()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static auto cdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b,  }\item[{size\+\_\+t}]{n\+Elements,  }\item[{const uchar $\ast$}]{m = {\ttfamily NULL} }\end{DoxyParamCaption}) -\/$>$ decltype(cdist$<$n\+Channels$>$(a,b)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the color distortion between two generic arrays 
+
+
+
+Definition at line 204 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+204                                                                                                            
+                                                             \{
+205     decltype(cdist<nChannels>(a,b)) oResult = 0;
+206     \textcolor{keywordtype}{size\_t} nTotElements = nElements*nChannels;
+207     \textcolor{keywordflow}{if}(m) \{
+208         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} n=0,i=0; n<nTotElements; n+=nChannels,++i)
+209             \textcolor{keywordflow}{if}(m[i])
+210                 oResult += cdist<nChannels>(a+n,b+n);
+211     \}
+212     \textcolor{keywordflow}{else} \{
+213         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} n=0; n<nTotElements; n+=nChannels)
+214             oResult += cdist<nChannels>(a+n,b+n);
+215     \}
+216     \textcolor{keywordflow}{return} oResult;
+217 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a843c1c10d20b70f48e32c6d66b8db478}\label{_distance_utils_8h_a843c1c10d20b70f48e32c6d66b8db478}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!cdist@{cdist}}
+\index{cdist@{cdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{cdist()}{cdist()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static auto cdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b,  }\item[{size\+\_\+t}]{n\+Elements,  }\item[{size\+\_\+t}]{n\+Channels,  }\item[{const uchar $\ast$}]{m = {\ttfamily NULL} }\end{DoxyParamCaption}) -\/$>$ decltype(cdist$<$3$>$(a,b,n\+Elements,m)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the color distortion between two generic arrays 
+
+
+
+Definition at line 220 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+220                                                                                                            
+                                                                 \{
+221     CV\_Assert(nChannels>1 && nChannels<=4);
+222     \textcolor{keywordflow}{switch}(nChannels) \{
+223         \textcolor{keywordflow}{case} 2: \textcolor{keywordflow}{return} cdist<2>(a,b,nElements,m);
+224         \textcolor{keywordflow}{case} 3: \textcolor{keywordflow}{return} cdist<3>(a,b,nElements,m);
+225         \textcolor{keywordflow}{case} 4: \textcolor{keywordflow}{return} cdist<4>(a,b,nElements,m);
+226         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} 0;
+227     \}
+228 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_ac65ad7a36f2a1f9f11948b76e1181460}\label{_distance_utils_8h_ac65ad7a36f2a1f9f11948b76e1181460}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!cdist\+\_\+@{cdist\+\_\+}}
+\index{cdist\+\_\+@{cdist\+\_\+}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{cdist\+\_\+()}{cdist\_()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static auto cdist\+\_\+ (\begin{DoxyParamCaption}\item[{const cv\+::\+Vec$<$ T, n\+Channels $>$ \&}]{a,  }\item[{const cv\+::\+Vec$<$ T, n\+Channels $>$ \&}]{b }\end{DoxyParamCaption}) -\/$>$ decltype(\mbox{\hyperlink{_distance_utils_8h_a843c1c10d20b70f48e32c6d66b8db478}{cdist}}$<$n\+Channels,T$>$((T$\ast$)(0),(T$\ast$)(0))) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the color distortion between two opencv vectors 
+
+
+
+Definition at line 231 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+231                                                                                                            
+                                                                       \{
+232     T a\_array[nChannels], b\_array[nChannels];
+233     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c) \{
+234         a\_array[c] = a[(int)c];
+235         b\_array[c] = b[(int)c];
+236     \}
+237     \textcolor{keywordflow}{return} cdist<nChannels>(a\_array,b\_array);
+238 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a64c0e3ac17d6870887d9fabbee7209e9}\label{_distance_utils_8h_a64c0e3ac17d6870887d9fabbee7209e9}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!cmixdist@{cmixdist}}
+\index{cmixdist@{cmixdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{cmixdist()}{cmixdist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static T cmixdist (\begin{DoxyParamCaption}\item[{T}]{o\+L1\+Distance,  }\item[{T}]{o\+C\+Distortion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes a color distortion-\/distance mix using two generic distances 
+
+
+
+Definition at line 241 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+241                                                                              \{
+242     \textcolor{keywordflow}{return} (oL1Distance/2+oCDistortion*4);
+243 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{_distance_utils_8h_a64c0e3ac17d6870887d9fabbee7209e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_a477de1d7e1b0cb8f2f4445657af61772}\label{_distance_utils_8h_a477de1d7e1b0cb8f2f4445657af61772}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!cmixdist@{cmixdist}}
+\index{cmixdist@{cmixdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{cmixdist()}{cmixdist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+integral$<$T$>$\+::value,size\+\_\+t$>$\+::type cmixdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{curr,  }\item[{const T $\ast$}]{bg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes a color distoirtion-\/distance mix using two generic arrays 
+
+
+
+Definition at line 246 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+246                                                                                                            
+                                              \{
+247     \textcolor{keywordflow}{return} \mbox{\hyperlink{_distance_utils_8h_a64c0e3ac17d6870887d9fabbee7209e9}{cmixdist}}(L1dist<nChannels>(curr,bg),cdist<nChannels>(curr,bg));
+248 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{_distance_utils_8h_a477de1d7e1b0cb8f2f4445657af61772_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_a12621768c13a5dbf03759cbb8838cf82}\label{_distance_utils_8h_a12621768c13a5dbf03759cbb8838cf82}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!cmixdist@{cmixdist}}
+\index{cmixdist@{cmixdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{cmixdist()}{cmixdist()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+floating\+\_\+point$<$T$>$\+::value,float$>$\+::type cmixdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{curr,  }\item[{const T $\ast$}]{bg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 250 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+250                                                                                                            
+                                                   \{
+251     \textcolor{keywordflow}{return} \mbox{\hyperlink{_distance_utils_8h_a64c0e3ac17d6870887d9fabbee7209e9}{cmixdist}}(L1dist<nChannels>(curr,bg),cdist<nChannels>(curr,bg));
+252 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{_distance_utils_8h_a12621768c13a5dbf03759cbb8838cf82_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_aac2e775a57cc0c0630a2f25f278df10b}\label{_distance_utils_8h_aac2e775a57cc0c0630a2f25f278df10b}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!gdist@{gdist}}
+\index{gdist@{gdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{gdist()}{gdist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static size\+\_\+t gdist (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the gradient magnitude distance between two N-\/byte vectors using an 8-\/bit popcount L\+UT 
+
+
+
+Definition at line 291 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+291                                                           \{
+292     \textcolor{keywordflow}{return} \mbox{\hyperlink{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703}{L1dist}}(\mbox{\hyperlink{_distance_utils_8h_a4a3115575087346e42d27f3a95c753d8}{popcount}}(a),\mbox{\hyperlink{_distance_utils_8h_a4a3115575087346e42d27f3a95c753d8}{popcount}}(b));
+293 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{_distance_utils_8h_aac2e775a57cc0c0630a2f25f278df10b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_a355f1acfc79b8246bd29052423c63ff0}\label{_distance_utils_8h_a355f1acfc79b8246bd29052423c63ff0}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!gdist@{gdist}}
+\index{gdist@{gdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{gdist()}{gdist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static size\+\_\+t gdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the gradient magnitude distance between two (n\+Channels$\ast$N)-\/byte vectors using an 8-\/bit popcount L\+UT 
+
+
+
+Definition at line 314 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+314                                                                                           \{
+315     \textcolor{keywordflow}{return} \mbox{\hyperlink{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703}{L1dist}}(popcount<nChannels>(a),popcount<nChannels>(b));
+316 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{_distance_utils_8h_a355f1acfc79b8246bd29052423c63ff0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_ab13812ef6e21af771d6c0a856cd941b0}\label{_distance_utils_8h_ab13812ef6e21af771d6c0a856cd941b0}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!hdist@{hdist}}
+\index{hdist@{hdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{hdist()}{hdist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static size\+\_\+t hdist (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the hamming distance between two N-\/byte vectors using an 8-\/bit popcount L\+UT 
+
+
+
+Definition at line 286 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+286                                                           \{
+287     \textcolor{keywordflow}{return} \mbox{\hyperlink{_distance_utils_8h_a4a3115575087346e42d27f3a95c753d8}{popcount}}(a^b);
+288 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{_distance_utils_8h_ab13812ef6e21af771d6c0a856cd941b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{_distance_utils_8h_ab13812ef6e21af771d6c0a856cd941b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_af7bbb8cfb6afb4f30aa11c2e35d7768e}\label{_distance_utils_8h_af7bbb8cfb6afb4f30aa11c2e35d7768e}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!hdist@{hdist}}
+\index{hdist@{hdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{hdist()}{hdist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static size\+\_\+t hdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the hamming distance between two (n\+Channels$\ast$N)-\/byte vectors using an 8-\/bit popcount L\+UT 
+
+
+
+Definition at line 306 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+306                                                                                           \{
+307     T xor\_array[nChannels];
+308     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c)
+309         xor\_array[c] = a[c]^b[c];
+310     \textcolor{keywordflow}{return} popcount<nChannels>(xor\_array);
+311 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703}\label{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L1dist@{L1dist}}
+\index{L1dist@{L1dist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L1dist()}{L1dist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+integral$<$T$>$\+::value,size\+\_\+t$>$\+::type L1dist (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L1 distance between two integer values 
+
+
+
+Definition at line 6 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+6                                                                                                            
+        \{
+7     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{size\_t})abs((\textcolor{keywordtype}{int})a-b);
+8 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_a0d029bf0fe4557acb66fed94d80d02f1}\label{_distance_utils_8h_a0d029bf0fe4557acb66fed94d80d02f1}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L1dist@{L1dist}}
+\index{L1dist@{L1dist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L1dist()}{L1dist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::enable\+\_\+if$<$std\+::is\+\_\+floating\+\_\+point$<$T$>$\+::value,float$>$\+::type L1dist (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L1 distance between two float values 
+
+
+
+Definition at line 11 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+11                                                                                                            
+             \{
+12     \textcolor{keywordflow}{return} fabs((\textcolor{keywordtype}{float})a-(\textcolor{keywordtype}{float})b);
+13 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a0c9c69badc14ad52f84c924826c8f412}\label{_distance_utils_8h_a0c9c69badc14ad52f84c924826c8f412}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L1dist@{L1dist}}
+\index{L1dist@{L1dist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L1dist()}{L1dist()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static auto L1dist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b }\end{DoxyParamCaption}) -\/$>$ decltype(L1dist($\ast$a,$\ast$b)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L1 distance between two generic arrays 
+
+
+
+Definition at line 16 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+16                                                                                                            
+               \{
+17     decltype(\mbox{\hyperlink{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703}{L1dist}}(*a,*b)) oResult = 0;
+18     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c)
+19         oResult += \mbox{\hyperlink{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703}{L1dist}}(a[c],b[c]);
+20     \textcolor{keywordflow}{return} oResult;
+21 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{_distance_utils_8h_a0c9c69badc14ad52f84c924826c8f412_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_a35a5e3eee79697aa83e5955343051385}\label{_distance_utils_8h_a35a5e3eee79697aa83e5955343051385}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L1dist@{L1dist}}
+\index{L1dist@{L1dist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L1dist()}{L1dist()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static auto L1dist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b,  }\item[{size\+\_\+t}]{n\+Elements,  }\item[{const uchar $\ast$}]{m = {\ttfamily NULL} }\end{DoxyParamCaption}) -\/$>$ decltype(L1dist$<$n\+Channels$>$(a,b)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L1 distance between two generic arrays 
+
+
+
+Definition at line 24 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+24                                                                                                            
+                                                               \{
+25     decltype(L1dist<nChannels>(a,b)) oResult = 0;
+26     \textcolor{keywordtype}{size\_t} nTotElements = nElements*nChannels;
+27     \textcolor{keywordflow}{if}(m) \{
+28         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} n=0,i=0; n<nTotElements; n+=nChannels,++i)
+29             \textcolor{keywordflow}{if}(m[i])
+30                 oResult += L1dist<nChannels>(a+n,b+n);
+31     \}
+32     \textcolor{keywordflow}{else} \{
+33         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} n=0; n<nTotElements; n+=nChannels)
+34             oResult += L1dist<nChannels>(a+n,b+n);
+35     \}
+36     \textcolor{keywordflow}{return} oResult;
+37 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_aaeb0b4e41894b43dd839cb273b8131a2}\label{_distance_utils_8h_aaeb0b4e41894b43dd839cb273b8131a2}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L1dist@{L1dist}}
+\index{L1dist@{L1dist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L1dist()}{L1dist()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static auto L1dist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b,  }\item[{size\+\_\+t}]{n\+Elements,  }\item[{size\+\_\+t}]{n\+Channels,  }\item[{const uchar $\ast$}]{m = {\ttfamily NULL} }\end{DoxyParamCaption}) -\/$>$ decltype(L1dist$<$3$>$(a,b,n\+Elements,m)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L1 distance between two generic arrays 
+
+
+
+Definition at line 40 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+40                                                                                                            
+                                                                   \{
+41     CV\_Assert(nChannels>0 && nChannels<=4);
+42     \textcolor{keywordflow}{switch}(nChannels) \{
+43         \textcolor{keywordflow}{case} 1: \textcolor{keywordflow}{return} L1dist<1>(a,b,nElements,m);
+44         \textcolor{keywordflow}{case} 2: \textcolor{keywordflow}{return} L1dist<2>(a,b,nElements,m);
+45         \textcolor{keywordflow}{case} 3: \textcolor{keywordflow}{return} L1dist<3>(a,b,nElements,m);
+46         \textcolor{keywordflow}{case} 4: \textcolor{keywordflow}{return} L1dist<4>(a,b,nElements,m);
+47         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} 0;
+48     \}
+49 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a6f78ab3fadb020f26b58a38443f116fc}\label{_distance_utils_8h_a6f78ab3fadb020f26b58a38443f116fc}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L1dist\+\_\+@{L1dist\+\_\+}}
+\index{L1dist\+\_\+@{L1dist\+\_\+}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L1dist\+\_\+()}{L1dist\_()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static auto L1dist\+\_\+ (\begin{DoxyParamCaption}\item[{const cv\+::\+Vec$<$ T, n\+Channels $>$ \&}]{a,  }\item[{const cv\+::\+Vec$<$ T, n\+Channels $>$ \&}]{b }\end{DoxyParamCaption}) -\/$>$ decltype(\mbox{\hyperlink{_distance_utils_8h_aaeb0b4e41894b43dd839cb273b8131a2}{L1dist}}$<$n\+Channels,T$>$((T$\ast$)(0),(T$\ast$)(0))) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L1 distance between two opencv vectors 
+
+
+
+Definition at line 52 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+52                                                                                                            
+                                                                         \{
+53     T a\_array[nChannels], b\_array[nChannels];
+54     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c) \{
+55         a\_array[c] = a[(int)c];
+56         b\_array[c] = b[(int)c];
+57     \}
+58     \textcolor{keywordflow}{return} L1dist<nChannels>(a\_array,b\_array);
+59 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a2d0d83af4f531dd9efd02c49f933e3c1}\label{_distance_utils_8h_a2d0d83af4f531dd9efd02c49f933e3c1}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2dist@{L2dist}}
+\index{L2dist@{L2dist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2dist()}{L2dist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static float L2dist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L2 distance between two generic arrays 
+
+
+
+Definition at line 116 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+116                                                                                           \{
+117     decltype(\mbox{\hyperlink{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28}{L2sqrdist}}(*a,*b)) oResult = 0;
+118     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c)
+119         oResult += \mbox{\hyperlink{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28}{L2sqrdist}}(a[c],b[c]);
+120     \textcolor{keywordflow}{return} sqrt((\textcolor{keywordtype}{float})oResult);
+121 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{_distance_utils_8h_a2d0d83af4f531dd9efd02c49f933e3c1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_a0946803eb395e595338918d8fc025f9f}\label{_distance_utils_8h_a0946803eb395e595338918d8fc025f9f}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2dist@{L2dist}}
+\index{L2dist@{L2dist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2dist()}{L2dist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static float L2dist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b,  }\item[{size\+\_\+t}]{n\+Elements,  }\item[{const uchar $\ast$}]{m = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L2 distance between two generic arrays 
+
+
+
+Definition at line 124 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+124                                                                                                            
+                            \{
+125     decltype(L2sqrdist<nChannels>(a,b)) oResult = 0;
+126     \textcolor{keywordtype}{size\_t} nTotElements = nElements*nChannels;
+127     \textcolor{keywordflow}{if}(m) \{
+128         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} n=0,i=0; n<nTotElements; n+=nChannels,++i)
+129             \textcolor{keywordflow}{if}(m[i])
+130                 oResult += L2sqrdist<nChannels>(a+n,b+n);
+131     \}
+132     \textcolor{keywordflow}{else} \{
+133         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} n=0; n<nTotElements; n+=nChannels)
+134             oResult += L2sqrdist<nChannels>(a+n,b+n);
+135     \}
+136     \textcolor{keywordflow}{return} sqrt((\textcolor{keywordtype}{float})oResult);
+137 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a4cd0dfe8a6e560bcea47a93e9554c8d0}\label{_distance_utils_8h_a4cd0dfe8a6e560bcea47a93e9554c8d0}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2dist@{L2dist}}
+\index{L2dist@{L2dist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2dist()}{L2dist()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static float L2dist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b,  }\item[{size\+\_\+t}]{n\+Elements,  }\item[{size\+\_\+t}]{n\+Channels,  }\item[{const uchar $\ast$}]{m = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the squared L2 distance between two generic arrays 
+
+
+
+Definition at line 140 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+140                                                                                                            
+                            \{
+141     CV\_Assert(nChannels>0 && nChannels<=4);
+142     \textcolor{keywordflow}{switch}(nChannels) \{
+143         \textcolor{keywordflow}{case} 1: \textcolor{keywordflow}{return} L2dist<1>(a,b,nElements,m);
+144         \textcolor{keywordflow}{case} 2: \textcolor{keywordflow}{return} L2dist<2>(a,b,nElements,m);
+145         \textcolor{keywordflow}{case} 3: \textcolor{keywordflow}{return} L2dist<3>(a,b,nElements,m);
+146         \textcolor{keywordflow}{case} 4: \textcolor{keywordflow}{return} L2dist<4>(a,b,nElements,m);
+147         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} 0;
+148     \}
+149 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a68040991132b7843d1cdf4d8a51bb653}\label{_distance_utils_8h_a68040991132b7843d1cdf4d8a51bb653}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2dist\+\_\+@{L2dist\+\_\+}}
+\index{L2dist\+\_\+@{L2dist\+\_\+}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2dist\+\_\+()}{L2dist\_()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static float L2dist\+\_\+ (\begin{DoxyParamCaption}\item[{const cv\+::\+Vec$<$ T, n\+Channels $>$ \&}]{a,  }\item[{const cv\+::\+Vec$<$ T, n\+Channels $>$ \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the L2 distance between two opencv vectors 
+
+
+
+Definition at line 152 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+152                                                                                                            
+                        \{
+153     T a\_array[nChannels], b\_array[nChannels];
+154     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c) \{
+155         a\_array[c] = a[(int)c];
+156         b\_array[c] = b[(int)c];
+157     \}
+158     \textcolor{keywordflow}{return} L2dist<nChannels>(a\_array,b\_array);
+159 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28}\label{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2sqrdist@{L2sqrdist}}
+\index{L2sqrdist@{L2sqrdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2sqrdist()}{L2sqrdist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static auto L2sqrdist (\begin{DoxyParamCaption}\item[{T}]{a,  }\item[{T}]{b }\end{DoxyParamCaption}) -\/$>$ decltype(\mbox{\hyperlink{_distance_utils_8h_aaeb0b4e41894b43dd839cb273b8131a2}{L1dist}}(a,b)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the squared L2 distance between two generic variables 
+
+
+
+Definition at line 64 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+64                                                                                      \{
+65     \textcolor{keyword}{auto} oResult = \mbox{\hyperlink{_distance_utils_8h_ab6ec458f6d3fb6fb4e6cda3808e61703}{L1dist}}(a,b);
+66     \textcolor{keywordflow}{return} oResult*oResult;
+67 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_ad1f38be237c1ac20984c217ffcd05e06}\label{_distance_utils_8h_ad1f38be237c1ac20984c217ffcd05e06}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2sqrdist@{L2sqrdist}}
+\index{L2sqrdist@{L2sqrdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2sqrdist()}{L2sqrdist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static auto L2sqrdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b }\end{DoxyParamCaption}) -\/$>$ decltype(L2sqrdist($\ast$a,$\ast$b)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the squared L2 distance between two generic arrays 
+
+
+
+Definition at line 70 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+70                                                                                                            
+                     \{
+71     decltype(\mbox{\hyperlink{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28}{L2sqrdist}}(*a,*b)) oResult = 0;
+72     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c)
+73         oResult += \mbox{\hyperlink{_distance_utils_8h_a07d56fc246495b7670f9d1dceb9cda28}{L2sqrdist}}(a[c],b[c]);
+74     \textcolor{keywordflow}{return} oResult;
+75 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{_distance_utils_8h_ad1f38be237c1ac20984c217ffcd05e06_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_a2768651c38cec33e9f3396d2cadf35ac}\label{_distance_utils_8h_a2768651c38cec33e9f3396d2cadf35ac}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2sqrdist@{L2sqrdist}}
+\index{L2sqrdist@{L2sqrdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2sqrdist()}{L2sqrdist()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static auto L2sqrdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b,  }\item[{size\+\_\+t}]{n\+Elements,  }\item[{const uchar $\ast$}]{m = {\ttfamily NULL} }\end{DoxyParamCaption}) -\/$>$ decltype(L2sqrdist$<$n\+Channels$>$(a,b)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the squared L2 distance between two generic arrays 
+
+
+
+Definition at line 78 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+78                                                                                                            
+                                                                     \{
+79     decltype(L2sqrdist<nChannels>(a,b)) oResult = 0;
+80     \textcolor{keywordtype}{size\_t} nTotElements = nElements*nChannels;
+81     \textcolor{keywordflow}{if}(m) \{
+82         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} n=0,i=0; n<nTotElements; n+=nChannels,++i)
+83             \textcolor{keywordflow}{if}(m[i])
+84                 oResult += L2sqrdist<nChannels>(a+n,b+n);
+85     \}
+86     \textcolor{keywordflow}{else} \{
+87         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} n=0; n<nTotElements; n+=nChannels)
+88             oResult += L2sqrdist<nChannels>(a+n,b+n);
+89     \}
+90     \textcolor{keywordflow}{return} oResult;
+91 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_ac3cd461fb3fc3f673a5f94616f4e5a1d}\label{_distance_utils_8h_ac3cd461fb3fc3f673a5f94616f4e5a1d}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2sqrdist@{L2sqrdist}}
+\index{L2sqrdist@{L2sqrdist}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2sqrdist()}{L2sqrdist()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static auto L2sqrdist (\begin{DoxyParamCaption}\item[{const T $\ast$}]{a,  }\item[{const T $\ast$}]{b,  }\item[{size\+\_\+t}]{n\+Elements,  }\item[{size\+\_\+t}]{n\+Channels,  }\item[{const uchar $\ast$}]{m = {\ttfamily NULL} }\end{DoxyParamCaption}) -\/$>$ decltype(L2sqrdist$<$3$>$(a,b,n\+Elements,m)) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the squared L2 distance between two generic arrays 
+
+
+
+Definition at line 94 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+94                                                                                                            
+                                                                         \{
+95     CV\_Assert(nChannels>0 && nChannels<=4);
+96     \textcolor{keywordflow}{switch}(nChannels) \{
+97         \textcolor{keywordflow}{case} 1: \textcolor{keywordflow}{return} L2sqrdist<1>(a,b,nElements,m);
+98         \textcolor{keywordflow}{case} 2: \textcolor{keywordflow}{return} L2sqrdist<2>(a,b,nElements,m);
+99         \textcolor{keywordflow}{case} 3: \textcolor{keywordflow}{return} L2sqrdist<3>(a,b,nElements,m);
+100         \textcolor{keywordflow}{case} 4: \textcolor{keywordflow}{return} L2sqrdist<4>(a,b,nElements,m);
+101         \textcolor{keywordflow}{default}: \textcolor{keywordflow}{return} 0;
+102     \}
+103 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a9076f7ac1b6e7b73267d375e16b4bacc}\label{_distance_utils_8h_a9076f7ac1b6e7b73267d375e16b4bacc}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!L2sqrdist\+\_\+@{L2sqrdist\+\_\+}}
+\index{L2sqrdist\+\_\+@{L2sqrdist\+\_\+}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{L2sqrdist\+\_\+()}{L2sqrdist\_()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static auto L2sqrdist\+\_\+ (\begin{DoxyParamCaption}\item[{const cv\+::\+Vec$<$ T, n\+Channels $>$ \&}]{a,  }\item[{const cv\+::\+Vec$<$ T, n\+Channels $>$ \&}]{b }\end{DoxyParamCaption}) -\/$>$ decltype(\mbox{\hyperlink{_distance_utils_8h_ac3cd461fb3fc3f673a5f94616f4e5a1d}{L2sqrdist}}$<$n\+Channels,T$>$((T$\ast$)(0),(T$\ast$)(0))) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the squared L2 distance between two opencv vectors 
+
+
+
+Definition at line 106 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+106                                                                                                            
+                                                                               \{
+107     T a\_array[nChannels], b\_array[nChannels];
+108     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c) \{
+109         a\_array[c] = a[(int)c];
+110         b\_array[c] = b[(int)c];
+111     \}
+112     \textcolor{keywordflow}{return} L2sqrdist<nChannels>(a\_array,b\_array);
+113 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_distance_utils_8h_a4a3115575087346e42d27f3a95c753d8}\label{_distance_utils_8h_a4a3115575087346e42d27f3a95c753d8}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!popcount@{popcount}}
+\index{popcount@{popcount}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{popcount()}{popcount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static size\+\_\+t popcount (\begin{DoxyParamCaption}\item[{T}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the population count of an N-\/byte vector using an 8-\/bit popcount L\+UT 
+
+
+
+Definition at line 277 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+277                                                         \{
+278     \textcolor{keywordtype}{size\_t} nBytes = \textcolor{keyword}{sizeof}(T);
+279     \textcolor{keywordtype}{size\_t} nResult = 0;
+280     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} l=0; l<nBytes; ++l)
+281         nResult += \mbox{\hyperlink{_distance_utils_8h_a989c6705049f6e12d6cf6314ec471732}{popcount\_LUT8}}[(uchar)(x>>l*8)];
+282     \textcolor{keywordflow}{return} nResult;
+283 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_distance_utils_8h_a4a3115575087346e42d27f3a95c753d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_distance_utils_8h_a9c4e3af1d96b29a51190eceb93f37417}\label{_distance_utils_8h_a9c4e3af1d96b29a51190eceb93f37417}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!popcount@{popcount}}
+\index{popcount@{popcount}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{popcount()}{popcount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+Channels, typename T $>$ \\
+static size\+\_\+t popcount (\begin{DoxyParamCaption}\item[{const T $\ast$}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+computes the population count of a (n\+Channels$\ast$N)-\/byte vector using an 8-\/bit popcount L\+UT 
+
+
+
+Definition at line 296 of file Distance\+Utils.\+h.
+
+
+\begin{DoxyCode}
+296                                                                                  \{
+297     \textcolor{keywordtype}{size\_t} nBytes = \textcolor{keyword}{sizeof}(T);
+298     \textcolor{keywordtype}{size\_t} nResult = 0;
+299     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} c=0; c<nChannels; ++c)
+300         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} l=0; l<nBytes; ++l)
+301             nResult += \mbox{\hyperlink{_distance_utils_8h_a989c6705049f6e12d6cf6314ec471732}{popcount\_LUT8}}[(uchar)(*(x+c)>>l*8)];
+302     \textcolor{keywordflow}{return} nResult;
+303 \}
+\end{DoxyCode}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_distance_utils_8h_a989c6705049f6e12d6cf6314ec471732}\label{_distance_utils_8h_a989c6705049f6e12d6cf6314ec471732}} 
+\index{Distance\+Utils.\+h@{Distance\+Utils.\+h}!popcount\+\_\+\+L\+U\+T8@{popcount\+\_\+\+L\+U\+T8}}
+\index{popcount\+\_\+\+L\+U\+T8@{popcount\+\_\+\+L\+U\+T8}!Distance\+Utils.\+h@{Distance\+Utils.\+h}}
+\subsubsection{\texorpdfstring{popcount\+\_\+\+L\+U\+T8}{popcount\_LUT8}}
+{\footnotesize\ttfamily const uchar popcount\+\_\+\+L\+U\+T8\mbox{[}256\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4,
+    1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,
+    1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,
+    2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+    1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,
+    2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+    2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+    3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+    1, 2, 2, 3, 2, 3, 3, 4, 2, 3, 3, 4, 3, 4, 4, 5,
+    2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+    2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+    3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+    2, 3, 3, 4, 3, 4, 4, 5, 3, 4, 4, 5, 4, 5, 5, 6,
+    3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+    3, 4, 4, 5, 4, 5, 5, 6, 4, 5, 5, 6, 5, 6, 6, 7,
+    4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8,
+\}
+\end{DoxyCode}
+
+
+popcount L\+UT for 8-\/bit vectors 
+
+
+
+Definition at line 257 of file Distance\+Utils.\+h.
+

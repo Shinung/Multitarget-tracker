@@ -1,0 +1,495 @@
+\hypertarget{classmin__tree}{}\section{min\+\_\+tree Class Reference}
+\label{classmin__tree}\index{min\+\_\+tree@{min\+\_\+tree}}
+
+
+Kruskal\textquotesingle{}s algorithm for finding minimal spanning tree of a graph.  
+
+
+
+
+{\ttfamily \#include $<$min\+\_\+tree.\+h$>$}
+
+
+
+Inheritance diagram for min\+\_\+tree\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classmin__tree__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for min\+\_\+tree\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmin__tree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmin__tree_1_1input__comp}{input\+\_\+comp}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{G\+T\+L\+\_\+\+OK}} = 1, 
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{G\+T\+L\+\_\+\+E\+R\+R\+OR}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmin__tree_aea5bc677c18e5a02ea9d1694ba6ba213}{min\+\_\+tree}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmin__tree_a0df992f77a8656121777aa2c0380a67a}{$\sim$min\+\_\+tree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmin__tree_ad87b1bfbc687ad943c07538fa0c3d270}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}})
+\begin{DoxyCompactList}\small\item\em Checks whether algorithm can be applied. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmin__tree_ac025e8dad0db7a6a1e0e7b476b547802}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}})
+\begin{DoxyCompactList}\small\item\em Applies algorithm to graph g. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmin__tree_a0edbe612424dc5f4de4701b8fd0df931}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmin__tree_a0f3eb1714b7859576037cf4b991b16cb}{set\+\_\+distances}} (const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}})
+\begin{DoxyCompactList}\small\item\em Sets edge weights. \end{DoxyCompactList}\item 
+std\+::set$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \mbox{\hyperlink{classmin__tree_a8491dfab8dc24f0177dec5207fb3d2e1}{get\+\_\+min\+\_\+tree}} ()
+\begin{DoxyCompactList}\small\item\em Edges of minimal spanning tree calculated in the last call of \mbox{\hyperlink{classmin__tree_ac025e8dad0db7a6a1e0e7b476b547802}{min\+\_\+tree\+::run}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmin__tree_a8ca03d32ba55a9eb20b52fcb0e6fa6a5}{get\+\_\+min\+\_\+tree\+\_\+length}} ()
+\begin{DoxyCompactList}\small\item\em Weight of minimal spanning tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::pair$<$ int, \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{node\+::adj\+\_\+edges\+\_\+iterator}} $>$ \mbox{\hyperlink{classmin__tree_af83e196caf3ebcdc9035dc42aee581ee}{T\+S\+P\+\_\+\+A\+\_\+\+V\+A\+L\+UE}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}}
+\item 
+int \mbox{\hyperlink{classmin__tree_a52112da027b950d45c177117444c5010}{weight}}
+\item 
+std\+::set$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}
+\item 
+bool \mbox{\hyperlink{classmin__tree_a7c2ec16bd1799571bc057630262a3a03}{is\+\_\+set\+\_\+distances}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Kruskal\textquotesingle{}s algorithm for finding minimal spanning tree of a graph. 
+
+\begin{DoxyAuthor}{Author}
+Marcus Raitner 
+\end{DoxyAuthor}
+
+
+Definition at line 25 of file min\+\_\+tree.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classmin__tree_af83e196caf3ebcdc9035dc42aee581ee}\label{classmin__tree_af83e196caf3ebcdc9035dc42aee581ee}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!T\+S\+P\+\_\+\+A\+\_\+\+V\+A\+L\+UE@{T\+S\+P\+\_\+\+A\+\_\+\+V\+A\+L\+UE}}
+\index{T\+S\+P\+\_\+\+A\+\_\+\+V\+A\+L\+UE@{T\+S\+P\+\_\+\+A\+\_\+\+V\+A\+L\+UE}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{T\+S\+P\+\_\+\+A\+\_\+\+V\+A\+L\+UE}{TSP\_A\_VALUE}}
+{\footnotesize\ttfamily typedef std\+::pair$<$int, \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{node\+::adj\+\_\+edges\+\_\+iterator}}$>$ \mbox{\hyperlink{classmin__tree_af83e196caf3ebcdc9035dc42aee581ee}{min\+\_\+tree\+::\+T\+S\+P\+\_\+\+A\+\_\+\+V\+A\+L\+UE}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 87 of file min\+\_\+tree.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}!min\+\_\+tree@{min\+\_\+tree}}\index{min\+\_\+tree@{min\+\_\+tree}!G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}} 
+G\+T\+L\+\_\+\+OK&Used as (positive) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}!min\+\_\+tree@{min\+\_\+tree}}\index{min\+\_\+tree@{min\+\_\+tree}!G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}} 
+G\+T\+L\+\_\+\+E\+R\+R\+OR&Used as (negative) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 40 of file algorithm.\+h.
+
+
+\begin{DoxyCode}
+40          \{
+41     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}} = 1,
+42     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}} = 0
+43     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmin__tree_aea5bc677c18e5a02ea9d1694ba6ba213}\label{classmin__tree_aea5bc677c18e5a02ea9d1694ba6ba213}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!min\+\_\+tree@{min\+\_\+tree}}
+\index{min\+\_\+tree@{min\+\_\+tree}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{min\+\_\+tree()}{min\_tree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a2d9f24096ac60918452dd51f32b64aa9}{\+\_\+\+\_\+\+G\+T\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}} min\+\_\+tree\+::min\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+
+Definition at line 16 of file min\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+16                     \{ 
+17     \mbox{\hyperlink{classmin__tree_a7c2ec16bd1799571bc057630262a3a03}{is\_set\_distances}} = \textcolor{keyword}{false};
+18     \mbox{\hyperlink{classmin__tree_a52112da027b950d45c177117444c5010}{weight}} = 0;
+19 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classmin__tree_a0df992f77a8656121777aa2c0380a67a}\label{classmin__tree_a0df992f77a8656121777aa2c0380a67a}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!````~min\+\_\+tree@{$\sim$min\+\_\+tree}}
+\index{````~min\+\_\+tree@{$\sim$min\+\_\+tree}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{$\sim$min\+\_\+tree()}{~min\_tree()}}
+{\footnotesize\ttfamily virtual min\+\_\+tree\+::$\sim$min\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line 37 of file min\+\_\+tree.\+h.
+
+
+\begin{DoxyCode}
+37 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmin__tree_ad87b1bfbc687ad943c07538fa0c3d270}\label{classmin__tree_ad87b1bfbc687ad943c07538fa0c3d270}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!check@{check}}
+\index{check@{check}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int min\+\_\+tree\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether algorithm can be applied. 
+
+The graph must
+\begin{DoxyItemize}
+\item be undirected
+\item be connected
+\item have more than 2 nodes
+\end{DoxyItemize}
+
+Additionally the weights of the edges must have been set in advance using \mbox{\hyperlink{classmin__tree_a0f3eb1714b7859576037cf4b991b16cb}{min\+\_\+tree\+::set\+\_\+distances}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}} if algorithm can be applied \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{algorithm\+::\+G\+T\+L\+\_\+\+E\+R\+R\+OR}} otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+
+
+
+Definition at line 21 of file min\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+21                              \{ 
+22     \textcolor{keywordflow}{if} (\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.is\_directed()) \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+23     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.number\_of\_nodes() < 2) \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+24     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.is\_connected()) \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+25     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classmin__tree_a7c2ec16bd1799571bc057630262a3a03}{is\_set\_distances}}) \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+26     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}};
+27 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classmin__tree_a8491dfab8dc24f0177dec5207fb3d2e1}\label{classmin__tree_a8491dfab8dc24f0177dec5207fb3d2e1}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!get\+\_\+min\+\_\+tree@{get\+\_\+min\+\_\+tree}}
+\index{get\+\_\+min\+\_\+tree@{get\+\_\+min\+\_\+tree}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{get\+\_\+min\+\_\+tree()}{get\_min\_tree()}}
+{\footnotesize\ttfamily std\+::set$<$ \mbox{\hyperlink{classedge}{edge}} $>$ min\+\_\+tree\+::get\+\_\+min\+\_\+tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Edges of minimal spanning tree calculated in the last call of \mbox{\hyperlink{classmin__tree_ac025e8dad0db7a6a1e0e7b476b547802}{min\+\_\+tree\+::run}}. 
+
+\begin{DoxyReturn}{Returns}
+Set of edges of representing the minimal spanning tree 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file min\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+34                                     \{
+35     \textcolor{keywordflow}{return} this->\mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}};
+36 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classmin__tree_a8ca03d32ba55a9eb20b52fcb0e6fa6a5}\label{classmin__tree_a8ca03d32ba55a9eb20b52fcb0e6fa6a5}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!get\+\_\+min\+\_\+tree\+\_\+length@{get\+\_\+min\+\_\+tree\+\_\+length}}
+\index{get\+\_\+min\+\_\+tree\+\_\+length@{get\+\_\+min\+\_\+tree\+\_\+length}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{get\+\_\+min\+\_\+tree\+\_\+length()}{get\_min\_tree\_length()}}
+{\footnotesize\ttfamily int min\+\_\+tree\+::get\+\_\+min\+\_\+tree\+\_\+length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Weight of minimal spanning tree. 
+
+\begin{DoxyReturn}{Returns}
+weight of minimal spanning tree. 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file min\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+38                                   \{ 
+39     \textcolor{keywordtype}{int} sum;
+40     std::set<edge>::iterator tree\_it;
+41  
+42     sum = 0;
+43 
+44     \textcolor{keywordflow}{for} (tree\_it = \mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}.begin(); tree\_it != \mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}.end(); tree\_it++)
+45     sum += \mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}}[*tree\_it];
+46 
+47     \textcolor{keywordflow}{return} sum;
+48 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classmin__tree_a0edbe612424dc5f4de4701b8fd0df931}\label{classmin__tree_a0edbe612424dc5f4de4701b8fd0df931}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!reset@{reset}}
+\index{reset@{reset}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void min\+\_\+tree\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets algorithm. 
+
+Prepares the algorithm to be applied to another graph. {\itshape Please} {\itshape note\+:} The options an algorithm may support do {\itshape not} get reset by this. It is just to reset internally used datastructures. 
+
+Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+
+
+
+Definition at line 127 of file min\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+127                      \{
+128     \mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}.erase (\mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}.begin(), \mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}.end());
+129     \mbox{\hyperlink{classmin__tree_a52112da027b950d45c177117444c5010}{weight}} = 0;
+130 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classmin__tree_ac025e8dad0db7a6a1e0e7b476b547802}\label{classmin__tree_ac025e8dad0db7a6a1e0e7b476b547802}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!run@{run}}
+\index{run@{run}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int min\+\_\+tree\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies algorithm to graph g. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & graph \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}} & on success \\
+\hline
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{algorithm\+::\+G\+T\+L\+\_\+\+E\+R\+R\+OR}}} & otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+
+
+
+Definition at line 50 of file min\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+50                            \{ 
+51     std::priority\_queue <TSP\_A\_VALUE, std::vector<TSP\_A\_VALUE>, input\_comp> node\_distances;
+52     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_it, adj\_end;
+53     std::set<node> tree\_nodes;
+54     std::set<node>::iterator tree\_it;
+55     \mbox{\hyperlink{classedge}{edge}} curr;
+56     \mbox{\hyperlink{classnode}{node}} new\_node;
+57     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edge\_it, edges\_end;
+58     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} number\_of\_nodes;
+59     \textcolor{keywordtype}{int} min\_dist;
+60 
+61 
+62     \textcolor{comment}{// making out the start edge}
+63 
+64     edge\_it = \mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.edges\_begin();
+65     edges\_end = \mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.edges\_end();
+66 
+67     curr = *edge\_it;
+68     min\_dist = \mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}}[*edge\_it];
+69 
+70     \textcolor{keywordflow}{for} (; edge\_it != edges\_end; edge\_it++) \{ 
+71     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}}[*edge\_it] < min\_dist) \{ 
+72         curr = *edge\_it;
+73         min\_dist = \mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}}[*edge\_it];
+74     \}
+75     \}
+76 
+77     \mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}.insert(curr);
+78  
+79     tree\_nodes.insert(curr.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}());
+80     tree\_nodes.insert(curr.\mbox{\hyperlink{classedge_a97563b611261478ee19c6ce055f1a3ee}{target}}());
+81 
+82 
+83     \textcolor{keywordflow}{for} (tree\_it = tree\_nodes.begin(); tree\_it != tree\_nodes.end(); tree\_it++) \{ 
+84     adj\_it = tree\_it->adj\_edges\_begin();
+85     adj\_end = tree\_it->adj\_edges\_end();
+86 
+87     \textcolor{keywordflow}{for} (; adj\_it != adj\_end; adj\_it++) \{  
+88         node\_distances.push(\mbox{\hyperlink{classmin__tree_af83e196caf3ebcdc9035dc42aee581ee}{TSP\_A\_VALUE}}(\mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}}[*adj\_it], adj\_it));
+89     \}  
+90     \}
+91 
+92     \textcolor{comment}{// create the min\_tree}
+93 
+94     number\_of\_nodes = \mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.number\_of\_nodes();
+95 
+96     \textcolor{keywordflow}{while}(\mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}.size() < number\_of\_nodes - 1) \{ 
+97     curr = *((node\_distances.top()).second);
+98   
+99     node\_distances.pop();
+100  
+101     \textcolor{keywordflow}{if} (tree\_nodes.find(curr.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}()) != tree\_nodes.end() && 
+102         tree\_nodes.find(curr.\mbox{\hyperlink{classedge_a97563b611261478ee19c6ce055f1a3ee}{target}}()) != tree\_nodes.end()) \{
+103     \} \textcolor{keywordflow}{else} \{
+104         \mbox{\hyperlink{classmin__tree_a138e9248f851ee2562df6644626a1f0b}{tree}}.insert(curr);
+105         \mbox{\hyperlink{classmin__tree_a52112da027b950d45c177117444c5010}{weight}} += \mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}}[curr];
+106 
+107         \textcolor{keywordflow}{if} (tree\_nodes.find(curr.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}()) != tree\_nodes.end()) \{ 
+108         new\_node = curr.\mbox{\hyperlink{classedge_a97563b611261478ee19c6ce055f1a3ee}{target}}();
+109         \} \textcolor{keywordflow}{else} \{ 
+110         new\_node = curr.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}();
+111         \}
+112 
+113         tree\_nodes.insert(new\_node);
+114         
+115         adj\_it = new\_node.\mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}();
+116         adj\_end = new\_node.\mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}();
+117         
+118         \textcolor{keywordflow}{for} (; adj\_it != adj\_end; adj\_it++) \{ 
+119         node\_distances.push(\mbox{\hyperlink{classmin__tree_af83e196caf3ebcdc9035dc42aee581ee}{TSP\_A\_VALUE}}(\mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}}[*adj\_it], adj\_it));
+120         \}   
+121     \}
+122     \}
+123 
+124     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}};
+125 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmin__tree_ac025e8dad0db7a6a1e0e7b476b547802_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmin__tree_a0f3eb1714b7859576037cf4b991b16cb}\label{classmin__tree_a0f3eb1714b7859576037cf4b991b16cb}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!set\+\_\+distances@{set\+\_\+distances}}
+\index{set\+\_\+distances@{set\+\_\+distances}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{set\+\_\+distances()}{set\_distances()}}
+{\footnotesize\ttfamily void min\+\_\+tree\+::set\+\_\+distances (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{dist }\end{DoxyParamCaption})}
+
+
+
+Sets edge weights. 
+
+Setting of edge weights must be done before calling \mbox{\hyperlink{classmin__tree_ad87b1bfbc687ad943c07538fa0c3d270}{min\+\_\+tree\+::check}} and \mbox{\hyperlink{classmin__tree_ac025e8dad0db7a6a1e0e7b476b547802}{min\+\_\+tree\+::run}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dist} & edge weigths. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file min\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+29                                                        \{ 
+30     this->dist = \mbox{\hyperlink{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}{dist}};
+31     \mbox{\hyperlink{classmin__tree_a7c2ec16bd1799571bc057630262a3a03}{is\_set\_distances}} = \textcolor{keyword}{true};
+32 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}\label{classmin__tree_ae612767aa8e3eb3bedd1dadd7c68f99c}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!dist@{dist}}
+\index{dist@{dist}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{dist}{dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$int$>$ min\+\_\+tree\+::dist\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 95 of file min\+\_\+tree.\+h.
+
+\mbox{\Hypertarget{classmin__tree_a7c2ec16bd1799571bc057630262a3a03}\label{classmin__tree_a7c2ec16bd1799571bc057630262a3a03}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!is\+\_\+set\+\_\+distances@{is\+\_\+set\+\_\+distances}}
+\index{is\+\_\+set\+\_\+distances@{is\+\_\+set\+\_\+distances}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{is\+\_\+set\+\_\+distances}{is\_set\_distances}}
+{\footnotesize\ttfamily bool min\+\_\+tree\+::is\+\_\+set\+\_\+distances\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 98 of file min\+\_\+tree.\+h.
+
+\mbox{\Hypertarget{classmin__tree_a138e9248f851ee2562df6644626a1f0b}\label{classmin__tree_a138e9248f851ee2562df6644626a1f0b}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!tree@{tree}}
+\index{tree@{tree}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{tree}{tree}}
+{\footnotesize\ttfamily std\+::set$<$\mbox{\hyperlink{classedge}{edge}}$>$ min\+\_\+tree\+::tree\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 97 of file min\+\_\+tree.\+h.
+
+\mbox{\Hypertarget{classmin__tree_a52112da027b950d45c177117444c5010}\label{classmin__tree_a52112da027b950d45c177117444c5010}} 
+\index{min\+\_\+tree@{min\+\_\+tree}!weight@{weight}}
+\index{weight@{weight}!min\+\_\+tree@{min\+\_\+tree}}
+\subsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily int min\+\_\+tree\+::weight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 96 of file min\+\_\+tree.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{min__tree_8h}{min\+\_\+tree.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/\mbox{\hyperlink{min__tree_8cpp}{min\+\_\+tree.\+cpp}}\end{DoxyCompactItemize}

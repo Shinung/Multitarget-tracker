@@ -1,0 +1,6 @@
+<map id="GPostscriptPort::SetCurrentFont" name="GPostscriptPort::SetCurrentFont">
+<area shape="rect" id="node2" href="$class_g_base_font.html#a202a60eadc6436354527de8ccd4a983d" title="GBaseFont::GetName" alt="" coords="264,5,415,32"/>
+<area shape="rect" id="node3" href="$class_g_base_font.html#a22abd1f8dfcda6124ffedb8dc26bfcd3" title="GBaseFont::IsBold" alt="" coords="273,56,405,83"/>
+<area shape="rect" id="node4" href="$class_g_base_font.html#aec31b5754f2be8ae2552b2bfd37a76d1" title="GBaseFont::IsItalic" alt="" coords="273,107,406,133"/>
+<area shape="rect" id="node5" href="$class_g_base_font.html#a62e761a8a0c0f60f01d8a0d451640e69" title="GBaseFont::GetSize" alt="" coords="268,157,411,184"/>
+</map>

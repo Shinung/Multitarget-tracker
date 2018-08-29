@@ -1,0 +1,10 @@
+<map id="SSDCustomNetDetector::Detect" name="SSDCustomNetDetector::Detect">
+<area shape="rect" id="node2" href="$class_s_s_d_custom_net_detector.html#a9e87debb1ee3634724914830d6c2079d" title="Making cropped images and fowarding SSD net. " alt="" coords="228,49,391,90"/>
+<area shape="rect" id="node9" href="$class_base_detector.html#a20380b0980c6f262b0829f37fb89d2a7" title="CollectPoints. " alt="" coords="216,115,403,141"/>
+<area shape="rect" id="node3" href="$class_exec_context.html#a6c596880b2a6a4c8df7e8ca639f2a1b7" title="ExecContext::CaffeClassifier" alt="" coords="451,5,637,32"/>
+<area shape="rect" id="node4" href="$class_s_s_d.html#a68c76ba1ebc94d222c1fd624db060f62" title="Forwarding SSD with a image. " alt="" coords="477,56,611,83"/>
+<area shape="rect" id="node8" href="$class_s_s_d.html#ac5c69f839f08bfa37dd33a66331f6fa3" title="Return a label by index. " alt="" coords="489,107,599,133"/>
+<area shape="rect" id="node5" href="$class_s_s_d.html#a58c0ef81b4b24424fd967d90da5c6045" title="SSD::Predict" alt="" coords="685,56,784,83"/>
+<area shape="rect" id="node6" href="$class_s_s_d.html#aec550d5312257216d93955cdee13a73e" title="SSD::WrapInputLayer" alt="" coords="832,31,980,57"/>
+<area shape="rect" id="node7" href="$class_s_s_d.html#a83cb8c64cda9b3792c5612613b56c828" title="SSD::Preprocess" alt="" coords="845,81,967,108"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="planarity::extend_embedding" name="planarity::extend_embedding">
+<area shape="rect" id="node2" href="$classplanar__embedding.html#a151a1e7cf6cfbbd0a09c467ec8bc61d1" title="planar_embedding::adjacency" alt="" coords="241,5,436,32"/>
+<area shape="rect" id="node3" href="$classsymlist.html#a7283589fa01f79d722f8256d7a6a7883" title="End of iteration through elements of list. " alt="" coords="292,56,385,83"/>
+<area shape="rect" id="node4" href="$classplanar__embedding.html#aaba1216e3c7497267573cc56b4368929" title="planar_embedding::pos" alt="" coords="261,107,417,133"/>
+<area shape="rect" id="node7" href="$classnode.html#a13dbd1809a33a5efede64a359e53a363" title="node::opposite" alt="" coords="285,157,392,184"/>
+<area shape="rect" id="node8" href="$classplanar__embedding.html#a86c50db702b25d54b2fe12350baed7f4" title="planar_embedding::push\l_front" alt="" coords="257,209,420,250"/>
+<area shape="rect" id="node5" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="484,81,581,108"/>
+<area shape="rect" id="node6" href="$classedge.html#a97563b611261478ee19c6ce055f1a3ee" title="edge::target" alt="" coords="487,132,578,159"/>
+</map>

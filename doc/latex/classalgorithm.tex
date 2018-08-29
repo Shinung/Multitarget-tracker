@@ -1,0 +1,211 @@
+\hypertarget{classalgorithm}{}\section{algorithm Class Reference}
+\label{classalgorithm}\index{algorithm@{algorithm}}
+
+
+Abstract baseclass for all algoritm-\/classes.  
+
+
+
+
+{\ttfamily \#include $<$algorithm.\+h$>$}
+
+
+
+Inheritance diagram for algorithm\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classalgorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for algorithm\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classalgorithm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{G\+T\+L\+\_\+\+OK}} = 1, 
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{G\+T\+L\+\_\+\+E\+R\+R\+OR}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classalgorithm_ab79e1ddec2f2afdf4b36b10724db8b15}{algorithm}} ()
+\begin{DoxyCompactList}\small\item\em Creates an algorithm object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classalgorithm_adca9b1e7fa3afd914519a9dbb44e9fd5}{$\sim$algorithm}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the algorithm object. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}})=0
+\begin{DoxyCompactList}\small\item\em Applies algorithm to graph g. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}})=0
+\begin{DoxyCompactList}\small\item\em Checks whether all preconditions are satisfied. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{reset}} ()=0
+\begin{DoxyCompactList}\small\item\em Resets algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract baseclass for all algoritm-\/classes. 
+
+\begin{DoxyParagraph}{Date}
+2003/03/24 15\+:58\+:54 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Revision}
+1.\+14 
+\end{DoxyParagraph}
+
+
+Definition at line 23 of file algorithm.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}!algorithm@{algorithm}}\index{algorithm@{algorithm}!G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}} 
+G\+T\+L\+\_\+\+OK&Used as (positive) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}!algorithm@{algorithm}}\index{algorithm@{algorithm}!G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}} 
+G\+T\+L\+\_\+\+E\+R\+R\+OR&Used as (negative) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 40 of file algorithm.\+h.
+
+
+\begin{DoxyCode}
+40          \{
+41     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}} = 1,
+42     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}} = 0
+43     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classalgorithm_ab79e1ddec2f2afdf4b36b10724db8b15}\label{classalgorithm_ab79e1ddec2f2afdf4b36b10724db8b15}} 
+\index{algorithm@{algorithm}!algorithm@{algorithm}}
+\index{algorithm@{algorithm}!algorithm@{algorithm}}
+\subsubsection{\texorpdfstring{algorithm()}{algorithm()}}
+{\footnotesize\ttfamily algorithm\+::algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates an algorithm object. 
+
+
+
+Definition at line 48 of file algorithm.\+h.
+
+
+\begin{DoxyCode}
+48 \{ \};
+\end{DoxyCode}
+\mbox{\Hypertarget{classalgorithm_adca9b1e7fa3afd914519a9dbb44e9fd5}\label{classalgorithm_adca9b1e7fa3afd914519a9dbb44e9fd5}} 
+\index{algorithm@{algorithm}!````~algorithm@{$\sim$algorithm}}
+\index{````~algorithm@{$\sim$algorithm}!algorithm@{algorithm}}
+\subsubsection{\texorpdfstring{$\sim$algorithm()}{~algorithm()}}
+{\footnotesize\ttfamily virtual algorithm\+::$\sim$algorithm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destroys the algorithm object. 
+
+
+
+Definition at line 53 of file algorithm.\+h.
+
+
+\begin{DoxyCode}
+53 \{ \};    
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classalgorithm_a76361fb03ad1cf643affc51821e43bed}\label{classalgorithm_a76361fb03ad1cf643affc51821e43bed}} 
+\index{algorithm@{algorithm}!check@{check}}
+\index{check@{check}!algorithm@{algorithm}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily virtual int algorithm\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether all preconditions are satisfied. 
+
+{\itshape Please} {\itshape note\+:} It is definitly required (and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{run}} relies on it), that this method was called in advance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & graph \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}} & if algorithm can be applied \\
+\hline
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{algorithm\+::\+G\+T\+L\+\_\+\+E\+R\+R\+OR}}} & otherwise. \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classst__number_a2aad4550b821c52d6998bff35fd8648f}{st\+\_\+number}}, \mbox{\hyperlink{classratio__cut__partition_a469c613c69db19cb63e492075346fea2}{ratio\+\_\+cut\+\_\+partition}}, \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition}}, \mbox{\hyperlink{classdijkstra_a51ff4657e0ddb1ca5231a21e6dea1808}{dijkstra}}, \mbox{\hyperlink{classbid__dijkstra_a504aa04d114f27f2f886ee3b025ad95b}{bid\+\_\+dijkstra}}, \mbox{\hyperlink{classdfs_a1af70060897529e67910f589b047e576}{dfs}}, \mbox{\hyperlink{classbfs_aafdf63b57eaceb5d95f441be0f9c77bb}{bfs}}, \mbox{\hyperlink{classtopsort_a777a9a68c4081d22e7b698ed3c515343}{topsort}}, \mbox{\hyperlink{classmaxflow__sap_aa2974bf25fb597677848fdb23c12d338}{maxflow\+\_\+sap}}, \mbox{\hyperlink{classmaxflow__ff_a4d0deee7d70bac4c9dad942341d87e37}{maxflow\+\_\+ff}}, \mbox{\hyperlink{classmaxflow__pp_a7ea24bd88999718e5e4e28ac028131cd}{maxflow\+\_\+pp}}, \mbox{\hyperlink{classplanarity_ae06c471d957a116aad14e338c341f8b1}{planarity}}, \mbox{\hyperlink{classbiconnectivity_a65e0e821f5e9ce8d210648d462fd2cfa}{biconnectivity}}, \mbox{\hyperlink{classbellman__ford_a9da2fb7d20ef1f726ee935474302d80b}{bellman\+\_\+ford}}, \mbox{\hyperlink{classmin__tree_ad87b1bfbc687ad943c07538fa0c3d270}{min\+\_\+tree}}, \mbox{\hyperlink{classcomponents_aeeda901d02c65d6c31c8b6148540d7c1}{components}}, \mbox{\hyperlink{classmincut_a3a06737106ab6000360a1f799361691a}{mincut}}, and \mbox{\hyperlink{classmwbmatching_af6b9e6ad6e77958ddd32301df96bae23}{mwbmatching}}.
+
+\mbox{\Hypertarget{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}\label{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}} 
+\index{algorithm@{algorithm}!reset@{reset}}
+\index{reset@{reset}!algorithm@{algorithm}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void algorithm\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Resets algorithm. 
+
+Prepares the algorithm to be applied to another graph. {\itshape Please} {\itshape note\+:} The options an algorithm may support do {\itshape not} get reset by this. It is just to reset internally used datastructures. 
+
+Implemented in \mbox{\hyperlink{classst__number_ae6f86706b8ae3495d3794b8c684fff0f}{st\+\_\+number}}, \mbox{\hyperlink{classratio__cut__partition_ad017eaf98f9ae4ca9dbe6b3eda9fc94d}{ratio\+\_\+cut\+\_\+partition}}, \mbox{\hyperlink{classfm__partition_a6db2eeb6ae968dbab78302f0448c0ced}{fm\+\_\+partition}}, \mbox{\hyperlink{classdijkstra_a444c288b3a49ec1c2973459dad55ffb3}{dijkstra}}, \mbox{\hyperlink{classbid__dijkstra_a6df2769941bc73fc5626b084745a2258}{bid\+\_\+dijkstra}}, \mbox{\hyperlink{classmaxflow__sap_a14574d2f9ce31a3cdeb0888e57fc0616}{maxflow\+\_\+sap}}, \mbox{\hyperlink{classmaxflow__ff_a893e5136d4f7f1d4b67ef5b67306d17b}{maxflow\+\_\+ff}}, \mbox{\hyperlink{classmaxflow__pp_a2179764baf624f1414211f3a7181b1a0}{maxflow\+\_\+pp}}, \mbox{\hyperlink{classdfs_affaffda8be8418d6dbf396c5b1d6b81a}{dfs}}, \mbox{\hyperlink{classbfs_a6398bc230f9723cd5fdd32cd603647cc}{bfs}}, \mbox{\hyperlink{classplanarity_aca500e3d46a99c6231aff86afa2a71b1}{planarity}}, \mbox{\hyperlink{classtopsort_aa3d9ccc7c632dac6b7303e9828c14f62}{topsort}}, \mbox{\hyperlink{classbellman__ford_a7d28afa62ce8068c4d0f2d1f96136fd6}{bellman\+\_\+ford}}, \mbox{\hyperlink{classbiconnectivity_a4393dd1e626887472f6967722349abc6}{biconnectivity}}, \mbox{\hyperlink{classmin__tree_a0edbe612424dc5f4de4701b8fd0df931}{min\+\_\+tree}}, \mbox{\hyperlink{classmincut_a3f2142246a7b3e7b19b15d62314c9337}{mincut}}, \mbox{\hyperlink{classcomponents_a07b6bab5962524ae26ccb478b35cd76c}{components}}, and \mbox{\hyperlink{classmwbmatching_acb2171f09442f1d4170eaed5dc213865}{mwbmatching}}.
+
+\mbox{\Hypertarget{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}\label{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}} 
+\index{algorithm@{algorithm}!run@{run}}
+\index{run@{run}!algorithm@{algorithm}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual int algorithm\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Applies algorithm to graph g. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & graph \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}} & on success \\
+\hline
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{algorithm\+::\+G\+T\+L\+\_\+\+E\+R\+R\+OR}}} & otherwise \\
+\hline
+\end{DoxyRetVals}
+
+
+Implemented in \mbox{\hyperlink{classst__number_af902a0c05d07d47b587e8f7a6b7beaa1}{st\+\_\+number}}, \mbox{\hyperlink{classratio__cut__partition_a4ab180ca4cf57c811e3478c3de4c4dc3}{ratio\+\_\+cut\+\_\+partition}}, \mbox{\hyperlink{classfm__partition_a015b171fcaa01973ebe6c6a46a727097}{fm\+\_\+partition}}, \mbox{\hyperlink{classdijkstra_a7b30f3d8ad42baae27989bc14befe0d0}{dijkstra}}, \mbox{\hyperlink{classbid__dijkstra_a1d2f36d3977ef90285442a269a03b919}{bid\+\_\+dijkstra}}, \mbox{\hyperlink{classdfs_af0863b8974d5fd58cd0375c78ed8163b}{dfs}}, \mbox{\hyperlink{classbfs_a06ae16bd0f3bb2f8eb6b3e36659ba82e}{bfs}}, \mbox{\hyperlink{classmaxflow__sap_ab4305a2bb370ad9c43cc68d339b2dda0}{maxflow\+\_\+sap}}, \mbox{\hyperlink{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}{planarity}}, \mbox{\hyperlink{classmaxflow__ff_a0a4391b9093d6966b47c023a555099e2}{maxflow\+\_\+ff}}, \mbox{\hyperlink{classmaxflow__pp_a07c7cb1ae5db23d87cf49ce7769b2814}{maxflow\+\_\+pp}}, \mbox{\hyperlink{classbellman__ford_a226308389f3c36dfc02768c09f777a3b}{bellman\+\_\+ford}}, \mbox{\hyperlink{classmin__tree_ac025e8dad0db7a6a1e0e7b476b547802}{min\+\_\+tree}}, \mbox{\hyperlink{classmincut_ab7e374a3f73387aa61587643a5f44e43}{mincut}}, and \mbox{\hyperlink{classmwbmatching_adcb51caed21e77253940cd71bfd9a405}{mwbmatching}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{algorithm_8h}{algorithm.\+h}}\end{DoxyCompactItemize}

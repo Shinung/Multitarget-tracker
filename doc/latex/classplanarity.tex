@@ -1,0 +1,2723 @@
+\hypertarget{classplanarity}{}\section{planarity Class Reference}
+\label{classplanarity}\index{planarity@{planarity}}
+
+
+Tests if a graph can be drawn on a plane without any edge crossings.  
+
+
+
+
+{\ttfamily \#include $<$planarity.\+h$>$}
+
+
+
+Inheritance diagram for planarity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classplanarity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for planarity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classplanarity__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{G\+T\+L\+\_\+\+OK}} = 1, 
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{G\+T\+L\+\_\+\+E\+R\+R\+OR}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classplanarity_a74977097f60d0aa60df2ffb9a30a43ca}{planarity}} ()
+\begin{DoxyCompactList}\small\item\em Creates an object of the planarity test algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classplanarity_a3e0c0f1a724191042947dfecc640bf05}{$\sim$planarity}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classplanarity_ae06c471d957a116aad14e338c341f8b1}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Checks whether planarity test can be applied to {\ttfamily G}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Runs planarity test on {\ttfamily G}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplanarity_aca500e3d46a99c6231aff86afa2a71b1}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets algorithm object, such that it can be applied to another graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplanarity_a1679e285a7135b48b572764f5e8e773d}{calc\+\_\+embedding}} (bool p)
+\begin{DoxyCompactList}\small\item\em If {\ttfamily p} is true a planar embedding will be calculated in the next run. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classplanarity_aea94b0de2deb46ef774179dd3572bf2d}{calc\+\_\+embedding}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if a planar embedding will be calculated in the next run. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}{calc\+\_\+obstruction}} (bool p)
+\begin{DoxyCompactList}\small\item\em If {\ttfamily p} is true the obstructions to planarity will be calculated in the next run. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classplanarity_a0c520ff8f91336a2dc644f9e4ed8bb2e}{calc\+\_\+obstruction}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the obstructions to planarity will be calculated in the next run. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classplanarity_af67236533dce559d2670eae581750f54}{make\+\_\+biconnected}} (bool p)
+\begin{DoxyCompactList}\small\item\em Determines the strategy used to test a graph which is not biconnected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classplanarity_a822d67100814e1887494e7213e6f0531}{make\+\_\+biconnected}} () const
+\begin{DoxyCompactList}\small\item\em Returns strategy for testing graphs, which are not biconnected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classplanarity_af60c3d06cffa7ce3a470797fd758be5f}{is\+\_\+planar}} () const
+\begin{DoxyCompactList}\small\item\em Result of last test. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \& \mbox{\hyperlink{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}{get\+\_\+embedding}} ()
+\begin{DoxyCompactList}\small\item\em If graph in last \mbox{\hyperlink{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}{run}} was planar a planar embedding is calculated during the reductions. This function gives access to it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} \& \mbox{\hyperlink{classplanarity_a2fb449a1f808e913bddb58b86a68fe31}{get\+\_\+obstruction\+\_\+edges}} ()
+\begin{DoxyCompactList}\small\item\em Returns the edges of a subgraph homeomorphic to either K3,3 or K5 if graph in last run was not planar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} \& \mbox{\hyperlink{classplanarity_a56b2a0ca430be351ca5be7f9095824ea}{get\+\_\+obstruction\+\_\+nodes}} ()
+\begin{DoxyCompactList}\small\item\em Returns the nodes of a subgraph homeomorphic to either K3,3 or K5 if graph in last run was not planar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classplanarity_a0a1949c82648889d188b2e748bc461da}{run\+\_\+on\+\_\+biconnected}} (\mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em)
+\item 
+void \mbox{\hyperlink{classplanarity_a6c522b680b3758d044d1b2c6fce32643}{add\+\_\+to\+\_\+embedding}} (\mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em)
+\item 
+void \mbox{\hyperlink{classplanarity_a77eed115ba38b173357a3d8be8990f81}{correct\+\_\+embedding}} (\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&st, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ std\+::list$<$ \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $>$ $>$ \&dirs)
+\item 
+void \mbox{\hyperlink{classplanarity_aadcc35e5b8dbf9d7184efbc6ab845885}{extend\+\_\+embedding}} (\mbox{\hyperlink{classnode}{node}} n, \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&mark, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$\+::iterator $>$ \&upward\+\_\+begin)
+\item 
+void \mbox{\hyperlink{classplanarity_a8a66dd6682b3111e39be103db127e6b0}{switch\+\_\+to\+\_\+component}} (\mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classbiconnectivity_aef69aa0c23bfcd945e385350154b6483}{biconnectivity\+::component\+\_\+iterator}} it)
+\item 
+void \mbox{\hyperlink{classplanarity_ab43c7267ba8b0895b8ef71b66c7863a0}{examine\+\_\+obstruction}} (\mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&st, \mbox{\hyperlink{classnode}{node}} act, \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$fail, bool failed\+\_\+at\+\_\+root, \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ std\+::list$<$ \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $>$ $>$ \&dirs, \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}} $\ast$PQ)
+\item 
+void \mbox{\hyperlink{classplanarity_abb8f97559c265376a7467d642a331a7a}{dfs\+\_\+bushform}} (\mbox{\hyperlink{classnode}{node}} act, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&mark, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&st, int stop, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&to\+\_\+father)
+\item 
+void \mbox{\hyperlink{classplanarity_aa691156ebe0066bee3d629a6bdd81231}{attachment\+\_\+cycle}} (\mbox{\hyperlink{classnode}{node}} n, \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&em)
+\item 
+void \mbox{\hyperlink{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}{mark\+\_\+all\+\_\+neighbors\+\_\+of\+\_\+leaves}} (\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$act, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&mark)
+\item 
+\mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$ \mbox{\hyperlink{classplanarity_a158282cba0f0ce0abeb4dfdacd358a38}{run\+\_\+through\+\_\+partial}} (\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$partial, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&mark, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&to\+\_\+father, \mbox{\hyperlink{classnode}{node}} v)
+\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\+\_\+until\+\_\+marked}} (\mbox{\hyperlink{classnode}{node}} act, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&mark, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&to\+\_\+father)
+\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classplanarity_aa5e2bdd52fb6e0b34612e1cfcb35312a}{up\+\_\+until\+\_\+marked}} (\mbox{\hyperlink{classnode}{node}} act, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&mark, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&st)
+\item 
+\mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$ \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\+\_\+full\+\_\+leaf}} (\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$n)
+\item 
+\mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$ \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\+\_\+empty\+\_\+leaf}} (\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$n)
+\item 
+void \mbox{\hyperlink{classplanarity_a6eda46f0aedd2fe3503b0b2829863d50}{case\+\_\+A}} (\mbox{\hyperlink{classp__node}{p\+\_\+node}} $\ast$p\+\_\+fail, \mbox{\hyperlink{classnode}{node}} act, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&\+\_\+st, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ to\+\_\+father, \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classplanarity_a63bfa8c2a4ab5454b71b1e522c2ff41d}{case\+\_\+B}} (\mbox{\hyperlink{classp__node}{p\+\_\+node}} $\ast$p\+\_\+fail, \mbox{\hyperlink{classnode}{node}} act, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&\+\_\+st, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ to\+\_\+father, \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classplanarity_a74f765d62afabf54c43c42f3c127c9d9}{case\+\_\+C}} (\mbox{\hyperlink{classnode}{node}} $\ast$nodes, \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$\ast$leaves, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&\+\_\+st, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ to\+\_\+father, \mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$q\+\_\+fail)
+\item 
+void \mbox{\hyperlink{classplanarity_a0218e3db9d0ff3a27a03a992c22d0562}{case\+\_\+D}} (\mbox{\hyperlink{classnode}{node}} $\ast$nodes, \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$\ast$leaves, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&\+\_\+st, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ to\+\_\+father, \mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$q\+\_\+fail)
+\item 
+void \mbox{\hyperlink{classplanarity_a0cf0ff94965eb40f5be5c07999e7e1bd}{case\+\_\+E}} (\mbox{\hyperlink{classnode}{node}} $\ast$nodes, \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$\ast$leaves, \mbox{\hyperlink{classst__number}{st\+\_\+number}} \&\+\_\+st, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ to\+\_\+father, \mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$q\+\_\+fail)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\+\_\+edges}}
+\item 
+\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\+\_\+nodes}}
+\item 
+\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}
+\item 
+bool \mbox{\hyperlink{classplanarity_a1903d614fa185e5286904ecf76ab85dd}{planar}}
+\item 
+bool \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}
+\item 
+bool \mbox{\hyperlink{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}{kup}}
+\item 
+bool \mbox{\hyperlink{classplanarity_ab376973a35dc0b89e7fabdb946693b82}{bip}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Tests if a graph can be drawn on a plane without any edge crossings. 
+
+\begin{DoxyParagraph}{Date}
+2008/02/03 18\+:17\+:08 
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{Revision}
+1.\+22 
+\end{DoxyParagraph}
+
+
+This class implements the Lempel-\/\+Even-\/\+Cederbaum planarity test using P\+Q-\/trees. In case the graph is planar a planar embedding is obtained, i.\+e. for each node in the graph an ordered adjacency list is calculated, such that there exists a planar drawing in which all adjacent edges around a node apply to this order.
+
+If the graph is not planar Kuratowski\textquotesingle{}s famous theorem states that it must contain a subgraph hoemeomorphic to either K5 (the complete graph with five nodes) or K3,3 (the complete bipartite graph with three nodes each side). In this case the nodes and edges of the tested graph that form either of these two are calculated.
+
+In case the graph is planar and has $N$ nodes the algorithm needs $\mathcal{O}(N)$ time for the test (including the planar embedding). In case the graph isn\textquotesingle{}t planar it needs at most $\mathcal{O}(E)$ time if $E$ is the number of edges for both the test and the detection of K5 or K3,3. 
+
+Definition at line 47 of file planarity.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}!planarity@{planarity}}\index{planarity@{planarity}!G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}} 
+G\+T\+L\+\_\+\+OK&Used as (positive) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}!planarity@{planarity}}\index{planarity@{planarity}!G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}} 
+G\+T\+L\+\_\+\+E\+R\+R\+OR&Used as (negative) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 40 of file algorithm.\+h.
+
+
+\begin{DoxyCode}
+40          \{
+41     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}} = 1,
+42     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}} = 0
+43     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classplanarity_a74977097f60d0aa60df2ffb9a30a43ca}\label{classplanarity_a74977097f60d0aa60df2ffb9a30a43ca}} 
+\index{planarity@{planarity}!planarity@{planarity}}
+\index{planarity@{planarity}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{planarity()}{planarity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a2d9f24096ac60918452dd51f32b64aa9}{\+\_\+\+\_\+\+G\+T\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}} planarity\+::planarity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates an object of the planarity test algorithm. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm}{algorithm}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 26 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+26                      : 
+27     \mbox{\hyperlink{classalgorithm_ab79e1ddec2f2afdf4b36b10724db8b15}{algorithm}} (), \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}} (\textcolor{keyword}{false}), \mbox{\hyperlink{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}{kup}} (\textcolor{keyword}{false}), \mbox{\hyperlink{classplanarity_ab376973a35dc0b89e7fabdb946693b82}{bip}} (\textcolor{keyword}{true}) 
+28 \{
+29 \textcolor{preprocessor}{#ifdef \_DEBUG  }
+30     \mbox{\hyperlink{class_g_t_l__debug_a119223c9000c1639d79d1a14a447c67a}{GTL\_debug::init\_debug}}();
+31 \textcolor{preprocessor}{#endif}
+32 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classplanarity_a74977097f60d0aa60df2ffb9a30a43ca_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a3e0c0f1a724191042947dfecc640bf05}\label{classplanarity_a3e0c0f1a724191042947dfecc640bf05}} 
+\index{planarity@{planarity}!````~planarity@{$\sim$planarity}}
+\index{````~planarity@{$\sim$planarity}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{$\sim$planarity()}{~planarity()}}
+{\footnotesize\ttfamily planarity\+::$\sim$planarity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+Definition at line 34 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+35 \{
+36 \textcolor{preprocessor}{#ifdef \_DEBUG  }
+37     \mbox{\hyperlink{class_g_t_l__debug_a18b39d8b303a59062f86702a01ab6a98}{GTL\_debug::close\_debug}}();
+38 \textcolor{preprocessor}{#endif}
+39 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classplanarity_a3e0c0f1a724191042947dfecc640bf05_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classplanarity_a6c522b680b3758d044d1b2c6fce32643}\label{classplanarity_a6c522b680b3758d044d1b2c6fce32643}} 
+\index{planarity@{planarity}!add\+\_\+to\+\_\+embedding@{add\+\_\+to\+\_\+embedding}}
+\index{add\+\_\+to\+\_\+embedding@{add\+\_\+to\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{add\+\_\+to\+\_\+embedding()}{add\_to\_embedding()}}
+{\footnotesize\ttfamily void planarity\+::add\+\_\+to\+\_\+embedding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 420 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+421 \{
+422     \mbox{\hyperlink{classnode}{node}} n;
+423     \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}} (n, G) \{
+424     \mbox{\hyperlink{structsymlist__iterator}{planar\_embedding::iterator}} it = em.\mbox{\hyperlink{classplanar__embedding_ac0b41dd43adb80ed898b597e791230d8}{adj\_edges\_begin}} (n);
+425     \mbox{\hyperlink{structsymlist__iterator}{planar\_embedding::iterator}} end = em.\mbox{\hyperlink{classplanar__embedding_a1345ee93995019d81cc78fb2806acc88}{adj\_edges\_end}} (n);
+426         
+427     \textcolor{keywordflow}{for} (; it != end; ++it) \{
+428         \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_aaba1216e3c7497267573cc56b4368929}{pos}} (n, *it) = em.\mbox{\hyperlink{classplanar__embedding_aaba1216e3c7497267573cc56b4368929}{pos}} (n, *it);
+429     \}
+430         
+431     \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(n).\mbox{\hyperlink{classsymlist_ac2bd4d9db62ea6a3282662c62a97c3b2}{splice}} (
+432         \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_a1345ee93995019d81cc78fb2806acc88}{adj\_edges\_end}} (n),
+433         em.\mbox{\hyperlink{classplanar__embedding_ac0b41dd43adb80ed898b597e791230d8}{adj\_edges\_begin}} (n),
+434         em.\mbox{\hyperlink{classplanar__embedding_a1345ee93995019d81cc78fb2806acc88}{adj\_edges\_end}} (n));
+435     \}
+436 
+437     \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}.splice (
+438     \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}.end(), 
+439     em.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}, em.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}.begin(), em.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}.end());
+440     \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}.splice (
+441     \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}.end(), 
+442     em.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}, em.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}.begin(), em.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}.end());
+443 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a6c522b680b3758d044d1b2c6fce32643_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classplanarity_a6c522b680b3758d044d1b2c6fce32643_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_aa691156ebe0066bee3d629a6bdd81231}\label{classplanarity_aa691156ebe0066bee3d629a6bdd81231}} 
+\index{planarity@{planarity}!attachment\+\_\+cycle@{attachment\+\_\+cycle}}
+\index{attachment\+\_\+cycle@{attachment\+\_\+cycle}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{attachment\+\_\+cycle()}{attachment\_cycle()}}
+{\footnotesize\ttfamily void planarity\+::attachment\+\_\+cycle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n,  }\item[{\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1570 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1571 \{
+1572     \mbox{\hyperlink{classedge}{edge}} act = em.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(start).\mbox{\hyperlink{classsymlist_afd4b55616fc20033d4a47684551866e8}{front}}();
+1573     \mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} = start.opposite (act);
+1574     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (act);
+1575 
+1576     \textcolor{keywordflow}{while} (\mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} != start) \{
+1577     act = em.\mbox{\hyperlink{classplanar__embedding_a4498733be831e1468044db038452efa4}{cyclic\_next}} (\mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}}, act);
+1578     \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} = \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}}.opposite (act);
+1579     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (act);
+1580     \}
+1581 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_aa691156ebe0066bee3d629a6bdd81231_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_aa691156ebe0066bee3d629a6bdd81231_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a1679e285a7135b48b572764f5e8e773d}\label{classplanarity_a1679e285a7135b48b572764f5e8e773d}} 
+\index{planarity@{planarity}!calc\+\_\+embedding@{calc\+\_\+embedding}}
+\index{calc\+\_\+embedding@{calc\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{calc\+\_\+embedding()}{calc\_embedding()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void planarity\+::calc\+\_\+embedding (\begin{DoxyParamCaption}\item[{bool}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If {\ttfamily p} is true a planar embedding will be calculated in the next run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & {\ttfamily true} iff embedding should be calculated\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}{get\+\_\+embedding}} 
+
+\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 118 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+119     \{
+120     \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}} = p;
+121     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \mbox{\hyperlink{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}{kup}} = \textcolor{keyword}{false};
+122     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_aea94b0de2deb46ef774179dd3572bf2d}\label{classplanarity_aea94b0de2deb46ef774179dd3572bf2d}} 
+\index{planarity@{planarity}!calc\+\_\+embedding@{calc\+\_\+embedding}}
+\index{calc\+\_\+embedding@{calc\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{calc\+\_\+embedding()}{calc\_embedding()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool planarity\+::calc\+\_\+embedding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if a planar embedding will be calculated in the next run. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff embedding will be calculated\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}{get\+\_\+embedding}} 
+
+\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 133 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+134     \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}\label{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}} 
+\index{planarity@{planarity}!calc\+\_\+obstruction@{calc\+\_\+obstruction}}
+\index{calc\+\_\+obstruction@{calc\+\_\+obstruction}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{calc\+\_\+obstruction()}{calc\_obstruction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void planarity\+::calc\+\_\+obstruction (\begin{DoxyParamCaption}\item[{bool}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If {\ttfamily p} is true the obstructions to planarity will be calculated in the next run. 
+
+This implies the calculation of an embedding.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & {\ttfamily true} iff obstructions to planarity should be calculated\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a2fb449a1f808e913bddb58b86a68fe31}{get\+\_\+obstruction\+\_\+edges}} 
+
+\mbox{\hyperlink{classplanarity_a56b2a0ca430be351ca5be7f9095824ea}{get\+\_\+obstruction\+\_\+nodes}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 147 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+148     \{
+149     \mbox{\hyperlink{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}{kup}} = p;
+150     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}{kup}}) \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}} = \textcolor{keyword}{true};
+151     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_a0c520ff8f91336a2dc644f9e4ed8bb2e}\label{classplanarity_a0c520ff8f91336a2dc644f9e4ed8bb2e}} 
+\index{planarity@{planarity}!calc\+\_\+obstruction@{calc\+\_\+obstruction}}
+\index{calc\+\_\+obstruction@{calc\+\_\+obstruction}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{calc\+\_\+obstruction()}{calc\_obstruction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool planarity\+::calc\+\_\+obstruction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns true if the obstructions to planarity will be calculated in the next run. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff obstructions to planarity will be calculated\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a2fb449a1f808e913bddb58b86a68fe31}{get\+\_\+obstruction\+\_\+edges}} 
+
+\mbox{\hyperlink{classplanarity_a56b2a0ca430be351ca5be7f9095824ea}{get\+\_\+obstruction\+\_\+nodes}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 162 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+163     \{
+164     \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}{kup}};
+165     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_a6eda46f0aedd2fe3503b0b2829863d50}\label{classplanarity_a6eda46f0aedd2fe3503b0b2829863d50}} 
+\index{planarity@{planarity}!case\+\_\+A@{case\+\_\+A}}
+\index{case\+\_\+A@{case\+\_\+A}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{case\+\_\+\+A()}{case\_A()}}
+{\footnotesize\ttfamily void planarity\+::case\+\_\+A (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classp__node}{p\+\_\+node}} $\ast$}]{p\+\_\+fail,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{act,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{\+\_\+st,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$}]{to\+\_\+father,  }\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 891 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+896 \{
+897     \mbox{\hyperlink{classnode}{node}} art = p\_fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+898     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (art);
+899     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (act);
+900     \mbox{\hyperlink{classnode__map}{node\_map<int>}} mark (G, 0);
+901     mark[art] = 1;
+902     \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* empty[3];
+903     \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} part\_pos = p\_fail->\mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.
+      \mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+904     \textcolor{keywordtype}{int} i;
+905     
+906     \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+907     \mbox{\hyperlink{classq__node}{q\_node}}* q\_part = (*part\_pos)->\mbox{\hyperlink{classq__node_a9252fff1e71e91e318268bdb50b9056f}{Q}}();
+908     empty[i] = \mbox{\hyperlink{classplanarity_a158282cba0f0ce0abeb4dfdacd358a38}{run\_through\_partial}} (q\_part, mark, to\_father, art);
+909     ++part\_pos;
+910     \}
+911     
+912     \mbox{\hyperlink{classnode}{node}} t\_node = st\_.s\_node().\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (st\_.st\_edge());
+913     mark[t\_node] = 1;
+914     \mbox{\hyperlink{classnode}{node}} tmp[3];
+915     
+916     \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+917     tmp[i] = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (empty[i]->n, mark, st\_);
+918     \}
+919     
+920     assert (tmp[0] == t\_node);
+921     \mbox{\hyperlink{classnode}{node}} tmp\_node;
+922     
+923     \textcolor{comment}{//}
+924     \textcolor{comment}{// The three paths found meet at the nodes tmp[1] and tmp[2]; the one}
+925     \textcolor{comment}{// one with the higher st\_number is the one we are looking for. Since the}
+926     \textcolor{comment}{// first path always ends at t and it may happen that the paths meet below }
+927     \textcolor{comment}{// t, we might have to delete some of the edges found in the first path.}
+928     \textcolor{comment}{//}
+929     
+930     \textcolor{keywordflow}{if} (st\_[tmp[1]] < st\_[tmp[2]]) \{
+931     tmp\_node = tmp[2];
+932     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp[1]);
+933     \} \textcolor{keywordflow}{else} \{
+934     tmp\_node = tmp[1];
+935     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp[2]);
+936     \}
+937     
+938     
+939     \textcolor{keywordflow}{if} (tmp\_node != t\_node) \{
+940         edges\_t::iterator it, end;
+941     \textcolor{keywordtype}{int} max\_st = st\_[tmp\_node];
+942     
+943     it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.begin();
+944     end = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end();
+945     
+946     \textcolor{keywordflow}{while} (it != end) \{
+947         \mbox{\hyperlink{classedge}{edge}} cur = *it;
+948         
+949         \textcolor{keywordflow}{if} (st\_[cur.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}()] > max\_st || st\_[cur.\mbox{\hyperlink{classedge_a97563b611261478ee19c6ce055f1a3ee}{target}}()] > max\_st) \{
+950         it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (it);
+951         \} \textcolor{keywordflow}{else} \{
+952         ++it;
+953         \}
+954     \}
+955     \}
+956 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a6eda46f0aedd2fe3503b0b2829863d50_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a6eda46f0aedd2fe3503b0b2829863d50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a63bfa8c2a4ab5454b71b1e522c2ff41d}\label{classplanarity_a63bfa8c2a4ab5454b71b1e522c2ff41d}} 
+\index{planarity@{planarity}!case\+\_\+B@{case\+\_\+B}}
+\index{case\+\_\+B@{case\+\_\+B}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{case\+\_\+\+B()}{case\_B()}}
+{\footnotesize\ttfamily void planarity\+::case\+\_\+B (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classp__node}{p\+\_\+node}} $\ast$}]{p\+\_\+fail,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{act,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{\+\_\+st,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$}]{to\+\_\+father,  }\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 960 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+965 \{
+966     \textcolor{comment}{//}
+967     \textcolor{comment}{// P-Node, which is not the root of the pertinent subtree, but has }
+968     \textcolor{comment}{// two partial children. }
+969     \textcolor{comment}{// }
+970 
+971     \mbox{\hyperlink{classnode}{node}} art = p\_fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+972     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (art);
+973     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (act);
+974     \mbox{\hyperlink{classnode__map}{node\_map<int>}} mark (G, 0);
+975     \mbox{\hyperlink{classnode__map}{node\_map<int>}} below (G, 0);
+976     mark[art] = 1;
+977     
+978     \textcolor{comment}{//}
+979     \textcolor{comment}{// mark edges leading to full leaves from full sons.}
+980     \textcolor{comment}{//}
+981     
+982     \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} it, end;
+983     \textcolor{keywordflow}{for} (it = p\_fail->\mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}(), end = p\_fail->\mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.
+      \mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}(); it != end; ++it) \{
+984     \mbox{\hyperlink{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}{mark\_all\_neighbors\_of\_leaves}} (*it, below);
+985     \}
+986     
+987     \textcolor{comment}{//}
+988     \textcolor{comment}{// search paths from one full and one empty leaf to the articulation point }
+989     \textcolor{comment}{// in TBk. mark edges leading to full leaves from pertinent sons of part.}
+990     \textcolor{comment}{//}
+991     
+992     \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} part\_pos = p\_fail->\mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.
+      \mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+993     \mbox{\hyperlink{classq__node}{q\_node}}* q\_part = (*part\_pos)->\mbox{\hyperlink{classq__node_a9252fff1e71e91e318268bdb50b9056f}{Q}}();
+994     \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* empty1 = \mbox{\hyperlink{classplanarity_a158282cba0f0ce0abeb4dfdacd358a38}{run\_through\_partial}} (q\_part, mark, to\_father, art);
+995     
+996     \textcolor{keywordflow}{for} (it = q\_part->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}}, end = ++(q\_part->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}}); it != end; ++it) \{
+997     \mbox{\hyperlink{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}{mark\_all\_neighbors\_of\_leaves}} (*it, below);
+998     \}
+999     
+1000     \textcolor{comment}{//}
+1001     \textcolor{comment}{// search paths from one full and one empty leaf to the articulation point }
+1002     \textcolor{comment}{// in TBk. mark edges leading to full leaves from pertinent sons of part.}
+1003     \textcolor{comment}{//}
+1004     
+1005     ++part\_pos;
+1006     q\_part = (*part\_pos)->\mbox{\hyperlink{classq__node_a9252fff1e71e91e318268bdb50b9056f}{Q}}();
+1007     \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* empty2 = \mbox{\hyperlink{classplanarity_a158282cba0f0ce0abeb4dfdacd358a38}{run\_through\_partial}} (q\_part, mark, to\_father, art);
+1008 
+1009     
+1010     \textcolor{keywordflow}{for} (it = q\_part->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}}, end = ++(q\_part->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}}); it != end; ++it) \{
+1011     \mbox{\hyperlink{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}{mark\_all\_neighbors\_of\_leaves}} (*it, below);
+1012     \}
+1013 
+1014     \textcolor{comment}{//}
+1015     \textcolor{comment}{// now that all the adjacent edges of act, that lead to art in TBk have been}
+1016     \textcolor{comment}{// marked search an unmarked adj. edge of act, }
+1017     \textcolor{comment}{//}
+1018     
+1019     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} a\_it, a\_end;
+1020     
+1021     \textcolor{keywordflow}{for} (a\_it = act.\mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}(), a\_end = act.\mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}(); a\_it != 
+      a\_end; ++a\_it) \{
+1022     \textcolor{keywordflow}{if} (below[act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it)] == 0 && st\_[act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it)] < st\_[act]) \{
+1023         \textcolor{keywordflow}{break};
+1024     \}
+1025     \}
+1026     
+1027     assert (a\_it != a\_end);
+1028     mark[st\_.s\_node()] = 1;
+1029     mark[art] = 0;
+1030     \mbox{\hyperlink{classnode}{node}} tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (art, mark, to\_father);
+1031     assert (tmp == st\_.s\_node());
+1032     tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it), mark, to\_father);
+1033     assert(tmp != art);
+1034     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp);
+1035     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (*a\_it);
+1036     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (st\_.st\_edge());
+1037     
+1038     \textcolor{comment}{//}
+1039     \textcolor{comment}{// search from empty1 and empty2 to t.}
+1040     \textcolor{comment}{//}
+1041     
+1042     \mbox{\hyperlink{classnode}{node}} t\_node = st\_.s\_node().\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (st\_.st\_edge());
+1043     mark[t\_node] = 1;
+1044     tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (empty1->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}}, mark, st\_);
+1045     assert (tmp == t\_node); 
+1046     tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (empty2->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}}, mark, st\_);
+1047     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp);
+1048 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a63bfa8c2a4ab5454b71b1e522c2ff41d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a63bfa8c2a4ab5454b71b1e522c2ff41d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a74f765d62afabf54c43c42f3c127c9d9}\label{classplanarity_a74f765d62afabf54c43c42f3c127c9d9}} 
+\index{planarity@{planarity}!case\+\_\+C@{case\+\_\+C}}
+\index{case\+\_\+C@{case\+\_\+C}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{case\+\_\+\+C()}{case\_C()}}
+{\footnotesize\ttfamily void planarity\+::case\+\_\+C (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$}]{nodes,  }\item[{\mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$\ast$}]{leaves,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{\+\_\+st,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$}]{to\+\_\+father,  }\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$}]{q\+\_\+fail }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1051 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1057 \{
+1058     \textcolor{keywordtype}{int} i;
+1059     \mbox{\hyperlink{classnode__map}{node\_map<int>}} mark (G, 0);
+1060     \mbox{\hyperlink{classnode}{node}} y\_0 = q\_fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1061 
+1062     \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+1063     mark[nodes[i]] = 1;    
+1064     \mbox{\hyperlink{classedge}{edge}} tmp\_edge = leaves[i]->\mbox{\hyperlink{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}{e}};
+1065     \mbox{\hyperlink{classnode}{node}} tmp\_node = leaves[i]->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1066     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (tmp\_edge);
+1067     tmp\_node = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (tmp\_node.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (tmp\_edge), mark, to\_father);
+1068     assert (tmp\_node == nodes[i]);
+1069     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (nodes[i]);
+1070     \}
+1071 
+1072     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y\_0);
+1073     mark[st\_.s\_node()] = 1;
+1074     \mbox{\hyperlink{classnode}{node}} tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (y\_0, mark, to\_father);    
+1075     assert (tmp == st\_.s\_node ());
+1076 
+1077     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (leaves[2]->n);
+1078     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (st\_.st\_edge());
+1079     
+1080     \mbox{\hyperlink{classnode}{node}} t\_node = st\_.s\_node().\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (st\_.st\_edge());
+1081     mark[t\_node] = 1;
+1082     tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (leaves[1]->n, mark, st\_);
+1083     assert (tmp == t\_node); 
+1084     tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (leaves[2]->n, mark, st\_);
+1085     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp);
+1086 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a74f765d62afabf54c43c42f3c127c9d9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a74f765d62afabf54c43c42f3c127c9d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a0218e3db9d0ff3a27a03a992c22d0562}\label{classplanarity_a0218e3db9d0ff3a27a03a992c22d0562}} 
+\index{planarity@{planarity}!case\+\_\+D@{case\+\_\+D}}
+\index{case\+\_\+D@{case\+\_\+D}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{case\+\_\+\+D()}{case\_D()}}
+{\footnotesize\ttfamily void planarity\+::case\+\_\+D (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$}]{nodes,  }\item[{\mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$\ast$}]{leaves,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{\+\_\+st,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$}]{to\+\_\+father,  }\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$}]{q\+\_\+fail }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1089 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1095 \{
+1096     \textcolor{comment}{//}
+1097     \textcolor{comment}{// Mark all edges from leaves leading to this component.}
+1098     \textcolor{comment}{//}
+1099     
+1100     \mbox{\hyperlink{classnode}{node}} y\_0 = q\_fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1101     \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} it, end;
+1102     \mbox{\hyperlink{classnode__map}{node\_map<int>}} below (G, 0);
+1103     \mbox{\hyperlink{classnode}{node}} act = leaves[1]->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1104        
+1105     \textcolor{keywordflow}{for} (it = q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}(), end = q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}(); it != end; ++it) \{
+1106     \mbox{\hyperlink{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}{mark\_all\_neighbors\_of\_leaves}} (*it, below);
+1107     \}
+1108     
+1109     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} a\_it, a\_end;
+1110     
+1111     \textcolor{keywordflow}{for} (a\_it = act.\mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}(), a\_end = act.\mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}(); a\_it != 
+      a\_end; ++a\_it) \{
+1112     \textcolor{keywordflow}{if} (below[act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it)] == 0 && st\_[act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it)] < st\_[act]) \{
+1113         \textcolor{keywordflow}{break};
+1114     \}
+1115     \}
+1116     
+1117 
+1118     \textcolor{comment}{//}
+1119     \textcolor{comment}{// Since q\_fail can't be the root of the pertinent subtree, there must }
+1120     \textcolor{comment}{// be at least one edge from act not leading to the component described by }
+1121     \textcolor{comment}{// q\_fail.}
+1122     \textcolor{comment}{//}
+1123     
+1124     assert (a\_it != a\_end);
+1125 
+1126     \textcolor{keywordtype}{int} i;
+1127     \mbox{\hyperlink{classnode__map}{node\_map<int>}} mark (G, 0);
+1128 
+1129     \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+1130     mark[nodes[i]] = 1;    
+1131     \mbox{\hyperlink{classedge}{edge}} tmp\_edge = leaves[i]->\mbox{\hyperlink{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}{e}};
+1132     \mbox{\hyperlink{classnode}{node}} tmp\_node = leaves[i]->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1133     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (tmp\_edge);
+1134     tmp\_node = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (tmp\_node.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (tmp\_edge), mark, to\_father);
+1135     assert (tmp\_node == nodes[i]);
+1136     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (nodes[i]);
+1137     \}
+1138 
+1139     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y\_0);
+1140     mark[st\_.s\_node()] = 1; 
+1141     \mbox{\hyperlink{classnode}{node}} tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (y\_0, mark, to\_father);    
+1142     assert (tmp == st\_.s\_node ());
+1143     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (*a\_it);
+1144     tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it), mark, to\_father);
+1145 
+1146 
+1147     \textcolor{comment}{//}
+1148     \textcolor{comment}{// The paths from y\_0 and from act meet in tmp. If tmp != s\_node we have }
+1149     \textcolor{comment}{// to delete some edges.}
+1150     \textcolor{comment}{//}
+1151 
+1152     \textcolor{keywordflow}{if} (tmp != st\_.s\_node()) \{
+1153         edges\_t::iterator it, end;
+1154     \textcolor{keywordtype}{int} min\_st = st\_[tmp];
+1155     it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.begin();
+1156     end = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end();
+1157     
+1158     \textcolor{keywordflow}{while} (it != end) \{
+1159         \mbox{\hyperlink{classedge}{edge}} cur = *it;
+1160         
+1161         \textcolor{keywordflow}{if} (st\_[cur.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}()] < min\_st || st\_[cur.\mbox{\hyperlink{classedge_a97563b611261478ee19c6ce055f1a3ee}{target}}()] < min\_st) \{
+1162         it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (it);
+1163         \} \textcolor{keywordflow}{else} \{
+1164         ++it;
+1165         \}
+1166     \}
+1167     \}
+1168 
+1169     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (act);
+1170 
+1171     \mbox{\hyperlink{classnode}{node}} t\_node = st\_.s\_node().\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (st\_.st\_edge());
+1172     mark[t\_node] = 1;
+1173     \mbox{\hyperlink{classnode}{node}} tmp\_nodes[3];
+1174     
+1175     \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+1176     tmp\_nodes[i] = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (leaves[i]->n, mark, st\_);
+1177     \}
+1178     
+1179     assert (tmp\_nodes[0] == t\_node);
+1180     
+1181     \textcolor{comment}{//}
+1182     \textcolor{comment}{// The three paths found meet at the nodes tmp[1] and tmp[2]; the one}
+1183     \textcolor{comment}{// one with the higher st\_number is the one we are looking for. Since the}
+1184     \textcolor{comment}{// first path always ends at t and it may happen that the paths meet below }
+1185     \textcolor{comment}{// t, we might have to delete some of the edges found in the first path.}
+1186     \textcolor{comment}{//}
+1187     
+1188     \textcolor{keywordflow}{if} (st\_[tmp\_nodes[1]] < st\_[tmp\_nodes[2]]) \{
+1189     tmp = tmp\_nodes[2];
+1190     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_nodes[1]);
+1191     \} \textcolor{keywordflow}{else} \{
+1192     tmp = tmp\_nodes[1];
+1193     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_nodes[2]);
+1194     \}
+1195     
+1196     
+1197     \textcolor{keywordflow}{if} (tmp != t\_node) \{
+1198         edges\_t::iterator it, end;
+1199     \textcolor{keywordtype}{int} max\_st = st\_[tmp];
+1200     it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.begin();
+1201     end = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end();
+1202     
+1203     \textcolor{keywordflow}{while} (it != end) \{
+1204         \mbox{\hyperlink{classedge}{edge}} cur = *it;
+1205         
+1206         \textcolor{keywordflow}{if} (st\_[cur.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}()] > max\_st || st\_[cur.\mbox{\hyperlink{classedge_a97563b611261478ee19c6ce055f1a3ee}{target}}()] > max\_st) \{
+1207         it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (it);
+1208         \} \textcolor{keywordflow}{else} \{
+1209         ++it;
+1210         \}
+1211     \}   
+1212     \}
+1213 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a0218e3db9d0ff3a27a03a992c22d0562_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a0218e3db9d0ff3a27a03a992c22d0562_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a0cf0ff94965eb40f5be5c07999e7e1bd}\label{classplanarity_a0cf0ff94965eb40f5be5c07999e7e1bd}} 
+\index{planarity@{planarity}!case\+\_\+E@{case\+\_\+E}}
+\index{case\+\_\+E@{case\+\_\+E}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{case\+\_\+\+E()}{case\_E()}}
+{\footnotesize\ttfamily void planarity\+::case\+\_\+E (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$}]{nodes,  }\item[{\mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$$\ast$}]{leaves,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{\+\_\+st,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$}]{to\+\_\+father,  }\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$}]{q\+\_\+fail }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1216 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1222 \{
+1223 
+1224     \textcolor{comment}{//}
+1225     \textcolor{comment}{// Mark all edges from the act node leading to this component.}
+1226     \textcolor{comment}{//}
+1227     
+1228     \mbox{\hyperlink{classnode}{node}} y\_0 = q\_fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1229     \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} it, end;
+1230     \mbox{\hyperlink{classnode__map}{node\_map<int>}} below (G, 0);
+1231     \mbox{\hyperlink{classnode}{node}} act = leaves[1]->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1232     
+1233     \textcolor{keywordflow}{for} (it = q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}}, end = ++(q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}}); it != end; ++it) \{
+1234     \mbox{\hyperlink{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}{mark\_all\_neighbors\_of\_leaves}} (*it, below);
+1235     \}
+1236     
+1237     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} a\_it, a\_end;
+1238     
+1239     \textcolor{keywordflow}{for} (a\_it = act.\mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}(), a\_end = act.\mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}(); a\_it != 
+      a\_end; ++a\_it) \{
+1240     \textcolor{keywordflow}{if} (below[act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it)] == 0 && st\_[act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it)] < st\_[act]) \{
+1241         \textcolor{keywordflow}{break};
+1242     \}
+1243     \}
+1244     
+1245 
+1246     \textcolor{comment}{//}
+1247     \textcolor{comment}{// Since q\_fail can't be the root of the pertinent subtree, there must }
+1248     \textcolor{comment}{// be at least one edge from act not leading to the component described by }
+1249     \textcolor{comment}{// q\_fail.}
+1250     \textcolor{comment}{//}
+1251     
+1252     assert (a\_it != a\_end);
+1253     
+1254     \textcolor{comment}{//}
+1255     \textcolor{comment}{// The list ob\_edges at the moment contains the boundary. we need to know the paths }
+1256     \textcolor{comment}{// from y\_0 to nodes[0] ( = y\_1), from nodes[0] to nodes[1] ( = y\_2 ) and from nodes[1]}
+1257     \textcolor{comment}{// back to y\_0, because some of them will be eventually deleted later.}
+1258     \textcolor{comment}{//}
+1259 
+1260     edges\_t::iterator paths\_begin[3];
+1261     edges\_t::iterator l\_it, l\_end;
+1262     \mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} = y\_0;
+1263 
+1264     \textcolor{keywordflow}{for} (l\_it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.begin(), l\_end = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(); l\_it != l\_end; ++l\_it) \{
+1265     \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} = \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}}.opposite (*l\_it);
+1266 
+1267     \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} == nodes[1]) \{
+1268         \mbox{\hyperlink{classnode}{node}} tmp = nodes[1];
+1269         nodes[1] = nodes[0];
+1270         nodes[0] = tmp;
+1271         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* tmp\_leaf = leaves[2];
+1272         leaves[2] = leaves[0];
+1273         leaves[0] = tmp\_leaf;
+1274         tmp\_leaf = leaves[3];
+1275         leaves[3] = leaves[1];
+1276         leaves[1] = tmp\_leaf;
+1277 
+1278         paths\_begin[0] = l\_it;
+1279         ++paths\_begin[0];
+1280         \textcolor{keywordflow}{break};
+1281     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} == nodes[0]) \{
+1282         paths\_begin[0] = l\_it;
+1283         ++paths\_begin[0];
+1284         \textcolor{keywordflow}{break};
+1285     \}
+1286     \}
+1287 
+1288     assert (l\_it != l\_end);
+1289     ++l\_it;
+1290     assert (l\_it != l\_end);
+1291 
+1292     \textcolor{keywordflow}{for} (; l\_it != l\_end; ++l\_it) \{
+1293     \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} = \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}}.opposite (*l\_it);
+1294 
+1295     \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} == nodes[1]) \{
+1296         paths\_begin[1] = l\_it;
+1297         ++paths\_begin[1];
+1298         \textcolor{keywordflow}{break};
+1299     \}
+1300     \}
+1301 
+1302     assert (l\_it != l\_end);
+1303 
+1304     paths\_begin[2] = --l\_end;
+1305 
+1306     \mbox{\hyperlink{classnode}{node}} y[3];
+1307     \textcolor{keywordtype}{int} i;
+1308     \mbox{\hyperlink{classnode__map}{node\_map<int>}} mark (G, 0);
+1309     \mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\_t}} from\_act[3];
+1310     edges\_t::iterator pos;
+1311 
+1312     \textcolor{keywordflow}{for} (i = 0; i < 2; ++i) \{
+1313     mark[nodes[i]] = 1;    
+1314     \mbox{\hyperlink{classedge}{edge}} tmp\_edge = leaves[2 * i]->\mbox{\hyperlink{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}{e}};
+1315     \mbox{\hyperlink{classnode}{node}} tmp\_node = leaves[2 * i]->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1316     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (tmp\_edge);
+1317     tmp\_node = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (tmp\_node.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (tmp\_edge), mark, to\_father);
+1318     assert (tmp\_node == nodes[i]);
+1319     tmp\_edge = leaves[2 * i + 1]->\mbox{\hyperlink{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}{e}};
+1320     tmp\_node = leaves[2 * i + 1]->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1321     pos = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.insert (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), tmp\_edge);
+1322     y[i + 1] = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (tmp\_node.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (tmp\_edge), mark, to\_father);
+1323     from\_act[i + 1].splice (from\_act[i + 1].begin(), \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}, pos, 
+      \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end());
+1324     \}
+1325 
+1326     mark[st\_.s\_node()] = 1; 
+1327     \mbox{\hyperlink{classnode}{node}} tmp = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (y\_0, mark, to\_father);    
+1328     assert (tmp == st\_.s\_node ());
+1329     pos = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.insert (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), *a\_it);
+1330     y[0] = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*a\_it), mark, to\_father);
+1331     from\_act[0].splice (from\_act[0].begin(), \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}, pos, \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end());
+1332 
+1333     \mbox{\hyperlink{classnode}{node}} t\_node = st\_.s\_node().\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (st\_.st\_edge());
+1334     mark[t\_node] = 1;
+1335     \mbox{\hyperlink{classnode}{node}} tmp\_nodes[3];
+1336     \mbox{\hyperlink{classnode__map}{node\_map<int>}} from\_where (G, 0);
+1337 
+1338     \textcolor{keywordflow}{for} (i = 0; i < 2; ++i) \{
+1339     pos = --(\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end());
+1340     tmp\_nodes[i] = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (leaves[2 * i]->n, mark, st\_);
+1341     \textcolor{keywordflow}{for} (l\_it = ++pos, l\_end = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(); l\_it != l\_end; ++l\_it) \{
+1342         from\_where[l\_it->source()] = i + 1;
+1343         from\_where[l\_it->target()] = i + 1;
+1344     \}
+1345     \}
+1346     
+1347     assert (tmp\_nodes[0] == t\_node);
+1348 
+1349     \textcolor{keywordflow}{if} (y\_0 != y[0]) \{
+1350     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y\_0);
+1351     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[0]);
+1352     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[1]);
+1353     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[2]);
+1354     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (act);
+1355     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_nodes[1]);
+1356 
+1357     l\_it = paths\_begin[0];
+1358     l\_end = paths\_begin[1];
+1359     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (l\_it, l\_end);
+1360 
+1361     \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+1362         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.splice (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), from\_act[i], from\_act[i].begin(), from\_act[i].end(
+      ));
+1363     \}
+1364 
+1365     \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE E(i)\(\backslash\)n"});
+1366 
+1367     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (nodes[0] != y[1]) \{
+1368     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y\_0);
+1369     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[1]);
+1370     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (nodes[0]);
+1371     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[2]);
+1372     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (act);
+1373     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_nodes[1]);
+1374     l\_it = paths\_begin[1];
+1375     l\_end = paths\_begin[2];
+1376     ++l\_end;
+1377     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (l\_it, l\_end);
+1378 
+1379     \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+1380         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.splice (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), from\_act[i], from\_act[i].begin(), from\_act[i].end(
+      ));
+1381     \}
+1382 
+1383     \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE E(ii)\(\backslash\)n"});
+1384 
+1385     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (nodes[1] != y[2]) \{
+1386     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y\_0);
+1387     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[1]);
+1388     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (nodes[1]);
+1389     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[2]);
+1390     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (act);
+1391     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_nodes[1]);
+1392     l\_it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.begin();
+1393     l\_end = paths\_begin[0];
+1394     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (l\_it, l\_end);
+1395 
+1396     \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+1397         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.splice (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), from\_act[i], from\_act[i].begin(), from\_act[i].end(
+      ));
+1398     \}
+1399 
+1400     \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE E(ii)\(\backslash\)n"});
+1401 
+1402     \} \textcolor{keywordflow}{else} \{
+1403     tmp\_nodes[2] = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (leaves[1]->n, mark, st\_);
+1404     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y\_0);
+1405     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[1]);
+1406     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_nodes[1]);
+1407     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (y[2]);
+1408     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (act);
+1409     
+1410     \textcolor{keywordflow}{if} (st\_[tmp\_nodes[1]] < st\_[tmp\_nodes[2]]) \{
+1411         \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_nodes[2]);
+1412         l\_it = paths\_begin[0];
+1413         l\_end = paths\_begin[1];
+1414         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (l\_it, l\_end);
+1415         
+1416         \textcolor{keywordflow}{for} (i = 1; i < 3; ++i) \{
+1417         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.splice (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), from\_act[i], from\_act[i].begin(), from\_act[i].end(
+      ));
+1418         \}
+1419 
+1420         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE E(iii) (1)\(\backslash\)n"});
+1421 
+1422     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (st\_[tmp\_nodes[1]] > st\_[tmp\_nodes[2]]) \{
+1423         \mbox{\hyperlink{classedge}{edge}} last\_edge = *(--(\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end()));
+1424         \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_nodes[2]);
+1425         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.splice (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), from\_act[0], from\_act[0].begin(), from\_act[0].end(
+      ));
+1426         \textcolor{keywordtype}{int} from;
+1427 
+1428         \textcolor{keywordflow}{if} (from\_where[last\_edge.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}()] > 0) \{
+1429         from = from\_where[last\_edge.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}()];
+1430         \} \textcolor{keywordflow}{else} \{
+1431         from = from\_where[last\_edge.\mbox{\hyperlink{classedge_a97563b611261478ee19c6ce055f1a3ee}{target}}()];
+1432         \}
+1433         
+1434         assert (from > 0);
+1435 
+1436         \textcolor{keywordflow}{if} (from == 1) \{
+1437         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.splice (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), from\_act[2], from\_act[2].begin(), from\_act[2].end(
+      ));
+1438 
+1439         l\_it = paths\_begin[1];
+1440         l\_end = paths\_begin[2];
+1441         ++l\_end;
+1442         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (l\_it, l\_end);
+1443 
+1444         \} \textcolor{keywordflow}{else} \{
+1445         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.splice (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), from\_act[1], from\_act[1].begin(), from\_act[1].end(
+      ));
+1446 
+1447         l\_it = \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.begin();
+1448         l\_end = paths\_begin[0];
+1449         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (l\_it, l\_end);
+1450         \}
+1451 
+1452         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE E(iii) (2)\(\backslash\)n"});
+1453 
+1454     \} \textcolor{keywordflow}{else} \{
+1455         \textcolor{keywordflow}{for} (i = 0; i < 3; ++i) \{
+1456         \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.splice (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end(), from\_act[i], from\_act[i].begin(), from\_act[i].end(
+      ));
+1457         \}
+1458 
+1459         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE E(iii) (3)\(\backslash\)n"});
+1460     \}
+1461     \}   
+1462 
+1463     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (st\_.st\_edge());
+1464 \}       
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a0cf0ff94965eb40f5be5c07999e7e1bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a0cf0ff94965eb40f5be5c07999e7e1bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_ae06c471d957a116aad14e338c341f8b1}\label{classplanarity_ae06c471d957a116aad14e338c341f8b1}} 
+\index{planarity@{planarity}!check@{check}}
+\index{check@{check}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int planarity\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether planarity test can be applied to {\ttfamily G}. 
+
+This should return always {\ttfamily G\+T\+L\+\_\+\+OK}. There aren\textquotesingle{}t any restrictions on {\ttfamily G}, even multiple edges and selfloops are tolerated.
+
+\begin{DoxyNote}{Note}
+Selfloops and multiple edges will not be added to the planar embedding. \mbox{\hyperlink{classplanar__embedding_a5c02406326772bc7749954ef78db483e}{planar\+\_\+embedding\+::selfloops}} and \mbox{\hyperlink{classplanar__embedding_a971bd278da5bf63d2b53ba0a4a7b017f}{planar\+\_\+embedding\+::multiple\+\_\+edges}} can be used to get these.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em G} & arbitrary graph\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em G\+T\+L\+\_\+\+OK} & if planarity test can be applied \\
+\hline
+{\em G\+T\+L\+\_\+\+E\+R\+R\+OR} & if not\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+
+
+
+Definition at line 42 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+43 \{
+44     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}};
+45 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_a77eed115ba38b173357a3d8be8990f81}\label{classplanarity_a77eed115ba38b173357a3d8be8990f81}} 
+\index{planarity@{planarity}!correct\+\_\+embedding@{correct\+\_\+embedding}}
+\index{correct\+\_\+embedding@{correct\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{correct\+\_\+embedding()}{correct\_embedding()}}
+{\footnotesize\ttfamily void planarity\+::correct\+\_\+embedding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{st,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ std\+::list$<$ \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $>$ $>$ \&}]{dirs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 453 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+457 \{
+458     \mbox{\hyperlink{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}{st\_number::reverse\_iterator}} it = st\_.rbegin();
+459     \mbox{\hyperlink{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}{st\_number::reverse\_iterator}} end = st\_.rend();
+460     \textcolor{keywordtype}{bool}* turn = \textcolor{keyword}{new} \textcolor{keywordtype}{bool}[st\_[*it]];
+461     
+462     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < st\_[*it]; ++i) \{
+463     turn[i] = \textcolor{keyword}{false};
+464     \} 
+465     
+466     \textcolor{keywordflow}{while} (it != end) \{
+467     \mbox{\hyperlink{classnode}{node}} curr = *it;
+468         
+469     \textcolor{keywordflow}{if} (turn[st\_[curr] - 1]) \{
+470         em.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(curr).\mbox{\hyperlink{classsymlist_ae22b65101604c694e96974cc9579ab78}{reverse}}();
+471     \} 
+472         
+473     std::list<direction\_indicator>::iterator d\_it = dirs[curr].begin();
+474         
+475     \textcolor{keywordflow}{while} (!dirs[curr].empty()) \{
+476             
+477         \textcolor{keywordflow}{if} (d\_it->direction && turn[st\_[curr] - 1] || 
+478         !d\_it->direction && !turn[st\_[curr] - 1]) \{
+479         turn[d\_it->id - 1] = \textcolor{keyword}{true};
+480         \}
+481         
+482         d\_it = dirs[curr].erase (d\_it);
+483     \}
+484         
+485     ++it;
+486     \}
+487     
+488     \textcolor{keyword}{delete}[] turn;
+489 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a77eed115ba38b173357a3d8be8990f81_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a77eed115ba38b173357a3d8be8990f81_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_abb8f97559c265376a7467d642a331a7a}\label{classplanarity_abb8f97559c265376a7467d642a331a7a}} 
+\index{planarity@{planarity}!dfs\+\_\+bushform@{dfs\+\_\+bushform}}
+\index{dfs\+\_\+bushform@{dfs\+\_\+bushform}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{dfs\+\_\+bushform()}{dfs\_bushform()}}
+{\footnotesize\ttfamily void planarity\+::dfs\+\_\+bushform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{act,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{mark,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{st,  }\item[{int}]{stop,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&}]{to\+\_\+father }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1584 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1589 \{    
+1590     used[n] = 1;
+1591     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} it, end;
+1592     
+1593     \textcolor{keywordflow}{for} (it = n.adj\_edges\_begin(), end = n.adj\_edges\_end(); it != end; ++it) \{
+1594     \mbox{\hyperlink{classedge}{edge}} act = *it;
+1595     \mbox{\hyperlink{classnode}{node}} other = n.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}}(act);
+1596     
+1597     \textcolor{keywordflow}{if} (used[other] == 0 && st\_[other] < stop) \{
+1598         to\_father[other] = *it;
+1599         \mbox{\hyperlink{classplanarity_abb8f97559c265376a7467d642a331a7a}{dfs\_bushform}} (other, used, st\_, stop, to\_father);
+1600     \}
+1601     \}
+1602 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_abb8f97559c265376a7467d642a331a7a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_abb8f97559c265376a7467d642a331a7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_ab43c7267ba8b0895b8ef71b66c7863a0}\label{classplanarity_ab43c7267ba8b0895b8ef71b66c7863a0}} 
+\index{planarity@{planarity}!examine\+\_\+obstruction@{examine\+\_\+obstruction}}
+\index{examine\+\_\+obstruction@{examine\+\_\+obstruction}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{examine\+\_\+obstruction()}{examine\_obstruction()}}
+{\footnotesize\ttfamily void planarity\+::examine\+\_\+obstruction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{st,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{act,  }\item[{\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$}]{fail,  }\item[{bool}]{failed\+\_\+at\+\_\+root,  }\item[{\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ std\+::list$<$ \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $>$ $>$ \&}]{dirs,  }\item[{\mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}} $\ast$}]{PQ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 548 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+556 \{
+557     \mbox{\hyperlink{classnode__map}{node\_map<int>}} used (G, 0);
+558     \mbox{\hyperlink{classnode__map}{node\_map<edge>}} to\_father (G);
+559 
+560     \textcolor{comment}{//}
+561     \textcolor{comment}{// Create a dfs-tree of the so called bush form. This is basically a normal dfs }
+562     \textcolor{comment}{// applied to the induced subgraph of G consisting only of the nodes with st\_number }
+563     \textcolor{comment}{// 1, ..., st\_[act] - 1. The only difference is that edges are always directed from }
+564     \textcolor{comment}{// the lower numbered vertex to higher numbered one.}
+565     \textcolor{comment}{//}
+566 
+567     \mbox{\hyperlink{classplanarity_abb8f97559c265376a7467d642a331a7a}{dfs\_bushform}} (st\_.s\_node(), used, st\_, st\_[act], to\_father);
+568 
+569     \textcolor{keywordflow}{if} (fail->\mbox{\hyperlink{classpq__node_aa9873c0cfad88bc4404857ce57d422e4}{kind}}() == \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{pq\_node::Q\_NODE}}) \{
+570 
+571     \textcolor{comment}{//}
+572     \textcolor{comment}{// In case the reduction failed at a Q-Node we need to know the edges that }
+573     \textcolor{comment}{// form the boundary of the biconnected component, which this Q-Node represents.}
+574     \textcolor{comment}{// These can easily be obtained from the embedding we got so far.}
+575     \textcolor{comment}{//}
+576 
+577     \mbox{\hyperlink{classq__node}{q\_node}}* q\_fail = fail->\mbox{\hyperlink{classpq__node_aeeefcfcd19dbe4ca94e190006e8dd484}{Q}}();
+578 
+579     \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} s\_it = q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+580     \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} s\_end = q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}();
+581     \mbox{\hyperlink{classnode}{node}} greatest = fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+582 
+583     \textcolor{keywordflow}{while} (s\_it != s\_end)  \{
+584         \textcolor{keywordflow}{if} ((*s\_it)->kind() == \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}{pq\_node::DIR}}) \{
+585         \mbox{\hyperlink{classdirection__indicator}{direction\_indicator}}* dir = (*s\_it)->\mbox{\hyperlink{classdirection__indicator_aef2ff42f0a64c7d10fbf42059c008f38}{D}}();
+586         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = s\_it;
+587         
+588         \textcolor{keywordflow}{if} (++tmp == ++(dir->\mbox{\hyperlink{classpq__node_a5e8a5defa0fec4ff2e82fabee97296b4}{pos}})) \{
+589             dir->\mbox{\hyperlink{classdirection__indicator_a16b023545435b012abc433a0b43dc35f}{direction}} = \textcolor{keyword}{true};
+590         \} \textcolor{keywordflow}{else} \{
+591             dir->\mbox{\hyperlink{classdirection__indicator_a16b023545435b012abc433a0b43dc35f}{direction}} = \textcolor{keyword}{false};
+592         \}
+593 
+594         dirs[act].push\_back (*dir);
+595 
+596         \textcolor{comment}{//}
+597         \textcolor{comment}{// chris 2/3/2008:}
+598         \textcolor{comment}{//}
+599         \textcolor{comment}{// To avoid a memory leak, it is not sufficient to erase it from the}
+600         \textcolor{comment}{// PQ-tree (-node). The direction indicator object also has to be}
+601         \textcolor{comment}{// deleted. Since it is then not a member of the pertinent subtree any}
+602         \textcolor{comment}{// more, it must not be cleared by PQ->reset(). The instance in the}
+603         \textcolor{comment}{// dirs node map is a clone!}
+604         \textcolor{comment}{//}
+605 
+606         \textcolor{comment}{// s\_it = q\_fail->sons.erase (s\_it);}
+607         s\_it = PQ->\mbox{\hyperlink{classpq__tree_a68737f5cebd17670d9b73b797ca01a74}{remove\_dir\_ind}}(q\_fail, s\_it);
+608         \} \textcolor{keywordflow}{else} \{
+609         \textcolor{keywordflow}{if} (st\_[(*s\_it)->up] > st\_[greatest]) \{
+610             greatest = (*s\_it)->up;
+611         \}
+612 
+613         ++s\_it;
+614         \}
+615     \}
+616     
+617     \mbox{\hyperlink{classplanarity_a77eed115ba38b173357a3d8be8990f81}{correct\_embedding}} (em, st\_, dirs);
+618     \mbox{\hyperlink{classnode__map}{node\_map<int>}} mark;
+619     mark.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (G, 0);   
+620     \mbox{\hyperlink{classnode__map}{node\_map<symlist<edge>::iterator}} > upward\_begin;
+621     upward\_begin.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (G);
+622     \mbox{\hyperlink{classnode}{node}} tmp;
+623 
+624     em.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}}).\mbox{\hyperlink{classsymlist_a75fc1fc7db7b20cc430ddb8577608904}{erase}} (
+625         em.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}}).\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}(), 
+626         em.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}}).\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}());
+627 
+628     \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}} (tmp, G) \{
+629         upward\_begin[tmp] = em.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(tmp).\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+630     \}
+631 
+632     \textcolor{comment}{//}
+633     \textcolor{comment}{// chris 2/3/2008:}
+634     \textcolor{comment}{//}
+635     \textcolor{comment}{// With the code of MR 11/27/2001 the component of the failing Q-node is not found}
+636     \textcolor{comment}{// correctly.}
+637     \textcolor{comment}{//}
+638 
+639     \mbox{\hyperlink{classplanarity_aadcc35e5b8dbf9d7184efbc6ab845885}{extend\_embedding}}(greatest, em, mark, upward\_begin);
+640     
+641     \textcolor{comment}{/*}
+642 \textcolor{comment}{    //}
+643 \textcolor{comment}{    // MR 11/27/2001:}
+644 \textcolor{comment}{    //}
+645 \textcolor{comment}{    // This is important! We restricted building the embedding to the nodes in}
+646 \textcolor{comment}{    // the biconnected component which the Q-node fail refers to. But the st-number }
+647 \textcolor{comment}{    // obtained for the whole graph restricted to these nodes will not be a st-numbering }
+648 \textcolor{comment}{    // for this biconnected component. }
+649 \textcolor{comment}{    //}
+650 \textcolor{comment}{}
+651 \textcolor{comment}{    st\_number::reverse\_iterator st\_it, st\_end;}
+652 \textcolor{comment}{}
+653 \textcolor{comment}{    for (st\_it = st\_.rbegin(), st\_end = st\_.rend();}
+654 \textcolor{comment}{         st\_it != st\_end;}
+655 \textcolor{comment}{         ++st\_it) }
+656 \textcolor{comment}{    \{}
+657 \textcolor{comment}{        if (mark[*st\_it] == 0) \{}
+658 \textcolor{comment}{        extend\_embedding (*st\_it, em, mark, upward\_begin);}
+659 \textcolor{comment}{        \}}
+660 \textcolor{comment}{    \}}
+661 \textcolor{comment}{    */}
+662 \textcolor{preprocessor}{#ifdef \_DEBUG}
+663     \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{"Embedding so far (st\_numbered): "} << std::endl;
+664     em.\mbox{\hyperlink{classplanar__embedding_a89f42af8495b23958da04a103bbfbcaf}{write\_st}} (\mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}(), st\_);
+665 \textcolor{preprocessor}{#endif }
+666 
+667     \mbox{\hyperlink{classplanarity_aa691156ebe0066bee3d629a6bdd81231}{attachment\_cycle}} (fail->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}}, em);
+668 
+669     \textcolor{keywordflow}{if} (!q\_fail->\mbox{\hyperlink{classq__node_a4677d97776d1d541a460fd9eac62cc07}{pert\_cons}}) \{
+670 
+671         \textcolor{comment}{//}
+672         \textcolor{comment}{// the reduction failed because there was more than one block }
+673         \textcolor{comment}{// of pertinent children. The reduction in this case assures that }
+674         \textcolor{comment}{// pert\_begin and pert\_end lie in different blocks and that }
+675         \textcolor{comment}{// --pert\_end is empty and lies between these two blocks.}
+676         \textcolor{comment}{//}
+677         \textcolor{comment}{// This is one of the two cases that may apply when the reduction }
+678         \textcolor{comment}{// fails already in bubble up. The reduction takes care of this.}
+679         \textcolor{comment}{//}
+680 
+681         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE C (non consecutive pertinent children)\(\backslash\)n"});
+682         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}};
+683         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* leaves[3];
+684         \mbox{\hyperlink{classnode}{node}} nodes[3];
+685         leaves[0] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+686         nodes[0] = (*tmp)->up;
+687 
+688         tmp = q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}};
+689         leaves[2] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+690         nodes[2] = (*tmp)->up;
+691         
+692         --tmp;
+693         \textcolor{keywordflow}{while} ((*tmp)->kind() == \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}{pq\_node::DIR}}) \{
+694         --tmp;
+695         \}
+696 
+697         leaves[1] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+698         nodes[1] = (*tmp)->up;
+699         
+700         \mbox{\hyperlink{classplanarity_a74f765d62afabf54c43c42f3c127c9d9}{case\_C}} (nodes, leaves, st\_, to\_father, G, q\_fail);
+701 
+702     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!(*(q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}}))->is\_endmost && !is\_root) \{
+703 
+704         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE D (non-root q-node with both endmost sons
+       empty)\(\backslash\)n"});
+705         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.
+      \mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+706         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* leaves[3];
+707         \mbox{\hyperlink{classnode}{node}} nodes[3];
+708         leaves[0] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+709         nodes[0] = (*tmp)->up;
+710 
+711         tmp = --(q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}());
+712         leaves[2] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+713         nodes[2] = (*tmp)->up;
+714         
+715         tmp = q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}};
+716         leaves[1] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+717         nodes[1] = (*tmp)->up;
+718 
+719         \mbox{\hyperlink{classplanarity_a0218e3db9d0ff3a27a03a992c22d0562}{case\_D}} (nodes, leaves, st\_, to\_father, G, q\_fail);           
+720 
+721     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (q\_fail->\mbox{\hyperlink{classq__node_a7ba602eae7be6811ac965bf95521a513}{partial\_count}} == 1) \{
+722         \textcolor{keywordflow}{if} (q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[0] == q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}}) \{        
+723         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE D (non-root q-node with partial child at
+       end of pertinent children\(\backslash\)n"});
+724         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.
+      \mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+725         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* leaves[3];
+726         \mbox{\hyperlink{classnode}{node}} nodes[3];
+727         leaves[0] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+728         nodes[0] = (*tmp)->up;
+729         
+730         tmp = q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}};
+731         leaves[2] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+732         nodes[2] = (*tmp)->up;
+733         
+734         tmp = q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}};
+735         leaves[1] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+736         nodes[1] = (*tmp)->up;
+737         
+738         \mbox{\hyperlink{classplanarity_a0218e3db9d0ff3a27a03a992c22d0562}{case\_D}} (nodes, leaves, st\_, to\_father, G, q\_fail);        
+739         \} \textcolor{keywordflow}{else} \{
+740         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE C (q-node with partial children surrounded
+       by pertinent children)\(\backslash\)n"});
+741         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}};
+742         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* leaves[3];
+743         \mbox{\hyperlink{classnode}{node}} nodes[3];
+744         leaves[0] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+745         nodes[0] = (*tmp)->up;
+746         
+747         tmp = q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}};
+748         leaves[2] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+749         nodes[2] = (*tmp)->up;
+750         
+751         tmp = q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[0];
+752         leaves[1] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+753         nodes[1] = (*tmp)->up;
+754         
+755         
+756         \mbox{\hyperlink{classplanarity_a74f765d62afabf54c43c42f3c127c9d9}{case\_C}} (nodes, leaves, st\_, to\_father, G, q\_fail);
+757         \}
+758         
+759     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[0] == q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}} ||
+760             q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[0] == q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}}) && 
+761            (q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[1] == q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}} ||
+762             q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[1] == q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}})) \{
+763 
+764         \textcolor{keywordflow}{if} (++(q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}()) == --(q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}())) \{
+765 
+766         \textcolor{comment}{//}
+767         \textcolor{comment}{// q\_node with two children, which are both partial.}
+768         \textcolor{comment}{//}
+769 
+770         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.
+      \mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+771         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* leaves[4];
+772         \mbox{\hyperlink{classnode}{node}} nodes[2];
+773         leaves[0] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+774         nodes[0] = (*tmp)->up;
+775         leaves[1] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+776         
+777         ++tmp;
+778         leaves[2] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+779         nodes[1] = (*tmp)->up;
+780         leaves[3] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+781 
+782         \mbox{\hyperlink{classplanarity_a0cf0ff94965eb40f5be5c07999e7e1bd}{case\_E}} (nodes, leaves, st\_, to\_father, G, q\_fail);        
+783 
+784         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (q\_fail->\mbox{\hyperlink{classq__node_a7ba602eae7be6811ac965bf95521a513}{partial\_count}} == 2) \{
+785         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE D (non-root q\_node with first and last
+       pertinent children partial)\(\backslash\)n"});
+786 
+787         \textcolor{comment}{//}
+788         \textcolor{comment}{// sons.begin() is empty, pert\_begin is partial, pert\_end is partial}
+789         \textcolor{comment}{//}
+790 
+791         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.
+      \mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+792         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* leaves[3];
+793         \mbox{\hyperlink{classnode}{node}} nodes[3];
+794         leaves[0] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+795         nodes[0] = (*tmp)->up;
+796         
+797         tmp = q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}};
+798         leaves[2] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+799         nodes[2] = (*tmp)->up;
+800         
+801         tmp = q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}};
+802 
+803         \textcolor{keywordflow}{if} (tmp == q\_fail->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}()) \{
+804             ++tmp;
+805         \}
+806 
+807         leaves[1] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+808         nodes[1] = (*tmp)->up;
+809         
+810         \mbox{\hyperlink{classplanarity_a0218e3db9d0ff3a27a03a992c22d0562}{case\_D}} (nodes, leaves, st\_, to\_father, G, q\_fail);        
+811 
+812         \} \textcolor{keywordflow}{else} \{
+813         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE C (q\_node with at least three partial
+       children)\(\backslash\)n"});
+814 
+815         \textcolor{comment}{//}
+816         \textcolor{comment}{// There must be at least one other partial child among the pertinent.}
+817         \textcolor{comment}{//}
+818         
+819         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}};
+820         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* leaves[3];
+821         \mbox{\hyperlink{classnode}{node}} nodes[3];
+822         leaves[0] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+823         nodes[0] = (*tmp)->up;
+824         
+825         tmp = q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}};
+826         leaves[2] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+827         nodes[2] = (*tmp)->up;
+828         
+829         tmp = q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[2];
+830         leaves[1] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+831         nodes[1] = (*tmp)->up;
+832                 
+833         \mbox{\hyperlink{classplanarity_a74f765d62afabf54c43c42f3c127c9d9}{case\_C}} (nodes, leaves, st\_, to\_father, G, q\_fail);
+834         \}
+835 
+836     \} \textcolor{keywordflow}{else} \{
+837         
+838         \textcolor{comment}{//}
+839         \textcolor{comment}{// At least one partial son is in between the pertinent sons.}
+840         \textcolor{comment}{//}
+841 
+842         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE C (q\_node with at least two partial
+       children, at least one surrounded by pertinent)\(\backslash\)n"});
+843         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} tmp = q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}};
+844         \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* leaves[3];
+845         \mbox{\hyperlink{classnode}{node}} nodes[3];
+846         leaves[0] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+847         nodes[0] = (*tmp)->up;
+848         
+849         tmp = q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}};
+850         leaves[2] = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*tmp);
+851         nodes[2] = (*tmp)->up;
+852         
+853         tmp = q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[0];
+854         
+855         \textcolor{keywordflow}{if} (tmp == q\_fail->\mbox{\hyperlink{classq__node_ac636443853e4074a0e6c441d7bcb249a}{pert\_begin}} || tmp == q\_fail->\mbox{\hyperlink{classq__node_a7a331cc1f5d9f7b4b77b7b25b4976c3b}{pert\_end}}) \{
+856         tmp = q\_fail->\mbox{\hyperlink{classq__node_a208c9c95b39a077c27504f7c1e534a52}{partial\_pos}}[1];
+857         \}
+858         
+859         leaves[1] = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*tmp);
+860         nodes[1] = (*tmp)->up;
+861         
+862         \mbox{\hyperlink{classplanarity_a74f765d62afabf54c43c42f3c127c9d9}{case\_C}} (nodes, leaves, st\_, to\_father, G, q\_fail);
+863     \}
+864 
+865     \} \textcolor{keywordflow}{else} \{
+866 
+867     \textcolor{comment}{//}
+868     \textcolor{comment}{// pert\_root is a P-Node ==> at least two partial children.}
+869     \textcolor{comment}{//}
+870 
+871     \mbox{\hyperlink{classp__node}{p\_node}}* p\_fail = fail->\mbox{\hyperlink{classpq__node_a72178a268ee1ece3ac106ac5fea3b12c}{P}}();
+872 
+873     \textcolor{keywordflow}{if} (p\_fail->\mbox{\hyperlink{classp__node_a9ac93f9a0f474dcc74312e820fde73b6}{partial\_count}} == 2) \{
+874         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE B (non-root p-node with two partial
+       children)\(\backslash\)n"});
+875         \mbox{\hyperlink{classplanarity_a63bfa8c2a4ab5454b71b1e522c2ff41d}{case\_B}} (p\_fail, act, st\_, to\_father, G);
+876     
+877     \} \textcolor{keywordflow}{else} \{
+878 
+879         \textcolor{comment}{//}
+880         \textcolor{comment}{// We have at least three partial children }
+881         \textcolor{comment}{//}
+882 
+883         \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"CASE A (p-node with at least three partial
+       children)\(\backslash\)n"});
+884         \mbox{\hyperlink{classplanarity_a6eda46f0aedd2fe3503b0b2829863d50}{case\_A}} (p\_fail, act, st\_, to\_father, G);
+885     \}   
+886     \}   
+887 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classplanarity_ab43c7267ba8b0895b8ef71b66c7863a0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_ab43c7267ba8b0895b8ef71b66c7863a0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_aadcc35e5b8dbf9d7184efbc6ab845885}\label{classplanarity_aadcc35e5b8dbf9d7184efbc6ab845885}} 
+\index{planarity@{planarity}!extend\+\_\+embedding@{extend\+\_\+embedding}}
+\index{extend\+\_\+embedding@{extend\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{extend\+\_\+embedding()}{extend\_embedding()}}
+{\footnotesize\ttfamily void planarity\+::extend\+\_\+embedding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n,  }\item[{\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{mark,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$\+::iterator $>$ \&}]{upward\+\_\+begin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 492 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+497 \{
+498     mark[n] = 1;
+499     
+500     \mbox{\hyperlink{structsymlist__iterator}{symlist<edge>::iterator}} it = upward\_begin[n];
+501     \mbox{\hyperlink{structsymlist__iterator}{symlist<edge>::iterator}} end = em.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(n).
+      \mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}();
+502     \mbox{\hyperlink{classnode}{node}} other;
+503 
+504     \textcolor{keywordflow}{for} (; it != end; ++it) \{
+505     em.\mbox{\hyperlink{classplanar__embedding_aaba1216e3c7497267573cc56b4368929}{pos}} (n, *it) = it;
+506     other = n.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*it);
+507     em.\mbox{\hyperlink{classplanar__embedding_aaba1216e3c7497267573cc56b4368929}{pos}} (other, *it) = em.\mbox{\hyperlink{classplanar__embedding_a86c50db702b25d54b2fe12350baed7f4}{push\_front}} (other, *it);
+508 
+509     \textcolor{keywordflow}{if} (mark[other] == 0) \{
+510         \mbox{\hyperlink{classplanarity_aadcc35e5b8dbf9d7184efbc6ab845885}{extend\_embedding}} (other, em, mark, upward\_begin);
+511     \}
+512     \}
+513 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_aadcc35e5b8dbf9d7184efbc6ab845885_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_aadcc35e5b8dbf9d7184efbc6ab845885_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}\label{classplanarity_a9ab79a340e361c3300cc08e82edd4e12}} 
+\index{planarity@{planarity}!get\+\_\+embedding@{get\+\_\+embedding}}
+\index{get\+\_\+embedding@{get\+\_\+embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{get\+\_\+embedding()}{get\_embedding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}}\& planarity\+::get\+\_\+embedding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+If graph in last \mbox{\hyperlink{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}{run}} was planar a planar embedding is calculated during the reductions. This function gives access to it. 
+
+\begin{DoxyReturn}{Returns}
+planar embedding of graph in last run
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a1679e285a7135b48b572764f5e8e773d}{calc\+\_\+embedding}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 220 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+221     \{
+222     \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}};
+223     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_a2fb449a1f808e913bddb58b86a68fe31}\label{classplanarity_a2fb449a1f808e913bddb58b86a68fe31}} 
+\index{planarity@{planarity}!get\+\_\+obstruction\+\_\+edges@{get\+\_\+obstruction\+\_\+edges}}
+\index{get\+\_\+obstruction\+\_\+edges@{get\+\_\+obstruction\+\_\+edges}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{get\+\_\+obstruction\+\_\+edges()}{get\_obstruction\_edges()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}}\& planarity\+::get\+\_\+obstruction\+\_\+edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the edges of a subgraph homeomorphic to either K3,3 or K5 if graph in last run was not planar. 
+
+\begin{DoxyReturn}{Returns}
+edges of subgraph homeomorphic to either K3,3 or K5
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a56b2a0ca430be351ca5be7f9095824ea}{get\+\_\+obstruction\+\_\+nodes}} 
+
+\mbox{\hyperlink{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}{calc\+\_\+obstruction}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 234 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+235     \{
+236     \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}};
+237     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_a56b2a0ca430be351ca5be7f9095824ea}\label{classplanarity_a56b2a0ca430be351ca5be7f9095824ea}} 
+\index{planarity@{planarity}!get\+\_\+obstruction\+\_\+nodes@{get\+\_\+obstruction\+\_\+nodes}}
+\index{get\+\_\+obstruction\+\_\+nodes@{get\+\_\+obstruction\+\_\+nodes}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{get\+\_\+obstruction\+\_\+nodes()}{get\_obstruction\_nodes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}}\& planarity\+::get\+\_\+obstruction\+\_\+nodes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the nodes of a subgraph homeomorphic to either K3,3 or K5 if graph in last run was not planar. 
+
+\begin{DoxyReturn}{Returns}
+nodes of subgraph homeomorphic to either K3,3 or K5
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classplanarity_a2fb449a1f808e913bddb58b86a68fe31}{get\+\_\+obstruction\+\_\+edges}} 
+
+\mbox{\hyperlink{classplanarity_a7b8e8e5414a4eedb0f99253d3b62ffa3}{calc\+\_\+obstruction}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 248 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+249     \{
+250     \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}};
+251     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_af60c3d06cffa7ce3a470797fd758be5f}\label{classplanarity_af60c3d06cffa7ce3a470797fd758be5f}} 
+\index{planarity@{planarity}!is\+\_\+planar@{is\+\_\+planar}}
+\index{is\+\_\+planar@{is\+\_\+planar}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{is\+\_\+planar()}{is\_planar()}}
+{\footnotesize\ttfamily bool planarity\+::is\+\_\+planar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Result of last test. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff graph in last run was planar. \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 207 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+208     \{
+209     \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_a1903d614fa185e5286904ecf76ab85dd}{planar}};
+210     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_af67236533dce559d2670eae581750f54}\label{classplanarity_af67236533dce559d2670eae581750f54}} 
+\index{planarity@{planarity}!make\+\_\+biconnected@{make\+\_\+biconnected}}
+\index{make\+\_\+biconnected@{make\+\_\+biconnected}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{make\+\_\+biconnected()}{make\_biconnected()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void planarity\+::make\+\_\+biconnected (\begin{DoxyParamCaption}\item[{bool}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determines the strategy used to test a graph which is not biconnected. 
+
+If this is enabled the graph will be made biconnected by adding some new edges. This is usually faster than testing the biconnected components one by one, which is done if this option is disabled. By default this is enabled.
+
+\begin{DoxyNote}{Note}
+This is not fully tested, i.\+e. at the moment this feature should be used only for the test without embedding or kuratowski graphs.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & true iff graph should be made biconnected\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}{biconnectivity\+::make\+\_\+biconnected}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 184 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+185     \{
+186     \mbox{\hyperlink{classplanarity_ab376973a35dc0b89e7fabdb946693b82}{bip}} = p;
+187     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_a822d67100814e1887494e7213e6f0531}\label{classplanarity_a822d67100814e1887494e7213e6f0531}} 
+\index{planarity@{planarity}!make\+\_\+biconnected@{make\+\_\+biconnected}}
+\index{make\+\_\+biconnected@{make\+\_\+biconnected}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{make\+\_\+biconnected()}{make\_biconnected()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool planarity\+::make\+\_\+biconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns strategy for testing graphs, which are not biconnected. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & iff graph will be made biconnected before test\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}{biconnectivity\+::make\+\_\+biconnected}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 197 of file planarity.\+h.
+
+
+\begin{DoxyCode}
+198     \{
+199     \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_ab376973a35dc0b89e7fabdb946693b82}{bip}};
+200     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}\label{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}} 
+\index{planarity@{planarity}!mark\+\_\+all\+\_\+neighbors\+\_\+of\+\_\+leaves@{mark\+\_\+all\+\_\+neighbors\+\_\+of\+\_\+leaves}}
+\index{mark\+\_\+all\+\_\+neighbors\+\_\+of\+\_\+leaves@{mark\+\_\+all\+\_\+neighbors\+\_\+of\+\_\+leaves}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{mark\+\_\+all\+\_\+neighbors\+\_\+of\+\_\+leaves()}{mark\_all\_neighbors\_of\_leaves()}}
+{\footnotesize\ttfamily void planarity\+::mark\+\_\+all\+\_\+neighbors\+\_\+of\+\_\+leaves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$}]{act,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{mark }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1502 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1503 \{
+1504     \textcolor{keywordflow}{if} (act->\mbox{\hyperlink{classpq__node_aa9873c0cfad88bc4404857ce57d422e4}{kind}}() == \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}{pq\_node::LEAF}}) \{
+1505         mark[((\mbox{\hyperlink{classpq__leaf}{pq\_leaf}}*)act)->e.opposite(((\mbox{\hyperlink{classpq__leaf}{pq\_leaf}}*)act)->n)] = 1;
+1506     \} \textcolor{keywordflow}{else} \{
+1507         \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} it, end;
+1508 
+1509         \textcolor{keywordflow}{for} (it = act->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}(), end = act->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}(); it != end; ++it) \{
+1510             \mbox{\hyperlink{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de}{mark\_all\_neighbors\_of\_leaves}} (*it, mark);
+1511         \}
+1512     \}
+1513 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_afc9d8b36f02294f85ca4eae9a6cb30de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_aca500e3d46a99c6231aff86afa2a71b1}\label{classplanarity_aca500e3d46a99c6231aff86afa2a71b1}} 
+\index{planarity@{planarity}!reset@{reset}}
+\index{reset@{reset}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void planarity\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets algorithm object, such that it can be applied to another graph. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+
+
+
+Definition at line 446 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+447 \{
+448     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.erase (\mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.begin(), \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.end());
+449     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.erase (\mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.begin(), \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.end());
+450 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}\label{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc}} 
+\index{planarity@{planarity}!run@{run}}
+\index{run@{run}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int planarity\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Runs planarity test on {\ttfamily G}. 
+
+This should return always {\ttfamily G\+T\+L\+\_\+\+OK}. The return value only tracks errors that might occur, it is definitly {\itshape not} the result of the test itself. The result of the test is stored in a member variable and can be accessed via \mbox{\hyperlink{classplanarity_af60c3d06cffa7ce3a470797fd758be5f}{is\+\_\+planar}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & arbitrary graph\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em G\+T\+L\+\_\+\+OK} & if planarity test was sucessfully applied \\
+\hline
+{\em G\+T\+L\+\_\+\+E\+R\+R\+OR} & if not\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+
+
+
+Definition at line 321 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+322 \{      
+323     \textcolor{keywordtype}{bool} directed = \textcolor{keyword}{false};
+324     
+325     \textcolor{keywordflow}{if} (G.\mbox{\hyperlink{classgraph_afc510be7479fa903fde9e0e615470ab0}{is\_directed}}()) \{
+326     G.\mbox{\hyperlink{classgraph_a31c8b895bd842f1b9dcc67649956cfc7}{make\_undirected}}();
+327     directed = \textcolor{keyword}{true};
+328     \}
+329     
+330     \mbox{\hyperlink{classbiconnectivity}{biconnectivity}} biconn;
+331     
+332     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ab376973a35dc0b89e7fabdb946693b82}{bip}}) \{
+333     biconn.\mbox{\hyperlink{classbiconnectivity_a774fd08203a6d164605afc4cdc8b9201}{make\_biconnected}} (\textcolor{keyword}{true});
+334     \} \textcolor{keywordflow}{else} \{
+335     biconn.\mbox{\hyperlink{classbiconnectivity_a1234e7a70f50fd60c855529fe6fa4acb}{store\_components}} (\textcolor{keyword}{true});
+336     \}
+337 
+338     biconn.\mbox{\hyperlink{classbiconnectivity_a65e0e821f5e9ce8d210648d462fd2cfa}{check}} (G);
+339     biconn.\mbox{\hyperlink{classdfs_af0863b8974d5fd58cd0375c78ed8163b}{run}} (G);
+340     
+341     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+342     \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_af87cba1fc6c770acc347c8196ab12469}{init}} (G);
+343     \}
+344 
+345     \mbox{\hyperlink{classplanar__embedding}{planar\_embedding}} em;
+346 
+347     \textcolor{keywordflow}{if} (!biconn.\mbox{\hyperlink{classbiconnectivity_a50e7cee997b6d56ccbb9ae3fd039d9cd}{is\_biconnected}}() && !\mbox{\hyperlink{classplanarity_ab376973a35dc0b89e7fabdb946693b82}{bip}}) \{
+348     \mbox{\hyperlink{classbiconnectivity_aef69aa0c23bfcd945e385350154b6483}{biconnectivity::component\_iterator}} c\_it, c\_end;
+349 
+350     \textcolor{keywordflow}{for} (c\_it = biconn.\mbox{\hyperlink{classbiconnectivity_ac0b7253533edc3f1412f771cb35bf04a}{components\_begin}}(), c\_end = biconn.
+      \mbox{\hyperlink{classbiconnectivity_a0bd1c70975e664174e591efd64f8dc71}{components\_end}}(); 
+351     c\_it != c\_end; ++c\_it) \{
+352         
+353         \mbox{\hyperlink{classplanarity_a8a66dd6682b3111e39be103db127e6b0}{switch\_to\_component}} (G, c\_it);
+354         
+355 \textcolor{preprocessor}{#ifdef \_DEBUG}
+356         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{"Component is: "} << std::endl;
+357         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << G << std::endl;
+358 \textcolor{preprocessor}{#endif}
+359         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classplanarity_a0a1949c82648889d188b2e748bc461da}{run\_on\_biconnected}} (G, em)) \{
+360         \textcolor{keywordflow}{if} (directed) \{
+361             G.\mbox{\hyperlink{classgraph_a1615678dee6248d6d8a00c553770b3bd}{make\_directed}}();
+362         \}
+363         
+364         G.\mbox{\hyperlink{classgraph_a53e2a5505fa6427587e12d66e4a86cec}{restore\_graph}}();
+365         \mbox{\hyperlink{classplanarity_a1903d614fa185e5286904ecf76ab85dd}{planar}} = \textcolor{keyword}{false};
+366         \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}};
+367         \}
+368      
+369         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+370         \mbox{\hyperlink{classplanarity_a6c522b680b3758d044d1b2c6fce32643}{add\_to\_embedding}} (G, em);
+371         \}
+372     \}
+373     
+374     G.\mbox{\hyperlink{classgraph_a53e2a5505fa6427587e12d66e4a86cec}{restore\_graph}}();
+375 
+376     \} \textcolor{keywordflow}{else} \{
+377 
+378     \textcolor{comment}{//}
+379     \textcolor{comment}{// G is already biconnected}
+380     \textcolor{comment}{//}
+381     
+382     \mbox{\hyperlink{class_g_t_l__debug_aca4c2fb24203b5fba5e4ffa9c2fa263f}{GTL\_debug::debug\_message}} (\textcolor{stringliteral}{"graph is biconnected\(\backslash\)n"});
+383 
+384     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classplanarity_a0a1949c82648889d188b2e748bc461da}{run\_on\_biconnected}} (G, \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}})) \{
+385         \textcolor{keywordflow}{if} (directed) \{
+386         G.\mbox{\hyperlink{classgraph_a1615678dee6248d6d8a00c553770b3bd}{make\_directed}}();
+387         \}
+388         
+389         \mbox{\hyperlink{classplanarity_a1903d614fa185e5286904ecf76ab85dd}{planar}} = \textcolor{keyword}{false};
+390         \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}};
+391     \}   
+392     \}
+393 
+394     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ab376973a35dc0b89e7fabdb946693b82}{bip}}) \{
+395         edges\_t::iterator it, end;
+396     it = biconn.\mbox{\hyperlink{classbiconnectivity_a9560cdde8a90c12760b9930c494be410}{additional\_begin}}();
+397     end = biconn.\mbox{\hyperlink{classbiconnectivity_a801847685ebf2b5727743cd21401e88c}{additional\_end}}();
+398     
+399     \textcolor{keywordflow}{for} (; it != end; ++it) \{
+400 
+401         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+402         \mbox{\hyperlink{classnode}{node}} s = it->source();
+403         \mbox{\hyperlink{classnode}{node}} t = it->target();
+404         \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_ab38b177135ce20960d7e0f3edefd5abf}{adj}}[s].erase (\mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_ab2501eeccdc8da9c28a7613c4a2cd5b6}{s\_pos}}[*it]);
+405         \mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_ab38b177135ce20960d7e0f3edefd5abf}{adj}}[t].erase (\mbox{\hyperlink{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}{embedding}}.\mbox{\hyperlink{classplanar__embedding_a3fb78643786d67c3439dd8b5afc2f136}{t\_pos}}[*it]);
+406         \}
+407 
+408         G.\mbox{\hyperlink{classgraph_ad9356508c49c542dfd4b7169297387c6}{del\_edge}} (*it);
+409     \}
+410     \}
+411 
+412     \textcolor{keywordflow}{if} (directed) \{
+413     G.\mbox{\hyperlink{classgraph_a1615678dee6248d6d8a00c553770b3bd}{make\_directed}}();
+414     \}
+415 
+416     \mbox{\hyperlink{classplanarity_a1903d614fa185e5286904ecf76ab85dd}{planar}} = \textcolor{keyword}{true};
+417     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}};
+418 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classplanarity_a93232e765c08dd2a4c00d192bb48b5fc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a0a1949c82648889d188b2e748bc461da}\label{classplanarity_a0a1949c82648889d188b2e748bc461da}} 
+\index{planarity@{planarity}!run\+\_\+on\+\_\+biconnected@{run\+\_\+on\+\_\+biconnected}}
+\index{run\+\_\+on\+\_\+biconnected@{run\+\_\+on\+\_\+biconnected}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{run\+\_\+on\+\_\+biconnected()}{run\_on\_biconnected()}}
+{\footnotesize\ttfamily bool planarity\+::run\+\_\+on\+\_\+biconnected (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} \&}]{em }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 47 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+48 \{
+49 
+50     \textcolor{keywordflow}{if} (G.\mbox{\hyperlink{classgraph_aa4fcbe7bf572dc800068873ccfb4d95a}{number\_of\_edges}}() == 0) \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}};
+51     
+52     \mbox{\hyperlink{classst__number}{st\_number}} st\_;
+53     
+54     \textcolor{comment}{//}
+55     \textcolor{comment}{// The graph may have self loops. Make sure that we }
+56     \textcolor{comment}{// choose a normal edge for st.}
+57     \textcolor{comment}{//}
+58 
+59     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} 
+60     edge\_it = G.\mbox{\hyperlink{classgraph_a7ba35a4c4e8343ffb27ed6d9703c6f18}{edges\_begin}}(), 
+61     edge\_end = G.\mbox{\hyperlink{classgraph_aea8d7f976b85b6137f52d915e26639f6}{edges\_end}}();
+62 
+63     \mbox{\hyperlink{classedge}{edge}} st;
+64 
+65     \textcolor{keywordflow}{while} (edge\_it != edge\_end) \{
+66     \textcolor{keywordflow}{if} (edge\_it->source() != edge\_it->target()) \{
+67         st = *edge\_it;
+68         \textcolor{keywordflow}{break};
+69     \}
+70     ++edge\_it;
+71     \}
+72 
+73     \textcolor{comment}{//}
+74     \textcolor{comment}{// G has only selfloops}
+75     \textcolor{comment}{//}
+76 
+77     \textcolor{keywordflow}{if} (st == \mbox{\hyperlink{classedge}{edge}}()) \{
+78     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+79         em.\mbox{\hyperlink{classplanar__embedding_af87cba1fc6c770acc347c8196ab12469}{init}} (G);
+80         edge\_it = G.\mbox{\hyperlink{classgraph_a7ba35a4c4e8343ffb27ed6d9703c6f18}{edges\_begin}}();
+81         edge\_end = G.\mbox{\hyperlink{classgraph_aea8d7f976b85b6137f52d915e26639f6}{edges\_end}}();
+82     
+83         \textcolor{keywordflow}{for} (;edge\_it != edge\_end; ++edge\_it) \{
+84         em.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}.push\_back (*edge\_it);
+85         \}
+86     \}
+87 
+88     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}};
+89     \}
+90 
+91     st\_.\mbox{\hyperlink{classst__number_a1564af6f603160105643f22bf2f6955b}{st\_edge}} (st);
+92     st\_.\mbox{\hyperlink{classst__number_aa607c9aaa5a4d9c45e5854ce672f0fda}{s\_node}} (st.\mbox{\hyperlink{classedge_ae82d5701f7e6f71edc3c8b0e34bcd2b7}{source}}());
+93     \textcolor{keywordtype}{int} res = st\_.\mbox{\hyperlink{classst__number_a2aad4550b821c52d6998bff35fd8648f}{check}}(G);
+94     assert (res == \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}});
+95     res = st\_.\mbox{\hyperlink{classst__number_af902a0c05d07d47b587e8f7a6b7beaa1}{run}}(G);
+96     assert (res == \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}});
+97     \textcolor{keywordtype}{int} size = G.\mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}();
+98 
+99     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+100     em.\mbox{\hyperlink{classplanar__embedding_af87cba1fc6c770acc347c8196ab12469}{init}} (G);
+101     \}
+102     
+103     std::list<pq\_leaf*> neighbors;
+104     \mbox{\hyperlink{classst__number_a3aa3701636f69a567c5f6a676afafd39}{st\_number::iterator}} st\_it = st\_.\mbox{\hyperlink{classst__number_a1eddb2577b16109d22cde98a8ffde057}{begin}}();
+105     \mbox{\hyperlink{classnode}{node}} curr = *st\_it;
+106     \mbox{\hyperlink{classnode_a90e17ed34de55072e8077f4367499a98}{node::out\_edges\_iterator}} o\_it = curr.\mbox{\hyperlink{classnode_a7dcb80df22118cea04f77ca8c952d9c2}{out\_edges\_begin}}();
+107     \mbox{\hyperlink{classnode_a90e17ed34de55072e8077f4367499a98}{node::out\_edges\_iterator}} o\_end = curr.\mbox{\hyperlink{classnode_a7ce2ba5195a63d4df6b44299a02a9378}{out\_edges\_end}}();
+108     \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{node::in\_edges\_iterator}} i\_it = curr.\mbox{\hyperlink{classnode_a0c32377f370ae52ed2134ff8d4dac584}{in\_edges\_begin}}();
+109     \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{node::in\_edges\_iterator}} i\_end = curr.\mbox{\hyperlink{classnode_a785cd330f8b4c5c47d3b6e936a7e744e}{in\_edges\_end}}();
+110     \mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\_t}} self\_loops;
+111     \mbox{\hyperlink{classnode}{node}} opp;
+112     \mbox{\hyperlink{classnode__map}{node\_map<int>}} visited\_from (G, 0);
+113     \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* tmp\_leaf;
+114     std::vector< std::list<pq\_leaf*> > leaves(size);
+115     
+116     \textcolor{keywordflow}{for} (; o\_it != o\_end; ++o\_it) \{
+117     opp = curr.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*o\_it);
+118 
+119     \textcolor{keywordflow}{if} (opp != curr) \{
+120         \textcolor{keywordflow}{if} (visited\_from[opp] == st\_[curr] && \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+121         em.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}.push\_back (*o\_it);
+122         \} \textcolor{keywordflow}{else} \{
+123         visited\_from[opp] = st\_[curr];
+124         tmp\_leaf = \textcolor{keyword}{new} \mbox{\hyperlink{classpq__leaf}{pq\_leaf}} (st\_[opp], st\_[curr], *o\_it, opp);
+125         leaves[st\_[opp]-1].push\_back (tmp\_leaf);
+126         neighbors.push\_back (tmp\_leaf);
+127         \}
+128 
+129     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+130         em.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}.push\_back (*o\_it);
+131     \}
+132     \}
+133     
+134     \textcolor{keywordflow}{for} (; i\_it != i\_end; ++i\_it) \{
+135     opp = curr.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*i\_it);
+136 
+137     \textcolor{keywordflow}{if} (opp != curr) \{
+138         \textcolor{keywordflow}{if} (visited\_from[opp] == st\_[curr] && \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+139         em.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}.push\_back (*i\_it);
+140         \} \textcolor{keywordflow}{else} \{
+141         visited\_from[opp] = st\_[curr];
+142         tmp\_leaf = \textcolor{keyword}{new} \mbox{\hyperlink{classpq__leaf}{pq\_leaf}} (st\_[opp], st\_[curr], *i\_it, opp);
+143         leaves[st\_[opp]-1].push\_back (tmp\_leaf);
+144         neighbors.push\_back (tmp\_leaf);
+145         \}
+146     \} 
+147     \}
+148 
+149     \mbox{\hyperlink{classnode__map}{node\_map<std::list<direction\_indicator>}} > dirs;
+150 
+151     \textcolor{comment}{//}
+152     \textcolor{comment}{// There is a problem with node/edge maps of iterators with Visual C++}
+153     \textcolor{comment}{// which I don´t fully understand at the moment. Fortunatly the init for the }
+154     \textcolor{comment}{// maps below is only needed to allocate memory, which is done anyway, when}
+155     \textcolor{comment}{// values are assigned to it.}
+156     \textcolor{comment}{//}
+157 
+158 \textcolor{preprocessor}{#ifndef \_\_GTL\_MSVCC}
+159     dirs.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (G);
+160 \textcolor{preprocessor}{#endif}
+161     \mbox{\hyperlink{classpq__tree}{pq\_tree}} PQ (st\_[curr], curr, neighbors);
+162     neighbors.erase (neighbors.begin(), neighbors.end());
+163     ++st\_it;
+164     curr = *st\_it;
+165     
+166     \textcolor{keywordflow}{while} (st\_[curr] < size) \{
+167         
+168 \textcolor{preprocessor}{#ifdef \_DEBUG}
+169     \textcolor{keywordtype}{char} filename[10] = \textcolor{stringliteral}{"out"};
+170     \textcolor{keywordtype}{char} buffer[12];
+171 \textcolor{preprocessor}{#ifdef \_\_GTL\_MSVCC}
+172     \_snprintf (buffer, 12, \textcolor{stringliteral}{"%s%d.gml"}, filename, st\_[curr]);
+173 \textcolor{preprocessor}{#else }
+174     snprintf (buffer, 12, \textcolor{stringliteral}{"%s%d.gml"}, filename, st\_[curr]);
+175 \textcolor{preprocessor}{#endif}
+176     std::ofstream os(buffer, std::ios::out | std::ios::trunc);
+177     os << PQ << std::endl;
+178     os.close();
+179     \textcolor{keywordtype}{bool} ret\_flag = PQ.integrity\_check();
+180     assert(ret\_flag);
+181 \textcolor{preprocessor}{#endif}
+182         
+183     \textcolor{keywordflow}{if} (!PQ.reduce (leaves[st\_[curr]-1])) \{
+184 \textcolor{preprocessor}{#ifdef \_DEBUG}
+185         os.open(\textcolor{stringliteral}{"fail.gml"}, std::ios::out | std::ios::trunc);
+186         os << PQ << std::endl;
+187         os.close ();
+188 \textcolor{preprocessor}{#endif          }
+189         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}{kup}}) \{
+190         \mbox{\hyperlink{classplanarity_ab43c7267ba8b0895b8ef71b66c7863a0}{examine\_obstruction}} (G, st\_, curr, 
+191             PQ.get\_fail(), PQ.is\_fail\_root(), em, dirs, &PQ);
+192         \}
+193 
+194         PQ.reset();
+195         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+196     \}
+197 
+198     
+199     \textcolor{comment}{//}
+200     \textcolor{comment}{// It seems to be not very comfortable to use in and out iterators to}
+201     \textcolor{comment}{// go through the adjacency of a node. For graphs without selfloops this}
+202     \textcolor{comment}{// could be replaced by using adj\_iterator, but if there are selfloops }
+203     \textcolor{comment}{// they will occur in both the list of outgoing and the one of incoming }
+204     \textcolor{comment}{// edges, and thus two times in the adjacency.}
+205     \textcolor{comment}{//}
+206 
+207     o\_it = curr.\mbox{\hyperlink{classnode_a7dcb80df22118cea04f77ca8c952d9c2}{out\_edges\_begin}}();
+208     o\_end = curr.\mbox{\hyperlink{classnode_a7ce2ba5195a63d4df6b44299a02a9378}{out\_edges\_end}}();
+209     i\_it = curr.\mbox{\hyperlink{classnode_a0c32377f370ae52ed2134ff8d4dac584}{in\_edges\_begin}}();
+210     i\_end = curr.\mbox{\hyperlink{classnode_a785cd330f8b4c5c47d3b6e936a7e744e}{in\_edges\_end}}();
+211         
+212     \textcolor{keywordflow}{for} (; o\_it != o\_end; ++o\_it) \{
+213         opp = curr.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*o\_it);
+214             
+215         \textcolor{keywordflow}{if} (st\_[opp] > st\_[curr]) \{
+216         \textcolor{keywordflow}{if} (visited\_from[opp] == st\_[curr] && \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+217             em.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}.push\_back (*o\_it);
+218         \} \textcolor{keywordflow}{else} \{
+219             visited\_from[opp] = st\_[curr];
+220             tmp\_leaf = \textcolor{keyword}{new} \mbox{\hyperlink{classpq__leaf}{pq\_leaf}} (st\_[opp], st\_[curr], *o\_it, opp);
+221             leaves[st\_[opp]-1].push\_back (tmp\_leaf);
+222             neighbors.push\_back (tmp\_leaf);
+223         \}
+224 
+225         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (st\_[opp] == st\_[curr] && \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+226         em.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}.push\_back (*o\_it);
+227         \}
+228     \}
+229     
+230     \textcolor{keywordflow}{for} (; i\_it != i\_end; ++i\_it) \{
+231         opp = curr.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*i\_it);
+232             
+233         \textcolor{keywordflow}{if} (st\_[opp] > st\_[curr]) \{
+234         \textcolor{keywordflow}{if} (visited\_from[opp] == st\_[curr] && \mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+235             em.\mbox{\hyperlink{classplanar__embedding_aab31798fadb25dd175b8dad72fff05a7}{multi}}.push\_back (*i\_it);
+236         \} \textcolor{keywordflow}{else} \{
+237             visited\_from[opp] = st\_[curr];
+238             tmp\_leaf = \textcolor{keyword}{new} \mbox{\hyperlink{classpq__leaf}{pq\_leaf}} (st\_[opp], st\_[curr], *i\_it, opp);
+239             leaves[st\_[opp]-1].push\_back (tmp\_leaf);
+240             neighbors.push\_back (tmp\_leaf);
+241         \}
+242         \}
+243     \}
+244         
+245     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+246         PQ.replace\_pert (st\_[curr], curr, neighbors, &em, &(dirs[curr]));
+247 \textcolor{preprocessor}{#ifdef \_DEBUG}
+248         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{"Embedding of "} << st\_[curr] << \textcolor{stringliteral}{":: "};
+249         \mbox{\hyperlink{structsymlist__iterator}{planar\_embedding::iterator}} adit, adend;
+250         \textcolor{keywordflow}{for} (adit = em.\mbox{\hyperlink{classplanar__embedding_ac0b41dd43adb80ed898b597e791230d8}{adj\_edges\_begin}} (curr), adend = em.
+      \mbox{\hyperlink{classplanar__embedding_a1345ee93995019d81cc78fb2806acc88}{adj\_edges\_end}} (curr); adit != adend; ++adit) \{
+251         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{"["} << st\_[curr.opposite (*adit)] << \textcolor{stringliteral}{"]"};
+252         \}
+253         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << std::endl;
+254         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{"Direction Indicators for: "} << st\_[curr] << \textcolor{stringliteral}{":: "};
+255         std::list<direction\_indicator>::iterator dit, dend;
+256 
+257         \textcolor{keywordflow}{for} (dit = dirs[curr].begin(), dend = dirs[curr].end(); dit != dend; ++dit) \{
+258         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{"["};
+259         \textcolor{keywordflow}{if} (dit->direction)
+260             \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{">> "} << dit->id << \textcolor{stringliteral}{" >>"};
+261         \textcolor{keywordflow}{else} 
+262             \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{"<< "} << dit->id << \textcolor{stringliteral}{" <<"};
+263         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << \textcolor{stringliteral}{"]"};
+264         \}
+265         \mbox{\hyperlink{class_g_t_l__debug_a40282dee89c7cd8ea6bd02856e6cd73f}{GTL\_debug::os}}() << std::endl;
+266 \textcolor{preprocessor}{#endif}
+267 
+268     \} \textcolor{keywordflow}{else} \{
+269         PQ.replace\_pert (st\_[curr], curr, neighbors);       
+270     \}
+271 
+272     PQ.reset();
+273 
+274 
+275     neighbors.erase (neighbors.begin(), neighbors.end());
+276     ++st\_it;
+277     curr = *st\_it;
+278     \}
+279     
+280     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classplanarity_ac926de19c53f6b456a582513f06eea9a}{emp}}) \{
+281     PQ.get\_frontier (em, dirs[curr]);
+282     
+283 
+284     \textcolor{comment}{//}
+285     \textcolor{comment}{// get self\_loops for last node}
+286     \textcolor{comment}{//}
+287 
+288     o\_it = curr.out\_edges\_begin();
+289     o\_end = curr.out\_edges\_end();
+290     
+291     \textcolor{keywordflow}{for} (; o\_it != o\_end; ++o\_it) \{
+292         \textcolor{keywordflow}{if} (o\_it->target() == o\_it->source()) \{
+293         em.\mbox{\hyperlink{classplanar__embedding_a4ccb009c01671125391c1ca74f42d340}{self}}.push\_back (*o\_it);
+294         \}
+295     \}
+296     
+297     \textcolor{comment}{//}
+298     \textcolor{comment}{// some adjcacency list of the embedding obtained so far have to be}
+299     \textcolor{comment}{// turned.}
+300     \textcolor{comment}{// }
+301 
+302     \mbox{\hyperlink{classplanarity_a77eed115ba38b173357a3d8be8990f81}{correct\_embedding}}(em, st\_, dirs);
+303         
+304     \mbox{\hyperlink{classnode__map}{node\_map<int>}} mark;
+305     mark.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (G, 0);   
+306     \mbox{\hyperlink{classnode__map}{node\_map<symlist<edge>::iterator}} > upward\_begin;
+307     upward\_begin.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (G);
+308     \mbox{\hyperlink{classnode}{node}} tmp;
+309     
+310     \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}} (tmp, G) \{
+311         upward\_begin[tmp] = em.\mbox{\hyperlink{classplanar__embedding_a151a1e7cf6cfbbd0a09c467ec8bc61d1}{adjacency}}(tmp).\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+312     \} 
+313 
+314     \mbox{\hyperlink{classplanarity_aadcc35e5b8dbf9d7184efbc6ab845885}{extend\_embedding}}(curr, em, mark, upward\_begin);
+315     \}
+316 
+317     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+318 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classplanarity_a0a1949c82648889d188b2e748bc461da_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classplanarity_a0a1949c82648889d188b2e748bc461da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a158282cba0f0ce0abeb4dfdacd358a38}\label{classplanarity_a158282cba0f0ce0abeb4dfdacd358a38}} 
+\index{planarity@{planarity}!run\+\_\+through\+\_\+partial@{run\+\_\+through\+\_\+partial}}
+\index{run\+\_\+through\+\_\+partial@{run\+\_\+through\+\_\+partial}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{run\+\_\+through\+\_\+partial()}{run\_through\_partial()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$ planarity\+::run\+\_\+through\+\_\+partial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$}]{partial,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{mark,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&}]{to\+\_\+father,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1516 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1517 \{
+1518     \mbox{\hyperlink{classpq__leaf}{pq\_leaf}}* tmp = \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (part);
+1519     \mbox{\hyperlink{classedge}{edge}} tmp\_edge = tmp->\mbox{\hyperlink{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}{e}};
+1520     \mbox{\hyperlink{classnode}{node}} tmp\_node = tmp->\mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}};
+1521     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (tmp\_edge);
+1522     tmp\_node = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (tmp\_node.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (tmp\_edge), mark, to\_father);
+1523 
+1524     tmp = \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (part);
+1525     tmp\_node = tmp->n;
+1526     tmp\_edge = tmp->e;
+1527     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (tmp\_edge);
+1528     tmp\_node = \mbox{\hyperlink{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}{up\_until\_marked}} (tmp\_node.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (tmp\_edge), mark, to\_father);
+1529     assert (tmp\_node != v);
+1530     \mbox{\hyperlink{classplanarity_af9ac45a388b224134ce1dd7e643901c8}{ob\_nodes}}.push\_back (tmp\_node);
+1531     
+1532     \textcolor{keywordflow}{return} tmp->L();
+1533 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a158282cba0f0ce0abeb4dfdacd358a38_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a158282cba0f0ce0abeb4dfdacd358a38_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}\label{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}} 
+\index{planarity@{planarity}!search\+\_\+empty\+\_\+leaf@{search\+\_\+empty\+\_\+leaf}}
+\index{search\+\_\+empty\+\_\+leaf@{search\+\_\+empty\+\_\+leaf}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{search\+\_\+empty\+\_\+leaf()}{search\_empty\_leaf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$ planarity\+::search\+\_\+empty\+\_\+leaf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1484 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1485 \{
+1486     \textcolor{keywordflow}{switch} (n->\mbox{\hyperlink{classpq__node_aa9873c0cfad88bc4404857ce57d422e4}{kind}}()) \{
+1487     \textcolor{keywordflow}{case} \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}{pq\_node::LEAF}}:
+1488     \textcolor{keywordflow}{return} n->\mbox{\hyperlink{classpq__node_a805b6ef48c847380b47c8ba882ed4ee2}{L}}();   
+1489     
+1490     \textcolor{keywordflow}{case} \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{pq\_node::Q\_NODE}}:
+1491     \textcolor{keywordflow}{case} \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{pq\_node::P\_NODE}}:
+1492     \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4}{search\_empty\_leaf}} (*(n->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}()));
+1493     
+1494     \textcolor{keywordflow}{default}:
+1495     assert (\textcolor{keyword}{false});
+1496     \textcolor{keywordflow}{return} 0;
+1497     \}
+1498 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a7ad1be6403fe0c9905dac72d32fd8ef4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}\label{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}} 
+\index{planarity@{planarity}!search\+\_\+full\+\_\+leaf@{search\+\_\+full\+\_\+leaf}}
+\index{search\+\_\+full\+\_\+leaf@{search\+\_\+full\+\_\+leaf}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{search\+\_\+full\+\_\+leaf()}{search\_full\_leaf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$ planarity\+::search\+\_\+full\+\_\+leaf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1467 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1468 \{
+1469     \textcolor{keywordflow}{switch} (n->\mbox{\hyperlink{classpq__node_aa9873c0cfad88bc4404857ce57d422e4}{kind}}()) \{
+1470     \textcolor{keywordflow}{case} \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}{pq\_node::LEAF}}:
+1471     \textcolor{keywordflow}{return} n->\mbox{\hyperlink{classpq__node_a805b6ef48c847380b47c8ba882ed4ee2}{L}}();   
+1472     
+1473     \textcolor{keywordflow}{case} \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{pq\_node::P\_NODE}}:
+1474     \textcolor{keywordflow}{case} \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{pq\_node::Q\_NODE}}:
+1475     \textcolor{keywordflow}{return} \mbox{\hyperlink{classplanarity_a28d9726f7d001b1a348bcf570ee650d6}{search\_full\_leaf}} (*(--(n->\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}())));
+1476 
+1477     \textcolor{keywordflow}{default}:
+1478     assert (\textcolor{keyword}{false});
+1479     \textcolor{keywordflow}{return} 0;
+1480     \}
+1481 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classplanarity_a28d9726f7d001b1a348bcf570ee650d6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a28d9726f7d001b1a348bcf570ee650d6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a8a66dd6682b3111e39be103db127e6b0}\label{classplanarity_a8a66dd6682b3111e39be103db127e6b0}} 
+\index{planarity@{planarity}!switch\+\_\+to\+\_\+component@{switch\+\_\+to\+\_\+component}}
+\index{switch\+\_\+to\+\_\+component@{switch\+\_\+to\+\_\+component}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{switch\+\_\+to\+\_\+component()}{switch\_to\_component()}}
+{\footnotesize\ttfamily void planarity\+::switch\+\_\+to\+\_\+component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classbiconnectivity_aef69aa0c23bfcd945e385350154b6483}{biconnectivity\+::component\+\_\+iterator}}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 515 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+517 \{
+518     \textcolor{comment}{//}
+519     \textcolor{comment}{// hide all nodes }
+520     \textcolor{comment}{//}
+521 
+522     \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\_t}} dummy;
+523     G.\mbox{\hyperlink{classgraph_a15b766094bb0b97ef53e06e7c26b2197}{induced\_subgraph}} (dummy);
+524 
+525     \textcolor{comment}{//}
+526     \textcolor{comment}{// Restore nodes in this component.}
+527     \textcolor{comment}{// }
+528 
+529     nodes\_t::iterator it = c\_it->first.begin();
+530     nodes\_t::iterator end = c\_it->first.end();
+531 
+532     \textcolor{keywordflow}{for} (; it != end; ++it) \{
+533     G.\mbox{\hyperlink{classgraph_ab57aab79e649cc275052b7decbdd03ec}{restore\_node}} (*it);
+534     \}
+535 
+536     \textcolor{comment}{//}
+537     \textcolor{comment}{// Restore edges in this component.}
+538     \textcolor{comment}{//}
+539 
+540     edges\_t::iterator e\_it = c\_it->second.begin();
+541     edges\_t::iterator e\_end = c\_it->second.end();
+542   
+543     \textcolor{keywordflow}{for} (; e\_it != e\_end; ++e\_it) \{
+544     G.\mbox{\hyperlink{classgraph_a2e5426682a0897b9f9104b019970bedc}{restore\_edge}} (*e\_it);
+545     \}
+546 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a8a66dd6682b3111e39be103db127e6b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classplanarity_a8a66dd6682b3111e39be103db127e6b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}\label{classplanarity_a86f10c5faa107a5a672028e0c34b4a08}} 
+\index{planarity@{planarity}!up\+\_\+until\+\_\+marked@{up\+\_\+until\+\_\+marked}}
+\index{up\+\_\+until\+\_\+marked@{up\+\_\+until\+\_\+marked}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{up\+\_\+until\+\_\+marked()}{up\_until\_marked()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} planarity\+::up\+\_\+until\+\_\+marked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{act,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{mark,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} $>$ \&}]{to\+\_\+father }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1536 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1537 \{
+1538     \textcolor{keywordflow}{while} (mark[act] == 0) \{
+1539     mark[act] = 1;
+1540     \mbox{\hyperlink{classedge}{edge}} \mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}} = to\_father[act];
+1541     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (\mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}});
+1542     act = act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (\mbox{\hyperlink{struct_g_m_l__pair_aef47e6103f05e1411fa55f731972b592}{next}});
+1543     \}
+1544 
+1545     \textcolor{keywordflow}{return} act;
+1546 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{classplanarity_a86f10c5faa107a5a672028e0c34b4a08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_a86f10c5faa107a5a672028e0c34b4a08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classplanarity_aa5e2bdd52fb6e0b34612e1cfcb35312a}\label{classplanarity_aa5e2bdd52fb6e0b34612e1cfcb35312a}} 
+\index{planarity@{planarity}!up\+\_\+until\+\_\+marked@{up\+\_\+until\+\_\+marked}}
+\index{up\+\_\+until\+\_\+marked@{up\+\_\+until\+\_\+marked}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{up\+\_\+until\+\_\+marked()}{up\_until\_marked()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} planarity\+::up\+\_\+until\+\_\+marked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{act,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{mark,  }\item[{\mbox{\hyperlink{classst__number}{st\+\_\+number}} \&}]{st }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 1548 of file planarity.\+cpp.
+
+
+\begin{DoxyCode}
+1549 \{
+1550     \textcolor{keywordflow}{while} (mark[act] == 0) \{
+1551     mark[act] = 1;
+1552     \mbox{\hyperlink{classnode}{node}} opp;
+1553     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} it, end;
+1554 
+1555     \textcolor{keywordflow}{for} (it = act.\mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}(), end = act.\mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}(); it != end; ++it
+      ) \{
+1556         opp = act.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (*it);
+1557         \textcolor{keywordflow}{if} (st\_[opp] > st\_[act]) \{
+1558         \textcolor{keywordflow}{break};
+1559         \}
+1560     \}
+1561 
+1562     assert (it != end);
+1563     \mbox{\hyperlink{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}{ob\_edges}}.push\_back (*it);
+1564     act = opp;
+1565     \}
+1566 
+1567     \textcolor{keywordflow}{return} act;
+1568 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classplanarity_aa5e2bdd52fb6e0b34612e1cfcb35312a_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classplanarity_ab376973a35dc0b89e7fabdb946693b82}\label{classplanarity_ab376973a35dc0b89e7fabdb946693b82}} 
+\index{planarity@{planarity}!bip@{bip}}
+\index{bip@{bip}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{bip}{bip}}
+{\footnotesize\ttfamily bool planarity\+::bip\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 611 of file planarity.\+h.
+
+\mbox{\Hypertarget{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}\label{classplanarity_a2f8ce8ea2c29de3d0c218265f3c3c5f6}} 
+\index{planarity@{planarity}!embedding@{embedding}}
+\index{embedding@{embedding}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{embedding}{embedding}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classplanar__embedding}{planar\+\_\+embedding}} planarity\+::embedding\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 591 of file planarity.\+h.
+
+\mbox{\Hypertarget{classplanarity_ac926de19c53f6b456a582513f06eea9a}\label{classplanarity_ac926de19c53f6b456a582513f06eea9a}} 
+\index{planarity@{planarity}!emp@{emp}}
+\index{emp@{emp}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{emp}{emp}}
+{\footnotesize\ttfamily bool planarity\+::emp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 601 of file planarity.\+h.
+
+\mbox{\Hypertarget{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}\label{classplanarity_a2c6ea6d4e3fdbab09ee7ec9d023d456c}} 
+\index{planarity@{planarity}!kup@{kup}}
+\index{kup@{kup}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{kup}{kup}}
+{\footnotesize\ttfamily bool planarity\+::kup\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 606 of file planarity.\+h.
+
+\mbox{\Hypertarget{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}\label{classplanarity_abde3aedda2039ff1233a0e8a69481bb7}} 
+\index{planarity@{planarity}!ob\+\_\+edges@{ob\+\_\+edges}}
+\index{ob\+\_\+edges@{ob\+\_\+edges}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{ob\+\_\+edges}{ob\_edges}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} planarity\+::ob\+\_\+edges\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 581 of file planarity.\+h.
+
+\mbox{\Hypertarget{classplanarity_af9ac45a388b224134ce1dd7e643901c8}\label{classplanarity_af9ac45a388b224134ce1dd7e643901c8}} 
+\index{planarity@{planarity}!ob\+\_\+nodes@{ob\+\_\+nodes}}
+\index{ob\+\_\+nodes@{ob\+\_\+nodes}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{ob\+\_\+nodes}{ob\_nodes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} planarity\+::ob\+\_\+nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 586 of file planarity.\+h.
+
+\mbox{\Hypertarget{classplanarity_a1903d614fa185e5286904ecf76ab85dd}\label{classplanarity_a1903d614fa185e5286904ecf76ab85dd}} 
+\index{planarity@{planarity}!planar@{planar}}
+\index{planar@{planar}!planarity@{planarity}}
+\subsubsection{\texorpdfstring{planar}{planar}}
+{\footnotesize\ttfamily bool planarity\+::planar\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 596 of file planarity.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{planarity_8h}{planarity.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/\mbox{\hyperlink{planarity_8cpp}{planarity.\+cpp}}\end{DoxyCompactItemize}

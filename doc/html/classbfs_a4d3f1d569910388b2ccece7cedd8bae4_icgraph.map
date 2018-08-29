@@ -1,0 +1,7 @@
+<map id="bfs::finished_node_handler" name="bfs::finished_node_handler">
+<area shape="rect" id="node2" href="$classbfs.html#a567815d3b63e802420f4b536749a1ad2" title="bfs::bfs_sub" alt="" coords="180,31,272,57"/>
+<area shape="rect" id="node3" href="$classbfs.html#a06ae16bd0f3bb2f8eb6b3e36659ba82e" title="Applies algorithm to graph g. " alt="" coords="320,31,385,57"/>
+<area shape="rect" id="node4" href="$classnode.html#aba6b3a48e7b951f08ebbbf3275f0ce9a" title="node::excentricity" alt="" coords="433,5,559,32"/>
+<area shape="rect" id="node6" href="$rings_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="471,56,521,83"/>
+<area shape="rect" id="node5" href="$classgraph.html#a351617e023b4b6833ab650a70fc086e7" title="graph::center" alt="" coords="607,5,705,32"/>
+</map>

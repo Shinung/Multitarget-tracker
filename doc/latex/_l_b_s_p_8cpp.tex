@@ -1,0 +1,221 @@
+\hypertarget{_l_b_s_p_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Subsense/\+L\+B\+SP.cpp File Reference}
+\label{_l_b_s_p_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Subsense/\+L\+B\+S\+P.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Subsense/\+L\+B\+S\+P.\+cpp}}
+{\ttfamily \#include \char`\"{}L\+B\+S\+P.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+B\+S\+P\+\_\+16bits\+\_\+dbcross\+\_\+1ch.\+i\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+B\+S\+P\+\_\+16bits\+\_\+dbcross\+\_\+3ch1t.\+i\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+B\+S\+P\+\_\+16bits\+\_\+dbcross\+\_\+3ch3t.\+i\char`\"{}}\newline
+Include dependency graph for L\+B\+S\+P.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_l_b_s_p_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{_l_b_s_p_8cpp_abb90115b7341a5b5d8f5413b31618b79}{lbsp\+\_\+compute\+Impl}} (const cv\+::\+Mat \&o\+Input\+Img, const cv\+::\+Mat \&o\+Ref\+Img, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&vo\+Key\+Points, cv\+::\+Mat \&o\+Desc, size\+\_\+t \+\_\+t)
+\item 
+static void \mbox{\hyperlink{_l_b_s_p_8cpp_ae2e954f41dcba89af65dabfac7f16ce5}{lbsp\+\_\+compute\+Impl}} (const cv\+::\+Mat \&o\+Input\+Img, const cv\+::\+Mat \&o\+Ref\+Img, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&vo\+Key\+Points, cv\+::\+Mat \&o\+Desc, float f\+Threshold, size\+\_\+t n\+Threshold\+Offset)
+\item 
+static void \mbox{\hyperlink{_l_b_s_p_8cpp_ae3b8f6aa03bfa7f16d458a8347dba320}{lbsp\+\_\+compute\+Impl2}} (const cv\+::\+Mat \&o\+Input\+Img, const cv\+::\+Mat \&o\+Ref\+Img, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&vo\+Key\+Points, cv\+::\+Mat \&o\+Desc, size\+\_\+t \+\_\+t)
+\item 
+static void \mbox{\hyperlink{_l_b_s_p_8cpp_aa42ed01fd6883d8eacadb45145778aeb}{lbsp\+\_\+compute\+Impl2}} (const cv\+::\+Mat \&o\+Input\+Img, const cv\+::\+Mat \&o\+Ref\+Img, const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&vo\+Key\+Points, cv\+::\+Mat \&o\+Desc, float f\+Threshold, size\+\_\+t n\+Threshold\+Offset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_l_b_s_p_8cpp_abb90115b7341a5b5d8f5413b31618b79}\label{_l_b_s_p_8cpp_abb90115b7341a5b5d8f5413b31618b79}} 
+\index{L\+B\+S\+P.\+cpp@{L\+B\+S\+P.\+cpp}!lbsp\+\_\+compute\+Impl@{lbsp\+\_\+compute\+Impl}}
+\index{lbsp\+\_\+compute\+Impl@{lbsp\+\_\+compute\+Impl}!L\+B\+S\+P.\+cpp@{L\+B\+S\+P.\+cpp}}
+\subsubsection{\texorpdfstring{lbsp\+\_\+compute\+Impl()}{lbsp\_computeImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void lbsp\+\_\+compute\+Impl (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{o\+Input\+Img,  }\item[{const cv\+::\+Mat \&}]{o\+Ref\+Img,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{vo\+Key\+Points,  }\item[{cv\+::\+Mat \&}]{o\+Desc,  }\item[{size\+\_\+t}]{\+\_\+t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 52 of file L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+56                                                    \{
+57     CV\_DbgAssert(oRefImg.empty() || (oRefImg.size==oInputImg.size && oRefImg.type()==oInputImg.type()));
+58     CV\_DbgAssert(oInputImg.type()==CV\_8UC1 || oInputImg.type()==CV\_8UC3);
+59     CV\_DbgAssert(\mbox{\hyperlink{class_l_b_s_p_a11167130ddc713921e5bbb0b628d5f74}{LBSP::DESC\_SIZE}}==2); \textcolor{comment}{// @@@ also relies on a constant desc size}
+60     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nChannels = (size\_t)oInputImg.channels();
+61     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \_step\_row = oInputImg.step.p[0];
+62     \textcolor{keyword}{const} uchar* \_data = oInputImg.data;
+63     \textcolor{keyword}{const} uchar* \_refdata = oRefImg.empty()?oInputImg.data:oRefImg.data;
+64     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nKeyPoints = voKeyPoints.size();
+65     \textcolor{keywordflow}{if}(nChannels==1) \{
+66         oDesc.create((\textcolor{keywordtype}{int})nKeyPoints,1,CV\_16UC1);
+67         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k=0; k<nKeyPoints; ++k) \{
+68             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_x = (int)voKeyPoints[k].\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.x;
+69             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_y = (\textcolor{keywordtype}{int})voKeyPoints[k].pt.y;
+70             \textcolor{keyword}{const} uchar \_ref = \_refdata[\_step\_row*(\_y)+\_x];
+71             ushort& \_res = oDesc.at<ushort>((int)k);
+72 \textcolor{preprocessor}{            #include "LBSP\_16bits\_dbcross\_1ch.i"}
+73         \}
+74     \}
+75     \textcolor{keywordflow}{else} \{ \textcolor{comment}{//nChannels==3}
+76         oDesc.create((\textcolor{keywordtype}{int})nKeyPoints,1,CV\_16UC3);
+77         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k=0; k<nKeyPoints; ++k) \{
+78             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_x = (int)voKeyPoints[k].\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.x;
+79             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_y = (\textcolor{keywordtype}{int})voKeyPoints[k].pt.y;
+80             \textcolor{keyword}{const} uchar* \_ref = \_refdata+\_step\_row*(\_y)+3*(\_x);
+81             ushort* \_res = ((ushort*)(oDesc.data + oDesc.step.p[0]*k));
+82 \textcolor{preprocessor}{            #include "LBSP\_16bits\_dbcross\_3ch1t.i"}
+83         \}
+84     \}
+85 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{_l_b_s_p_8cpp_abb90115b7341a5b5d8f5413b31618b79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_l_b_s_p_8cpp_ae2e954f41dcba89af65dabfac7f16ce5}\label{_l_b_s_p_8cpp_ae2e954f41dcba89af65dabfac7f16ce5}} 
+\index{L\+B\+S\+P.\+cpp@{L\+B\+S\+P.\+cpp}!lbsp\+\_\+compute\+Impl@{lbsp\+\_\+compute\+Impl}}
+\index{lbsp\+\_\+compute\+Impl@{lbsp\+\_\+compute\+Impl}!L\+B\+S\+P.\+cpp@{L\+B\+S\+P.\+cpp}}
+\subsubsection{\texorpdfstring{lbsp\+\_\+compute\+Impl()}{lbsp\_computeImpl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void lbsp\+\_\+compute\+Impl (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{o\+Input\+Img,  }\item[{const cv\+::\+Mat \&}]{o\+Ref\+Img,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{vo\+Key\+Points,  }\item[{cv\+::\+Mat \&}]{o\+Desc,  }\item[{float}]{f\+Threshold,  }\item[{size\+\_\+t}]{n\+Threshold\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 87 of file L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+92                                                                  \{
+93     CV\_DbgAssert(oRefImg.empty() || (oRefImg.size==oInputImg.size && oRefImg.type()==oInputImg.type()));
+94     CV\_DbgAssert(oInputImg.type()==CV\_8UC1 || oInputImg.type()==CV\_8UC3);
+95     CV\_DbgAssert(\mbox{\hyperlink{class_l_b_s_p_a11167130ddc713921e5bbb0b628d5f74}{LBSP::DESC\_SIZE}}==2); \textcolor{comment}{// @@@ also relies on a constant desc size}
+96     CV\_DbgAssert(fThreshold>=0);
+97     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nChannels = (size\_t)oInputImg.channels();
+98     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \_step\_row = oInputImg.step.p[0];
+99     \textcolor{keyword}{const} uchar* \_data = oInputImg.data;
+100     \textcolor{keyword}{const} uchar* \_refdata = oRefImg.empty()?oInputImg.data:oRefImg.data;
+101     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nKeyPoints = voKeyPoints.size();
+102     \textcolor{keywordflow}{if}(nChannels==1) \{
+103         oDesc.create((\textcolor{keywordtype}{int})nKeyPoints,1,CV\_16UC1);
+104         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k=0; k<nKeyPoints; ++k) \{
+105             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_x = (int)voKeyPoints[k].\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.x;
+106             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_y = (\textcolor{keywordtype}{int})voKeyPoints[k].pt.y;
+107             \textcolor{keyword}{const} uchar \_ref = \_refdata[\_step\_row*(\_y)+\_x];
+108             ushort& \_res = oDesc.at<ushort>((int)k);
+109             \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \_t = (size\_t)(\_ref*fThreshold)+nThresholdOffset;
+110 \textcolor{preprocessor}{            #include "LBSP\_16bits\_dbcross\_1ch.i"}
+111         \}
+112     \}
+113     \textcolor{keywordflow}{else} \{ \textcolor{comment}{//nChannels==3}
+114         oDesc.create((\textcolor{keywordtype}{int})nKeyPoints,1,CV\_16UC3);
+115         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k=0; k<nKeyPoints; ++k) \{
+116             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_x = (int)voKeyPoints[k].\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.x;
+117             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_y = (\textcolor{keywordtype}{int})voKeyPoints[k].pt.y;
+118             \textcolor{keyword}{const} uchar* \_ref = \_refdata+\_step\_row*(\_y)+3*(\_x);
+119             ushort* \_res = ((ushort*)(oDesc.data + oDesc.step.p[0]*k));
+120             \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \_t[3] = \{(size\_t)(\_ref[0]*fThreshold)+nThresholdOffset,(size\_t)(\_ref[1]*fThreshold
+      )+nThresholdOffset,(size\_t)(\_ref[2]*fThreshold)+nThresholdOffset\};
+121 \textcolor{preprocessor}{            #include "LBSP\_16bits\_dbcross\_3ch3t.i"}
+122         \}
+123     \}
+124 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_b_s_p_8cpp_ae3b8f6aa03bfa7f16d458a8347dba320}\label{_l_b_s_p_8cpp_ae3b8f6aa03bfa7f16d458a8347dba320}} 
+\index{L\+B\+S\+P.\+cpp@{L\+B\+S\+P.\+cpp}!lbsp\+\_\+compute\+Impl2@{lbsp\+\_\+compute\+Impl2}}
+\index{lbsp\+\_\+compute\+Impl2@{lbsp\+\_\+compute\+Impl2}!L\+B\+S\+P.\+cpp@{L\+B\+S\+P.\+cpp}}
+\subsubsection{\texorpdfstring{lbsp\+\_\+compute\+Impl2()}{lbsp\_computeImpl2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void lbsp\+\_\+compute\+Impl2 (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{o\+Input\+Img,  }\item[{const cv\+::\+Mat \&}]{o\+Ref\+Img,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{vo\+Key\+Points,  }\item[{cv\+::\+Mat \&}]{o\+Desc,  }\item[{size\+\_\+t}]{\+\_\+t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 126 of file L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+130                                                    \{
+131     CV\_DbgAssert(oRefImg.empty() || (oRefImg.size==oInputImg.size && oRefImg.type()==oInputImg.type()));
+132     CV\_DbgAssert(oInputImg.type()==CV\_8UC1 || oInputImg.type()==CV\_8UC3);
+133     CV\_DbgAssert(\mbox{\hyperlink{class_l_b_s_p_a11167130ddc713921e5bbb0b628d5f74}{LBSP::DESC\_SIZE}}==2); \textcolor{comment}{// @@@ also relies on a constant desc size}
+134     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nChannels = (size\_t)oInputImg.channels();
+135     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \_step\_row = oInputImg.step.p[0];
+136     \textcolor{keyword}{const} uchar* \_data = oInputImg.data;
+137     \textcolor{keyword}{const} uchar* \_refdata = oRefImg.empty()?oInputImg.data:oRefImg.data;
+138     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nKeyPoints = voKeyPoints.size();
+139     \textcolor{keywordflow}{if}(nChannels==1) \{
+140         oDesc.create(oInputImg.size(),CV\_16UC1);
+141         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k=0; k<nKeyPoints; ++k) \{
+142             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_x = (int)voKeyPoints[k].\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.x;
+143             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_y = (\textcolor{keywordtype}{int})voKeyPoints[k].pt.y;
+144             \textcolor{keyword}{const} uchar \_ref = \_refdata[\_step\_row*(\_y)+\_x];
+145             ushort& \_res = oDesc.at<ushort>(\_y,\_x);
+146 \textcolor{preprocessor}{            #include "LBSP\_16bits\_dbcross\_1ch.i"}
+147         \}
+148     \}
+149     \textcolor{keywordflow}{else} \{ \textcolor{comment}{//nChannels==3}
+150         oDesc.create(oInputImg.size(),CV\_16UC3);
+151         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k=0; k<nKeyPoints; ++k) \{
+152             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_x = (int)voKeyPoints[k].\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.x;
+153             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_y = (\textcolor{keywordtype}{int})voKeyPoints[k].pt.y;
+154             \textcolor{keyword}{const} uchar* \_ref = \_refdata+\_step\_row*(\_y)+3*(\_x);
+155             ushort* \_res = ((ushort*)(oDesc.data + oDesc.step.p[0]*\_y + oDesc.step.p[1]*\_x));
+156 \textcolor{preprocessor}{            #include "LBSP\_16bits\_dbcross\_3ch1t.i"}
+157         \}
+158     \}
+159 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_l_b_s_p_8cpp_ae3b8f6aa03bfa7f16d458a8347dba320_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_l_b_s_p_8cpp_aa42ed01fd6883d8eacadb45145778aeb}\label{_l_b_s_p_8cpp_aa42ed01fd6883d8eacadb45145778aeb}} 
+\index{L\+B\+S\+P.\+cpp@{L\+B\+S\+P.\+cpp}!lbsp\+\_\+compute\+Impl2@{lbsp\+\_\+compute\+Impl2}}
+\index{lbsp\+\_\+compute\+Impl2@{lbsp\+\_\+compute\+Impl2}!L\+B\+S\+P.\+cpp@{L\+B\+S\+P.\+cpp}}
+\subsubsection{\texorpdfstring{lbsp\+\_\+compute\+Impl2()}{lbsp\_computeImpl2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void lbsp\+\_\+compute\+Impl2 (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{o\+Input\+Img,  }\item[{const cv\+::\+Mat \&}]{o\+Ref\+Img,  }\item[{const std\+::vector$<$ cv\+::\+Key\+Point $>$ \&}]{vo\+Key\+Points,  }\item[{cv\+::\+Mat \&}]{o\+Desc,  }\item[{float}]{f\+Threshold,  }\item[{size\+\_\+t}]{n\+Threshold\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 161 of file L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+166                                                                  \{
+167     CV\_DbgAssert(oRefImg.empty() || (oRefImg.size==oInputImg.size && oRefImg.type()==oInputImg.type()));
+168     CV\_DbgAssert(oInputImg.type()==CV\_8UC1 || oInputImg.type()==CV\_8UC3);
+169     CV\_DbgAssert(\mbox{\hyperlink{class_l_b_s_p_a11167130ddc713921e5bbb0b628d5f74}{LBSP::DESC\_SIZE}}==2); \textcolor{comment}{// @@@ also relies on a constant desc size}
+170     CV\_DbgAssert(fThreshold>=0);
+171     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nChannels = (size\_t)oInputImg.channels();
+172     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \_step\_row = oInputImg.step.p[0];
+173     \textcolor{keyword}{const} uchar* \_data = oInputImg.data;
+174     \textcolor{keyword}{const} uchar* \_refdata = oRefImg.empty()?oInputImg.data:oRefImg.data;
+175     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nKeyPoints = voKeyPoints.size();
+176     \textcolor{keywordflow}{if}(nChannels==1) \{
+177         oDesc.create(oInputImg.size(),CV\_16UC1);
+178         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k=0; k<nKeyPoints; ++k) \{
+179             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_x = (int)voKeyPoints[k].\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.x;
+180             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_y = (\textcolor{keywordtype}{int})voKeyPoints[k].pt.y;
+181             \textcolor{keyword}{const} uchar \_ref = \_refdata[\_step\_row*(\_y)+\_x];
+182             ushort& \_res = oDesc.at<ushort>(\_y,\_x);
+183             \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \_t = (size\_t)(\_ref*fThreshold)+nThresholdOffset;
+184 \textcolor{preprocessor}{            #include "LBSP\_16bits\_dbcross\_1ch.i"}
+185         \}
+186     \}
+187     \textcolor{keywordflow}{else} \{ \textcolor{comment}{//nChannels==3}
+188         oDesc.create(oInputImg.size(),CV\_16UC3);
+189         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} k=0; k<nKeyPoints; ++k) \{
+190             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_x = (int)voKeyPoints[k].\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.x;
+191             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \_y = (\textcolor{keywordtype}{int})voKeyPoints[k].pt.y;
+192             \textcolor{keyword}{const} uchar* \_ref = \_refdata+\_step\_row*(\_y)+3*(\_x);
+193             ushort* \_res = ((ushort*)(oDesc.data + oDesc.step.p[0]*\_y + oDesc.step.p[1]*\_x));
+194             \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \_t[3] = \{(size\_t)(\_ref[0]*fThreshold)+nThresholdOffset,(size\_t)(\_ref[1]*fThreshold
+      )+nThresholdOffset,(size\_t)(\_ref[2]*fThreshold)+nThresholdOffset\};
+195 \textcolor{preprocessor}{            #include "LBSP\_16bits\_dbcross\_3ch3t.i"}
+196         \}
+197     \}
+198 \}
+\end{DoxyCode}

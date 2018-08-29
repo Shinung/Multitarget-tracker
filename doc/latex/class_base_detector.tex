@@ -1,0 +1,386 @@
+\hypertarget{class_base_detector}{}\section{Base\+Detector Class Reference}
+\label{class_base_detector}\index{Base\+Detector@{Base\+Detector}}
+
+
+The \mbox{\hyperlink{class_base_detector}{Base\+Detector}} class.  
+
+
+
+
+{\ttfamily \#include $<$Base\+Detector.\+h$>$}
+
+
+
+Inheritance diagram for Base\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_detector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Base\+Detector\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_base_detector__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_detector_a3c85e13a47dd472319dc43c60f0d102a}{Base\+Detector}} (bool collect\+Points, cv\+::\+U\+Mat \&frame)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_base_detector}{Base\+Detector}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_base_detector_afc5cc0ccdbc1fc1b60371f22bed620fd}{$\sim$\+Base\+Detector}} (void)
+\begin{DoxyCompactList}\small\item\em $\sim$\+Base\+Detector \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_base_detector_a44c53608e9e4e3455ff553d987165260}{Init}} (const \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}} \&config)=0
+\begin{DoxyCompactList}\small\item\em Init. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_detector_a9c9dedfffb7673fd2995f24bdb9ade18}{Detect}} (cv\+::\+U\+Mat \&frame)=0
+\begin{DoxyCompactList}\small\item\em Detect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}{Set\+Min\+Object\+Size}} (cv\+::\+Size min\+Object\+Size)
+\begin{DoxyCompactList}\small\item\em Set\+Min\+Object\+Size. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} \& \mbox{\hyperlink{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}{Get\+Detects}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Detects. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}{Collect\+Points}} (\mbox{\hyperlink{class_c_region}{C\+Region}} \&region)
+\begin{DoxyCompactList}\small\item\em Collect\+Points. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}{Calc\+Motion\+Map}} (cv\+::\+Mat frame)
+\begin{DoxyCompactList}\small\item\em Calc\+Motion\+Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\+\_\+regions}}
+\item 
+cv\+::\+Size \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\+\_\+min\+Object\+Size}}
+\item 
+bool \mbox{\hyperlink{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}{m\+\_\+collect\+Points}}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\+\_\+motion\+Map}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_base_detector}{Base\+Detector}} class. 
+
+Definition at line 9 of file Base\+Detector.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_base_detector_a3c85e13a47dd472319dc43c60f0d102a}\label{class_base_detector_a3c85e13a47dd472319dc43c60f0d102a}} 
+\index{Base\+Detector@{Base\+Detector}!Base\+Detector@{Base\+Detector}}
+\index{Base\+Detector@{Base\+Detector}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{Base\+Detector()}{BaseDetector()}}
+{\footnotesize\ttfamily Base\+Detector\+::\+Base\+Detector (\begin{DoxyParamCaption}\item[{bool}]{collect\+Points,  }\item[{cv\+::\+U\+Mat \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_base_detector}{Base\+Detector}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collect\+Points} & \\
+\hline
+{\em frame} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 17 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+18         : \mbox{\hyperlink{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}{m\_collectPoints}}(collectPoints)
+19     \{
+20         \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\_minObjectSize}}.width = std::max(5, frame.cols / 100);
+21         \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\_minObjectSize}}.height = \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\_minObjectSize}}.width;
+22     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_detector_afc5cc0ccdbc1fc1b60371f22bed620fd}\label{class_base_detector_afc5cc0ccdbc1fc1b60371f22bed620fd}} 
+\index{Base\+Detector@{Base\+Detector}!````~Base\+Detector@{$\sim$\+Base\+Detector}}
+\index{````~Base\+Detector@{$\sim$\+Base\+Detector}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{$\sim$\+Base\+Detector()}{~BaseDetector()}}
+{\footnotesize\ttfamily virtual Base\+Detector\+::$\sim$\+Base\+Detector (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+$\sim$\+Base\+Detector 
+
+
+
+Definition at line 26 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+27     \{
+28     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}\label{class_base_detector_a73c66f0d4dad263fcf65c09a6f6feda2}} 
+\index{Base\+Detector@{Base\+Detector}!Calc\+Motion\+Map@{Calc\+Motion\+Map}}
+\index{Calc\+Motion\+Map@{Calc\+Motion\+Map}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{Calc\+Motion\+Map()}{CalcMotionMap()}}
+{\footnotesize\ttfamily virtual void Base\+Detector\+::\+Calc\+Motion\+Map (\begin{DoxyParamCaption}\item[{cv\+::\+Mat}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Calc\+Motion\+Map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_motion_detector_aa4e606acafdc33a3104471903e449adc}{Motion\+Detector}}.
+
+
+
+Definition at line 90 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+91     \{
+92         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.size() != frame.size())
+93         \{
+94             \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}} = cv::Mat(frame.size(), CV\_32FC1, cv::Scalar(0, 0, 0));
+95         \}
+96 
+97         cv::Mat foreground(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.size(), CV\_8UC1, cv::Scalar(0, 0, 0));
+98         \textcolor{keywordflow}{for} (\textcolor{keyword}{const} \textcolor{keyword}{auto}& region : \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}})
+99         \{
+100 \textcolor{preprocessor}{#if (CV\_VERSION\_MAJOR < 4)}
+101             cv::ellipse(foreground,
+102                         cv::RotatedRect((region.m\_rect.tl() + region.m\_rect.br()) / 2, region.m\_rect.size()
+      , 0),
+103                                         cv::Scalar(255, 255, 255), CV\_FILLED);
+104 \textcolor{preprocessor}{#else}
+105             cv::ellipse(foreground,
+106                         cv::RotatedRect((region.m\_rect.tl() + region.m\_rect.br()) / 2, region.m\_rect.size()
+      , 0),
+107                                         cv::Scalar(255, 255, 255), cv::FILLED);
+108 \textcolor{preprocessor}{#endif}
+109         \}
+110 
+111         cv::Mat normFor;
+112         cv::normalize(foreground, normFor, 255, 0, cv::NORM\_MINMAX, \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.type());
+113 
+114         \textcolor{keywordtype}{double} alpha = 0.95;
+115         cv::addWeighted(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}, alpha, normFor, 1 - alpha, 0, 
+      \mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}});
+116 
+117         \textcolor{keyword}{const} \textcolor{keywordtype}{int} chans = frame.channels();
+118 
+119         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y < frame.rows; ++y)
+120         \{
+121             uchar* imgPtr = frame.ptr(y);
+122             \textcolor{keywordtype}{float}* moPtr = \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{float}*\textcolor{keyword}{>}(\mbox{\hyperlink{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}{m\_motionMap}}.ptr(y));
+123             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x < frame.cols; ++x)
+124             \{
+125                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ci = chans - 1; ci < chans; ++ci)
+126                 \{
+127                     imgPtr[ci] = cv::saturate\_cast<uchar>(imgPtr[ci] + moPtr[0]);
+128                 \}
+129                 imgPtr += chans;
+130                 ++moPtr;
+131             \}
+132         \}
+133     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}\label{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7}} 
+\index{Base\+Detector@{Base\+Detector}!Collect\+Points@{Collect\+Points}}
+\index{Collect\+Points@{Collect\+Points}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{Collect\+Points()}{CollectPoints()}}
+{\footnotesize\ttfamily virtual void Base\+Detector\+::\+Collect\+Points (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_region}{C\+Region}} \&}]{region }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Collect\+Points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em region} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+65     \{
+66         \textcolor{keyword}{const} \textcolor{keywordtype}{int} yStep = 5;
+67         \textcolor{keyword}{const} \textcolor{keywordtype}{int} xStep = 5;
+68 
+69         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y, yStop = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y + region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.height; y < yStop; y += yStep)
+70         \{
+71             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x, xStop = region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x + region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.width; x < xStop; x += xStep)
+72             \{
+73                 \textcolor{keywordflow}{if} (region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.contains(cv::Point(x, y)))
+74                 \{
+75                     region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.push\_back(cv::Point2f(static\_cast<float>(x), static\_cast<float>
+      (y)));
+76                 \}
+77             \}
+78         \}
+79 
+80         \textcolor{keywordflow}{if} (region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.empty())
+81         \{
+82             region.\mbox{\hyperlink{class_c_region_a65be08ae81a8d174d95ae35a2f7fb212}{m\_points}}.push\_back(cv::Point2f(region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.x + 0.5f * region.
+      \mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.width, region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.y + 0.5f * region.\mbox{\hyperlink{class_c_region_a6f68304e90428db829cc38792fa3e1e8}{m\_rect}}.height));
+83         \}
+84     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_detector_a20380b0980c6f262b0829f37fb89d2a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_base_detector_a9c9dedfffb7673fd2995f24bdb9ade18}\label{class_base_detector_a9c9dedfffb7673fd2995f24bdb9ade18}} 
+\index{Base\+Detector@{Base\+Detector}!Detect@{Detect}}
+\index{Detect@{Detect}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{Detect()}{Detect()}}
+{\footnotesize\ttfamily virtual void Base\+Detector\+::\+Detect (\begin{DoxyParamCaption}\item[{cv\+::\+U\+Mat \&}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Detect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_s_s_d_custom_net_detector_abcd14fa695e46fab1eab8ea5524c0ba5}{S\+S\+D\+Custom\+Net\+Detector}}, \mbox{\hyperlink{class_yolo_detector_a4c4232e3198a50666e6b4ed9d00bf42c}{Yolo\+Detector}}, \mbox{\hyperlink{class_pedestrian_detector_a27a7c2c3b358f6e44a7de71f808597c2}{Pedestrian\+Detector}}, \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a6ac3fd479002779642ed185107d83dea}{S\+S\+D\+Mobile\+Net\+Detector}}, \mbox{\hyperlink{class_motion_detector_aac68875ab09d4436391855e2df4e0e06}{Motion\+Detector}}, and \mbox{\hyperlink{class_face_detector_a4b9210a00283d5bf394c6188e3e0ab39}{Face\+Detector}}.
+
+\mbox{\Hypertarget{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}\label{class_base_detector_a52ac4b2feed15a47de84a69eb45c233f}} 
+\index{Base\+Detector@{Base\+Detector}!Get\+Detects@{Get\+Detects}}
+\index{Get\+Detects@{Get\+Detects}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{Get\+Detects()}{GetDetects()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}}\& Base\+Detector\+::\+Get\+Detects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get\+Detects. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 55 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+56     \{
+57         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_base_detector_a409c20093acba261db8354ca72058fce}{m\_regions}};
+58     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_base_detector_a44c53608e9e4e3455ff553d987165260}\label{class_base_detector_a44c53608e9e4e3455ff553d987165260}} 
+\index{Base\+Detector@{Base\+Detector}!Init@{Init}}
+\index{Init@{Init}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual bool Base\+Detector\+::\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Init. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_s_s_d_custom_net_detector_a2f228b0c7bbd679ff310158de119169b}{S\+S\+D\+Custom\+Net\+Detector}}, \mbox{\hyperlink{class_yolo_detector_ac518bc6743145447f19c937c345689c0}{Yolo\+Detector}}, \mbox{\hyperlink{class_pedestrian_detector_a630d8ad4d8ca2123639e989b01c8dd3e}{Pedestrian\+Detector}}, \mbox{\hyperlink{class_s_s_d_mobile_net_detector_a2830cbf9b82b159c25fb2796b867eaef}{S\+S\+D\+Mobile\+Net\+Detector}}, \mbox{\hyperlink{class_motion_detector_af59eda71fe52b578c08472425182dc41}{Motion\+Detector}}, and \mbox{\hyperlink{class_face_detector_ad235988d85ae9c826269e21d5c3c1451}{Face\+Detector}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_base_detector_a44c53608e9e4e3455ff553d987165260_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}\label{class_base_detector_ab459f4e77cf1110cc1ee84027f0f2a03}} 
+\index{Base\+Detector@{Base\+Detector}!Set\+Min\+Object\+Size@{Set\+Min\+Object\+Size}}
+\index{Set\+Min\+Object\+Size@{Set\+Min\+Object\+Size}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{Set\+Min\+Object\+Size()}{SetMinObjectSize()}}
+{\footnotesize\ttfamily void Base\+Detector\+::\+Set\+Min\+Object\+Size (\begin{DoxyParamCaption}\item[{cv\+::\+Size}]{min\+Object\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set\+Min\+Object\+Size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Object\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Base\+Detector.\+h.
+
+
+\begin{DoxyCode}
+47     \{
+48         \mbox{\hyperlink{class_base_detector_a651b938c89c94daac4763728637d90c9}{m\_minObjectSize}} = minObjectSize;
+49     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}\label{class_base_detector_a403cbf784fcb960bdb7d080c86c4a2ea}} 
+\index{Base\+Detector@{Base\+Detector}!m\+\_\+collect\+Points@{m\+\_\+collect\+Points}}
+\index{m\+\_\+collect\+Points@{m\+\_\+collect\+Points}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+collect\+Points}{m\_collectPoints}}
+{\footnotesize\ttfamily bool Base\+Detector\+::m\+\_\+collect\+Points\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 140 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a651b938c89c94daac4763728637d90c9}\label{class_base_detector_a651b938c89c94daac4763728637d90c9}} 
+\index{Base\+Detector@{Base\+Detector}!m\+\_\+min\+Object\+Size@{m\+\_\+min\+Object\+Size}}
+\index{m\+\_\+min\+Object\+Size@{m\+\_\+min\+Object\+Size}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+min\+Object\+Size}{m\_minObjectSize}}
+{\footnotesize\ttfamily cv\+::\+Size Base\+Detector\+::m\+\_\+min\+Object\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 138 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}\label{class_base_detector_a45a2d54a0b69e271aa5c44ee301682b7}} 
+\index{Base\+Detector@{Base\+Detector}!m\+\_\+motion\+Map@{m\+\_\+motion\+Map}}
+\index{m\+\_\+motion\+Map@{m\+\_\+motion\+Map}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+motion\+Map}{m\_motionMap}}
+{\footnotesize\ttfamily cv\+::\+Mat Base\+Detector\+::m\+\_\+motion\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 142 of file Base\+Detector.\+h.
+
+\mbox{\Hypertarget{class_base_detector_a409c20093acba261db8354ca72058fce}\label{class_base_detector_a409c20093acba261db8354ca72058fce}} 
+\index{Base\+Detector@{Base\+Detector}!m\+\_\+regions@{m\+\_\+regions}}
+\index{m\+\_\+regions@{m\+\_\+regions}!Base\+Detector@{Base\+Detector}}
+\subsubsection{\texorpdfstring{m\+\_\+regions}{m\_regions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}} Base\+Detector\+::m\+\_\+regions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 136 of file Base\+Detector.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\mbox{\hyperlink{_base_detector_8h}{Base\+Detector.\+h}}\end{DoxyCompactItemize}

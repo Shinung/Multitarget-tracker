@@ -1,0 +1,275 @@
+\hypertarget{classedge__map}{}\section{edge\+\_\+map$<$ T, Alloc $>$ Class Template Reference}
+\label{classedge__map}\index{edge\+\_\+map$<$ T, Alloc $>$@{edge\+\_\+map$<$ T, Alloc $>$}}
+
+
+A specialized map with edges as keys.  
+
+
+
+
+{\ttfamily \#include $<$edge\+\_\+map.\+h$>$}
+
+
+
+Inheritance diagram for edge\+\_\+map$<$ T, Alloc $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classedge__map__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for edge\+\_\+map$<$ T, Alloc $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classedge__map__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ T, Alloc $>$\+::reference \mbox{\hyperlink{classne__map_a3de60750d102f8992a215b0fe645014d}{value\+\_\+reference}}
+\item 
+typedef std\+::vector$<$ T, Alloc $>$\+::const\+\_\+reference \mbox{\hyperlink{classne__map_ad2be1a01de53940aee1282ec0e34f0f7}{const\+\_\+value\+\_\+reference}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classedge__map_a947fa280ba03fd11b1813d484572e6df}{edge\+\_\+map}} ()
+\item 
+\mbox{\hyperlink{classedge__map_a30bd07fe13081b22071b721f66bb6796}{edge\+\_\+map}} (const \mbox{\hyperlink{classgraph}{graph}} \&\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}, T t=T())
+\item 
+void \mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (const \mbox{\hyperlink{classgraph}{graph}} \&, T def=T())
+\item 
+\mbox{\hyperlink{classne__map_a3de60750d102f8992a215b0fe645014d}{value\+\_\+reference}} \mbox{\hyperlink{classne__map_a4bcfa7ec2dcbfaa42fab93dfa81e8ab0}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{classedge}{edge}} key)
+\item 
+\mbox{\hyperlink{classne__map_ad2be1a01de53940aee1282ec0e34f0f7}{const\+\_\+value\+\_\+reference}} \mbox{\hyperlink{classne__map_ad8d23cc924963ddff8267e625dcbffc6}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{classedge}{edge}} key) const
+\item 
+void \mbox{\hyperlink{classne__map_aebe555c23769c6dcc869b5ac7fae6a9c}{clear}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T, class Alloc = std\+::allocator$<$\+T$>$$>$\newline
+class edge\+\_\+map$<$ T, Alloc $>$}
+
+A specialized map with edges as keys. 
+
+A {\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}} is a specialized and optimized map implementation with edges as keys. Using a {\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}} is the standard way to attach user defined information to the edges of a {\ttfamily graph}.
+
+An example of usage\+: 
+\begin{DoxyPre}
+  graph g;\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  node v1 = g.new\_node();
+  node v2 = g.new\_node();
+  edge e = g.new\_edge(v1, v2);\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  \mbox{\hyperlink{classedge__map}{edge\_map}}<string> label(g, "Default Label");\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  label[e] = "An edge";\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  assert(label[e] == "An edge");
+\end{DoxyPre}
+
+
+The edges used as keys for a {\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}} M\+U\+ST be edges of the same graph. If you want to use edges from different graphs, use a {\ttfamily map$<$edge,T$>$} instead. A graph and a copy of it are considered to be different.
+
+Most of the functionality of {\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}} is inherited from \mbox{\hyperlink{classne__map}{ne\+\_\+map}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 54 of file edge\+\_\+map.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classne__map_ad2be1a01de53940aee1282ec0e34f0f7}\label{classne__map_ad2be1a01de53940aee1282ec0e34f0f7}} 
+\index{edge\+\_\+map@{edge\+\_\+map}!const\+\_\+value\+\_\+reference@{const\+\_\+value\+\_\+reference}}
+\index{const\+\_\+value\+\_\+reference@{const\+\_\+value\+\_\+reference}!edge\+\_\+map@{edge\+\_\+map}}
+\subsubsection{\texorpdfstring{const\+\_\+value\+\_\+reference}{const\_value\_reference}}
+{\footnotesize\ttfamily typedef std\+::vector$<$T , Alloc$>$\+::const\+\_\+reference \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} , T , \mbox{\hyperlink{classgraph}{graph}} , Alloc $>$\+::\mbox{\hyperlink{classne__map_ad2be1a01de53940aee1282ec0e34f0f7}{const\+\_\+value\+\_\+reference}}\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 84 of file ne\+\_\+map.\+h.
+
+\mbox{\Hypertarget{classne__map_a3de60750d102f8992a215b0fe645014d}\label{classne__map_a3de60750d102f8992a215b0fe645014d}} 
+\index{edge\+\_\+map@{edge\+\_\+map}!value\+\_\+reference@{value\+\_\+reference}}
+\index{value\+\_\+reference@{value\+\_\+reference}!edge\+\_\+map@{edge\+\_\+map}}
+\subsubsection{\texorpdfstring{value\+\_\+reference}{value\_reference}}
+{\footnotesize\ttfamily typedef std\+::vector$<$T , Alloc$>$\+::reference \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} , T , \mbox{\hyperlink{classgraph}{graph}} , Alloc $>$\+::\mbox{\hyperlink{classne__map_a3de60750d102f8992a215b0fe645014d}{value\+\_\+reference}}\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 75 of file ne\+\_\+map.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classedge__map_a947fa280ba03fd11b1813d484572e6df}\label{classedge__map_a947fa280ba03fd11b1813d484572e6df}} 
+\index{edge\+\_\+map@{edge\+\_\+map}!edge\+\_\+map@{edge\+\_\+map}}
+\index{edge\+\_\+map@{edge\+\_\+map}!edge\+\_\+map@{edge\+\_\+map}}
+\subsubsection{\texorpdfstring{edge\+\_\+map()}{edge\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T, class Alloc = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classedge__map}{edge\+\_\+map}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an empty {\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}} not associated with any {\ttfamily graph}. You may (but need not) call {\ttfamily ne\+\_\+map\+::init(const graph \&, T)} to associate it to a {\ttfamily graph}. 
+
+Definition at line 64 of file edge\+\_\+map.\+h.
+
+
+\begin{DoxyCode}
+64 : \mbox{\hyperlink{classne__map}{ne\_map<edge, T, graph, Alloc>}}() \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{classedge__map_a30bd07fe13081b22071b721f66bb6796}\label{classedge__map_a30bd07fe13081b22071b721f66bb6796}} 
+\index{edge\+\_\+map@{edge\+\_\+map}!edge\+\_\+map@{edge\+\_\+map}}
+\index{edge\+\_\+map@{edge\+\_\+map}!edge\+\_\+map@{edge\+\_\+map}}
+\subsubsection{\texorpdfstring{edge\+\_\+map()}{edge\_map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T, class Alloc = std\+::allocator$<$\+T$>$$>$ \\
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ T, Alloc $>$\+::\mbox{\hyperlink{classedge__map}{edge\+\_\+map}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{g,  }\item[{T}]{t = {\ttfamily T()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Constructs a {\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}} associated to the graph {\ttfamily g}. The value associated to each edge in {\ttfamily g} is set to {\ttfamily t}. 
+
+Definition at line 72 of file edge\+\_\+map.\+h.
+
+
+\begin{DoxyCode}
+72                                                 : 
+73         \mbox{\hyperlink{classne__map}{ne\_map<edge, T, graph, Alloc>}}(\mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}},t) \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classne__map_aebe555c23769c6dcc869b5ac7fae6a9c}\label{classne__map_aebe555c23769c6dcc869b5ac7fae6a9c}} 
+\index{edge\+\_\+map@{edge\+\_\+map}!clear@{clear}}
+\index{clear@{clear}!edge\+\_\+map@{edge\+\_\+map}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} , T , \mbox{\hyperlink{classgraph}{graph}} , Alloc $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Erases a elements of this nodemap 
+
+Definition at line 177 of file ne\+\_\+map.\+h.
+
+
+\begin{DoxyCode}
+178 \{
+179     \mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.clear();
+180 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}\label{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}} 
+\index{edge\+\_\+map@{edge\+\_\+map}!init@{init}}
+\index{init@{init}!edge\+\_\+map@{edge\+\_\+map}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} , T , \mbox{\hyperlink{classgraph}{graph}} , Alloc $>$\+::init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}}  \&}]{g,  }\item[{T}]{def = {\ttfamily Value()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Initializes the \mbox{\hyperlink{classne__map}{ne\+\_\+map}} to hold information for the elements of graph g. def is the value associated with all elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$code$>$g$<$/code$>$} & associated {\ttfamily graph} \\
+\hline
+{\em $<$code$>$def$<$/code$>$} & default value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 148 of file ne\+\_\+map.\+h.
+
+
+\begin{DoxyCode}
+149 \{
+150     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.number\_of\_ids(Key());
+151     \mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.resize(n);
+152     fill\_n(\mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.begin(), n, t2);
+153 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classne__map_a4bcfa7ec2dcbfaa42fab93dfa81e8ab0}\label{classne__map_a4bcfa7ec2dcbfaa42fab93dfa81e8ab0}} 
+\index{edge\+\_\+map@{edge\+\_\+map}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!edge\+\_\+map@{edge\+\_\+map}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} , T , \mbox{\hyperlink{classgraph}{graph}} , Alloc $>$\+::\mbox{\hyperlink{classne__map_a3de60750d102f8992a215b0fe645014d}{value\+\_\+reference}} \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} , T , \mbox{\hyperlink{classgraph}{graph}} , Alloc $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedge}{edge}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Read/write accessor function to the value associated with {\ttfamily key}. Use this function to change the value of an element in the {\ttfamily \mbox{\hyperlink{classne__map}{ne\+\_\+map}}}. Assume that {\ttfamily ne} is a {\ttfamily \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$int$>$}. Then you can assign the value 5 to {\ttfamily key} with\+: 
+\begin{DoxyPre}
+  ne[key] = 5;
+\end{DoxyPre}
+
+
+If there is no entry in the {\ttfamily \mbox{\hyperlink{classne__map}{ne\+\_\+map}}} associated with {\ttfamily key}, one is created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key of the Entry to change \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a reference to the value associated to {\ttfamily key}. 
+\end{DoxyReturn}
+
+
+Definition at line 156 of file ne\+\_\+map.\+h.
+
+
+\begin{DoxyCode}
+157 \{
+158     \textcolor{keywordflow}{if}(\mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}.id() >= (signed)\mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.size())
+159     \{
+160     \textcolor{keywordflow}{if} (\mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}.id() >= (signed)\mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.capacity()) \{
+161         \mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.reserve((6 * \mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}.id()) / 5 + 1);
+162     \}
+163 
+164     \mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.insert(\mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.end(), \mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}.id()+1-\mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.size(), Value());
+165     \}
+166     \textcolor{keywordflow}{return} \mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.operator[](\mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}.id());
+167 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classne__map_ad8d23cc924963ddff8267e625dcbffc6}\label{classne__map_ad8d23cc924963ddff8267e625dcbffc6}} 
+\index{edge\+\_\+map@{edge\+\_\+map}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!edge\+\_\+map@{edge\+\_\+map}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} , T , \mbox{\hyperlink{classgraph}{graph}} , Alloc $>$\+::\mbox{\hyperlink{classne__map_ad2be1a01de53940aee1282ec0e34f0f7}{const\+\_\+value\+\_\+reference}} \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$ \mbox{\hyperlink{classedge}{edge}} , T , \mbox{\hyperlink{classgraph}{graph}} , Alloc $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedge}{edge}}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+Read-\/only accessor function to the value associated with {\ttfamily key}. Use this function to read the value of an element in the {\ttfamily \mbox{\hyperlink{classne__map}{ne\+\_\+map}}}. Assume that {\ttfamily ne} is a {\ttfamily \mbox{\hyperlink{classne__map}{ne\+\_\+map}}$<$int$>$}. Then you can print the value associated with {\ttfamily key} with\+: 
+\begin{DoxyPre}
+  cout << ne[key];
+\end{DoxyPre}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key of the Entry to look up \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a const reference to the value associated to {\ttfamily key}. 
+\end{DoxyReturn}
+
+
+Definition at line 170 of file ne\+\_\+map.\+h.
+
+
+\begin{DoxyCode}
+171 \{
+172     assert(\mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}.id() < (signed)\mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.size());
+173     \textcolor{keywordflow}{return} \mbox{\hyperlink{classne__map_af73307678e05a9c24c084d98b267afa8}{data}}.operator[](\mbox{\hyperlink{gml2nestedsql_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}.id());
+174 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{edge__map_8h}{edge\+\_\+map.\+h}}\end{DoxyCompactItemize}

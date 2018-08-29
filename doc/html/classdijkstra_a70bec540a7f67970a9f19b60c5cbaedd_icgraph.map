@@ -1,0 +1,4 @@
+<map id="dijkstra::reset_algorithm" name="dijkstra::reset_algorithm">
+<area shape="rect" id="node2" href="$classdijkstra.html#a64a1fcb9cca32ff932b9b98a08cff106" title="Default constructor. " alt="" coords="215,5,329,32"/>
+<area shape="rect" id="node3" href="$classdijkstra.html#a444c288b3a49ec1c2973459dad55ffb3" title="Resets Dijkstra&#39;s algorithm. " alt="" coords="221,56,323,83"/>
+</map>

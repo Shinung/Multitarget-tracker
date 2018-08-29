@@ -1,0 +1,6 @@
+<map id="fm_partition::balance_holds" name="fm_partition::balance_holds">
+<area shape="rect" id="node2" href="$classfm__partition.html#ac1167c6595a9f582ae98c9f555029d9b" title="fm_partition::move\l_vertex" alt="" coords="196,5,323,47"/>
+<area shape="rect" id="node3" href="$classfm__partition.html#a91572409b30f0967ea3782079f69b1bb" title="fm_partition::move\l_manager" alt="" coords="371,5,497,47"/>
+<area shape="rect" id="node4" href="$classfm__partition.html#aec7b2a315bc003fbd98debd5cd879f99" title="fm_partition::pass\l_manager" alt="" coords="545,5,671,47"/>
+<area shape="rect" id="node5" href="$classfm__partition.html#a015b171fcaa01973ebe6c6a46a727097" title="fm_partition::run" alt="" coords="719,13,833,39"/>
+</map>

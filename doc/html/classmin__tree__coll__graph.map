@@ -1,0 +1,5 @@
+<map id="min_tree" name="min_tree">
+<area shape="rect" id="node2" href="$classalgorithm.html" title="Abstract baseclass for all algoritm&#45;classes. " alt="" coords="5,235,108,371"/>
+<area shape="rect" id="node3" href="$classedge__map.html" title="{edge_map\&lt; int \&gt;\n||+ edge_map()\l+ edge_map()\l}" alt="" coords="133,257,253,349"/>
+<area shape="rect" id="node4" href="$classne__map.html" title="{ne_map\&lt; edge, int,\l graph, std::allocator\l\&lt; int \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="122,5,263,185"/>
+</map>

@@ -1,0 +1,43 @@
+\hypertarget{_s_s_d_custom_net_detector_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+S\+S\+D\+Custom\+Net\+Detector.cpp File Reference}
+\label{_s_s_d_custom_net_detector_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+S\+S\+D\+Custom\+Net\+Detector.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+S\+S\+D\+Custom\+Net\+Detector.\+cpp}}
+{\ttfamily \#include \char`\"{}S\+S\+D\+Custom\+Net\+Detector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nms.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+S\+D.\+h\char`\"{}}\newline
+Include dependency graph for S\+S\+D\+Custom\+Net\+Detector.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_s_s_d_custom_net_detector_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_exec_context}{Exec\+Context}}
+\item 
+struct \mbox{\hyperlink{struct_custom_s_s_d__ctx}{Custom\+S\+S\+D\+\_\+ctx}}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{_s_s_d_custom_net_detector_8cpp_a123a352b9596fc7d507e96fbe9c44f41}{k\+Contexts\+Per\+Device}} = 2
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_s_s_d_custom_net_detector_8cpp_a123a352b9596fc7d507e96fbe9c44f41}\label{_s_s_d_custom_net_detector_8cpp_a123a352b9596fc7d507e96fbe9c44f41}} 
+\index{S\+S\+D\+Custom\+Net\+Detector.\+cpp@{S\+S\+D\+Custom\+Net\+Detector.\+cpp}!k\+Contexts\+Per\+Device@{k\+Contexts\+Per\+Device}}
+\index{k\+Contexts\+Per\+Device@{k\+Contexts\+Per\+Device}!S\+S\+D\+Custom\+Net\+Detector.\+cpp@{S\+S\+D\+Custom\+Net\+Detector.\+cpp}}
+\subsubsection{\texorpdfstring{k\+Contexts\+Per\+Device}{kContextsPerDevice}}
+{\footnotesize\ttfamily constexpr int k\+Contexts\+Per\+Device = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+Currently, 2 execution contexts are created per G\+PU. In other words, 2 inference tasks can execute in parallel on the same G\+PU. This helps improve G\+PU utilization since some kernel operations of inference will not fully use the G\+PU. From \href{https://github.com/NVIDIA/gpu-rest-engine}{\tt N\+V\+I\+D\+I\+A/gpu-\/rest-\/engine}
+
+\begin{DoxyAuthor}{Author}
+Shinung 
+\end{DoxyAuthor}
+
+
+Definition at line 107 of file S\+S\+D\+Custom\+Net\+Detector.\+cpp.
+

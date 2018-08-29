@@ -1,0 +1,564 @@
+\hypertarget{class_detection_scanner}{}\section{Detection\+Scanner Class Reference}
+\label{class_detection_scanner}\index{Detection\+Scanner@{Detection\+Scanner}}
+
+
+{\ttfamily \#include $<$c4-\/pedestrian-\/detector.\+h$>$}
+
+
+
+Collaboration diagram for Detection\+Scanner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_detection_scanner__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_detection_scanner_a535d5a56ab512b384b3888bab85ea5eb}{Detection\+Scanner}} ()
+\item 
+\mbox{\hyperlink{class_detection_scanner_a3c06bb2a16b65a6f592536a93d2c2f9e}{Detection\+Scanner}} (const int \+\_\+height, const int \+\_\+width, const int \+\_\+xdiv, const int \+\_\+ydiv, const int \+\_\+baseflength, const double \+\_\+ratio)
+\item 
+\mbox{\hyperlink{class_detection_scanner_a45748bbcdf66b62a0122729076a67e17}{$\sim$\+Detection\+Scanner}} ()
+\item 
+void \mbox{\hyperlink{class_detection_scanner_a36c4db431f28648b82bd6e55afb67008}{Load\+Detector}} (std\+::vector$<$ \mbox{\hyperlink{class_node_detector_a7188c48dfe6b88b3b7f47c599c4832bd}{Node\+Detector\+::\+Node\+Type}} $>$ \&types, std\+::vector$<$ int $>$ \&upper\+\_\+bounds, std\+::vector$<$ std\+::string $>$ \&filenames)
+\item 
+int \mbox{\hyperlink{class_detection_scanner_afc70267c30bdbef7a128b8e6d05d3d9a}{Scan}} (\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \&original, std\+::vector$<$ cv\+::\+Rect $>$ \&results, const int stepsize, const int round, std\+::ofstream $\ast$out, const int upper\+\_\+bound)
+\item 
+int \mbox{\hyperlink{class_detection_scanner_aa27d494b253975922d853070aab7ce4d}{Fast\+Scan}} (\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \&original, std\+::vector$<$ cv\+::\+Rect $>$ \&results, const int stepsize)
+\item 
+int \mbox{\hyperlink{class_detection_scanner_a1e36d8da847810fc36860ea87a8eae6f}{Feature\+Length}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}
+\item 
+int \mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}
+\item 
+int \mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}
+\item 
+int \mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}
+\item 
+int \mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}}
+\item 
+double \mbox{\hyperlink{class_detection_scanner_a2ac93d1b6aca1959d57133c08b0eaa1c}{ratio}}
+\item 
+\mbox{\hyperlink{class_cascade_detector}{Cascade\+Detector}} $\ast$ \mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{E\+XT}} = 1
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_detection_scanner_af275e1362a1bc351f9a92323e0860d27}{Init\+Image}} (\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \&original)
+\item 
+void \mbox{\hyperlink{class_detection_scanner_a3fda62eb396e2bff3e2cd2b8ec5079a1}{Init\+Integral\+Images}} (const int stepsize)
+\item 
+void \mbox{\hyperlink{class_detection_scanner_a01790349ec7aef4ff03335d5e76f183a}{Resize\+Image}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ $\ast$ \mbox{\hyperlink{class_detection_scanner_a0f64092660cd084b8a1d3b6e8e30cabb}{integrals}}
+\item 
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}
+\item 
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \mbox{\hyperlink{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}{sobel}}
+\item 
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ int $>$ \mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}
+\item 
+\mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$ int $>$ \mbox{\hyperlink{class_detection_scanner_a3e46cb7413cad57d65fe4c35f959ea11}{hist}}
+\item 
+\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \mbox{\hyperlink{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}{scores}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 512 of file c4-\/pedestrian-\/detector.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_detection_scanner_a535d5a56ab512b384b3888bab85ea5eb}\label{class_detection_scanner_a535d5a56ab512b384b3888bab85ea5eb}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Detection\+Scanner@{Detection\+Scanner}}
+\index{Detection\+Scanner@{Detection\+Scanner}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Detection\+Scanner()}{DetectionScanner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Detection\+Scanner\+::\+Detection\+Scanner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 515 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+516         : \mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}(0), \mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}(0), \mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}(0), \mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}(0), \mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}}(0), 
+      \mbox{\hyperlink{class_detection_scanner_a2ac93d1b6aca1959d57133c08b0eaa1c}{ratio}}(0.0), \mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}}(NULL), \mbox{\hyperlink{class_detection_scanner_a0f64092660cd084b8a1d3b6e8e30cabb}{integrals}}(NULL)
+517     \{
+518     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_detection_scanner_a3c06bb2a16b65a6f592536a93d2c2f9e}\label{class_detection_scanner_a3c06bb2a16b65a6f592536a93d2c2f9e}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Detection\+Scanner@{Detection\+Scanner}}
+\index{Detection\+Scanner@{Detection\+Scanner}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Detection\+Scanner()}{DetectionScanner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Detection\+Scanner\+::\+Detection\+Scanner (\begin{DoxyParamCaption}\item[{const int}]{\+\_\+height,  }\item[{const int}]{\+\_\+width,  }\item[{const int}]{\+\_\+xdiv,  }\item[{const int}]{\+\_\+ydiv,  }\item[{const int}]{\+\_\+baseflength,  }\item[{const double}]{\+\_\+ratio }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 519 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+521         :\mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}(\_height),\mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}(\_width),\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}(\_xdiv),\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}(\_ydiv),
+522          \mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}}(\_baseflength),\mbox{\hyperlink{class_detection_scanner_a2ac93d1b6aca1959d57133c08b0eaa1c}{ratio}}(\_ratio),\mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}}(NULL),
+      \mbox{\hyperlink{class_detection_scanner_a0f64092660cd084b8a1d3b6e8e30cabb}{integrals}}(NULL)
+523     \{
+524     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_detection_scanner_a45748bbcdf66b62a0122729076a67e17}\label{class_detection_scanner_a45748bbcdf66b62a0122729076a67e17}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!````~Detection\+Scanner@{$\sim$\+Detection\+Scanner}}
+\index{````~Detection\+Scanner@{$\sim$\+Detection\+Scanner}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{$\sim$\+Detection\+Scanner()}{~DetectionScanner()}}
+{\footnotesize\ttfamily Detection\+Scanner\+::$\sim$\+Detection\+Scanner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 525 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+526     \{
+527         \textcolor{keyword}{delete} \mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}};
+528         \textcolor{keyword}{delete}[] \mbox{\hyperlink{class_detection_scanner_a0f64092660cd084b8a1d3b6e8e30cabb}{integrals}};
+529     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_detection_scanner_aa27d494b253975922d853070aab7ce4d}\label{class_detection_scanner_aa27d494b253975922d853070aab7ce4d}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Fast\+Scan@{Fast\+Scan}}
+\index{Fast\+Scan@{Fast\+Scan}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Fast\+Scan()}{FastScan()}}
+{\footnotesize\ttfamily int Detection\+Scanner\+::\+Fast\+Scan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \&}]{original,  }\item[{std\+::vector$<$ cv\+::\+Rect $>$ \&}]{results,  }\item[{const int}]{stepsize }\end{DoxyParamCaption})}
+
+
+
+Definition at line 235 of file c4-\/pedestrian-\/detector.\+cpp.
+
+
+\begin{DoxyCode}
+236 \{
+237     \textcolor{keywordflow}{if}(original.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}<\mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}+5 || original.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}<\mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}+5) \textcolor{keywordflow}{return} 0;
+238     \textcolor{keyword}{const} \textcolor{keywordtype}{int} hd = \mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}/\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}};
+239     \textcolor{keyword}{const} \textcolor{keywordtype}{int} wd = \mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}/\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}};
+240     \mbox{\hyperlink{class_detection_scanner_af275e1362a1bc351f9a92323e0860d27}{InitImage}}(original);
+241     results.clear();
+242 
+243     \mbox{\hyperlink{class_detection_scanner_a3e46cb7413cad57d65fe4c35f959ea11}{hist}}.\mbox{\hyperlink{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec}{Create}}(1,\mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}}*(\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}-\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}})*(\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}-
+      \mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}}));
+244 
+245     \mbox{\hyperlink{class_node_detector}{NodeDetector}}* \mbox{\hyperlink{classnode}{node}} = \mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}}->\mbox{\hyperlink{class_cascade_detector_a7977422f255cf4d753665c0c6a0b0f07}{nodes}}[1];
+246     \textcolor{keywordtype}{double}** pc = \mbox{\hyperlink{classnode}{node}}->classifier.p;
+247     \textcolor{keywordtype}{int} oheight = original.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}, owidth = original.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}};
+248     cv::Rect rect;
+249     \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}>=\mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}} && \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}>=\mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}})
+250     \{
+251         \mbox{\hyperlink{class_detection_scanner_a3fda62eb396e2bff3e2cd2b8ec5079a1}{InitIntegralImages}}(stepsize);
+252         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=2; i+\mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}<\mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-2; i+=stepsize)
+253         \{
+254             \textcolor{keyword}{const} \textcolor{keywordtype}{double}* sp = \mbox{\hyperlink{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}{scores}}.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i];
+255             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=2; j+\mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}<\mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-2; j+=stepsize)
+256             \{
+257                 \textcolor{keywordflow}{if}(sp[j]<=0) \textcolor{keywordflow}{continue};
+258                 \textcolor{keywordtype}{int}* p = \mbox{\hyperlink{class_detection_scanner_a3e46cb7413cad57d65fe4c35f959ea11}{hist}}.\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}};
+259                 \mbox{\hyperlink{class_detection_scanner_a3e46cb7413cad57d65fe4c35f959ea11}{hist}}.\mbox{\hyperlink{class_array2d_c_a5e1d7837fd208699694fc3fc97151df0}{Zero}}();
+260                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}-\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}}; k++)
+261                 \{
+262                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} t=0; t<\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}-\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}}; t++)
+263                     \{
+264                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x=i+k*hd+1; x<i+(k+1+\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}})*hd-1; x++)
+265                         \{
+266                             \textcolor{keywordtype}{int}* ctp = \mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[x];
+267                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=j+t*wd+1; y<j+(t+1+\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}})*wd-1; y++)
+268                                 p[ctp[y]]++;
+269                         \}
+270                         p += \mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}};
+271                     \}
+272                 \}
+273                 \textcolor{keywordtype}{double} score = \mbox{\hyperlink{classnode}{node}}->thresh;
+274                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<\mbox{\hyperlink{classnode}{node}}->classifier.nrow; k++) score += pc[k][
+      \mbox{\hyperlink{class_detection_scanner_a3e46cb7413cad57d65fe4c35f959ea11}{hist}}.\mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}}[k]];
+275                 \textcolor{keywordflow}{if}(score>0)
+276                 \{
+277                     rect.y = i * oheight / \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}};
+278                     rect.height = (oheight * \mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}) / \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}} + 1;
+279                     rect.x = j * owidth / \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}};
+280                     rect.width = (\mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}} * owidth) /\mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}} + 1;
+281                     results.push\_back(rect);
+282                 \}
+283             \}
+284         \}
+285         \mbox{\hyperlink{class_detection_scanner_a01790349ec7aef4ff03335d5e76f183a}{ResizeImage}}();
+286     \}
+287     \textcolor{keywordflow}{return} 0;
+288 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_aa27d494b253975922d853070aab7ce4d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_aa27d494b253975922d853070aab7ce4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_detection_scanner_a1e36d8da847810fc36860ea87a8eae6f}\label{class_detection_scanner_a1e36d8da847810fc36860ea87a8eae6f}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Feature\+Length@{Feature\+Length}}
+\index{Feature\+Length@{Feature\+Length}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Feature\+Length()}{FeatureLength()}}
+{\footnotesize\ttfamily int Detection\+Scanner\+::\+Feature\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 535 of file c4-\/pedestrian-\/detector.\+h.
+
+
+\begin{DoxyCode}
+536     \{
+537         \textcolor{keywordflow}{return} (\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}-1)*(\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}-1)*\mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}};
+538     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_detection_scanner_af275e1362a1bc351f9a92323e0860d27}\label{class_detection_scanner_af275e1362a1bc351f9a92323e0860d27}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Init\+Image@{Init\+Image}}
+\index{Init\+Image@{Init\+Image}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Init\+Image()}{InitImage()}}
+{\footnotesize\ttfamily void Detection\+Scanner\+::\+Init\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \&}]{original }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 181 of file c4-\/pedestrian-\/detector.\+cpp.
+
+
+\begin{DoxyCode}
+182 \{
+183     \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}} = original;
+184     \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_int_image_a35b8a5c2e64fa3ab50d6b14973f368b8}{Sobel}}(\mbox{\hyperlink{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}{sobel}},\textcolor{keyword}{false},\textcolor{keyword}{false});
+185     \mbox{\hyperlink{c4-pedestrian-detector_8cpp_a205804b2ee8558313222a898513a9543}{ComputeCT}}(\mbox{\hyperlink{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}{sobel}},\mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}});
+186 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_af275e1362a1bc351f9a92323e0860d27_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_af275e1362a1bc351f9a92323e0860d27_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_detection_scanner_a3fda62eb396e2bff3e2cd2b8ec5079a1}\label{class_detection_scanner_a3fda62eb396e2bff3e2cd2b8ec5079a1}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Init\+Integral\+Images@{Init\+Integral\+Images}}
+\index{Init\+Integral\+Images@{Init\+Integral\+Images}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Init\+Integral\+Images()}{InitIntegralImages()}}
+{\footnotesize\ttfamily void Detection\+Scanner\+::\+Init\+Integral\+Images (\begin{DoxyParamCaption}\item[{const int}]{stepsize }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 189 of file c4-\/pedestrian-\/detector.\+cpp.
+
+
+\begin{DoxyCode}
+190 \{
+191     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}}->\mbox{\hyperlink{class_cascade_detector_a7977422f255cf4d753665c0c6a0b0f07}{nodes}}[0]->\mbox{\hyperlink{class_node_detector_a96a5ab514f7996e4e64fff8d37199f64}{type}}!=\mbox{\hyperlink{class_node_detector_a7188c48dfe6b88b3b7f47c599c4832bda92a38601f0cada88be925ffd8824effc}{NodeDetector::LINEAR}})
+192         \textcolor{keywordflow}{return}; \textcolor{comment}{// No need to prepare integral images}
+193 
+194     \textcolor{keyword}{const} \textcolor{keywordtype}{int} hd = \mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}/\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}*2-2;
+195     \textcolor{keyword}{const} \textcolor{keywordtype}{int} wd = \mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}/\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}*2-2;
+196     \mbox{\hyperlink{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}{scores}}.\mbox{\hyperlink{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec}{Create}}(\mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}},\mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}});
+197     \mbox{\hyperlink{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}{scores}}.\mbox{\hyperlink{class_array2d_c_a5e1d7837fd208699694fc3fc97151df0}{Zero}}(\mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}}->\mbox{\hyperlink{class_cascade_detector_a7977422f255cf4d753665c0c6a0b0f07}{nodes}}[0]->\mbox{\hyperlink{class_node_detector_a2fd8792e80f3f31d2d07831a5169935f}{thresh}}/hd/wd);
+198     \textcolor{keywordtype}{double}* linearweights = \mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}}->\mbox{\hyperlink{class_cascade_detector_a7977422f255cf4d753665c0c6a0b0f07}{nodes}}[0]->\mbox{\hyperlink{class_node_detector_a5eb3c12d3aa5250116334d6b4897ae47}{classifier}}.
+      \mbox{\hyperlink{class_array2d_c_a25d8fa5049d4c7ded126e0acdd18f37a}{buf}};
+199     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}-\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}}; i++)
+200     \{
+201         \textcolor{keyword}{const} \textcolor{keywordtype}{int} xoffset = \mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}/\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}*i;
+202         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}-\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}}; j++)
+203         \{
+204             \textcolor{keyword}{const} \textcolor{keywordtype}{int} yoffset = \mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}/\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}*j;
+205             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x=2; x<\mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-2-xoffset; x++)
+206             \{
+207                 \textcolor{keywordtype}{int}* ctp = \mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[x+xoffset]+yoffset;
+208                 \textcolor{keywordtype}{double}* tempp = \mbox{\hyperlink{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}{scores}}.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[x];
+209                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=2; y<\mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-2-yoffset; y++)
+210                     tempp[y] += linearweights[ctp[y]];
+211             \}
+212             linearweights += \mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}};
+213         \}
+214     \}
+215     \mbox{\hyperlink{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}{scores}}.\mbox{\hyperlink{class_int_image_a4b955bc5382ee4745a5ab92fc48b4a6a}{CalcIntegralImageInPlace}}();
+216     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=2; i<\mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}.\mbox{\hyperlink{class_array2d_c_a12f690f7195f7674a86a7e1eedbc473c}{nrow}}-2-\mbox{\hyperlink{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}{height}}; i+=stepsize)
+217     \{
+218         \textcolor{keywordtype}{double}* p1 = \mbox{\hyperlink{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}{scores}}.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i];
+219         \textcolor{keywordtype}{double}* p2 = \mbox{\hyperlink{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}{scores}}.\mbox{\hyperlink{class_array2d_c_a727eae5d663d463635cc150e6f771f0d}{p}}[i+hd];
+220         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}}.\mbox{\hyperlink{class_array2d_c_a27e0f8f40f644831cd7c750db59dc28a}{ncol}}-2-\mbox{\hyperlink{class_detection_scanner_a37d12c13060640ad0321f089cd565476}{width}}; j+=stepsize)
+221             p1[j] += (p2[j+wd] - p2[j] - p1[j+wd]);
+222     \}
+223 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_a3fda62eb396e2bff3e2cd2b8ec5079a1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_a3fda62eb396e2bff3e2cd2b8ec5079a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_detection_scanner_a36c4db431f28648b82bd6e55afb67008}\label{class_detection_scanner_a36c4db431f28648b82bd6e55afb67008}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Load\+Detector@{Load\+Detector}}
+\index{Load\+Detector@{Load\+Detector}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Load\+Detector()}{LoadDetector()}}
+{\footnotesize\ttfamily void Detection\+Scanner\+::\+Load\+Detector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_node_detector_a7188c48dfe6b88b3b7f47c599c4832bd}{Node\+Detector\+::\+Node\+Type}} $>$ \&}]{types,  }\item[{std\+::vector$<$ int $>$ \&}]{upper\+\_\+bounds,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{filenames }\end{DoxyParamCaption})}
+
+
+
+Definition at line 128 of file c4-\/pedestrian-\/detector.\+cpp.
+
+
+\begin{DoxyCode}
+129 \{
+130     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{gml2nestedsql_8cpp_af81a36ce49771f5a6ccdc7b43e648f7f}{depth}} = types.size();
+131     assert(\mbox{\hyperlink{gml2nestedsql_8cpp_af81a36ce49771f5a6ccdc7b43e648f7f}{depth}}>0 && \mbox{\hyperlink{gml2nestedsql_8cpp_af81a36ce49771f5a6ccdc7b43e648f7f}{depth}}==upper\_bounds.size() && \mbox{\hyperlink{gml2nestedsql_8cpp_af81a36ce49771f5a6ccdc7b43e648f7f}{depth}}==filenames.size());
+132     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}})
+133         \textcolor{keyword}{delete} \mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}};
+134     \mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_cascade_detector}{CascadeDetector}};
+135     assert(\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}>0 && \mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}>0);
+136     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{gml2nestedsql_8cpp_af81a36ce49771f5a6ccdc7b43e648f7f}{depth}}; i++)
+137         \mbox{\hyperlink{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}{cascade}}->\mbox{\hyperlink{class_cascade_detector_aa8759d8bdb90d648046aa72f0cf0fab3}{AddNode}}(types[i],(\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}-\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}})*(\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}-\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}})*
+      \mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}},upper\_bounds[i],filenames[i].c\_str());
+138 
+139     \mbox{\hyperlink{class_detection_scanner_a3e46cb7413cad57d65fe4c35f959ea11}{hist}}.\mbox{\hyperlink{class_array2d_c_abfe87be7641dfc586b9e7bffebcca9ec}{Create}}(1,\mbox{\hyperlink{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}{baseflength}}*(\mbox{\hyperlink{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}{xdiv}}-\mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}})*(\mbox{\hyperlink{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}{ydiv}}-
+      \mbox{\hyperlink{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}{EXT}}));
+140 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_a36c4db431f28648b82bd6e55afb67008_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_a36c4db431f28648b82bd6e55afb67008_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_detection_scanner_a01790349ec7aef4ff03335d5e76f183a}\label{class_detection_scanner_a01790349ec7aef4ff03335d5e76f183a}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Resize\+Image@{Resize\+Image}}
+\index{Resize\+Image@{Resize\+Image}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Resize\+Image()}{ResizeImage()}}
+{\footnotesize\ttfamily void Detection\+Scanner\+::\+Resize\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 226 of file c4-\/pedestrian-\/detector.\+cpp.
+
+
+\begin{DoxyCode}
+227 \{
+228     \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_int_image_a6eb852d06d8365476dba0760d9319e59}{Resize}}(\mbox{\hyperlink{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}{sobel}},\mbox{\hyperlink{class_detection_scanner_a2ac93d1b6aca1959d57133c08b0eaa1c}{ratio}});
+229     \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_int_image_adc366f59865cefd440c01996fd42d59a}{Swap}}(\mbox{\hyperlink{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}{sobel}});
+230     \mbox{\hyperlink{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}{image}}.\mbox{\hyperlink{class_int_image_a35b8a5c2e64fa3ab50d6b14973f368b8}{Sobel}}(\mbox{\hyperlink{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}{sobel}},\textcolor{keyword}{false},\textcolor{keyword}{false});
+231     \mbox{\hyperlink{c4-pedestrian-detector_8cpp_a205804b2ee8558313222a898513a9543}{ComputeCT}}(\mbox{\hyperlink{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}{sobel}},\mbox{\hyperlink{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}{ct}});
+232 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_a01790349ec7aef4ff03335d5e76f183a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_detection_scanner_a01790349ec7aef4ff03335d5e76f183a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_detection_scanner_afc70267c30bdbef7a128b8e6d05d3d9a}\label{class_detection_scanner_afc70267c30bdbef7a128b8e6d05d3d9a}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!Scan@{Scan}}
+\index{Scan@{Scan}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{Scan()}{Scan()}}
+{\footnotesize\ttfamily int Detection\+Scanner\+::\+Scan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_int_image}{Int\+Image}}$<$ double $>$ \&}]{original,  }\item[{std\+::vector$<$ cv\+::\+Rect $>$ \&}]{results,  }\item[{const int}]{stepsize,  }\item[{const int}]{round,  }\item[{std\+::ofstream $\ast$}]{out,  }\item[{const int}]{upper\+\_\+bound }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}\label{class_detection_scanner_aee5791fae7267a2f4a56e429d8842e6e}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!baseflength@{baseflength}}
+\index{baseflength@{baseflength}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{baseflength}{baseflength}}
+{\footnotesize\ttfamily int Detection\+Scanner\+::baseflength}
+
+
+
+Definition at line 545 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}\label{class_detection_scanner_a5fd4ac1b6a6c56a95543eca549c26634}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!cascade@{cascade}}
+\index{cascade@{cascade}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{cascade}{cascade}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_cascade_detector}{Cascade\+Detector}}$\ast$ Detection\+Scanner\+::cascade}
+
+
+
+Definition at line 549 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}\label{class_detection_scanner_a885861d4c08a9f9ae4da36f68866419b}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!ct@{ct}}
+\index{ct@{ct}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{ct}{ct}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$int$>$ Detection\+Scanner\+::ct\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 554 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}\label{class_detection_scanner_a39359ef3b899cbb728cc31f17b7cb583}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!E\+XT@{E\+XT}}
+\index{E\+XT@{E\+XT}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{E\+XT}{EXT}}
+{\footnotesize\ttfamily const int Detection\+Scanner\+::\+E\+XT = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 547 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}\label{class_detection_scanner_a0526f032d5e7efd9fced2592ad5c8d03}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!height@{height}}
+\index{height@{height}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int Detection\+Scanner\+::height}
+
+
+
+Definition at line 541 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a3e46cb7413cad57d65fe4c35f959ea11}\label{class_detection_scanner_a3e46cb7413cad57d65fe4c35f959ea11}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!hist@{hist}}
+\index{hist@{hist}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{hist}{hist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_array2d_c}{Array2dC}}$<$int$>$ Detection\+Scanner\+::hist\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 555 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}\label{class_detection_scanner_aa4e4cfa6cc0a2ffd044c6cd9721a6b59}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!image@{image}}
+\index{image@{image}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$double$>$ Detection\+Scanner\+::image\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 553 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a0f64092660cd084b8a1d3b6e8e30cabb}\label{class_detection_scanner_a0f64092660cd084b8a1d3b6e8e30cabb}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!integrals@{integrals}}
+\index{integrals@{integrals}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{integrals}{integrals}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$double$>$$\ast$ Detection\+Scanner\+::integrals\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 552 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a2ac93d1b6aca1959d57133c08b0eaa1c}\label{class_detection_scanner_a2ac93d1b6aca1959d57133c08b0eaa1c}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!ratio@{ratio}}
+\index{ratio@{ratio}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{ratio}{ratio}}
+{\footnotesize\ttfamily double Detection\+Scanner\+::ratio}
+
+
+
+Definition at line 546 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}\label{class_detection_scanner_a7358ec22675336179d3cad0809c7b883}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!scores@{scores}}
+\index{scores@{scores}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{scores}{scores}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$double$>$ Detection\+Scanner\+::scores\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 556 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}\label{class_detection_scanner_a03bc015aac34a51133881b760b929a6b}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!sobel@{sobel}}
+\index{sobel@{sobel}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{sobel}{sobel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_int_image}{Int\+Image}}$<$double$>$ Detection\+Scanner\+::sobel\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 553 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a37d12c13060640ad0321f089cd565476}\label{class_detection_scanner_a37d12c13060640ad0321f089cd565476}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!width@{width}}
+\index{width@{width}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int Detection\+Scanner\+::width}
+
+
+
+Definition at line 542 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}\label{class_detection_scanner_ab7083b6ed15a71fa96d623a8f6500613}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!xdiv@{xdiv}}
+\index{xdiv@{xdiv}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{xdiv}{xdiv}}
+{\footnotesize\ttfamily int Detection\+Scanner\+::xdiv}
+
+
+
+Definition at line 543 of file c4-\/pedestrian-\/detector.\+h.
+
+\mbox{\Hypertarget{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}\label{class_detection_scanner_a78f38bf8d0990ad9ea8cea03ffe4a189}} 
+\index{Detection\+Scanner@{Detection\+Scanner}!ydiv@{ydiv}}
+\index{ydiv@{ydiv}!Detection\+Scanner@{Detection\+Scanner}}
+\subsubsection{\texorpdfstring{ydiv}{ydiv}}
+{\footnotesize\ttfamily int Detection\+Scanner\+::ydiv}
+
+
+
+Definition at line 544 of file c4-\/pedestrian-\/detector.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/pedestrians/\mbox{\hyperlink{c4-pedestrian-detector_8h}{c4-\/pedestrian-\/detector.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/pedestrians/\mbox{\hyperlink{c4-pedestrian-detector_8cpp}{c4-\/pedestrian-\/detector.\+cpp}}\end{DoxyCompactItemize}
