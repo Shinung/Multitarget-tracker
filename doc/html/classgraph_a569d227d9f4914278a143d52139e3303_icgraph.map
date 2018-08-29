@@ -1,0 +1,18 @@
+<map id="graph::pre_restore_edge_handler" name="graph::pre_restore_edge_handler">
+<area shape="rect" id="node2" href="$classgraph.html#a2e5426682a0897b9f9104b019970bedc" title="graph::restore_edge" alt="" coords="180,272,317,299"/>
+<area shape="rect" id="node3" href="$classbiconnectivity.html#a2583331a4561f3db221ab674d2e5d75e" title="Handler called at the end of DFS. " alt="" coords="397,120,526,161"/>
+<area shape="rect" id="node4" href="$classgraph.html#a53e2a5505fa6427587e12d66e4a86cec" title="graph::restore_graph" alt="" coords="391,236,532,263"/>
+<area shape="rect" id="node14" href="$classmaxflow__ff.html#a22a432bb072e0410f20bb418dfd4d3a9" title="maxflow_ff::comp_single_flow" alt="" coords="365,391,557,418"/>
+<area shape="rect" id="node15" href="$classmaxflow__pp.html#a97612b9517f0f11715610cb8faa81606" title="maxflow_pp::comp_rem_net" alt="" coords="369,186,553,212"/>
+<area shape="rect" id="node16" href="$classmaxflow__sap.html#a02f7814313a36b30bb99c40ead6c9ef5" title="maxflow_sap::augment" alt="" coords="384,442,539,468"/>
+<area shape="rect" id="node17" href="$classplanarity.html#a8a66dd6682b3111e39be103db127e6b0" title="planarity::switch_to\l_component" alt="" coords="394,300,529,341"/>
+<area shape="rect" id="node5" href="$components_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="653,112,703,139"/>
+<area shape="rect" id="node6" href="$classfm__partition.html#a015b171fcaa01973ebe6c6a46a727097" title="fm_partition::run" alt="" coords="621,230,735,256"/>
+<area shape="rect" id="node7" href="$classmaxflow__ff.html#a31a13c79918964a49fa18b4eb514c584" title="maxflow_ff::restore\l_graph" alt="" coords="613,164,743,205"/>
+<area shape="rect" id="node9" href="$classmaxflow__pp.html#a273cc9bde3aeb47c08223da7458ed29d" title="maxflow_pp::restore\l_graph" alt="" coords="609,46,747,88"/>
+<area shape="rect" id="node11" href="$classmaxflow__sap.html#ad1a311df47e4b9936ead7c306d723ed0" title="maxflow_sap::restore\l_graph" alt="" coords="605,281,751,322"/>
+<area shape="rect" id="node13" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="629,347,727,374"/>
+<area shape="rect" id="node8" href="$classmaxflow__ff.html#a0a4391b9093d6966b47c023a555099e2" title="maxflow_ff::run" alt="" coords="806,318,914,344"/>
+<area shape="rect" id="node10" href="$classmaxflow__pp.html#a07c7cb1ae5db23d87cf49ce7769b2814" title="maxflow_pp::run" alt="" coords="802,24,918,51"/>
+<area shape="rect" id="node12" href="$classmaxflow__sap.html#ab4305a2bb370ad9c43cc68d339b2dda0" title="maxflow_sap::run" alt="" coords="799,368,921,395"/>
+</map>

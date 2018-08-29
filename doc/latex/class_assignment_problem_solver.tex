@@ -1,0 +1,1049 @@
+\hypertarget{class_assignment_problem_solver}{}\section{Assignment\+Problem\+Solver Class Reference}
+\label{class_assignment_problem_solver}\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+
+
+{\ttfamily \#include $<$Hungarian\+Alg.\+h$>$}
+
+
+
+Collaboration diagram for Assignment\+Problem\+Solver\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{class_assignment_problem_solver__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8}{T\+Method}} \{ \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75}{optimal}}, 
+\mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a}{many\+\_\+forbidden\+\_\+assignments}}, 
+\mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d}{without\+\_\+forbidden\+\_\+assignments}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_assignment_problem_solver_a13a83a34d4a0b4da872d87c79cb9c687}{Assignment\+Problem\+Solver}} ()
+\item 
+\mbox{\hyperlink{class_assignment_problem_solver_a47317b69e3eb9b50426c427ebcf5770f}{$\sim$\+Assignment\+Problem\+Solver}} ()
+\item 
+\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \mbox{\hyperlink{class_assignment_problem_solver_a38198467ca647403c40be2c2bb47e177}{Solve}} (const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&dist\+Matrix\+In, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns, \mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8}{T\+Method}} Method=\mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75}{optimal}})
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_a5b84a5167984db1050821926f52b5187}{assignmentoptimal}} (\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \&cost, const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&dist\+Matrix\+In, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns)
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_a1aa1c05dec6aef723f5d41affc667a77}{buildassignmentvector}} (\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, bool $\ast$star\+Matrix, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns)
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_a978fa51f563d47dbd00c697704cf4ad9}{computeassignmentcost}} (const \mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \&cost, const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&dist\+Matrix\+In, size\+\_\+t n\+Of\+Rows)
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_adef6ec1494dd6058fdf1373bc2c6d6eb}{step2a}} (\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $\ast$dist\+Matrix, bool $\ast$star\+Matrix, bool $\ast$new\+Star\+Matrix, bool $\ast$prime\+Matrix, bool $\ast$covered\+Columns, bool $\ast$covered\+Rows, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns, size\+\_\+t min\+Dim)
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_a069b78d89842031f7b54e0837c2bd602}{step2b}} (\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $\ast$dist\+Matrix, bool $\ast$star\+Matrix, bool $\ast$new\+Star\+Matrix, bool $\ast$prime\+Matrix, bool $\ast$covered\+Columns, bool $\ast$covered\+Rows, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns, size\+\_\+t min\+Dim)
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_a8c24dfcfef6adfb96c6394f798c02dba}{step3\+\_\+5}} (\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $\ast$dist\+Matrix, bool $\ast$star\+Matrix, bool $\ast$new\+Star\+Matrix, bool $\ast$prime\+Matrix, bool $\ast$covered\+Columns, bool $\ast$covered\+Rows, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns, size\+\_\+t min\+Dim)
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_a6ea85d386a136effd84c00f4e2f3cd77}{step4}} (\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $\ast$dist\+Matrix, bool $\ast$star\+Matrix, bool $\ast$new\+Star\+Matrix, bool $\ast$prime\+Matrix, bool $\ast$covered\+Columns, bool $\ast$covered\+Rows, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns, size\+\_\+t min\+Dim, size\+\_\+t row, size\+\_\+t col)
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_ae8fddfafc7387f3597493f02e8366883}{assignmentsuboptimal1}} (\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \&cost, const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&dist\+Matrix\+In, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns)
+\item 
+void \mbox{\hyperlink{class_assignment_problem_solver_a31277dc88cb22e07db1e52b6fe88f84f}{assignmentsuboptimal2}} (\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&assignment, \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \&cost, const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&dist\+Matrix\+In, size\+\_\+t n\+Of\+Rows, size\+\_\+t n\+Of\+Columns)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Hungarian\+Alg.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8}\label{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!T\+Method@{T\+Method}}
+\index{T\+Method@{T\+Method}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{T\+Method}{TMethod}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8}{Assignment\+Problem\+Solver\+::\+T\+Method}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{optimal@{optimal}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!optimal@{optimal}}}\mbox{\Hypertarget{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75}\label{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75}} 
+optimal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{many\+\_\+forbidden\+\_\+assignments@{many\+\_\+forbidden\+\_\+assignments}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!many\+\_\+forbidden\+\_\+assignments@{many\+\_\+forbidden\+\_\+assignments}}}\mbox{\Hypertarget{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a}\label{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a}} 
+many\+\_\+forbidden\+\_\+assignments&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{without\+\_\+forbidden\+\_\+assignments@{without\+\_\+forbidden\+\_\+assignments}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!without\+\_\+forbidden\+\_\+assignments@{without\+\_\+forbidden\+\_\+assignments}}}\mbox{\Hypertarget{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d}\label{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d}} 
+without\+\_\+forbidden\+\_\+assignments&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file Hungarian\+Alg.\+h.
+
+
+\begin{DoxyCode}
+35     \{
+36         \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75}{optimal}},
+37         \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a}{many\_forbidden\_assignments}},
+38         \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d}{without\_forbidden\_assignments}}
+39     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_assignment_problem_solver_a13a83a34d4a0b4da872d87c79cb9c687}\label{class_assignment_problem_solver_a13a83a34d4a0b4da872d87c79cb9c687}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{Assignment\+Problem\+Solver()}{AssignmentProblemSolver()}}
+{\footnotesize\ttfamily Assignment\+Problem\+Solver\+::\+Assignment\+Problem\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+8 \{
+9 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_assignment_problem_solver_a47317b69e3eb9b50426c427ebcf5770f}\label{class_assignment_problem_solver_a47317b69e3eb9b50426c427ebcf5770f}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!````~Assignment\+Problem\+Solver@{$\sim$\+Assignment\+Problem\+Solver}}
+\index{````~Assignment\+Problem\+Solver@{$\sim$\+Assignment\+Problem\+Solver}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{$\sim$\+Assignment\+Problem\+Solver()}{~AssignmentProblemSolver()}}
+{\footnotesize\ttfamily Assignment\+Problem\+Solver\+::$\sim$\+Assignment\+Problem\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+15 \{
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_assignment_problem_solver_a5b84a5167984db1050821926f52b5187}\label{class_assignment_problem_solver_a5b84a5167984db1050821926f52b5187}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!assignmentoptimal@{assignmentoptimal}}
+\index{assignmentoptimal@{assignmentoptimal}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{assignmentoptimal()}{assignmentoptimal()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::assignmentoptimal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \&}]{cost,  }\item[{const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&}]{dist\+Matrix\+In,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 53 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+54 \{
+55     \textcolor{comment}{// Generate distance cv::Matrix }
+56     \textcolor{comment}{// and check cv::Matrix elements positiveness :)}
+57 
+58     \textcolor{comment}{// Total elements number}
+59     \textcolor{keywordtype}{size\_t} nOfElements = nOfRows * nOfColumns;
+60     \textcolor{comment}{// Memory allocation}
+61     \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}* distMatrix = (\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} *)malloc(nOfElements * \textcolor{keyword}{sizeof}(
+      \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}));
+62 
+63     \textcolor{keywordflow}{if} (distMatrix == \textcolor{keyword}{nullptr})
+64     \{
+65         \textcolor{keywordflow}{return};
+66     \}
+67 
+68     \textcolor{comment}{// Pointer to last element}
+69     \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}* distMatrixEnd = distMatrix + nOfElements;
+70 
+71     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfElements; row++)
+72     \{
+73         \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} = distMatrixIn[row];
+74         assert(\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} >= 0);
+75         distMatrix[row] = \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}};
+76     \}
+77 
+78     \textcolor{comment}{// Memory allocation}
+79     \textcolor{keywordtype}{bool}* coveredColumns = (\textcolor{keywordtype}{bool}*)calloc(nOfColumns, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));
+80     \textcolor{keywordtype}{bool}* coveredRows = (\textcolor{keywordtype}{bool}*)calloc(nOfRows, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));
+81     \textcolor{keywordtype}{bool}* starMatrix = (\textcolor{keywordtype}{bool}*)calloc(nOfElements, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));
+82     \textcolor{keywordtype}{bool}* primeMatrix = (\textcolor{keywordtype}{bool}*)calloc(nOfElements, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool}));
+83     \textcolor{keywordtype}{bool}* newStarMatrix = (\textcolor{keywordtype}{bool}*)calloc(nOfElements, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{bool})); \textcolor{comment}{/* used in step4 */}
+84 
+85     \textcolor{comment}{/* preliminary steps */}
+86     \textcolor{keywordflow}{if} (nOfRows <= nOfColumns)
+87     \{
+88         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+89         \{
+90             \textcolor{comment}{/* find the smallest element in the row */}
+91             \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}* distMatrixTemp = distMatrix + row;
+92             \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}  minValue = *distMatrixTemp;
+93             distMatrixTemp += nOfRows;
+94             \textcolor{keywordflow}{while} (distMatrixTemp < distMatrixEnd)
+95             \{
+96                 \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} = *distMatrixTemp;
+97                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} < minValue)
+98                 \{
+99                     minValue = \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}};
+100                 \}
+101                 distMatrixTemp += nOfRows;
+102             \}
+103             \textcolor{comment}{/* subtract the smallest element from each element of the row */}
+104             distMatrixTemp = distMatrix + row;
+105             \textcolor{keywordflow}{while} (distMatrixTemp < distMatrixEnd)
+106             \{
+107                 *distMatrixTemp -= minValue;
+108                 distMatrixTemp += nOfRows;
+109             \}
+110         \}
+111         \textcolor{comment}{/* Steps 1 and 2a */}
+112         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+113         \{
+114             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+115             \{
+116                 \textcolor{keywordflow}{if} (distMatrix[row + nOfRows*col] == 0)
+117                 \{
+118                     \textcolor{keywordflow}{if} (!coveredColumns[col])
+119                     \{
+120                         starMatrix[row + nOfRows * col] = \textcolor{keyword}{true};
+121                         coveredColumns[col] = \textcolor{keyword}{true};
+122                         \textcolor{keywordflow}{break};
+123                     \}
+124                 \}
+125             \}
+126         \}
+127     \}
+128     \textcolor{keywordflow}{else} \textcolor{comment}{/* if(nOfRows > nOfColumns) */}
+129     \{
+130         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+131         \{
+132             \textcolor{comment}{/* find the smallest element in the column */}
+133             \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}* distMatrixTemp = distMatrix + nOfRows*col;
+134             \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}* columnEnd = distMatrixTemp + nOfRows;
+135             \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}  minValue = *distMatrixTemp++;
+136             \textcolor{keywordflow}{while} (distMatrixTemp < columnEnd)
+137             \{
+138                 \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} = *distMatrixTemp++;
+139                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} < minValue)
+140                 \{
+141                     minValue = \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}};
+142                 \}
+143             \}
+144             \textcolor{comment}{/* subtract the smallest element from each element of the column */}
+145             distMatrixTemp = distMatrix + nOfRows*col;
+146             \textcolor{keywordflow}{while} (distMatrixTemp < columnEnd)
+147             \{
+148                 *distMatrixTemp++ -= minValue;
+149             \}
+150         \}
+151         \textcolor{comment}{/* Steps 1 and 2a */}
+152         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+153         \{
+154             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+155             \{
+156                 \textcolor{keywordflow}{if} (distMatrix[row + nOfRows*col] == 0)
+157                 \{
+158                     \textcolor{keywordflow}{if} (!coveredRows[row])
+159                     \{
+160                         starMatrix[row + nOfRows*col] = \textcolor{keyword}{true};
+161                         coveredColumns[col] = \textcolor{keyword}{true};
+162                         coveredRows[row] = \textcolor{keyword}{true};
+163                         \textcolor{keywordflow}{break};
+164                     \}
+165                 \}
+166             \}
+167         \}
+168 
+169         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+170         \{
+171             coveredRows[row] = \textcolor{keyword}{false};
+172         \}
+173     \}
+174     \textcolor{comment}{/* move to step 2b */}
+175     \mbox{\hyperlink{class_assignment_problem_solver_a069b78d89842031f7b54e0837c2bd602}{step2b}}(assignment, distMatrix, starMatrix, newStarMatrix, primeMatrix, coveredColumns, 
+      coveredRows, nOfRows, nOfColumns, (nOfRows <= nOfColumns) ? nOfRows : nOfColumns);
+176     \textcolor{comment}{/* compute cost and remove invalid assignments */}
+177     \mbox{\hyperlink{class_assignment_problem_solver_a978fa51f563d47dbd00c697704cf4ad9}{computeassignmentcost}}(assignment, cost, distMatrixIn, nOfRows);
+178     \textcolor{comment}{/* free allocated memory */}
+179     free(distMatrix);
+180     free(coveredColumns);
+181     free(coveredRows);
+182     free(starMatrix);
+183     free(primeMatrix);
+184     free(newStarMatrix);
+185     \textcolor{keywordflow}{return};
+186 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a5b84a5167984db1050821926f52b5187_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a5b84a5167984db1050821926f52b5187_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_ae8fddfafc7387f3597493f02e8366883}\label{class_assignment_problem_solver_ae8fddfafc7387f3597493f02e8366883}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!assignmentsuboptimal1@{assignmentsuboptimal1}}
+\index{assignmentsuboptimal1@{assignmentsuboptimal1}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{assignmentsuboptimal1()}{assignmentsuboptimal1()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::assignmentsuboptimal1 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \&}]{cost,  }\item[{const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&}]{dist\+Matrix\+In,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 484 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+485 \{
+486     \textcolor{comment}{/* make working copy of distance Matrix */}
+487     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nOfElements = nOfRows * nOfColumns;
+488     \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}* distMatrix = (\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} *)malloc(nOfElements * \textcolor{keyword}{sizeof}(
+      \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}));
+489     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfElements; n++)
+490     \{
+491         distMatrix[n] = distMatrixIn[n];
+492     \}
+493 
+494     \textcolor{comment}{/* allocate memory */}
+495     \textcolor{keywordtype}{int}* nOfValidObservations = (\textcolor{keywordtype}{int} *)calloc(nOfRows, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+496     \textcolor{keywordtype}{int}* nOfValidTracks = (\textcolor{keywordtype}{int} *)calloc(nOfColumns, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+497 
+498     \textcolor{comment}{/* compute number of validations */}
+499     \textcolor{keywordtype}{bool} infiniteValueFound = \textcolor{keyword}{false};
+500     \textcolor{keywordtype}{bool} finiteValueFound = \textcolor{keyword}{false};
+501     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+502     \{
+503         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+504         \{
+505             \textcolor{keywordflow}{if} (distMatrix[row + nOfRows*col] != std::numeric\_limits<track\_t>::max())
+506             \{
+507                 nOfValidTracks[col] += 1;
+508                 nOfValidObservations[row] += 1;
+509                 finiteValueFound = \textcolor{keyword}{true};
+510             \}
+511             \textcolor{keywordflow}{else}
+512             \{
+513                 infiniteValueFound = \textcolor{keyword}{true};
+514             \}
+515         \}
+516     \}
+517 
+518     \textcolor{keywordflow}{if} (infiniteValueFound)
+519     \{
+520         \textcolor{keywordflow}{if} (!finiteValueFound)
+521         \{
+522             \textcolor{comment}{/* free allocated memory */}
+523             free(nOfValidObservations);
+524             free(nOfValidTracks);
+525             free(distMatrix);
+526 
+527             \textcolor{keywordflow}{return};
+528         \}
+529         \textcolor{keywordtype}{bool} repeatSteps = \textcolor{keyword}{true};
+530 
+531         \textcolor{keywordflow}{while} (repeatSteps)
+532         \{
+533             repeatSteps = \textcolor{keyword}{false};
+534 
+535             \textcolor{comment}{/* step 1: reject assignments of multiply validated tracks to singly validated observations     
+       */}
+536             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+537             \{
+538                 \textcolor{keywordtype}{bool} singleValidationFound = \textcolor{keyword}{false};
+539                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+540                 \{
+541                     \textcolor{keywordflow}{if} (distMatrix[row + nOfRows * col] != std::numeric\_limits<track\_t>::max() && (
+      nOfValidObservations[row] == 1))
+542                     \{
+543                         singleValidationFound = \textcolor{keyword}{true};
+544                         \textcolor{keywordflow}{break};
+545                     \}
+546 
+547                     \textcolor{keywordflow}{if} (singleValidationFound)
+548                     \{
+549                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+550                             \textcolor{keywordflow}{if} ((nOfValidObservations[row] > 1) && distMatrix[row + nOfRows*col] != 
+      std::numeric\_limits<track\_t>::max())
+551                             \{
+552                                 distMatrix[row + nOfRows*col] = std::numeric\_limits<track\_t>::max();
+553                                 nOfValidObservations[row] -= 1;
+554                                 nOfValidTracks[col] -= 1;
+555                                 repeatSteps = \textcolor{keyword}{true};
+556                             \}
+557                     \}
+558                 \}
+559             \}
+560 
+561             \textcolor{comment}{/* step 2: reject assignments of multiply validated observations to singly validated tracks */}
+562             \textcolor{keywordflow}{if} (nOfColumns > 1)
+563             \{
+564                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+565                 \{
+566                     \textcolor{keywordtype}{bool} singleValidationFound = \textcolor{keyword}{false};
+567                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+568                     \{
+569                         \textcolor{keywordflow}{if} (distMatrix[row + nOfRows*col] != std::numeric\_limits<track\_t>::max() && (
+      nOfValidTracks[col] == 1))
+570                         \{
+571                             singleValidationFound = \textcolor{keyword}{true};
+572                             \textcolor{keywordflow}{break};
+573                         \}
+574                     \}
+575 
+576                     \textcolor{keywordflow}{if} (singleValidationFound)
+577                     \{
+578                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+579                         \{
+580                             \textcolor{keywordflow}{if} ((nOfValidTracks[col] > 1) && distMatrix[row + nOfRows*col] != 
+      std::numeric\_limits<track\_t>::max())
+581                             \{
+582                                 distMatrix[row + nOfRows*col] = std::numeric\_limits<track\_t>::max();
+583                                 nOfValidObservations[row] -= 1;
+584                                 nOfValidTracks[col] -= 1;
+585                                 repeatSteps = \textcolor{keyword}{true};
+586                             \}
+587                         \}
+588                     \}
+589                 \}
+590             \}
+591         \} \textcolor{comment}{/* while(repeatSteps) */}
+592 
+593         \textcolor{comment}{/* for each multiply validated track that validates only with singly validated  */}
+594         \textcolor{comment}{/* observations, choose the observation with minimum distance */}
+595         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+596         \{
+597             \textcolor{keywordflow}{if} (nOfValidObservations[row] > 1)
+598             \{
+599                 \textcolor{keywordtype}{bool} allSinglyValidated = \textcolor{keyword}{true};
+600                 \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} minValue = std::numeric\_limits<track\_t>::max();
+601                 \textcolor{keywordtype}{size\_t} tmpCol = 0;
+602                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+603                 \{
+604                     \textcolor{keyword}{const} \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} = distMatrix[row + nOfRows*col];
+605                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} != std::numeric\_limits<track\_t>::max())
+606                     \{
+607                         \textcolor{keywordflow}{if} (nOfValidTracks[col] > 1)
+608                         \{
+609                             allSinglyValidated = \textcolor{keyword}{false};
+610                             \textcolor{keywordflow}{break};
+611                         \}
+612                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((nOfValidTracks[col] == 1) && (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} < minValue))
+613                         \{
+614                             tmpCol = col;
+615                             minValue = \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}};
+616                         \}
+617                     \}
+618                 \}
+619 
+620                 \textcolor{keywordflow}{if} (allSinglyValidated)
+621                 \{
+622                     assignment[row] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(tmpCol);
+623                     cost += minValue;
+624                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfRows; n++)
+625                     \{
+626                         distMatrix[n + nOfRows*tmpCol] = std::numeric\_limits<track\_t>::max();
+627                     \}
+628                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfColumns; n++)
+629                     \{
+630                         distMatrix[row + nOfRows*n] = std::numeric\_limits<track\_t>::max();
+631                     \}
+632                 \}
+633             \}
+634         \}
+635 
+636         \textcolor{comment}{// for each multiply validated observation that validates only with singly validated  track, choose
+       the track with minimum distance}
+637         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+638         \{
+639             \textcolor{keywordflow}{if} (nOfValidTracks[col] > 1)
+640             \{
+641                 \textcolor{keywordtype}{bool} allSinglyValidated = \textcolor{keyword}{true};
+642                 \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} minValue = std::numeric\_limits<track\_t>::max();
+643                 \textcolor{keywordtype}{size\_t} tmpRow = 0;
+644                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+645                 \{
+646                     \textcolor{keyword}{const} \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} = distMatrix[row + nOfRows*col];
+647                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} != std::numeric\_limits<track\_t>::max())
+648                     \{
+649                         \textcolor{keywordflow}{if} (nOfValidObservations[row] > 1)
+650                         \{
+651                             allSinglyValidated = \textcolor{keyword}{false};
+652                             \textcolor{keywordflow}{break};
+653                         \}
+654                         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((nOfValidObservations[row] == 1) && (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} < minValue))
+655                         \{
+656                             tmpRow = row;
+657                             minValue = \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}};
+658                         \}
+659                     \}
+660                 \}
+661 
+662                 \textcolor{keywordflow}{if} (allSinglyValidated)
+663                 \{
+664                     assignment[tmpRow] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(col);
+665                     cost += minValue;
+666                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfRows; n++)
+667                     \{
+668                         distMatrix[n + nOfRows*col] = std::numeric\_limits<track\_t>::max();
+669                     \}
+670                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfColumns; n++)
+671                     \{
+672                         distMatrix[tmpRow + nOfRows*n] = std::numeric\_limits<track\_t>::max();
+673                     \}
+674                 \}
+675             \}
+676         \}
+677     \} \textcolor{comment}{/* if(infiniteValueFound) */}
+678 
+679 
+680     \textcolor{comment}{/* now, recursively search for the minimum element and do the assignment */}
+681     \textcolor{keywordflow}{for} (;;)
+682     \{
+683         \textcolor{comment}{/* find minimum distance observation-to-track pair */}
+684         \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} minValue = std::numeric\_limits<track\_t>::max();
+685         \textcolor{keywordtype}{size\_t} tmpRow = 0;
+686         \textcolor{keywordtype}{size\_t} tmpCol = 0;
+687         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+688         \{
+689             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+690             \{
+691                 \textcolor{keyword}{const} \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} = distMatrix[row + nOfRows*col];
+692                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} != std::numeric\_limits<track\_t>::max() && (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} < minValue))
+693                 \{
+694                     minValue = \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}};
+695                     tmpRow = row;
+696                     tmpCol = col;
+697                 \}
+698             \}
+699         \}
+700 
+701         \textcolor{keywordflow}{if} (minValue != std::numeric\_limits<track\_t>::max())
+702         \{
+703             assignment[tmpRow] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(tmpCol);
+704             cost += minValue;
+705             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfRows; n++)
+706             \{
+707                 distMatrix[n + nOfRows*tmpCol] = std::numeric\_limits<track\_t>::max();
+708             \}
+709             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfColumns; n++)
+710             \{
+711                 distMatrix[tmpRow + nOfRows*n] = std::numeric\_limits<track\_t>::max();
+712             \}
+713         \}
+714         \textcolor{keywordflow}{else}
+715         \{
+716             \textcolor{keywordflow}{break};
+717         \}
+718     \}
+719 
+720     \textcolor{comment}{/* free allocated memory */}
+721     free(nOfValidObservations);
+722     free(nOfValidTracks);
+723     free(distMatrix);
+724 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_ae8fddfafc7387f3597493f02e8366883_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_a31277dc88cb22e07db1e52b6fe88f84f}\label{class_assignment_problem_solver_a31277dc88cb22e07db1e52b6fe88f84f}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!assignmentsuboptimal2@{assignmentsuboptimal2}}
+\index{assignmentsuboptimal2@{assignmentsuboptimal2}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{assignmentsuboptimal2()}{assignmentsuboptimal2()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::assignmentsuboptimal2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \&}]{cost,  }\item[{const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&}]{dist\+Matrix\+In,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 429 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+430 \{
+431     \textcolor{comment}{/* make working copy of distance Matrix */}
+432     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nOfElements = nOfRows * nOfColumns;
+433     \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}* distMatrix = (\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}*)malloc(nOfElements * \textcolor{keyword}{sizeof}(
+      \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}}));
+434     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfElements; n++)
+435     \{
+436         distMatrix[n] = distMatrixIn[n];
+437     \}
+438 
+439     \textcolor{comment}{/* recursively search for the minimum element and do the assignment */}
+440     \textcolor{keywordflow}{for} (;;)
+441     \{
+442         \textcolor{comment}{/* find minimum distance observation-to-track pair */}
+443         \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} minValue = std::numeric\_limits<track\_t>::max();
+444         \textcolor{keywordtype}{size\_t} tmpRow = 0;
+445         \textcolor{keywordtype}{size\_t} tmpCol = 0;
+446         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+447         \{
+448             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+449             \{
+450                 \textcolor{keyword}{const} \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} = distMatrix[row + nOfRows*col];
+451                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} != std::numeric\_limits<track\_t>::max() && (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} < minValue))
+452                 \{
+453                     minValue = \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}};
+454                     tmpRow = row;
+455                     tmpCol = col;
+456                 \}
+457             \}
+458         \}
+459 
+460         \textcolor{keywordflow}{if} (minValue != std::numeric\_limits<track\_t>::max())
+461         \{
+462             assignment[tmpRow] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(tmpCol);
+463             cost += minValue;
+464             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfRows; n++)
+465             \{
+466                 distMatrix[n + nOfRows*tmpCol] = std::numeric\_limits<track\_t>::max();
+467             \}
+468             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfColumns; n++)
+469             \{
+470                 distMatrix[tmpRow + nOfRows*n] = std::numeric\_limits<track\_t>::max();
+471             \}
+472         \}
+473         \textcolor{keywordflow}{else}
+474         \{
+475             \textcolor{keywordflow}{break};
+476         \}
+477     \}
+478 
+479     free(distMatrix);
+480 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a31277dc88cb22e07db1e52b6fe88f84f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_a1aa1c05dec6aef723f5d41affc667a77}\label{class_assignment_problem_solver_a1aa1c05dec6aef723f5d41affc667a77}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!buildassignmentvector@{buildassignmentvector}}
+\index{buildassignmentvector@{buildassignmentvector}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{buildassignmentvector()}{buildassignmentvector()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::buildassignmentvector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{bool $\ast$}]{star\+Matrix,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 190 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+191 \{
+192     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+193     \{
+194         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+195         \{
+196             \textcolor{keywordflow}{if} (starMatrix[row + nOfRows * col])
+197             \{
+198                 assignment[row] = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(col);
+199                 \textcolor{keywordflow}{break};
+200             \}
+201         \}
+202     \}
+203 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a1aa1c05dec6aef723f5d41affc667a77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_a978fa51f563d47dbd00c697704cf4ad9}\label{class_assignment_problem_solver_a978fa51f563d47dbd00c697704cf4ad9}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!computeassignmentcost@{computeassignmentcost}}
+\index{computeassignmentcost@{computeassignmentcost}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{computeassignmentcost()}{computeassignmentcost()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::computeassignmentcost (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} \&}]{cost,  }\item[{const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&}]{dist\+Matrix\+In,  }\item[{size\+\_\+t}]{n\+Of\+Rows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 207 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+208 \{
+209     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+210     \{
+211         \textcolor{keyword}{const} \textcolor{keywordtype}{int} col = assignment[row];
+212         \textcolor{keywordflow}{if} (col >= 0)
+213         \{
+214             cost += distMatrixIn[row + nOfRows * col];
+215         \}
+216     \}
+217 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a978fa51f563d47dbd00c697704cf4ad9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_a38198467ca647403c40be2c2bb47e177}\label{class_assignment_problem_solver_a38198467ca647403c40be2c2bb47e177}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!Solve@{Solve}}
+\index{Solve@{Solve}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{Solve()}{Solve()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} Assignment\+Problem\+Solver\+::\+Solve (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_hungarian_alg_8h_af6ab0ee8259a51215f62e8f96416d5bb}{dist\+Matrix\+\_\+t}} \&}]{dist\+Matrix\+In,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns,  }\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8}{T\+Method}}}]{Method = {\ttfamily \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75}{optimal}}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+28 \{
+29     assignment.resize(nOfRows, -1);
+30 
+31     \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} cost = 0;
+32 
+33     \textcolor{keywordflow}{switch} (Method)
+34     \{
+35     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a84f2334f61866dba64befa6910848d75}{optimal}}:
+36         \mbox{\hyperlink{class_assignment_problem_solver_a5b84a5167984db1050821926f52b5187}{assignmentoptimal}}(assignment, cost, distMatrixIn, nOfRows, nOfColumns);
+37         \textcolor{keywordflow}{break};
+38 
+39     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a226c2e4b79d0beeb342087880d97bb2a}{many\_forbidden\_assignments}}:
+40         \mbox{\hyperlink{class_assignment_problem_solver_ae8fddfafc7387f3597493f02e8366883}{assignmentsuboptimal1}}(assignment, cost, distMatrixIn, nOfRows, nOfColumns);
+41         \textcolor{keywordflow}{break};
+42 
+43     \textcolor{keywordflow}{case} \mbox{\hyperlink{class_assignment_problem_solver_aec407eb73fed9d3ddb9467fde90a85e8a3329e7571829a83b21be4821df62310d}{without\_forbidden\_assignments}}:
+44         \mbox{\hyperlink{class_assignment_problem_solver_a31277dc88cb22e07db1e52b6fe88f84f}{assignmentsuboptimal2}}(assignment, cost, distMatrixIn, nOfRows, nOfColumns);
+45         \textcolor{keywordflow}{break};
+46     \}
+47 
+48     \textcolor{keywordflow}{return} cost;
+49 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a38198467ca647403c40be2c2bb47e177_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a38198467ca647403c40be2c2bb47e177_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_adef6ec1494dd6058fdf1373bc2c6d6eb}\label{class_assignment_problem_solver_adef6ec1494dd6058fdf1373bc2c6d6eb}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!step2a@{step2a}}
+\index{step2a@{step2a}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{step2a()}{step2a()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::step2a (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $\ast$}]{dist\+Matrix,  }\item[{bool $\ast$}]{star\+Matrix,  }\item[{bool $\ast$}]{new\+Star\+Matrix,  }\item[{bool $\ast$}]{prime\+Matrix,  }\item[{bool $\ast$}]{covered\+Columns,  }\item[{bool $\ast$}]{covered\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns,  }\item[{size\+\_\+t}]{min\+Dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 222 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+223 \{
+224     \textcolor{keywordtype}{bool} *starMatrixTemp, *columnEnd;
+225     \textcolor{comment}{/* cover every column containing a starred zero */}
+226     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+227     \{
+228         starMatrixTemp = starMatrix + nOfRows * col;
+229         columnEnd = starMatrixTemp + nOfRows;
+230         \textcolor{keywordflow}{while} (starMatrixTemp < columnEnd)
+231         \{
+232             \textcolor{keywordflow}{if} (*starMatrixTemp++)
+233             \{
+234                 coveredColumns[col] = \textcolor{keyword}{true};
+235                 \textcolor{keywordflow}{break};
+236             \}
+237         \}
+238     \}
+239     \textcolor{comment}{/* move to step 3 */}
+240     \mbox{\hyperlink{class_assignment_problem_solver_a069b78d89842031f7b54e0837c2bd602}{step2b}}(assignment, distMatrix, starMatrix, newStarMatrix, primeMatrix, coveredColumns, 
+      coveredRows, nOfRows, nOfColumns, minDim);
+241 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_adef6ec1494dd6058fdf1373bc2c6d6eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_adef6ec1494dd6058fdf1373bc2c6d6eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_a069b78d89842031f7b54e0837c2bd602}\label{class_assignment_problem_solver_a069b78d89842031f7b54e0837c2bd602}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!step2b@{step2b}}
+\index{step2b@{step2b}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{step2b()}{step2b()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::step2b (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $\ast$}]{dist\+Matrix,  }\item[{bool $\ast$}]{star\+Matrix,  }\item[{bool $\ast$}]{new\+Star\+Matrix,  }\item[{bool $\ast$}]{prime\+Matrix,  }\item[{bool $\ast$}]{covered\+Columns,  }\item[{bool $\ast$}]{covered\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns,  }\item[{size\+\_\+t}]{min\+Dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 246 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+247 \{
+248     \textcolor{comment}{/* count covered columns */}
+249     \textcolor{keywordtype}{size\_t} nOfCoveredColumns = 0;
+250     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+251     \{
+252         \textcolor{keywordflow}{if} (coveredColumns[col])
+253         \{
+254             nOfCoveredColumns++;
+255         \}
+256     \}
+257     \textcolor{keywordflow}{if} (nOfCoveredColumns == minDim)
+258     \{
+259         \textcolor{comment}{/* algorithm finished */}
+260         \mbox{\hyperlink{class_assignment_problem_solver_a1aa1c05dec6aef723f5d41affc667a77}{buildassignmentvector}}(assignment, starMatrix, nOfRows, nOfColumns);
+261     \}
+262     \textcolor{keywordflow}{else}
+263     \{
+264         \textcolor{comment}{/* move to step 3 */}
+265         \mbox{\hyperlink{class_assignment_problem_solver_a8c24dfcfef6adfb96c6394f798c02dba}{step3\_5}}(assignment, distMatrix, starMatrix, newStarMatrix, primeMatrix, coveredColumns, 
+      coveredRows, nOfRows, nOfColumns, minDim);
+266     \}
+267 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a069b78d89842031f7b54e0837c2bd602_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a069b78d89842031f7b54e0837c2bd602_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_a8c24dfcfef6adfb96c6394f798c02dba}\label{class_assignment_problem_solver_a8c24dfcfef6adfb96c6394f798c02dba}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!step3\+\_\+5@{step3\+\_\+5}}
+\index{step3\+\_\+5@{step3\+\_\+5}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{step3\+\_\+5()}{step3\_5()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::step3\+\_\+5 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $\ast$}]{dist\+Matrix,  }\item[{bool $\ast$}]{star\+Matrix,  }\item[{bool $\ast$}]{new\+Star\+Matrix,  }\item[{bool $\ast$}]{prime\+Matrix,  }\item[{bool $\ast$}]{covered\+Columns,  }\item[{bool $\ast$}]{covered\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns,  }\item[{size\+\_\+t}]{min\+Dim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 272 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+273 \{
+274     \textcolor{keywordflow}{for} (;;)
+275     \{
+276         \textcolor{comment}{/* step 3 */}
+277         \textcolor{keywordtype}{bool} zerosFound = \textcolor{keyword}{true};
+278         \textcolor{keywordflow}{while} (zerosFound)
+279         \{
+280             zerosFound = \textcolor{keyword}{false};
+281             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+282             \{
+283                 \textcolor{keywordflow}{if} (!coveredColumns[col])
+284                 \{
+285                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+286                     \{
+287                         \textcolor{keywordflow}{if} ((!coveredRows[row]) && (distMatrix[row + nOfRows*col] == 0))
+288                         \{
+289                             \textcolor{comment}{/* prime zero */}
+290                             primeMatrix[row + nOfRows*col] = \textcolor{keyword}{true};
+291                             \textcolor{comment}{/* find starred zero in current row */}
+292                             \textcolor{keywordtype}{size\_t} starCol = 0;
+293                             \textcolor{keywordflow}{for} (; starCol < nOfColumns; starCol++)
+294                             \{
+295                                 \textcolor{keywordflow}{if} (starMatrix[row + nOfRows * starCol])
+296                                 \{
+297                                     \textcolor{keywordflow}{break};
+298                                 \}
+299                             \}
+300                             \textcolor{keywordflow}{if} (starCol == nOfColumns) \textcolor{comment}{/* no starred zero found */}
+301                             \{
+302                                 \textcolor{comment}{/* move to step 4 */}
+303                                 \mbox{\hyperlink{class_assignment_problem_solver_a6ea85d386a136effd84c00f4e2f3cd77}{step4}}(assignment, distMatrix, starMatrix, newStarMatrix, primeMatrix, 
+      coveredColumns, coveredRows, nOfRows, nOfColumns, minDim, row, col);
+304                                 \textcolor{keywordflow}{return};
+305                             \}
+306                             \textcolor{keywordflow}{else}
+307                             \{
+308                                 coveredRows[row] = \textcolor{keyword}{true};
+309                                 coveredColumns[starCol] = \textcolor{keyword}{false};
+310                                 zerosFound = \textcolor{keyword}{true};
+311                                 \textcolor{keywordflow}{break};
+312                             \}
+313                         \}
+314                     \}
+315                 \}
+316             \}
+317         \}
+318         \textcolor{comment}{/* step 5 */}
+319         \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} h = std::numeric\_limits<track\_t>::max();
+320         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+321         \{
+322             \textcolor{keywordflow}{if} (!coveredRows[row])
+323             \{
+324                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+325                 \{
+326                     \textcolor{keywordflow}{if} (!coveredColumns[col])
+327                     \{
+328                         \textcolor{keyword}{const} \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\_t}} \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} = distMatrix[row + nOfRows*col];
+329                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}} < h)
+330                         \{
+331                             h = \mbox{\hyperlink{struct_g_m_l__token_a50b20988e3fe419332313e8d9e02c775}{value}};
+332                         \}
+333                     \}
+334                 \}
+335             \}
+336         \}
+337         \textcolor{comment}{/* add h to each covered row */}
+338         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+339         \{
+340             \textcolor{keywordflow}{if} (coveredRows[row])
+341             \{
+342                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+343                 \{
+344                     distMatrix[row + nOfRows*col] += h;
+345                 \}
+346             \}
+347         \}
+348         \textcolor{comment}{/* subtract h from each uncovered column */}
+349         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} col = 0; col < nOfColumns; col++)
+350         \{
+351             \textcolor{keywordflow}{if} (!coveredColumns[col])
+352             \{
+353                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} row = 0; row < nOfRows; row++)
+354                 \{
+355                     distMatrix[row + nOfRows*col] -= h;
+356                 \}
+357             \}
+358         \}
+359     \}
+360 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a8c24dfcfef6adfb96c6394f798c02dba_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a8c24dfcfef6adfb96c6394f798c02dba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_assignment_problem_solver_a6ea85d386a136effd84c00f4e2f3cd77}\label{class_assignment_problem_solver_a6ea85d386a136effd84c00f4e2f3cd77}} 
+\index{Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}!step4@{step4}}
+\index{step4@{step4}!Assignment\+Problem\+Solver@{Assignment\+Problem\+Solver}}
+\subsubsection{\texorpdfstring{step4()}{step4()}}
+{\footnotesize\ttfamily void Assignment\+Problem\+Solver\+::step4 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_hungarian_alg_8h_ad7b9f569a9adbd958c668a36b6884ffd}{assignments\+\_\+t}} \&}]{assignment,  }\item[{\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $\ast$}]{dist\+Matrix,  }\item[{bool $\ast$}]{star\+Matrix,  }\item[{bool $\ast$}]{new\+Star\+Matrix,  }\item[{bool $\ast$}]{prime\+Matrix,  }\item[{bool $\ast$}]{covered\+Columns,  }\item[{bool $\ast$}]{covered\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Rows,  }\item[{size\+\_\+t}]{n\+Of\+Columns,  }\item[{size\+\_\+t}]{min\+Dim,  }\item[{size\+\_\+t}]{row,  }\item[{size\+\_\+t}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 365 of file Hungarian\+Alg.\+cpp.
+
+
+\begin{DoxyCode}
+366 \{
+367     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} nOfElements = nOfRows * nOfColumns;
+368     \textcolor{comment}{/* generate temporary copy of starMatrix */}
+369     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfElements; n++)
+370     \{
+371         newStarMatrix[n] = starMatrix[n];
+372     \}
+373     \textcolor{comment}{/* star current zero */}
+374     newStarMatrix[row + nOfRows*col] = \textcolor{keyword}{true};
+375     \textcolor{comment}{/* find starred zero in current column */}
+376     \textcolor{keywordtype}{size\_t} starCol = col;
+377     \textcolor{keywordtype}{size\_t} starRow = 0;
+378     \textcolor{keywordflow}{for} (; starRow < nOfRows; starRow++)
+379     \{
+380         \textcolor{keywordflow}{if} (starMatrix[starRow + nOfRows * starCol])
+381         \{
+382             \textcolor{keywordflow}{break};
+383         \}
+384     \}
+385     \textcolor{keywordflow}{while} (starRow < nOfRows)
+386     \{
+387         \textcolor{comment}{/* unstar the starred zero */}
+388         newStarMatrix[starRow + nOfRows*starCol] = \textcolor{keyword}{false};
+389         \textcolor{comment}{/* find primed zero in current row */}
+390         \textcolor{keywordtype}{size\_t} primeRow = starRow;
+391         \textcolor{keywordtype}{size\_t} primeCol = 0;
+392         \textcolor{keywordflow}{for} (; primeCol < nOfColumns; primeCol++)
+393         \{
+394             \textcolor{keywordflow}{if} (primeMatrix[primeRow + nOfRows * primeCol])
+395             \{
+396                 \textcolor{keywordflow}{break};
+397             \}
+398         \}
+399         \textcolor{comment}{/* star the primed zero */}
+400         newStarMatrix[primeRow + nOfRows*primeCol] = \textcolor{keyword}{true};
+401         \textcolor{comment}{/* find starred zero in current column */}
+402         starCol = primeCol;
+403         \textcolor{keywordflow}{for} (starRow = 0; starRow < nOfRows; starRow++)
+404         \{
+405             \textcolor{keywordflow}{if} (starMatrix[starRow + nOfRows * starCol])
+406             \{
+407                 \textcolor{keywordflow}{break};
+408             \}
+409         \}
+410     \}
+411     \textcolor{comment}{/* use temporary copy as new starMatrix */}
+412     \textcolor{comment}{/* delete all primes, uncover all rows */}
+413     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfElements; n++)
+414     \{
+415         primeMatrix[n] = \textcolor{keyword}{false};
+416         starMatrix[n] = newStarMatrix[n];
+417     \}
+418     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} n = 0; n < nOfRows; n++)
+419     \{
+420         coveredRows[n] = \textcolor{keyword}{false};
+421     \}
+422     \textcolor{comment}{/* move to step 2a */}
+423     \mbox{\hyperlink{class_assignment_problem_solver_adef6ec1494dd6058fdf1373bc2c6d6eb}{step2a}}(assignment, distMatrix, starMatrix, newStarMatrix, primeMatrix, coveredColumns, 
+      coveredRows, nOfRows, nOfColumns, minDim);
+424 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a6ea85d386a136effd84c00f4e2f3cd77_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_assignment_problem_solver_a6ea85d386a136effd84c00f4e2f3cd77_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/\+Hungarian\+Alg/\mbox{\hyperlink{_hungarian_alg_8h}{Hungarian\+Alg.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/\+Hungarian\+Alg/\mbox{\hyperlink{_hungarian_alg_8cpp}{Hungarian\+Alg.\+cpp}}\end{DoxyCompactItemize}

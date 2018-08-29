@@ -1,0 +1,407 @@
+\hypertarget{class_g_rect}{}\section{G\+Rect Class Reference}
+\label{class_g_rect}\index{G\+Rect@{G\+Rect}}
+
+
+{\ttfamily \#include $<$gport.\+h$>$}
+
+
+
+Collaboration diagram for G\+Rect\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_g_rect__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_rect_a66651711fd959d226869ba99a0a266c7}{G\+Rect}} ()
+\item 
+\mbox{\hyperlink{class_g_rect_a56121bc9d4825b0f9200a78d29357b71}{G\+Rect}} (const int l, const int t, const int r, const int b)
+\item 
+virtual int \mbox{\hyperlink{class_g_rect_a2095ad1d204b942a45bc8ed1546df937}{Get\+Left}} () const
+\item 
+virtual int \mbox{\hyperlink{class_g_rect_ac346895770ff4c98c672485a05819f55}{Get\+Top}} () const
+\item 
+virtual int \mbox{\hyperlink{class_g_rect_a3ba95d11e8a2760f1f7ba023dbfaf220}{Get\+Right}} () const
+\item 
+virtual int \mbox{\hyperlink{class_g_rect_a7c08ca62e8fbad3cfa1724384ee4921d}{Get\+Bottom}} () const
+\item 
+virtual int \mbox{\hyperlink{class_g_rect_af36a407452070f2e93a25dbafd3b4314}{Get\+Width}} () const
+\item 
+virtual int \mbox{\hyperlink{class_g_rect_a8d2b0a2c06688c2dad74bd0789f57d73}{Get\+Height}} () const
+\item 
+virtual void \mbox{\hyperlink{class_g_rect_a3b9d11354aad699f297dbfa7eb8196aa}{Inset}} (const int dx, const int dy)
+\item 
+virtual void \mbox{\hyperlink{class_g_rect_a7774fac9cd2ec8bee54a442e7ca18ebc}{Offset}} (const int dx, const int dy)
+\item 
+virtual bool \mbox{\hyperlink{class_g_rect_a49e5656acaa3f59acb7b0db70f455471}{Point\+In\+Rect}} (\mbox{\hyperlink{class_g_point}{G\+Point}} \&\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}})
+\item 
+virtual void \mbox{\hyperlink{class_g_rect_af8fab889fb03811f8ba166abfe2b9c01}{Set\+Left}} (const int l)
+\item 
+virtual void \mbox{\hyperlink{class_g_rect_a87864ea06d8f6796b296fd73ac3d1a95}{Set\+Top}} (const int t)
+\item 
+virtual void \mbox{\hyperlink{class_g_rect_a2293c5054272c0aba84624edf82b5b3b}{Set\+Right}} (const int r)
+\item 
+virtual void \mbox{\hyperlink{class_g_rect_a2ee1b00b28013fc219b27510a402433d}{Set\+Bottom}} (const int b)
+\item 
+virtual void \mbox{\hyperlink{class_g_rect_a1fd6fd632b6d3c068382766a0c18340f}{Set\+Rect}} (const int l, const int t, const int r, const int b)
+\item 
+virtual void \mbox{\hyperlink{class_g_rect_a6adcf2d50d9aaeaf18c304dc3ece0280}{Set\+Rect\+WH}} (const int l, const int t, const int w, const int h)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}}
+\item 
+int \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}}
+\item 
+int \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}}
+\item 
+int \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 75 of file gport.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_rect_a66651711fd959d226869ba99a0a266c7}\label{class_g_rect_a66651711fd959d226869ba99a0a266c7}} 
+\index{G\+Rect@{G\+Rect}!G\+Rect@{G\+Rect}}
+\index{G\+Rect@{G\+Rect}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{G\+Rect()}{GRect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily G\+Rect\+::\+G\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 78 of file gport.\+h.
+
+
+\begin{DoxyCode}
+78 \{ \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}} = \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}} = \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}} = \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}} = 0; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_a56121bc9d4825b0f9200a78d29357b71}\label{class_g_rect_a56121bc9d4825b0f9200a78d29357b71}} 
+\index{G\+Rect@{G\+Rect}!G\+Rect@{G\+Rect}}
+\index{G\+Rect@{G\+Rect}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{G\+Rect()}{GRect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily G\+Rect\+::\+G\+Rect (\begin{DoxyParamCaption}\item[{const int}]{l,  }\item[{const int}]{t,  }\item[{const int}]{r,  }\item[{const int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 79 of file gport.\+h.
+
+
+\begin{DoxyCode}
+79 \{ \mbox{\hyperlink{class_g_rect_a1fd6fd632b6d3c068382766a0c18340f}{SetRect}} (l, t, r, b); \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{class_g_rect_a56121bc9d4825b0f9200a78d29357b71_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_rect_a7c08ca62e8fbad3cfa1724384ee4921d}\label{class_g_rect_a7c08ca62e8fbad3cfa1724384ee4921d}} 
+\index{G\+Rect@{G\+Rect}!Get\+Bottom@{Get\+Bottom}}
+\index{Get\+Bottom@{Get\+Bottom}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Get\+Bottom()}{GetBottom()}}
+{\footnotesize\ttfamily virtual int G\+Rect\+::\+Get\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 83 of file gport.\+h.
+
+
+\begin{DoxyCode}
+83 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_a8d2b0a2c06688c2dad74bd0789f57d73}\label{class_g_rect_a8d2b0a2c06688c2dad74bd0789f57d73}} 
+\index{G\+Rect@{G\+Rect}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Get\+Height()}{GetHeight()}}
+{\footnotesize\ttfamily virtual int G\+Rect\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 85 of file gport.\+h.
+
+
+\begin{DoxyCode}
+85 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}} - \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_g_rect_a8d2b0a2c06688c2dad74bd0789f57d73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_rect_a2095ad1d204b942a45bc8ed1546df937}\label{class_g_rect_a2095ad1d204b942a45bc8ed1546df937}} 
+\index{G\+Rect@{G\+Rect}!Get\+Left@{Get\+Left}}
+\index{Get\+Left@{Get\+Left}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Get\+Left()}{GetLeft()}}
+{\footnotesize\ttfamily virtual int G\+Rect\+::\+Get\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 80 of file gport.\+h.
+
+
+\begin{DoxyCode}
+80 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_g_rect_a2095ad1d204b942a45bc8ed1546df937_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_rect_a3ba95d11e8a2760f1f7ba023dbfaf220}\label{class_g_rect_a3ba95d11e8a2760f1f7ba023dbfaf220}} 
+\index{G\+Rect@{G\+Rect}!Get\+Right@{Get\+Right}}
+\index{Get\+Right@{Get\+Right}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Get\+Right()}{GetRight()}}
+{\footnotesize\ttfamily virtual int G\+Rect\+::\+Get\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 82 of file gport.\+h.
+
+
+\begin{DoxyCode}
+82 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_ac346895770ff4c98c672485a05819f55}\label{class_g_rect_ac346895770ff4c98c672485a05819f55}} 
+\index{G\+Rect@{G\+Rect}!Get\+Top@{Get\+Top}}
+\index{Get\+Top@{Get\+Top}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Get\+Top()}{GetTop()}}
+{\footnotesize\ttfamily virtual int G\+Rect\+::\+Get\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 81 of file gport.\+h.
+
+
+\begin{DoxyCode}
+81 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_g_rect_ac346895770ff4c98c672485a05819f55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_rect_af36a407452070f2e93a25dbafd3b4314}\label{class_g_rect_af36a407452070f2e93a25dbafd3b4314}} 
+\index{G\+Rect@{G\+Rect}!Get\+Width@{Get\+Width}}
+\index{Get\+Width@{Get\+Width}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Get\+Width()}{GetWidth()}}
+{\footnotesize\ttfamily virtual int G\+Rect\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 84 of file gport.\+h.
+
+
+\begin{DoxyCode}
+84 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}} - \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_g_rect_af36a407452070f2e93a25dbafd3b4314_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_rect_a3b9d11354aad699f297dbfa7eb8196aa}\label{class_g_rect_a3b9d11354aad699f297dbfa7eb8196aa}} 
+\index{G\+Rect@{G\+Rect}!Inset@{Inset}}
+\index{Inset@{Inset}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Inset()}{Inset()}}
+{\footnotesize\ttfamily virtual void G\+Rect\+::\+Inset (\begin{DoxyParamCaption}\item[{const int}]{dx,  }\item[{const int}]{dy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 87 of file gport.\+h.
+
+
+\begin{DoxyCode}
+87 \{ \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}} += dx; \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}} -= dx; \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}} += dy; \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}} -= dy; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_a7774fac9cd2ec8bee54a442e7ca18ebc}\label{class_g_rect_a7774fac9cd2ec8bee54a442e7ca18ebc}} 
+\index{G\+Rect@{G\+Rect}!Offset@{Offset}}
+\index{Offset@{Offset}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Offset()}{Offset()}}
+{\footnotesize\ttfamily virtual void G\+Rect\+::\+Offset (\begin{DoxyParamCaption}\item[{const int}]{dx,  }\item[{const int}]{dy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 88 of file gport.\+h.
+
+
+\begin{DoxyCode}
+88 \{ \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}} += dx; \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}} += dx; \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}} += dy; \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}} += dy; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_a49e5656acaa3f59acb7b0db70f455471}\label{class_g_rect_a49e5656acaa3f59acb7b0db70f455471}} 
+\index{G\+Rect@{G\+Rect}!Point\+In\+Rect@{Point\+In\+Rect}}
+\index{Point\+In\+Rect@{Point\+In\+Rect}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Point\+In\+Rect()}{PointInRect()}}
+{\footnotesize\ttfamily virtual bool G\+Rect\+::\+Point\+In\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_point}{G\+Point}} \&}]{pt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 89 of file gport.\+h.
+
+
+\begin{DoxyCode}
+90     \{
+91         \textcolor{keywordflow}{return} (((\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.GetX() >= \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}}) && (\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.GetX() <= \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}})) &&
+92             ((\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.GetY() >= \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}}) && (\mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}.GetY() <= \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}})));
+93     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_a2ee1b00b28013fc219b27510a402433d}\label{class_g_rect_a2ee1b00b28013fc219b27510a402433d}} 
+\index{G\+Rect@{G\+Rect}!Set\+Bottom@{Set\+Bottom}}
+\index{Set\+Bottom@{Set\+Bottom}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Set\+Bottom()}{SetBottom()}}
+{\footnotesize\ttfamily virtual void G\+Rect\+::\+Set\+Bottom (\begin{DoxyParamCaption}\item[{const int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 98 of file gport.\+h.
+
+
+\begin{DoxyCode}
+98 \{\mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}} = b; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_af8fab889fb03811f8ba166abfe2b9c01}\label{class_g_rect_af8fab889fb03811f8ba166abfe2b9c01}} 
+\index{G\+Rect@{G\+Rect}!Set\+Left@{Set\+Left}}
+\index{Set\+Left@{Set\+Left}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Set\+Left()}{SetLeft()}}
+{\footnotesize\ttfamily virtual void G\+Rect\+::\+Set\+Left (\begin{DoxyParamCaption}\item[{const int}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 95 of file gport.\+h.
+
+
+\begin{DoxyCode}
+95 \{\mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}} = l; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_a1fd6fd632b6d3c068382766a0c18340f}\label{class_g_rect_a1fd6fd632b6d3c068382766a0c18340f}} 
+\index{G\+Rect@{G\+Rect}!Set\+Rect@{Set\+Rect}}
+\index{Set\+Rect@{Set\+Rect}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Set\+Rect()}{SetRect()}}
+{\footnotesize\ttfamily virtual void G\+Rect\+::\+Set\+Rect (\begin{DoxyParamCaption}\item[{const int}]{l,  }\item[{const int}]{t,  }\item[{const int}]{r,  }\item[{const int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 99 of file gport.\+h.
+
+
+\begin{DoxyCode}
+100         \{ \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}} = l; \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}} = t; \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}} = r; \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}} = b; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_rect_a1fd6fd632b6d3c068382766a0c18340f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_rect_a6adcf2d50d9aaeaf18c304dc3ece0280}\label{class_g_rect_a6adcf2d50d9aaeaf18c304dc3ece0280}} 
+\index{G\+Rect@{G\+Rect}!Set\+Rect\+WH@{Set\+Rect\+WH}}
+\index{Set\+Rect\+WH@{Set\+Rect\+WH}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Set\+Rect\+W\+H()}{SetRectWH()}}
+{\footnotesize\ttfamily virtual void G\+Rect\+::\+Set\+Rect\+WH (\begin{DoxyParamCaption}\item[{const int}]{l,  }\item[{const int}]{t,  }\item[{const int}]{w,  }\item[{const int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 101 of file gport.\+h.
+
+
+\begin{DoxyCode}
+102         \{ \mbox{\hyperlink{class_g_rect_ab848c49d0c6376f749a592042791b98b}{left}} = l; \mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}} = t; \mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}} = l + w; \mbox{\hyperlink{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}{bottom}} = t + h; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_a2293c5054272c0aba84624edf82b5b3b}\label{class_g_rect_a2293c5054272c0aba84624edf82b5b3b}} 
+\index{G\+Rect@{G\+Rect}!Set\+Right@{Set\+Right}}
+\index{Set\+Right@{Set\+Right}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Set\+Right()}{SetRight()}}
+{\footnotesize\ttfamily virtual void G\+Rect\+::\+Set\+Right (\begin{DoxyParamCaption}\item[{const int}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 97 of file gport.\+h.
+
+
+\begin{DoxyCode}
+97 \{\mbox{\hyperlink{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}{right}} = r; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_rect_a87864ea06d8f6796b296fd73ac3d1a95}\label{class_g_rect_a87864ea06d8f6796b296fd73ac3d1a95}} 
+\index{G\+Rect@{G\+Rect}!Set\+Top@{Set\+Top}}
+\index{Set\+Top@{Set\+Top}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{Set\+Top()}{SetTop()}}
+{\footnotesize\ttfamily virtual void G\+Rect\+::\+Set\+Top (\begin{DoxyParamCaption}\item[{const int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 96 of file gport.\+h.
+
+
+\begin{DoxyCode}
+96 \{\mbox{\hyperlink{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}{top}} = t; \};
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}\label{class_g_rect_a767f1eb55f7e9880f58609406b2d6a66}} 
+\index{G\+Rect@{G\+Rect}!bottom@{bottom}}
+\index{bottom@{bottom}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{bottom}{bottom}}
+{\footnotesize\ttfamily int G\+Rect\+::bottom\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 102 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_rect_ab848c49d0c6376f749a592042791b98b}\label{class_g_rect_ab848c49d0c6376f749a592042791b98b}} 
+\index{G\+Rect@{G\+Rect}!left@{left}}
+\index{left@{left}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily int G\+Rect\+::left\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 102 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}\label{class_g_rect_a361868c6c368e642abcaf3e4823b1e70}} 
+\index{G\+Rect@{G\+Rect}!right@{right}}
+\index{right@{right}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily int G\+Rect\+::right\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 102 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}\label{class_g_rect_af22c8a22a7d2fe0f139375e7eb171675}} 
+\index{G\+Rect@{G\+Rect}!top@{top}}
+\index{top@{top}!G\+Rect@{G\+Rect}}
+\subsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily int G\+Rect\+::top\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 102 of file gport.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\mbox{\hyperlink{gport_8h}{gport.\+h}}\end{DoxyCompactItemize}

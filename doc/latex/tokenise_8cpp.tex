@@ -1,0 +1,44 @@
+\hypertarget{tokenise_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/tokenise.cpp File Reference}
+\label{tokenise_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/tokenise.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/tokenise.\+cpp}}
+{\ttfamily \#include \char`\"{}tokenise.\+h\char`\"{}}\newline
+Include dependency graph for tokenise.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{tokenise_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tokenise_8cpp_a46ae30dbab3aaee50a0820226d9e45b0}{Tokenise}} (std\+::string s, std\+::string delimiters, std\+::vector$<$ std\+::string $>$ \&tokens)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tokenise_8cpp_a46ae30dbab3aaee50a0820226d9e45b0}\label{tokenise_8cpp_a46ae30dbab3aaee50a0820226d9e45b0}} 
+\index{tokenise.\+cpp@{tokenise.\+cpp}!Tokenise@{Tokenise}}
+\index{Tokenise@{Tokenise}!tokenise.\+cpp@{tokenise.\+cpp}}
+\subsubsection{\texorpdfstring{Tokenise()}{Tokenise()}}
+{\footnotesize\ttfamily void Tokenise (\begin{DoxyParamCaption}\item[{std\+::string}]{s,  }\item[{std\+::string}]{delimiters,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{tokens }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file tokenise.\+cpp.
+
+
+\begin{DoxyCode}
+13 \{
+14     tokens.erase (tokens.begin(), tokens.end());
+15     \textcolor{keywordtype}{int} start, stop;
+16     \textcolor{keywordtype}{int} n = s.length();
+17     start = s.find\_first\_not\_of (delimiters);
+18     \textcolor{keywordflow}{while} ((start >= 0) && (start < n))
+19     \{
+20         stop = s.find\_first\_of (delimiters, start);
+21         \textcolor{keywordflow}{if} ((stop < 0) || (stop > n)) stop = n;
+22         tokens.push\_back (s.substr(start, stop - start));
+23         start = stop + delimiters.length();
+24     \}
+25 \}
+\end{DoxyCode}

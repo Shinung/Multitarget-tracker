@@ -1,0 +1,4 @@
+<map id="BackgroundSubtractorLOBSTER" name="BackgroundSubtractorLOBSTER">
+<area shape="rect" id="node2" href="$class_background_subtractor_l_b_s_p.html" title="{BackgroundSubtractorLBSP\n|+ nDebugCoordX\l+ nDebugCoordY\l# m_oROI\l# m_oImgSize\l# m_nImgChannels\l# m_nImgType\l# m_nLBSPThresholdOffset\l# m_fRelLBSPThreshold\l# m_nTotPxCount\l# m_nTotRelevantPxCount\l# m_nFrameIndex\l# m_nFramesSinceLastReset\land 10 more...\l|+ BackgroundSubtractorLBSP()\l+ ~BackgroundSubtractorLBSP()\l+ initialize()\l+ initialize()\l+ operator()()\l+ getROICopy()\l+ setROI()\l+ setAutomaticModelReset()\l}" alt="" coords="121,189,335,545"/>
+<area shape="rect" id="node5" href="$struct_background_subtractor_l_b_s_p_1_1_px_info_base.html" title="{BackgroundSubtractorLBSP\l::PxInfoBase\n|+ nImgCoord_Y\l+ nImgCoord_X\l+ nModelIdx\l|}" alt="" coords="279,5,465,127"/>
+</map>

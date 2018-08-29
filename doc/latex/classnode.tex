@@ -1,0 +1,1226 @@
+\hypertarget{classnode}{}\section{node Class Reference}
+\label{classnode}\index{node@{node}}
+
+
+A node in a graph.  
+
+
+
+
+{\ttfamily \#include $<$node.\+h$>$}
+
+
+
+Inheritance diagram for node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classnode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef edges\+\_\+t\+::const\+\_\+iterator \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}}
+\item 
+typedef edges\+\_\+t\+::const\+\_\+iterator \mbox{\hyperlink{classnode_a90e17ed34de55072e8077f4367499a98}{out\+\_\+edges\+\_\+iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnode_a6da4ea35f222059db9a59cf40be459f9}{node}} ()
+\item 
+int \mbox{\hyperlink{classnode_a1e5e94e426da180a069cf307616e38e3}{degree}} () const
+\item 
+int \mbox{\hyperlink{classnode_a32adc45c4132e2642ccd2233d79ffe67}{outdeg}} () const
+\item 
+int \mbox{\hyperlink{classnode_a749bfd1316584b96f8c9b0e44ad512f0}{indeg}} () const
+\item 
+int \mbox{\hyperlink{classnode_a5d38b4152c3cedb235e45de7eb3f4469}{id}} () const
+\item 
+const \mbox{\hyperlink{classnode}{node}} \& \mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (\mbox{\hyperlink{classedge}{edge}} e) const
+\item 
+\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} \mbox{\hyperlink{classnode_a63b5d884763b0ed9a8c2c595d9cf060d}{opposites}} (\mbox{\hyperlink{classedge}{edge}}) const
+\item 
+bool \mbox{\hyperlink{classnode_af948e15fd00a31e67928c9061acda582}{is\+\_\+hidden}} () const
+\item 
+int \mbox{\hyperlink{classnode_aba6b3a48e7b951f08ebbbf3275f0ce9a}{excentricity}} () const
+\item 
+\mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \mbox{\hyperlink{classnode_a6cd2febf910bc6572c4aecba6278b100}{adj\+\_\+nodes\+\_\+begin}} () const
+\item 
+\mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \mbox{\hyperlink{classnode_a2477fa92c56a19d29464082444a3043a}{adj\+\_\+nodes\+\_\+end}} () const
+\item 
+\mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\+\_\+edges\+\_\+begin}} () const
+\item 
+\mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\+\_\+edges\+\_\+end}} () const
+\item 
+\mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a0c32377f370ae52ed2134ff8d4dac584}{in\+\_\+edges\+\_\+begin}} () const
+\item 
+\mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a785cd330f8b4c5c47d3b6e936a7e744e}{in\+\_\+edges\+\_\+end}} () const
+\item 
+\mbox{\hyperlink{classnode_a90e17ed34de55072e8077f4367499a98}{out\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a7dcb80df22118cea04f77ca8c952d9c2}{out\+\_\+edges\+\_\+begin}} () const
+\item 
+\mbox{\hyperlink{classnode_a90e17ed34de55072e8077f4367499a98}{out\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a7ce2ba5195a63d4df6b44299a02a9378}{out\+\_\+edges\+\_\+end}} () const
+\item 
+\mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a8677f4dc2acfb64310de1ea866c17340}{inout\+\_\+edges\+\_\+begin}} () const
+\item 
+\mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_ad4eec3efcc3c1e572b0492276e20980c}{inout\+\_\+edges\+\_\+end}} () const
+\item 
+\mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{adj\+\_\+edges\+\_\+iterator}} ()
+\item 
+\mbox{\hyperlink{classnode_a1b7aa43ddd3e7f392479c479400ebb75}{adj\+\_\+edges\+\_\+iterator}} (\mbox{\hyperlink{classnode}{node}}, bool)
+\item 
+bool \mbox{\hyperlink{classnode_a7ae20e73507364af0c1df22ecd0df444}{operator==}} (const \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \&) const
+\item 
+bool \mbox{\hyperlink{classnode_aa30fcffcf193cc94d3e1f3fe419ce42a}{operator!=}} (const \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \&) const
+\item 
+\mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \& \mbox{\hyperlink{classnode_a5849d021a696f38d1b2e1d3d3372bbe7}{operator++}} ()
+\item 
+\mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_ac112a3065e69e4897d38c11980fe1789}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \& \mbox{\hyperlink{classnode_a99fdb299b044facd9cb3f90f18a559fd}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a1e5751de7ba220836ffee941707c277b}{operator-\/-\/}} (int)
+\item 
+const \mbox{\hyperlink{classedge}{edge}} \& \mbox{\hyperlink{classnode_a914c034c6f43029ad9b7f0826dd2614f}{operator$\ast$}} () const
+\item 
+const \mbox{\hyperlink{classedge}{edge}} $\ast$ \mbox{\hyperlink{classnode_a71b168f27cc7338906814f6a3ecc176f}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} ()
+\item 
+\mbox{\hyperlink{classnode_a2990a550ae39da89f6d18e6b5faf519e}{inout\+\_\+edges\+\_\+iterator}} (\mbox{\hyperlink{classnode}{node}} n, bool start)
+\item 
+bool \mbox{\hyperlink{classnode_ae6b790b8b1dd9733be73b1d2c84716df}{operator==}} (const \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \&) const
+\item 
+bool \mbox{\hyperlink{classnode_ac4efb2e8423b3502f9d3a1bd6de80e73}{operator!=}} (const \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \&) const
+\item 
+\mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \& \mbox{\hyperlink{classnode_a934fd5ac6865ae23f3b2758a573550ec}{operator++}} ()
+\item 
+\mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a754f5fcf2ab3d5bf26e1e4fdc47cc766}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \& \mbox{\hyperlink{classnode_a046088eba56244e29945d0197f6b642f}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a9b906907ed01bb04c06bed300428da11}{operator-\/-\/}} (int)
+\item 
+const \mbox{\hyperlink{classedge}{edge}} \& \mbox{\hyperlink{classnode_a914c034c6f43029ad9b7f0826dd2614f}{operator$\ast$}} () const
+\item 
+const \mbox{\hyperlink{classedge}{edge}} $\ast$ \mbox{\hyperlink{classnode_a71b168f27cc7338906814f6a3ecc176f}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} ()
+\item 
+\mbox{\hyperlink{classnode_ade9ca1b2c63a0467be176756545b3c2c}{adj\+\_\+nodes\+\_\+iterator}} (const \mbox{\hyperlink{classnode}{node}} \&, bool)
+\item 
+bool \mbox{\hyperlink{classnode_abe20131c7427c6f045ab4c23916efa3c}{operator==}} (const \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \&) const
+\item 
+bool \mbox{\hyperlink{classnode_abfcd7e8ce1391bd60f155a5de47419c5}{operator!=}} (const \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \&) const
+\item 
+\mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \& \mbox{\hyperlink{classnode_a5c9569e6719a8bebd6dd78266a0da533}{operator++}} ()
+\item 
+\mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \mbox{\hyperlink{classnode_af12ab69bcd07d4d41052b50801690520}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \& \mbox{\hyperlink{classnode_abd4b60efd003b18db13d9fde0a25f91a}{operator-\/-\/}} ()
+\item 
+\mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \mbox{\hyperlink{classnode_ae7cdb2be553782c2dcf48c6ec8ef9d67}{operator-\/-\/}} (int)
+\item 
+const \mbox{\hyperlink{classnode}{node}} \& \mbox{\hyperlink{classnode_a59fdf9aff393a47b4c60c3f21a4ccbc8}{operator$\ast$}} () const
+\item 
+const \mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{classnode_a82d46c8753db26b34382fcfd9f887c12}{operator-\/$>$}} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classnode_a4937028da2c9035228b761347eaa6503}{is\+\_\+directed}} () const
+\item 
+bool \mbox{\hyperlink{classnode_a4af4fd2f8efa1f98369585862077e1a9}{is\+\_\+undirected}} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnode__data}{node\+\_\+data}} $\ast$ \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}
+\item 
+\mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_adea0d78e10bae12b86a65f27d1aa98c7}{akt\+\_\+edge}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a35449752b36330ed35552193166e96b0}{last\+\_\+edge}} \mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a2774efbd986e9e126c0bc5cb60523ff9}{begin\+\_\+edge}} \mbox{[}2\mbox{]}
+\item 
+int \mbox{\hyperlink{classnode_a2cfc899adde47c9ce3a6d6610a369e23}{inout}}
+\item 
+bool \mbox{\hyperlink{classnode_ab1b38276f1b8ca748cf1d95be98201c1}{directed}}
+\item 
+\mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classnode_a56cf4b809cc3b1a7f03327caff125d52}{akt\+\_\+edge}}
+\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classnode_aea3ac7e8efe26d960bc6c76f741ebce5}{int\+\_\+node}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnode_ab8b0dbc1b36724e5e4635ac651c218cb}{graph}}
+\item 
+class \mbox{\hyperlink{classnode_a534891c80172dde5e777a3908cc6e2f1}{edge}}
+\item 
+class \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}}
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend bool \mbox{\hyperlink{classnode_a80fc8f2b4af1f3a8a9edb36ab2e89747}{operator==}} (\mbox{\hyperlink{classnode}{node}}, \mbox{\hyperlink{classnode}{node}})
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend bool \mbox{\hyperlink{classnode_a57d3666e4a9d57001d86b18da29bc174}{operator!=}} (\mbox{\hyperlink{classnode}{node}}, \mbox{\hyperlink{classnode}{node}})
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend bool \mbox{\hyperlink{classnode_a3a5ba8f74b565f5fc4d409d3d350320e}{operator$<$}} (\mbox{\hyperlink{classnode}{node}}, \mbox{\hyperlink{classnode}{node}})
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend std\+::ostream \& \mbox{\hyperlink{classnode_a1da0a071bacaedcea8b018d6648a7505}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classnode}{node}} \&n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A node in a graph. 
+
+Iterator for adjacent nodes of a node.
+
+Iterator for all incident edges of a node.
+
+Iterator for adjacent edges of a node. 
+
+Definition at line 53 of file node.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}\label{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}} 
+\index{node@{node}!in\+\_\+edges\+\_\+iterator@{in\+\_\+edges\+\_\+iterator}}
+\index{in\+\_\+edges\+\_\+iterator@{in\+\_\+edges\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{in\+\_\+edges\+\_\+iterator}{in\_edges\_iterator}}
+{\footnotesize\ttfamily typedef edges\+\_\+t\+::const\+\_\+iterator \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{node\+::in\+\_\+edges\+\_\+iterator}}}
+
+
+
+Definition at line 126 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_a90e17ed34de55072e8077f4367499a98}\label{classnode_a90e17ed34de55072e8077f4367499a98}} 
+\index{node@{node}!out\+\_\+edges\+\_\+iterator@{out\+\_\+edges\+\_\+iterator}}
+\index{out\+\_\+edges\+\_\+iterator@{out\+\_\+edges\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{out\+\_\+edges\+\_\+iterator}{out\_edges\_iterator}}
+{\footnotesize\ttfamily typedef edges\+\_\+t\+::const\+\_\+iterator \mbox{\hyperlink{classnode_a90e17ed34de55072e8077f4367499a98}{node\+::out\+\_\+edges\+\_\+iterator}}}
+
+
+
+Definition at line 130 of file node.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnode_a6da4ea35f222059db9a59cf40be459f9}\label{classnode_a6da4ea35f222059db9a59cf40be459f9}} 
+\index{node@{node}!node@{node}}
+\index{node@{node}!node@{node}}
+\subsubsection{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a2d9f24096ac60918452dd51f32b64aa9}{\+\_\+\+\_\+\+G\+T\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}} node\+::node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Creates an invalid node. The only way to obtain a valid node is through \mbox{\hyperlink{classgraph_ab9505335c20558319b6cce25aed23524}{graph\+::new\+\_\+node}} Example\+: 
+\begin{DoxyPre}
+  graph g;
+  node n;\end{DoxyPre}
+
+
+
+\begin{DoxyPre}  n = g.new\_node();
+\end{DoxyPre}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgraph_ab9505335c20558319b6cce25aed23524}{graph\+::new\+\_\+node}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 19 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+19            :
+20     \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}(0)
+21 \{
+22 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnode_a788d3e932a5c164caa5ec82aa47551b2}\label{classnode_a788d3e932a5c164caa5ec82aa47551b2}} 
+\index{node@{node}!adj\+\_\+edges\+\_\+begin@{adj\+\_\+edges\+\_\+begin}}
+\index{adj\+\_\+edges\+\_\+begin@{adj\+\_\+edges\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+begin()}{adj\_edges\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{node\+::adj\+\_\+edges\+\_\+iterator}} node\+::adj\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all adjacent edges.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all adjacent edges 
+\end{DoxyReturn}
+
+
+Definition at line 42 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+43 \{
+44     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}}(*\textcolor{keyword}{this}, \textcolor{keyword}{true});
+45 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a788d3e932a5c164caa5ec82aa47551b2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a788d3e932a5c164caa5ec82aa47551b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_aa1e7887d29390297580769454f769ad6}\label{classnode_aa1e7887d29390297580769454f769ad6}} 
+\index{node@{node}!adj\+\_\+edges\+\_\+end@{adj\+\_\+edges\+\_\+end}}
+\index{adj\+\_\+edges\+\_\+end@{adj\+\_\+edges\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+end()}{adj\_edges\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{node\+::adj\+\_\+edges\+\_\+iterator}} node\+::adj\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all adjacent edges.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all adjacent edges 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+48 \{
+49     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}}(*\textcolor{keyword}{this}, \textcolor{keyword}{false});
+50 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classnode_aa1e7887d29390297580769454f769ad6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_aa1e7887d29390297580769454f769ad6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a12cb1a2167f5f03c054de5e707d3156f}\label{classnode_a12cb1a2167f5f03c054de5e707d3156f}} 
+\index{node@{node}!adj\+\_\+edges\+\_\+iterator@{adj\+\_\+edges\+\_\+iterator}}
+\index{adj\+\_\+edges\+\_\+iterator@{adj\+\_\+edges\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+iterator()}{adj\_edges\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily node\+::adj\+\_\+edges\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a12cb1a2167f5f03c054de5e707d3156f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a1b7aa43ddd3e7f392479c479400ebb75}\label{classnode_a1b7aa43ddd3e7f392479c479400ebb75}} 
+\index{node@{node}!adj\+\_\+edges\+\_\+iterator@{adj\+\_\+edges\+\_\+iterator}}
+\index{adj\+\_\+edges\+\_\+iterator@{adj\+\_\+edges\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+iterator()}{adj\_edges\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily node\+::adj\+\_\+edges\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{,  }\item[{bool}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a6cd2febf910bc6572c4aecba6278b100}\label{classnode_a6cd2febf910bc6572c4aecba6278b100}} 
+\index{node@{node}!adj\+\_\+nodes\+\_\+begin@{adj\+\_\+nodes\+\_\+begin}}
+\index{adj\+\_\+nodes\+\_\+begin@{adj\+\_\+nodes\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+nodes\+\_\+begin()}{adj\_nodes\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{node\+::adj\+\_\+nodes\+\_\+iterator}} node\+::adj\+\_\+nodes\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all adjacent nodes.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all adjacent nodes 
+\end{DoxyReturn}
+
+
+Definition at line 32 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+33 \{ 
+34     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{node::adj\_nodes\_iterator}}(*\textcolor{keyword}{this}, \textcolor{keyword}{true});
+35 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a6cd2febf910bc6572c4aecba6278b100_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a6cd2febf910bc6572c4aecba6278b100_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a2477fa92c56a19d29464082444a3043a}\label{classnode_a2477fa92c56a19d29464082444a3043a}} 
+\index{node@{node}!adj\+\_\+nodes\+\_\+end@{adj\+\_\+nodes\+\_\+end}}
+\index{adj\+\_\+nodes\+\_\+end@{adj\+\_\+nodes\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+nodes\+\_\+end()}{adj\_nodes\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{node\+::adj\+\_\+nodes\+\_\+iterator}} node\+::adj\+\_\+nodes\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all adjacent nodes.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all adjacent nodes 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{node::adj\_nodes\_iterator}}(*\textcolor{keyword}{this}, \textcolor{keyword}{false});
+40 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{classnode_a2477fa92c56a19d29464082444a3043a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a2477fa92c56a19d29464082444a3043a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}\label{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}} 
+\index{node@{node}!adj\+\_\+nodes\+\_\+iterator@{adj\+\_\+nodes\+\_\+iterator}}
+\index{adj\+\_\+nodes\+\_\+iterator@{adj\+\_\+nodes\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+nodes\+\_\+iterator()}{adj\_nodes\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily node\+::adj\+\_\+nodes\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_ade9ca1b2c63a0467be176756545b3c2c}\label{classnode_ade9ca1b2c63a0467be176756545b3c2c}} 
+\index{node@{node}!adj\+\_\+nodes\+\_\+iterator@{adj\+\_\+nodes\+\_\+iterator}}
+\index{adj\+\_\+nodes\+\_\+iterator@{adj\+\_\+nodes\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+nodes\+\_\+iterator()}{adj\_nodes\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily node\+::adj\+\_\+nodes\+\_\+iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{,  }\item[{bool}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a1e5e94e426da180a069cf307616e38e3}\label{classnode_a1e5e94e426da180a069cf307616e38e3}} 
+\index{node@{node}!degree@{degree}}
+\index{degree@{degree}!node@{node}}
+\subsubsection{\texorpdfstring{degree()}{degree()}}
+{\footnotesize\ttfamily int node\+::degree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the degree of the node, i. e. \mbox{\hyperlink{classnode_a32adc45c4132e2642ccd2233d79ffe67}{node\+::outdeg}} + \mbox{\hyperlink{classnode_a749bfd1316584b96f8c9b0e44ad512f0}{node\+::indeg}} . 
+
+Definition at line 82 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+83 \{
+84     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a32adc45c4132e2642ccd2233d79ffe67}{outdeg}}() + \mbox{\hyperlink{classnode_a749bfd1316584b96f8c9b0e44ad512f0}{indeg}}();
+85 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classnode_a1e5e94e426da180a069cf307616e38e3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a1e5e94e426da180a069cf307616e38e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_aba6b3a48e7b951f08ebbbf3275f0ce9a}\label{classnode_aba6b3a48e7b951f08ebbbf3275f0ce9a}} 
+\index{node@{node}!excentricity@{excentricity}}
+\index{excentricity@{excentricity}!node@{node}}
+\subsubsection{\texorpdfstring{excentricity()}{excentricity()}}
+{\footnotesize\ttfamily int node\+::excentricity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the excentricity of the node, i.\+e. the maximum graph-\/theoretic distance to another node
+
+\begin{DoxyReturn}{Returns}
+excentricity of node. 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+136 \{
+137     \mbox{\hyperlink{classbfs}{bfs}} b;
+138     b.\mbox{\hyperlink{classbfs_a23e2981c2ee617a6e12a8833d2db6210}{start\_node}}(*\textcolor{keyword}{this});
+139     b.\mbox{\hyperlink{classbfs_a491515da4eb8efca0be4fef0df350a8e}{calc\_level}}(\textcolor{keyword}{true});
+140     b.\mbox{\hyperlink{classbfs_a06ae16bd0f3bb2f8eb6b3e36659ba82e}{run}}(*\mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a20acb07c56fa28df6cbdbf3b0a02cb66}{owner}});
+141 
+142     \mbox{\hyperlink{classnode}{node}} last\_node = *(--b.\mbox{\hyperlink{classbfs_ac35b3d3c37d33eb80adb752e17a60df9}{end}}());
+143     
+144     \textcolor{keywordflow}{return} b.\mbox{\hyperlink{classbfs_ac0158a0453fb17a89be4049d21db56b1}{level}}(last\_node);
+145 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_aba6b3a48e7b951f08ebbbf3275f0ce9a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classnode_aba6b3a48e7b951f08ebbbf3275f0ce9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a5d38b4152c3cedb235e45de7eb3f4469}\label{classnode_a5d38b4152c3cedb235e45de7eb3f4469}} 
+\index{node@{node}!id@{id}}
+\index{id@{id}!node@{node}}
+\subsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily int node\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 97 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+98 \{
+99     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_ac87541ac4470e3c17df808ec9a67f6c4}{id}};
+100 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a5d38b4152c3cedb235e45de7eb3f4469_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a0c32377f370ae52ed2134ff8d4dac584}\label{classnode_a0c32377f370ae52ed2134ff8d4dac584}} 
+\index{node@{node}!in\+\_\+edges\+\_\+begin@{in\+\_\+edges\+\_\+begin}}
+\index{in\+\_\+edges\+\_\+begin@{in\+\_\+edges\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{in\+\_\+edges\+\_\+begin()}{in\_edges\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{node\+::in\+\_\+edges\+\_\+iterator}} node\+::in\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all incoming edges.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all incoming edges 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+63 \{
+64     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a91690d6d2594423c2cdf8ea083c8bd75}{edges}}[0].begin();
+65 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a0c32377f370ae52ed2134ff8d4dac584_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a785cd330f8b4c5c47d3b6e936a7e744e}\label{classnode_a785cd330f8b4c5c47d3b6e936a7e744e}} 
+\index{node@{node}!in\+\_\+edges\+\_\+end@{in\+\_\+edges\+\_\+end}}
+\index{in\+\_\+edges\+\_\+end@{in\+\_\+edges\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{in\+\_\+edges\+\_\+end()}{in\_edges\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{node\+::in\+\_\+edges\+\_\+iterator}} node\+::in\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all incoming edges.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all incoming edges 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+68 \{
+69     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a91690d6d2594423c2cdf8ea083c8bd75}{edges}}[0].end();
+70 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a785cd330f8b4c5c47d3b6e936a7e744e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a749bfd1316584b96f8c9b0e44ad512f0}\label{classnode_a749bfd1316584b96f8c9b0e44ad512f0}} 
+\index{node@{node}!indeg@{indeg}}
+\index{indeg@{indeg}!node@{node}}
+\subsubsection{\texorpdfstring{indeg()}{indeg()}}
+{\footnotesize\ttfamily int node\+::indeg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the in degree of the node, i. e. the number of incoming edges. 
+
+Definition at line 92 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+93 \{
+94     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a91690d6d2594423c2cdf8ea083c8bd75}{edges}}[0].size();
+95 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a749bfd1316584b96f8c9b0e44ad512f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a8677f4dc2acfb64310de1ea866c17340}\label{classnode_a8677f4dc2acfb64310de1ea866c17340}} 
+\index{node@{node}!inout\+\_\+edges\+\_\+begin@{inout\+\_\+edges\+\_\+begin}}
+\index{inout\+\_\+edges\+\_\+begin@{inout\+\_\+edges\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{inout\+\_\+edges\+\_\+begin()}{inout\_edges\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{node\+::inout\+\_\+edges\+\_\+iterator}} node\+::inout\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all incoming {\itshape and} outgoing edges.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all incoming and outgoing edges 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{node::inout\_edges\_iterator}}(*\textcolor{keyword}{this}, \textcolor{keyword}{true});
+55 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a8677f4dc2acfb64310de1ea866c17340_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_ad4eec3efcc3c1e572b0492276e20980c}\label{classnode_ad4eec3efcc3c1e572b0492276e20980c}} 
+\index{node@{node}!inout\+\_\+edges\+\_\+end@{inout\+\_\+edges\+\_\+end}}
+\index{inout\+\_\+edges\+\_\+end@{inout\+\_\+edges\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{inout\+\_\+edges\+\_\+end()}{inout\_edges\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{node\+::inout\+\_\+edges\+\_\+iterator}} node\+::inout\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all incoming {\itshape and} outgoing edges.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all incoming and outgoing edges 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{node::inout\_edges\_iterator}}(*\textcolor{keyword}{this}, \textcolor{keyword}{false});
+60 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_ad4eec3efcc3c1e572b0492276e20980c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a854d596611e6a3342090cce71cedf300}\label{classnode_a854d596611e6a3342090cce71cedf300}} 
+\index{node@{node}!inout\+\_\+edges\+\_\+iterator@{inout\+\_\+edges\+\_\+iterator}}
+\index{inout\+\_\+edges\+\_\+iterator@{inout\+\_\+edges\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{inout\+\_\+edges\+\_\+iterator()}{inout\_edges\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily node\+::inout\+\_\+edges\+\_\+iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a854d596611e6a3342090cce71cedf300_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a2990a550ae39da89f6d18e6b5faf519e}\label{classnode_a2990a550ae39da89f6d18e6b5faf519e}} 
+\index{node@{node}!inout\+\_\+edges\+\_\+iterator@{inout\+\_\+edges\+\_\+iterator}}
+\index{inout\+\_\+edges\+\_\+iterator@{inout\+\_\+edges\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{inout\+\_\+edges\+\_\+iterator()}{inout\_edges\_iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily node\+::inout\+\_\+edges\+\_\+iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n,  }\item[{bool}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a4937028da2c9035228b761347eaa6503}\label{classnode_a4937028da2c9035228b761347eaa6503}} 
+\index{node@{node}!is\+\_\+directed@{is\+\_\+directed}}
+\index{is\+\_\+directed@{is\+\_\+directed}!node@{node}}
+\subsubsection{\texorpdfstring{is\+\_\+directed()}{is\_directed()}}
+{\footnotesize\ttfamily bool node\+::is\+\_\+directed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 102 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+103 \{
+104     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a20acb07c56fa28df6cbdbf3b0a02cb66}{owner}}->\mbox{\hyperlink{classgraph_afc510be7479fa903fde9e0e615470ab0}{is\_directed}}();
+105 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classnode_a4937028da2c9035228b761347eaa6503_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_af948e15fd00a31e67928c9061acda582}\label{classnode_af948e15fd00a31e67928c9061acda582}} 
+\index{node@{node}!is\+\_\+hidden@{is\+\_\+hidden}}
+\index{is\+\_\+hidden@{is\+\_\+hidden}!node@{node}}
+\subsubsection{\texorpdfstring{is\+\_\+hidden()}{is\_hidden()}}
+{\footnotesize\ttfamily bool node\+::is\+\_\+hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns true iff node is hidden.
+
+\begin{DoxyReturn}{Returns}
+true iff node is hidden. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classgraph_ab2f8520bcac080d73c55228fecc61825}{graph\+::hide\+\_\+edge}} 
+
+\mbox{\hyperlink{classgraph_a2e5426682a0897b9f9104b019970bedc}{graph\+::restore\+\_\+edge}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 130 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+131 \{
+132     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a0a841a84f5038562908d726392ce1b55}{hidden}};
+133 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_af948e15fd00a31e67928c9061acda582_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a4af4fd2f8efa1f98369585862077e1a9}\label{classnode_a4af4fd2f8efa1f98369585862077e1a9}} 
+\index{node@{node}!is\+\_\+undirected@{is\+\_\+undirected}}
+\index{is\+\_\+undirected@{is\+\_\+undirected}!node@{node}}
+\subsubsection{\texorpdfstring{is\+\_\+undirected()}{is\_undirected()}}
+{\footnotesize\ttfamily bool node\+::is\+\_\+undirected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 107 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+108 \{
+109     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a20acb07c56fa28df6cbdbf3b0a02cb66}{owner}}->\mbox{\hyperlink{classgraph_aba427ff8ba0f70c68416ec1351344cd8}{is\_undirected}}();
+110 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classnode_a4af4fd2f8efa1f98369585862077e1a9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_aa30fcffcf193cc94d3e1f3fe419ce42a}\label{classnode_aa30fcffcf193cc94d3e1f3fe419ce42a}} 
+\index{node@{node}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!node@{node}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool node\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_ac4efb2e8423b3502f9d3a1bd6de80e73}\label{classnode_ac4efb2e8423b3502f9d3a1bd6de80e73}} 
+\index{node@{node}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!node@{node}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool node\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_abfcd7e8ce1391bd60f155a5de47419c5}\label{classnode_abfcd7e8ce1391bd60f155a5de47419c5}} 
+\index{node@{node}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!node@{node}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool node\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_a914c034c6f43029ad9b7f0826dd2614f}\label{classnode_a914c034c6f43029ad9b7f0826dd2614f}} 
+\index{node@{node}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!node@{node}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classedge}{edge}}\& node\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_a914c034c6f43029ad9b7f0826dd2614f}\label{classnode_a914c034c6f43029ad9b7f0826dd2614f}} 
+\index{node@{node}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!node@{node}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classedge}{edge}}\& node\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_a59fdf9aff393a47b4c60c3f21a4ccbc8}\label{classnode_a59fdf9aff393a47b4c60c3f21a4ccbc8}} 
+\index{node@{node}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!node@{node}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classnode}{node}}\& node\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_a5849d021a696f38d1b2e1d3d3372bbe7}\label{classnode_a5849d021a696f38d1b2e1d3d3372bbe7}} 
+\index{node@{node}!operator++@{operator++}}
+\index{operator++@{operator++}!node@{node}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}}\& node\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_ac112a3065e69e4897d38c11980fe1789}\label{classnode_ac112a3065e69e4897d38c11980fe1789}} 
+\index{node@{node}!operator++@{operator++}}
+\index{operator++@{operator++}!node@{node}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} node\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a934fd5ac6865ae23f3b2758a573550ec}\label{classnode_a934fd5ac6865ae23f3b2758a573550ec}} 
+\index{node@{node}!operator++@{operator++}}
+\index{operator++@{operator++}!node@{node}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}}\& node\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a754f5fcf2ab3d5bf26e1e4fdc47cc766}\label{classnode_a754f5fcf2ab3d5bf26e1e4fdc47cc766}} 
+\index{node@{node}!operator++@{operator++}}
+\index{operator++@{operator++}!node@{node}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} node\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a5c9569e6719a8bebd6dd78266a0da533}\label{classnode_a5c9569e6719a8bebd6dd78266a0da533}} 
+\index{node@{node}!operator++@{operator++}}
+\index{operator++@{operator++}!node@{node}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}}\& node\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_af12ab69bcd07d4d41052b50801690520}\label{classnode_af12ab69bcd07d4d41052b50801690520}} 
+\index{node@{node}!operator++@{operator++}}
+\index{operator++@{operator++}!node@{node}}
+\subsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} node\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a99fdb299b044facd9cb3f90f18a559fd}\label{classnode_a99fdb299b044facd9cb3f90f18a559fd}} 
+\index{node@{node}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}}\& node\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a1e5751de7ba220836ffee941707c277b}\label{classnode_a1e5751de7ba220836ffee941707c277b}} 
+\index{node@{node}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} node\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a046088eba56244e29945d0197f6b642f}\label{classnode_a046088eba56244e29945d0197f6b642f}} 
+\index{node@{node}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}}\& node\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a9b906907ed01bb04c06bed300428da11}\label{classnode_a9b906907ed01bb04c06bed300428da11}} 
+\index{node@{node}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} node\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_abd4b60efd003b18db13d9fde0a25f91a}\label{classnode_abd4b60efd003b18db13d9fde0a25f91a}} 
+\index{node@{node}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}}\& node\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_ae7cdb2be553782c2dcf48c6ec8ef9d67}\label{classnode_ae7cdb2be553782c2dcf48c6ec8ef9d67}} 
+\index{node@{node}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} node\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classnode_a71b168f27cc7338906814f6a3ecc176f}\label{classnode_a71b168f27cc7338906814f6a3ecc176f}} 
+\index{node@{node}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classedge}{edge}}$\ast$ node\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_a71b168f27cc7338906814f6a3ecc176f}\label{classnode_a71b168f27cc7338906814f6a3ecc176f}} 
+\index{node@{node}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classedge}{edge}}$\ast$ node\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_a82d46c8753db26b34382fcfd9f887c12}\label{classnode_a82d46c8753db26b34382fcfd9f887c12}} 
+\index{node@{node}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!node@{node}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classnode}{node}}$\ast$ node\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_a7ae20e73507364af0c1df22ecd0df444}\label{classnode_a7ae20e73507364af0c1df22ecd0df444}} 
+\index{node@{node}!operator==@{operator==}}
+\index{operator==@{operator==}!node@{node}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool node\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_ae6b790b8b1dd9733be73b1d2c84716df}\label{classnode_ae6b790b8b1dd9733be73b1d2c84716df}} 
+\index{node@{node}!operator==@{operator==}}
+\index{operator==@{operator==}!node@{node}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool node\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode_a854d596611e6a3342090cce71cedf300}{inout\+\_\+edges\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_abe20131c7427c6f045ab4c23916efa3c}\label{classnode_abe20131c7427c6f045ab4c23916efa3c}} 
+\index{node@{node}!operator==@{operator==}}
+\index{operator==@{operator==}!node@{node}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool node\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode_a392f19ea6dfa344bdf5c4d5a4b25eb8c}{adj\+\_\+nodes\+\_\+iterator}} \&}]{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classnode_a13dbd1809a33a5efede64a359e53a363}\label{classnode_a13dbd1809a33a5efede64a359e53a363}} 
+\index{node@{node}!opposite@{opposite}}
+\index{opposite@{opposite}!node@{node}}
+\subsubsection{\texorpdfstring{opposite()}{opposite()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classnode}{node}} \& node\+::opposite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedge}{edge}}}]{e }\end{DoxyParamCaption}) const}
+
+Returns the node on the opposite side of {\ttfamily e}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & an edge incident to the node \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+113 \{
+114     \textcolor{comment}{// not implemented for hypergraphs}
+115     assert(e.\mbox{\hyperlink{classedge_a0ebb6dfa28b77f47529085049352b436}{data}});
+116 
+117     \mbox{\hyperlink{classnode}{node}}& s = *(e.\mbox{\hyperlink{classedge_a0ebb6dfa28b77f47529085049352b436}{data}}->\mbox{\hyperlink{classedge__data_a870bbbb05de6c5f63d434db624c55dd4}{nodes}}[0].begin());
+118     \textcolor{keywordflow}{if} (*\textcolor{keyword}{this} == s)
+119     \textcolor{keywordflow}{return} *(e.\mbox{\hyperlink{classedge_a0ebb6dfa28b77f47529085049352b436}{data}}->\mbox{\hyperlink{classedge__data_a870bbbb05de6c5f63d434db624c55dd4}{nodes}}[1].begin());
+120     \textcolor{keywordflow}{else}
+121     \textcolor{keywordflow}{return} s;
+122 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a13dbd1809a33a5efede64a359e53a363_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a63b5d884763b0ed9a8c2c595d9cf060d}\label{classnode_a63b5d884763b0ed9a8c2c595d9cf060d}} 
+\index{node@{node}!opposites@{opposites}}
+\index{opposites@{opposites}!node@{node}}
+\subsubsection{\texorpdfstring{opposites()}{opposites()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} node\+::opposites (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedge}{edge}}}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 124 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+125 \{
+126     \textcolor{comment}{// not implemented yet}
+127     \textcolor{keywordflow}{return} \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\_t}}(); \textcolor{comment}{// to avoid compiler warnings}
+128 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classnode_a7dcb80df22118cea04f77ca8c952d9c2}\label{classnode_a7dcb80df22118cea04f77ca8c952d9c2}} 
+\index{node@{node}!out\+\_\+edges\+\_\+begin@{out\+\_\+edges\+\_\+begin}}
+\index{out\+\_\+edges\+\_\+begin@{out\+\_\+edges\+\_\+begin}!node@{node}}
+\subsubsection{\texorpdfstring{out\+\_\+edges\+\_\+begin()}{out\_edges\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a90e17ed34de55072e8077f4367499a98}{node\+::out\+\_\+edges\+\_\+iterator}} node\+::out\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all outgoing edges.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all outgoing edges 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+73 \{
+74     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a91690d6d2594423c2cdf8ea083c8bd75}{edges}}[1].begin();
+75 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a7dcb80df22118cea04f77ca8c952d9c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a7ce2ba5195a63d4df6b44299a02a9378}\label{classnode_a7ce2ba5195a63d4df6b44299a02a9378}} 
+\index{node@{node}!out\+\_\+edges\+\_\+end@{out\+\_\+edges\+\_\+end}}
+\index{out\+\_\+edges\+\_\+end@{out\+\_\+edges\+\_\+end}!node@{node}}
+\subsubsection{\texorpdfstring{out\+\_\+edges\+\_\+end()}{out\_edges\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a90e17ed34de55072e8077f4367499a98}{node\+::out\+\_\+edges\+\_\+iterator}} node\+::out\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all outgoing edges.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all outgoing edges 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+78 \{
+79     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a91690d6d2594423c2cdf8ea083c8bd75}{edges}}[1].end();
+80 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a7ce2ba5195a63d4df6b44299a02a9378_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classnode_a32adc45c4132e2642ccd2233d79ffe67}\label{classnode_a32adc45c4132e2642ccd2233d79ffe67}} 
+\index{node@{node}!outdeg@{outdeg}}
+\index{outdeg@{outdeg}!node@{node}}
+\subsubsection{\texorpdfstring{outdeg()}{outdeg()}}
+{\footnotesize\ttfamily int node\+::outdeg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the out degree of the node, i. e. the number of outgoing edges. 
+
+Definition at line 87 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+88 \{
+89     \textcolor{keywordflow}{return} \mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}}->\mbox{\hyperlink{classnode__data_a91690d6d2594423c2cdf8ea083c8bd75}{edges}}[1].size();
+90 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnode_a32adc45c4132e2642ccd2233d79ffe67_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classnode_abdd49248203010f2d5432dfef22d017a}\label{classnode_abdd49248203010f2d5432dfef22d017a}} 
+\index{node@{node}!adj\+\_\+edges\+\_\+iterator@{adj\+\_\+edges\+\_\+iterator}}
+\index{adj\+\_\+edges\+\_\+iterator@{adj\+\_\+edges\+\_\+iterator}!node@{node}}
+\subsubsection{\texorpdfstring{adj\+\_\+edges\+\_\+iterator}{adj\_edges\_iterator}}
+{\footnotesize\ttfamily friend class adj\+\_\+edges\+\_\+iterator\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 229 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_a534891c80172dde5e777a3908cc6e2f1}\label{classnode_a534891c80172dde5e777a3908cc6e2f1}} 
+\index{node@{node}!edge@{edge}}
+\index{edge@{edge}!node@{node}}
+\subsubsection{\texorpdfstring{edge}{edge}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classedge}{edge}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 228 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_ab8b0dbc1b36724e5e4635ac651c218cb}\label{classnode_ab8b0dbc1b36724e5e4635ac651c218cb}} 
+\index{node@{node}!graph@{graph}}
+\index{graph@{graph}!node@{node}}
+\subsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classgraph}{graph}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 227 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_a57d3666e4a9d57001d86b18da29bc174}\label{classnode_a57d3666e4a9d57001d86b18da29bc174}} 
+\index{node@{node}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!node@{node}}
+\subsubsection{\texorpdfstring{operator"!=}{operator!=}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend bool operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{v1,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 152 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+153 \{
+154     \textcolor{keywordflow}{return} v1.\mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}} != v2.\mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}};
+155 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classnode_a3a5ba8f74b565f5fc4d409d3d350320e}\label{classnode_a3a5ba8f74b565f5fc4d409d3d350320e}} 
+\index{node@{node}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!node@{node}}
+\subsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend bool operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{v1,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 157 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+158 \{
+159     \textcolor{keywordflow}{return} v1.\mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}} < v2.\mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}};
+160 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classnode_a1da0a071bacaedcea8b018d6648a7505}\label{classnode_a1da0a071bacaedcea8b018d6648a7505}} 
+\index{node@{node}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!node@{node}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 24 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+24                                                                   \{
+25     \textcolor{keywordflow}{if} (n != \mbox{\hyperlink{classnode_a6da4ea35f222059db9a59cf40be459f9}{node}}()) \{
+26     \textcolor{keywordflow}{return} os << \textcolor{stringliteral}{"["} << n.\mbox{\hyperlink{classnode_a5d38b4152c3cedb235e45de7eb3f4469}{id}}() << \textcolor{stringliteral}{"]"};
+27     \} \textcolor{keywordflow}{else} \{
+28     \textcolor{keywordflow}{return} os << \textcolor{stringliteral}{"[ UNDEF ]"};
+29     \}
+30 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classnode_a80fc8f2b4af1f3a8a9edb36ab2e89747}\label{classnode_a80fc8f2b4af1f3a8a9edb36ab2e89747}} 
+\index{node@{node}!operator==@{operator==}}
+\index{operator==@{operator==}!node@{node}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend bool operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{v1,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 147 of file node.\+cpp.
+
+
+\begin{DoxyCode}
+148 \{
+149     \textcolor{keywordflow}{return} v1.\mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}} == v2.\mbox{\hyperlink{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}{data}};
+150 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classnode_adea0d78e10bae12b86a65f27d1aa98c7}\label{classnode_adea0d78e10bae12b86a65f27d1aa98c7}} 
+\index{node@{node}!akt\+\_\+edge@{akt\+\_\+edge}}
+\index{akt\+\_\+edge@{akt\+\_\+edge}!node@{node}}
+\subsubsection{\texorpdfstring{akt\+\_\+edge}{akt\_edge}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}} node\+::akt\+\_\+edge\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 263 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_a56cf4b809cc3b1a7f03327caff125d52}\label{classnode_a56cf4b809cc3b1a7f03327caff125d52}} 
+\index{node@{node}!akt\+\_\+edge@{akt\+\_\+edge}}
+\index{akt\+\_\+edge@{akt\+\_\+edge}!node@{node}}
+\subsubsection{\texorpdfstring{akt\+\_\+edge}{akt\_edge}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_abdd49248203010f2d5432dfef22d017a}{adj\+\_\+edges\+\_\+iterator}} node\+::akt\+\_\+edge\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 324 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_a2774efbd986e9e126c0bc5cb60523ff9}\label{classnode_a2774efbd986e9e126c0bc5cb60523ff9}} 
+\index{node@{node}!begin\+\_\+edge@{begin\+\_\+edge}}
+\index{begin\+\_\+edge@{begin\+\_\+edge}!node@{node}}
+\subsubsection{\texorpdfstring{begin\+\_\+edge}{begin\_edge}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}} node\+::begin\+\_\+edge\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 263 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}\label{classnode_a4ae3d54ebb61be3a102bedf5b91bef75}} 
+\index{node@{node}!data@{data}}
+\index{data@{data}!node@{node}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__data}{node\+\_\+data}}$\ast$ node\+::data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 222 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_ab1b38276f1b8ca748cf1d95be98201c1}\label{classnode_ab1b38276f1b8ca748cf1d95be98201c1}} 
+\index{node@{node}!directed@{directed}}
+\index{directed@{directed}!node@{node}}
+\subsubsection{\texorpdfstring{directed}{directed}}
+{\footnotesize\ttfamily bool node\+::directed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 265 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_a2cfc899adde47c9ce3a6d6610a369e23}\label{classnode_a2cfc899adde47c9ce3a6d6610a369e23}} 
+\index{node@{node}!inout@{inout}}
+\index{inout@{inout}!node@{node}}
+\subsubsection{\texorpdfstring{inout}{inout}}
+{\footnotesize\ttfamily int node\+::inout\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 264 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_aea3ac7e8efe26d960bc6c76f741ebce5}\label{classnode_aea3ac7e8efe26d960bc6c76f741ebce5}} 
+\index{node@{node}!int\+\_\+node@{int\+\_\+node}}
+\index{int\+\_\+node@{int\+\_\+node}!node@{node}}
+\subsubsection{\texorpdfstring{int\+\_\+node}{int\_node}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} node\+::int\+\_\+node\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 325 of file node.\+h.
+
+\mbox{\Hypertarget{classnode_a35449752b36330ed35552193166e96b0}\label{classnode_a35449752b36330ed35552193166e96b0}} 
+\index{node@{node}!last\+\_\+edge@{last\+\_\+edge}}
+\index{last\+\_\+edge@{last\+\_\+edge}!node@{node}}
+\subsubsection{\texorpdfstring{last\+\_\+edge}{last\_edge}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode_a9a96be92add7c1a2771bcd0431ebf8ab}{in\+\_\+edges\+\_\+iterator}} node\+::last\+\_\+edge\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 263 of file node.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{node_8h}{node.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/\mbox{\hyperlink{node_8cpp}{node.\+cpp}}\end{DoxyCompactItemize}

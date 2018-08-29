@@ -1,0 +1,5 @@
+<map id="graph::induced_subgraph" name="graph::induced_subgraph">
+<area shape="rect" id="node2" href="$components_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="262,5,313,32"/>
+<area shape="rect" id="node3" href="$classplanarity.html#a8a66dd6682b3111e39be103db127e6b0" title="planarity::switch_to\l_component" alt="" coords="220,57,355,98"/>
+<area shape="rect" id="node4" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="403,64,500,91"/>
+</map>

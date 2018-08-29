@@ -1,0 +1,130 @@
+\hypertarget{class_scoped_context}{}\section{Scoped\+Context$<$ Context $>$ Class Template Reference}
+\label{class_scoped_context}\index{Scoped\+Context$<$ Context $>$@{Scoped\+Context$<$ Context $>$}}
+
+
+{\ttfamily \#include $<$common.\+h$>$}
+
+
+
+Collaboration diagram for Scoped\+Context$<$ Context $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_scoped_context__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scoped_context_a47e87cd0b7ce580d53fbb7f1bb36a4c3}{Scoped\+Context}} (\mbox{\hyperlink{common_8h_a59ab5d85bff9594312b035d548be298f}{Context\+Pool}}$<$ Context $>$ \&pool)
+\item 
+\mbox{\hyperlink{class_scoped_context_a1bdbdb322975a0ea7d35262385b81476}{$\sim$\+Scoped\+Context}} ()
+\item 
+Context $\ast$ \mbox{\hyperlink{class_scoped_context_af8a201a083905cf9c02c53d5992e7488}{operator-\/$>$}} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{common_8h_a59ab5d85bff9594312b035d548be298f}{Context\+Pool}}$<$ Context $>$ \& \mbox{\hyperlink{class_scoped_context_a6aa628deb422cd0304c7b2eb311f8185}{pool\+\_\+}}
+\item 
+std\+::unique\+\_\+ptr$<$ Context $>$ \mbox{\hyperlink{class_scoped_context_afe2f4971fc3620e98791cc844454956e}{context\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Context$>$\newline
+class Scoped\+Context$<$ Context $>$}
+
+
+
+Definition at line 57 of file common.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scoped_context_a47e87cd0b7ce580d53fbb7f1bb36a4c3}\label{class_scoped_context_a47e87cd0b7ce580d53fbb7f1bb36a4c3}} 
+\index{Scoped\+Context@{Scoped\+Context}!Scoped\+Context@{Scoped\+Context}}
+\index{Scoped\+Context@{Scoped\+Context}!Scoped\+Context@{Scoped\+Context}}
+\subsubsection{\texorpdfstring{Scoped\+Context()}{ScopedContext()}}
+{\footnotesize\ttfamily template$<$typename Context$>$ \\
+\mbox{\hyperlink{class_scoped_context}{Scoped\+Context}}$<$ Context $>$\+::\mbox{\hyperlink{class_scoped_context}{Scoped\+Context}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{common_8h_a59ab5d85bff9594312b035d548be298f}{Context\+Pool}}$<$ Context $>$ \&}]{pool }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line 60 of file common.\+h.
+
+
+\begin{DoxyCode}
+61         : \mbox{\hyperlink{class_scoped_context_a6aa628deb422cd0304c7b2eb311f8185}{pool\_}}(pool), \mbox{\hyperlink{class_scoped_context_afe2f4971fc3620e98791cc844454956e}{context\_}}(\mbox{\hyperlink{class_scoped_context_a6aa628deb422cd0304c7b2eb311f8185}{pool\_}}.Pop())
+62     \{
+63         \mbox{\hyperlink{class_scoped_context_afe2f4971fc3620e98791cc844454956e}{context\_}}->Activate();
+64     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_scoped_context_a1bdbdb322975a0ea7d35262385b81476}\label{class_scoped_context_a1bdbdb322975a0ea7d35262385b81476}} 
+\index{Scoped\+Context@{Scoped\+Context}!````~Scoped\+Context@{$\sim$\+Scoped\+Context}}
+\index{````~Scoped\+Context@{$\sim$\+Scoped\+Context}!Scoped\+Context@{Scoped\+Context}}
+\subsubsection{\texorpdfstring{$\sim$\+Scoped\+Context()}{~ScopedContext()}}
+{\footnotesize\ttfamily template$<$typename Context$>$ \\
+\mbox{\hyperlink{class_scoped_context}{Scoped\+Context}}$<$ Context $>$\+::$\sim$\mbox{\hyperlink{class_scoped_context}{Scoped\+Context}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 66 of file common.\+h.
+
+
+\begin{DoxyCode}
+67     \{
+68         \mbox{\hyperlink{class_scoped_context_afe2f4971fc3620e98791cc844454956e}{context\_}}->Deactivate();
+69         \mbox{\hyperlink{class_scoped_context_a6aa628deb422cd0304c7b2eb311f8185}{pool\_}}.Push(std::move(\mbox{\hyperlink{class_scoped_context_afe2f4971fc3620e98791cc844454956e}{context\_}}));
+70     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scoped_context_af8a201a083905cf9c02c53d5992e7488}\label{class_scoped_context_af8a201a083905cf9c02c53d5992e7488}} 
+\index{Scoped\+Context@{Scoped\+Context}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Scoped\+Context@{Scoped\+Context}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename Context$>$ \\
+Context$\ast$ \mbox{\hyperlink{class_scoped_context}{Scoped\+Context}}$<$ Context $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 72 of file common.\+h.
+
+
+\begin{DoxyCode}
+73     \{
+74         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_scoped_context_afe2f4971fc3620e98791cc844454956e}{context\_}}.get();
+75     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scoped_context_afe2f4971fc3620e98791cc844454956e}\label{class_scoped_context_afe2f4971fc3620e98791cc844454956e}} 
+\index{Scoped\+Context@{Scoped\+Context}!context\+\_\+@{context\+\_\+}}
+\index{context\+\_\+@{context\+\_\+}!Scoped\+Context@{Scoped\+Context}}
+\subsubsection{\texorpdfstring{context\+\_\+}{context\_}}
+{\footnotesize\ttfamily template$<$typename Context$>$ \\
+std\+::unique\+\_\+ptr$<$Context$>$ \mbox{\hyperlink{class_scoped_context}{Scoped\+Context}}$<$ Context $>$\+::context\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 79 of file common.\+h.
+
+\mbox{\Hypertarget{class_scoped_context_a6aa628deb422cd0304c7b2eb311f8185}\label{class_scoped_context_a6aa628deb422cd0304c7b2eb311f8185}} 
+\index{Scoped\+Context@{Scoped\+Context}!pool\+\_\+@{pool\+\_\+}}
+\index{pool\+\_\+@{pool\+\_\+}!Scoped\+Context@{Scoped\+Context}}
+\subsubsection{\texorpdfstring{pool\+\_\+}{pool\_}}
+{\footnotesize\ttfamily template$<$typename Context$>$ \\
+\mbox{\hyperlink{common_8h_a59ab5d85bff9594312b035d548be298f}{Context\+Pool}}$<$Context$>$\& \mbox{\hyperlink{class_scoped_context}{Scoped\+Context}}$<$ Context $>$\+::pool\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 78 of file common.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\mbox{\hyperlink{common_8h}{common.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="SSD::DetectAsMat" name="SSD::DetectAsMat">
+<area shape="rect" id="node2" href="$class_s_s_d_custom_net_detector.html#a9e87debb1ee3634724914830d6c2079d" title="Making cropped images and fowarding SSD net. " alt="" coords="187,5,349,47"/>
+<area shape="rect" id="node3" href="$class_s_s_d_custom_net_detector.html#abcd14fa695e46fab1eab8ea5524c0ba5" title="Detecting with SSD net. " alt="" coords="397,5,560,47"/>
+</map>

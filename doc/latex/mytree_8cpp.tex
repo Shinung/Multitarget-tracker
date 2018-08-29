@@ -1,0 +1,54 @@
+\hypertarget{mytree_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/mytree.cpp File Reference}
+\label{mytree_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/mytree.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/mytree.\+cpp}}
+{\ttfamily \#include \char`\"{}mytree.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+Include dependency graph for mytree.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mytree_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{mytree_8cpp_afdde9e8d6e926b58c0892332e34a0a4f}{is\+\_\+tree}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{mytree_8cpp_afdde9e8d6e926b58c0892332e34a0a4f}\label{mytree_8cpp_afdde9e8d6e926b58c0892332e34a0a4f}} 
+\index{mytree.\+cpp@{mytree.\+cpp}!is\+\_\+tree@{is\+\_\+tree}}
+\index{is\+\_\+tree@{is\+\_\+tree}!mytree.\+cpp@{mytree.\+cpp}}
+\subsubsection{\texorpdfstring{is\+\_\+tree()}{is\_tree()}}
+{\footnotesize\ttfamily bool is\+\_\+tree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file mytree.\+cpp.
+
+
+\begin{DoxyCode}
+10 \{ 
+11   \mbox{\hyperlink{classnode}{node}} v;
+12   \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}}(v,G)
+13     \textcolor{keywordflow}{if} ( v.\mbox{\hyperlink{classnode_a749bfd1316584b96f8c9b0e44ad512f0}{indeg}} () > 1 ) \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// nonunique parent}
+14   \textcolor{keywordflow}{return} ( G.\mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}() == G.\mbox{\hyperlink{classgraph_aa4fcbe7bf572dc800068873ccfb4d95a}{number\_of\_edges}}() + 1
+15     && G.\mbox{\hyperlink{classgraph_a599e2bf967df8a2052a9892c94db98b7}{is\_connected}}() );
+16 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mytree_8cpp_afdde9e8d6e926b58c0892332e34a0a4f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{mytree_8cpp_afdde9e8d6e926b58c0892332e34a0a4f_icgraph}
+\end{center}
+\end{figure}

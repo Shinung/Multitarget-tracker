@@ -1,0 +1,4 @@
+<map id="GBaseFont::IsBold" name="GBaseFont::IsBold">
+<area shape="rect" id="node2" href="$class_g_postscript_port.html#a85705800844e412facdd5a08be9cf46b" title="GPostscriptPort::SetCurrentFont" alt="" coords="185,5,396,32"/>
+<area shape="rect" id="node3" href="$class_s_v_g_port.html#ac9b98b54d4b9b1e519d2741f5e8be837" title="SVGPort::SetCurrentFont" alt="" coords="205,56,376,83"/>
+</map>

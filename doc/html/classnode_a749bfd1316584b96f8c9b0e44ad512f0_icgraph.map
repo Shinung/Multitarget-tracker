@@ -1,0 +1,20 @@
+<map id="node::indeg" name="node::indeg">
+<area shape="rect" id="node2" href="$classmydfs.html#af8bf3716d6d01426821692c1bca8970c" title="Handler called when touching node n. " alt="" coords="143,5,285,32"/>
+<area shape="rect" id="node3" href="$classmydfs.html#ad5c5cf421b7a3f6d6d6d3b4eba305879" title="Handler called after all the adjacent edges of n have been examined. " alt="" coords="143,56,285,83"/>
+<area shape="rect" id="node4" href="$gml2nestedsql_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="645,432,695,459"/>
+<area shape="rect" id="node5" href="$classmaxflow__ff.html#ad2634e4325012773d793e9cf8f1a3dcf" title="maxflow_ff::create\l_artif_source_target" alt="" coords="146,107,282,149"/>
+<area shape="rect" id="node7" href="$classmaxflow__pp.html#a02438e89291eeccda0b247d20ffa11e5" title="maxflow_pp::create\l_artif_source_target" alt="" coords="146,173,282,214"/>
+<area shape="rect" id="node9" href="$classmaxflow__sap.html#a617016b94a4924fb2574ab87c970d49c" title="maxflow_sap::create\l_artif_source_target" alt="" coords="143,290,285,331"/>
+<area shape="rect" id="node11" href="$classnode.html#a1e5e94e426da180a069cf307616e38e3" title="node::degree" alt="" coords="165,239,263,265"/>
+<area shape="rect" id="node15" href="$mytree_8h.html#afdde9e8d6e926b58c0892332e34a0a4f" title="is_tree" alt="" coords="401,356,463,383"/>
+<area shape="rect" id="node16" href="$class_my_tree.html#a2590ac659aafc07741ee8bb28b457f54" title="MyTree::is_root" alt="" coords="158,508,270,535"/>
+<area shape="rect" id="node19" href="$class_my_tree.html#a6dd1940094f32e411a4107c01a6997fb" title="MyTree::parent" alt="" coords="159,457,269,484"/>
+<area shape="rect" id="node6" href="$classmaxflow__ff.html#a0a4391b9093d6966b47c023a555099e2" title="maxflow_ff::run" alt="" coords="378,87,486,113"/>
+<area shape="rect" id="node8" href="$classmaxflow__pp.html#a07c7cb1ae5db23d87cf49ce7769b2814" title="maxflow_pp::run" alt="" coords="374,137,490,164"/>
+<area shape="rect" id="node10" href="$classmaxflow__sap.html#ab4305a2bb370ad9c43cc68d339b2dda0" title="maxflow_sap::run" alt="" coords="371,305,493,332"/>
+<area shape="rect" id="node12" href="$classbiconnectivity.html#ae94213830755f1f4d477ec6bff0f25b8" title="Called when DFS is started with start&#45;node n. " alt="" coords="367,239,497,281"/>
+<area shape="rect" id="node13" href="$class_my_graph.html#a513bec2f1949a01d517dd57cc9c30233" title="MyGraph::node_cliqueishness" alt="" coords="333,188,531,215"/>
+<area shape="rect" id="node14" href="$class_my_graph.html#a2bb131d5401dc66c01acb976daa7e981" title="MyGraph::cliqueishness" alt="" coords="589,188,751,215"/>
+<area shape="rect" id="node17" href="$class_my_tree.html#a04b0f390bb74c3bdb157cad08872076e" title="MyTree::root" alt="" coords="385,508,479,535"/>
+<area shape="rect" id="node18" href="$class_my_tree.html#ac375615ebccedd180aee25c5ea3f8ef1" title="MyTree::postorder_traversal" alt="" coords="579,508,761,535"/>
+</map>

@@ -1,0 +1,301 @@
+\hypertarget{nms_8h}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/nms.h File Reference}
+\label{nms_8h}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/nms.\+h@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/nms.\+h}}
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+Include dependency graph for nms.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{nms_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{nms_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{nms_8h_a172e28c9d820b35a79650a1337c6f80c}{nms}} (const std\+::vector$<$ cv\+::\+Rect $>$ \&src\+Rects, std\+::vector$<$ cv\+::\+Rect $>$ \&res\+Rects, float thresh, int neighbors=0)
+\begin{DoxyCompactList}\small\item\em nms Non maximum suppression \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{nms_8h_a1b57c38833cf312a46f184cd1844295d}{nms2}} (const std\+::vector$<$ cv\+::\+Rect $>$ \&src\+Rects, const std\+::vector$<$ float $>$ \&scores, std\+::vector$<$ cv\+::\+Rect $>$ \&res\+Rects, float thresh, int neighbors=0, float min\+Scores\+Sum=0.\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}})
+\begin{DoxyCompactList}\small\item\em nms2 Non maximum suppression with detection scores \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename O\+BJ , typename G\+E\+T\+\_\+\+R\+E\+C\+T\+\_\+\+F\+U\+NC , typename G\+E\+T\+\_\+\+S\+C\+O\+R\+E\+\_\+\+F\+U\+NC , typename G\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+U\+NC $>$ }\\void \mbox{\hyperlink{nms_8h_a7866b09c69c420b19a583ba4cf10ae2d}{nms3}} (const std\+::vector$<$ O\+BJ $>$ \&src\+Rects, std\+::vector$<$ O\+BJ $>$ \&res\+Rects, float thresh, G\+E\+T\+\_\+\+R\+E\+C\+T\+\_\+\+F\+U\+NC Get\+Rect, G\+E\+T\+\_\+\+S\+C\+O\+R\+E\+\_\+\+F\+U\+NC Get\+Score, G\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+U\+NC Get\+Type, int neighbors=0, float min\+Scores\+Sum=0.\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}})
+\begin{DoxyCompactList}\small\item\em nms3 Non maximum suppression with detection scores \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{nms_8h_a172e28c9d820b35a79650a1337c6f80c}\label{nms_8h_a172e28c9d820b35a79650a1337c6f80c}} 
+\index{nms.\+h@{nms.\+h}!nms@{nms}}
+\index{nms@{nms}!nms.\+h@{nms.\+h}}
+\subsubsection{\texorpdfstring{nms()}{nms()}}
+{\footnotesize\ttfamily void nms (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Rect $>$ \&}]{src\+Rects,  }\item[{std\+::vector$<$ cv\+::\+Rect $>$ \&}]{res\+Rects,  }\item[{float}]{thresh,  }\item[{int}]{neighbors = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+nms Non maximum suppression 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Rects} & \\
+\hline
+{\em res\+Rects} & \\
+\hline
+{\em thresh} & \\
+\hline
+{\em neighbors} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file nms.\+h.
+
+
+\begin{DoxyCode}
+19 \{
+20     resRects.clear();
+21 
+22     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} size = srcRects.size();
+23     \textcolor{keywordflow}{if} (!size)
+24     \{
+25         \textcolor{keywordflow}{return};
+26     \}
+27 
+28     \textcolor{comment}{// Sort the bounding boxes by the bottom - right y - coordinate of the bounding box}
+29     std::multimap<int, size\_t> idxs;
+30     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i)
+31     \{
+32         idxs.insert(std::pair<int, size\_t>(srcRects[i].br().y, i));
+33     \}
+34 
+35     \textcolor{comment}{// keep looping while some indexes still remain in the indexes list}
+36     \textcolor{keywordflow}{while} (idxs.size() > 0)
+37     \{
+38         \textcolor{comment}{// grab the last rectangle}
+39         \textcolor{keyword}{auto} lastElem = --std::end(idxs);
+40         \textcolor{keyword}{const} cv::Rect& rect1 = srcRects[lastElem->second];
+41 
+42         \textcolor{keywordtype}{int} neigborsCount = 0;
+43 
+44         idxs.erase(lastElem);
+45 
+46         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} pos = std::begin(idxs); pos != std::end(idxs); )
+47         \{
+48             \textcolor{comment}{// grab the current rectangle}
+49             \textcolor{keyword}{const} cv::Rect& rect2 = srcRects[pos->second];
+50 
+51             \textcolor{keywordtype}{float} intArea = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}((rect1 & rect2).area());
+52             \textcolor{keywordtype}{float} unionArea = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(rect1.area() + rect2.area() - intArea);
+53             \textcolor{keywordtype}{float} overlap = intArea / unionArea;
+54 
+55             \textcolor{comment}{// if there is sufficient overlap, suppress the current bounding box}
+56             \textcolor{keywordflow}{if} (overlap > thresh)
+57             \{
+58                 pos = idxs.erase(pos);
+59                 ++neigborsCount;
+60             \}
+61             \textcolor{keywordflow}{else}
+62             \{
+63                 ++pos;
+64             \}
+65         \}
+66         \textcolor{keywordflow}{if} (neigborsCount >= neighbors)
+67         \{
+68             resRects.push\_back(rect1);
+69         \}
+70     \}
+71 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{nms_8h_a172e28c9d820b35a79650a1337c6f80c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{nms_8h_a1b57c38833cf312a46f184cd1844295d}\label{nms_8h_a1b57c38833cf312a46f184cd1844295d}} 
+\index{nms.\+h@{nms.\+h}!nms2@{nms2}}
+\index{nms2@{nms2}!nms.\+h@{nms.\+h}}
+\subsubsection{\texorpdfstring{nms2()}{nms2()}}
+{\footnotesize\ttfamily void nms2 (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ cv\+::\+Rect $>$ \&}]{src\+Rects,  }\item[{const std\+::vector$<$ float $>$ \&}]{scores,  }\item[{std\+::vector$<$ cv\+::\+Rect $>$ \&}]{res\+Rects,  }\item[{float}]{thresh,  }\item[{int}]{neighbors = {\ttfamily 0},  }\item[{float}]{min\+Scores\+Sum = {\ttfamily 0.\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+nms2 Non maximum suppression with detection scores 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Rects} & \\
+\hline
+{\em scores} & \\
+\hline
+{\em res\+Rects} & \\
+\hline
+{\em thresh} & \\
+\hline
+{\em neighbors} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 82 of file nms.\+h.
+
+
+\begin{DoxyCode}
+90 \{
+91     resRects.clear();
+92 
+93     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} size = srcRects.size();
+94     \textcolor{keywordflow}{if} (!size)
+95     \{
+96         \textcolor{keywordflow}{return};
+97     \}
+98 
+99     assert(srcRects.size() == scores.size());
+100 
+101     \textcolor{comment}{// Sort the bounding boxes by the detection score}
+102     std::multimap<float, size\_t> idxs;
+103     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i)
+104     \{
+105         idxs.insert(std::pair<float, size\_t>(scores[i], i));
+106     \}
+107 
+108     \textcolor{comment}{// keep looping while some indexes still remain in the indexes list}
+109     \textcolor{keywordflow}{while} (idxs.size() > 0)
+110     \{
+111         \textcolor{comment}{// grab the last rectangle}
+112         \textcolor{keyword}{auto} lastElem = --std::end(idxs);
+113         \textcolor{keyword}{const} cv::Rect& rect1 = srcRects[lastElem->second];
+114 
+115         \textcolor{keywordtype}{int} neigborsCount = 0;
+116         \textcolor{keywordtype}{float} scoresSum = lastElem->first;
+117 
+118         idxs.erase(lastElem);
+119 
+120         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} pos = std::begin(idxs); pos != std::end(idxs); )
+121         \{
+122             \textcolor{comment}{// grab the current rectangle}
+123             \textcolor{keyword}{const} cv::Rect& rect2 = srcRects[pos->second];
+124 
+125             \textcolor{keywordtype}{float} intArea = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}((rect1 & rect2).area());
+126             \textcolor{keywordtype}{float} unionArea = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(rect1.area() + rect2.area() - intArea);
+127             \textcolor{keywordtype}{float} overlap = intArea / unionArea;
+128 
+129             \textcolor{comment}{// if there is sufficient overlap, suppress the current bounding box}
+130             \textcolor{keywordflow}{if} (overlap > thresh)
+131             \{
+132                 scoresSum += pos->first;
+133                 pos = idxs.erase(pos);
+134                 ++neigborsCount;
+135             \}
+136             \textcolor{keywordflow}{else}
+137             \{
+138                 ++pos;
+139             \}
+140         \}
+141         \textcolor{keywordflow}{if} (neigborsCount >= neighbors &&
+142                 scoresSum >= minScoresSum)
+143         \{
+144             resRects.push\_back(rect1);
+145         \}
+146     \}
+147 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{nms_8h_a7866b09c69c420b19a583ba4cf10ae2d}\label{nms_8h_a7866b09c69c420b19a583ba4cf10ae2d}} 
+\index{nms.\+h@{nms.\+h}!nms3@{nms3}}
+\index{nms3@{nms3}!nms.\+h@{nms.\+h}}
+\subsubsection{\texorpdfstring{nms3()}{nms3()}}
+{\footnotesize\ttfamily template$<$typename O\+BJ , typename G\+E\+T\+\_\+\+R\+E\+C\+T\+\_\+\+F\+U\+NC , typename G\+E\+T\+\_\+\+S\+C\+O\+R\+E\+\_\+\+F\+U\+NC , typename G\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+U\+NC $>$ \\
+void nms3 (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ O\+BJ $>$ \&}]{src\+Rects,  }\item[{std\+::vector$<$ O\+BJ $>$ \&}]{res\+Rects,  }\item[{float}]{thresh,  }\item[{G\+E\+T\+\_\+\+R\+E\+C\+T\+\_\+\+F\+U\+NC}]{Get\+Rect,  }\item[{G\+E\+T\+\_\+\+S\+C\+O\+R\+E\+\_\+\+F\+U\+NC}]{Get\+Score,  }\item[{G\+E\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+U\+NC}]{Get\+Type,  }\item[{int}]{neighbors = {\ttfamily 0},  }\item[{float}]{min\+Scores\+Sum = {\ttfamily 0.\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+nms3 Non maximum suppression with detection scores 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src\+Rects} & \\
+\hline
+{\em res\+Rects} & \\
+\hline
+{\em thresh} & \\
+\hline
+{\em neighbors} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 159 of file nms.\+h.
+
+
+\begin{DoxyCode}
+169 \{
+170     resRects.clear();
+171 
+172     \textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} size = srcRects.size();
+173     \textcolor{keywordflow}{if} (!size)
+174     \{
+175         \textcolor{keywordflow}{return};
+176     \}
+177 
+178     \textcolor{comment}{// Sort the bounding boxes by the detection score}
+179     std::multimap<float, size\_t> idxs;
+180     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < size; ++i)
+181     \{
+182         idxs.insert(std::pair<float, size\_t>(GetScore(srcRects[i]), i));
+183     \}
+184 
+185     \textcolor{comment}{// keep looping while some indexes still remain in the indexes list}
+186     \textcolor{keywordflow}{while} (idxs.size() > 0)
+187     \{
+188         \textcolor{comment}{// grab the last rectangle}
+189         \textcolor{keyword}{auto} lastElem = --std::end(idxs);
+190         \textcolor{keywordtype}{size\_t} lastPos = lastElem->second;
+191         \textcolor{keyword}{const} cv::Rect& rect1 = GetRect(srcRects[lastPos]);
+192         \textcolor{keyword}{auto} type1 = GetType(srcRects[lastPos]);
+193 
+194         \textcolor{keywordtype}{int} neigborsCount = 0;
+195         \textcolor{keywordtype}{float} scoresSum = lastElem->first;
+196 
+197         idxs.erase(lastElem);
+198 
+199         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} pos = std::begin(idxs); pos != std::end(idxs); )
+200         \{
+201             \textcolor{comment}{// grab the current rectangle}
+202             \textcolor{keyword}{auto} type2 = GetType(srcRects[pos->second]);
+203             \textcolor{keywordflow}{if} (type1 == type2)
+204             \{
+205                 \textcolor{keyword}{const} cv::Rect& rect2 = GetRect(srcRects[pos->second]);
+206 
+207                 \textcolor{keywordtype}{float} intArea = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}((rect1 & rect2).area());
+208                 \textcolor{keywordtype}{float} unionArea = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(rect1.area() + rect2.area() - intArea);
+209                 \textcolor{keywordtype}{float} overlap = intArea / unionArea;
+210 
+211                 \textcolor{comment}{// if there is sufficient overlap, suppress the current bounding box}
+212                 \textcolor{keywordflow}{if} (overlap > thresh)
+213                 \{
+214                     scoresSum += pos->first;
+215                     pos = idxs.erase(pos);
+216                     ++neigborsCount;
+217                 \}
+218                 \textcolor{keywordflow}{else}
+219                 \{
+220                     ++pos;
+221                 \}
+222             \}
+223             \textcolor{keywordflow}{else}
+224             \{
+225                 ++pos;
+226             \}
+227         \}
+228         \textcolor{keywordflow}{if} (neigborsCount >= neighbors &&
+229                 scoresSum >= minScoresSum)
+230         \{
+231             resRects.push\_back(srcRects[lastPos]);
+232         \}
+233     \}
+234 \}
+\end{DoxyCode}

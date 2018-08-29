@@ -1,0 +1,201 @@
+\hypertarget{script_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/script.cpp File Reference}
+\label{script_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/script.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/script.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$G\+T\+L/\+G\+T\+L.\+h$>$}\newline
+{\ttfamily \#include $<$G\+T\+L/dfs.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}mygraph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tokenise.\+h\char`\"{}}\newline
+Include dependency graph for script.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{script_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{script_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{script_8cpp_ac0f2228420376f4db7e1274f2b41667c}\label{script_8cpp_ac0f2228420376f4db7e1274f2b41667c}} 
+\index{script.\+cpp@{script.\+cpp}!main@{main}}
+\index{main@{main}!script.\+cpp@{script.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file script.\+cpp.
+
+
+\begin{DoxyCode}
+21 \{
+22     \textcolor{keywordflow}{if} (argc < 2)
+23     \{
+24         cout << \textcolor{stringliteral}{"Usage: script <file-name>"} << endl;
+25         exit(1);
+26     \}
+27     \textcolor{keywordtype}{char} filename[256];
+28     strcpy (filename, argv[1]);
+29 
+30     \textcolor{comment}{// ---------------------------------------------------------    }
+31     \textcolor{comment}{// Read graph   }
+32 
+33     \mbox{\hyperlink{class_my_graph}{MyGraph}} G;
+34     
+35     \mbox{\hyperlink{struct_g_m_l__error}{GML\_error}} err  = G.\mbox{\hyperlink{classgraph_ac28cb3468623a480709d3329033d4ec8}{load}} (filename);
+36     \textcolor{keywordflow}{if} (err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}} != \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}{GML\_OK}})
+37     \{
+38         cerr << \textcolor{stringliteral}{"Error ("} << err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}} << \textcolor{stringliteral}{") loading graph from file \(\backslash\)""} << filename << \textcolor{stringliteral}{"\(\backslash\)""};
+39         \textcolor{keywordflow}{switch} (err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}})
+40         \{
+41             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca6e236398ad4be2c96f938e0f2329c7ca}{GML\_FILE\_NOT\_FOUND}}: cerr << \textcolor{stringliteral}{"A file with that name doesn't exist."}; \textcolor{keywordflow}{
+      break};
+42             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca83553a234a3a319eb4db0ec4b3aef05d}{GML\_TOO\_MANY\_BRACKETS}}: cerr << \textcolor{stringliteral}{"A mismatch of brackets was detected,
+       i.e. there were too many closing brackets (])."}; \textcolor{keywordflow}{break};
+43             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790caa03c5ab19de88ed1a1a2d85edf075164}{GML\_OPEN\_BRACKET}}: cerr << \textcolor{stringliteral}{"Now, there were too many opening brackets ([)"};
+        \textcolor{keywordflow}{break};
+44             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca221df19cbc1f2fea1a52cb139a359e0c}{GML\_TOO\_MANY\_DIGITS}}: cerr << \textcolor{stringliteral}{"The number of digits a integer or
+       floating point value can have is limited to 1024, this should be enough :-)"};  \textcolor{keywordflow}{break};
+45             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3af6ee9ba1b3704ced7c81a576c3eae8}{GML\_PREMATURE\_EOF}}: cerr << \textcolor{stringliteral}{"An EOF occured, where it wasn't expected,
+       e.g. while scanning a string."}; \textcolor{keywordflow}{break};
+46             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3fbf275b928b652ece2645e90bb5557f}{GML\_SYNTAX}}: cerr << \textcolor{stringliteral}{"The file isn't a valid GML file, e.g. a mismatch in the
+       key-value pairs."}; \textcolor{keywordflow}{break};
+47             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}{GML\_UNEXPECTED}}: cerr << \textcolor{stringliteral}{"A character occured, where it makes no sense, e.g.
+       non-numerical characters"}; \textcolor{keywordflow}{break};
+48             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}{GML\_OK}}: \textcolor{keywordflow}{break};
+49         \}
+50         cerr << endl;
+51         exit(1);
+52     \}
+53     \textcolor{keywordflow}{else}
+54     \{
+55         cout << \textcolor{stringliteral}{"Graph read from file \(\backslash\)""} << filename << \textcolor{stringliteral}{"\(\backslash\)" has "} << G.
+      \mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}() << \textcolor{stringliteral}{" nodes and "} << G.\mbox{\hyperlink{classgraph_aa4fcbe7bf572dc800068873ccfb4d95a}{number\_of\_edges}}() << \textcolor{stringliteral}{" edges"} << endl
+      ;
+56     \}
+57     
+58     
+59     \textcolor{comment}{// Output starting graph}
+60     G.\mbox{\hyperlink{class_my_graph_acf68ca166eebb43a80b722c6ef15d22c}{save\_dot}} (\textcolor{stringliteral}{"start.dot"});
+61 
+62 
+63     \textcolor{comment}{// 1. Get map between labels and nodes}
+64     std::map < std::string, GTL::node, std::less<std::string> > l; 
+65     \mbox{\hyperlink{classnode}{node}} n;
+66     \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}} (n, G)
+67     \{
+68         l[G.\mbox{\hyperlink{class_my_graph_ab92ebd7632157e681a6a7d7873841de7}{get\_node\_label}}(n)] = n;
+69     \}
+70     
+71     \textcolor{comment}{// Read edit script}
+72     \{
+73         ifstream \mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}} (\textcolor{stringliteral}{"script.txt"});
+74         \textcolor{keywordtype}{char} buf[512];
+75         
+76         \textcolor{keywordflow}{while} (\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}.good())
+77         \{
+78             \mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}.getline (buf, \textcolor{keyword}{sizeof}(buf));
+79             
+80             \textcolor{keywordflow}{if} (\mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}.good())
+81             \{
+82                 
+83                 \textcolor{comment}{// Break line into tokens}
+84                 std::vector<std::string> tokens;
+85                 std::string s = buf;
+86                 std::string delimiters = \textcolor{stringliteral}{"|"};
+87                 \mbox{\hyperlink{gml2nestedsql_8cpp_a46ae30dbab3aaee50a0820226d9e45b0}{Tokenise}} (s, delimiters, tokens);
+88                 
+89                 \textcolor{keywordflow}{if} (tokens[0] == \textcolor{stringliteral}{"delete"})
+90                 \{
+91                     \textcolor{keywordflow}{if} (tokens[1] == \textcolor{stringliteral}{"node"})
+92                     \{
+93                         \textcolor{keywordtype}{string} name = tokens[2];
+94                         \textcolor{keywordflow}{if} (l.find(name) == l.end())
+95                         \{
+96                             cout << \textcolor{stringliteral}{"Node labelled \(\backslash\)""} << name << \textcolor{stringliteral}{"\(\backslash\)" not found"} << endl;
+97                             exit(1);
+98                         \}
+99                         \textcolor{keywordflow}{else}
+100                         \{
+101                             cout << \textcolor{stringliteral}{"Node \(\backslash\)""} << name << \textcolor{stringliteral}{"\(\backslash\)" deleted"} << endl;
+102                             G.\mbox{\hyperlink{classgraph_a8bdc09d5b9ac4bd26586b054d8fcbe91}{del\_node}}(l[name]);
+103                             l.erase(name);
+104                         \}
+105                     \}
+106                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tokens[1] == \textcolor{stringliteral}{"branch"})
+107                     \{
+108                         \textcolor{keywordtype}{string} source = tokens[2];
+109                         \textcolor{keywordtype}{string} target = tokens[3];
+110                         \textcolor{keywordflow}{if} (l.find(source) == l.end())
+111                         \{
+112                             cout << \textcolor{stringliteral}{"Node labelled \(\backslash\)""} << source << \textcolor{stringliteral}{"\(\backslash\)" not found"} << endl;
+113                             exit(1);
+114                         \}
+115                         \textcolor{keywordflow}{if} (l.find(target) == l.end())
+116                         \{
+117                             cout << \textcolor{stringliteral}{"Node labelled \(\backslash\)""} << target << \textcolor{stringliteral}{"\(\backslash\)" not found"} << endl;
+118                             exit(1);
+119                         \}
+120                         cout << \textcolor{stringliteral}{"Edge \(\backslash\)""} << source << \textcolor{stringliteral}{"\(\backslash\)"-->\(\backslash\)""} << target << \textcolor{stringliteral}{"\(\backslash\)" deleted"} << endl;
+121                         G.\mbox{\hyperlink{class_my_graph_a4070383c56ef8f54e9fdc595d65b89de}{delete\_edge}}(l[source], l[target]);
+122                     \}
+123                 \}
+124                 \textcolor{keywordflow}{if} (tokens[0] == \textcolor{stringliteral}{"insert"})
+125                 \{
+126                     \textcolor{keywordflow}{if} (tokens[1] == \textcolor{stringliteral}{"node"})
+127                     \{
+128                         \textcolor{keywordtype}{string} name = tokens[2];
+129                         \mbox{\hyperlink{classnode}{node}} n = G.\mbox{\hyperlink{classgraph_ab9505335c20558319b6cce25aed23524}{new\_node}}();
+130                         G.\mbox{\hyperlink{class_my_graph_ac70ce0dc28c8589443e45ef89acd00ca}{set\_node\_label}} (n, name);
+131                         G.\mbox{\hyperlink{class_my_graph_a4cada42859b2a657637e81eef7c6e4ab}{set\_node\_colour}} (n, \textcolor{stringliteral}{"green"});
+132                         l[name] = n;
+133                         cout << \textcolor{stringliteral}{"Node \(\backslash\)""} << name << \textcolor{stringliteral}{"\(\backslash\)" inserted"} << endl;
+134                     \}
+135                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tokens[1] == \textcolor{stringliteral}{"branch"})
+136                     \{
+137                         \textcolor{keywordtype}{string} source = tokens[2];
+138                         \textcolor{keywordtype}{string} target = tokens[3];
+139                         \textcolor{keywordflow}{if} (l.find(source) == l.end())
+140                         \{
+141                             cout << \textcolor{stringliteral}{"Node labelled \(\backslash\)""} << source << \textcolor{stringliteral}{"\(\backslash\)" not found"} << endl;
+142                             exit(1);
+143                         \}
+144                         \textcolor{keywordflow}{if} (l.find(target) == l.end())
+145                         \{
+146                             cout << \textcolor{stringliteral}{"Node labelled \(\backslash\)""} << target << \textcolor{stringliteral}{"\(\backslash\)" not found"} << endl;
+147                             exit(1);
+148                         \}
+149                         
+150                         \mbox{\hyperlink{classedge}{edge}} e = G.\mbox{\hyperlink{classgraph_a02a0c3a219f75d68caa408ef339d4a1c}{new\_edge}} (l[source], l[target]);
+151                         G.\mbox{\hyperlink{class_my_graph_a865b0e9fd7f74cd40f23230733746a93}{set\_edge\_colour}} (e, \textcolor{stringliteral}{"green"});
+152                         
+153                         cout << \textcolor{stringliteral}{"Edge \(\backslash\)""} << source << \textcolor{stringliteral}{"\(\backslash\)"-->\(\backslash\)""} << target << \textcolor{stringliteral}{"\(\backslash\)" added"} << endl;
+154                     \}
+155                 \}
+156 
+157             \}           
+158 
+159         \}
+160         \mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}}.close();
+161     \}
+162 
+163     G.\mbox{\hyperlink{class_my_graph_acf68ca166eebb43a80b722c6ef15d22c}{save\_dot}} (\textcolor{stringliteral}{"end.dot"});
+164 
+165 
+166     
+167    \textcolor{keywordflow}{return} 0;
+168 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{script_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph}
+\end{center}
+\end{figure}

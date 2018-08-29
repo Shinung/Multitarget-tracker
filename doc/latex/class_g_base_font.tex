@@ -1,0 +1,249 @@
+\hypertarget{class_g_base_font}{}\section{G\+Base\+Font Class Reference}
+\label{class_g_base_font}\index{G\+Base\+Font@{G\+Base\+Font}}
+
+
+{\ttfamily \#include $<$gport.\+h$>$}
+
+
+
+Collaboration diagram for G\+Base\+Font\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{class_g_base_font__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_base_font_ae2afea9a892bb4d271f5fadb4566336b}{G\+Base\+Font}} ()
+\item 
+virtual \mbox{\hyperlink{class_g_base_font_a3517ce7aeadbbe9d77cab6e4a5aebe61}{$\sim$\+G\+Base\+Font}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_g_base_font_a202a60eadc6436354527de8ccd4a983d}{Get\+Name}} ()
+\item 
+virtual std\+::string \mbox{\hyperlink{class_g_base_font_a223b6eee3ba7e714d5dbb763ee4e3f9a}{Get\+Description}} ()
+\item 
+virtual int \mbox{\hyperlink{class_g_base_font_a62e761a8a0c0f60f01d8a0d451640e69}{Get\+Size}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_g_base_font_a22abd1f8dfcda6124ffedb8dc26bfcd3}{Is\+Bold}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_g_base_font_aec31b5754f2be8ae2552b2bfd37a76d1}{Is\+Italic}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_g_base_font_a81dc0a7c8b42df0a39e49cc304da7d06}{description}}
+\item 
+std\+::string \mbox{\hyperlink{class_g_base_font_a09217b162b03d74c2ea2e65bec537c5b}{name}}
+\item 
+int \mbox{\hyperlink{class_g_base_font_a3665d1d315cccd1d1487eed589a8da0f}{size}}
+\item 
+bool \mbox{\hyperlink{class_g_base_font_a710baf8db958e41f964cb8af600df4c7}{bold}}
+\item 
+bool \mbox{\hyperlink{class_g_base_font_aeff487abd13b9a9110b18a89ad51975e}{italic}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 109 of file gport.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_base_font_ae2afea9a892bb4d271f5fadb4566336b}\label{class_g_base_font_ae2afea9a892bb4d271f5fadb4566336b}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!G\+Base\+Font@{G\+Base\+Font}}
+\index{G\+Base\+Font@{G\+Base\+Font}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{G\+Base\+Font()}{GBaseFont()}}
+{\footnotesize\ttfamily G\+Base\+Font\+::\+G\+Base\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file gport.\+cpp.
+
+
+\begin{DoxyCode}
+19 \{
+20     \mbox{\hyperlink{class_g_base_font_a81dc0a7c8b42df0a39e49cc304da7d06}{description}} = \textcolor{stringliteral}{"Times-Roman"};
+21     \mbox{\hyperlink{class_g_base_font_a09217b162b03d74c2ea2e65bec537c5b}{name}} = \textcolor{stringliteral}{"Times-Roman"};
+22     \mbox{\hyperlink{class_g_base_font_a3665d1d315cccd1d1487eed589a8da0f}{size}} = 10;
+23     \mbox{\hyperlink{class_g_base_font_a710baf8db958e41f964cb8af600df4c7}{bold}} = \textcolor{keyword}{false};
+24     \mbox{\hyperlink{class_g_base_font_aeff487abd13b9a9110b18a89ad51975e}{italic}} = \textcolor{keyword}{true};
+25 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_base_font_a3517ce7aeadbbe9d77cab6e4a5aebe61}\label{class_g_base_font_a3517ce7aeadbbe9d77cab6e4a5aebe61}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!````~G\+Base\+Font@{$\sim$\+G\+Base\+Font}}
+\index{````~G\+Base\+Font@{$\sim$\+G\+Base\+Font}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{$\sim$\+G\+Base\+Font()}{~GBaseFont()}}
+{\footnotesize\ttfamily virtual G\+Base\+Font\+::$\sim$\+G\+Base\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 113 of file gport.\+h.
+
+
+\begin{DoxyCode}
+113 \{\};
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_base_font_a223b6eee3ba7e714d5dbb763ee4e3f9a}\label{class_g_base_font_a223b6eee3ba7e714d5dbb763ee4e3f9a}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!Get\+Description@{Get\+Description}}
+\index{Get\+Description@{Get\+Description}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{Get\+Description()}{GetDescription()}}
+{\footnotesize\ttfamily virtual std\+::string G\+Base\+Font\+::\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 115 of file gport.\+h.
+
+
+\begin{DoxyCode}
+115 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_base_font_a81dc0a7c8b42df0a39e49cc304da7d06}{description}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_base_font_a202a60eadc6436354527de8ccd4a983d}\label{class_g_base_font_a202a60eadc6436354527de8ccd4a983d}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily virtual std\+::string G\+Base\+Font\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 114 of file gport.\+h.
+
+
+\begin{DoxyCode}
+114 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_base_font_a81dc0a7c8b42df0a39e49cc304da7d06}{description}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_base_font_a202a60eadc6436354527de8ccd4a983d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_base_font_a62e761a8a0c0f60f01d8a0d451640e69}\label{class_g_base_font_a62e761a8a0c0f60f01d8a0d451640e69}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily virtual int G\+Base\+Font\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 116 of file gport.\+h.
+
+
+\begin{DoxyCode}
+116 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_base_font_a3665d1d315cccd1d1487eed589a8da0f}{size}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_base_font_a62e761a8a0c0f60f01d8a0d451640e69_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_base_font_a22abd1f8dfcda6124ffedb8dc26bfcd3}\label{class_g_base_font_a22abd1f8dfcda6124ffedb8dc26bfcd3}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!Is\+Bold@{Is\+Bold}}
+\index{Is\+Bold@{Is\+Bold}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{Is\+Bold()}{IsBold()}}
+{\footnotesize\ttfamily virtual bool G\+Base\+Font\+::\+Is\+Bold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 117 of file gport.\+h.
+
+
+\begin{DoxyCode}
+117 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_base_font_a710baf8db958e41f964cb8af600df4c7}{bold}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_base_font_a22abd1f8dfcda6124ffedb8dc26bfcd3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_base_font_aec31b5754f2be8ae2552b2bfd37a76d1}\label{class_g_base_font_aec31b5754f2be8ae2552b2bfd37a76d1}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!Is\+Italic@{Is\+Italic}}
+\index{Is\+Italic@{Is\+Italic}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{Is\+Italic()}{IsItalic()}}
+{\footnotesize\ttfamily virtual bool G\+Base\+Font\+::\+Is\+Italic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 118 of file gport.\+h.
+
+
+\begin{DoxyCode}
+118 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_base_font_aeff487abd13b9a9110b18a89ad51975e}{italic}}; \};    
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_base_font_aec31b5754f2be8ae2552b2bfd37a76d1_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_base_font_a710baf8db958e41f964cb8af600df4c7}\label{class_g_base_font_a710baf8db958e41f964cb8af600df4c7}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!bold@{bold}}
+\index{bold@{bold}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{bold}{bold}}
+{\footnotesize\ttfamily bool G\+Base\+Font\+::bold\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 123 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_base_font_a81dc0a7c8b42df0a39e49cc304da7d06}\label{class_g_base_font_a81dc0a7c8b42df0a39e49cc304da7d06}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!description@{description}}
+\index{description@{description}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{description}{description}}
+{\footnotesize\ttfamily std\+::string G\+Base\+Font\+::description\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 118 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_base_font_aeff487abd13b9a9110b18a89ad51975e}\label{class_g_base_font_aeff487abd13b9a9110b18a89ad51975e}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!italic@{italic}}
+\index{italic@{italic}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{italic}{italic}}
+{\footnotesize\ttfamily bool G\+Base\+Font\+::italic\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 124 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_base_font_a09217b162b03d74c2ea2e65bec537c5b}\label{class_g_base_font_a09217b162b03d74c2ea2e65bec537c5b}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!name@{name}}
+\index{name@{name}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string G\+Base\+Font\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 121 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_base_font_a3665d1d315cccd1d1487eed589a8da0f}\label{class_g_base_font_a3665d1d315cccd1d1487eed589a8da0f}} 
+\index{G\+Base\+Font@{G\+Base\+Font}!size@{size}}
+\index{size@{size}!G\+Base\+Font@{G\+Base\+Font}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int G\+Base\+Font\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 122 of file gport.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\mbox{\hyperlink{gport_8h}{gport.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\mbox{\hyperlink{gport_8cpp}{gport.\+cpp}}\end{DoxyCompactItemize}

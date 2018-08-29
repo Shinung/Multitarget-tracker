@@ -1,0 +1,5 @@
+<map id="IntImage::Resize" name="IntImage::Resize">
+<area shape="rect" id="node2" href="$class_detection_scanner.html#a01790349ec7aef4ff03335d5e76f183a" title="DetectionScanner::Resize\lImage" alt="" coords="172,5,345,47"/>
+<area shape="rect" id="node3" href="$class_detection_scanner.html#aa27d494b253975922d853070aab7ce4d" title="DetectionScanner::FastScan" alt="" coords="393,13,583,39"/>
+<area shape="rect" id="node4" href="$class_pedestrian_detector.html#a27a7c2c3b358f6e44a7de71f808597c2" title="PedestrianDetector::Detect. " alt="" coords="631,5,764,47"/>
+</map>

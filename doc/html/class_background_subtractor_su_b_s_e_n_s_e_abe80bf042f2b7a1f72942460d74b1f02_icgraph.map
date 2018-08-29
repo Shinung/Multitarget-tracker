@@ -1,0 +1,4 @@
+<map id="BackgroundSubtractorSuBSENSE::refreshModel" name="BackgroundSubtractorSuBSENSE::refreshModel">
+<area shape="rect" id="node2" href="$class_background_subtractor_su_b_s_e_n_s_e.html#ac84aa66030b04a72435ef473cf0e6a3f" title="(re)initiaization method; needs to be called before starting background subtraction ..." alt="" coords="275,5,496,47"/>
+<area shape="rect" id="node3" href="$class_background_subtractor_su_b_s_e_n_s_e.html#aaa60e2883c2b2cf130820b10104a653b" title="primary model update function; the learning param is used to override the internal learning threshold..." alt="" coords="275,71,496,112"/>
+</map>

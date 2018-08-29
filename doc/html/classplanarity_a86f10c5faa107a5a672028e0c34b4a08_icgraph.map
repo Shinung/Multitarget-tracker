@@ -1,0 +1,11 @@
+<map id="planarity::up_until_marked" name="planarity::up_until_marked">
+<area shape="rect" id="node2" href="$classplanarity.html#a6eda46f0aedd2fe3503b0b2829863d50" title="planarity::case_A" alt="" coords="372,40,495,67"/>
+<area shape="rect" id="node6" href="$classplanarity.html#a63bfa8c2a4ab5454b71b1e522c2ff41d" title="planarity::case_B" alt="" coords="372,99,495,126"/>
+<area shape="rect" id="node7" href="$classplanarity.html#a74f765d62afabf54c43c42f3c127c9d9" title="planarity::case_C" alt="" coords="372,150,495,176"/>
+<area shape="rect" id="node8" href="$classplanarity.html#a0218e3db9d0ff3a27a03a992c22d0562" title="planarity::case_D" alt="" coords="189,200,312,227"/>
+<area shape="rect" id="node9" href="$classplanarity.html#a0cf0ff94965eb40f5be5c07999e7e1bd" title="planarity::case_E" alt="" coords="189,251,312,278"/>
+<area shape="rect" id="node10" href="$classplanarity.html#a158282cba0f0ce0abeb4dfdacd358a38" title="planarity::run_through\l_partial" alt="" coords="177,33,324,74"/>
+<area shape="rect" id="node3" href="$classplanarity.html#ab43c7267ba8b0895b8ef71b66c7863a0" title="planarity::examine\l_obstruction" alt="" coords="543,142,671,184"/>
+<area shape="rect" id="node4" href="$classplanarity.html#a0a1949c82648889d188b2e748bc461da" title="planarity::run_on_biconnected" alt="" coords="719,150,913,176"/>
+<area shape="rect" id="node5" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="961,150,1059,176"/>
+</map>

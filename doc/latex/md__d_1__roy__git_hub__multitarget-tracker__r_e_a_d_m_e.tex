@@ -1,0 +1,116 @@
+
+
+\section*{Multitarget-\/tracker}
+
+Hungarian algorithm + Kalman filter multitarget tracker implementation.
+
+\paragraph*{Demo Videos}
+
+
+\begin{DoxyItemize}
+\item Mobile\+Net \mbox{\hyperlink{class_s_s_d}{S\+SD}} and tracking for low resolution and low quality videos from car D\+VR\+:
+\end{DoxyItemize}
+
+\href{https://youtu.be/Qssz6tVGoOc}{\tt }
+
+
+\begin{DoxyItemize}
+\item Mouse tracking\+:
+\end{DoxyItemize}
+
+\href{https://www.youtube.com/watch?v=2fW5TmAtAXM}{\tt }
+
+
+\begin{DoxyItemize}
+\item Motion Detection and tracking\+:
+\end{DoxyItemize}
+
+\href{https://www.youtube.com/watch?v=GjN8jOy4kVw}{\tt }
+
+
+\begin{DoxyItemize}
+\item Multiple Faces tracking\+:
+\end{DoxyItemize}
+
+\href{https://www.youtube.com/watch?v=j67CFwFtciU}{\tt }
+
+
+\begin{DoxyItemize}
+\item Simple Abandoned detector\+:
+\end{DoxyItemize}
+
+\href{https://www.youtube.com/watch?v=fpkHRsFzspA}{\tt }
+
+\paragraph*{Parameters}
+
+
+\begin{DoxyEnumerate}
+\item Background substraction\+: built-\/in Vibe, Su\+B\+S\+E\+N\+SE and L\+O\+B\+S\+T\+ER; M\+O\+G2 from opencv; M\+OG, G\+MG and C\+NT from opencv\+\_\+contrib
+\item Foreground segmentation\+: contours
+\item Matching\+: Hungrian algorithm or algorithm based on weighted bipartite graphs
+\item Tracking\+: Linear or Unscented Kalman filter for objects center or for object coordinates and size
+\item Use or not local tracker (LK optical flow) for smooth trajectories
+\item K\+CF, M\+IL, Median\+Flow, G\+O\+T\+U\+RN or M\+O\+S\+SE tracking for lost objects and collision resolving
+\item Haar face detector from Open\+CV
+\item H\+OG and C4 pedestrian detectors
+\item \mbox{\hyperlink{class_s_s_d}{S\+SD}} detector from Open\+CV and models from chuanqi305/\+Mobile\+Net-\/\+S\+SD
+\item Y\+O\+LO and Tiny Y\+O\+LO detectors from \href{https://pjreddie.com/darknet/yolo/}{\tt https\+://pjreddie.\+com/darknet/yolo/}
+\item Simple Abandoned detector
+\end{DoxyEnumerate}
+
+\paragraph*{Build}
+
+
+\begin{DoxyEnumerate}
+\item Download project sources
+\item Install C\+Make
+\item Install Open\+CV (\href{https://github.com/opencv/opencv}{\tt https\+://github.\+com/opencv/opencv}) and Open\+CV contrib (\href{https://github.com/opencv/opencv_contrib}{\tt https\+://github.\+com/opencv/opencv\+\_\+contrib}) repositories
+\item Configure project Cmake\+Lists.\+txt, set Open\+C\+V\+\_\+\+D\+IR. If opencv\+\_\+contrib don\textquotesingle{}t installed then set disable options U\+S\+E\+\_\+\+O\+C\+V\+\_\+\+B\+G\+FG, U\+S\+E\+\_\+\+O\+C\+V\+\_\+\+K\+CF and U\+S\+E\+\_\+\+O\+C\+V\+\_\+\+U\+KF
+\item Go to the build directory and run make
+\end{DoxyEnumerate}
+
+{\bfseries Usage\+:} \begin{DoxyVerb}       Usage:
+         ./MultitargetTracker <path to movie file> [--example]=<number of example 0..3> [--start_frame]=<start a video from this position> [--end_frame]=<play a video to this position> [--end_delay]=<delay in milliseconds after video ending> [--out]=<name of result video file> [--show_logs]=<show logs> [--gpu]=<use OpenCL>
+         ./MultitargetTracker ../data/atrium.avi -e=1 -o=../data/atrium_motion.avi
+       Press:
+       * 'm' key for change mode: play|pause. When video is paused you can press any key for get next frame.
+       * Press Esc to exit from video
+
+       Params: 
+       1. Movie file, for example ../data/atrium.avi
+       2. [Optional] Number of example: 0 - MouseTracking, 1 - MotionDetector, 2 - FaceDetector, 3 - PedestrianDetector, 4 - MobileNet SSD detector, 5 - YOLO detector
+          -e=0 or --example=1
+       3. [Optional] Frame number to start a video from this position
+          -sf=0 or --start_frame==1500
+       4. [Optional] Play a video to this position (if 0 then played to the end of file)
+          -ef=0 or --end_frame==200
+       5. [Optional] Delay in milliseconds after video ending
+          -ed=0 or --end_delay=1000
+       6. [Optional] Name of result video file
+          -o=out.avi or --out=result.mp4
+       7. [Optional] Show Trackers logs in terminal
+          -sl=1 or --show_logs=0
+       8. [Optional] Use built-in OpenCL
+          -g=1 or --gpu=0
+\end{DoxyVerb}
+
+
+\paragraph*{Thirdparty libraries}
+
+
+\begin{DoxyItemize}
+\item Open\+CV (and contrib)\+: \href{https://github.com/opencv/opencv}{\tt https\+://github.\+com/opencv/opencv} and \href{https://github.com/opencv/opencv_contrib}{\tt https\+://github.\+com/opencv/opencv\+\_\+contrib}
+\item Vibe\+: \href{https://github.com/BelBES/VIBE}{\tt https\+://github.\+com/\+Bel\+B\+E\+S/\+V\+I\+BE}
+\item Su\+B\+S\+E\+N\+SE and L\+O\+B\+S\+T\+ER\+: \href{https://github.com/ethereon/subsense}{\tt https\+://github.\+com/ethereon/subsense}
+\item \mbox{\hyperlink{namespace_g_t_l}{G\+TL}}\+: \href{https://github.com/rdmpage/graph-template-library}{\tt https\+://github.\+com/rdmpage/graph-\/template-\/library}
+\item M\+W\+BM\+: \href{https://github.com/rdmpage/maximum-weighted-bipartite-matching}{\tt https\+://github.\+com/rdmpage/maximum-\/weighted-\/bipartite-\/matching}
+\item Pedestrians detector\+: \href{https://github.com/sturkmen72/C4-Real-time-pedestrian-detection}{\tt https\+://github.\+com/sturkmen72/\+C4-\/\+Real-\/time-\/pedestrian-\/detection}
+\item Non Maximum Suppression\+: \href{https://github.com/Nuzhny007/Non-Maximum-Suppression}{\tt https\+://github.\+com/\+Nuzhny007/\+Non-\/\+Maximum-\/\+Suppression}
+\item Mobile\+Net \mbox{\hyperlink{class_s_s_d}{S\+SD}}\+: \href{https://github.com/chuanqi305/MobileNet-SSD}{\tt https\+://github.\+com/chuanqi305/\+Mobile\+Net-\/\+S\+SD}
+\item Y\+O\+LO\+: \href{https://pjreddie.com/darknet/yolo/}{\tt https\+://pjreddie.\+com/darknet/yolo/}
+\item G\+O\+T\+U\+RN models\+: \href{https://github.com/opencv/opencv_extra/tree/c4219d5eb3105ed8e634278fad312a1a8d2c182d/testdata/tracking}{\tt https\+://github.\+com/opencv/opencv\+\_\+extra/tree/c4219d5eb3105ed8e634278fad312a1a8d2c182d/testdata/tracking}
+\end{DoxyItemize}
+
+\paragraph*{License}
+
+G\+NU G\+P\+Lv3\+: \href{http://www.gnu.org/licenses/gpl-3.0.txt}{\tt http\+://www.\+gnu.\+org/licenses/gpl-\/3.\+0.\+txt} 

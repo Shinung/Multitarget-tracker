@@ -1,0 +1,620 @@
+\hypertarget{classpq__leaf}{}\section{pq\+\_\+leaf Class Reference}
+\label{classpq__leaf}\index{pq\+\_\+leaf@{pq\+\_\+leaf}}
+
+
+{\ttfamily \#include $<$pq\+\_\+node.\+h$>$}
+
+
+
+Inheritance diagram for pq\+\_\+leaf\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classpq__leaf__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for pq\+\_\+leaf\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classpq__leaf__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpq__leaf_a5478f8f28b4661ec404c492a01ac1f34}{pq\+\_\+leaf}} (int, int, \mbox{\hyperlink{classedge}{edge}}, \mbox{\hyperlink{classnode}{node}})
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}{P\+Q\+\_\+\+K\+I\+ND}} \{ \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{P\+\_\+\+N\+O\+DE}}, 
+\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{Q\+\_\+\+N\+O\+DE}}, 
+\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}{L\+E\+AF}}, 
+\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}{D\+IR}}
+ \}
+\item 
+enum \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}{P\+Q\+\_\+\+M\+A\+RK}} \{ \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}{U\+N\+M\+A\+R\+K\+ED}}, 
+\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8fcc16097c37da3379fcd0a0c16fe169}{Q\+U\+E\+U\+ED}}, 
+\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}{B\+L\+O\+C\+K\+ED}}, 
+\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}{U\+N\+B\+L\+O\+C\+K\+ED}}
+ \}
+\item 
+typedef \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$\+::\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} \mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classpq__node_aa6830ab47a280f41fe61b7d2f8b508bb}{partial}} (\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}})
+\item 
+virtual void \mbox{\hyperlink{classpq__node_af1ba861293e4493dba7cc2c9332fee76}{full}} (\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}})
+\item 
+virtual void \mbox{\hyperlink{classpq__node_a13100e0b030cc047f382d9ddf6a44f4a}{clear}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classpq__node_a8d8fb7b3059e7aeecf62eeed34076afb}{pert\+\_\+children}}
+\item 
+int \mbox{\hyperlink{classpq__node_a3fb78609f93f41efd6826ed3169fc312}{pert\+\_\+leaves}}
+\item 
+bool \mbox{\hyperlink{classpq__node_a058dda3d1197dfd2b343d1983d305d79}{is\+\_\+endmost}}
+\item 
+\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ \mbox{\hyperlink{classpq__node_a3e7c886498c76c633f057fb42ff9c435}{father}}
+\item 
+\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}{P\+Q\+\_\+\+M\+A\+RK}} \mbox{\hyperlink{classpq__node_aee913582a7b268ce2570bee8a8367c50}{mark}}
+\item 
+\mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$ \mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}
+\item 
+\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} \mbox{\hyperlink{classpq__node_a5e8a5defa0fec4ff2e82fabee97296b4}{pos}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$\+::\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} \mbox{\hyperlink{classpq__node_a71cc9bb3c11aac468ff77d64643c38dc}{lpos}}
+\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}}
+\item 
+int \mbox{\hyperlink{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}{id}}
+\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classpq__node_ae6d5a236397b9a57159487eac7ec168d}{up}}
+\item 
+int \mbox{\hyperlink{classpq__node_a5a7bcdde1f57191a77a6a14994b38a50}{up\+\_\+id}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}{P\+Q\+\_\+\+K\+I\+ND}} \mbox{\hyperlink{classpq__leaf_a31c4b7512aae53901bb20308fe3a8834}{kind}} () const
+\item 
+void \mbox{\hyperlink{classpq__leaf_a5072c4b54cb0ee3f906e1f44ec03cd79}{write}} (std\+::ostream \&, int)
+\item 
+\mbox{\hyperlink{classp__node}{p\+\_\+node}} $\ast$ \mbox{\hyperlink{classpq__leaf_a26b5bc998de77c10430b9406ed06f2ce}{P}} ()
+\item 
+\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$ \mbox{\hyperlink{classpq__leaf_aa5816a18a112ab2e26cd971f4ab4aa8f}{Q}} ()
+\item 
+\mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $\ast$ \mbox{\hyperlink{classpq__leaf_a6abf6b0445fe1e5f906e3533d17d5eec}{D}} ()
+\item 
+\mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$ \mbox{\hyperlink{classpq__leaf_a0445b0e4084239950416c8643c3fd69d}{L}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classpq__leaf_a4f4e0c05ee8e704fb1be7b04bae11b43}{other\+\_\+id}}
+\item 
+\mbox{\hyperlink{classedge}{edge}} \mbox{\hyperlink{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}{e}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpq__leaf_ab6a02224dbc06343d95919289aec77c8}{planarity}}
+\item 
+class \mbox{\hyperlink{classpq__leaf_a0a5be4bb438c891059fae98f607f2a9c}{pq\+\_\+tree}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 590 of file pq\+\_\+node.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}\label{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!iterator@{iterator}}
+\index{iterator@{iterator}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classsymlist}{symlist}}$<$\mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$$>$\+::\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} \mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{pq\+\_\+node\+::iterator}}\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 36 of file pq\+\_\+node.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!P\+Q\+\_\+\+K\+I\+ND@{P\+Q\+\_\+\+K\+I\+ND}}
+\index{P\+Q\+\_\+\+K\+I\+ND@{P\+Q\+\_\+\+K\+I\+ND}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{P\+Q\+\_\+\+K\+I\+ND}{PQ\_KIND}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}{pq\+\_\+node\+::\+P\+Q\+\_\+\+K\+I\+ND}}\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+\_\+\+N\+O\+DE@{P\+\_\+\+N\+O\+DE}!pq\+\_\+leaf@{pq\+\_\+leaf}}\index{pq\+\_\+leaf@{pq\+\_\+leaf}!P\+\_\+\+N\+O\+DE@{P\+\_\+\+N\+O\+DE}}}\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}} 
+P\+\_\+\+N\+O\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q\+\_\+\+N\+O\+DE@{Q\+\_\+\+N\+O\+DE}!pq\+\_\+leaf@{pq\+\_\+leaf}}\index{pq\+\_\+leaf@{pq\+\_\+leaf}!Q\+\_\+\+N\+O\+DE@{Q\+\_\+\+N\+O\+DE}}}\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}} 
+Q\+\_\+\+N\+O\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+AF@{L\+E\+AF}!pq\+\_\+leaf@{pq\+\_\+leaf}}\index{pq\+\_\+leaf@{pq\+\_\+leaf}!L\+E\+AF@{L\+E\+AF}}}\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}} 
+L\+E\+AF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+IR@{D\+IR}!pq\+\_\+leaf@{pq\+\_\+leaf}}\index{pq\+\_\+leaf@{pq\+\_\+leaf}!D\+IR@{D\+IR}}}\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}} 
+D\+IR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 41 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+41 \{\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{P\_NODE}}, \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{Q\_NODE}}, \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}{LEAF}}, \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}{DIR}}\};
+\end{DoxyCode}
+\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!P\+Q\+\_\+\+M\+A\+RK@{P\+Q\+\_\+\+M\+A\+RK}}
+\index{P\+Q\+\_\+\+M\+A\+RK@{P\+Q\+\_\+\+M\+A\+RK}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{P\+Q\+\_\+\+M\+A\+RK}{PQ\_MARK}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}{pq\+\_\+node\+::\+P\+Q\+\_\+\+M\+A\+RK}}\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+M\+A\+R\+K\+ED@{U\+N\+M\+A\+R\+K\+ED}!pq\+\_\+leaf@{pq\+\_\+leaf}}\index{pq\+\_\+leaf@{pq\+\_\+leaf}!U\+N\+M\+A\+R\+K\+ED@{U\+N\+M\+A\+R\+K\+ED}}}\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}} 
+U\+N\+M\+A\+R\+K\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q\+U\+E\+U\+ED@{Q\+U\+E\+U\+ED}!pq\+\_\+leaf@{pq\+\_\+leaf}}\index{pq\+\_\+leaf@{pq\+\_\+leaf}!Q\+U\+E\+U\+ED@{Q\+U\+E\+U\+ED}}}\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8fcc16097c37da3379fcd0a0c16fe169}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8fcc16097c37da3379fcd0a0c16fe169}} 
+Q\+U\+E\+U\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+O\+C\+K\+ED@{B\+L\+O\+C\+K\+ED}!pq\+\_\+leaf@{pq\+\_\+leaf}}\index{pq\+\_\+leaf@{pq\+\_\+leaf}!B\+L\+O\+C\+K\+ED@{B\+L\+O\+C\+K\+ED}}}\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}} 
+B\+L\+O\+C\+K\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+B\+L\+O\+C\+K\+ED@{U\+N\+B\+L\+O\+C\+K\+ED}!pq\+\_\+leaf@{pq\+\_\+leaf}}\index{pq\+\_\+leaf@{pq\+\_\+leaf}!U\+N\+B\+L\+O\+C\+K\+ED@{U\+N\+B\+L\+O\+C\+K\+ED}}}\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}} 
+U\+N\+B\+L\+O\+C\+K\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 46 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+46 \{\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}{UNMARKED}}, \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8fcc16097c37da3379fcd0a0c16fe169}{QUEUED}}, \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}{BLOCKED}}, \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}{UNBLOCKED}}\};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpq__leaf_a5478f8f28b4661ec404c492a01ac1f34}\label{classpq__leaf_a5478f8f28b4661ec404c492a01ac1f34}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{pq\+\_\+leaf()}{pq\_leaf()}}
+{\footnotesize\ttfamily pq\+\_\+leaf\+::pq\+\_\+leaf (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+,  }\item[{int}]{other\+\_\+,  }\item[{\mbox{\hyperlink{classedge}{edge}}}]{e\+\_\+,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{n\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 316 of file pq\+\_\+node.\+cpp.
+
+
+\begin{DoxyCode}
+316                                                        : \mbox{\hyperlink{classpq__node_a75720c94fd6e2865ba24c76ff66b33b2}{pq\_node}} (n\_, id\_) 
+317 \{
+318     \mbox{\hyperlink{classpq__node_a5a7bcdde1f57191a77a6a14994b38a50}{up\_id}} = other\_;
+319     \mbox{\hyperlink{classpq__node_ae6d5a236397b9a57159487eac7ec168d}{up}} = n\_.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (e\_);
+320     \mbox{\hyperlink{classpq__leaf_a4f4e0c05ee8e704fb1be7b04bae11b43}{other\_id}} = other\_;
+321     \mbox{\hyperlink{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}{e}} = e\_;
+322 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classpq__leaf_a5478f8f28b4661ec404c492a01ac1f34_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpq__node_a13100e0b030cc047f382d9ddf6a44f4a}\label{classpq__node_a13100e0b030cc047f382d9ddf6a44f4a}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!clear@{clear}}
+\index{clear@{clear}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void pq\+\_\+node\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classq__node_a47908b6f23cab25667f20eb41ad2f09d}{q\+\_\+node}}, and \mbox{\hyperlink{classp__node_af24fe11743b0836b03c108a1bf8a0995}{p\+\_\+node}}.
+
+
+
+Definition at line 96 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+97     \{
+98     \mbox{\hyperlink{classpq__node_aee913582a7b268ce2570bee8a8367c50}{mark}} = \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}{UNMARKED}};
+99     \mbox{\hyperlink{classpq__node_a3fb78609f93f41efd6826ed3169fc312}{pert\_leaves}} = 0;
+100     \mbox{\hyperlink{classpq__node_a8d8fb7b3059e7aeecf62eeed34076afb}{pert\_children}} = 0;
+101     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpq__node_a13100e0b030cc047f382d9ddf6a44f4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpq__leaf_a6abf6b0445fe1e5f906e3533d17d5eec}\label{classpq__leaf_a6abf6b0445fe1e5f906e3533d17d5eec}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!D@{D}}
+\index{D@{D}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{D()}{D()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}}$\ast$ pq\+\_\+leaf\+::D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_a5c85bd25c32bb6f18d6d8d1bfd35f260}{pq\+\_\+node}}.
+
+
+
+Definition at line 639 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+640     \{
+641     assert(\textcolor{keyword}{false});
+642     \textcolor{keywordflow}{return} 0;
+643     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classpq__node_af1ba861293e4493dba7cc2c9332fee76}\label{classpq__node_af1ba861293e4493dba7cc2c9332fee76}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!full@{full}}
+\index{full@{full}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{full()}{full()}}
+{\footnotesize\ttfamily virtual void pq\+\_\+node\+::full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classq__node_a525633c6276761fa795a9b54688cc036}{q\+\_\+node}}, and \mbox{\hyperlink{classp__node_a0ba10aa3a56e26676d78af2e05fb5cd1}{p\+\_\+node}}.
+
+
+
+Definition at line 82 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+83     \{
+84     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpq__node_af1ba861293e4493dba7cc2c9332fee76_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpq__leaf_a31c4b7512aae53901bb20308fe3a8834}\label{classpq__leaf_a31c4b7512aae53901bb20308fe3a8834}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!kind@{kind}}
+\index{kind@{kind}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{kind()}{kind()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}{P\+Q\+\_\+\+K\+I\+ND}} pq\+\_\+leaf\+::kind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_aa9873c0cfad88bc4404857ce57d422e4}{pq\+\_\+node}}.
+
+
+
+Definition at line 602 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+603     \{
+604     \textcolor{keywordflow}{return} \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}{LEAF}};
+605     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classpq__leaf_a0445b0e4084239950416c8643c3fd69d}\label{classpq__leaf_a0445b0e4084239950416c8643c3fd69d}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!L@{L}}
+\index{L@{L}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{L()}{L()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}}$\ast$ pq\+\_\+leaf\+::L (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_a805b6ef48c847380b47c8ba882ed4ee2}{pq\+\_\+node}}.
+
+
+
+Definition at line 649 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+650     \{
+651     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+652     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classpq__leaf_a26b5bc998de77c10430b9406ed06f2ce}\label{classpq__leaf_a26b5bc998de77c10430b9406ed06f2ce}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!P@{P}}
+\index{P@{P}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{P()}{P()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classp__node}{p\+\_\+node}}$\ast$ pq\+\_\+leaf\+::P (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_a72178a268ee1ece3ac106ac5fea3b12c}{pq\+\_\+node}}.
+
+
+
+Definition at line 619 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+620     \{
+621     assert(\textcolor{keyword}{false});
+622     \textcolor{keywordflow}{return} 0;
+623     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classpq__node_aa6830ab47a280f41fe61b7d2f8b508bb}\label{classpq__node_aa6830ab47a280f41fe61b7d2f8b508bb}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!partial@{partial}}
+\index{partial@{partial}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{partial()}{partial()}}
+{\footnotesize\ttfamily virtual void pq\+\_\+node\+::partial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classq__node_a4d17efa229bcea76ffebc92c2e4da3a3}{q\+\_\+node}}, and \mbox{\hyperlink{classp__node_a217e83b61144fe6b64e3fbade0aecfcf}{p\+\_\+node}}.
+
+
+
+Definition at line 74 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+75     \{
+76     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classpq__node_aa6830ab47a280f41fe61b7d2f8b508bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classpq__leaf_aa5816a18a112ab2e26cd971f4ab4aa8f}\label{classpq__leaf_aa5816a18a112ab2e26cd971f4ab4aa8f}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!Q@{Q}}
+\index{Q@{Q}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{Q()}{Q()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classq__node}{q\+\_\+node}}$\ast$ pq\+\_\+leaf\+::Q (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_aeeefcfcd19dbe4ca94e190006e8dd484}{pq\+\_\+node}}.
+
+
+
+Definition at line 629 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+630     \{
+631     assert(\textcolor{keyword}{false});
+632     \textcolor{keywordflow}{return} 0;
+633     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classpq__leaf_a5072c4b54cb0ee3f906e1f44ec03cd79}\label{classpq__leaf_a5072c4b54cb0ee3f906e1f44ec03cd79}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!write@{write}}
+\index{write@{write}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void pq\+\_\+leaf\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{int}]{\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{pq\+\_\+node}}.
+
+
+
+Definition at line 324 of file pq\+\_\+node.\+cpp.
+
+
+\begin{DoxyCode}
+325 \{
+326     os << \textcolor{stringliteral}{"node [\(\backslash\)n"} << \textcolor{stringliteral}{"id "} << \_id << std::endl;
+327     os << \textcolor{stringliteral}{"label \(\backslash\)""} << \mbox{\hyperlink{classpq__leaf_a4f4e0c05ee8e704fb1be7b04bae11b43}{other\_id}} << \textcolor{stringliteral}{"\(\backslash\)n"} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{"\(\backslash\)"\(\backslash\)n"};
+328     os << \textcolor{stringliteral}{"graphics [\(\backslash\)n"} << \textcolor{stringliteral}{"x 100\(\backslash\)n"} << \textcolor{stringliteral}{"y 100 \(\backslash\)n"}; 
+329     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpq__node_aee913582a7b268ce2570bee8a8367c50}{mark}} == \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}{UNBLOCKED}}) \{
+330     os << \textcolor{stringliteral}{"outline \(\backslash\)"#0000ff\(\backslash\)"\(\backslash\)n"};
+331     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpq__node_aee913582a7b268ce2570bee8a8367c50}{mark}} == \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}{BLOCKED}}) \{
+332     os << \textcolor{stringliteral}{"outline \(\backslash\)"#ff0000\(\backslash\)"\(\backslash\)n"};
+333     \}
+334     os << \textcolor{stringliteral}{"]\(\backslash\)n"};
+335     os << \textcolor{stringliteral}{"LabelGraphics [\(\backslash\)n"};
+336     os << \textcolor{stringliteral}{"type \(\backslash\)"text\(\backslash\)"\(\backslash\)n]\(\backslash\)n]"} << std::endl;
+337 \} 
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classpq__leaf_ab6a02224dbc06343d95919289aec77c8}\label{classpq__leaf_ab6a02224dbc06343d95919289aec77c8}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!planarity@{planarity}}
+\index{planarity@{planarity}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{planarity}{planarity}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classplanarity}{planarity}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 676 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__leaf_a0a5be4bb438c891059fae98f607f2a9c}\label{classpq__leaf_a0a5be4bb438c891059fae98f607f2a9c}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!pq\+\_\+tree@{pq\+\_\+tree}}
+\index{pq\+\_\+tree@{pq\+\_\+tree}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{pq\+\_\+tree}{pq\_tree}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 682 of file pq\+\_\+node.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}\label{classpq__leaf_a9edebd6049b8633158d7f1db3c33ee7c}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!e@{e}}
+\index{e@{e}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge}{edge}} pq\+\_\+leaf\+::e\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 666 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a3e7c886498c76c633f057fb42ff9c435}\label{classpq__node_a3e7c886498c76c633f057fb42ff9c435}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!father@{father}}
+\index{father@{father}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{father}{father}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$ pq\+\_\+node\+::father\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 166 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}\label{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!id@{id}}
+\index{id@{id}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int pq\+\_\+node\+::id\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 217 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a058dda3d1197dfd2b343d1983d305d79}\label{classpq__node_a058dda3d1197dfd2b343d1983d305d79}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!is\+\_\+endmost@{is\+\_\+endmost}}
+\index{is\+\_\+endmost@{is\+\_\+endmost}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{is\+\_\+endmost}{is\_endmost}}
+{\footnotesize\ttfamily bool pq\+\_\+node\+::is\+\_\+endmost\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 158 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a71cc9bb3c11aac468ff77d64643c38dc}\label{classpq__node_a71cc9bb3c11aac468ff77d64643c38dc}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!lpos@{lpos}}
+\index{lpos@{lpos}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{lpos}{lpos}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$$>$\+::\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} pq\+\_\+node\+::lpos\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 202 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_aee913582a7b268ce2570bee8a8367c50}\label{classpq__node_aee913582a7b268ce2570bee8a8367c50}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!mark@{mark}}
+\index{mark@{mark}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{mark}{mark}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}{P\+Q\+\_\+\+M\+A\+RK}} pq\+\_\+node\+::mark\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 180 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a4997fd09a95d9a659b99cea04197740a}\label{classpq__node_a4997fd09a95d9a659b99cea04197740a}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!n@{n}}
+\index{n@{n}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} pq\+\_\+node\+::n\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 212 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__leaf_a4f4e0c05ee8e704fb1be7b04bae11b43}\label{classpq__leaf_a4f4e0c05ee8e704fb1be7b04bae11b43}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!other\+\_\+id@{other\+\_\+id}}
+\index{other\+\_\+id@{other\+\_\+id}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{other\+\_\+id}{other\_id}}
+{\footnotesize\ttfamily int pq\+\_\+leaf\+::other\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 661 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a8d8fb7b3059e7aeecf62eeed34076afb}\label{classpq__node_a8d8fb7b3059e7aeecf62eeed34076afb}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!pert\+\_\+children@{pert\+\_\+children}}
+\index{pert\+\_\+children@{pert\+\_\+children}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{pert\+\_\+children}{pert\_children}}
+{\footnotesize\ttfamily int pq\+\_\+node\+::pert\+\_\+children\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 140 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a3fb78609f93f41efd6826ed3169fc312}\label{classpq__node_a3fb78609f93f41efd6826ed3169fc312}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!pert\+\_\+leaves@{pert\+\_\+leaves}}
+\index{pert\+\_\+leaves@{pert\+\_\+leaves}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{pert\+\_\+leaves}{pert\_leaves}}
+{\footnotesize\ttfamily int pq\+\_\+node\+::pert\+\_\+leaves\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 148 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a5e8a5defa0fec4ff2e82fabee97296b4}\label{classpq__node_a5e8a5defa0fec4ff2e82fabee97296b4}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!pos@{pos}}
+\index{pos@{pos}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} pq\+\_\+node\+::pos\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 192 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}\label{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!sons@{sons}}
+\index{sons@{sons}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{sons}{sons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymlist}{symlist}}$<$\mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$$>$ pq\+\_\+node\+::sons\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 186 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_ae6d5a236397b9a57159487eac7ec168d}\label{classpq__node_ae6d5a236397b9a57159487eac7ec168d}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!up@{up}}
+\index{up@{up}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} pq\+\_\+node\+::up\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 222 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a5a7bcdde1f57191a77a6a14994b38a50}\label{classpq__node_a5a7bcdde1f57191a77a6a14994b38a50}} 
+\index{pq\+\_\+leaf@{pq\+\_\+leaf}!up\+\_\+id@{up\+\_\+id}}
+\index{up\+\_\+id@{up\+\_\+id}!pq\+\_\+leaf@{pq\+\_\+leaf}}
+\subsubsection{\texorpdfstring{up\+\_\+id}{up\_id}}
+{\footnotesize\ttfamily int pq\+\_\+node\+::up\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 227 of file pq\+\_\+node.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{pq__node_8h}{pq\+\_\+node.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/\mbox{\hyperlink{pq__node_8cpp}{pq\+\_\+node.\+cpp}}\end{DoxyCompactItemize}

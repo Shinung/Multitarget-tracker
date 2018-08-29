@@ -1,0 +1,24 @@
+<map id="maxflow_pp::comp_rem_net" name="maxflow_pp::comp_rem_net">
+<area shape="rect" id="node2" href="$classgraph.html#a7ba35a4c4e8343ffb27ed6d9703c6f18" title="graph::edges_begin" alt="" coords="239,34,373,61"/>
+<area shape="rect" id="node3" href="$classgraph.html#aea8d7f976b85b6137f52d915e26639f6" title="graph::edges_end" alt="" coords="243,85,369,111"/>
+<area shape="rect" id="node4" href="$classmaxflow__pp.html#a3e59652a416d1553f8a1d1229dd2cd38" title="maxflow_pp::single\l_edge_update" alt="" coords="240,136,372,177"/>
+<area shape="rect" id="node5" href="$classmaxflow__pp.html#a20abf72dadaac19acb027ff5fa62de2a" title="maxflow_pp::create\l_back_edge" alt="" coords="432,115,567,156"/>
+<area shape="rect" id="node12" href="$classgraph.html#a2e5426682a0897b9f9104b019970bedc" title="graph::restore_edge" alt="" coords="237,253,375,279"/>
+<area shape="rect" id="node16" href="$classgraph.html#ab2f8520bcac080d73c55228fecc61825" title="graph::hide_edge" alt="" coords="245,370,367,397"/>
+<area shape="rect" id="node20" href="$classgraph.html#ab57aab79e649cc275052b7decbdd03ec" title="graph::restore_node" alt="" coords="237,582,375,609"/>
+<area shape="rect" id="node6" href="$classgraph.html#a02a0c3a219f75d68caa408ef339d4a1c" title="graph::new_edge" alt="" coords="624,71,744,98"/>
+<area shape="rect" id="node10" href="$classedge.html#a97563b611261478ee19c6ce055f1a3ee" title="edge::target" alt="" coords="639,122,729,149"/>
+<area shape="rect" id="node11" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="635,173,733,199"/>
+<area shape="rect" id="node7" href="$classgraph.html#a0a7a68fa0baa47ef955525c445fa1a04" title="graph::pre_new_edge\l_handler" alt="" coords="795,5,941,47"/>
+<area shape="rect" id="node8" href="$classgraph.html#a3f3121c481746ab0a19eb187da5c0246" title="graph::new_edge_id" alt="" coords="799,71,937,98"/>
+<area shape="rect" id="node9" href="$classgraph.html#a443182426b461aa9f4b1c9f5ac535179" title="graph::post_new_edge\l_handler" alt="" coords="792,123,944,164"/>
+<area shape="rect" id="node13" href="$classgraph.html#a569d227d9f4914278a143d52139e3303" title="graph::pre_restore\l_edge_handler" alt="" coords="436,180,563,221"/>
+<area shape="rect" id="node14" href="$classedge.html#ab6d6192a90b1cb77ce9dee2de78d9743" title="edge::is_hidden" alt="" coords="443,311,556,338"/>
+<area shape="rect" id="node15" href="$classgraph.html#adfc71011ae82f047c550eba6d9e7bb3a" title="graph::post_restore\l_edge_handler" alt="" coords="432,245,567,287"/>
+<area shape="rect" id="node17" href="$classgraph.html#aa33201befa6ad7433becd7424d6de55b" title="graph::pre_hide_edge\l_handler" alt="" coords="426,363,573,404"/>
+<area shape="rect" id="node18" href="$classedge.html#abcd4eeaf23327d026beac9ee1d0fa7e9" title="edge::remove_from" alt="" coords="434,429,565,455"/>
+<area shape="rect" id="node19" href="$classgraph.html#ad4614e74a125054eb3e180f6f32ab7bb" title="graph::post_hide_edge\l_handler" alt="" coords="423,480,576,521"/>
+<area shape="rect" id="node21" href="$classgraph.html#a3a305d240ab5237a2adae315b50105a6" title="graph::pre_restore\l_node_handler" alt="" coords="436,545,563,587"/>
+<area shape="rect" id="node22" href="$classnode.html#af948e15fd00a31e67928c9061acda582" title="node::is_hidden" alt="" coords="443,611,556,638"/>
+<area shape="rect" id="node23" href="$classgraph.html#a2d555506de6aa30bb981f0b60375762d" title="graph::post_restore\l_node_handler" alt="" coords="432,663,567,704"/>
+</map>

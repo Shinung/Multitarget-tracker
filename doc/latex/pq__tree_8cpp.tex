@@ -1,0 +1,117 @@
+\hypertarget{pq__tree_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/pq\+\_\+tree.cpp File Reference}
+\label{pq__tree_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/pq\+\_\+tree.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/pq\+\_\+tree.\+cpp}}
+{\ttfamily \#include $<$G\+T\+L/pq\+\_\+tree.\+h$>$}\newline
+{\ttfamily \#include $<$G\+T\+L/debug.\+h$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+Include dependency graph for pq\+\_\+tree.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pq__tree_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} std\+::ostream \& \mbox{\hyperlink{pq__tree_8cpp_ab7a98cf0fd7bc0ebc9887cc4f3280db9}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}} \&tree)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{pq__tree_8cpp_ab7a98cf0fd7bc0ebc9887cc4f3280db9}\label{pq__tree_8cpp_ab7a98cf0fd7bc0ebc9887cc4f3280db9}} 
+\index{pq\+\_\+tree.\+cpp@{pq\+\_\+tree.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!pq\+\_\+tree.\+cpp@{pq\+\_\+tree.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}} \&}]{tree }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1335 of file pq\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+1336 \{
+1337     \textcolor{keywordflow}{if} (!tree.\mbox{\hyperlink{classpq__tree_ad8e4e2235fe68fb99769cec54e1760ba}{root}}) \textcolor{keywordflow}{return} os;
+1338     
+1339     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = 0;
+1340     std::pair<pq\_node*, int> tmp;
+1341     std::queue<std::pair<pq\_node*, int> > qu;
+1342     \mbox{\hyperlink{classpq__node}{pq\_node}}* act;
+1343     
+1344     os << \textcolor{stringliteral}{"graph [\(\backslash\)n"} << \textcolor{stringliteral}{"directed 1"} << std::endl;
+1345     tree.\mbox{\hyperlink{classpq__tree_ad8e4e2235fe68fb99769cec54e1760ba}{root}}->\mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{write}} (os, \textcolor{keywordtype}{id});
+1346     tmp.first = tree.\mbox{\hyperlink{classpq__tree_ad8e4e2235fe68fb99769cec54e1760ba}{root}};
+1347     tmp.second = id;
+1348     ++id;
+1349     qu.push (tmp);
+1350     
+1351     \textcolor{keywordflow}{while} (!qu.empty()) \{
+1352     tmp = qu.front();
+1353     qu.pop();
+1354     
+1355     \textcolor{keywordflow}{if} (tmp.first->kind() == \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{pq\_node::Q\_NODE}} || tmp.first->kind() == 
+      \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{pq\_node::P\_NODE}}) \{
+1356             \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} it = tmp.first->sons.begin();
+1357             \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} end = tmp.first->sons.end();
+1358         
+1359         \textcolor{keywordflow}{for} (; it != end; ++it) \{
+1360         act = *it;
+1361         act->\mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{write}} (os, \textcolor{keywordtype}{id});
+1362         
+1363         os << \textcolor{stringliteral}{"edge [\(\backslash\)n"} << \textcolor{stringliteral}{"source "} << tmp.second << std::endl;
+1364         os << \textcolor{stringliteral}{"target "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{"\(\backslash\)n]"} << std::endl;
+1365         
+1366         qu.push(std::pair<pq\_node*, int>(act, \textcolor{keywordtype}{id}));
+1367         ++id;
+1368         \}
+1369         \}
+1370 
+1371         \textcolor{keywordflow}{if} (tmp.first->kind() == \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{pq\_node::P\_NODE}}) \{
+1372             \mbox{\hyperlink{classp__node}{p\_node}}* P = tmp.first->\mbox{\hyperlink{classp__node_a4d8d7a171935a008f0718275dede2b43}{P}}();
+1373             \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} it = P->\mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.
+      \mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+1374             \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} end = P->\mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.
+      \mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}();
+1375 
+1376             \textcolor{keywordflow}{for} (; it != end; ++it) \{
+1377                 act = *it;
+1378                 act->\mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{write}} (os, \textcolor{keywordtype}{id});
+1379 
+1380                 os << \textcolor{stringliteral}{"edge [\(\backslash\)n"} << \textcolor{stringliteral}{"source "} << tmp.second << std::endl;
+1381                 os << \textcolor{stringliteral}{"target "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{"\(\backslash\)n]"} << std::endl;
+1382 
+1383                 qu.push(std::pair<pq\_node*, int>(act, \textcolor{keywordtype}{id}));
+1384                 ++id;
+1385             \}
+1386             
+1387             it = P->\mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+1388             end = P->\mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}();
+1389 
+1390             \textcolor{keywordflow}{for} (; it != end; ++it) \{
+1391                 act = *it;
+1392                 act->\mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{write}} (os, \textcolor{keywordtype}{id});
+1393 
+1394                 os << \textcolor{stringliteral}{"edge [\(\backslash\)n"} << \textcolor{stringliteral}{"source "} << tmp.second << std::endl;
+1395                 os << \textcolor{stringliteral}{"target "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{"\(\backslash\)n]"} << std::endl;
+1396 
+1397                 qu.push(std::pair<pq\_node*, int>(act, \textcolor{keywordtype}{id}));
+1398                 ++id;
+1399             \}            
+1400         \}
+1401     \}
+1402     
+1403     os << \textcolor{stringliteral}{"]"} << std::endl;
+1404     
+1405     \textcolor{keywordflow}{return} os;
+1406 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{pq__tree_8cpp_ab7a98cf0fd7bc0ebc9887cc4f3280db9_cgraph}
+\end{center}
+\end{figure}
