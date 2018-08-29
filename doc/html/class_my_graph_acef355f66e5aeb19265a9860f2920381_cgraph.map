@@ -1,0 +1,5 @@
+<map id="MyGraph::load_node_info_handler" name="MyGraph::load_node_info_handler">
+<area shape="rect" id="node2" href="$class_my_graph.html#a1ca3d219454d57b8fc5ce67eaaf33013" title="MyGraph::store_node\l_string" alt="" coords="196,5,343,47"/>
+<area shape="rect" id="node3" href="$class_my_graph.html#a4f5922407f2f3fac566d1045d98da46f" title="MyGraph::store_node\l_integer" alt="" coords="196,71,343,112"/>
+<area shape="rect" id="node4" href="$class_my_graph.html#a16b037dbb0011fc50367145c477ac7a4" title="MyGraph::store_node\l_double" alt="" coords="196,136,343,177"/>
+</map>

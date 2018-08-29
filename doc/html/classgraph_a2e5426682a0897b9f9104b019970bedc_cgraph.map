@@ -1,0 +1,5 @@
+<map id="graph::restore_edge" name="graph::restore_edge">
+<area shape="rect" id="node2" href="$classgraph.html#a569d227d9f4914278a143d52139e3303" title="graph::pre_restore\l_edge_handler" alt="" coords="195,5,321,47"/>
+<area shape="rect" id="node3" href="$classedge.html#ab6d6192a90b1cb77ce9dee2de78d9743" title="edge::is_hidden" alt="" coords="201,71,315,98"/>
+<area shape="rect" id="node4" href="$classgraph.html#adfc71011ae82f047c550eba6d9e7bb3a" title="graph::post_restore\l_edge_handler" alt="" coords="191,123,325,164"/>
+</map>

@@ -70,7 +70,7 @@ enum Detectors
     Pedestrian_C4,
     SSD_MobileNet,
     Yolo,
-	SSD_CustomNet
+	SSD_CustomNet /**< It's for creating SSDCustomNetDetector */
 };
 
 ///

@@ -1,0 +1,139 @@
+\hypertarget{_base_detector_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Base\+Detector.cpp File Reference}
+\label{_base_detector_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Base\+Detector.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Base\+Detector.\+cpp}}
+{\ttfamily \#include \char`\"{}Base\+Detector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Motion\+Detector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Face\+Detector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pedestrian\+Detector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+S\+D\+Mobile\+Net\+Detector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Yolo\+Detector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+S\+D\+Custom\+Net\+Detector.\+h\char`\"{}}\newline
+Include dependency graph for Base\+Detector.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_base_detector_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_base_detector}{Base\+Detector}} $\ast$ \mbox{\hyperlink{_base_detector_8cpp_a7648f35ed8e9d0160414d8e0eaf99c15}{Create\+Detector}} (\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760}{tracking\+::\+Detectors}} detector\+Type, const \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}} \&config, bool collect\+Points, cv\+::\+U\+Mat \&gray)
+\begin{DoxyCompactList}\small\item\em Create\+Detector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_base_detector_8cpp_a7648f35ed8e9d0160414d8e0eaf99c15}\label{_base_detector_8cpp_a7648f35ed8e9d0160414d8e0eaf99c15}} 
+\index{Base\+Detector.\+cpp@{Base\+Detector.\+cpp}!Create\+Detector@{Create\+Detector}}
+\index{Create\+Detector@{Create\+Detector}!Base\+Detector.\+cpp@{Base\+Detector.\+cpp}}
+\subsubsection{\texorpdfstring{Create\+Detector()}{CreateDetector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_base_detector}{Base\+Detector}}$\ast$ Create\+Detector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760}{tracking\+::\+Detectors}}}]{detector\+Type,  }\item[{const \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}} \&}]{config,  }\item[{bool}]{collect\+Points,  }\item[{cv\+::\+U\+Mat \&}]{gray }\end{DoxyParamCaption})}
+
+
+
+Create\+Detector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em detector\+Type} & \\
+\hline
+{\em collect\+Points} & \\
+\hline
+{\em gray} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line 16 of file Base\+Detector.\+cpp.
+
+
+\begin{DoxyCode}
+22 \{
+23     \mbox{\hyperlink{class_base_detector}{BaseDetector}}* detector = \textcolor{keyword}{nullptr};
+24 
+25     \textcolor{keywordflow}{switch} (detectorType)
+26     \{
+27     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a87b70978153a0274b03015d9390db7ae}{tracking::Motion\_VIBE}}:
+28         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_motion_detector}{MotionDetector}}(BackgroundSubtract::BGFG\_ALGS::ALG\_VIBE, collectPoints,
+       gray);
+29         \textcolor{keywordflow}{break};
+30 
+31     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a924d297b40e8c4518aa2e0553f6f8f61}{tracking::Motion\_MOG}}:
+32         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_motion_detector}{MotionDetector}}(BackgroundSubtract::BGFG\_ALGS::ALG\_MOG, collectPoints, 
+      gray);
+33         \textcolor{keywordflow}{break};
+34 
+35     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760aff944e05b5f591282b599c4d97ab8ab0}{tracking::Motion\_GMG}}:
+36         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_motion_detector}{MotionDetector}}(BackgroundSubtract::BGFG\_ALGS::ALG\_GMG, collectPoints, 
+      gray);
+37         \textcolor{keywordflow}{break};
+38 
+39     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760af40f12386e08503dd5d82774d5e36617}{tracking::Motion\_CNT}}:
+40         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_motion_detector}{MotionDetector}}(BackgroundSubtract::BGFG\_ALGS::ALG\_CNT, collectPoints, 
+      gray);
+41         \textcolor{keywordflow}{break};
+42 
+43     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760ad699aae73e9117bdd3aee641a3a6e7fe}{tracking::Motion\_SuBSENSE}}:
+44         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_motion_detector}{MotionDetector}}(BackgroundSubtract::BGFG\_ALGS::ALG\_SuBSENSE, 
+      collectPoints, gray);
+45         \textcolor{keywordflow}{break};
+46 
+47     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a9d3afb434e136e0b4e413cca1d893484}{tracking::Motion\_LOBSTER}}:
+48         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_motion_detector}{MotionDetector}}(BackgroundSubtract::BGFG\_ALGS::ALG\_LOBSTER, 
+      collectPoints, gray);
+49         \textcolor{keywordflow}{break};
+50 
+51     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a44ff25b64c66d3d3700ffbfa5b8b9330}{tracking::Motion\_MOG2}}:
+52         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_motion_detector}{MotionDetector}}(BackgroundSubtract::BGFG\_ALGS::ALG\_MOG2, collectPoints,
+       gray);
+53         \textcolor{keywordflow}{break};
+54 
+55     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a4988e24edd891887cab51c40c8766469}{tracking::Face\_HAAR}}:
+56         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_face_detector}{FaceDetector}}(collectPoints, gray);
+57         \textcolor{keywordflow}{break};
+58 
+59     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a115099e7e10e6d96d1d98c2b49846deb}{tracking::Pedestrian\_HOG}}:
+60     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a9ac24174fd8e83cd08a363fdac49d0d4}{tracking::Pedestrian\_C4}}:
+61         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_pedestrian_detector}{PedestrianDetector}}(collectPoints, gray);
+62         \textcolor{keywordflow}{break};
+63 
+64     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a8f03b394ce89f3180f060df35483348e}{tracking::SSD\_MobileNet}}:
+65         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_s_s_d_mobile_net_detector}{SSDMobileNetDetector}}(collectPoints, gray);
+66         \textcolor{keywordflow}{break};
+67 
+68     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a89a6bc82129abb9692c1a368724c4791}{tracking::Yolo}}:
+69         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_yolo_detector}{YoloDetector}}(collectPoints, gray);
+70         \textcolor{keywordflow}{break};
+71 
+72     \textcolor{keywordflow}{case} \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760aad91e73b0e787896ba30df4540e992e7}{tracking::SSD\_CustomNet}}:
+73         detector = \textcolor{keyword}{new} \mbox{\hyperlink{class_s_s_d_custom_net_detector}{SSDCustomNetDetector}}(collectPoints, gray);
+74         \textcolor{keywordflow}{break};
+75 
+76     \textcolor{keywordflow}{default}:
+77         \textcolor{keywordflow}{break};
+78     \}
+79 
+80     \textcolor{keywordflow}{if} (!detector->\mbox{\hyperlink{class_base_detector_a44c53608e9e4e3455ff553d987165260}{Init}}(config))
+81     \{
+82         \textcolor{keyword}{delete} detector;
+83         detector = \textcolor{keyword}{nullptr};
+84     \}
+85     \textcolor{keywordflow}{return} detector;
+86 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{_base_detector_8cpp_a7648f35ed8e9d0160414d8e0eaf99c15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_base_detector_8cpp_a7648f35ed8e9d0160414d8e0eaf99c15_icgraph}
+\end{center}
+\end{figure}

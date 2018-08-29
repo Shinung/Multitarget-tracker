@@ -1,0 +1,18 @@
+<map id="bfs::run" name="bfs::run">
+<area shape="rect" id="node2" href="$classne__map.html#a4ef2ab4aebcb57a7a101975bf6a88e24" title="ne_map::init" alt="" coords="154,5,247,32"/>
+<area shape="rect" id="node3" href="$classbfs.html#a558582dd7a92ce3b3b512c523e589c23" title="Called at the start of BFS. " alt="" coords="144,56,257,83"/>
+<area shape="rect" id="node4" href="$classgraph.html#aec5c11c90a94ebd145f059a541db860e" title="graph::choose_node" alt="" coords="131,107,270,133"/>
+<area shape="rect" id="node5" href="$classbfs.html#ab89a3d1cb36b20a86837b0345063e4b1" title="Called when BFS is started with start&#45;node n. " alt="" coords="125,157,277,184"/>
+<area shape="rect" id="node6" href="$classbfs.html#a567815d3b63e802420f4b536749a1ad2" title="bfs::bfs_sub" alt="" coords="155,208,247,235"/>
+<area shape="rect" id="node16" href="$classgraph.html#a42c78e0a9f115655e3ff0efe35ebfc4e" title="graph::number_of_nodes" alt="" coords="119,259,283,285"/>
+<area shape="rect" id="node17" href="$classbfs.html#adbabb41ab56b92606fe7b53f346142ed" title="Called right before the end of BFS. " alt="" coords="142,309,259,336"/>
+<area shape="rect" id="node7" href="$classbfs.html#a09c7e35a4c20a24f1a54d63a0a9319a5" title="Called after the node n was taken out of the queue. " alt="" coords="331,5,504,32"/>
+<area shape="rect" id="node8" href="$classnode.html#a12cb1a2167f5f03c054de5e707d3156f" title="node::adj_edges_iterator" alt="" coords="552,107,716,133"/>
+<area shape="rect" id="node9" href="$classnode.html#a788d3e932a5c164caa5ec82aa47551b2" title="node::adj_edges_begin" alt="" coords="340,107,495,133"/>
+<area shape="rect" id="node10" href="$classbfs.html#ac35b3d3c37d33eb80adb752e17a60df9" title="End&#45;iterator for iteration through all (reached) nodes in BFS&#45;Order. " alt="" coords="383,157,451,184"/>
+<area shape="rect" id="node11" href="$classnode.html#aa1e7887d29390297580769454f769ad6" title="node::adj_edges_end" alt="" coords="345,208,490,235"/>
+<area shape="rect" id="node12" href="$classnode.html#a13dbd1809a33a5efede64a359e53a363" title="node::opposite" alt="" coords="364,259,471,285"/>
+<area shape="rect" id="node13" href="$classbfs.html#a6e31b8d063a85d92f2b44ff41d2050aa" title="Called when an unused node n was discovered. " alt="" coords="331,309,504,336"/>
+<area shape="rect" id="node14" href="$classbfs.html#a5514649937b2e27f0bfc41ba868cb156" title="Called when an used node n was found. " alt="" coords="338,360,497,387"/>
+<area shape="rect" id="node15" href="$classbfs.html#a4d3f1d569910388b2ccece7cedd8bae4" title="Called when finished with the node n. " alt="" coords="354,411,481,453"/>
+</map>

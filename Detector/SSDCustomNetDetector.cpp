@@ -8,13 +8,19 @@
 using namespace caffe;
 using std::string;
 
-/* By using Go as the HTTP server, we have potentially more CPU threads than
-* available GPUs and more threads can be added on the fly by the Go
-* runtime. Therefore we cannot pin the CPU threads to specific GPUs.  Instead,
-* when a CPU thread is ready for inference it will try to retrieve an
-* execution context from a queue of available GPU contexts and then do a
-* cudaSetDevice() to prepare for execution. Multiple contexts can be allocated
-* per GPU. */
+/**
+ * By using Go as the HTTP server, we have potentially more CPU threads than
+ * available GPUs and more threads can be added on the fly by the Go
+ * runtime. Therefore we cannot pin the CPU threads to specific GPUs.  Instead,
+ * when a CPU thread is ready for inference it will try to retrieve an
+ * execution context from a queue of available GPU contexts and then do a
+ * cudaSetDevice() to prepare for execution. Multiple contexts can be allocated
+ * per GPU. - From [NVIDIA/gpu-rest-engine](https://github.com/NVIDIA/gpu-rest-engine)
+ * 
+ * @see <https://github.com/NVIDIA/gpu-rest-engine>
+ * @see forked: <https://github.com/Shinung/gpu-rest-engine/tree/ssd_gre>
+ * @author Shinung
+ */
 class ExecContext
 {
 public:
@@ -90,10 +96,14 @@ struct CustomSSD_ctx
 	ContextPool<ExecContext> pool;
 };
 
-/* Currently, 2 execution contexts are created per GPU. In other words, 2
-* inference tasks can execute in parallel on the same GPU. This helps improve
-* GPU utilization since some kernel operations of inference will not fully use
-* the GPU. */
+/**
+ * Currently, 2 execution contexts are created per GPU. In other words, 2
+ * inference tasks can execute in parallel on the same GPU. This helps improve
+ * GPU utilization since some kernel operations of inference will not fully use
+ * the GPU. From [NVIDIA/gpu-rest-engine](https://github.com/NVIDIA/gpu-rest-engine)
+ * 
+ * @author Shinung
+ */
 constexpr static int kContextsPerDevice = 2;
 
 /// \brief SSDCustomNetDetector::SSDMobileNetDetector
@@ -108,7 +118,6 @@ SSDCustomNetDetector::SSDCustomNetDetector(
 	BaseDetector(collectPoints, colorFrame),
 	m_WHRatio(1.f),
 	m_inScaleFactor(0.007843f),
-	m_meanVal(127.5f),
 	m_confidenceThreshold(0.5f),
 	m_maxCropRatio(2.0f)
 {
@@ -122,19 +131,8 @@ SSDCustomNetDetector::~SSDCustomNetDetector(void)
 	delete mCTX;
 }
 
-///
-/// \brief SSDCustomNetDetector::Init
-/// \return
-///
 bool SSDCustomNetDetector::Init(const config_t& config)
 {
-	/* Comment by Roy
-	 * Initialize caffe ssd net
-	 * Refer classifier_initialize function
-	 * in https://github.com/NVIDIA/gpu-rest-engine/blob/master/caffe/classification.cpp
-	 * and check SSD class's constructor how to initialize caffe model.
-	 */
-
 	auto confidenceThreshold = config.find("confidenceThreshold");
 	if (confidenceThreshold != config.end())
 	{
@@ -160,7 +158,6 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 			throw std::invalid_argument("could not list CUDA devices");
 		}
 
-		// Initialize Localizer
 		ContextPool<ExecContext> pool;
 		for (int dev = 0; dev < device_count; ++dev)
 		{
@@ -212,19 +209,8 @@ bool SSDCustomNetDetector::Init(const config_t& config)
 	}
 }
 
-///
-/// \brief SSDCustomNetDetector::Detect
-/// \param gray
-///
 void SSDCustomNetDetector::Detect(cv::UMat& colorFrame)
 {
-	/* Comment by Roy
-	 * Here for forwarding SSD net to detect objects
-	 * Should be combine well between logic in this method and 'Detect' method in our SSD class
-	 * This logic is assumed that a frame is cropped by crop ratio and each cropped images will input to SSD net.
-	 * Therefore, our trained net(SSD 512x512) was slow. It would have been bottleneck.
-	 * I hope to improve fps if we'll combine successfully.
-	 */
 	m_regions.clear();
 
 	regions_t tmpRegions;
@@ -311,28 +297,11 @@ void SSDCustomNetDetector::Detect(cv::UMat& colorFrame)
 ///
 void SSDCustomNetDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop, regions_t& tmpRegions)
 {
-	/* Comment by Roy
-	 * Here is ACTUALLY the phase of forwarding SSD net with cropped images.
-	 * I wouldn't like to remove this code because there are some different way to make results from net-output
-	 * with our SSD class.
-	 * our SSD class will make BBox from each detected object but, on the other hand, this code will make CRegion.
-	 * Hence, we should make CRegion from our SSD class to integrate with this code.
-	 */
-
 	// get ssd instance from the pool
     ScopedContext<ExecContext> context(mCTX->pool);
     SSD* ssd = static_cast<SSD*>(context->CaffeClassifier());
 
     cv::Mat detectionMat = ssd->DetectAsMat(cv::Mat(colorFrame, crop));
-//	cv::Mat detectionMat(detection.size[2], detection.size[3], CV_32F, detection.ptr<float>());
-
-	//cv::Mat frame = colorFrame(crop);
-
-	//ss << "FPS: " << 1000/time << " ; time: " << time << " ms";
-	//putText(frame, ss.str(), Point(20,20), 0, 0.5, Scalar(0,0,255));
-	//std::cout << "Inference time, ms: " << time << endl;
-
-	//cv::Point correctPoint((colorFrame.cols - crop.width) / 2, (colorFrame.rows - crop.height) / 2);
 
 	for (int i = 0; i < detectionMat.rows; ++i)
 	{
@@ -363,17 +332,9 @@ void SSDCustomNetDetector::DetectInCrop(cv::Mat colorFrame, const cv::Rect& crop
 			CHECK_LE(0, xRightTop) << "raw: " << detectionMat.at<float>(i, 5);
 			CHECK_LE(0, yRightTop) << "raw: " << detectionMat.at<float>(i, 6);
 
-			//cv::Rect object(xLeftBottom, yLeftBottom, xRightTop - xLeftBottom, yRightTop - yLeftBottom);
 			cv::Rect object(cv::Point(xLeftBottom, yLeftBottom), cv::Point(xRightTop, yRightTop));
 
 			tmpRegions.push_back(CRegion(object, ssd->GetLabel(objectClass), confidence));
-
-			//cv::rectangle(frame, object, Scalar(0, 255, 0));
-			//std::string label = classNames[objectClass] + ": " + std::to_string(confidence);
-			//int baseLine = 0;
-			//cv::Size labelSize = cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
-			//cv::rectangle(frame, cv::Rect(cv::Point(xLeftBottom, yLeftBottom - labelSize.height), cv::Size(labelSize.width, labelSize.height + baseLine)), cv::Scalar(255, 255, 255), CV_FILLED);
-			//cv::putText(frame, label, Point(xLeftBottom, yLeftBottom), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0,0,0));
 		}
 	}
 }

@@ -274,37 +274,6 @@ cv::Rect CTrack::GetLastRect() const
     }
 }
 
-template<typename T>
-T checkSize(int a, int b, const cv::Size& frameSize)
-{
-	if (a > frameSize.width)
-	{
-		a = frameSize.width;
-	}
-	else if (a < 0)
-	{
-		a = 2;
-	}
-
-	if (b > frameSize.height)
-	{
-		b = frameSize.height;
-	}
-	else if (b < 0)
-	{
-		b = 2;
-	}
-
-	return T(a, b);
-}
-
-///
-/// \brief RectUpdate
-/// \param region
-/// \param dataCorrect
-/// \param prevFrame
-/// \param currFrame
-///
 void CTrack::RectUpdate(
         const CRegion& region,
         bool dataCorrect,

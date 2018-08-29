@@ -1,0 +1,547 @@
+\hypertarget{gml__scanner_8h}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/gml\+\_\+scanner.h File Reference}
+\label{gml__scanner_8h}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/gml\+\_\+scanner.\+h@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/gml\+\_\+scanner.\+h}}
+{\ttfamily \#include $<$G\+T\+L/\+G\+T\+L.\+h$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+Include dependency graph for gml\+\_\+scanner.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{gml__scanner_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gml__scanner_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_g_m_l__error}{G\+M\+L\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em Reason and position of an error in a G\+ML file. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{union_g_m_l__tok__val}{G\+M\+L\+\_\+tok\+\_\+val}}
+\item 
+struct \mbox{\hyperlink{struct_g_m_l__token}{G\+M\+L\+\_\+token}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+I\+ZE}}~1024
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77f}{G\+M\+L\+\_\+value}} \{ \newline
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77facbdebde5753a69fe5b0f2975de60c82b}{G\+M\+L\+\_\+\+K\+EY}}, 
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa9c67cc9c0b45542b05cfe2097996541d}{G\+M\+L\+\_\+\+I\+NT}}, 
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa2240c7d602fb38d5687a4dc58ed05af9}{G\+M\+L\+\_\+\+D\+O\+U\+B\+LE}}, 
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77faf0bce82a1ff34fb53cf52efeda5100ab}{G\+M\+L\+\_\+\+S\+T\+R\+I\+NG}}, 
+\newline
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa71d26e40c555ad03a41ba81ca08e07a1}{G\+M\+L\+\_\+\+L\+\_\+\+B\+R\+A\+C\+K\+ET}}, 
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fae1092eec290bb6f22f39c7fb24455fa2}{G\+M\+L\+\_\+\+R\+\_\+\+B\+R\+A\+C\+K\+ET}}, 
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fadcfebc4372f2199ae1e2bea95b2fa88f}{G\+M\+L\+\_\+\+E\+ND}}, 
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa0f6c57e598f6d261bd378b1f21d22172}{G\+M\+L\+\_\+\+L\+I\+ST}}, 
+\newline
+\mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa1aa37fc8a21c9a2efd78847f040ba8d6}{G\+M\+L\+\_\+\+E\+R\+R\+OR}}
+ \}
+\item 
+enum \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790c}{G\+M\+L\+\_\+error\+\_\+value}} \{ \newline
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}{G\+M\+L\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED}}, 
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3fbf275b928b652ece2645e90bb5557f}{G\+M\+L\+\_\+\+S\+Y\+N\+T\+AX}}, 
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3af6ee9ba1b3704ced7c81a576c3eae8}{G\+M\+L\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OF}}, 
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca221df19cbc1f2fea1a52cb139a359e0c}{G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+I\+G\+I\+TS}}, 
+\newline
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790caa03c5ab19de88ed1a1a2d85edf075164}{G\+M\+L\+\_\+\+O\+P\+E\+N\+\_\+\+B\+R\+A\+C\+K\+ET}}, 
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca83553a234a3a319eb4db0ec4b3aef05d}{G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+B\+R\+A\+C\+K\+E\+TS}}, 
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}{G\+M\+L\+\_\+\+OK}}, 
+\mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca6e236398ad4be2c96f938e0f2329c7ca}{G\+M\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} void \mbox{\hyperlink{gml__scanner_8h_af3b444abb87b2d5e5c65e3cca251ddc4}{G\+M\+L\+\_\+init}} ()
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} struct \mbox{\hyperlink{struct_g_m_l__token}{G\+M\+L\+\_\+token}} \mbox{\hyperlink{gml__scanner_8h_a03cd9d9104363d98d90e61ec2fad5721}{G\+M\+L\+\_\+scanner}} (F\+I\+LE $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} unsigned int \mbox{\hyperlink{gml__scanner_8h_aaa524d3c642fd5f968b1164df9094ac6}{G\+M\+L\+\_\+line}}
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} unsigned int \mbox{\hyperlink{gml__scanner_8h_a40468353f878192847755525fa870cb5}{G\+M\+L\+\_\+column}}
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} const char $\ast$ \mbox{\hyperlink{gml__scanner_8h_a1b10338eaa8fbc16ce06d123f7bb6ce1}{G\+M\+L\+\_\+table}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gml__scanner_8h_a40958a1382463445e451148e3a93e049}\label{gml__scanner_8h_a40958a1382463445e451148e3a93e049}} 
+\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+I\+ZE@{I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+I\+ZE}}
+\index{I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+I\+ZE@{I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+I\+ZE}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+I\+ZE}{INITIAL\_SIZE}}
+{\footnotesize\ttfamily \#define I\+N\+I\+T\+I\+A\+L\+\_\+\+S\+I\+ZE~1024}
+
+
+
+Definition at line 23 of file gml\+\_\+scanner.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790c}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790c}} 
+\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+error\+\_\+value@{G\+M\+L\+\_\+error\+\_\+value}}
+\index{G\+M\+L\+\_\+error\+\_\+value@{G\+M\+L\+\_\+error\+\_\+value}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}
+\subsubsection{\texorpdfstring{G\+M\+L\+\_\+error\+\_\+value}{GML\_error\_value}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790c}{G\+M\+L\+\_\+error\+\_\+value}}}
+
+Possible errors while parsing a G\+ML file. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED@{G\+M\+L\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED@{G\+M\+L\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED}}}\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}} 
+G\+M\+L\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+S\+Y\+N\+T\+AX@{G\+M\+L\+\_\+\+S\+Y\+N\+T\+AX}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+S\+Y\+N\+T\+AX@{G\+M\+L\+\_\+\+S\+Y\+N\+T\+AX}}}\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3fbf275b928b652ece2645e90bb5557f}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3fbf275b928b652ece2645e90bb5557f}} 
+G\+M\+L\+\_\+\+S\+Y\+N\+T\+AX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OF@{G\+M\+L\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OF}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OF@{G\+M\+L\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OF}}}\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3af6ee9ba1b3704ced7c81a576c3eae8}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3af6ee9ba1b3704ced7c81a576c3eae8}} 
+G\+M\+L\+\_\+\+P\+R\+E\+M\+A\+T\+U\+R\+E\+\_\+\+E\+OF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+I\+G\+I\+TS@{G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+I\+G\+I\+TS}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+I\+G\+I\+TS@{G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+I\+G\+I\+TS}}}\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca221df19cbc1f2fea1a52cb139a359e0c}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca221df19cbc1f2fea1a52cb139a359e0c}} 
+G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+D\+I\+G\+I\+TS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+O\+P\+E\+N\+\_\+\+B\+R\+A\+C\+K\+ET@{G\+M\+L\+\_\+\+O\+P\+E\+N\+\_\+\+B\+R\+A\+C\+K\+ET}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+O\+P\+E\+N\+\_\+\+B\+R\+A\+C\+K\+ET@{G\+M\+L\+\_\+\+O\+P\+E\+N\+\_\+\+B\+R\+A\+C\+K\+ET}}}\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790caa03c5ab19de88ed1a1a2d85edf075164}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790caa03c5ab19de88ed1a1a2d85edf075164}} 
+G\+M\+L\+\_\+\+O\+P\+E\+N\+\_\+\+B\+R\+A\+C\+K\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+B\+R\+A\+C\+K\+E\+TS@{G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+B\+R\+A\+C\+K\+E\+TS}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+B\+R\+A\+C\+K\+E\+TS@{G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+B\+R\+A\+C\+K\+E\+TS}}}\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca83553a234a3a319eb4db0ec4b3aef05d}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca83553a234a3a319eb4db0ec4b3aef05d}} 
+G\+M\+L\+\_\+\+T\+O\+O\+\_\+\+M\+A\+N\+Y\+\_\+\+B\+R\+A\+C\+K\+E\+TS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+OK@{G\+M\+L\+\_\+\+OK}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+OK@{G\+M\+L\+\_\+\+OK}}}\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}} 
+G\+M\+L\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{G\+M\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{G\+M\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}}\mbox{\Hypertarget{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca6e236398ad4be2c96f938e0f2329c7ca}\label{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca6e236398ad4be2c96f938e0f2329c7ca}} 
+G\+M\+L\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file gml\+\_\+scanner.\+h.
+
+
+\begin{DoxyCode}
+34                         \{
+35     \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}{GML\_UNEXPECTED}}, \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3fbf275b928b652ece2645e90bb5557f}{GML\_SYNTAX}}, \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3af6ee9ba1b3704ced7c81a576c3eae8}{GML\_PREMATURE\_EOF}}, 
+      \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca221df19cbc1f2fea1a52cb139a359e0c}{GML\_TOO\_MANY\_DIGITS}},
+36     \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790caa03c5ab19de88ed1a1a2d85edf075164}{GML\_OPEN\_BRACKET}}, \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca83553a234a3a319eb4db0ec4b3aef05d}{GML\_TOO\_MANY\_BRACKETS}}, 
+      \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}{GML\_OK}}, \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca6e236398ad4be2c96f938e0f2329c7ca}{GML\_FILE\_NOT\_FOUND}}
+37 \} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790c}{GML\_error\_value}};
+\end{DoxyCode}
+\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77f}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77f}} 
+\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+value@{G\+M\+L\+\_\+value}}
+\index{G\+M\+L\+\_\+value@{G\+M\+L\+\_\+value}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}
+\subsubsection{\texorpdfstring{G\+M\+L\+\_\+value}{GML\_value}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77f}{G\+M\+L\+\_\+value}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+K\+EY@{G\+M\+L\+\_\+\+K\+EY}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+K\+EY@{G\+M\+L\+\_\+\+K\+EY}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77facbdebde5753a69fe5b0f2975de60c82b}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77facbdebde5753a69fe5b0f2975de60c82b}} 
+G\+M\+L\+\_\+\+K\+EY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+I\+NT@{G\+M\+L\+\_\+\+I\+NT}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+I\+NT@{G\+M\+L\+\_\+\+I\+NT}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa9c67cc9c0b45542b05cfe2097996541d}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa9c67cc9c0b45542b05cfe2097996541d}} 
+G\+M\+L\+\_\+\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+D\+O\+U\+B\+LE@{G\+M\+L\+\_\+\+D\+O\+U\+B\+LE}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+D\+O\+U\+B\+LE@{G\+M\+L\+\_\+\+D\+O\+U\+B\+LE}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa2240c7d602fb38d5687a4dc58ed05af9}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa2240c7d602fb38d5687a4dc58ed05af9}} 
+G\+M\+L\+\_\+\+D\+O\+U\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+S\+T\+R\+I\+NG@{G\+M\+L\+\_\+\+S\+T\+R\+I\+NG}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+S\+T\+R\+I\+NG@{G\+M\+L\+\_\+\+S\+T\+R\+I\+NG}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77faf0bce82a1ff34fb53cf52efeda5100ab}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77faf0bce82a1ff34fb53cf52efeda5100ab}} 
+G\+M\+L\+\_\+\+S\+T\+R\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+L\+\_\+\+B\+R\+A\+C\+K\+ET@{G\+M\+L\+\_\+\+L\+\_\+\+B\+R\+A\+C\+K\+ET}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+L\+\_\+\+B\+R\+A\+C\+K\+ET@{G\+M\+L\+\_\+\+L\+\_\+\+B\+R\+A\+C\+K\+ET}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa71d26e40c555ad03a41ba81ca08e07a1}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa71d26e40c555ad03a41ba81ca08e07a1}} 
+G\+M\+L\+\_\+\+L\+\_\+\+B\+R\+A\+C\+K\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+R\+\_\+\+B\+R\+A\+C\+K\+ET@{G\+M\+L\+\_\+\+R\+\_\+\+B\+R\+A\+C\+K\+ET}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+R\+\_\+\+B\+R\+A\+C\+K\+ET@{G\+M\+L\+\_\+\+R\+\_\+\+B\+R\+A\+C\+K\+ET}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fae1092eec290bb6f22f39c7fb24455fa2}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fae1092eec290bb6f22f39c7fb24455fa2}} 
+G\+M\+L\+\_\+\+R\+\_\+\+B\+R\+A\+C\+K\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+E\+ND@{G\+M\+L\+\_\+\+E\+ND}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+E\+ND@{G\+M\+L\+\_\+\+E\+ND}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fadcfebc4372f2199ae1e2bea95b2fa88f}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fadcfebc4372f2199ae1e2bea95b2fa88f}} 
+G\+M\+L\+\_\+\+E\+ND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+L\+I\+ST@{G\+M\+L\+\_\+\+L\+I\+ST}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+L\+I\+ST@{G\+M\+L\+\_\+\+L\+I\+ST}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa0f6c57e598f6d261bd378b1f21d22172}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa0f6c57e598f6d261bd378b1f21d22172}} 
+G\+M\+L\+\_\+\+L\+I\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+M\+L\+\_\+\+E\+R\+R\+OR@{G\+M\+L\+\_\+\+E\+R\+R\+OR}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+\+E\+R\+R\+OR@{G\+M\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa1aa37fc8a21c9a2efd78847f040ba8d6}\label{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa1aa37fc8a21c9a2efd78847f040ba8d6}} 
+G\+M\+L\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 25 of file gml\+\_\+scanner.\+h.
+
+
+\begin{DoxyCode}
+25                         \{
+26     \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77facbdebde5753a69fe5b0f2975de60c82b}{GML\_KEY}}, \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa9c67cc9c0b45542b05cfe2097996541d}{GML\_INT}}, \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa2240c7d602fb38d5687a4dc58ed05af9}{GML\_DOUBLE}}, \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77faf0bce82a1ff34fb53cf52efeda5100ab}{GML\_STRING}}, 
+      \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa71d26e40c555ad03a41ba81ca08e07a1}{GML\_L\_BRACKET}}, 
+27     \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fae1092eec290bb6f22f39c7fb24455fa2}{GML\_R\_BRACKET}}, \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fadcfebc4372f2199ae1e2bea95b2fa88f}{GML\_END}}, \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa0f6c57e598f6d261bd378b1f21d22172}{GML\_LIST}}, \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa1aa37fc8a21c9a2efd78847f040ba8d6}{GML\_ERROR}}
+28 \} \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77f}{GML\_value}}; 
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gml__scanner_8h_af3b444abb87b2d5e5c65e3cca251ddc4}\label{gml__scanner_8h_af3b444abb87b2d5e5c65e3cca251ddc4}} 
+\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+init@{G\+M\+L\+\_\+init}}
+\index{G\+M\+L\+\_\+init@{G\+M\+L\+\_\+init}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}
+\subsubsection{\texorpdfstring{G\+M\+L\+\_\+init()}{GML\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} void G\+M\+L\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 156 of file gml\+\_\+scanner.\+cpp.
+
+
+\begin{DoxyCode}
+156                  \{
+157 
+158     \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}} = 1;
+159     \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} = 1;
+160 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{gml__scanner_8h_af3b444abb87b2d5e5c65e3cca251ddc4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gml__scanner_8h_a03cd9d9104363d98d90e61ec2fad5721}\label{gml__scanner_8h_a03cd9d9104363d98d90e61ec2fad5721}} 
+\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+scanner@{G\+M\+L\+\_\+scanner}}
+\index{G\+M\+L\+\_\+scanner@{G\+M\+L\+\_\+scanner}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}
+\subsubsection{\texorpdfstring{G\+M\+L\+\_\+scanner()}{GML\_scanner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} struct \mbox{\hyperlink{struct_g_m_l__token}{G\+M\+L\+\_\+token}} G\+M\+L\+\_\+scanner (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 164 of file gml\+\_\+scanner.\+cpp.
+
+
+\begin{DoxyCode}
+164                                             \{
+165     
+166     \textcolor{keywordtype}{int} cur\_max\_size = \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}};
+167     \textcolor{keyword}{static} \textcolor{keywordtype}{char} buffer[\mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}}];
+168     \textcolor{keywordtype}{char}* tmp = buffer;
+169     \textcolor{keywordtype}{char}* ret = tmp;
+170     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_g_m_l__token}{GML\_token}} token;
+171     \textcolor{keywordtype}{int} is\_float = 0;
+172     \textcolor{keywordtype}{int} count = 0;
+173     \textcolor{keywordtype}{int} next;
+174     \textcolor{keywordtype}{char} ISO\_buffer[8];
+175     \textcolor{keywordtype}{int} ISO\_count;
+176 
+177     assert (source != NULL);
+178     
+179     \textcolor{comment}{/* }
+180 \textcolor{comment}{     * eliminate preceeding white spaces}
+181 \textcolor{comment}{     */}
+182     
+183     \textcolor{keywordflow}{do} \{
+184     next = fgetc (source);
+185     \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}}++;
+186 
+187     \textcolor{keywordflow}{if} (next == \textcolor{charliteral}{'\(\backslash\)n'}) \{
+188         \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}}++;
+189         \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} = 1;
+190     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (next == EOF) \{
+191         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fadcfebc4372f2199ae1e2bea95b2fa88f}{GML\_END}};
+192         \textcolor{keywordflow}{return} token;
+193     \}
+194     \} \textcolor{keywordflow}{while} (isspace (next));
+195     
+196     \textcolor{keywordflow}{if} (isdigit (next) || next == \textcolor{charliteral}{'.'} || next == \textcolor{charliteral}{'+'} || next == \textcolor{charliteral}{'-'}) \{
+197     
+198     \textcolor{comment}{/* }
+199 \textcolor{comment}{     * floating point or integer }
+200 \textcolor{comment}{     */}
+201         
+202     \textcolor{keywordflow}{do} \{
+203         \textcolor{keywordflow}{if} (count == \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}} - 1) \{
+204         token.value.err.err\_num = \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca221df19cbc1f2fea1a52cb139a359e0c}{GML\_TOO\_MANY\_DIGITS}};
+205         token.value.err.line = \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}};
+206         token.value.err.column = \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} + count;
+207         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa1aa37fc8a21c9a2efd78847f040ba8d6}{GML\_ERROR}};
+208         \textcolor{keywordflow}{return} token;
+209         \}
+210 
+211         \textcolor{keywordflow}{if} (next == \textcolor{charliteral}{'.'} || next == \textcolor{charliteral}{'E'}) \{
+212         is\_float = 1;
+213         \}
+214 
+215         buffer[count] = next;
+216         count++;
+217         next = fgetc (source);
+218 
+219     \} \textcolor{keywordflow}{while} (!isspace(next) && next != \textcolor{charliteral}{']'});
+220 
+221     \textcolor{keywordflow}{if} (next == \textcolor{charliteral}{']'}) \{
+222        ungetc (next, source);
+223     \}
+224 
+225     buffer[count] = 0;
+226     
+227     \textcolor{keywordflow}{if} (next == \textcolor{charliteral}{'\(\backslash\)n'}) \{
+228         \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}}++;
+229         \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} = 1;
+230     \} \textcolor{keywordflow}{else} \{
+231         \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} += count;
+232     \}
+233         
+234     \textcolor{keywordflow}{if} (is\_float) \{
+235         token.value.floating = atof (tmp);
+236         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa2240c7d602fb38d5687a4dc58ed05af9}{GML\_DOUBLE}};
+237     \} \textcolor{keywordflow}{else} \{
+238         token.value.integer = atol (tmp);
+239         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa9c67cc9c0b45542b05cfe2097996541d}{GML\_INT}};
+240     \}
+241 
+242     \textcolor{keywordflow}{return} token;
+243     
+244     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (isalpha (next) || next == \textcolor{charliteral}{'\_'}) \{
+245     
+246     \textcolor{comment}{/*}
+247 \textcolor{comment}{     * key}
+248 \textcolor{comment}{     */}
+249             
+250     \textcolor{keywordflow}{do} \{
+251         \textcolor{keywordflow}{if} (count == cur\_max\_size - 1) \{
+252         *tmp = 0;
+253         tmp =  (\textcolor{keywordtype}{char}*) malloc(2 * cur\_max\_size * \textcolor{keyword}{sizeof} (\textcolor{keywordtype}{char}));
+254         strcpy (tmp, ret);
+255         
+256         \textcolor{keywordflow}{if} (cur\_max\_size > \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}}) \{
+257             free (ret);
+258         \}
+259 
+260         ret = tmp;
+261         tmp += count;
+262         cur\_max\_size *= 2;
+263         \}
+264 
+265         \textcolor{keywordflow}{if} (!isalnum (next) && next != \textcolor{charliteral}{'\_'}) \{
+266         token.value.err.err\_num = \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}{GML\_UNEXPECTED}};
+267         token.value.err.line = \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}};
+268         token.value.err.column = \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} + count;
+269         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa1aa37fc8a21c9a2efd78847f040ba8d6}{GML\_ERROR}};
+270         
+271         \textcolor{keywordflow}{if} (cur\_max\_size > \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}}) \{
+272             free (ret);
+273         \}
+274 
+275         \textcolor{keywordflow}{return} token;
+276         \}
+277 
+278         *tmp++ = next;
+279         count++;
+280         next = fgetc (source);
+281     \} \textcolor{keywordflow}{while} (!isspace (next) && next != EOF);
+282 
+283     \textcolor{keywordflow}{if} (next == \textcolor{charliteral}{'\(\backslash\)n'}) \{
+284         \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}}++;
+285         \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} = 1;
+286     \} \textcolor{keywordflow}{else} \{
+287         \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} += count;
+288     \}
+289 
+290     *tmp = 0;
+291     token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77facbdebde5753a69fe5b0f2975de60c82b}{GML\_KEY}};
+292     token.value.str = (\textcolor{keywordtype}{char}*) malloc((count+1) * \textcolor{keyword}{sizeof} (char));
+293     strcpy (token.value.str, ret);
+294     
+295     \textcolor{keywordflow}{if} (cur\_max\_size > \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}}) \{
+296         free (ret);
+297     \}
+298     
+299     \textcolor{keywordflow}{return} token;
+300 
+301     \} \textcolor{keywordflow}{else} \{
+302     \textcolor{comment}{/*}
+303 \textcolor{comment}{     * comments, brackets and strings}
+304 \textcolor{comment}{     */}
+305 
+306     \textcolor{keywordflow}{switch} (next) \{
+307     \textcolor{keywordflow}{case} \textcolor{charliteral}{'#'}:
+308         \textcolor{keywordflow}{do} \{
+309         next = fgetc (source);
+310         \} \textcolor{keywordflow}{while} (next != \textcolor{charliteral}{'\(\backslash\)n'} && next != EOF);
+311         
+312         \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}}++;
+313         \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} = 1;
+314         \textcolor{keywordflow}{return} \mbox{\hyperlink{gml__scanner_8cpp_a3d644c9b53753dacfd858144ef823103}{GML\_scanner}} (source);
+315 
+316     \textcolor{keywordflow}{case} \textcolor{charliteral}{'['}:
+317         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa71d26e40c555ad03a41ba81ca08e07a1}{GML\_L\_BRACKET}};
+318         \textcolor{keywordflow}{return} token;
+319 
+320     \textcolor{keywordflow}{case} \textcolor{charliteral}{']'}:
+321         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fae1092eec290bb6f22f39c7fb24455fa2}{GML\_R\_BRACKET}};
+322         \textcolor{keywordflow}{return} token;
+323         
+324     \textcolor{keywordflow}{case} \textcolor{charliteral}{'"'}:
+325         next = fgetc (source);
+326         \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}}++;
+327 
+328         \textcolor{keywordflow}{while} (next != \textcolor{charliteral}{'"'}) \{
+329         
+330         \textcolor{keywordflow}{if} (count >= cur\_max\_size - 8) \{
+331             *tmp = 0;
+332             tmp = (\textcolor{keywordtype}{char}*) malloc (2 * cur\_max\_size * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));
+333             strcpy (tmp, ret);
+334             
+335             \textcolor{keywordflow}{if} (cur\_max\_size > \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}}) \{
+336             free (ret);
+337             \}
+338 
+339             ret = tmp;
+340             tmp += count;
+341             cur\_max\_size *= 2;
+342         \}
+343         
+344         \textcolor{keywordflow}{if} (next == \textcolor{charliteral}{'&'}) \{
+345           ISO\_count = 0;
+346 
+347           \textcolor{keywordflow}{while} (next != \textcolor{charliteral}{';'}) \{
+348             \textcolor{keywordflow}{if} (next == \textcolor{charliteral}{'"'} || next == EOF) \{
+349               ungetc (next, source);
+350               ISO\_count = 0;
+351               \textcolor{keywordflow}{break};
+352             \}
+353             
+354             \textcolor{keywordflow}{if} (ISO\_count < 8) \{
+355               ISO\_buffer[ISO\_count] = next;
+356               ISO\_count++;
+357             \}
+358 
+359             next = fgetc (source);
+360           \}
+361             
+362           \textcolor{keywordflow}{if} (ISO\_count == 8) \{
+363             ISO\_count = 0;
+364           \}
+365 
+366           \textcolor{keywordflow}{if} (ISO\_count) \{
+367             ISO\_buffer[ISO\_count] = \textcolor{charliteral}{';'};
+368             ISO\_count++;
+369             next = \mbox{\hyperlink{gml__scanner_8cpp_aa76e107cfa85217c7cd0f45f72761b52}{GML\_search\_ISO}} (ISO\_buffer, ISO\_count);
+370             ISO\_count = 0;
+371           \} \textcolor{keywordflow}{else} \{
+372             next = \textcolor{charliteral}{'&'};
+373           \}
+374         \} 
+375 
+376         *tmp++ = next;
+377         count++;
+378         \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}}++;
+379             
+380         next = fgetc (source);
+381 
+382         \textcolor{keywordflow}{if} (next == EOF) \{
+383             token.value.err.err\_num = \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3af6ee9ba1b3704ced7c81a576c3eae8}{GML\_PREMATURE\_EOF}};
+384             token.value.err.line = \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}};
+385             token.value.err.column = \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} + count;
+386             token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa1aa37fc8a21c9a2efd78847f040ba8d6}{GML\_ERROR}};
+387             
+388             \textcolor{keywordflow}{if} (cur\_max\_size > \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}}) \{
+389             free (ret);
+390             \}
+391             
+392             \textcolor{keywordflow}{return} token;
+393         \}
+394 
+395         \textcolor{keywordflow}{if} (next == \textcolor{charliteral}{'\(\backslash\)n'}) \{
+396             \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}}++;
+397             \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}} = 1;
+398         \}
+399         \}
+400 
+401         *tmp = 0;
+402         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77faf0bce82a1ff34fb53cf52efeda5100ab}{GML\_STRING}};
+403         token.value.str = (\textcolor{keywordtype}{char}*) malloc((count+1) * \textcolor{keyword}{sizeof} (char));
+404         strcpy (token.value.str, ret);
+405         
+406         \textcolor{keywordflow}{if} (cur\_max\_size > \mbox{\hyperlink{gml__scanner_8h_a40958a1382463445e451148e3a93e049}{INITIAL\_SIZE}}) \{
+407         free (ret);
+408         \}
+409 
+410         \textcolor{keywordflow}{return} token;
+411         
+412     \textcolor{keywordflow}{default}:
+413         token.value.err.err\_num = \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}{GML\_UNEXPECTED}};
+414         token.value.err.line = \mbox{\hyperlink{gml__scanner_8cpp_a78935f3073204e50e35478168c5584f1}{GML\_line}};
+415         token.value.err.column = \mbox{\hyperlink{gml__scanner_8cpp_a58683df3be3b58b4daee9fefbe7793cf}{GML\_column}};
+416         token.kind = \mbox{\hyperlink{gml__scanner_8h_a2dc4839311e05f9a17adefcd0012b77fa1aa37fc8a21c9a2efd78847f040ba8d6}{GML\_ERROR}};
+417         \textcolor{keywordflow}{return} token;
+418     \}       
+419     \}
+420 \}       
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{gml__scanner_8h_a03cd9d9104363d98d90e61ec2fad5721_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gml__scanner_8h_a03cd9d9104363d98d90e61ec2fad5721_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{gml__scanner_8h_a40468353f878192847755525fa870cb5}\label{gml__scanner_8h_a40468353f878192847755525fa870cb5}} 
+\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+column@{G\+M\+L\+\_\+column}}
+\index{G\+M\+L\+\_\+column@{G\+M\+L\+\_\+column}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}
+\subsubsection{\texorpdfstring{G\+M\+L\+\_\+column}{GML\_column}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} unsigned int G\+M\+L\+\_\+column}
+
+
+
+Definition at line 123 of file gml\+\_\+scanner.\+cpp.
+
+\mbox{\Hypertarget{gml__scanner_8h_aaa524d3c642fd5f968b1164df9094ac6}\label{gml__scanner_8h_aaa524d3c642fd5f968b1164df9094ac6}} 
+\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+line@{G\+M\+L\+\_\+line}}
+\index{G\+M\+L\+\_\+line@{G\+M\+L\+\_\+line}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}
+\subsubsection{\texorpdfstring{G\+M\+L\+\_\+line}{GML\_line}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} unsigned int G\+M\+L\+\_\+line}
+
+
+
+Definition at line 122 of file gml\+\_\+scanner.\+cpp.
+
+\mbox{\Hypertarget{gml__scanner_8h_a1b10338eaa8fbc16ce06d123f7bb6ce1}\label{gml__scanner_8h_a1b10338eaa8fbc16ce06d123f7bb6ce1}} 
+\index{gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}!G\+M\+L\+\_\+table@{G\+M\+L\+\_\+table}}
+\index{G\+M\+L\+\_\+table@{G\+M\+L\+\_\+table}!gml\+\_\+scanner.\+h@{gml\+\_\+scanner.\+h}}
+\subsubsection{\texorpdfstring{G\+M\+L\+\_\+table}{GML\_table}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} const char$\ast$ G\+M\+L\+\_\+table\mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line 22 of file gml\+\_\+scanner.\+cpp.
+

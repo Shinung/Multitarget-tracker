@@ -1,0 +1,6 @@
+<map id="TKalmanFilter::CreateLinear" name="TKalmanFilter::CreateLinear">
+<area shape="rect" id="node2" href="$class_t_kalman_filter.html#a0c25b9a1a9676956aed0db44ad56696a" title="TKalmanFilter::Update" alt="" coords="236,31,387,57"/>
+<area shape="rect" id="node3" href="$class_c_track.html#a0f4fc1dc488e8ae339e988962dae6873" title="CTrack::RectUpdate" alt="" coords="437,5,575,32"/>
+<area shape="rect" id="node5" href="$class_c_track.html#a19453a750a9ec71d6f3465f6031ad64b" title="PointUpdate. " alt="" coords="435,56,577,83"/>
+<area shape="rect" id="node4" href="$class_c_track.html#a582c4e1ad42d5985e0f395fa5a48bdbc" title="Update. " alt="" coords="625,31,737,57"/>
+</map>

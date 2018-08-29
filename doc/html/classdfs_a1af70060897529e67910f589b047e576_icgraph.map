@@ -1,0 +1,10 @@
+<map id="dfs::check" name="dfs::check">
+<area shape="rect" id="node2" href="$classcomponents.html#aeeda901d02c65d6c31c8b6148540d7c1" title="Checks whether the connected components algorithm can be applied. " alt="" coords="139,5,275,32"/>
+<area shape="rect" id="node4" href="$gml2nestedsql_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="182,56,233,83"/>
+<area shape="rect" id="node5" href="$classbiconnectivity.html#a65e0e821f5e9ce8d210648d462fd2cfa" title="Checks whether the algorithm can be applied. " alt="" coords="136,107,279,133"/>
+<area shape="rect" id="node7" href="$classbiconnectivity.html#a64adab869e0080e3a1f8479e70010317" title="Handler called before the start of DFS. " alt="" coords="145,158,270,199"/>
+<area shape="rect" id="node8" href="$classratio__cut__partition.html#a46dba3eabbf31ce9d3545ba67fba1b62" title="ratio_cut_partition\l::make_connected" alt="" coords="143,223,272,265"/>
+<area shape="rect" id="node3" href="$components_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="377,5,427,32"/>
+<area shape="rect" id="node6" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="353,107,451,133"/>
+<area shape="rect" id="node9" href="$classratio__cut__partition.html#a4ab180ca4cf57c811e3478c3de4c4dc3" title="ratio_cut_partition::run" alt="" coords="327,231,477,257"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="graph::new_edge" name="graph::new_edge">
+<area shape="rect" id="node2" href="$classgraph.html#a0a7a68fa0baa47ef955525c445fa1a04" title="graph::pre_new_edge\l_handler" alt="" coords="177,5,322,47"/>
+<area shape="rect" id="node3" href="$classgraph.html#a3f3121c481746ab0a19eb187da5c0246" title="graph::new_edge_id" alt="" coords="181,71,318,98"/>
+<area shape="rect" id="node4" href="$classgraph.html#a443182426b461aa9f4b1c9f5ac535179" title="graph::post_new_edge\l_handler" alt="" coords="173,123,325,164"/>
+</map>

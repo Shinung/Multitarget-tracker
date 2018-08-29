@@ -1,0 +1,5 @@
+<map id="node::degree" name="node::degree">
+<area shape="rect" id="node2" href="$classbiconnectivity.html#ae94213830755f1f4d477ec6bff0f25b8" title="Called when DFS is started with start&#45;node n. " alt="" coords="184,5,315,47"/>
+<area shape="rect" id="node3" href="$class_my_graph.html#a513bec2f1949a01d517dd57cc9c30233" title="MyGraph::node_cliqueishness" alt="" coords="151,71,348,98"/>
+<area shape="rect" id="node4" href="$class_my_graph.html#a2bb131d5401dc66c01acb976daa7e981" title="MyGraph::cliqueishness" alt="" coords="396,71,559,98"/>
+</map>

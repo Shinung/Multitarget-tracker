@@ -1,0 +1,7 @@
+<map id="biconnectivity::end_handler" name="biconnectivity::end_handler">
+<area shape="rect" id="node2" href="$classdfs.html#af847633fa642258d3522e8deb26aef37" title="End&#45;Iterator for iteration through all (reached) nodes in DFS&#45;order. " alt="" coords="217,21,285,47"/>
+<area shape="rect" id="node3" href="$classgraph.html#a2e5426682a0897b9f9104b019970bedc" title="graph::restore_edge" alt="" coords="183,71,320,98"/>
+<area shape="rect" id="node4" href="$classgraph.html#a569d227d9f4914278a143d52139e3303" title="graph::pre_restore\l_edge_handler" alt="" coords="372,5,499,47"/>
+<area shape="rect" id="node5" href="$classedge.html#ab6d6192a90b1cb77ce9dee2de78d9743" title="edge::is_hidden" alt="" coords="379,71,492,98"/>
+<area shape="rect" id="node6" href="$classgraph.html#adfc71011ae82f047c550eba6d9e7bb3a" title="graph::post_restore\l_edge_handler" alt="" coords="368,123,503,164"/>
+</map>

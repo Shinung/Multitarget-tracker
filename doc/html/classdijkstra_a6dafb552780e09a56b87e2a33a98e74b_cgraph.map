@@ -1,0 +1,6 @@
+<map id="dijkstra::init" name="dijkstra::init">
+<area shape="rect" id="node2" href="$classne__map.html#a4ef2ab4aebcb57a7a101975bf6a88e24" title="ne_map::init" alt="" coords="163,5,257,32"/>
+<area shape="rect" id="node3" href="$classgraph.html#abbf9c0cb5629e98e1142254911238173" title="graph::nodes_end" alt="" coords="147,56,273,83"/>
+<area shape="rect" id="node4" href="$classgraph.html#aec053a4b509d1be804237a80044c54c0" title="graph::nodes_begin" alt="" coords="143,107,277,133"/>
+<area shape="rect" id="node5" href="$classne__map.html#aebe555c23769c6dcc869b5ac7fae6a9c" title="ne_map::clear" alt="" coords="158,157,262,184"/>
+</map>

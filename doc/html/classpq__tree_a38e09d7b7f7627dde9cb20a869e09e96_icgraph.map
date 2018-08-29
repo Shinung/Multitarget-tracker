@@ -1,0 +1,5 @@
+<map id="pq_tree::P2" name="pq_tree::P2">
+<area shape="rect" id="node2" href="$classpq__tree.html#a390598b675cb86952ab8cfb444056eb8" title="Applies so called template matchings to the tree until either all leaves labeled with id are consecut..." alt="" coords="143,5,255,32"/>
+<area shape="rect" id="node3" href="$classplanarity.html#a0a1949c82648889d188b2e748bc461da" title="planarity::run_on_biconnected" alt="" coords="303,5,497,32"/>
+<area shape="rect" id="node4" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="545,5,643,32"/>
+</map>

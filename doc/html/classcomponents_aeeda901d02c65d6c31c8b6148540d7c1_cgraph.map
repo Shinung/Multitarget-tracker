@@ -1,0 +1,4 @@
+<map id="components::check" name="components::check">
+<area shape="rect" id="node2" href="$classgraph.html#aba427ff8ba0f70c68416ec1351344cd8" title="graph::is_undirected" alt="" coords="189,5,328,32"/>
+<area shape="rect" id="node3" href="$classdfs.html#a1af70060897529e67910f589b047e576" title="Checks whether the preconditions for DFS are satisfied. " alt="" coords="217,56,300,83"/>
+</map>

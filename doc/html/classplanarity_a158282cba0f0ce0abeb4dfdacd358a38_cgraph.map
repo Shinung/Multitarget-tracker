@@ -1,0 +1,10 @@
+<map id="planarity::run_through_partial" name="planarity::run_through_partial">
+<area shape="rect" id="node2" href="$classplanarity.html#a28d9726f7d001b1a348bcf570ee650d6" title="planarity::search_full_leaf" alt="" coords="210,107,378,133"/>
+<area shape="rect" id="node6" href="$classplanarity.html#a86f10c5faa107a5a672028e0c34b4a08" title="planarity::up_until\l_marked" alt="" coords="232,209,356,250"/>
+<area shape="rect" id="node7" href="$classnode.html#a13dbd1809a33a5efede64a359e53a363" title="node::opposite" alt="" coords="436,212,543,239"/>
+<area shape="rect" id="node8" href="$classplanarity.html#a7ad1be6403fe0c9905dac72d32fd8ef4" title="planarity::search_empty_leaf" alt="" coords="200,56,388,83"/>
+<area shape="rect" id="node3" href="$classpq__node.html#aa9873c0cfad88bc4404857ce57d422e4" title="pq_node::kind" alt="" coords="438,107,541,133"/>
+<area shape="rect" id="node4" href="$classpq__node.html#a805b6ef48c847380b47c8ba882ed4ee2" title="pq_node::L" alt="" coords="446,56,533,83"/>
+<area shape="rect" id="node5" href="$classsymlist.html#a7283589fa01f79d722f8256d7a6a7883" title="End of iteration through elements of list. " alt="" coords="443,157,536,184"/>
+<area shape="rect" id="node9" href="$classsymlist.html#a525b8d44af5d771fe15916372515cce0" title="Start iteration through elements of list. " alt="" coords="438,5,541,32"/>
+</map>

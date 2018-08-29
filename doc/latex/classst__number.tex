@@ -1,0 +1,701 @@
+\hypertarget{classst__number}{}\section{st\+\_\+number Class Reference}
+\label{classst__number}\index{st\+\_\+number@{st\+\_\+number}}
+
+
+S\+T-\/number algorithm.  
+
+
+
+
+{\ttfamily \#include $<$st\+\_\+number.\+h$>$}
+
+
+
+Inheritance diagram for st\+\_\+number\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classst__number__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for st\+\_\+number\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef nodes\+\_\+t\+::iterator \mbox{\hyperlink{classst__number_a3aa3701636f69a567c5f6a676afafd39}{iterator}}
+\item 
+typedef nodes\+\_\+t\+::reverse\+\_\+iterator \mbox{\hyperlink{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}{reverse\+\_\+iterator}}
+\item 
+enum \{ \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{G\+T\+L\+\_\+\+OK}} = 1, 
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{G\+T\+L\+\_\+\+E\+R\+R\+OR}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classst__number_a07532323fbcc643dfc419809385b64a7}{st\+\_\+number}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates st-\/number object. Please note that there are no reasonable default settings for the parameters, i.\+e. the edge  st connecting the lowest with highest numbers node and which of its endpoints should get number 1 (= node {\itshape s}) has to be specified always. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classst__number_a4f3a2a6ceab39d106c920ee3546c259d}{$\sim$st\+\_\+number}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classst__number_a1564af6f603160105643f22bf2f6955b}{st\+\_\+edge}} (\mbox{\hyperlink{classedge}{edge}} e)
+\begin{DoxyCompactList}\small\item\em Sets edge {\itshape st} for the next run. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classedge}{edge}} \mbox{\hyperlink{classst__number_a8938bab7883ff4194d1a7b4c6d8fb471}{st\+\_\+edge}} () const
+\begin{DoxyCompactList}\small\item\em Get edge {\itshape st}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classst__number_aa607c9aaa5a4d9c45e5854ce672f0fda}{s\+\_\+node}} (\mbox{\hyperlink{classnode}{node}} n)
+\begin{DoxyCompactList}\small\item\em Sets node {\itshape s} for next run. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classst__number_aba061fba83eb63b7a23dd685e1db663c}{s\+\_\+node}} () const
+\begin{DoxyCompactList}\small\item\em Get node {\itshape s}. \end{DoxyCompactList}\item 
+int \& \mbox{\hyperlink{classst__number_a969162a10da5daba4219419d45c4be51}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classnode}{node}} \&n)
+\begin{DoxyCompactList}\small\item\em Returns st-\/number of node {\ttfamily n} as determined in the last run. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classst__number_a3aa3701636f69a567c5f6a676afafd39}{iterator}} \mbox{\hyperlink{classst__number_a1eddb2577b16109d22cde98a8ffde057}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Iteration through the nodes of graph st-\/numbered in last run in st-\/number order, i.\+e. from 1 to highest st-\/number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classst__number_a3aa3701636f69a567c5f6a676afafd39}{iterator}} \mbox{\hyperlink{classst__number_a3912b83a8cbddcb1fc804d20be528d52}{end}} ()
+\begin{DoxyCompactList}\small\item\em Iteration through nodes of graph in st-\/number order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}{reverse\+\_\+iterator}} \mbox{\hyperlink{classst__number_a56f2c67e9b49362947fe0c99278f6d31}{rbegin}} ()
+\begin{DoxyCompactList}\small\item\em Iteration through the nodes of graph st-\/numbered in last run in reverse st-\/number order, i.\+e. from highest st-\/number down to 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}{reverse\+\_\+iterator}} \mbox{\hyperlink{classst__number_a4c5fdce6ab2be7ee9ddbb09e8d5c8560}{rend}} ()
+\begin{DoxyCompactList}\small\item\em End of iteration through nodes of graph in reverse st-\/number order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classst__number_a2aad4550b821c52d6998bff35fd8648f}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Checks whether st-\/number algorithm can be applied to {\ttfamily G}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classst__number_af902a0c05d07d47b587e8f7a6b7beaa1}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\begin{DoxyCompactList}\small\item\em Runs st-\/number algorithm on graph {\ttfamily G}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classst__number_ae6f86706b8ae3495d3794b8c684fff0f}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets algorithm in order to be applied to the next graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classedge}{edge}} \mbox{\hyperlink{classst__number_a58fe3a128f0d06ce17742b62d8eff1a8}{st}}
+\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classst__number_a1ada73c04f88b70b2392aa9ab0d1a6b0}{s}}
+\item 
+\mbox{\hyperlink{classpathfinder}{pathfinder}} $\ast$ \mbox{\hyperlink{classst__number_a2aa9c83b684379d86c4e620f0a3e5703}{pf}}
+\item 
+\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\+\_\+ord}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{classst__number_ac3443aa6c9d11b990357d8ac1342cabc}{st\+\_\+num}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+T-\/number algorithm. 
+
+Encapsulates the st-\/number algorithm together with all the data produced by it. 
+
+Assigns an integer {\ttfamily st\mbox{[}n\mbox{]}} to each node {\ttfamily n} of a undirected, biconnected graph, such that each node is connected with at least one node having a smaller and with at least one having a larger number than itself. The only exception to this rule are the endpoints of edge {\itshape st} connecting nodes {\itshape s} (st-\/number 1) and {\ttfamily t} (highest st-\/number). 
+
+The following options are supported\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classst__number_a1564af6f603160105643f22bf2f6955b}{st\+\_\+edge}} sets/retrieves the edge that connects the node with the lowest number to that with the highest.
+\item \mbox{\hyperlink{classst__number_aa607c9aaa5a4d9c45e5854ce672f0fda}{s\+\_\+node}} sets/retrieves that endpoints of the {\itshape st\+\_\+edge}, which gets number 1. 
+\end{DoxyItemize}
+
+Definition at line 233 of file st\+\_\+number.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classst__number_a3aa3701636f69a567c5f6a676afafd39}\label{classst__number_a3aa3701636f69a567c5f6a676afafd39}} 
+\index{st\+\_\+number@{st\+\_\+number}!iterator@{iterator}}
+\index{iterator@{iterator}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily typedef nodes\+\_\+t\+::iterator \mbox{\hyperlink{classst__number_a3aa3701636f69a567c5f6a676afafd39}{st\+\_\+number\+::iterator}}}
+
+
+
+Definition at line 313 of file st\+\_\+number.\+h.
+
+\mbox{\Hypertarget{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}\label{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}} 
+\index{st\+\_\+number@{st\+\_\+number}!reverse\+\_\+iterator@{reverse\+\_\+iterator}}
+\index{reverse\+\_\+iterator@{reverse\+\_\+iterator}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{reverse\+\_\+iterator}{reverse\_iterator}}
+{\footnotesize\ttfamily typedef nodes\+\_\+t\+::reverse\+\_\+iterator \mbox{\hyperlink{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}{st\+\_\+number\+::reverse\+\_\+iterator}}}
+
+
+
+Definition at line 318 of file st\+\_\+number.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}!st\+\_\+number@{st\+\_\+number}}\index{st\+\_\+number@{st\+\_\+number}!G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}} 
+G\+T\+L\+\_\+\+OK&Used as (positive) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}!st\+\_\+number@{st\+\_\+number}}\index{st\+\_\+number@{st\+\_\+number}!G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}} 
+G\+T\+L\+\_\+\+E\+R\+R\+OR&Used as (negative) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 40 of file algorithm.\+h.
+
+
+\begin{DoxyCode}
+40          \{
+41     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}} = 1,
+42     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}} = 0
+43     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classst__number_a07532323fbcc643dfc419809385b64a7}\label{classst__number_a07532323fbcc643dfc419809385b64a7}} 
+\index{st\+\_\+number@{st\+\_\+number}!st\+\_\+number@{st\+\_\+number}}
+\index{st\+\_\+number@{st\+\_\+number}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{st\+\_\+number()}{st\_number()}}
+{\footnotesize\ttfamily st\+\_\+number\+::st\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. Creates st-\/number object. Please note that there are no reasonable default settings for the parameters, i.\+e. the edge  st connecting the lowest with highest numbers node and which of its endpoints should get number 1 (= node {\itshape s}) has to be specified always. 
+
+
+
+Definition at line 243 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+243                 : \mbox{\hyperlink{classalgorithm_ab79e1ddec2f2afdf4b36b10724db8b15}{algorithm}}()
+244     \{
+245     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classst__number_a4f3a2a6ceab39d106c920ee3546c259d}\label{classst__number_a4f3a2a6ceab39d106c920ee3546c259d}} 
+\index{st\+\_\+number@{st\+\_\+number}!````~st\+\_\+number@{$\sim$st\+\_\+number}}
+\index{````~st\+\_\+number@{$\sim$st\+\_\+number}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{$\sim$st\+\_\+number()}{~st\_number()}}
+{\footnotesize\ttfamily virtual st\+\_\+number\+::$\sim$st\+\_\+number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+Definition at line 250 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+251     \{
+252     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classst__number_a1eddb2577b16109d22cde98a8ffde057}\label{classst__number_a1eddb2577b16109d22cde98a8ffde057}} 
+\index{st\+\_\+number@{st\+\_\+number}!begin@{begin}}
+\index{begin@{begin}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classst__number_a3aa3701636f69a567c5f6a676afafd39}{iterator}} st\+\_\+number\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iteration through the nodes of graph st-\/numbered in last run in st-\/number order, i.\+e. from 1 to highest st-\/number. 
+
+\begin{DoxyReturn}{Returns}
+start of iteration through nodes in st-\/number order 
+\end{DoxyReturn}
+
+
+Definition at line 326 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+327     \{
+328     \textcolor{keywordflow}{return} \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.begin();
+329     \}   
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_a1eddb2577b16109d22cde98a8ffde057_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classst__number_a2aad4550b821c52d6998bff35fd8648f}\label{classst__number_a2aad4550b821c52d6998bff35fd8648f}} 
+\index{st\+\_\+number@{st\+\_\+number}!check@{check}}
+\index{check@{check}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int st\+\_\+number\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Checks whether st-\/number algorithm can be applied to {\ttfamily G}. 
+
+Besides from the trivial preconditions that edge {\itshape st} and node {\itshape s} lie in {\ttfamily G} and {\itshape s} is really an endpoint of {\itshape st} (which isn\textquotesingle{}t checked), {\ttfamily G} must be undirected and biconnected. \begin{DoxyNote}{Note}
+As for all algorithms in \mbox{\hyperlink{namespace_g_t_l}{G\+TL}}, \mbox{\hyperlink{classst__number_a2aad4550b821c52d6998bff35fd8648f}{check}} must be called, because it might do some initialization.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}} & iff st-\/number algorithm may be applied\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+
+
+
+Definition at line 201 of file st\+\_\+number.\+cpp.
+
+
+\begin{DoxyCode}
+202 \{
+203     \textcolor{keywordflow}{if} (G.\mbox{\hyperlink{classgraph_afc510be7479fa903fde9e0e615470ab0}{is\_directed}}()) \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+204     
+205     \mbox{\hyperlink{classst__number_a2aa9c83b684379d86c4e620f0a3e5703}{pf}} = \textcolor{keyword}{new} \mbox{\hyperlink{classpathfinder}{pathfinder}} (G, \mbox{\hyperlink{classst__number_a58fe3a128f0d06ce17742b62d8eff1a8}{st}}, \mbox{\hyperlink{classst__number_a1ada73c04f88b70b2392aa9ab0d1a6b0}{s}});
+206     
+207     \textcolor{keywordflow}{return} \mbox{\hyperlink{classst__number_a2aa9c83b684379d86c4e620f0a3e5703}{pf}}->\mbox{\hyperlink{classpathfinder_a3e595928f8f00bb7b9639f82684f8f05}{is\_valid}}() ? \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}} : \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+208 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_a2aad4550b821c52d6998bff35fd8648f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_a2aad4550b821c52d6998bff35fd8648f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classst__number_a3912b83a8cbddcb1fc804d20be528d52}\label{classst__number_a3912b83a8cbddcb1fc804d20be528d52}} 
+\index{st\+\_\+number@{st\+\_\+number}!end@{end}}
+\index{end@{end}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classst__number_a3aa3701636f69a567c5f6a676afafd39}{iterator}} st\+\_\+number\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iteration through nodes of graph in st-\/number order. 
+
+\begin{DoxyReturn}{Returns}
+end of iteration through nodes of graph in st-\/number order 
+\end{DoxyReturn}
+
+
+Definition at line 336 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+337     \{
+338     \textcolor{keywordflow}{return} \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.end();
+339     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_a3912b83a8cbddcb1fc804d20be528d52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classst__number_a969162a10da5daba4219419d45c4be51}\label{classst__number_a969162a10da5daba4219419d45c4be51}} 
+\index{st\+\_\+number@{st\+\_\+number}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily int\& st\+\_\+number\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns st-\/number of node {\ttfamily n} as determined in the last run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+st-\/number of {\ttfamily n} 
+\end{DoxyReturn}
+
+
+Definition at line 305 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+306     \{
+307     \textcolor{keywordflow}{return} \mbox{\hyperlink{classst__number_ac3443aa6c9d11b990357d8ac1342cabc}{st\_num}}[n];
+308     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classst__number_a56f2c67e9b49362947fe0c99278f6d31}\label{classst__number_a56f2c67e9b49362947fe0c99278f6d31}} 
+\index{st\+\_\+number@{st\+\_\+number}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{rbegin()}{rbegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}{reverse\+\_\+iterator}} st\+\_\+number\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iteration through the nodes of graph st-\/numbered in last run in reverse st-\/number order, i.\+e. from highest st-\/number down to 1. 
+
+\begin{DoxyReturn}{Returns}
+start of iteration through nodes in reverse st-\/number order 
+\end{DoxyReturn}
+
+
+Definition at line 348 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+349     \{
+350     \textcolor{keywordflow}{return} \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.rbegin();
+351     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_a56f2c67e9b49362947fe0c99278f6d31_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classst__number_a4c5fdce6ab2be7ee9ddbb09e8d5c8560}\label{classst__number_a4c5fdce6ab2be7ee9ddbb09e8d5c8560}} 
+\index{st\+\_\+number@{st\+\_\+number}!rend@{rend}}
+\index{rend@{rend}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{rend()}{rend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classst__number_a7db0e7ac82d781b75e1712c1fe5c055e}{reverse\+\_\+iterator}} st\+\_\+number\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+End of iteration through nodes of graph in reverse st-\/number order. 
+
+\begin{DoxyReturn}{Returns}
+end of iteration through nodes in reverse st-\/number order 
+\end{DoxyReturn}
+
+
+Definition at line 359 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+360     \{
+361     \textcolor{keywordflow}{return} \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.rend();
+362     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_a4c5fdce6ab2be7ee9ddbb09e8d5c8560_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classst__number_ae6f86706b8ae3495d3794b8c684fff0f}\label{classst__number_ae6f86706b8ae3495d3794b8c684fff0f}} 
+\index{st\+\_\+number@{st\+\_\+number}!reset@{reset}}
+\index{reset@{reset}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void st\+\_\+number\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Resets algorithm in order to be applied to the next graph. 
+
+This will delete most of the information obtained in the last run.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+
+
+
+Definition at line 405 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+406     \{
+407     \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.erase (\mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.begin(), \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.end());
+408     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classst__number_af902a0c05d07d47b587e8f7a6b7beaa1}\label{classst__number_af902a0c05d07d47b587e8f7a6b7beaa1}} 
+\index{st\+\_\+number@{st\+\_\+number}!run@{run}}
+\index{run@{run}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int st\+\_\+number\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Runs st-\/number algorithm on graph {\ttfamily G}. 
+
+It is assumed that \mbox{\hyperlink{classst__number_a2aad4550b821c52d6998bff35fd8648f}{check}} was called previously and returned \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}} iff {\ttfamily G} could be correctly st-\/numbered
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+
+
+
+Definition at line 211 of file st\+\_\+number.\+cpp.
+
+
+\begin{DoxyCode}
+212 \{
+213     \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\_t}} order;
+214     \mbox{\hyperlink{classnode}{node}} t = \mbox{\hyperlink{classst__number_a1ada73c04f88b70b2392aa9ab0d1a6b0}{s}}.\mbox{\hyperlink{classnode_a13dbd1809a33a5efede64a359e53a363}{opposite}} (\mbox{\hyperlink{classst__number_a58fe3a128f0d06ce17742b62d8eff1a8}{st}});
+215     order.push\_back (t);
+216     \mbox{\hyperlink{classnode}{node}} tmp = \mbox{\hyperlink{classst__number_a1ada73c04f88b70b2392aa9ab0d1a6b0}{s}};
+217     \mbox{\hyperlink{classpathfinder_1_1const__iterator}{pathfinder::const\_iterator}} \mbox{\hyperlink{classst__number_a3912b83a8cbddcb1fc804d20be528d52}{end}} = \mbox{\hyperlink{classst__number_a2aa9c83b684379d86c4e620f0a3e5703}{pf}}->\mbox{\hyperlink{classpathfinder_a2421f20a6252a46fbc1955322b0f9c55}{end}}();
+218     \textcolor{keywordtype}{int} act\_st = 1;
+219     
+220     \textcolor{keywordflow}{while} (tmp != t)
+221     \{
+222         \mbox{\hyperlink{classpathfinder_1_1const__iterator}{pathfinder::const\_iterator}} it = \mbox{\hyperlink{classst__number_a2aa9c83b684379d86c4e620f0a3e5703}{pf}}->\mbox{\hyperlink{classpathfinder_ab4fffc6da33fb6b1e6badf3a4b3cfed4}{path}}(tmp);
+223         nodes\_t::iterator pos;
+224 
+225         \textcolor{keywordflow}{if} (it == \mbox{\hyperlink{classst__number_a3912b83a8cbddcb1fc804d20be528d52}{end}})
+226         \{
+227             \mbox{\hyperlink{classst__number_ac3443aa6c9d11b990357d8ac1342cabc}{st\_num}}[tmp] = act\_st++;
+228             \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.push\_back(tmp);
+229             tmp = order.back();
+230             order.pop\_back();
+231 
+232         \}
+233         \textcolor{keywordflow}{else}
+234         \{
+235             pos = order.end();
+236 
+237             \textcolor{keywordflow}{while} (it != \mbox{\hyperlink{classst__number_a3912b83a8cbddcb1fc804d20be528d52}{end}})
+238             \{
+239                 pos = order.insert(pos, *it);
+240                 ++it;
+241             \}
+242 
+243             order.erase(pos);
+244         \}
+245     \}
+246     
+247     \mbox{\hyperlink{classst__number_ac3443aa6c9d11b990357d8ac1342cabc}{st\_num}}[t] = act\_st;
+248     \mbox{\hyperlink{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}{st\_ord}}.push\_back (t);
+249     
+250     \textcolor{keyword}{delete} \mbox{\hyperlink{classst__number_a2aa9c83b684379d86c4e620f0a3e5703}{pf}};
+251     
+252     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}};
+253 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classst__number_af902a0c05d07d47b587e8f7a6b7beaa1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_af902a0c05d07d47b587e8f7a6b7beaa1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classst__number_aa607c9aaa5a4d9c45e5854ce672f0fda}\label{classst__number_aa607c9aaa5a4d9c45e5854ce672f0fda}} 
+\index{st\+\_\+number@{st\+\_\+number}!s\+\_\+node@{s\+\_\+node}}
+\index{s\+\_\+node@{s\+\_\+node}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{s\+\_\+node()}{s\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void st\+\_\+number\+::s\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets node {\itshape s} for next run. 
+
+This must be one of the endpoints of edge {\itshape st}. This node will get st-\/number 1 and thus the other endpoint will get the highest st-\/number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node {\itshape s} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 283 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+284     \{
+285     \mbox{\hyperlink{classst__number_a1ada73c04f88b70b2392aa9ab0d1a6b0}{s}} = n;
+286     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_aa607c9aaa5a4d9c45e5854ce672f0fda_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classst__number_aba061fba83eb63b7a23dd685e1db663c}\label{classst__number_aba061fba83eb63b7a23dd685e1db663c}} 
+\index{st\+\_\+number@{st\+\_\+number}!s\+\_\+node@{s\+\_\+node}}
+\index{s\+\_\+node@{s\+\_\+node}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{s\+\_\+node()}{s\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} st\+\_\+number\+::s\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get node {\itshape s}. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em node} & {\itshape s} \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 293 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+294     \{
+295     \textcolor{keywordflow}{return} \mbox{\hyperlink{classst__number_a1ada73c04f88b70b2392aa9ab0d1a6b0}{s}};
+296     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classst__number_a1564af6f603160105643f22bf2f6955b}\label{classst__number_a1564af6f603160105643f22bf2f6955b}} 
+\index{st\+\_\+number@{st\+\_\+number}!st\+\_\+edge@{st\+\_\+edge}}
+\index{st\+\_\+edge@{st\+\_\+edge}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{st\+\_\+edge()}{st\_edge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void st\+\_\+number\+::st\+\_\+edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classedge}{edge}}}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets edge {\itshape st} for the next run. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & edge {\itshape st} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 259 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+260     \{
+261     \mbox{\hyperlink{classst__number_a58fe3a128f0d06ce17742b62d8eff1a8}{st}} = e;
+262     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classst__number_a1564af6f603160105643f22bf2f6955b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classst__number_a8938bab7883ff4194d1a7b4c6d8fb471}\label{classst__number_a8938bab7883ff4194d1a7b4c6d8fb471}} 
+\index{st\+\_\+number@{st\+\_\+number}!st\+\_\+edge@{st\+\_\+edge}}
+\index{st\+\_\+edge@{st\+\_\+edge}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{st\+\_\+edge()}{st\_edge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge}{edge}} st\+\_\+number\+::st\+\_\+edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get edge {\itshape st}. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em edge} & {\itshape st} \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 269 of file st\+\_\+number.\+h.
+
+
+\begin{DoxyCode}
+270     \{
+271     \textcolor{keywordflow}{return} \mbox{\hyperlink{classst__number_a58fe3a128f0d06ce17742b62d8eff1a8}{st}};
+272     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classst__number_a2aa9c83b684379d86c4e620f0a3e5703}\label{classst__number_a2aa9c83b684379d86c4e620f0a3e5703}} 
+\index{st\+\_\+number@{st\+\_\+number}!pf@{pf}}
+\index{pf@{pf}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{pf}{pf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpathfinder}{pathfinder}}$\ast$ st\+\_\+number\+::pf\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 423 of file st\+\_\+number.\+h.
+
+\mbox{\Hypertarget{classst__number_a1ada73c04f88b70b2392aa9ab0d1a6b0}\label{classst__number_a1ada73c04f88b70b2392aa9ab0d1a6b0}} 
+\index{st\+\_\+number@{st\+\_\+number}!s@{s}}
+\index{s@{s}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} st\+\_\+number\+::s\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 418 of file st\+\_\+number.\+h.
+
+\mbox{\Hypertarget{classst__number_a58fe3a128f0d06ce17742b62d8eff1a8}\label{classst__number_a58fe3a128f0d06ce17742b62d8eff1a8}} 
+\index{st\+\_\+number@{st\+\_\+number}!st@{st}}
+\index{st@{st}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{st}{st}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge}{edge}} st\+\_\+number\+::st\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 413 of file st\+\_\+number.\+h.
+
+\mbox{\Hypertarget{classst__number_ac3443aa6c9d11b990357d8ac1342cabc}\label{classst__number_ac3443aa6c9d11b990357d8ac1342cabc}} 
+\index{st\+\_\+number@{st\+\_\+number}!st\+\_\+num@{st\+\_\+num}}
+\index{st\+\_\+num@{st\+\_\+num}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{st\+\_\+num}{st\_num}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ st\+\_\+number\+::st\+\_\+num\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 433 of file st\+\_\+number.\+h.
+
+\mbox{\Hypertarget{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}\label{classst__number_af2160b5e111fe3730b4f9f3f3d09f98f}} 
+\index{st\+\_\+number@{st\+\_\+number}!st\+\_\+ord@{st\+\_\+ord}}
+\index{st\+\_\+ord@{st\+\_\+ord}!st\+\_\+number@{st\+\_\+number}}
+\subsubsection{\texorpdfstring{st\+\_\+ord}{st\_ord}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} st\+\_\+number\+::st\+\_\+ord\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 428 of file st\+\_\+number.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{st__number_8h}{st\+\_\+number.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/\mbox{\hyperlink{st__number_8cpp}{st\+\_\+number.\+cpp}}\end{DoxyCompactItemize}

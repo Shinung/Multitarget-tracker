@@ -1,0 +1,14 @@
+<map id="graph::restore_node" name="graph::restore_node">
+<area shape="rect" id="node2" href="$classgraph.html#a53e2a5505fa6427587e12d66e4a86cec" title="graph::restore_graph" alt="" coords="212,195,353,221"/>
+<area shape="rect" id="node12" href="$classmaxflow__pp.html#a97612b9517f0f11715610cb8faa81606" title="maxflow_pp::comp_rem_net" alt="" coords="191,45,375,72"/>
+<area shape="rect" id="node13" href="$classplanarity.html#a8a66dd6682b3111e39be103db127e6b0" title="planarity::switch_to\l_component" alt="" coords="215,267,350,309"/>
+<area shape="rect" id="node3" href="$components_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="470,224,521,251"/>
+<area shape="rect" id="node4" href="$classfm__partition.html#a015b171fcaa01973ebe6c6a46a727097" title="fm_partition::run" alt="" coords="438,275,553,301"/>
+<area shape="rect" id="node5" href="$classmaxflow__ff.html#a31a13c79918964a49fa18b4eb514c584" title="maxflow_ff::restore\l_graph" alt="" coords="430,93,561,134"/>
+<area shape="rect" id="node7" href="$classmaxflow__pp.html#a273cc9bde3aeb47c08223da7458ed29d" title="maxflow_pp::restore\l_graph" alt="" coords="426,27,565,69"/>
+<area shape="rect" id="node9" href="$classmaxflow__sap.html#ad1a311df47e4b9936ead7c306d723ed0" title="maxflow_sap::restore\l_graph" alt="" coords="423,158,568,199"/>
+<area shape="rect" id="node11" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="447,325,544,352"/>
+<area shape="rect" id="node6" href="$classmaxflow__ff.html#a0a4391b9093d6966b47c023a555099e2" title="maxflow_ff::run" alt="" coords="623,100,731,127"/>
+<area shape="rect" id="node8" href="$classmaxflow__pp.html#a07c7cb1ae5db23d87cf49ce7769b2814" title="maxflow_pp::run" alt="" coords="619,5,735,32"/>
+<area shape="rect" id="node10" href="$classmaxflow__sap.html#ab4305a2bb370ad9c43cc68d339b2dda0" title="maxflow_sap::run" alt="" coords="616,165,739,192"/>
+</map>

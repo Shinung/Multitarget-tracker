@@ -1,0 +1,188 @@
+\hypertarget{main_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/main.cpp File Reference}
+\label{main_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/main.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/main.\+cpp}}
+{\ttfamily \#include \char`\"{}Mouse\+Example.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Video\+Example.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/core/ocl.\+hpp$>$}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{main_8cpp_a88944cfcfb5dbcb0f9ac98dbde38f712}{Help}} ()
+\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{main_8cpp_ad369b0cdd85ef6d6db7446dba8b57a27}{keys}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a88944cfcfb5dbcb0f9ac98dbde38f712}\label{main_8cpp_a88944cfcfb5dbcb0f9ac98dbde38f712}} 
+\index{main.\+cpp@{main.\+cpp}!Help@{Help}}
+\index{Help@{Help}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Help()}{Help()}}
+{\footnotesize\ttfamily static void Help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 9 of file main.\+cpp.
+
+
+\begin{DoxyCode}
+10 \{
+11     printf(\textcolor{stringliteral}{"\(\backslash\)nExamples of the Multitarget tracking algorithm\(\backslash\)n"}
+12            \textcolor{stringliteral}{"Usage: \(\backslash\)n"}
+13            \textcolor{stringliteral}{"          ./MultitargetTracker <path to movie file> [--example]=<number of example 0..5>
+       [--start\_frame]=<start a video from this position> [--end\_frame]=<play a video to this position>
+       [--end\_delay]=<delay in milliseconds after video ending> [--out]=<name of result video file> [--show\_logs]=<show logs> \(\backslash\)n\(\backslash\)n"}
+14            \textcolor{stringliteral}{"Press:\(\backslash\)n"}
+15            \textcolor{stringliteral}{"\(\backslash\)'m\(\backslash\)' key for change mode: play|pause. When video is paused you can press any key for get next
+       frame. \(\backslash\)n\(\backslash\)n"}
+16            \textcolor{stringliteral}{"Press Esc to exit from video \(\backslash\)n\(\backslash\)n"}
+17            );
+18 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{main_8cpp_a88944cfcfb5dbcb0f9ac98dbde38f712_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file main.\+cpp.
+
+
+\begin{DoxyCode}
+38 \{
+39     \mbox{\hyperlink{_video_example_8cpp_abff23921233cecd3fb2eabc6109c8b70}{GlobalInitGLOG}}(&argv);
+40     \mbox{\hyperlink{main_8cpp_a88944cfcfb5dbcb0f9ac98dbde38f712}{Help}}();
+41 
+42     cv::CommandLineParser parser(argc, argv, \mbox{\hyperlink{main_8cpp_ad369b0cdd85ef6d6db7446dba8b57a27}{keys}});
+43 
+44     \textcolor{keywordtype}{bool} useOCL = parser.get<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"gpu"}) ? 1 : 0;
+45     cv::ocl::setUseOpenCL(useOCL);
+46     std::cout << (cv::ocl::useOpenCL() ? \textcolor{stringliteral}{"OpenCL is enabled"} : \textcolor{stringliteral}{"OpenCL not used"}) << std::endl;
+47 
+48     \textcolor{keywordtype}{int} exampleNum = parser.get<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"example"});
+49 
+50     \textcolor{keywordflow}{switch} (exampleNum)
+51     \{
+52     \textcolor{keywordflow}{case} 0:
+53         \mbox{\hyperlink{_mouse_example_8h_a010fc67e0e1f4693e517c2ac599b0d94}{MouseTracking}}(parser);
+54         \textcolor{keywordflow}{break};
+55 
+56     \textcolor{keywordflow}{case} 1:
+57     \{
+58         \mbox{\hyperlink{class_motion_detector_example}{MotionDetectorExample}} mdetector(parser);
+59         mdetector.Process();
+60         \textcolor{keywordflow}{break};
+61     \}
+62 
+63     \textcolor{keywordflow}{case} 2:
+64     \{
+65         \mbox{\hyperlink{class_face_detector_example}{FaceDetectorExample}} face\_detector(parser);
+66         face\_detector.Process();
+67         \textcolor{keywordflow}{break};
+68     \}
+69 
+70     \textcolor{keywordflow}{case} 3:
+71     \{
+72         \mbox{\hyperlink{class_pedestrian_detector_example}{PedestrianDetectorExample}} ped\_detector(parser);
+73         ped\_detector.Process();
+74         \textcolor{keywordflow}{break};
+75     \}
+76 
+77     \textcolor{keywordflow}{case} 4:
+78     \{
+79         \mbox{\hyperlink{class_s_s_d_mobile_net_example}{SSDMobileNetExample}} dnn\_detector(parser);
+80         dnn\_detector.Process();
+81         \textcolor{keywordflow}{break};
+82     \}
+83 
+84     \textcolor{keywordflow}{case} 5:
+85     \{
+86         \mbox{\hyperlink{class_yolo_example}{YoloExample}} yolo\_detector(parser);
+87         yolo\_detector.Process();
+88         \textcolor{keywordflow}{break};
+89     \}
+90 
+91     \textcolor{keywordflow}{case} 6:
+92     \{
+93         \textcolor{keywordflow}{if} (!parser.has(\textcolor{stringliteral}{"deploy"}) || !parser.has(\textcolor{stringliteral}{"weights"}) || !parser.has(\textcolor{stringliteral}{"label-map"}))
+94         \{
+95             std::cout << \textcolor{stringliteral}{"deploy, weights and label-map file should specify if using custom SSD net"} << 
+      std::endl;
+96             \textcolor{keywordflow}{return} -1;
+97         \}
+98 
+99         \mbox{\hyperlink{class_custom_s_s_d_mobile_net_example}{CustomSSDMobileNetExample}} custom\_ssd\_detector(parser);
+100         custom\_ssd\_detector.Process();
+101         \textcolor{keywordflow}{break};
+102     \}
+103 
+104     \textcolor{keywordflow}{default}:
+105         std::cerr << \textcolor{stringliteral}{"Wrong example number!"} << std::endl;
+106         \textcolor{keywordflow}{break};
+107     \}
+108 
+109 
+110     cv::destroyAllWindows();
+111     \textcolor{keywordflow}{return} 0;
+112 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_ad369b0cdd85ef6d6db7446dba8b57a27}\label{main_8cpp_ad369b0cdd85ef6d6db7446dba8b57a27}} 
+\index{main.\+cpp@{main.\+cpp}!keys@{keys}}
+\index{keys@{keys}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily const char$\ast$ keys}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+    \textcolor{stringliteral}{"\{ @1             |../data/atrium.avi  | movie file | \}"}
+    \textcolor{stringliteral}{"\{ e  example     |1                   | number of example 0 - MouseTracking, 1 - MotionDetector, 2 -
+       FaceDetector, 3 - PedestrianDetector, 4 - MobileNet SSD detector, 5 - Yolo detector | \}"}
+    \textcolor{stringliteral}{"\{ sf start\_frame |0                   | Start a video from this position | \}"}
+    \textcolor{stringliteral}{"\{ ef end\_frame   |0                   | Play a video to this position (if 0 then played to the end of
+       file) | \}"}
+    \textcolor{stringliteral}{"\{ ed end\_delay   |0                   | Delay in milliseconds after video ending | \}"}
+    \textcolor{stringliteral}{"\{ o  out         |                    | Name of result video file | \}"}
+    \textcolor{stringliteral}{"\{ sl show\_logs   |1                   | Show Trackers logs | \}"}
+    \textcolor{stringliteral}{"\{ g gpu          |0                   | Use OpenCL acceleration | \}"}
+    \textcolor{stringliteral}{"\{ d deploy       |0                   | Specify neural network deploy file(.prototxt) | \}"}
+    \textcolor{stringliteral}{"\{ w weights      |0                   | Specify weights of neural network file(.caffemodel) | \}"}
+    \textcolor{stringliteral}{"\{ l label-map    |0                   | Specify label map of neural network file(.prototxt) | \}"}
+\}
+\end{DoxyCode}
+
+
+Definition at line 20 of file main.\+cpp.
+

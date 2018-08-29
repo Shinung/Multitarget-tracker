@@ -1,0 +1,385 @@
+\hypertarget{rings_8cpp}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/rings.cpp File Reference}
+\label{rings_8cpp}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/rings.\+cpp@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/rings.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$G\+T\+L/\+G\+T\+L.\+h$>$}\newline
+{\ttfamily \#include $<$G\+T\+L/bfs.\+h$>$}\newline
+{\ttfamily \#include $<$G\+T\+L/dfs.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}gport.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mygraph.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mytree.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for rings.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rings_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_compare_nodes}{Compare\+Nodes}}
+\item 
+class \mbox{\hyperlink{classmydfs}{mydfs}}
+\item 
+class \mbox{\hyperlink{classmybfs}{mybfs}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rings_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846
+\item 
+\#define \mbox{\hyperlink{rings_8cpp_a2eb03319e5ccdc1a14b73a7d8b1724de}{S\+QR}}(X)~((X) $\ast$ (X))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{rings_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}{Show\+Time\+Used}} (clock\+\_\+t \&\mbox{\hyperlink{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}}, clock\+\_\+t \&\mbox{\hyperlink{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}})
+\item 
+double \mbox{\hyperlink{rings_8cpp_a77369fc4d5326a16d2c603e032023528}{f}} (double \&\mbox{\hyperlink{rings_8cpp_aad2cc6a2ec44dae25504cc8f1c2cff5c}{R1}}, double \&R2, int n)
+\item 
+int \mbox{\hyperlink{rings_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main}} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_postscript_port}{G\+Postscript\+Port}} \mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}
+\item 
+clock\+\_\+t \mbox{\hyperlink{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}}
+\item 
+clock\+\_\+t \mbox{\hyperlink{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{rings_8cpp_a021486f59a5a82e4020e5f4ce19b57a9}{num\+\_\+children}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{rings_8cpp_ae20dca00c1e05052649489eb4ffe212f}{num\+\_\+grandchildren}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ double $>$ \mbox{\hyperlink{rings_8cpp_aad2cc6a2ec44dae25504cc8f1c2cff5c}{R1}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{class_g_point}{G\+Point}} $>$ \mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ bool $>$ \mbox{\hyperlink{rings_8cpp_a2813a60dd1c26fe13eb1970f25012d8c}{outer\+\_\+ring}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rings_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}\label{rings_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{rings.\+cpp@{rings.\+cpp}!M\+\_\+\+PI@{M\+\_\+\+PI}}
+\index{M\+\_\+\+PI@{M\+\_\+\+PI}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{M\+\_\+\+PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846}
+
+
+
+Definition at line 77 of file rings.\+cpp.
+
+\mbox{\Hypertarget{rings_8cpp_a2eb03319e5ccdc1a14b73a7d8b1724de}\label{rings_8cpp_a2eb03319e5ccdc1a14b73a7d8b1724de}} 
+\index{rings.\+cpp@{rings.\+cpp}!S\+QR@{S\+QR}}
+\index{S\+QR@{S\+QR}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{S\+QR}{SQR}}
+{\footnotesize\ttfamily \#define S\+QR(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~((X) $\ast$ (X))}
+
+
+
+Definition at line 80 of file rings.\+cpp.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rings_8cpp_a77369fc4d5326a16d2c603e032023528}\label{rings_8cpp_a77369fc4d5326a16d2c603e032023528}} 
+\index{rings.\+cpp@{rings.\+cpp}!f@{f}}
+\index{f@{f}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{f()}{f()}}
+{\footnotesize\ttfamily double f (\begin{DoxyParamCaption}\item[{double \&}]{R1,  }\item[{double \&}]{R2,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file rings.\+cpp.
+
+
+\begin{DoxyCode}
+86 \{
+87     \textcolor{keywordtype}{double} theta = \mbox{\hyperlink{rings_8cpp_ae71449b1cc6e6250b91f539153a7a0d3}{M\_PI}}/double(n);
+88     \textcolor{keywordtype}{double} fn = \mbox{\hyperlink{rings_8cpp_a2eb03319e5ccdc1a14b73a7d8b1724de}{SQR}}(1 - sin(theta)) /  \mbox{\hyperlink{rings_8cpp_a2eb03319e5ccdc1a14b73a7d8b1724de}{SQR}} (1 + sin(theta));
+89     R2 = sqrt (fn * \mbox{\hyperlink{rings_8cpp_a2eb03319e5ccdc1a14b73a7d8b1724de}{SQR}}(\mbox{\hyperlink{rings_8cpp_aad2cc6a2ec44dae25504cc8f1c2cff5c}{R1}}));
+90     \textcolor{keywordflow}{return} fn;
+91 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rings_8cpp_a77369fc4d5326a16d2c603e032023528_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rings_8cpp_ac0f2228420376f4db7e1274f2b41667c}\label{rings_8cpp_ac0f2228420376f4db7e1274f2b41667c}} 
+\index{rings.\+cpp@{rings.\+cpp}!main@{main}}
+\index{main@{main}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 285 of file rings.\+cpp.
+
+
+\begin{DoxyCode}
+286 \{
+287     \textcolor{keywordflow}{if} (argc < 2)
+288     \{
+289         cout << \textcolor{stringliteral}{"Usage: graph <file-name>"} << endl;
+290         exit(1);
+291     \}
+292     \textcolor{keywordtype}{char} filename[256];
+293     strcpy (filename, argv[1]);
+294 
+295     \textcolor{comment}{// ---------------------------------------------------------    }
+296     \textcolor{comment}{// Read graph   }
+297 
+298     \mbox{\hyperlink{class_my_tree}{MyTree}} G;
+299     
+300     G.\mbox{\hyperlink{class_my_graph_a5d90ef0fba45bbbdf53a3bfe6f9a7061}{read\_labels\_as\_weights}}();
+301     \mbox{\hyperlink{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}} = clock();
+302     \mbox{\hyperlink{struct_g_m_l__error}{GML\_error}} err  = G.\mbox{\hyperlink{classgraph_ac28cb3468623a480709d3329033d4ec8}{load}} (filename);
+303     \mbox{\hyperlink{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}} = clock();
+304     \textcolor{keywordflow}{if} (err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}} != \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}{GML\_OK}})
+305     \{
+306         cerr << \textcolor{stringliteral}{"Error ("} << err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}} << \textcolor{stringliteral}{") loading graph from file \(\backslash\)""} << filename << \textcolor{stringliteral}{"\(\backslash\)""};
+307         \textcolor{keywordflow}{switch} (err.\mbox{\hyperlink{struct_g_m_l__error_a66fe2c5a3d2d40e77ff486007dfe7f76}{err\_num}})
+308         \{
+309             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca6e236398ad4be2c96f938e0f2329c7ca}{GML\_FILE\_NOT\_FOUND}}: cerr << \textcolor{stringliteral}{"A file with that name doesn't exist."}; \textcolor{keywordflow}{
+      break};
+310             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca83553a234a3a319eb4db0ec4b3aef05d}{GML\_TOO\_MANY\_BRACKETS}}: cerr << \textcolor{stringliteral}{"A mismatch of brackets was detected,
+       i.e. there were too many closing brackets (])."}; \textcolor{keywordflow}{break};
+311             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790caa03c5ab19de88ed1a1a2d85edf075164}{GML\_OPEN\_BRACKET}}: cerr << \textcolor{stringliteral}{"Now, there were too many opening brackets ([)"};
+        \textcolor{keywordflow}{break};
+312             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca221df19cbc1f2fea1a52cb139a359e0c}{GML\_TOO\_MANY\_DIGITS}}: cerr << \textcolor{stringliteral}{"The number of digits a integer or
+       floating point value can have is limited to 1024, this should be enough :-)"};  \textcolor{keywordflow}{break};
+313             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3af6ee9ba1b3704ced7c81a576c3eae8}{GML\_PREMATURE\_EOF}}: cerr << \textcolor{stringliteral}{"An EOF occured, where it wasn't expected,
+       e.g. while scanning a string."}; \textcolor{keywordflow}{break};
+314             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca3fbf275b928b652ece2645e90bb5557f}{GML\_SYNTAX}}: cerr << \textcolor{stringliteral}{"The file isn't a valid GML file, e.g. a mismatch in the
+       key-value pairs."}; \textcolor{keywordflow}{break};
+315             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca33fd90c64697b7678a9124017eadadf8}{GML\_UNEXPECTED}}: cerr << \textcolor{stringliteral}{"A character occured, where it makes no sense, e.g.
+       non-numerical characters"}; \textcolor{keywordflow}{break};
+316             \textcolor{keywordflow}{case} \mbox{\hyperlink{gml__scanner_8h_aabc90afcb30e75bca3bd9969ce74790ca724a94ac9d394a24aa1f80fb602ecaf2}{GML\_OK}}: \textcolor{keywordflow}{break};
+317         \}
+318         cerr << endl;
+319         exit(1);
+320     \}
+321     \textcolor{keywordflow}{else}
+322     \{
+323         cout << \textcolor{stringliteral}{"Graph read from file \(\backslash\)""} << filename << \textcolor{stringliteral}{"\(\backslash\)" has "} << G.
+      \mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}() << \textcolor{stringliteral}{" nodes and "} << G.\mbox{\hyperlink{classgraph_aa4fcbe7bf572dc800068873ccfb4d95a}{number\_of\_edges}}() << \textcolor{stringliteral}{" edges"} << endl
+      ;
+324     \}
+325     \mbox{\hyperlink{rings_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}{ShowTimeUsed}} (\mbox{\hyperlink{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}}, \mbox{\hyperlink{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}});
+326     
+327     \textcolor{comment}{// ---------------------------------------------------------        }
+328     \textcolor{comment}{// Test that it is a tree}
+329     \textcolor{keywordflow}{if} (\mbox{\hyperlink{mytree_8cpp_afdde9e8d6e926b58c0892332e34a0a4f}{is\_tree}} (G))
+330     \{
+331         cout << \textcolor{stringliteral}{"Is a tree"} << endl;
+332     \}
+333     \textcolor{keywordflow}{else}
+334     \{
+335         cout << \textcolor{stringliteral}{"Graph is not a tree"} << endl;
+336           \mbox{\hyperlink{classnode}{node}} v;
+337         \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}}(v,G)
+338             \textcolor{keywordflow}{if} ( v.\mbox{\hyperlink{classnode_a749bfd1316584b96f8c9b0e44ad512f0}{indeg}} () < 1 ) cout << G.\mbox{\hyperlink{class_my_graph_ab92ebd7632157e681a6a7d7873841de7}{get\_node\_label}}(v) << \textcolor{stringliteral}{" has no parent"} << 
+      endl;
+339         \textcolor{keywordflow}{if} (!G.\mbox{\hyperlink{classgraph_a599e2bf967df8a2052a9892c94db98b7}{is\_connected}}() ) cout << \textcolor{stringliteral}{"Not connected"};
+340 
+341         exit(1);
+342     \}
+343     
+344     \mbox{\hyperlink{classnode}{node}} root = G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}();
+345     cout << \textcolor{stringliteral}{"Root = "} << root << \textcolor{stringliteral}{" "} << \textcolor{stringliteral}{"\(\backslash\)""} << G.\mbox{\hyperlink{class_my_graph_ab92ebd7632157e681a6a7d7873841de7}{get\_node\_label}} (root) << \textcolor{stringliteral}{"\(\backslash\)""} << endl;
+346     
+347     cout << \textcolor{stringliteral}{"Computing layout..."} << endl;
+348     \mbox{\hyperlink{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}} = clock();
+349     
+350     \mbox{\hyperlink{classbfs}{bfs}} b;
+351     b.\mbox{\hyperlink{classbfs_a23e2981c2ee617a6e12a8833d2db6210}{start\_node}} (G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}());
+352     b.\mbox{\hyperlink{classbfs_a491515da4eb8efca0be4fef0df350a8e}{calc\_level}}(\textcolor{keyword}{true});
+353     \textcolor{keywordflow}{if} (b.\mbox{\hyperlink{classbfs_aafdf63b57eaceb5d95f441be0f9c77bb}{check}}(G) != \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}}) 
+354     \{
+355         cerr << \textcolor{stringliteral}{"bfs check failed at "} << \_\_LINE\_\_ << \textcolor{stringliteral}{" in "} << \_\_FILE\_\_  << endl;
+356         exit(1);
+357     \} 
+358     \textcolor{keywordflow}{else} 
+359     \{
+360         \textcolor{keywordflow}{if} (b.\mbox{\hyperlink{classbfs_a06ae16bd0f3bb2f8eb6b3e36659ba82e}{run}}(G) != \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}}) 
+361         \{
+362             cerr << \textcolor{stringliteral}{"bfs algorithm failed at "} << \_\_LINE\_\_ << \textcolor{stringliteral}{" in "} << \_\_FILE\_\_ << endl;
+363             exit(1);
+364         \} 
+365     \}
+366     
+367     \textcolor{comment}{// dfs}
+368     \mbox{\hyperlink{classmydfs}{mydfs}} d;
+369     d.\mbox{\hyperlink{classdfs_aad21fd0d3036350fd341f877d5747852}{start\_node}} (G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}());
+370     \textcolor{keywordflow}{if} (d.\mbox{\hyperlink{classdfs_a1af70060897529e67910f589b047e576}{check}}(G) != \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}}) 
+371     \{
+372         cerr << \textcolor{stringliteral}{"dfs check failed at "} << \_\_LINE\_\_ << \textcolor{stringliteral}{" in "} << \_\_FILE\_\_  << endl;
+373         exit(1);
+374     \} 
+375     \textcolor{keywordflow}{else} 
+376     \{
+377         \textcolor{keywordflow}{if} (d.\mbox{\hyperlink{classdfs_af0863b8974d5fd58cd0375c78ed8163b}{run}}(G) != \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}}) 
+378         \{
+379             cerr << \textcolor{stringliteral}{"dfs algorithm failed at "} << \_\_LINE\_\_ << \textcolor{stringliteral}{" in "} << \_\_FILE\_\_ << endl;
+380             exit(1);
+381         \} 
+382     \}
+383 
+384     \textcolor{keywordtype}{char} picture\_filename[256];
+385     strcpy (picture\_filename, filename);
+386     strcat (picture\_filename, \textcolor{stringliteral}{".ps"});
+387     \mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.\mbox{\hyperlink{class_g_postscript_port_a4c9faebb953228964ca032e75ed40bcc}{StartPicture}} (picture\_filename);    
+388     \mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.\mbox{\hyperlink{class_g_postscript_port_a63e3cf185f620f9f24ec40f01dc3b02c}{SetPenWidth}}(1);
+389 
+390     
+391 
+392     \mbox{\hyperlink{rings_8cpp_aad2cc6a2ec44dae25504cc8f1c2cff5c}{R1}}[G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}()] = 200.0;
+393     \mbox{\hyperlink{class_g_point}{GPoint}} centre(200,200);
+394     \mbox{\hyperlink{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}{pt}}[G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}()] = centre;
+395 
+396     \mbox{\hyperlink{classmybfs}{mybfs}} layout;
+397     layout.\mbox{\hyperlink{classbfs_a23e2981c2ee617a6e12a8833d2db6210}{start\_node}} (G.\mbox{\hyperlink{class_my_tree_a04b0f390bb74c3bdb157cad08872076e}{root}}());
+398     layout.\mbox{\hyperlink{classbfs_a491515da4eb8efca0be4fef0df350a8e}{calc\_level}}(\textcolor{keyword}{true});
+399     \textcolor{keywordflow}{if} (layout.\mbox{\hyperlink{classbfs_aafdf63b57eaceb5d95f441be0f9c77bb}{check}}(G) != \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}}) 
+400     \{
+401         cerr << \textcolor{stringliteral}{"bfs check failed at "} << \_\_LINE\_\_ << \textcolor{stringliteral}{" in "} << \_\_FILE\_\_  << endl;
+402         exit(1);
+403     \} 
+404     \textcolor{keywordflow}{else} 
+405     \{
+406         \textcolor{keywordflow}{if} (layout.\mbox{\hyperlink{classbfs_a06ae16bd0f3bb2f8eb6b3e36659ba82e}{run}}(G) != \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm::GTL\_OK}}) 
+407         \{
+408             cerr << \textcolor{stringliteral}{"bfs algorithm failed at "} << \_\_LINE\_\_ << \textcolor{stringliteral}{" in "} << \_\_FILE\_\_ << endl;
+409             exit(1);
+410         \} 
+411     \}
+412 
+413     \mbox{\hyperlink{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}{g}}.\mbox{\hyperlink{class_g_postscript_port_afae4057295ef049fac22ce97eecb7d7f}{EndPicture}} ();
+414 
+415     \mbox{\hyperlink{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}} = clock();
+416     \mbox{\hyperlink{rings_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}{ShowTimeUsed}} (\mbox{\hyperlink{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}}, \mbox{\hyperlink{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}});
+417     
+418    \textcolor{keywordflow}{return} 0;
+419 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rings_8cpp_ac0f2228420376f4db7e1274f2b41667c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rings_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}\label{rings_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45}} 
+\index{rings.\+cpp@{rings.\+cpp}!Show\+Time\+Used@{Show\+Time\+Used}}
+\index{Show\+Time\+Used@{Show\+Time\+Used}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{Show\+Time\+Used()}{ShowTimeUsed()}}
+{\footnotesize\ttfamily void Show\+Time\+Used (\begin{DoxyParamCaption}\item[{clock\+\_\+t \&}]{t0,  }\item[{clock\+\_\+t \&}]{t1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 31 of file rings.\+cpp.
+
+
+\begin{DoxyCode}
+32 \{
+33     cout << \textcolor{stringliteral}{"CPU time used = "} << (float)(\mbox{\hyperlink{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}{t1}} - \mbox{\hyperlink{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}{t0}})/(float)CLOCKS\_PER\_SEC << \textcolor{stringliteral}{" seconds"} << endl;
+34 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{rings_8cpp_a0d0f6c38125e5c0fcec470518e4a4c45_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}\label{rings_8cpp_aa9df5aa3976a89a96a5f1c7611d42938}} 
+\index{rings.\+cpp@{rings.\+cpp}!g@{g}}
+\index{g@{g}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_postscript_port}{G\+Postscript\+Port}} g}
+
+
+
+Definition at line 23 of file rings.\+cpp.
+
+\mbox{\Hypertarget{rings_8cpp_a021486f59a5a82e4020e5f4ce19b57a9}\label{rings_8cpp_a021486f59a5a82e4020e5f4ce19b57a9}} 
+\index{rings.\+cpp@{rings.\+cpp}!num\+\_\+children@{num\+\_\+children}}
+\index{num\+\_\+children@{num\+\_\+children}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{num\+\_\+children}{num\_children}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ num\+\_\+children}
+
+
+
+Definition at line 36 of file rings.\+cpp.
+
+\mbox{\Hypertarget{rings_8cpp_ae20dca00c1e05052649489eb4ffe212f}\label{rings_8cpp_ae20dca00c1e05052649489eb4ffe212f}} 
+\index{rings.\+cpp@{rings.\+cpp}!num\+\_\+grandchildren@{num\+\_\+grandchildren}}
+\index{num\+\_\+grandchildren@{num\+\_\+grandchildren}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{num\+\_\+grandchildren}{num\_grandchildren}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ num\+\_\+grandchildren}
+
+
+
+Definition at line 37 of file rings.\+cpp.
+
+\mbox{\Hypertarget{rings_8cpp_a2813a60dd1c26fe13eb1970f25012d8c}\label{rings_8cpp_a2813a60dd1c26fe13eb1970f25012d8c}} 
+\index{rings.\+cpp@{rings.\+cpp}!outer\+\_\+ring@{outer\+\_\+ring}}
+\index{outer\+\_\+ring@{outer\+\_\+ring}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{outer\+\_\+ring}{outer\_ring}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$bool$>$ outer\+\_\+ring}
+
+
+
+Definition at line 40 of file rings.\+cpp.
+
+\mbox{\Hypertarget{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}\label{rings_8cpp_af69bbacaaf68a115b351c5d1e29c3cc8}} 
+\index{rings.\+cpp@{rings.\+cpp}!pt@{pt}}
+\index{pt@{pt}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{pt}{pt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$\mbox{\hyperlink{class_g_point}{G\+Point}}$>$ pt}
+
+
+
+Definition at line 39 of file rings.\+cpp.
+
+\mbox{\Hypertarget{rings_8cpp_aad2cc6a2ec44dae25504cc8f1c2cff5c}\label{rings_8cpp_aad2cc6a2ec44dae25504cc8f1c2cff5c}} 
+\index{rings.\+cpp@{rings.\+cpp}!R1@{R1}}
+\index{R1@{R1}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{R1}{R1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$double$>$ R1}
+
+
+
+Definition at line 38 of file rings.\+cpp.
+
+\mbox{\Hypertarget{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}\label{rings_8cpp_af5fee1efab2775b22e237b85d856d7f8}} 
+\index{rings.\+cpp@{rings.\+cpp}!t0@{t0}}
+\index{t0@{t0}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{t0}{t0}}
+{\footnotesize\ttfamily clock\+\_\+t t0}
+
+
+
+Definition at line 26 of file rings.\+cpp.
+
+\mbox{\Hypertarget{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}\label{rings_8cpp_a214bd1a0500f5739ce581a8bcffb518a}} 
+\index{rings.\+cpp@{rings.\+cpp}!t1@{t1}}
+\index{t1@{t1}!rings.\+cpp@{rings.\+cpp}}
+\subsubsection{\texorpdfstring{t1}{t1}}
+{\footnotesize\ttfamily clock\+\_\+t t1}
+
+
+
+Definition at line 27 of file rings.\+cpp.
+

@@ -1,0 +1,2895 @@
+\hypertarget{classfm__partition}{}\section{fm\+\_\+partition Class Reference}
+\label{classfm__partition}\index{fm\+\_\+partition@{fm\+\_\+partition}}
+
+
+Heuristic graph bi-\/partitioning algorithm (Fiduccia-\/\+Mattheyses).  
+
+
+
+
+{\ttfamily \#include $<$fm\+\_\+partition.\+h$>$}
+
+
+
+Inheritance diagram for fm\+\_\+partition\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classfm__partition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for fm\+\_\+partition\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}}
+\item 
+typedef short int \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}}
+\item 
+typedef edges\+\_\+t\+::const\+\_\+iterator \mbox{\hyperlink{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}{cut\+\_\+edges\+\_\+iterator}}
+\item 
+typedef nodes\+\_\+t\+::const\+\_\+iterator \mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}}
+\item 
+enum \{ \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{G\+T\+L\+\_\+\+OK}} = 1, 
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{G\+T\+L\+\_\+\+E\+R\+R\+OR}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfm__partition_a69f37c22abf6df5b3778623512240106}{fm\+\_\+partition}} ()
+\item 
+virtual \mbox{\hyperlink{classfm__partition_ab9d4f12de8f65d42240d94f7924fb319}{$\sim$fm\+\_\+partition}} ()
+\item 
+void \mbox{\hyperlink{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}{set\+\_\+vars}} (const \mbox{\hyperlink{classgraph}{graph}} \&G, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\+\_\+weight}}, const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\+\_\+weight}})
+\item 
+void \mbox{\hyperlink{classfm__partition_af4d1b1275050cc7f4327500cec1f6e88}{set\+\_\+vars}} (const \mbox{\hyperlink{classgraph}{graph}} \&G, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\+\_\+weight}}, const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\+\_\+weight}}, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \&init\+\_\+side)
+\item 
+void \mbox{\hyperlink{classfm__partition_ad0bebf48731e99fbf7a8c6526ab0f9a6}{set\+\_\+vars}} (const \mbox{\hyperlink{classgraph}{graph}} \&G, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\+\_\+weight}}, const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\+\_\+weight}}, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} $>$ \&\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}})
+\item 
+void \mbox{\hyperlink{classfm__partition_a19ade0d3e19eb40841238c1048c4495b}{set\+\_\+vars}} (const \mbox{\hyperlink{classgraph}{graph}} \&G, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\+\_\+weight}}, const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\+\_\+weight}}, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \&init\+\_\+side, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} $>$ \&\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}})
+\item 
+void \mbox{\hyperlink{classfm__partition_ad0870674a1fb8e1c882f6855e32aec09}{store\+\_\+cut\+\_\+edges}} (const bool set)
+\item 
+void \mbox{\hyperlink{classfm__partition_a8926005b4637055d2acf6f29ad2d9b97}{store\+\_\+nodes\+AB}} (const bool set)
+\item 
+virtual int \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+int \mbox{\hyperlink{classfm__partition_a015b171fcaa01973ebe6c6a46a727097}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+int \mbox{\hyperlink{classfm__partition_a42fa2e19fb3fde093a1a05d0bd6d8ad1}{get\+\_\+cutsize}} ()
+\item 
+int \mbox{\hyperlink{classfm__partition_aa8aa84286a6939d17175fbf646ba3176}{get\+\_\+needed\+\_\+passes}} ()
+\item 
+\mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} \mbox{\hyperlink{classfm__partition_af5f6ad817fe30760f3bc5470bd70c4c9}{get\+\_\+side\+\_\+of\+\_\+node}} (const \mbox{\hyperlink{classnode}{node}} \&n) const
+\item 
+\mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} \mbox{\hyperlink{classfm__partition_a45ef6bc577ce894ead2c699678e26f1b}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classnode}{node}} \&n) const
+\item 
+int \mbox{\hyperlink{classfm__partition_a3f1ddcff1ba7a4c4090f947f918b5331}{get\+\_\+weight\+\_\+on\+\_\+sideA}} (const \mbox{\hyperlink{classgraph}{graph}} \&G) const
+\item 
+int \mbox{\hyperlink{classfm__partition_a9e380da1dc654fcffdf4ac2418c6ef80}{get\+\_\+weight\+\_\+on\+\_\+sideB}} (const \mbox{\hyperlink{classgraph}{graph}} \&G) const
+\item 
+\mbox{\hyperlink{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}{cut\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classfm__partition_a36990b62c6d2d9e4948f42d805afc626}{cut\+\_\+edges\+\_\+begin}} () const
+\item 
+\mbox{\hyperlink{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}{cut\+\_\+edges\+\_\+iterator}} \mbox{\hyperlink{classfm__partition_af213672f08e03878183659fa8c2ed61e}{cut\+\_\+edges\+\_\+end}} () const
+\item 
+\mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} \mbox{\hyperlink{classfm__partition_adad3bf33efb4a2b1b0feadeafb33f5fd}{nodes\+\_\+of\+\_\+side\+A\+\_\+begin}} () const
+\item 
+\mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} \mbox{\hyperlink{classfm__partition_ac4202d1d929c1700985ad5d452b735fb}{nodes\+\_\+of\+\_\+side\+A\+\_\+end}} () const
+\item 
+\mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} \mbox{\hyperlink{classfm__partition_a4e433456ed0214c04466c4f1060b0909}{nodes\+\_\+of\+\_\+side\+B\+\_\+begin}} () const
+\item 
+\mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} \mbox{\hyperlink{classfm__partition_a9682b070cce104bdfe69e576df57f560}{nodes\+\_\+of\+\_\+side\+B\+\_\+end}} () const
+\item 
+virtual void \mbox{\hyperlink{classfm__partition_a6db2eeb6ae968dbab78302f0448c0ced}{reset}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}} = 0
+\item 
+static const \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}} = 1
+\item 
+static const \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} \mbox{\hyperlink{classfm__partition_a468a80e072d3ff18e5da33005825bcb1}{F\+I\+XA}} = 0
+\item 
+static const \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} \mbox{\hyperlink{classfm__partition_a0b9a66f0e8093ee83482f93d6aa5b2eb}{F\+I\+XB}} = 1
+\item 
+static const \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{U\+N\+F\+I\+X\+ED}} = 2
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classfm__partition_ad768579b813500dc2d267aac5668ed48}{divide\+\_\+up}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_a3e3aa22119ff5ff9c406683e22ab6078}{hide\+\_\+self\+\_\+loops}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_aad791ac648a9ff4694c8960f49dcc018}{init\+\_\+variables}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_a25ef3fc22bee176abfef64248484e8c0}{create\+\_\+initial\+\_\+bipart}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_a27915b38800483f897647f012b935f0a}{shuffle\+\_\+vector}} (const int vector\+\_\+size, std\+::vector$<$ \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph\+::node\+\_\+iterator}} $>$ \&node\+\_\+vector)
+\item 
+void \mbox{\hyperlink{classfm__partition_a5d0f409b6b1d554a62d67952236c7ce9}{compute\+\_\+max\+\_\+vertex\+\_\+degree}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_aec7b2a315bc003fbd98debd5cd879f99}{pass\+\_\+manager}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_a33d1dbba0ce9e398adab753f403deac3}{copy\+\_\+side\+\_\+node\+\_\+map}} (const \mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \&dest, const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ source) const
+\item 
+void \mbox{\hyperlink{classfm__partition_a9aa27d4c97616c0fdbd00d11dc83bc0b}{init\+\_\+data\+\_\+structure}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_ac510befe1837c646a260a14c110d7a79}{init\+\_\+filling\+\_\+buckets}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+int \mbox{\hyperlink{classfm__partition_a50c61b9d27e83a98e2e04a47b51670b6}{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideA}} (const \mbox{\hyperlink{classnode}{node}} cur\+\_\+node)
+\item 
+int \mbox{\hyperlink{classfm__partition_aa217da6a3c8a736e9e51aa348c951501}{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideB}} (const \mbox{\hyperlink{classnode}{node}} cur\+\_\+node)
+\item 
+void \mbox{\hyperlink{classfm__partition_a91572409b30f0967ea3782079f69b1bb}{move\+\_\+manager}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+bool \mbox{\hyperlink{classfm__partition_ac1167c6595a9f582ae98c9f555029d9b}{move\+\_\+vertex}} (const \mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classnode}{node}} \&moved\+\_\+node)
+\item 
+bool \mbox{\hyperlink{classfm__partition_a6dc702df474c4ce60e80b3e5a93b7f4d}{balance\+\_\+holds}} (const \mbox{\hyperlink{classgraph}{graph}} \&G, const \mbox{\hyperlink{classnode}{node}} cur\+\_\+node)
+\item 
+void \mbox{\hyperlink{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5}{update\+\_\+data\+\_\+structure\+\_\+\+A2B}} (const \mbox{\hyperlink{classnode}{node}} cur\+\_\+node)
+\item 
+void \mbox{\hyperlink{classfm__partition_a783174f29d49e7e1ae7f6cf71faa82fb}{update\+\_\+data\+\_\+structure\+\_\+\+B2A}} (const \mbox{\hyperlink{classnode}{node}} cur\+\_\+node)
+\item 
+void \mbox{\hyperlink{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd}{update\+\_\+bucketA}} (const \mbox{\hyperlink{classnode}{node}} cur\+\_\+node, const int old\+\_\+gain, const int new\+\_\+gain)
+\item 
+void \mbox{\hyperlink{classfm__partition_a270d469ca584ed9adff9fced67743679}{update\+\_\+bucketB}} (const \mbox{\hyperlink{classnode}{node}} cur\+\_\+node, const int old\+\_\+gain, const int new\+\_\+gain)
+\item 
+void \mbox{\hyperlink{classfm__partition_a335722b73c1d6f02d1083e76a3937b01}{update\+\_\+max\+\_\+gain}} (const \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}})
+\item 
+int \mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\+\_\+up}} (const int \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\+\_\+value}}) const
+\item 
+int \mbox{\hyperlink{classfm__partition_ab0bfbda97056ac75ab5fbfa6fd20fd03}{range\+\_\+down}} (const int index) const
+\item 
+void \mbox{\hyperlink{classfm__partition_a15197263e5318f824e0cde66ea9132b7}{clean\+\_\+pass}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_a03c76998f985593caddc4979a28b9042}{compute\+\_\+cut\+\_\+edges}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+void \mbox{\hyperlink{classfm__partition_aaa8f24af3be860bfa42a171c25420c2c}{compute\+\_\+nodes\+AB}} (const \mbox{\hyperlink{classgraph}{graph}} \&G)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classfm__partition_a806c9f5cb781b8ce662d2a3373433777}{enable\+\_\+cut\+\_\+edges\+\_\+storing}}
+\item 
+\mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} \mbox{\hyperlink{classfm__partition_ad71b58a8f73cc834d49304252fb4a288}{cut\+\_\+edges}}
+\item 
+bool \mbox{\hyperlink{classfm__partition_a2e308857dde9405bc3c6b911218bcda1}{enable\+\_\+nodes\+A\+B\+\_\+storing}}
+\item 
+\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} \mbox{\hyperlink{classfm__partition_acdcb82ae253e8eaf75a7efca3ca2b377}{nodesA}}
+\item 
+\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} \mbox{\hyperlink{classfm__partition_a3616b858b66682c528365a4803a4efad}{nodesB}}
+\item 
+bool \mbox{\hyperlink{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}{set\+\_\+vars\+\_\+executed}}
+\item 
+bool \mbox{\hyperlink{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}{provided\+\_\+initial\+\_\+part}}
+\item 
+bool \mbox{\hyperlink{classfm__partition_a0aca0fa4fcaba284d61c745d17022f8d}{provided\+\_\+fix}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} $>$ \mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\+\_\+weight}}
+\item 
+int \mbox{\hyperlink{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}{max\+\_\+node\+\_\+weight}}
+\item 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\+\_\+weight}}
+\item 
+int \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\+\_\+edge\+\_\+weight}}
+\item 
+int \mbox{\hyperlink{classfm__partition_a25651e3f78ddbc418ea978ca6b28e0e0}{total\+\_\+node\+\_\+weight}}
+\item 
+int \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\+\_\+weight\+\_\+on\+\_\+sideA}}
+\item 
+int \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\+\_\+weight\+\_\+on\+\_\+sideB}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ nodes\+\_\+t\+::iterator $>$ \mbox{\hyperlink{classfm__partition_ad17406d94b53c327e31b28e462de010f}{position\+\_\+in\+\_\+bucket}}
+\item 
+int \mbox{\hyperlink{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}{max\+\_\+vertex\+\_\+degree}}
+\item 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}
+\item 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}
+\item 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} $>$ \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}
+\item 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} $>$ \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\+\_\+value}}
+\item 
+bool \mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucket\+A\+\_\+empty}}
+\item 
+bool \mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucket\+B\+\_\+empty}}
+\item 
+int \mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\+\_\+gainA}}
+\item 
+int \mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\+\_\+gainB}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} $>$ \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} $>$ \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}
+\item 
+int \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\+\_\+cutsize}}
+\item 
+int \mbox{\hyperlink{classfm__partition_af35277f499ad76a979ee33b0cd388dc5}{no\+\_\+passes}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Heuristic graph bi-\/partitioning algorithm (Fiduccia-\/\+Mattheyses). 
+
+This class implements a heuristic graph bi-\/partitioning algorithm, based on iterative movement, proposed by C. M. Fiduccia and R. M. Mattheyses in 1982.
+
+In the case E is the set of edges of the graph, the algorithm needs {\ttfamily O($\vert$\+E$\vert$)} time to proceed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classratio__cut__partition}{ratio\+\_\+cut\+\_\+partition}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 33 of file fm\+\_\+partition.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}\label{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!cut\+\_\+edges\+\_\+iterator@{cut\+\_\+edges\+\_\+iterator}}
+\index{cut\+\_\+edges\+\_\+iterator@{cut\+\_\+edges\+\_\+iterator}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{cut\+\_\+edges\+\_\+iterator}{cut\_edges\_iterator}}
+{\footnotesize\ttfamily typedef edges\+\_\+t\+::const\+\_\+iterator \mbox{\hyperlink{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}{fm\+\_\+partition\+::cut\+\_\+edges\+\_\+iterator}}}
+
+Iterator type for edges which belong to the cut. 
+
+Definition at line 269 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}\label{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!fix\+\_\+type@{fix\+\_\+type}}
+\index{fix\+\_\+type@{fix\+\_\+type}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{fix\+\_\+type}{fix\_type}}
+{\footnotesize\ttfamily typedef short int \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fm\+\_\+partition\+::fix\+\_\+type}}}
+
+Fix type of each node (needed with \mbox{\hyperlink{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}{fm\+\_\+partition\+::set\+\_\+vars}}).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_a468a80e072d3ff18e5da33005825bcb1}{fm\+\_\+partition\+::\+F\+I\+XA}} 
+
+\mbox{\hyperlink{classfm__partition_a0b9a66f0e8093ee83482f93d6aa5b2eb}{fm\+\_\+partition\+::\+F\+I\+XB}} 
+
+\mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{fm\+\_\+partition\+::\+U\+N\+F\+I\+X\+ED}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 65 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}\label{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator@{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}}
+\index{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator@{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}{nodes\_of\_one\_side\_iterator}}
+{\footnotesize\ttfamily typedef nodes\+\_\+t\+::const\+\_\+iterator \mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}}}
+
+Iterator type of nodes of a side. 
+
+Definition at line 294 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}\label{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!side\+\_\+type@{side\+\_\+type}}
+\index{side\+\_\+type@{side\+\_\+type}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{side\+\_\+type}{side\_type}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{fm\+\_\+partition\+::side\+\_\+type}}}
+
+Return type of \mbox{\hyperlink{classfm__partition_af5f6ad817fe30760f3bc5470bd70c4c9}{fm\+\_\+partition\+::get\+\_\+side\+\_\+of\+\_\+node}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{fm\+\_\+partition\+::A}} 
+
+\mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{fm\+\_\+partition\+::B}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 42 of file fm\+\_\+partition.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}!fm\+\_\+partition@{fm\+\_\+partition}}\index{fm\+\_\+partition@{fm\+\_\+partition}!G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}} 
+G\+T\+L\+\_\+\+OK&Used as (positive) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}!fm\+\_\+partition@{fm\+\_\+partition}}\index{fm\+\_\+partition@{fm\+\_\+partition}!G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}} 
+G\+T\+L\+\_\+\+E\+R\+R\+OR&Used as (negative) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 40 of file algorithm.\+h.
+
+
+\begin{DoxyCode}
+40          \{
+41     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}} = 1,
+42     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}} = 0
+43     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfm__partition_a69f37c22abf6df5b3778623512240106}\label{classfm__partition_a69f37c22abf6df5b3778623512240106}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!fm\+\_\+partition@{fm\+\_\+partition}}
+\index{fm\+\_\+partition@{fm\+\_\+partition}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{fm\+\_\+partition()}{fm\_partition()}}
+{\footnotesize\ttfamily fm\+\_\+partition\+::fm\+\_\+partition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor.
+
+\begin{DoxySeeAlso}{See also}
+fm\+\_\+partition\+::fixe\+\_\+type 
+\end{DoxySeeAlso}
+
+
+Definition at line 32 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+33 \{
+34     \mbox{\hyperlink{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}{set\_vars\_executed}} = \textcolor{keyword}{false};
+35     \mbox{\hyperlink{classfm__partition_a806c9f5cb781b8ce662d2a3373433777}{enable\_cut\_edges\_storing}} = \textcolor{keyword}{false};
+36     \mbox{\hyperlink{classfm__partition_a2e308857dde9405bc3c6b911218bcda1}{enable\_nodesAB\_storing}} = \textcolor{keyword}{false};
+37 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_ab9d4f12de8f65d42240d94f7924fb319}\label{classfm__partition_ab9d4f12de8f65d42240d94f7924fb319}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!````~fm\+\_\+partition@{$\sim$fm\+\_\+partition}}
+\index{````~fm\+\_\+partition@{$\sim$fm\+\_\+partition}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{$\sim$fm\+\_\+partition()}{~fm\_partition()}}
+{\footnotesize\ttfamily fm\+\_\+partition\+::$\sim$fm\+\_\+partition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_adca9b1e7fa3afd914519a9dbb44e9fd5}{algorithm\+::$\sim$algorithm}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 40 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+41 \{
+42 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfm__partition_a6dc702df474c4ce60e80b3e5a93b7f4d}\label{classfm__partition_a6dc702df474c4ce60e80b3e5a93b7f4d}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!balance\+\_\+holds@{balance\+\_\+holds}}
+\index{balance\+\_\+holds@{balance\+\_\+holds}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{balance\+\_\+holds()}{balance\_holds()}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::balance\+\_\+holds (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode}{node}}}]{cur\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 785 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+786 \{
+787     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[cur\_node] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}})
+788     \{
+789     \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{double})\mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} + (\textcolor{keywordtype}{double})\mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[cur\_node]
+790         <= ((\textcolor{keywordtype}{double})\mbox{\hyperlink{classfm__partition_a25651e3f78ddbc418ea978ca6b28e0e0}{total\_node\_weight}} / 2.0) + (\textcolor{keywordtype}{double})
+      \mbox{\hyperlink{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}{max\_node\_weight}})
+791     \{
+792         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+793     \}
+794     \}
+795     \textcolor{keywordflow}{else}    \textcolor{comment}{// side[cur\_node] == B}
+796     \{
+797     \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{double})\mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} + (\textcolor{keywordtype}{double})\mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[cur\_node]
+798         <= ((\textcolor{keywordtype}{double})\mbox{\hyperlink{classfm__partition_a25651e3f78ddbc418ea978ca6b28e0e0}{total\_node\_weight}} / 2.0) + (\textcolor{keywordtype}{double})
+      \mbox{\hyperlink{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}{max\_node\_weight}})
+799     \{
+800         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+801     \}
+802     \}
+803     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+804 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a6dc702df474c4ce60e80b3e5a93b7f4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}\label{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!check@{check}}
+\index{check@{check}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks whether following preconditions are satisfied\+: 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}{fm\+\_\+partition\+::set\+\_\+vars}} has been executed before. 
+\item graph {\ttfamily G} is undirected. 
+\item only node\+\_\+weights $>$= 0 are applied. 
+\item only edge\+\_\+weights $>$= 0 are applied. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}} on success, {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{algorithm\+::\+G\+T\+L\+\_\+\+E\+R\+R\+OR}}} otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}{fm\+\_\+partition\+::set\+\_\+vars}} 
+
+\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+
+
+
+Definition at line 113 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+114 \{
+115     \textcolor{keywordflow}{if} ((!\mbox{\hyperlink{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}{set\_vars\_executed}}) || (!G.\mbox{\hyperlink{classgraph_aba427ff8ba0f70c68416ec1351344cd8}{is\_undirected}}()))
+116     \{
+117     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+118     \}
+119 
+120     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edge\_it = G.\mbox{\hyperlink{classgraph_a7ba35a4c4e8343ffb27ed6d9703c6f18}{edges\_begin}}();
+121     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edges\_end = G.\mbox{\hyperlink{classgraph_aea8d7f976b85b6137f52d915e26639f6}{edges\_end}}();
+122     \textcolor{keywordflow}{while} (edge\_it != edges\_end)
+123     \{
+124     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*edge\_it] < 0)
+125     \{
+126         \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+127     \}
+128     ++edge\_it;
+129     \}
+130     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+131     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+132     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+133     \{
+134     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it] < 0)
+135     \{
+136         \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}};
+137     \}
+138     ++node\_it;
+139     \}
+140 
+141     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}};
+142 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classfm__partition_af72a9fcc300ab0f202168c819b089e5d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a15197263e5318f824e0cde66ea9132b7}\label{classfm__partition_a15197263e5318f824e0cde66ea9132b7}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!clean\+\_\+pass@{clean\+\_\+pass}}
+\index{clean\+\_\+pass@{clean\+\_\+pass}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{clean\+\_\+pass()}{clean\_pass()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::clean\+\_\+pass (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1039 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+1040 \{
+1041     \textcolor{comment}{// clean unlocked* lists}
+1042     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edge\_it = G.\mbox{\hyperlink{classgraph_a7ba35a4c4e8343ffb27ed6d9703c6f18}{edges\_begin}}();
+1043     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edges\_end = G.\mbox{\hyperlink{classgraph_aea8d7f976b85b6137f52d915e26639f6}{edges\_end}}();
+1044     \textcolor{keywordflow}{while} (edge\_it != edges\_end)
+1045     \{
+1046     \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*edge\_it].\mbox{\hyperlink{classne__map_aebe555c23769c6dcc869b5ac7fae6a9c}{clear}}();
+1047     \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*edge\_it].\mbox{\hyperlink{classne__map_aebe555c23769c6dcc869b5ac7fae6a9c}{clear}}();
+1048     ++edge\_it;
+1049     \}
+1050     
+1051     \textcolor{comment}{// clean buckets}
+1052     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i <= 2 * \mbox{\hyperlink{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}{max\_vertex\_degree}} * 
+      \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}}; i++)
+1053     \{
+1054     \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[i].clear();
+1055     \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[i].clear();
+1056     \}
+1057     \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}.clear();
+1058     \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}.clear();
+1059 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classfm__partition_a15197263e5318f824e0cde66ea9132b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a15197263e5318f824e0cde66ea9132b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a03c76998f985593caddc4979a28b9042}\label{classfm__partition_a03c76998f985593caddc4979a28b9042}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!compute\+\_\+cut\+\_\+edges@{compute\+\_\+cut\+\_\+edges}}
+\index{compute\+\_\+cut\+\_\+edges@{compute\+\_\+cut\+\_\+edges}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{compute\+\_\+cut\+\_\+edges()}{compute\_cut\_edges()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::compute\+\_\+cut\+\_\+edges (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1062 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+1063 \{
+1064     \mbox{\hyperlink{classfm__partition_ad71b58a8f73cc834d49304252fb4a288}{cut\_edges}}.clear();
+1065     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edge\_it = G.\mbox{\hyperlink{classgraph_a7ba35a4c4e8343ffb27ed6d9703c6f18}{edges\_begin}}();
+1066     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edges\_end = G.\mbox{\hyperlink{classgraph_aea8d7f976b85b6137f52d915e26639f6}{edges\_end}}();
+1067     \textcolor{keywordflow}{while} (edge\_it != edges\_end)
+1068     \{
+1069     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->source()] != \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->target()])
+1070     \{
+1071         \mbox{\hyperlink{classfm__partition_ad71b58a8f73cc834d49304252fb4a288}{cut\_edges}}.push\_back(*edge\_it);
+1072     \}
+1073     ++edge\_it;
+1074     \}
+1075 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classfm__partition_a03c76998f985593caddc4979a28b9042_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classfm__partition_a03c76998f985593caddc4979a28b9042_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a5d0f409b6b1d554a62d67952236c7ce9}\label{classfm__partition_a5d0f409b6b1d554a62d67952236c7ce9}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!compute\+\_\+max\+\_\+vertex\+\_\+degree@{compute\+\_\+max\+\_\+vertex\+\_\+degree}}
+\index{compute\+\_\+max\+\_\+vertex\+\_\+degree@{compute\+\_\+max\+\_\+vertex\+\_\+degree}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{compute\+\_\+max\+\_\+vertex\+\_\+degree()}{compute\_max\_vertex\_degree()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::compute\+\_\+max\+\_\+vertex\+\_\+degree (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 444 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+445 \{
+446     \mbox{\hyperlink{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}{max\_vertex\_degree}} = 0;
+447     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+448     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+449     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+450     \{
+451     \textcolor{keywordflow}{if} (max\_vertex\_degree < node\_it->degree())
+452     \{
+453         \mbox{\hyperlink{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}{max\_vertex\_degree}} = node\_it->degree();
+454     \}
+455     ++node\_it;
+456     \}
+457 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classfm__partition_a5d0f409b6b1d554a62d67952236c7ce9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classfm__partition_a5d0f409b6b1d554a62d67952236c7ce9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_aaa8f24af3be860bfa42a171c25420c2c}\label{classfm__partition_aaa8f24af3be860bfa42a171c25420c2c}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!compute\+\_\+nodes\+AB@{compute\+\_\+nodes\+AB}}
+\index{compute\+\_\+nodes\+AB@{compute\+\_\+nodes\+AB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{compute\+\_\+nodes\+A\+B()}{compute\_nodesAB()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::compute\+\_\+nodes\+AB (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 1078 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+1079 \{
+1080     \mbox{\hyperlink{classfm__partition_acdcb82ae253e8eaf75a7efca3ca2b377}{nodesA}}.clear();
+1081     \mbox{\hyperlink{classfm__partition_a3616b858b66682c528365a4803a4efad}{nodesB}}.clear();
+1082     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+1083     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+1084     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+1085     \{
+1086     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}})
+1087     \{
+1088         \mbox{\hyperlink{classfm__partition_acdcb82ae253e8eaf75a7efca3ca2b377}{nodesA}}.push\_back(*node\_it);
+1089     \}
+1090     \textcolor{keywordflow}{else}    \textcolor{comment}{// side[*node\_it] == B}
+1091     \{
+1092         \mbox{\hyperlink{classfm__partition_a3616b858b66682c528365a4803a4efad}{nodesB}}.push\_back(*node\_it);
+1093     \}
+1094     ++node\_it;
+1095     \}
+1096 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classfm__partition_aaa8f24af3be860bfa42a171c25420c2c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classfm__partition_aaa8f24af3be860bfa42a171c25420c2c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a33d1dbba0ce9e398adab753f403deac3}\label{classfm__partition_a33d1dbba0ce9e398adab753f403deac3}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!copy\+\_\+side\+\_\+node\+\_\+map@{copy\+\_\+side\+\_\+node\+\_\+map}}
+\index{copy\+\_\+side\+\_\+node\+\_\+map@{copy\+\_\+side\+\_\+node\+\_\+map}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{copy\+\_\+side\+\_\+node\+\_\+map()}{copy\_side\_node\_map()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::copy\+\_\+side\+\_\+node\+\_\+map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \&}]{dest,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$}]{source }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 493 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+495 \{
+496     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+497     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+498     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+499     \{
+500     dest[*node\_it] = source[*node\_it];
+501     ++node\_it;
+502     \}
+503 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classfm__partition_a33d1dbba0ce9e398adab753f403deac3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a33d1dbba0ce9e398adab753f403deac3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a25ef3fc22bee176abfef64248484e8c0}\label{classfm__partition_a25ef3fc22bee176abfef64248484e8c0}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!create\+\_\+initial\+\_\+bipart@{create\+\_\+initial\+\_\+bipart}}
+\index{create\+\_\+initial\+\_\+bipart@{create\+\_\+initial\+\_\+bipart}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{create\+\_\+initial\+\_\+bipart()}{create\_initial\_bipart()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::create\+\_\+initial\+\_\+bipart (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 364 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+365 \{
+366     \textcolor{keywordtype}{int} i = 0;  \textcolor{comment}{// counter}
+367     \textcolor{keywordtype}{int} no\_nodes = G.\mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}();
+368     \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} = 0;
+369     \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} = 0;
+370 
+371     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+372     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+373     std::vector<graph::node\_iterator> node\_vector(G.\mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}());
+374     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+375     \{
+376     node\_vector[i] = node\_it;
+377     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a468a80e072d3ff18e5da33005825bcb1}{FIXA}})
+378     \{
+379         \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] = \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}};
+380         \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+381     \}
+382     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a0b9a66f0e8093ee83482f93d6aa5b2eb}{FIXB}})
+383     \{
+384         \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] = \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}};
+385         \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+386     \}
+387     \textcolor{keywordflow}{else}    \textcolor{comment}{// fixed[*node\_it] == UNFIXED}
+388     \{
+389         \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+390         \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] = \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}};
+391     \}
+392     ++i;
+393     ++node\_it;
+394     \}
+395     \mbox{\hyperlink{classfm__partition_a27915b38800483f897647f012b935f0a}{shuffle\_vector}}(no\_nodes, node\_vector);
+396 
+397     \textcolor{comment}{// compute best balance}
+398     \textcolor{keywordtype}{int} best\_bal = \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} * 
+      \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}};
+399     \textcolor{keywordtype}{int} best\_pos = -1;
+400     \textcolor{keywordflow}{for} (i = 0; i < no\_nodes; i++)
+401     \{
+402     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[*node\_vector[i]] == \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{UNFIXED}})
+403     \{
+404         \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_vector[i]];
+405         \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} -= \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_vector[i]];
+406         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} * \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} > best\_bal)
+407         \{
+408         best\_bal = \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} * 
+      \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}};
+409         best\_pos = i;
+410         \}
+411     \}
+412     \}
+413 
+414     \textcolor{comment}{// create partition with best balance}
+415     \textcolor{keywordflow}{for} (i = 0; i <= best\_pos; i++)
+416     \{
+417     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[*node\_vector[i]] == \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{UNFIXED}})
+418     \{
+419         \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_vector[i]] = \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}};
+420     \}
+421     \}
+422 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classfm__partition_a25ef3fc22bee176abfef64248484e8c0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classfm__partition_a25ef3fc22bee176abfef64248484e8c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a36990b62c6d2d9e4948f42d805afc626}\label{classfm__partition_a36990b62c6d2d9e4948f42d805afc626}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!cut\+\_\+edges\+\_\+begin@{cut\+\_\+edges\+\_\+begin}}
+\index{cut\+\_\+edges\+\_\+begin@{cut\+\_\+edges\+\_\+begin}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{cut\+\_\+edges\+\_\+begin()}{cut\_edges\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}{fm\+\_\+partition\+::cut\+\_\+edges\+\_\+iterator}} fm\+\_\+partition\+::cut\+\_\+edges\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all edges which belong to the cut, that means all edges with end-\/nodes on different sides. It is only valid if enabled with \mbox{\hyperlink{classfm__partition_ad0870674a1fb8e1c882f6855e32aec09}{fm\+\_\+partition\+::store\+\_\+cut\+\_\+edges}} before.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all cut edges 
+\end{DoxyReturn}
+
+
+Definition at line 234 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+235 \{
+236     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_ad71b58a8f73cc834d49304252fb4a288}{cut\_edges}}.begin();
+237 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_af213672f08e03878183659fa8c2ed61e}\label{classfm__partition_af213672f08e03878183659fa8c2ed61e}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!cut\+\_\+edges\+\_\+end@{cut\+\_\+edges\+\_\+end}}
+\index{cut\+\_\+edges\+\_\+end@{cut\+\_\+edges\+\_\+end}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{cut\+\_\+edges\+\_\+end()}{cut\_edges\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}{fm\+\_\+partition\+::cut\+\_\+edges\+\_\+iterator}} fm\+\_\+partition\+::cut\+\_\+edges\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+End-\/\+Iterator for iteration through all edges which belong to the cut. It is only valid if enabled with \mbox{\hyperlink{classfm__partition_ad0870674a1fb8e1c882f6855e32aec09}{fm\+\_\+partition\+::store\+\_\+cut\+\_\+edges}} before.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all cut-\/edges 
+\end{DoxyReturn}
+
+
+Definition at line 240 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+241 \{
+242     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_ad71b58a8f73cc834d49304252fb4a288}{cut\_edges}}.end();
+243 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_ad768579b813500dc2d267aac5668ed48}\label{classfm__partition_ad768579b813500dc2d267aac5668ed48}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!divide\+\_\+up@{divide\+\_\+up}}
+\index{divide\+\_\+up@{divide\+\_\+up}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{divide\+\_\+up()}{divide\_up()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::divide\+\_\+up (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 283 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+284 \{
+285     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+286     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+287     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+288     \{
+289     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a468a80e072d3ff18e5da33005825bcb1}{FIXA}})
+290     \{
+291         \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] = \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}};
+292     \}
+293     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a0b9a66f0e8093ee83482f93d6aa5b2eb}{FIXB}})
+294     \{
+295         \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] = \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}};
+296     \}
+297     ++node\_it;
+298     \}
+299 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classfm__partition_ad768579b813500dc2d267aac5668ed48_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classfm__partition_ad768579b813500dc2d267aac5668ed48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a42fa2e19fb3fde093a1a05d0bd6d8ad1}\label{classfm__partition_a42fa2e19fb3fde093a1a05d0bd6d8ad1}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!get\+\_\+cutsize@{get\+\_\+cutsize}}
+\index{get\+\_\+cutsize@{get\+\_\+cutsize}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{get\+\_\+cutsize()}{get\_cutsize()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::get\+\_\+cutsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the size of the cut after bi-\/partitioning.
+
+\begin{DoxyReturn}{Returns}
+cutsize 
+\end{DoxyReturn}
+
+
+Definition at line 176 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+177 \{
+178     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}};
+179 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_aa8aa84286a6939d17175fbf646ba3176}\label{classfm__partition_aa8aa84286a6939d17175fbf646ba3176}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!get\+\_\+needed\+\_\+passes@{get\+\_\+needed\+\_\+passes}}
+\index{get\+\_\+needed\+\_\+passes@{get\+\_\+needed\+\_\+passes}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{get\+\_\+needed\+\_\+passes()}{get\_needed\_passes()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::get\+\_\+needed\+\_\+passes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the number of passes needed to create a bi-\/partition with this heuristic.
+
+\begin{DoxyReturn}{Returns}
+number of passes 
+\end{DoxyReturn}
+
+
+Definition at line 182 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+183 \{
+184     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_af35277f499ad76a979ee33b0cd388dc5}{no\_passes}};
+185 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_af5f6ad817fe30760f3bc5470bd70c4c9}\label{classfm__partition_af5f6ad817fe30760f3bc5470bd70c4c9}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!get\+\_\+side\+\_\+of\+\_\+node@{get\+\_\+side\+\_\+of\+\_\+node}}
+\index{get\+\_\+side\+\_\+of\+\_\+node@{get\+\_\+side\+\_\+of\+\_\+node}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{get\+\_\+side\+\_\+of\+\_\+node()}{get\_side\_of\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{fm\+\_\+partition\+::side\+\_\+type}} fm\+\_\+partition\+::get\+\_\+side\+\_\+of\+\_\+node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption}) const}
+
+Gets side of the node after bi-\/partitioning.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node of graph {\ttfamily G} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{fm\+\_\+partition\+::A}}} if {\ttfamily n} lies on side {\ttfamily A}, {\ttfamily \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{fm\+\_\+partition\+::B}}} otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 188 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+189 \{
+190     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[n];
+191 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_a3f1ddcff1ba7a4c4090f947f918b5331}\label{classfm__partition_a3f1ddcff1ba7a4c4090f947f918b5331}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!get\+\_\+weight\+\_\+on\+\_\+sideA@{get\+\_\+weight\+\_\+on\+\_\+sideA}}
+\index{get\+\_\+weight\+\_\+on\+\_\+sideA@{get\+\_\+weight\+\_\+on\+\_\+sideA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{get\+\_\+weight\+\_\+on\+\_\+side\+A()}{get\_weight\_on\_sideA()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::get\+\_\+weight\+\_\+on\+\_\+sideA (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption}) const}
+
+Gets the sum of all node weights from nodes on side A.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily node\+\_\+weight\+\_\+on\+\_\+sideA} 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+201 \{
+202     \textcolor{keywordtype}{int} nwA = 0;
+203     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+204     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+205     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+206     \{
+207     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}})
+208     \{
+209         nwA += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+210     \}
+211     ++node\_it;
+212     \}
+213     \textcolor{keywordflow}{return} nwA;
+214 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classfm__partition_a3f1ddcff1ba7a4c4090f947f918b5331_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a9e380da1dc654fcffdf4ac2418c6ef80}\label{classfm__partition_a9e380da1dc654fcffdf4ac2418c6ef80}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!get\+\_\+weight\+\_\+on\+\_\+sideB@{get\+\_\+weight\+\_\+on\+\_\+sideB}}
+\index{get\+\_\+weight\+\_\+on\+\_\+sideB@{get\+\_\+weight\+\_\+on\+\_\+sideB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{get\+\_\+weight\+\_\+on\+\_\+side\+B()}{get\_weight\_on\_sideB()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::get\+\_\+weight\+\_\+on\+\_\+sideB (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption}) const}
+
+Gets the sum of all node weights from nodes on side B.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily node\+\_\+weight\+\_\+on\+\_\+sideB} 
+\end{DoxyReturn}
+
+
+Definition at line 217 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+218 \{
+219     \textcolor{keywordtype}{int} nwB = 0;
+220     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+221     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+222     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+223     \{
+224     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}})
+225     \{
+226         nwB += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+227     \}
+228     ++node\_it;
+229     \}
+230     \textcolor{keywordflow}{return} nwB;
+231 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classfm__partition_a9e380da1dc654fcffdf4ac2418c6ef80_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a3e3aa22119ff5ff9c406683e22ab6078}\label{classfm__partition_a3e3aa22119ff5ff9c406683e22ab6078}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!hide\+\_\+self\+\_\+loops@{hide\+\_\+self\+\_\+loops}}
+\index{hide\+\_\+self\+\_\+loops@{hide\+\_\+self\+\_\+loops}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{hide\+\_\+self\+\_\+loops()}{hide\_self\_loops()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::hide\+\_\+self\+\_\+loops (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 302 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+303 \{
+304     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} temp\_it;
+305     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edge\_it = G.\mbox{\hyperlink{classgraph_a7ba35a4c4e8343ffb27ed6d9703c6f18}{edges\_begin}}();
+306     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edges\_end = G.\mbox{\hyperlink{classgraph_aea8d7f976b85b6137f52d915e26639f6}{edges\_end}}();
+307     \textcolor{keywordflow}{while} (edge\_it != edges\_end)
+308     \{
+309     \textcolor{keywordflow}{if} (edge\_it->source() == edge\_it->target())
+310     \{
+311         temp\_it = edge\_it;
+312         ++edge\_it;
+313         G.\mbox{\hyperlink{classgraph_ab2f8520bcac080d73c55228fecc61825}{hide\_edge}}(*temp\_it);
+314     \}
+315     \textcolor{keywordflow}{else}
+316     \{
+317         ++edge\_it;
+318     \}
+319     \}
+320 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a3e3aa22119ff5ff9c406683e22ab6078_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classfm__partition_a3e3aa22119ff5ff9c406683e22ab6078_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a9aa27d4c97616c0fdbd00d11dc83bc0b}\label{classfm__partition_a9aa27d4c97616c0fdbd00d11dc83bc0b}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!init\+\_\+data\+\_\+structure@{init\+\_\+data\+\_\+structure}}
+\index{init\+\_\+data\+\_\+structure@{init\+\_\+data\+\_\+structure}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{init\+\_\+data\+\_\+structure()}{init\_data\_structure()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::init\+\_\+data\+\_\+structure (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 506 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+507 \{
+508     \mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G);
+509     \mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G);
+510     \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G);
+511     \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G);
+512     \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}} = 0;
+513     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edge\_it = G.\mbox{\hyperlink{classgraph_a7ba35a4c4e8343ffb27ed6d9703c6f18}{edges\_begin}}();
+514     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edges\_end = G.\mbox{\hyperlink{classgraph_aea8d7f976b85b6137f52d915e26639f6}{edges\_end}}();
+515     \textcolor{keywordflow}{while} (edge\_it != edges\_end)
+516     \{
+517     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->source()] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}}) &&
+518         (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->target()] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}}))
+519     \{
+520         \mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*edge\_it] = 2;
+521         \mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*edge\_it] = 0;
+522         \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*edge\_it].push\_back(edge\_it->source());
+523         \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*edge\_it].push\_back(edge\_it->target());
+524     \}
+525     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->source()] == \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}}) &&
+526         (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->target()] == \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}}))
+527     \{
+528         \mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*edge\_it] = 0;
+529         \mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*edge\_it] = 2;
+530         \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*edge\_it].push\_back(edge\_it->source());
+531         \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*edge\_it].push\_back(edge\_it->target());
+532     \}
+533     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->source()] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}}) &&
+534         (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->target()] == \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}}))
+535     \{
+536         \mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*edge\_it] = 1;
+537         \mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*edge\_it] = 1;
+538         \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}} += \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*edge\_it];
+539         \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*edge\_it].push\_back(edge\_it->source());
+540         \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*edge\_it].push\_back(edge\_it->target());
+541     \}
+542     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->source()] == \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}}) &&
+543         (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[edge\_it->target()] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}}))
+544     \{
+545         \mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*edge\_it] = 1;
+546         \mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*edge\_it] = 1;
+547         \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}} += \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*edge\_it];
+548         \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*edge\_it].push\_back(edge\_it->target());
+549         \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*edge\_it].push\_back(edge\_it->source());
+550     \}
+551     ++edge\_it;
+552     \}
+553 
+554     \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}.resize(2 * \mbox{\hyperlink{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}{max\_vertex\_degree}} * 
+      \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}} + 1);
+555     \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}.resize(2 * \mbox{\hyperlink{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}{max\_vertex\_degree}} * 
+      \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}} + 1);
+556 
+557     \mbox{\hyperlink{classfm__partition_ac510befe1837c646a260a14c110d7a79}{init\_filling\_buckets}}(G);
+558 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a9aa27d4c97616c0fdbd00d11dc83bc0b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a9aa27d4c97616c0fdbd00d11dc83bc0b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_ac510befe1837c646a260a14c110d7a79}\label{classfm__partition_ac510befe1837c646a260a14c110d7a79}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!init\+\_\+filling\+\_\+buckets@{init\+\_\+filling\+\_\+buckets}}
+\index{init\+\_\+filling\+\_\+buckets@{init\+\_\+filling\+\_\+buckets}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{init\+\_\+filling\+\_\+buckets()}{init\_filling\_buckets()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::init\+\_\+filling\+\_\+buckets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 561 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+562 \{
+563     \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} = 0;
+564     \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} = 0;
+565     \mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucketA\_empty}} = \textcolor{keyword}{true};
+566     \mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucketB\_empty}} = \textcolor{keyword}{true};
+567     \textcolor{keywordtype}{bool} first\_A\_node = \textcolor{keyword}{true};
+568     \textcolor{keywordtype}{bool} first\_B\_node = \textcolor{keyword}{true};
+569     \textcolor{keywordtype}{int} index;
+570     \textcolor{comment}{// position\_in\_bucket.init(G);}
+571     \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G);
+572 
+573     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+574     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+575     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+576     \{
+577     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}})
+578     \{
+579         \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+580         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] = \mbox{\hyperlink{classfm__partition_a50c61b9d27e83a98e2e04a47b51670b6}{inital\_gain\_of\_node\_on\_sideA}}(*node\_it)
+      ;
+581         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{UNFIXED}})
+582         \{
+583         \textcolor{keywordflow}{if} (first\_A\_node)
+584         \{
+585             \mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucketA\_empty}} = \textcolor{keyword}{false};
+586             \mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}} = \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it];
+587             first\_A\_node = \textcolor{keyword}{false};
+588         \}
+589         \textcolor{keywordflow}{else}
+590         \{
+591             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}} < \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it])
+592             \{
+593             \mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}} = \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it];
+594             \}
+595         \}
+596         index = \mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it]);
+597         \mbox{\hyperlink{classfm__partition_ad17406d94b53c327e31b28e462de010f}{position\_in\_bucket}}[*node\_it] = \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[index].insert(
+598             \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[index].end(), *node\_it);
+599         \}
+600     \}
+601     \textcolor{keywordflow}{else}    \textcolor{comment}{// side[*node\_it] == B}
+602     \{
+603         \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+604         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] = \mbox{\hyperlink{classfm__partition_aa217da6a3c8a736e9e51aa348c951501}{inital\_gain\_of\_node\_on\_sideB}}(*node\_it)
+      ;
+605         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[*node\_it] == \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{UNFIXED}})
+606         \{
+607         \textcolor{keywordflow}{if} (first\_B\_node)
+608         \{
+609             \mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucketB\_empty}} = \textcolor{keyword}{false};
+610             \mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}} = \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it];
+611             first\_B\_node = \textcolor{keyword}{false};
+612         \}
+613         \textcolor{keywordflow}{else}
+614         \{
+615             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}} < \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it])
+616             \{
+617             \mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}} = \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it];
+618             \}
+619         \}
+620         index = \mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it]);
+621         \mbox{\hyperlink{classfm__partition_ad17406d94b53c327e31b28e462de010f}{position\_in\_bucket}}[*node\_it] = \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[index].insert(
+622             \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[index].end(), *node\_it);
+623         \}
+624     \}
+625     ++node\_it;
+626     \}
+627 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_ac510befe1837c646a260a14c110d7a79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_ac510befe1837c646a260a14c110d7a79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_aad791ac648a9ff4694c8960f49dcc018}\label{classfm__partition_aad791ac648a9ff4694c8960f49dcc018}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!init\+\_\+variables@{init\+\_\+variables}}
+\index{init\+\_\+variables@{init\+\_\+variables}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{init\+\_\+variables()}{init\_variables()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::init\+\_\+variables (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 323 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+324 \{
+325     \textcolor{keywordtype}{bool} first\_edge\_found = \textcolor{keyword}{true};
+326     \textcolor{keywordtype}{bool} first\_node\_found = \textcolor{keyword}{true};
+327     \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}} = 0;
+328     \mbox{\hyperlink{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}{max\_node\_weight}} = 0;
+329     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edge\_it = G.\mbox{\hyperlink{classgraph_a7ba35a4c4e8343ffb27ed6d9703c6f18}{edges\_begin}}();
+330     \mbox{\hyperlink{classgraph_a818d3766018eb0af91d520ce2150203c}{graph::edge\_iterator}} edges\_end = G.\mbox{\hyperlink{classgraph_aea8d7f976b85b6137f52d915e26639f6}{edges\_end}}();
+331     \textcolor{keywordflow}{while} (edge\_it != edges\_end)
+332     \{
+333     \textcolor{keywordflow}{if} (first\_edge\_found)
+334     \{
+335         \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}} = \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*edge\_it];
+336         first\_edge\_found = \textcolor{keyword}{false};
+337     \}
+338     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*edge\_it] > \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}})
+339     \{
+340         \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}} = \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*edge\_it];
+341     \}
+342     ++edge\_it;
+343     \}
+344     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} node\_it = G.\mbox{\hyperlink{classgraph_aec053a4b509d1be804237a80044c54c0}{nodes\_begin}}();
+345     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} nodes\_end = G.\mbox{\hyperlink{classgraph_abbf9c0cb5629e98e1142254911238173}{nodes\_end}}();
+346     \mbox{\hyperlink{classfm__partition_a25651e3f78ddbc418ea978ca6b28e0e0}{total\_node\_weight}} = 0;
+347     \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+348     \{
+349     \mbox{\hyperlink{classfm__partition_a25651e3f78ddbc418ea978ca6b28e0e0}{total\_node\_weight}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+350     \textcolor{keywordflow}{if} (first\_node\_found)
+351     \{
+352         \mbox{\hyperlink{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}{max\_node\_weight}} = \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+353         first\_node\_found = \textcolor{keyword}{false};
+354     \}
+355     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it] > \mbox{\hyperlink{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}{max\_node\_weight}})
+356     \{
+357         \mbox{\hyperlink{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}{max\_node\_weight}} = \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[*node\_it];
+358     \}
+359     ++node\_it;
+360     \}
+361 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{classfm__partition_aad791ac648a9ff4694c8960f49dcc018_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classfm__partition_aad791ac648a9ff4694c8960f49dcc018_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a50c61b9d27e83a98e2e04a47b51670b6}\label{classfm__partition_a50c61b9d27e83a98e2e04a47b51670b6}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideA@{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideA}}
+\index{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideA@{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+side\+A()}{inital\_gain\_of\_node\_on\_sideA()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideA (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}}}]{cur\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 630 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+631 \{
+632     \textcolor{keywordtype}{int} node\_gain = 0;
+633     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_edge\_it = cur\_node.
+      \mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}();
+634     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_edges\_end = cur\_node.
+      \mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}();
+635     \textcolor{keywordflow}{while} (adj\_edge\_it != adj\_edges\_end)
+636     \{
+637     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*adj\_edge\_it] == 1)
+638     \{
+639         node\_gain += \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+640     \}
+641     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*adj\_edge\_it] == 0)
+642     \{
+643         node\_gain -= \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+644     \}
+645     ++adj\_edge\_it;
+646     \}
+647     \textcolor{keywordflow}{return} node\_gain;
+648 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a50c61b9d27e83a98e2e04a47b51670b6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a50c61b9d27e83a98e2e04a47b51670b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_aa217da6a3c8a736e9e51aa348c951501}\label{classfm__partition_aa217da6a3c8a736e9e51aa348c951501}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideB@{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideB}}
+\index{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideB@{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+side\+B()}{inital\_gain\_of\_node\_on\_sideB()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::inital\+\_\+gain\+\_\+of\+\_\+node\+\_\+on\+\_\+sideB (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}}}]{cur\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 651 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+652 \{
+653     \textcolor{keywordtype}{int} node\_gain = 0;
+654     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_edge\_it = cur\_node.
+      \mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}();
+655     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_edges\_end = cur\_node.
+      \mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}();
+656     \textcolor{keywordflow}{while} (adj\_edge\_it != adj\_edges\_end)
+657     \{
+658     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*adj\_edge\_it] == 1)
+659     \{
+660         node\_gain += \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+661     \}
+662     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*adj\_edge\_it] == 0)
+663     \{
+664         node\_gain -= \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+665     \}
+666     ++adj\_edge\_it;
+667     \}
+668     \textcolor{keywordflow}{return} node\_gain;
+669 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_aa217da6a3c8a736e9e51aa348c951501_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_aa217da6a3c8a736e9e51aa348c951501_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a91572409b30f0967ea3782079f69b1bb}\label{classfm__partition_a91572409b30f0967ea3782079f69b1bb}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!move\+\_\+manager@{move\+\_\+manager}}
+\index{move\+\_\+manager@{move\+\_\+manager}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{move\+\_\+manager()}{move\_manager()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::move\+\_\+manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 672 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+673 \{
+674     \textcolor{keywordtype}{int} step\_number = 0;
+675     \textcolor{keywordtype}{int} best\_tentative\_move = 0;
+676     \textcolor{keywordtype}{int} best\_bal = \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} * 
+      \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}};
+677     std::vector<node> tentative\_moves(G.\mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}() + 1);
+678     std::vector<int> tentative\_cutsize(G.\mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}() + 1);
+679     \mbox{\hyperlink{classnode}{node}} moved\_node;
+680     tentative\_cutsize[0] = \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}};
+681 
+682     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classfm__partition_ac1167c6595a9f582ae98c9f555029d9b}{move\_vertex}}(G, moved\_node))
+683     \{
+684     ++step\_number;
+685     tentative\_cutsize[step\_number] = \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}};
+686     tentative\_moves[step\_number] = moved\_node;
+687     \textcolor{keywordflow}{if} (tentative\_cutsize[best\_tentative\_move] > \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}})
+688     \{
+689         best\_tentative\_move = step\_number;
+690         best\_bal = \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} * 
+      \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}};
+691     \}
+692     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (tentative\_cutsize[best\_tentative\_move] == \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}})
+693     \{
+694         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} * \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} > best\_bal)
+695         \{
+696         best\_tentative\_move = step\_number;
+697         best\_bal = \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} * 
+      \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}};
+698         \}
+699     \}
+700     \}
+701 
+702     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= best\_tentative\_move; i++)
+703     \{
+704     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[tentative\_moves[i]] == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}})
+705     \{
+706         \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[tentative\_moves[i]] = \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}};
+707     \}
+708     \textcolor{keywordflow}{else}    \textcolor{comment}{// side[tentative\_moves[i]] == B}
+709     \{
+710         \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[tentative\_moves[i]] = \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}};
+711     \}
+712     \}
+713     \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}} = tentative\_cutsize[best\_tentative\_move];
+714 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a91572409b30f0967ea3782079f69b1bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a91572409b30f0967ea3782079f69b1bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_ac1167c6595a9f582ae98c9f555029d9b}\label{classfm__partition_ac1167c6595a9f582ae98c9f555029d9b}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!move\+\_\+vertex@{move\+\_\+vertex}}
+\index{move\+\_\+vertex@{move\+\_\+vertex}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{move\+\_\+vertex()}{move\_vertex()}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::move\+\_\+vertex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classnode}{node}} \&}]{moved\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 717 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+718 \{
+719     \mbox{\hyperlink{classnode}{node}} cons\_nodeA;
+720     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucketA\_empty}})
+721     \{
+722     cons\_nodeA = \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}})].back();
+723     \}
+724     \mbox{\hyperlink{classnode}{node}} cons\_nodeB;
+725     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucketB\_empty}})
+726     \{
+727     cons\_nodeB = \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}})].back();
+728     \}
+729     \textcolor{keywordflow}{if} ((!\mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucketA\_empty}}) && (!\mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucketB\_empty}}) &&
+730     (\mbox{\hyperlink{classfm__partition_a6dc702df474c4ce60e80b3e5a93b7f4d}{balance\_holds}}(G, cons\_nodeA)) && (\mbox{\hyperlink{classfm__partition_a6dc702df474c4ce60e80b3e5a93b7f4d}{balance\_holds}}(G, cons\_nodeB)))
+731     \{
+732     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[cons\_nodeA] > \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[cons\_nodeB])
+733     \{
+734         \mbox{\hyperlink{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5}{update\_data\_structure\_A2B}}(cons\_nodeA);
+735         moved\_node = cons\_nodeA;
+736     \}
+737     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[cons\_nodeB] > \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[cons\_nodeA])
+738     \{
+739         \mbox{\hyperlink{classfm__partition_a783174f29d49e7e1ae7f6cf71faa82fb}{update\_data\_structure\_B2A}}(cons\_nodeB);
+740         moved\_node = cons\_nodeB;
+741     \}
+742     \textcolor{keywordflow}{else}    \textcolor{comment}{// gain\_value[cons\_nodeB] == gain\_value[cons\_nodeA]}
+743     \{
+744         \textcolor{keywordtype}{int} bal\_diff\_A2B = abs(\mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} - 2 *
+745         \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[cons\_nodeA] - \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}});
+746         \textcolor{keywordtype}{int} bal\_diff\_B2A = abs(\mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} - 2 *
+747         \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[cons\_nodeB] - \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}});
+748         \textcolor{keywordflow}{if} (bal\_diff\_A2B < bal\_diff\_B2A)
+749         \{
+750         \mbox{\hyperlink{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5}{update\_data\_structure\_A2B}}(cons\_nodeA);
+751         moved\_node = cons\_nodeA;
+752         \}
+753         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (bal\_diff\_B2A < bal\_diff\_A2B)
+754         \{
+755         \mbox{\hyperlink{classfm__partition_a783174f29d49e7e1ae7f6cf71faa82fb}{update\_data\_structure\_B2A}}(cons\_nodeB);
+756         moved\_node = cons\_nodeB;
+757         \}
+758         \textcolor{keywordflow}{else}    \textcolor{comment}{// break remaining ties as desired [FidMat82]}
+759         \{
+760         \mbox{\hyperlink{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5}{update\_data\_structure\_A2B}}(cons\_nodeA);
+761         moved\_node = cons\_nodeA;
+762         \}
+763     \}
+764     \}
+765     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((!\mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucketA\_empty}}) && (\mbox{\hyperlink{classfm__partition_a6dc702df474c4ce60e80b3e5a93b7f4d}{balance\_holds}}(G, cons\_nodeA)))
+766     \{
+767     \mbox{\hyperlink{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5}{update\_data\_structure\_A2B}}(cons\_nodeA);
+768     moved\_node = cons\_nodeA;
+769     \}
+770     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((!\mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucketB\_empty}}) && (\mbox{\hyperlink{classfm__partition_a6dc702df474c4ce60e80b3e5a93b7f4d}{balance\_holds}}(G, cons\_nodeB)))
+771     \{
+772     \mbox{\hyperlink{classfm__partition_a783174f29d49e7e1ae7f6cf71faa82fb}{update\_data\_structure\_B2A}}(cons\_nodeB);
+773     moved\_node = cons\_nodeB;
+774     \}
+775     \textcolor{keywordflow}{else}
+776     \{
+777     \textcolor{keywordflow}{return} \textcolor{keyword}{false};   \textcolor{comment}{// no more vertices can be moved}
+778     \}
+779     \mbox{\hyperlink{classfm__partition_a335722b73c1d6f02d1083e76a3937b01}{update\_max\_gain}}(\mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}});
+780     \mbox{\hyperlink{classfm__partition_a335722b73c1d6f02d1083e76a3937b01}{update\_max\_gain}}(\mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}});
+781     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+782 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_ac1167c6595a9f582ae98c9f555029d9b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_ac1167c6595a9f582ae98c9f555029d9b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_adad3bf33efb4a2b1b0feadeafb33f5fd}\label{classfm__partition_adad3bf33efb4a2b1b0feadeafb33f5fd}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!nodes\+\_\+of\+\_\+side\+A\+\_\+begin@{nodes\+\_\+of\+\_\+side\+A\+\_\+begin}}
+\index{nodes\+\_\+of\+\_\+side\+A\+\_\+begin@{nodes\+\_\+of\+\_\+side\+A\+\_\+begin}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{nodes\+\_\+of\+\_\+side\+A\+\_\+begin()}{nodes\_of\_sideA\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} fm\+\_\+partition\+::nodes\+\_\+of\+\_\+side\+A\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all nodes which belong to side {\ttfamily A}. It is only valid if enabled with \mbox{\hyperlink{classfm__partition_a8926005b4637055d2acf6f29ad2d9b97}{fm\+\_\+partition\+::store\+\_\+nodes\+AB}} before.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all nodes on {\ttfamily A} 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+248 \{
+249     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_acdcb82ae253e8eaf75a7efca3ca2b377}{nodesA}}.begin();
+250 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_ac4202d1d929c1700985ad5d452b735fb}\label{classfm__partition_ac4202d1d929c1700985ad5d452b735fb}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!nodes\+\_\+of\+\_\+side\+A\+\_\+end@{nodes\+\_\+of\+\_\+side\+A\+\_\+end}}
+\index{nodes\+\_\+of\+\_\+side\+A\+\_\+end@{nodes\+\_\+of\+\_\+side\+A\+\_\+end}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{nodes\+\_\+of\+\_\+side\+A\+\_\+end()}{nodes\_of\_sideA\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} fm\+\_\+partition\+::nodes\+\_\+of\+\_\+side\+A\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+End-\/\+Iterator for iteration through all nodes which belong to side {\ttfamily A}. It is only valid if enabled with \mbox{\hyperlink{classfm__partition_a8926005b4637055d2acf6f29ad2d9b97}{fm\+\_\+partition\+::store\+\_\+nodes\+AB}} before.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all nodes on {\ttfamily A} 
+\end{DoxyReturn}
+
+
+Definition at line 254 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+255 \{
+256     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_acdcb82ae253e8eaf75a7efca3ca2b377}{nodesA}}.end();
+257 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_a4e433456ed0214c04466c4f1060b0909}\label{classfm__partition_a4e433456ed0214c04466c4f1060b0909}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!nodes\+\_\+of\+\_\+side\+B\+\_\+begin@{nodes\+\_\+of\+\_\+side\+B\+\_\+begin}}
+\index{nodes\+\_\+of\+\_\+side\+B\+\_\+begin@{nodes\+\_\+of\+\_\+side\+B\+\_\+begin}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{nodes\+\_\+of\+\_\+side\+B\+\_\+begin()}{nodes\_of\_sideB\_begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} fm\+\_\+partition\+::nodes\+\_\+of\+\_\+side\+B\+\_\+begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Iterate through all nodes which belong to side {\ttfamily B}, It is only valid if enabled with \mbox{\hyperlink{classfm__partition_a8926005b4637055d2acf6f29ad2d9b97}{fm\+\_\+partition\+::store\+\_\+nodes\+AB}} before.
+
+\begin{DoxyReturn}{Returns}
+start for iteration through all nodes on {\ttfamily B} 
+\end{DoxyReturn}
+
+
+Definition at line 261 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+262 \{
+263     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_a3616b858b66682c528365a4803a4efad}{nodesB}}.begin();
+264 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_a9682b070cce104bdfe69e576df57f560}\label{classfm__partition_a9682b070cce104bdfe69e576df57f560}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!nodes\+\_\+of\+\_\+side\+B\+\_\+end@{nodes\+\_\+of\+\_\+side\+B\+\_\+end}}
+\index{nodes\+\_\+of\+\_\+side\+B\+\_\+end@{nodes\+\_\+of\+\_\+side\+B\+\_\+end}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{nodes\+\_\+of\+\_\+side\+B\+\_\+end()}{nodes\_of\_sideB\_end()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfm__partition_ad6cca73d48cc73d7bee1f52bf1c9a9fe}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+one\+\_\+side\+\_\+iterator}} fm\+\_\+partition\+::nodes\+\_\+of\+\_\+side\+B\+\_\+end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+End-\/\+Iterator for iteration through all nodes which belong to side {\ttfamily B}, It is only valid if enabled with \mbox{\hyperlink{classfm__partition_a8926005b4637055d2acf6f29ad2d9b97}{fm\+\_\+partition\+::store\+\_\+nodes\+AB}} before.
+
+\begin{DoxyReturn}{Returns}
+end for iteration through all nodes on {\ttfamily B} 
+\end{DoxyReturn}
+
+
+Definition at line 268 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+269 \{
+270     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_a3616b858b66682c528365a4803a4efad}{nodesB}}.end();
+271 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_a45ef6bc577ce894ead2c699678e26f1b}\label{classfm__partition_a45ef6bc577ce894ead2c699678e26f1b}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{fm\+\_\+partition\+::side\+\_\+type}} fm\+\_\+partition\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}} \&}]{n }\end{DoxyParamCaption}) const}
+
+Gets side of the node after bi-\/partitioning.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & node of graph {\ttfamily G} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{fm\+\_\+partition\+::A}}} if {\ttfamily n} lies on side {\ttfamily A}, {\ttfamily \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{fm\+\_\+partition\+::B}}} otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_af5f6ad817fe30760f3bc5470bd70c4c9}{fm\+\_\+partition\+::get\+\_\+side\+\_\+of\+\_\+node}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 194 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+195 \{
+196     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}[n];
+197 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_aec7b2a315bc003fbd98debd5cd879f99}\label{classfm__partition_aec7b2a315bc003fbd98debd5cd879f99}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!pass\+\_\+manager@{pass\+\_\+manager}}
+\index{pass\+\_\+manager@{pass\+\_\+manager}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{pass\+\_\+manager()}{pass\_manager()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::pass\+\_\+manager (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 460 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+461 \{
+462     \textcolor{comment}{// final pass which doesn't improve cur\_cutsize is not counted}
+463     \mbox{\hyperlink{classfm__partition_af35277f499ad76a979ee33b0cd388dc5}{no\_passes}} = -1;
+464     \textcolor{keywordtype}{int} best\_cutsize = -1;  \textcolor{comment}{// = -1 to avoid warning}
+465     \mbox{\hyperlink{classnode__map}{node\_map<side\_type>}} best\_side(G);
+466     \textcolor{keywordtype}{bool} improved\_cutsize;
+467 
+468     \textcolor{keywordflow}{do}
+469     \{
+470     \mbox{\hyperlink{classfm__partition_a9aa27d4c97616c0fdbd00d11dc83bc0b}{init\_data\_structure}}(G);
+471     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_af35277f499ad76a979ee33b0cd388dc5}{no\_passes}} == -1)
+472     \{
+473         best\_cutsize = \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}};
+474         \mbox{\hyperlink{classfm__partition_a33d1dbba0ce9e398adab753f403deac3}{copy\_side\_node\_map}}(G, best\_side, \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}});
+475     \}
+476     \mbox{\hyperlink{classfm__partition_a91572409b30f0967ea3782079f69b1bb}{move\_manager}}(G);
+477     \mbox{\hyperlink{classfm__partition_a15197263e5318f824e0cde66ea9132b7}{clean\_pass}}(G);
+478     improved\_cutsize = \textcolor{keyword}{false};
+479     \textcolor{keywordflow}{if} (best\_cutsize > \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}})
+480     \{
+481         best\_cutsize = \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}};
+482         \mbox{\hyperlink{classfm__partition_a33d1dbba0ce9e398adab753f403deac3}{copy\_side\_node\_map}}(G, best\_side, \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}});
+483         improved\_cutsize = \textcolor{keyword}{true};
+484     \}
+485     ++\mbox{\hyperlink{classfm__partition_af35277f499ad76a979ee33b0cd388dc5}{no\_passes}};
+486     \}
+487     \textcolor{keywordflow}{while} (improved\_cutsize);
+488     \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}} = best\_cutsize;
+489     \mbox{\hyperlink{classfm__partition_a33d1dbba0ce9e398adab753f403deac3}{copy\_side\_node\_map}}(G, \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}, best\_side);
+490 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_aec7b2a315bc003fbd98debd5cd879f99_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classfm__partition_aec7b2a315bc003fbd98debd5cd879f99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_ab0bfbda97056ac75ab5fbfa6fd20fd03}\label{classfm__partition_ab0bfbda97056ac75ab5fbfa6fd20fd03}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!range\+\_\+down@{range\+\_\+down}}
+\index{range\+\_\+down@{range\+\_\+down}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{range\+\_\+down()}{range\_down()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::range\+\_\+down (\begin{DoxyParamCaption}\item[{const int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 1033 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+1034 \{
+1035     \textcolor{keywordflow}{return} index - (\mbox{\hyperlink{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}{max\_vertex\_degree}} * \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}});
+1036 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}\label{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!range\+\_\+up@{range\+\_\+up}}
+\index{range\+\_\+up@{range\+\_\+up}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{range\+\_\+up()}{range\_up()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::range\+\_\+up (\begin{DoxyParamCaption}\item[{const int}]{gain\+\_\+value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 1027 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+1028 \{
+1029     \textcolor{keywordflow}{return} \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}} + (\mbox{\hyperlink{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}{max\_vertex\_degree}} * 
+      \mbox{\hyperlink{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}{max\_edge\_weight}});
+1030 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a6db2eeb6ae968dbab78302f0448c0ced}\label{classfm__partition_a6db2eeb6ae968dbab78302f0448c0ced}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!reset@{reset}}
+\index{reset@{reset}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Resets \mbox{\hyperlink{classfm__partition}{fm\+\_\+partition}}, i.\+e. prepares the algorithm to be applied to another graph.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+
+
+
+Definition at line 274 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+275 \{
+276     \mbox{\hyperlink{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}{set\_vars\_executed}} = \textcolor{keyword}{false};
+277     \mbox{\hyperlink{classfm__partition_ad71b58a8f73cc834d49304252fb4a288}{cut\_edges}}.clear();
+278     \mbox{\hyperlink{classfm__partition_acdcb82ae253e8eaf75a7efca3ca2b377}{nodesA}}.clear();
+279     \mbox{\hyperlink{classfm__partition_a3616b858b66682c528365a4803a4efad}{nodesB}}.clear();
+280 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_a015b171fcaa01973ebe6c6a46a727097}\label{classfm__partition_a015b171fcaa01973ebe6c6a46a727097}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!run@{run}}
+\index{run@{run}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Computes a partitioning with {\ttfamily G}, that means a division of its vertices in two sides {\ttfamily \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{fm\+\_\+partition\+::A}} } and {\ttfamily \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{fm\+\_\+partition\+::B}}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}} on success, {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{algorithm\+::\+G\+T\+L\+\_\+\+E\+R\+R\+OR}}} otherwise 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+
+
+
+Definition at line 145 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+146 \{
+147     \mbox{\hyperlink{classfm__partition_aad791ac648a9ff4694c8960f49dcc018}{init\_variables}}(G);
+148     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}{provided\_initial\_part}}) && (\mbox{\hyperlink{classfm__partition_a0aca0fa4fcaba284d61c745d17022f8d}{provided\_fix}}))
+149     \{
+150     \mbox{\hyperlink{classfm__partition_ad768579b813500dc2d267aac5668ed48}{divide\_up}}(G);
+151     \}
+152     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}{provided\_initial\_part}})
+153     \{
+154     \mbox{\hyperlink{classfm__partition_a25ef3fc22bee176abfef64248484e8c0}{create\_initial\_bipart}}(G);
+155     \}
+156     
+157     \mbox{\hyperlink{classfm__partition_a3e3aa22119ff5ff9c406683e22ab6078}{hide\_self\_loops}}(G);
+158     \mbox{\hyperlink{classfm__partition_a5d0f409b6b1d554a62d67952236c7ce9}{compute\_max\_vertex\_degree}}(G);
+159 
+160     \mbox{\hyperlink{classfm__partition_aec7b2a315bc003fbd98debd5cd879f99}{pass\_manager}}(G);
+161 
+162     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a806c9f5cb781b8ce662d2a3373433777}{enable\_cut\_edges\_storing}})
+163     \{
+164     \mbox{\hyperlink{classfm__partition_a03c76998f985593caddc4979a28b9042}{compute\_cut\_edges}}(G);
+165     \}
+166     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a2e308857dde9405bc3c6b911218bcda1}{enable\_nodesAB\_storing}})
+167     \{
+168     \mbox{\hyperlink{classfm__partition_aaa8f24af3be860bfa42a171c25420c2c}{compute\_nodesAB}}(G);
+169     \}
+170     G.\mbox{\hyperlink{classgraph_a53e2a5505fa6427587e12d66e4a86cec}{restore\_graph}}();
+171 
+172     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}};
+173 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a015b171fcaa01973ebe6c6a46a727097_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}\label{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars@{set\+\_\+vars}}
+\index{set\+\_\+vars@{set\+\_\+vars}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{node\+\_\+weight,  }\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight }\end{DoxyParamCaption})}
+
+Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}}!
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & undirected graph \\
+\hline
+{\em node\+\_\+weight} & weight of each node \\
+\hline
+{\em edge\+\_\+weight} & weight of each edge \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 45 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+47 \{
+48     this->node\_weight = \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}};
+49     this->edge\_weight = \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}};
+50     \mbox{\hyperlink{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}{set\_vars\_executed}} = \textcolor{keyword}{true};
+51     \mbox{\hyperlink{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}{provided\_initial\_part}} = \textcolor{keyword}{false};
+52     this->\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G, \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{UNFIXED}});
+53     \mbox{\hyperlink{classfm__partition_a0aca0fa4fcaba284d61c745d17022f8d}{provided\_fix}} = \textcolor{keyword}{false};
+54     \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G);
+55 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_af4d1b1275050cc7f4327500cec1f6e88}\label{classfm__partition_af4d1b1275050cc7f4327500cec1f6e88}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars@{set\+\_\+vars}}
+\index{set\+\_\+vars@{set\+\_\+vars}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{node\+\_\+weight,  }\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \&}]{init\+\_\+side }\end{DoxyParamCaption})}
+
+Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}}! In order to get good results, {\ttfamily init\+\_\+side} should almost be in balance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & undirected graph \\
+\hline
+{\em node\+\_\+weight} & weight of each node \\
+\hline
+{\em edge\+\_\+weight} & weight of each edge \\
+\hline
+{\em init\+\_\+side} & initial bi-\/partitioning \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 58 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+61 \{
+62     this->node\_weight = \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}};
+63     this->edge\_weight = \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}};
+64     this->\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}} = init\_side;
+65     \mbox{\hyperlink{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}{set\_vars\_executed}} = \textcolor{keyword}{true};
+66     \mbox{\hyperlink{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}{provided\_initial\_part}} = \textcolor{keyword}{true};
+67     this->\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G, \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{UNFIXED}});
+68     \mbox{\hyperlink{classfm__partition_a0aca0fa4fcaba284d61c745d17022f8d}{provided\_fix}} = \textcolor{keyword}{false};
+69 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classfm__partition_af4d1b1275050cc7f4327500cec1f6e88_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_ad0bebf48731e99fbf7a8c6526ab0f9a6}\label{classfm__partition_ad0bebf48731e99fbf7a8c6526ab0f9a6}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars@{set\+\_\+vars}}
+\index{set\+\_\+vars@{set\+\_\+vars}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{node\+\_\+weight,  }\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} $>$ \&}]{fixed }\end{DoxyParamCaption})}
+
+Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}}!
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & undirected graph \\
+\hline
+{\em node\+\_\+weight} & weight of each node \\
+\hline
+{\em edge\+\_\+weight} & weight of each edge \\
+\hline
+{\em fixed} & fixed nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 72 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+75 \{
+76     this->node\_weight = \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}};
+77     this->edge\_weight = \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}};
+78     \mbox{\hyperlink{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}{set\_vars\_executed}} = \textcolor{keyword}{true};
+79     \mbox{\hyperlink{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}{provided\_initial\_part}} = \textcolor{keyword}{false};
+80     this->fixed = \mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}};
+81     \mbox{\hyperlink{classfm__partition_a0aca0fa4fcaba284d61c745d17022f8d}{provided\_fix}} = \textcolor{keyword}{true};
+82     \mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G);
+83 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classfm__partition_ad0bebf48731e99fbf7a8c6526ab0f9a6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a19ade0d3e19eb40841238c1048c4495b}\label{classfm__partition_a19ade0d3e19eb40841238c1048c4495b}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars@{set\+\_\+vars}}
+\index{set\+\_\+vars@{set\+\_\+vars}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ int $>$ \&}]{node\+\_\+weight,  }\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}} $>$ \&}]{init\+\_\+side,  }\item[{const \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}} $>$ \&}]{fixed }\end{DoxyParamCaption})}
+
+Sets variables. Must be executed before \mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}}! In order to get good results, {\ttfamily init\+\_\+side} should almost be in balance. Fixed nodes are on their fix side, their initial side is overwritten then.
+
+
+\begin{DoxyParams}{Parameters}
+{\em G} & undirected graph \\
+\hline
+{\em node\+\_\+weight} & weight of each node \\
+\hline
+{\em edge\+\_\+weight} & weight of each edge \\
+\hline
+{\em init\+\_\+side} & initial bi-\/partitioning \\
+\hline
+{\em fixed} & fixed nodes \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_af72a9fcc300ab0f202168c819b089e5d}{fm\+\_\+partition\+::check}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 86 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+90 \{
+91     this->node\_weight = \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}};
+92     this->edge\_weight = \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}};
+93     this->\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}} = init\_side;
+94     \mbox{\hyperlink{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}{set\_vars\_executed}} = \textcolor{keyword}{true};
+95     \mbox{\hyperlink{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}{provided\_initial\_part}} = \textcolor{keyword}{true};
+96     this->fixed = \mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}};
+97     \mbox{\hyperlink{classfm__partition_a0aca0fa4fcaba284d61c745d17022f8d}{provided\_fix}} = \textcolor{keyword}{true};
+98 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_a27915b38800483f897647f012b935f0a}\label{classfm__partition_a27915b38800483f897647f012b935f0a}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!shuffle\+\_\+vector@{shuffle\+\_\+vector}}
+\index{shuffle\+\_\+vector@{shuffle\+\_\+vector}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{shuffle\+\_\+vector()}{shuffle\_vector()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::shuffle\+\_\+vector (\begin{DoxyParamCaption}\item[{const int}]{vector\+\_\+size,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph\+::node\+\_\+iterator}} $>$ \&}]{node\+\_\+vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 425 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+427 \{
+428     srand((\textcolor{keywordtype}{unsigned})time(NULL));
+429     rand(); \textcolor{comment}{// necessary, otherwise the next rand() returns always 0 ?-)}
+430     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i <= vector\_size; i++)
+431     \{
+432     \textcolor{keywordtype}{int} pos\_1 = (int)floor((((\textcolor{keywordtype}{double})rand() / (\textcolor{keywordtype}{double})RAND\_MAX) *
+433         (\textcolor{keywordtype}{double})(vector\_size - 1)) + 0.5);
+434     \textcolor{keywordtype}{int} pos\_2 = (int)floor((((\textcolor{keywordtype}{double})rand() / (\textcolor{keywordtype}{double})RAND\_MAX) *
+435         (double)(vector\_size - 1)) + 0.5);
+436     \mbox{\hyperlink{classgraph_a2cb374b84c133ce13f94e73c3e5da7fa}{graph::node\_iterator}} temp\_it;
+437     temp\_it = node\_vector[pos\_1];
+438     node\_vector[pos\_1] = node\_vector[pos\_2];
+439     node\_vector[pos\_2] = temp\_it;
+440     \}
+441 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a27915b38800483f897647f012b935f0a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_ad0870674a1fb8e1c882f6855e32aec09}\label{classfm__partition_ad0870674a1fb8e1c882f6855e32aec09}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!store\+\_\+cut\+\_\+edges@{store\+\_\+cut\+\_\+edges}}
+\index{store\+\_\+cut\+\_\+edges@{store\+\_\+cut\+\_\+edges}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{store\+\_\+cut\+\_\+edges()}{store\_cut\_edges()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::store\+\_\+cut\+\_\+edges (\begin{DoxyParamCaption}\item[{const bool}]{set }\end{DoxyParamCaption})}
+
+Enables the storing of cut-\/edges. If enabled the list of cut-\/edges can be traversed using \mbox{\hyperlink{classfm__partition_a15e854cf1efcae91d05a48f2a9fd0761}{fm\+\_\+partition\+::cut\+\_\+edges\+\_\+iterator}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & if {\ttfamily true} cut\+\_\+edges will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_a36990b62c6d2d9e4948f42d805afc626}{fm\+\_\+partition\+::cut\+\_\+edges\+\_\+begin}} 
+
+\mbox{\hyperlink{classfm__partition_af213672f08e03878183659fa8c2ed61e}{fm\+\_\+partition\+::cut\+\_\+edges\+\_\+end}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 101 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+102 \{
+103     \mbox{\hyperlink{classfm__partition_a806c9f5cb781b8ce662d2a3373433777}{enable\_cut\_edges\_storing}} = \textcolor{keyword}{set};
+104 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_a8926005b4637055d2acf6f29ad2d9b97}\label{classfm__partition_a8926005b4637055d2acf6f29ad2d9b97}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!store\+\_\+nodes\+AB@{store\+\_\+nodes\+AB}}
+\index{store\+\_\+nodes\+AB@{store\+\_\+nodes\+AB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{store\+\_\+nodes\+A\+B()}{store\_nodesAB()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::store\+\_\+nodes\+AB (\begin{DoxyParamCaption}\item[{const bool}]{set }\end{DoxyParamCaption})}
+
+Enables the storing of nodes on their side. If enabled the nodes of each side can be traversed using fm\+\_\+partition\+::nodes\+\_\+on\+\_\+one\+\_\+side\+\_\+iterator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & if {\ttfamily true} nodes will be stored on their sides \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_adad3bf33efb4a2b1b0feadeafb33f5fd}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+side\+A\+\_\+begin}} 
+
+\mbox{\hyperlink{classfm__partition_ac4202d1d929c1700985ad5d452b735fb}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+side\+A\+\_\+end}} 
+
+\mbox{\hyperlink{classfm__partition_a4e433456ed0214c04466c4f1060b0909}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+side\+B\+\_\+begin}} 
+
+\mbox{\hyperlink{classfm__partition_a9682b070cce104bdfe69e576df57f560}{fm\+\_\+partition\+::nodes\+\_\+of\+\_\+side\+B\+\_\+end}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 107 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+108 \{
+109     \mbox{\hyperlink{classfm__partition_a2e308857dde9405bc3c6b911218bcda1}{enable\_nodesAB\_storing}} = \textcolor{keyword}{set};
+110 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd}\label{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!update\+\_\+bucketA@{update\+\_\+bucketA}}
+\index{update\+\_\+bucketA@{update\+\_\+bucketA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{update\+\_\+bucket\+A()}{update\_bucketA()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::update\+\_\+bucketA (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}}}]{cur\+\_\+node,  }\item[{const int}]{old\+\_\+gain,  }\item[{const int}]{new\+\_\+gain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 958 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+960 \{
+961     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[cur\_node] != \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{UNFIXED}})
+962     \{
+963     \textcolor{keywordflow}{return}; \textcolor{comment}{// fixed nodes need no update}
+964     \}
+965 
+966     \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(old\_gain)].erase(\mbox{\hyperlink{classfm__partition_ad17406d94b53c327e31b28e462de010f}{position\_in\_bucket}}[cur\_node]);
+967     \mbox{\hyperlink{classfm__partition_ad17406d94b53c327e31b28e462de010f}{position\_in\_bucket}}[cur\_node] = \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(new\_gain)].insert(
+968     \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(new\_gain)].end(), cur\_node);
+969 
+970     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}} < new\_gain)
+971     \{
+972     \mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}} = new\_gain;
+973     \}
+974 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a270d469ca584ed9adff9fced67743679}\label{classfm__partition_a270d469ca584ed9adff9fced67743679}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!update\+\_\+bucketB@{update\+\_\+bucketB}}
+\index{update\+\_\+bucketB@{update\+\_\+bucketB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{update\+\_\+bucket\+B()}{update\_bucketB()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::update\+\_\+bucketB (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}}}]{cur\+\_\+node,  }\item[{const int}]{old\+\_\+gain,  }\item[{const int}]{new\+\_\+gain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 977 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+979 \{
+980     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}{fixed}}[cur\_node] != \mbox{\hyperlink{classfm__partition_a24447561db0ea633212c597c5e1fca56}{UNFIXED}})
+981     \{
+982     \textcolor{keywordflow}{return}; \textcolor{comment}{// fixed nodes need no update}
+983     \}
+984 
+985     \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(old\_gain)].erase(\mbox{\hyperlink{classfm__partition_ad17406d94b53c327e31b28e462de010f}{position\_in\_bucket}}[cur\_node]);
+986     \mbox{\hyperlink{classfm__partition_ad17406d94b53c327e31b28e462de010f}{position\_in\_bucket}}[cur\_node] = \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(new\_gain)].insert(
+987     \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(new\_gain)].end(), cur\_node);
+988 
+989     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}} < new\_gain)
+990     \{
+991     \mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}} = new\_gain;
+992     \}
+993 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classfm__partition_a270d469ca584ed9adff9fced67743679_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a270d469ca584ed9adff9fced67743679_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5}\label{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!update\+\_\+data\+\_\+structure\+\_\+\+A2B@{update\+\_\+data\+\_\+structure\+\_\+\+A2B}}
+\index{update\+\_\+data\+\_\+structure\+\_\+\+A2B@{update\+\_\+data\+\_\+structure\+\_\+\+A2B}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{update\+\_\+data\+\_\+structure\+\_\+\+A2\+B()}{update\_data\_structure\_A2B()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::update\+\_\+data\+\_\+structure\+\_\+\+A2B (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}}}]{cur\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 807 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+808 \{
+809     \mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}})].pop\_back();
+810     \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} -= \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[cur\_node];
+811     \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[cur\_node];
+812     \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}} -= \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[cur\_node];
+813     
+814     \textcolor{comment}{// updating gain values}
+815     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_edge\_it = cur\_node.
+      \mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}();
+816     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_edges\_end = cur\_node.
+      \mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}();
+817     \textcolor{keywordflow}{while} (adj\_edge\_it != adj\_edges\_end)
+818     \{
+819     \textcolor{comment}{// delete cur\_node from side A}
+820 \textcolor{preprocessor}{#if 1}
+821         \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].remove(cur\_node);
+822 \textcolor{preprocessor}{#else}
+823         \textcolor{keyword}{auto}& ua = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it];
+824         ua.erase(std::remove(ua.begin(), ua.end(), cur\_node), ua.end());
+825 \textcolor{preprocessor}{#endif}
+826     --\mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*adj\_edge\_it];
+827     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*adj\_edge\_it] == 0)
+828     \{
+829         nodes\_t::iterator node\_it = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].begin();
+830         nodes\_t::iterator nodes\_end = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].end();
+831         \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+832         \{
+833         \mbox{\hyperlink{classfm__partition_a270d469ca584ed9adff9fced67743679}{update\_bucketB}}(*node\_it, \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it],
+834             \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] - \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it]);
+835         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] -= \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+836         ++node\_it;
+837         \}
+838     \}
+839     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*adj\_edge\_it] == 1)
+840     \{
+841         nodes\_t::iterator node\_it = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].begin();
+842         nodes\_t::iterator nodes\_end = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].end();
+843         \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+844         \{
+845         \mbox{\hyperlink{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd}{update\_bucketA}}(*node\_it, \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it],
+846             \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] + \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it]);
+847         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] += \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+848         ++node\_it;
+849         \}
+850     \}
+851     \textcolor{comment}{// add cur\_node to side B}
+852     ++\mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*adj\_edge\_it];
+853     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*adj\_edge\_it] == 1)
+854     \{
+855         nodes\_t::iterator node\_it = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].begin();
+856         nodes\_t::iterator nodes\_end = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].end();
+857         \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+858         \{
+859         \mbox{\hyperlink{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd}{update\_bucketA}}(*node\_it, \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it],
+860             \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] + \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it]);
+861         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] += \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+862         ++node\_it;
+863         \}
+864     \}
+865     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*adj\_edge\_it] == 2)
+866     \{
+867         nodes\_t::iterator node\_it = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].begin();
+868         nodes\_t::iterator nodes\_end = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].end();
+869         \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+870         \{
+871         \mbox{\hyperlink{classfm__partition_a270d469ca584ed9adff9fced67743679}{update\_bucketB}}(*node\_it, \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it],
+872             \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] - \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it]);
+873         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] -= \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+874         ++node\_it;
+875         \}
+876     \}
+877     ++adj\_edge\_it;
+878     \}
+879 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a8bd7f2715334e9ec95da8001117fdde5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a783174f29d49e7e1ae7f6cf71faa82fb}\label{classfm__partition_a783174f29d49e7e1ae7f6cf71faa82fb}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!update\+\_\+data\+\_\+structure\+\_\+\+B2A@{update\+\_\+data\+\_\+structure\+\_\+\+B2A}}
+\index{update\+\_\+data\+\_\+structure\+\_\+\+B2A@{update\+\_\+data\+\_\+structure\+\_\+\+B2A}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{update\+\_\+data\+\_\+structure\+\_\+\+B2\+A()}{update\_data\_structure\_B2A()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::update\+\_\+data\+\_\+structure\+\_\+\+B2A (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnode}{node}}}]{cur\+\_\+node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 882 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+883 \{
+884     \mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}})].pop\_back();
+885     \mbox{\hyperlink{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}{node\_weight\_on\_sideA}} += \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[cur\_node];
+886     \mbox{\hyperlink{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}{node\_weight\_on\_sideB}} -= \mbox{\hyperlink{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}{node\_weight}}[cur\_node];
+887     \mbox{\hyperlink{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}{cur\_cutsize}} -= \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[cur\_node];
+888     
+889     \textcolor{comment}{// updating gain values}
+890     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_edge\_it = cur\_node.
+      \mbox{\hyperlink{classnode_a788d3e932a5c164caa5ec82aa47551b2}{adj\_edges\_begin}}();
+891     \mbox{\hyperlink{classnode_a12cb1a2167f5f03c054de5e707d3156f}{node::adj\_edges\_iterator}} adj\_edges\_end = cur\_node.
+      \mbox{\hyperlink{classnode_aa1e7887d29390297580769454f769ad6}{adj\_edges\_end}}();
+892     \textcolor{keywordflow}{while} (adj\_edge\_it != adj\_edges\_end)
+893     \{
+894     \textcolor{comment}{// delete cur\_node from side B}
+895 \textcolor{preprocessor}{#if 1}
+896         \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].remove(cur\_node);
+897 \textcolor{preprocessor}{#else}
+898         \textcolor{keyword}{auto}& ub = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it];
+899         ub.erase(std::remove(ub.begin(), ub.end(), cur\_node), ub.end());
+900 \textcolor{preprocessor}{#endif}
+901 
+902     \mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*adj\_edge\_it] -= 1;
+903     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*adj\_edge\_it] == 0)
+904     \{
+905         nodes\_t::iterator node\_it = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].begin();
+906         nodes\_t::iterator nodes\_end = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].end();
+907         \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+908         \{
+909         \mbox{\hyperlink{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd}{update\_bucketA}}(*node\_it, \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it],
+910             \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] - \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it]);
+911         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] -= \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+912         ++node\_it;
+913         \}
+914     \}
+915     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_aa75765887173fb06b076b6cae12d4e66}{bside}}[*adj\_edge\_it] == 1)
+916     \{
+917         nodes\_t::iterator node\_it = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].begin();
+918         nodes\_t::iterator nodes\_end = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].end();
+919         \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+920         \{
+921         \mbox{\hyperlink{classfm__partition_a270d469ca584ed9adff9fced67743679}{update\_bucketB}}(*node\_it, \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it],
+922             \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] + \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it]);
+923         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] += \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+924         ++node\_it;
+925         \}
+926     \}
+927     \textcolor{comment}{// add cur\_node to side A}
+928     \mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*adj\_edge\_it] += 1;
+929     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*adj\_edge\_it] == 1)
+930     \{
+931         nodes\_t::iterator node\_it = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].begin();
+932         nodes\_t::iterator nodes\_end = \mbox{\hyperlink{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}{unlockedB}}[*adj\_edge\_it].end();
+933         \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+934         \{
+935         \mbox{\hyperlink{classfm__partition_a270d469ca584ed9adff9fced67743679}{update\_bucketB}}(*node\_it, \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it],
+936             \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] + \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it]);
+937         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] += \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+938         ++node\_it;
+939         \}
+940     \}
+941     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}{aside}}[*adj\_edge\_it] == 2)
+942     \{
+943         nodes\_t::iterator node\_it = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].begin();
+944         nodes\_t::iterator nodes\_end = \mbox{\hyperlink{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}{unlockedA}}[*adj\_edge\_it].end();
+945         \textcolor{keywordflow}{while} (node\_it != nodes\_end)
+946         \{
+947         \mbox{\hyperlink{classfm__partition_aa4ec83c52916cc6cac23e7a9987427cd}{update\_bucketA}}(*node\_it, \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it],
+948             \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] - \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it]);
+949         \mbox{\hyperlink{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}{gain\_value}}[*node\_it] -= \mbox{\hyperlink{classfm__partition_adfe6147ba3f9c785f613b472f950595f}{edge\_weight}}[*adj\_edge\_it];
+950         ++node\_it;
+951         \}
+952     \}
+953     ++adj\_edge\_it;
+954     \}
+955 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a783174f29d49e7e1ae7f6cf71faa82fb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a783174f29d49e7e1ae7f6cf71faa82fb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classfm__partition_a335722b73c1d6f02d1083e76a3937b01}\label{classfm__partition_a335722b73c1d6f02d1083e76a3937b01}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!update\+\_\+max\+\_\+gain@{update\+\_\+max\+\_\+gain}}
+\index{update\+\_\+max\+\_\+gain@{update\+\_\+max\+\_\+gain}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{update\+\_\+max\+\_\+gain()}{update\_max\_gain()}}
+{\footnotesize\ttfamily void fm\+\_\+partition\+::update\+\_\+max\+\_\+gain (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}}}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 996 of file fm\+\_\+partition.\+cpp.
+
+
+\begin{DoxyCode}
+997 \{
+998     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}} == \mbox{\hyperlink{classfm__partition_a738e75c601403754e61e6dac623fd3ab}{A}}) && (!\mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucketA\_empty}}))
+999     \{
+1000     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}{bucketA}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}})].empty())
+1001     \{
+1002         --\mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}};
+1003         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}{max\_gainA}}) < 0)
+1004         \{
+1005         \mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucketA\_empty}} = \textcolor{keyword}{true};
+1006         \textcolor{keywordflow}{return};
+1007         \}
+1008     \}
+1009     \mbox{\hyperlink{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}{bucketA\_empty}} = \textcolor{keyword}{false};
+1010     \}
+1011     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classfm__partition_af83309e781e9658fc0ff923ced087bfc}{side}} == \mbox{\hyperlink{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}{B}}) && (!\mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucketB\_empty}}))
+1012     \{
+1013     \textcolor{keywordflow}{while} (\mbox{\hyperlink{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}{bucketB}}[\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}})].empty())
+1014     \{
+1015         --\mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}};
+1016         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classfm__partition_ac49d477ecbf512fa375b76a472ec54f8}{range\_up}}(\mbox{\hyperlink{classfm__partition_ac230f89828768eaf51374c0bc3b37558}{max\_gainB}}) < 0)
+1017         \{
+1018         \mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucketB\_empty}} = \textcolor{keyword}{true};
+1019         \textcolor{keywordflow}{return};
+1020         \}
+1021     \}
+1022     \mbox{\hyperlink{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}{bucketB\_empty}} = \textcolor{keyword}{false};
+1023     \}
+1024 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classfm__partition_a335722b73c1d6f02d1083e76a3937b01_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfm__partition_a335722b73c1d6f02d1083e76a3937b01_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classfm__partition_a738e75c601403754e61e6dac623fd3ab}\label{classfm__partition_a738e75c601403754e61e6dac623fd3ab}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!A@{A}}
+\index{A@{A}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a2d9f24096ac60918452dd51f32b64aa9}{\+\_\+\+\_\+\+G\+T\+L\+\_\+\+B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+CE}} const \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{fm\+\_\+partition\+::side\+\_\+type}} fm\+\_\+partition\+::A = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+{\ttfamily A} means the node is on side A.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{fm\+\_\+partition\+::side\+\_\+type}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 49 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}\label{classfm__partition_a14b0aa9a91a6e7fa3035669cf5056275}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!aside@{aside}}
+\index{aside@{aside}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{aside}{aside}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$int$>$ fm\+\_\+partition\+::aside\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 473 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}\label{classfm__partition_a42515c44eecb7ba3e2ec549a877ef238}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!B@{B}}
+\index{B@{B}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{fm\+\_\+partition\+::side\+\_\+type}} fm\+\_\+partition\+::B = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+{\ttfamily B} means the node is on side B.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{fm\+\_\+partition\+::side\+\_\+type}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 56 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_aa75765887173fb06b076b6cae12d4e66}\label{classfm__partition_aa75765887173fb06b076b6cae12d4e66}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!bside@{bside}}
+\index{bside@{bside}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{bside}{bside}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$int$>$ fm\+\_\+partition\+::bside\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 479 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}\label{classfm__partition_a399955e0c84bad93cb82b5ffe8cf4a04}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!bucketA@{bucketA}}
+\index{bucketA@{bucketA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{bucketA}{bucketA}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}}$>$ fm\+\_\+partition\+::bucketA\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 533 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}\label{classfm__partition_a4df2f0f6f4686ba187c2be39ce3b29cc}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!bucket\+A\+\_\+empty@{bucket\+A\+\_\+empty}}
+\index{bucket\+A\+\_\+empty@{bucket\+A\+\_\+empty}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{bucket\+A\+\_\+empty}{bucketA\_empty}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::bucket\+A\+\_\+empty\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 505 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}\label{classfm__partition_ae6a5b5f3f2d95ea229882e861ccfc9e4}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!bucketB@{bucketB}}
+\index{bucketB@{bucketB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{bucketB}{bucketB}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}}$>$ fm\+\_\+partition\+::bucketB\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 541 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}\label{classfm__partition_aef7d0f91cb7c04b4f5b1b14cc9884c37}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!bucket\+B\+\_\+empty@{bucket\+B\+\_\+empty}}
+\index{bucket\+B\+\_\+empty@{bucket\+B\+\_\+empty}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{bucket\+B\+\_\+empty}{bucketB\_empty}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::bucket\+B\+\_\+empty\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 511 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}\label{classfm__partition_abc8f24c354d2a15f8ec8ef9a46252c93}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!cur\+\_\+cutsize@{cur\+\_\+cutsize}}
+\index{cur\+\_\+cutsize@{cur\+\_\+cutsize}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{cur\+\_\+cutsize}{cur\_cutsize}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::cur\+\_\+cutsize\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 548 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_ad71b58a8f73cc834d49304252fb4a288}\label{classfm__partition_ad71b58a8f73cc834d49304252fb4a288}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!cut\+\_\+edges@{cut\+\_\+edges}}
+\index{cut\+\_\+edges@{cut\+\_\+edges}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{cut\+\_\+edges}{cut\_edges}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} fm\+\_\+partition\+::cut\+\_\+edges\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 353 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_adfe6147ba3f9c785f613b472f950595f}\label{classfm__partition_adfe6147ba3f9c785f613b472f950595f}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!edge\+\_\+weight@{edge\+\_\+weight}}
+\index{edge\+\_\+weight@{edge\+\_\+weight}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{edge\+\_\+weight}{edge\_weight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$int$>$ fm\+\_\+partition\+::edge\+\_\+weight\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 421 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a806c9f5cb781b8ce662d2a3373433777}\label{classfm__partition_a806c9f5cb781b8ce662d2a3373433777}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!enable\+\_\+cut\+\_\+edges\+\_\+storing@{enable\+\_\+cut\+\_\+edges\+\_\+storing}}
+\index{enable\+\_\+cut\+\_\+edges\+\_\+storing@{enable\+\_\+cut\+\_\+edges\+\_\+storing}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{enable\+\_\+cut\+\_\+edges\+\_\+storing}{enable\_cut\_edges\_storing}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::enable\+\_\+cut\+\_\+edges\+\_\+storing\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 347 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a2e308857dde9405bc3c6b911218bcda1}\label{classfm__partition_a2e308857dde9405bc3c6b911218bcda1}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!enable\+\_\+nodes\+A\+B\+\_\+storing@{enable\+\_\+nodes\+A\+B\+\_\+storing}}
+\index{enable\+\_\+nodes\+A\+B\+\_\+storing@{enable\+\_\+nodes\+A\+B\+\_\+storing}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{enable\+\_\+nodes\+A\+B\+\_\+storing}{enable\_nodesAB\_storing}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::enable\+\_\+nodes\+A\+B\+\_\+storing\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 360 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a468a80e072d3ff18e5da33005825bcb1}\label{classfm__partition_a468a80e072d3ff18e5da33005825bcb1}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!F\+I\+XA@{F\+I\+XA}}
+\index{F\+I\+XA@{F\+I\+XA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{F\+I\+XA}{FIXA}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fm\+\_\+partition\+::fix\+\_\+type}} fm\+\_\+partition\+::\+F\+I\+XA = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+{\ttfamily F\+I\+XA} means fix node on side {\ttfamily A}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classfm__partition_aa15471da2b6a0f14060b0c4091c6b05c}{fm\+\_\+partition\+::set\+\_\+vars}} 
+\end{DoxySeeAlso}
+
+
+Definition at line 72 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a0b9a66f0e8093ee83482f93d6aa5b2eb}\label{classfm__partition_a0b9a66f0e8093ee83482f93d6aa5b2eb}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!F\+I\+XB@{F\+I\+XB}}
+\index{F\+I\+XB@{F\+I\+XB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{F\+I\+XB}{FIXB}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fm\+\_\+partition\+::fix\+\_\+type}} fm\+\_\+partition\+::\+F\+I\+XB = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+{\ttfamily F\+I\+XB} means fix node on side {\ttfamily B}.
+
+\begin{DoxySeeAlso}{See also}
+fm\+\_\+partition\+::fixe\+\_\+type 
+\end{DoxySeeAlso}
+
+
+Definition at line 79 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}\label{classfm__partition_a3b04658dbb5b27ddd20194ff74a71082}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!fixed@{fixed}}
+\index{fixed@{fixed}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{fixed}{fixed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$\mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fix\+\_\+type}}$>$ fm\+\_\+partition\+::fixed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 400 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}\label{classfm__partition_ae8176f4ce82305abfd58e519d2cdd91d}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!gain\+\_\+value@{gain\+\_\+value}}
+\index{gain\+\_\+value@{gain\+\_\+value}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{gain\+\_\+value}{gain\_value}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ fm\+\_\+partition\+::gain\+\_\+value\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 499 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}\label{classfm__partition_a5b37b4ac8d96236f274a57a46d653e25}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!max\+\_\+edge\+\_\+weight@{max\+\_\+edge\+\_\+weight}}
+\index{max\+\_\+edge\+\_\+weight@{max\+\_\+edge\+\_\+weight}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{max\+\_\+edge\+\_\+weight}{max\_edge\_weight}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::max\+\_\+edge\+\_\+weight\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 428 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}\label{classfm__partition_a6c6a7a05bebe943e681329d30bb13339}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!max\+\_\+gainA@{max\+\_\+gainA}}
+\index{max\+\_\+gainA@{max\+\_\+gainA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{max\+\_\+gainA}{max\_gainA}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::max\+\_\+gainA\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 518 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_ac230f89828768eaf51374c0bc3b37558}\label{classfm__partition_ac230f89828768eaf51374c0bc3b37558}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!max\+\_\+gainB@{max\+\_\+gainB}}
+\index{max\+\_\+gainB@{max\+\_\+gainB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{max\+\_\+gainB}{max\_gainB}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::max\+\_\+gainB\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 525 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}\label{classfm__partition_a8591f5eddac01679e1da3d835eae1cf6}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!max\+\_\+node\+\_\+weight@{max\+\_\+node\+\_\+weight}}
+\index{max\+\_\+node\+\_\+weight@{max\+\_\+node\+\_\+weight}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{max\+\_\+node\+\_\+weight}{max\_node\_weight}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::max\+\_\+node\+\_\+weight\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 414 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}\label{classfm__partition_ab6a4beaa10548ce9f1a0e8e441492ef9}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!max\+\_\+vertex\+\_\+degree@{max\+\_\+vertex\+\_\+degree}}
+\index{max\+\_\+vertex\+\_\+degree@{max\+\_\+vertex\+\_\+degree}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{max\+\_\+vertex\+\_\+degree}{max\_vertex\_degree}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::max\+\_\+vertex\+\_\+degree\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 467 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_af35277f499ad76a979ee33b0cd388dc5}\label{classfm__partition_af35277f499ad76a979ee33b0cd388dc5}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!no\+\_\+passes@{no\+\_\+passes}}
+\index{no\+\_\+passes@{no\+\_\+passes}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{no\+\_\+passes}{no\_passes}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::no\+\_\+passes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 554 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}\label{classfm__partition_ae1ba643b4bd6721075ab7b608bcf3cd6}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!node\+\_\+weight@{node\+\_\+weight}}
+\index{node\+\_\+weight@{node\+\_\+weight}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{node\+\_\+weight}{node\_weight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$int$>$ fm\+\_\+partition\+::node\+\_\+weight\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 407 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}\label{classfm__partition_a8a50d15b399c9ed35d6987c8fb68aa2b}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!node\+\_\+weight\+\_\+on\+\_\+sideA@{node\+\_\+weight\+\_\+on\+\_\+sideA}}
+\index{node\+\_\+weight\+\_\+on\+\_\+sideA@{node\+\_\+weight\+\_\+on\+\_\+sideA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{node\+\_\+weight\+\_\+on\+\_\+sideA}{node\_weight\_on\_sideA}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::node\+\_\+weight\+\_\+on\+\_\+sideA\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 442 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}\label{classfm__partition_a6dc967e385b31096a85f17c51f1f0824}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!node\+\_\+weight\+\_\+on\+\_\+sideB@{node\+\_\+weight\+\_\+on\+\_\+sideB}}
+\index{node\+\_\+weight\+\_\+on\+\_\+sideB@{node\+\_\+weight\+\_\+on\+\_\+sideB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{node\+\_\+weight\+\_\+on\+\_\+sideB}{node\_weight\_on\_sideB}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::node\+\_\+weight\+\_\+on\+\_\+sideB\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 449 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_acdcb82ae253e8eaf75a7efca3ca2b377}\label{classfm__partition_acdcb82ae253e8eaf75a7efca3ca2b377}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!nodesA@{nodesA}}
+\index{nodesA@{nodesA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{nodesA}{nodesA}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} fm\+\_\+partition\+::nodesA\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 366 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a3616b858b66682c528365a4803a4efad}\label{classfm__partition_a3616b858b66682c528365a4803a4efad}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!nodesB@{nodesB}}
+\index{nodesB@{nodesB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{nodesB}{nodesB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}} fm\+\_\+partition\+::nodesB\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 372 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_ad17406d94b53c327e31b28e462de010f}\label{classfm__partition_ad17406d94b53c327e31b28e462de010f}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!position\+\_\+in\+\_\+bucket@{position\+\_\+in\+\_\+bucket}}
+\index{position\+\_\+in\+\_\+bucket@{position\+\_\+in\+\_\+bucket}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{position\+\_\+in\+\_\+bucket}{position\_in\_bucket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$nodes\+\_\+t\+::iterator$>$ fm\+\_\+partition\+::position\+\_\+in\+\_\+bucket\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 461 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a0aca0fa4fcaba284d61c745d17022f8d}\label{classfm__partition_a0aca0fa4fcaba284d61c745d17022f8d}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!provided\+\_\+fix@{provided\+\_\+fix}}
+\index{provided\+\_\+fix@{provided\+\_\+fix}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{provided\+\_\+fix}{provided\_fix}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::provided\+\_\+fix\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 394 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}\label{classfm__partition_a38c67abb32d7ade03b68f0a7ed9f1c6d}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!provided\+\_\+initial\+\_\+part@{provided\+\_\+initial\+\_\+part}}
+\index{provided\+\_\+initial\+\_\+part@{provided\+\_\+initial\+\_\+part}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{provided\+\_\+initial\+\_\+part}{provided\_initial\_part}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::provided\+\_\+initial\+\_\+part\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 387 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}\label{classfm__partition_a58edb78c4da479cd790da1eed1a30eab}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!set\+\_\+vars\+\_\+executed@{set\+\_\+vars\+\_\+executed}}
+\index{set\+\_\+vars\+\_\+executed@{set\+\_\+vars\+\_\+executed}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{set\+\_\+vars\+\_\+executed}{set\_vars\_executed}}
+{\footnotesize\ttfamily bool fm\+\_\+partition\+::set\+\_\+vars\+\_\+executed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 380 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_af83309e781e9658fc0ff923ced087bfc}\label{classfm__partition_af83309e781e9658fc0ff923ced087bfc}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!side@{side}}
+\index{side@{side}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{side}{side}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$\mbox{\hyperlink{classfm__partition_a7cdff1bea3740a287387e8408e16ca79}{side\+\_\+type}}$>$ fm\+\_\+partition\+::side\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 455 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a25651e3f78ddbc418ea978ca6b28e0e0}\label{classfm__partition_a25651e3f78ddbc418ea978ca6b28e0e0}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!total\+\_\+node\+\_\+weight@{total\+\_\+node\+\_\+weight}}
+\index{total\+\_\+node\+\_\+weight@{total\+\_\+node\+\_\+weight}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{total\+\_\+node\+\_\+weight}{total\_node\_weight}}
+{\footnotesize\ttfamily int fm\+\_\+partition\+::total\+\_\+node\+\_\+weight\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 435 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a24447561db0ea633212c597c5e1fca56}\label{classfm__partition_a24447561db0ea633212c597c5e1fca56}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!U\+N\+F\+I\+X\+ED@{U\+N\+F\+I\+X\+ED}}
+\index{U\+N\+F\+I\+X\+ED@{U\+N\+F\+I\+X\+ED}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{U\+N\+F\+I\+X\+ED}{UNFIXED}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfm__partition_a63693cd93d587dca3d1842f831cd1c55}{fm\+\_\+partition\+::fix\+\_\+type}} fm\+\_\+partition\+::\+U\+N\+F\+I\+X\+ED = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+{\ttfamily U\+N\+F\+I\+X\+ED} means node is free.
+
+\begin{DoxySeeAlso}{See also}
+fm\+\_\+partition\+::fixe\+\_\+type 
+\end{DoxySeeAlso}
+
+
+Definition at line 86 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}\label{classfm__partition_a9d75a1d63f711a0c66ae7f5bc181cd8b}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!unlockedA@{unlockedA}}
+\index{unlockedA@{unlockedA}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{unlockedA}{unlockedA}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}}$>$ fm\+\_\+partition\+::unlockedA\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 486 of file fm\+\_\+partition.\+h.
+
+\mbox{\Hypertarget{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}\label{classfm__partition_a74865bf3e6b6f73350c43c3ad9dfda96}} 
+\index{fm\+\_\+partition@{fm\+\_\+partition}!unlockedB@{unlockedB}}
+\index{unlockedB@{unlockedB}!fm\+\_\+partition@{fm\+\_\+partition}}
+\subsubsection{\texorpdfstring{unlockedB}{unlockedB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$\mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\+\_\+t}}$>$ fm\+\_\+partition\+::unlockedB\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 493 of file fm\+\_\+partition.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{fm__partition_8h}{fm\+\_\+partition.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/\mbox{\hyperlink{fm__partition_8cpp}{fm\+\_\+partition.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,12 @@
+<map id="node::adj_nodes_iterator" name="node::adj_nodes_iterator">
+<area shape="rect" id="node2" href="$gml2nestedsql_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="493,5,544,32"/>
+<area shape="rect" id="node3" href="$classnode.html#a6cd2febf910bc6572c4aecba6278b100" title="node::adj_nodes_begin" alt="" coords="217,107,372,133"/>
+<area shape="rect" id="node4" href="$class_my_graph.html#a513bec2f1949a01d517dd57cc9c30233" title="MyGraph::node_cliqueishness" alt="" coords="420,56,617,83"/>
+<area shape="rect" id="node6" href="$class_my_tree.html#ac375615ebccedd180aee25c5ea3f8ef1" title="MyTree::postorder_traversal" alt="" coords="427,157,610,184"/>
+<area shape="rect" id="node8" href="$class_my_tree.html#a5daf167d4bab0c1b0ca9b25cd3c45065" title="MyTree::get_right_child" alt="" coords="440,208,597,235"/>
+<area shape="rect" id="node9" href="$classmydfs.html#ad5c5cf421b7a3f6d6d6d3b4eba305879" title="Handler called after all the adjacent edges of n have been examined. " alt="" coords="447,259,590,285"/>
+<area shape="rect" id="node10" href="$classmybfs.html#a9d6e9e39f16d92ce1bcf368fe92b6856" title="Called after the node n was taken out of the queue. " alt="" coords="447,310,590,351"/>
+<area shape="rect" id="node11" href="$classnode.html#a2477fa92c56a19d29464082444a3043a" title="node::adj_nodes_end" alt="" coords="222,208,367,235"/>
+<area shape="rect" id="node7" href="$class_my_tree.html#ad24d047e2da5b363401a74977cde423c" title="MyTree::get_left_child" alt="" coords="444,107,593,133"/>
+<area shape="rect" id="node5" href="$class_my_graph.html#a2bb131d5401dc66c01acb976daa7e981" title="MyGraph::cliqueishness" alt="" coords="665,56,828,83"/>
+</map>

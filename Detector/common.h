@@ -6,7 +6,7 @@
 #include <mutex>
 #include <queue>
 
-/* A simple threadsafe queue using a mutex and a condition variable. */
+/**< A simple threadsafe queue using a mutex and a condition variable. */
 template <typename T>
 class Queue
 {
@@ -48,11 +48,11 @@ private:
     std::condition_variable cond_;
 };
 
-/* A pool of available contexts is simply implemented as a queue for our example. */
+/**< A pool of available contexts is simply implemented as a queue for our example. */
 template <typename Context>
 using ContextPool = Queue<std::unique_ptr<Context>>;
 
-/* A RAII class for acquiring an execution context from a context pool. */
+/**< A RAII class for acquiring an execution context from a context pool. */
 template <typename Context>
 class ScopedContext
 {

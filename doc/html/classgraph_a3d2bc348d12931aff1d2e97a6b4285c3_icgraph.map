@@ -1,0 +1,5 @@
+<map id="graph::post_make_undirected_handler" name="graph::post_make_undirected_handler">
+<area shape="rect" id="node2" href="$classgraph.html#a31c8b895bd842f1b9dcc67649956cfc7" title="graph::make_undirected" alt="" coords="247,31,408,57"/>
+<area shape="rect" id="node3" href="$components_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="479,5,530,32"/>
+<area shape="rect" id="node4" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="456,56,553,83"/>
+</map>

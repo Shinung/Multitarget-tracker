@@ -1,0 +1,789 @@
+\hypertarget{classp__node}{}\section{p\+\_\+node Class Reference}
+\label{classp__node}\index{p\+\_\+node@{p\+\_\+node}}
+
+
+{\ttfamily \#include $<$pq\+\_\+node.\+h$>$}
+
+
+
+Inheritance diagram for p\+\_\+node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classp__node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for p\+\_\+node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classp__node__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}{P\+Q\+\_\+\+K\+I\+ND}} \{ \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{P\+\_\+\+N\+O\+DE}}, 
+\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{Q\+\_\+\+N\+O\+DE}}, 
+\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}{L\+E\+AF}}, 
+\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}{D\+IR}}
+ \}
+\item 
+enum \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}{P\+Q\+\_\+\+M\+A\+RK}} \{ \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}{U\+N\+M\+A\+R\+K\+ED}}, 
+\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8fcc16097c37da3379fcd0a0c16fe169}{Q\+U\+E\+U\+ED}}, 
+\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}{B\+L\+O\+C\+K\+ED}}, 
+\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}{U\+N\+B\+L\+O\+C\+K\+ED}}
+ \}
+\item 
+typedef \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$\+::\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} \mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classpq__node_a8d8fb7b3059e7aeecf62eeed34076afb}{pert\+\_\+children}}
+\item 
+int \mbox{\hyperlink{classpq__node_a3fb78609f93f41efd6826ed3169fc312}{pert\+\_\+leaves}}
+\item 
+bool \mbox{\hyperlink{classpq__node_a058dda3d1197dfd2b343d1983d305d79}{is\+\_\+endmost}}
+\item 
+\mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ \mbox{\hyperlink{classpq__node_a3e7c886498c76c633f057fb42ff9c435}{father}}
+\item 
+\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}{P\+Q\+\_\+\+M\+A\+RK}} \mbox{\hyperlink{classpq__node_aee913582a7b268ce2570bee8a8367c50}{mark}}
+\item 
+\mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$ \mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}
+\item 
+\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} \mbox{\hyperlink{classpq__node_a5e8a5defa0fec4ff2e82fabee97296b4}{pos}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$\+::\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} \mbox{\hyperlink{classpq__node_a71cc9bb3c11aac468ff77d64643c38dc}{lpos}}
+\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classpq__node_a4997fd09a95d9a659b99cea04197740a}{n}}
+\item 
+int \mbox{\hyperlink{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}{id}}
+\item 
+\mbox{\hyperlink{classnode}{node}} \mbox{\hyperlink{classpq__node_ae6d5a236397b9a57159487eac7ec168d}{up}}
+\item 
+int \mbox{\hyperlink{classpq__node_a5a7bcdde1f57191a77a6a14994b38a50}{up\+\_\+id}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classp__node_aeaaa3a6bac1f72214880508f2d653939}{p\+\_\+node}} (\mbox{\hyperlink{classnode}{node}}, int)
+\item 
+\mbox{\hyperlink{classp__node_a043eab88f783cf3e3928fa1986a91ff6}{p\+\_\+node}} (\mbox{\hyperlink{classnode}{node}}, int, \mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$$>$ \&)
+\item 
+void \mbox{\hyperlink{classp__node_a217e83b61144fe6b64e3fbade0aecfcf}{partial}} (\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}})
+\item 
+void \mbox{\hyperlink{classp__node_a0ba10aa3a56e26676d78af2e05fb5cd1}{full}} (\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}})
+\item 
+\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}{P\+Q\+\_\+\+K\+I\+ND}} \mbox{\hyperlink{classp__node_a58cceed9fc9d92f36ec3fb6425d99cec}{kind}} () const
+\item 
+void \mbox{\hyperlink{classp__node_a746285e60e6a8ab147ad11df78cdb8ea}{write}} (std\+::ostream \&, int)
+\item 
+void \mbox{\hyperlink{classp__node_af24fe11743b0836b03c108a1bf8a0995}{clear}} ()
+\item 
+\mbox{\hyperlink{classp__node}{p\+\_\+node}} $\ast$ \mbox{\hyperlink{classp__node_a4d8d7a171935a008f0718275dede2b43}{P}} ()
+\item 
+\mbox{\hyperlink{classq__node}{q\+\_\+node}} $\ast$ \mbox{\hyperlink{classp__node_a93d94db17c833adaaf66bacbc8f55cec}{Q}} ()
+\item 
+\mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}} $\ast$ \mbox{\hyperlink{classp__node_a1853a9f63b6a81e502db0b3ef5a49ada}{D}} ()
+\item 
+\mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}} $\ast$ \mbox{\hyperlink{classp__node_a350eef32dca1dd9cf8cbb2771b4f3c9b}{L}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$ \mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\+\_\+sons}}
+\item 
+\mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$ $>$ \mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\+\_\+sons}}
+\item 
+int \mbox{\hyperlink{classp__node_a74d5be4f6767bda5b5803dc2f0987b74}{child\+\_\+count}}
+\item 
+int \mbox{\hyperlink{classp__node_a9ac93f9a0f474dcc74312e820fde73b6}{partial\+\_\+count}}
+\item 
+int \mbox{\hyperlink{classp__node_a67a7570ace6b26d3bcbff7cf71c85cb0}{full\+\_\+count}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classp__node_ab6a02224dbc06343d95919289aec77c8}{planarity}}
+\item 
+class \mbox{\hyperlink{classp__node_a0a5be4bb438c891059fae98f607f2a9c}{pq\+\_\+tree}}
+\item 
+\mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend std\+::ostream \& \mbox{\hyperlink{classp__node_a2db830bf75339bd39c819c231c03769b}{operator$<$$<$}} (std\+::ostream \&, const \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 268 of file pq\+\_\+node.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}\label{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}} 
+\index{p\+\_\+node@{p\+\_\+node}!iterator@{iterator}}
+\index{iterator@{iterator}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{classsymlist}{symlist}}$<$\mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$$>$\+::\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} \mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{pq\+\_\+node\+::iterator}}\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 36 of file pq\+\_\+node.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}} 
+\index{p\+\_\+node@{p\+\_\+node}!P\+Q\+\_\+\+K\+I\+ND@{P\+Q\+\_\+\+K\+I\+ND}}
+\index{P\+Q\+\_\+\+K\+I\+ND@{P\+Q\+\_\+\+K\+I\+ND}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{P\+Q\+\_\+\+K\+I\+ND}{PQ\_KIND}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}{pq\+\_\+node\+::\+P\+Q\+\_\+\+K\+I\+ND}}\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+\_\+\+N\+O\+DE@{P\+\_\+\+N\+O\+DE}!p\+\_\+node@{p\+\_\+node}}\index{p\+\_\+node@{p\+\_\+node}!P\+\_\+\+N\+O\+DE@{P\+\_\+\+N\+O\+DE}}}\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}} 
+P\+\_\+\+N\+O\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q\+\_\+\+N\+O\+DE@{Q\+\_\+\+N\+O\+DE}!p\+\_\+node@{p\+\_\+node}}\index{p\+\_\+node@{p\+\_\+node}!Q\+\_\+\+N\+O\+DE@{Q\+\_\+\+N\+O\+DE}}}\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}} 
+Q\+\_\+\+N\+O\+DE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+AF@{L\+E\+AF}!p\+\_\+node@{p\+\_\+node}}\index{p\+\_\+node@{p\+\_\+node}!L\+E\+AF@{L\+E\+AF}}}\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}} 
+L\+E\+AF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+IR@{D\+IR}!p\+\_\+node@{p\+\_\+node}}\index{p\+\_\+node@{p\+\_\+node}!D\+IR@{D\+IR}}}\mbox{\Hypertarget{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}\label{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}} 
+D\+IR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 41 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+41 \{\mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{P\_NODE}}, \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{Q\_NODE}}, \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a80289f856abee0f9cb17852111ba9991}{LEAF}}, \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a5afa3e7100ee720a1569cfff090a210d}{DIR}}\};
+\end{DoxyCode}
+\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}} 
+\index{p\+\_\+node@{p\+\_\+node}!P\+Q\+\_\+\+M\+A\+RK@{P\+Q\+\_\+\+M\+A\+RK}}
+\index{P\+Q\+\_\+\+M\+A\+RK@{P\+Q\+\_\+\+M\+A\+RK}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{P\+Q\+\_\+\+M\+A\+RK}{PQ\_MARK}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}{pq\+\_\+node\+::\+P\+Q\+\_\+\+M\+A\+RK}}\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+M\+A\+R\+K\+ED@{U\+N\+M\+A\+R\+K\+ED}!p\+\_\+node@{p\+\_\+node}}\index{p\+\_\+node@{p\+\_\+node}!U\+N\+M\+A\+R\+K\+ED@{U\+N\+M\+A\+R\+K\+ED}}}\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}} 
+U\+N\+M\+A\+R\+K\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q\+U\+E\+U\+ED@{Q\+U\+E\+U\+ED}!p\+\_\+node@{p\+\_\+node}}\index{p\+\_\+node@{p\+\_\+node}!Q\+U\+E\+U\+ED@{Q\+U\+E\+U\+ED}}}\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8fcc16097c37da3379fcd0a0c16fe169}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8fcc16097c37da3379fcd0a0c16fe169}} 
+Q\+U\+E\+U\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+L\+O\+C\+K\+ED@{B\+L\+O\+C\+K\+ED}!p\+\_\+node@{p\+\_\+node}}\index{p\+\_\+node@{p\+\_\+node}!B\+L\+O\+C\+K\+ED@{B\+L\+O\+C\+K\+ED}}}\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}} 
+B\+L\+O\+C\+K\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+B\+L\+O\+C\+K\+ED@{U\+N\+B\+L\+O\+C\+K\+ED}!p\+\_\+node@{p\+\_\+node}}\index{p\+\_\+node@{p\+\_\+node}!U\+N\+B\+L\+O\+C\+K\+ED@{U\+N\+B\+L\+O\+C\+K\+ED}}}\mbox{\Hypertarget{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}\label{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}} 
+U\+N\+B\+L\+O\+C\+K\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 46 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+46 \{\mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a7fbe5f6a363f9f2b5a154c61b2389d59}{UNMARKED}}, \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8fcc16097c37da3379fcd0a0c16fe169}{QUEUED}}, \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}{BLOCKED}}, \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}{UNBLOCKED}}\};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classp__node_aeaaa3a6bac1f72214880508f2d653939}\label{classp__node_aeaaa3a6bac1f72214880508f2d653939}} 
+\index{p\+\_\+node@{p\+\_\+node}!p\+\_\+node@{p\+\_\+node}}
+\index{p\+\_\+node@{p\+\_\+node}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{p\+\_\+node()}{p\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily p\+\_\+node\+::p\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n\+\_\+,  }\item[{int}]{id\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file pq\+\_\+node.\+cpp.
+
+
+\begin{DoxyCode}
+27                                 : \mbox{\hyperlink{classpq__node_a75720c94fd6e2865ba24c76ff66b33b2}{pq\_node}} (n\_, id\_), \mbox{\hyperlink{classp__node_a9ac93f9a0f474dcc74312e820fde73b6}{partial\_count}} (0), 
+      \mbox{\hyperlink{classp__node_a67a7570ace6b26d3bcbff7cf71c85cb0}{full\_count}} (0)
+28 \{
+29 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classp__node_a043eab88f783cf3e3928fa1986a91ff6}\label{classp__node_a043eab88f783cf3e3928fa1986a91ff6}} 
+\index{p\+\_\+node@{p\+\_\+node}!p\+\_\+node@{p\+\_\+node}}
+\index{p\+\_\+node@{p\+\_\+node}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{p\+\_\+node()}{p\_node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily p\+\_\+node\+::p\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}}}]{n\+\_\+,  }\item[{int}]{id\+\_\+,  }\item[{\mbox{\hyperlink{classsymlist}{symlist}}$<$ \mbox{\hyperlink{classpq__node}{pq\+\_\+node}} $\ast$$>$ \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file pq\+\_\+node.\+cpp.
+
+
+\begin{DoxyCode}
+31                                                       : 
+32     \mbox{\hyperlink{classpq__node_a75720c94fd6e2865ba24c76ff66b33b2}{pq\_node}} (n\_, id\_), \mbox{\hyperlink{classp__node_a74d5be4f6767bda5b5803dc2f0987b74}{child\_count}} (0), \mbox{\hyperlink{classp__node_a9ac93f9a0f474dcc74312e820fde73b6}{partial\_count}} (0), 
+      \mbox{\hyperlink{classp__node_a67a7570ace6b26d3bcbff7cf71c85cb0}{full\_count}} (0)
+33 \{
+34     \mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_ac2bd4d9db62ea6a3282662c62a97c3b2}{splice}} (\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}(), s.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}(), s.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}());
+35 
+36     \mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} it = \mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+37     \mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} end = \mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}();
+38 
+39     \textcolor{keywordflow}{for} (; it != end; ++it) \{
+40     ++\mbox{\hyperlink{classp__node_a74d5be4f6767bda5b5803dc2f0987b74}{child\_count}};
+41     (*it)->is\_endmost = \textcolor{keyword}{true};
+42     (*it)->father = \textcolor{keyword}{this};
+43     \}
+44 \} 
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classp__node_a043eab88f783cf3e3928fa1986a91ff6_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classp__node_af24fe11743b0836b03c108a1bf8a0995}\label{classp__node_af24fe11743b0836b03c108a1bf8a0995}} 
+\index{p\+\_\+node@{p\+\_\+node}!clear@{clear}}
+\index{clear@{clear}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void p\+\_\+node\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpq__node_a13100e0b030cc047f382d9ddf6a44f4a}{pq\+\_\+node}}.
+
+
+
+Definition at line 46 of file pq\+\_\+node.\+cpp.
+
+
+\begin{DoxyCode}
+47 \{
+48     \mbox{\hyperlink{classpq__node_a13100e0b030cc047f382d9ddf6a44f4a}{pq\_node::clear}}(); 
+49     \mbox{\hyperlink{classp__node_a9ac93f9a0f474dcc74312e820fde73b6}{partial\_count}} = \mbox{\hyperlink{classp__node_a67a7570ace6b26d3bcbff7cf71c85cb0}{full\_count}} = 0;
+50     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.\mbox{\hyperlink{classsymlist_aca11cd6c621376bc52a18828ef92e753}{empty}}())
+51     \mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_ac2bd4d9db62ea6a3282662c62a97c3b2}{splice}} (\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}(), \mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}(), 
+      \mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}());
+52 
+53     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_aca11cd6c621376bc52a18828ef92e753}{empty}}())
+54     \mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_ac2bd4d9db62ea6a3282662c62a97c3b2}{splice}} (\mbox{\hyperlink{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}{sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}(), \mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}(), 
+      \mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}());
+55 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classp__node_af24fe11743b0836b03c108a1bf8a0995_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classp__node_af24fe11743b0836b03c108a1bf8a0995_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classp__node_a1853a9f63b6a81e502db0b3ef5a49ada}\label{classp__node_a1853a9f63b6a81e502db0b3ef5a49ada}} 
+\index{p\+\_\+node@{p\+\_\+node}!D@{D}}
+\index{D@{D}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{D()}{D()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdirection__indicator}{direction\+\_\+indicator}}$\ast$ p\+\_\+node\+::D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_a5c85bd25c32bb6f18d6d8d1bfd35f260}{pq\+\_\+node}}.
+
+
+
+Definition at line 340 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+341     \{
+342     assert(\textcolor{keyword}{false});
+343     \textcolor{keywordflow}{return} 0;
+344     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classp__node_a0ba10aa3a56e26676d78af2e05fb5cd1}\label{classp__node_a0ba10aa3a56e26676d78af2e05fb5cd1}} 
+\index{p\+\_\+node@{p\+\_\+node}!full@{full}}
+\index{full@{full}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{full()}{full()}}
+{\footnotesize\ttfamily void p\+\_\+node\+::full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpq__node_af1ba861293e4493dba7cc2c9332fee76}{pq\+\_\+node}}.
+
+
+
+Definition at line 64 of file pq\+\_\+node.\+cpp.
+
+
+\begin{DoxyCode}
+65 \{
+66     ++\mbox{\hyperlink{classp__node_a67a7570ace6b26d3bcbff7cf71c85cb0}{full\_count}};
+67     \mbox{\hyperlink{classpq__node_a3fb78609f93f41efd6826ed3169fc312}{pert\_leaves}} += (*it)->pert\_leaves;
+68     \mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.\mbox{\hyperlink{classsymlist_ac2bd4d9db62ea6a3282662c62a97c3b2}{splice}} (\mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}(), it);
+69 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{classp__node_a0ba10aa3a56e26676d78af2e05fb5cd1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classp__node_a58cceed9fc9d92f36ec3fb6425d99cec}\label{classp__node_a58cceed9fc9d92f36ec3fb6425d99cec}} 
+\index{p\+\_\+node@{p\+\_\+node}!kind@{kind}}
+\index{kind@{kind}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{kind()}{kind()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6}{P\+Q\+\_\+\+K\+I\+ND}} p\+\_\+node\+::kind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_aa9873c0cfad88bc4404857ce57d422e4}{pq\+\_\+node}}.
+
+
+
+Definition at line 299 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+300     \{
+301     \textcolor{keywordflow}{return} \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{P\_NODE}};
+302     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classp__node_a350eef32dca1dd9cf8cbb2771b4f3c9b}\label{classp__node_a350eef32dca1dd9cf8cbb2771b4f3c9b}} 
+\index{p\+\_\+node@{p\+\_\+node}!L@{L}}
+\index{L@{L}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{L()}{L()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__leaf}{pq\+\_\+leaf}}$\ast$ p\+\_\+node\+::L (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_a805b6ef48c847380b47c8ba882ed4ee2}{pq\+\_\+node}}.
+
+
+
+Definition at line 350 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+351     \{
+352     assert(\textcolor{keyword}{false});
+353     \textcolor{keywordflow}{return} 0;
+354     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classp__node_a4d8d7a171935a008f0718275dede2b43}\label{classp__node_a4d8d7a171935a008f0718275dede2b43}} 
+\index{p\+\_\+node@{p\+\_\+node}!P@{P}}
+\index{P@{P}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{P()}{P()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classp__node}{p\+\_\+node}}$\ast$ p\+\_\+node\+::P (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_a72178a268ee1ece3ac106ac5fea3b12c}{pq\+\_\+node}}.
+
+
+
+Definition at line 321 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+322     \{
+323     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+324     \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classp__node_a4d8d7a171935a008f0718275dede2b43_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classp__node_a217e83b61144fe6b64e3fbade0aecfcf}\label{classp__node_a217e83b61144fe6b64e3fbade0aecfcf}} 
+\index{p\+\_\+node@{p\+\_\+node}!partial@{partial}}
+\index{partial@{partial}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{partial()}{partial()}}
+{\footnotesize\ttfamily void p\+\_\+node\+::partial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}}}]{it }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classpq__node_aa6830ab47a280f41fe61b7d2f8b508bb}{pq\+\_\+node}}.
+
+
+
+Definition at line 57 of file pq\+\_\+node.\+cpp.
+
+
+\begin{DoxyCode}
+58 \{
+59     ++\mbox{\hyperlink{classp__node_a9ac93f9a0f474dcc74312e820fde73b6}{partial\_count}};
+60     \mbox{\hyperlink{classpq__node_a3fb78609f93f41efd6826ed3169fc312}{pert\_leaves}} += (*it)->pert\_leaves;
+61     \mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_ac2bd4d9db62ea6a3282662c62a97c3b2}{splice}} (\mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}(), it);
+62 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{classp__node_a217e83b61144fe6b64e3fbade0aecfcf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classp__node_a93d94db17c833adaaf66bacbc8f55cec}\label{classp__node_a93d94db17c833adaaf66bacbc8f55cec}} 
+\index{p\+\_\+node@{p\+\_\+node}!Q@{Q}}
+\index{Q@{Q}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{Q()}{Q()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classq__node}{q\+\_\+node}}$\ast$ p\+\_\+node\+::Q (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_aeeefcfcd19dbe4ca94e190006e8dd484}{pq\+\_\+node}}.
+
+
+
+Definition at line 330 of file pq\+\_\+node.\+h.
+
+
+\begin{DoxyCode}
+331     \{
+332     assert(\textcolor{keyword}{false});
+333     \textcolor{keywordflow}{return} 0;
+334     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classp__node_a746285e60e6a8ab147ad11df78cdb8ea}\label{classp__node_a746285e60e6a8ab147ad11df78cdb8ea}} 
+\index{p\+\_\+node@{p\+\_\+node}!write@{write}}
+\index{write@{write}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void p\+\_\+node\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{int}]{\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{pq\+\_\+node}}.
+
+
+
+Definition at line 72 of file pq\+\_\+node.\+cpp.
+
+
+\begin{DoxyCode}
+73 \{
+74     os << \textcolor{stringliteral}{"node [\(\backslash\)n"} << \textcolor{stringliteral}{"id "} << \_id << std::endl;
+75     os << \textcolor{stringliteral}{"label \(\backslash\)""} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{"\(\backslash\)nP"} << \textcolor{stringliteral}{"\(\backslash\)"\(\backslash\)n"};
+76     os << \textcolor{stringliteral}{"graphics [\(\backslash\)n"} << \textcolor{stringliteral}{"x 100\(\backslash\)n"} << \textcolor{stringliteral}{"y 100\(\backslash\)n"}; 
+77     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpq__node_aee913582a7b268ce2570bee8a8367c50}{mark}} == \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a8a88820f8cee58f43fef7160cdf1d7dc}{UNBLOCKED}}) \{
+78     os << \textcolor{stringliteral}{"outline \(\backslash\)"#0000ff\(\backslash\)"\(\backslash\)n"};
+79     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpq__node_aee913582a7b268ce2570bee8a8367c50}{mark}} == \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9a70312622ded9f04f068838ec195fc53c}{BLOCKED}}) \{
+80     os << \textcolor{stringliteral}{"outline \(\backslash\)"#ff0000\(\backslash\)"\(\backslash\)n"};
+81     \}
+82     os << \textcolor{stringliteral}{"type \(\backslash\)"oval\(\backslash\)"\(\backslash\)n"} << \textcolor{stringliteral}{"]"} << std::endl;
+83     os << \textcolor{stringliteral}{"LabelGraphics [\(\backslash\)n"};
+84     os << \textcolor{stringliteral}{"type \(\backslash\)"text\(\backslash\)"\(\backslash\)n]\(\backslash\)n]"} << std::endl;
+85 \} 
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classp__node_a2db830bf75339bd39c819c231c03769b}\label{classp__node_a2db830bf75339bd39c819c231c03769b}} 
+\index{p\+\_\+node@{p\+\_\+node}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_t_l_8h_a014cd1e9b3e67a78ae433eda95c8fd25}{G\+T\+L\+\_\+\+E\+X\+T\+E\+RN}} friend std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}} \&}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 1335 of file pq\+\_\+tree.\+cpp.
+
+
+\begin{DoxyCode}
+1336 \{
+1337     \textcolor{keywordflow}{if} (!tree.\mbox{\hyperlink{classpq__tree_ad8e4e2235fe68fb99769cec54e1760ba}{root}}) \textcolor{keywordflow}{return} os;
+1338     
+1339     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = 0;
+1340     std::pair<pq\_node*, int> tmp;
+1341     std::queue<std::pair<pq\_node*, int> > qu;
+1342     \mbox{\hyperlink{classpq__node}{pq\_node}}* act;
+1343     
+1344     os << \textcolor{stringliteral}{"graph [\(\backslash\)n"} << \textcolor{stringliteral}{"directed 1"} << std::endl;
+1345     tree.\mbox{\hyperlink{classpq__tree_ad8e4e2235fe68fb99769cec54e1760ba}{root}}->\mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{write}} (os, \textcolor{keywordtype}{id});
+1346     tmp.first = tree.\mbox{\hyperlink{classpq__tree_ad8e4e2235fe68fb99769cec54e1760ba}{root}};
+1347     tmp.second = \mbox{\hyperlink{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}{id}};
+1348     ++\mbox{\hyperlink{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}{id}};
+1349     qu.push (tmp);
+1350     
+1351     \textcolor{keywordflow}{while} (!qu.empty()) \{
+1352     tmp = qu.front();
+1353     qu.pop();
+1354     
+1355     \textcolor{keywordflow}{if} (tmp.first->kind() == \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6ae682b144f87217774df399363d0ef410}{pq\_node::Q\_NODE}} || tmp.first->kind() == 
+      \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{pq\_node::P\_NODE}}) \{
+1356             \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} it = tmp.first->sons.begin();
+1357             \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} end = tmp.first->sons.end();
+1358         
+1359         \textcolor{keywordflow}{for} (; it != end; ++it) \{
+1360         act = *it;
+1361         act->\mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{write}} (os, \textcolor{keywordtype}{id});
+1362         
+1363         os << \textcolor{stringliteral}{"edge [\(\backslash\)n"} << \textcolor{stringliteral}{"source "} << tmp.second << std::endl;
+1364         os << \textcolor{stringliteral}{"target "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{"\(\backslash\)n]"} << std::endl;
+1365         
+1366         qu.push(std::pair<pq\_node*, int>(act, \textcolor{keywordtype}{id}));
+1367         ++\mbox{\hyperlink{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}{id}};
+1368         \}
+1369         \}
+1370 
+1371         \textcolor{keywordflow}{if} (tmp.first->kind() == \mbox{\hyperlink{classpq__node_a96827bdca8bf81d20213405dd27f8fa6a0ea3d0eae8dd06c7039082054828ce77}{pq\_node::P\_NODE}}) \{
+1372             \mbox{\hyperlink{classp__node}{p\_node}}* \mbox{\hyperlink{classp__node_a4d8d7a171935a008f0718275dede2b43}{P}} = tmp.first->\mbox{\hyperlink{classp__node_a4d8d7a171935a008f0718275dede2b43}{P}}();
+1373             \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} it = \mbox{\hyperlink{classp__node_a4d8d7a171935a008f0718275dede2b43}{P}}->\mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.
+      \mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+1374             \mbox{\hyperlink{structsymlist__iterator}{pq\_tree::sons\_iterator}} end = \mbox{\hyperlink{classp__node_a4d8d7a171935a008f0718275dede2b43}{P}}->\mbox{\hyperlink{classp__node_a09658fb7a7212e51b877444e4cee4378}{full\_sons}}.
+      \mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}();
+1375 
+1376             \textcolor{keywordflow}{for} (; it != end; ++it) \{
+1377                 act = *it;
+1378                 act->\mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{write}} (os, \textcolor{keywordtype}{id});
+1379 
+1380                 os << \textcolor{stringliteral}{"edge [\(\backslash\)n"} << \textcolor{stringliteral}{"source "} << tmp.second << std::endl;
+1381                 os << \textcolor{stringliteral}{"target "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{"\(\backslash\)n]"} << std::endl;
+1382 
+1383                 qu.push(std::pair<pq\_node*, int>(act, \textcolor{keywordtype}{id}));
+1384                 ++\mbox{\hyperlink{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}{id}};
+1385             \}
+1386             
+1387             it = \mbox{\hyperlink{classp__node_a4d8d7a171935a008f0718275dede2b43}{P}}->\mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_a525b8d44af5d771fe15916372515cce0}{begin}}();
+1388             end = \mbox{\hyperlink{classp__node_a4d8d7a171935a008f0718275dede2b43}{P}}->\mbox{\hyperlink{classp__node_a8acc45be68133af1b6a2823875729798}{partial\_sons}}.\mbox{\hyperlink{classsymlist_a7283589fa01f79d722f8256d7a6a7883}{end}}();
+1389 
+1390             \textcolor{keywordflow}{for} (; it != end; ++it) \{
+1391                 act = *it;
+1392                 act->\mbox{\hyperlink{classpq__node_aab7bddb053b6b25b90be00cba7de97f9}{write}} (os, \textcolor{keywordtype}{id});
+1393 
+1394                 os << \textcolor{stringliteral}{"edge [\(\backslash\)n"} << \textcolor{stringliteral}{"source "} << tmp.second << std::endl;
+1395                 os << \textcolor{stringliteral}{"target "} << \textcolor{keywordtype}{id} << \textcolor{stringliteral}{"\(\backslash\)n]"} << std::endl;
+1396 
+1397                 qu.push(std::pair<pq\_node*, int>(act, \textcolor{keywordtype}{id}));
+1398                 ++\mbox{\hyperlink{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}{id}};
+1399             \}            
+1400         \}
+1401     \}
+1402     
+1403     os << \textcolor{stringliteral}{"]"} << std::endl;
+1404     
+1405     \textcolor{keywordflow}{return} os;
+1406 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classp__node_ab6a02224dbc06343d95919289aec77c8}\label{classp__node_ab6a02224dbc06343d95919289aec77c8}} 
+\index{p\+\_\+node@{p\+\_\+node}!planarity@{planarity}}
+\index{planarity@{planarity}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{planarity}{planarity}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classplanarity}{planarity}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 400 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classp__node_a0a5be4bb438c891059fae98f607f2a9c}\label{classp__node_a0a5be4bb438c891059fae98f607f2a9c}} 
+\index{p\+\_\+node@{p\+\_\+node}!pq\+\_\+tree@{pq\+\_\+tree}}
+\index{pq\+\_\+tree@{pq\+\_\+tree}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{pq\+\_\+tree}{pq\_tree}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classpq__tree}{pq\+\_\+tree}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 406 of file pq\+\_\+node.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classp__node_a74d5be4f6767bda5b5803dc2f0987b74}\label{classp__node_a74d5be4f6767bda5b5803dc2f0987b74}} 
+\index{p\+\_\+node@{p\+\_\+node}!child\+\_\+count@{child\+\_\+count}}
+\index{child\+\_\+count@{child\+\_\+count}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{child\+\_\+count}{child\_count}}
+{\footnotesize\ttfamily int p\+\_\+node\+::child\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 378 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a3e7c886498c76c633f057fb42ff9c435}\label{classpq__node_a3e7c886498c76c633f057fb42ff9c435}} 
+\index{p\+\_\+node@{p\+\_\+node}!father@{father}}
+\index{father@{father}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{father}{father}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$ pq\+\_\+node\+::father\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 166 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classp__node_a67a7570ace6b26d3bcbff7cf71c85cb0}\label{classp__node_a67a7570ace6b26d3bcbff7cf71c85cb0}} 
+\index{p\+\_\+node@{p\+\_\+node}!full\+\_\+count@{full\+\_\+count}}
+\index{full\+\_\+count@{full\+\_\+count}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{full\+\_\+count}{full\_count}}
+{\footnotesize\ttfamily int p\+\_\+node\+::full\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 390 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classp__node_a09658fb7a7212e51b877444e4cee4378}\label{classp__node_a09658fb7a7212e51b877444e4cee4378}} 
+\index{p\+\_\+node@{p\+\_\+node}!full\+\_\+sons@{full\+\_\+sons}}
+\index{full\+\_\+sons@{full\+\_\+sons}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{full\+\_\+sons}{full\_sons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymlist}{symlist}}$<$\mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$$>$ p\+\_\+node\+::full\+\_\+sons\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 365 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}\label{classpq__node_ad0034c1f93c3c77edb6d3a03f25aba06}} 
+\index{p\+\_\+node@{p\+\_\+node}!id@{id}}
+\index{id@{id}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int pq\+\_\+node\+::id\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 217 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a058dda3d1197dfd2b343d1983d305d79}\label{classpq__node_a058dda3d1197dfd2b343d1983d305d79}} 
+\index{p\+\_\+node@{p\+\_\+node}!is\+\_\+endmost@{is\+\_\+endmost}}
+\index{is\+\_\+endmost@{is\+\_\+endmost}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{is\+\_\+endmost}{is\_endmost}}
+{\footnotesize\ttfamily bool pq\+\_\+node\+::is\+\_\+endmost\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 158 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a71cc9bb3c11aac468ff77d64643c38dc}\label{classpq__node_a71cc9bb3c11aac468ff77d64643c38dc}} 
+\index{p\+\_\+node@{p\+\_\+node}!lpos@{lpos}}
+\index{lpos@{lpos}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{lpos}{lpos}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$$>$\+::\mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} pq\+\_\+node\+::lpos\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 202 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_aee913582a7b268ce2570bee8a8367c50}\label{classpq__node_aee913582a7b268ce2570bee8a8367c50}} 
+\index{p\+\_\+node@{p\+\_\+node}!mark@{mark}}
+\index{mark@{mark}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{mark}{mark}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node_a6236b20cd5f6cc02cb5f637ed34c96d9}{P\+Q\+\_\+\+M\+A\+RK}} pq\+\_\+node\+::mark\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 180 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a4997fd09a95d9a659b99cea04197740a}\label{classpq__node_a4997fd09a95d9a659b99cea04197740a}} 
+\index{p\+\_\+node@{p\+\_\+node}!n@{n}}
+\index{n@{n}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} pq\+\_\+node\+::n\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 212 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classp__node_a9ac93f9a0f474dcc74312e820fde73b6}\label{classp__node_a9ac93f9a0f474dcc74312e820fde73b6}} 
+\index{p\+\_\+node@{p\+\_\+node}!partial\+\_\+count@{partial\+\_\+count}}
+\index{partial\+\_\+count@{partial\+\_\+count}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{partial\+\_\+count}{partial\_count}}
+{\footnotesize\ttfamily int p\+\_\+node\+::partial\+\_\+count\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 384 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classp__node_a8acc45be68133af1b6a2823875729798}\label{classp__node_a8acc45be68133af1b6a2823875729798}} 
+\index{p\+\_\+node@{p\+\_\+node}!partial\+\_\+sons@{partial\+\_\+sons}}
+\index{partial\+\_\+sons@{partial\+\_\+sons}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{partial\+\_\+sons}{partial\_sons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymlist}{symlist}}$<$\mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$$>$ p\+\_\+node\+::partial\+\_\+sons\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 372 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a8d8fb7b3059e7aeecf62eeed34076afb}\label{classpq__node_a8d8fb7b3059e7aeecf62eeed34076afb}} 
+\index{p\+\_\+node@{p\+\_\+node}!pert\+\_\+children@{pert\+\_\+children}}
+\index{pert\+\_\+children@{pert\+\_\+children}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{pert\+\_\+children}{pert\_children}}
+{\footnotesize\ttfamily int pq\+\_\+node\+::pert\+\_\+children\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 140 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a3fb78609f93f41efd6826ed3169fc312}\label{classpq__node_a3fb78609f93f41efd6826ed3169fc312}} 
+\index{p\+\_\+node@{p\+\_\+node}!pert\+\_\+leaves@{pert\+\_\+leaves}}
+\index{pert\+\_\+leaves@{pert\+\_\+leaves}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{pert\+\_\+leaves}{pert\_leaves}}
+{\footnotesize\ttfamily int pq\+\_\+node\+::pert\+\_\+leaves\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 148 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a5e8a5defa0fec4ff2e82fabee97296b4}\label{classpq__node_a5e8a5defa0fec4ff2e82fabee97296b4}} 
+\index{p\+\_\+node@{p\+\_\+node}!pos@{pos}}
+\index{pos@{pos}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classpq__node_a34898c9eb1527787c07e8ebefd6bfba5}{iterator}} pq\+\_\+node\+::pos\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 192 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}\label{classpq__node_a2cc030cfa4560872acea8b50ebd0542b}} 
+\index{p\+\_\+node@{p\+\_\+node}!sons@{sons}}
+\index{sons@{sons}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{sons}{sons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsymlist}{symlist}}$<$\mbox{\hyperlink{classpq__node}{pq\+\_\+node}}$\ast$$>$ pq\+\_\+node\+::sons\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 186 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_ae6d5a236397b9a57159487eac7ec168d}\label{classpq__node_ae6d5a236397b9a57159487eac7ec168d}} 
+\index{p\+\_\+node@{p\+\_\+node}!up@{up}}
+\index{up@{up}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}} pq\+\_\+node\+::up\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 222 of file pq\+\_\+node.\+h.
+
+\mbox{\Hypertarget{classpq__node_a5a7bcdde1f57191a77a6a14994b38a50}\label{classpq__node_a5a7bcdde1f57191a77a6a14994b38a50}} 
+\index{p\+\_\+node@{p\+\_\+node}!up\+\_\+id@{up\+\_\+id}}
+\index{up\+\_\+id@{up\+\_\+id}!p\+\_\+node@{p\+\_\+node}}
+\subsubsection{\texorpdfstring{up\+\_\+id}{up\_id}}
+{\footnotesize\ttfamily int pq\+\_\+node\+::up\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 227 of file pq\+\_\+node.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/include/\+G\+T\+L/\mbox{\hyperlink{pq__node_8h}{pq\+\_\+node.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\+G\+T\+L/src/\mbox{\hyperlink{pq__node_8cpp}{pq\+\_\+node.\+cpp}}\end{DoxyCompactItemize}

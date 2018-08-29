@@ -1,0 +1,9 @@
+<map id="VideoExample::Process" name="VideoExample::Process">
+<area shape="rect" id="node2" href="$class_video_example.html#ace8617201da40b6e230bd6c049b48aa0" title="VideoExample::CaptureAndDetect. " alt="" coords="216,59,399,101"/>
+<area shape="rect" id="node7" href="$class_video_example.html#af412482dcaad532d958dc31b362ee1c2" title="VideoExample::Tracking. " alt="" coords="226,136,389,163"/>
+<area shape="rect" id="node8" href="$class_video_example.html#a53eb15977cb147dac218d8ea337986cd" title="VideoExample::DrawData" alt="" coords="222,187,393,213"/>
+<area shape="rect" id="node3" href="$rings_8cpp.html#a77369fc4d5326a16d2c603e032023528" title="f" alt="" coords="515,5,553,32"/>
+<area shape="rect" id="node4" href="$class_video_example.html#a93e23d64075fb2f508423e45d15c5421" title="VideoExample::InitTracker" alt="" coords="447,56,621,83"/>
+<area shape="rect" id="node5" href="$class_video_example.html#a5ea4a212997371399b01aed1d59a80b8" title="VideoExample::Detection. " alt="" coords="449,107,619,133"/>
+<area shape="rect" id="node6" href="$class_video_example.html#af8ea44f17711129d2b954d1f01fee1f0" title="VideoExample::GrayProcessing. " alt="" coords="669,132,876,159"/>
+</map>

@@ -15,9 +15,11 @@
 
 // ----------------------------------------------------------------------
 
-///
-/// \brief Initialization GLOG library
-///
+/**
+ * @brief Initialize function for GLOG
+ * @param [in] pargv ::google::InitGoogleLogging require program name
+ * @author Shinung
+ */
 void GlobalInitGLOG(char*** pargv);
 
 // ----------------------------------------------------------------------
@@ -555,12 +557,25 @@ protected:
 
 // ----------------------------------------------------------------------
 
-///
-/// \brief The CustomSSDMobileNetExample class
-///
+/**
+ * @brief This class is for customized caffe library
+ *        It is need to build caffe library
+ * 
+ * I build and test with below caffe library
+ * <https://github.com/Shinung/caffe/tree/ssd_win_inference> 
+ *      - this branch is a caffe-ssd library ported to windows and for inference.
+ *      - For MobilenetSSD, I build caffe-ssd with [Depthwise Convolutional Layer](https://github.com/yonghenglh6/DepthwiseConvolution)
+ * 
+ * @author Shinung
+ */
 class CustomSSDMobileNetExample : public VideoExample
 {
 public:
+    /**
+     * @brief It's needed deploy/label-map prototxt file path and caffemodel file path
+     * @param parser Construct with arguments in cv::CommandLineParser
+     * @author Shinung
+     */
 	CustomSSDMobileNetExample(const cv::CommandLineParser& parser)
 		:
 		VideoExample(parser),
@@ -571,10 +586,14 @@ public:
 	}
 
 protected:
-	///
-	/// \brief InitTracker
-	/// \param grayFrame
-	///
+	/**
+     * @brief Tracker and Detector will be initilaized in this function.
+     * @param [in] frame gray image
+     * @see VideoExample::CaptureAndDetect
+     * @see tracking::Detectors
+     * @return true if tracker and detector is initilaized successfully
+     * @author Shinung
+     */
 	bool InitTracker(cv::UMat frame)
 	{
 		config_t config;
@@ -630,15 +649,12 @@ protected:
 			{
 				DrawTrack(frame, 1, *track);
 
-				//std::string label = track->m_lastRegion.m_type + ": " + std::to_string(track->m_lastRegion.m_confidence;
 				std::ostringstream label;
 				label << track->m_lastRegion.m_type << ": " << std::setprecision(1) << track->m_lastRegion.m_confidence;
 				int baseLine = 0;
-				//cv::Size labelSize = cv::getTextSize(label, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
 				cv::Size labelSize = cv::getTextSize(label.str(), cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
 				auto rect(track->GetLastRect());
 				cv::rectangle(frame, cv::Rect(cv::Point(rect.x, rect.y - labelSize.height), cv::Size(labelSize.width, labelSize.height + baseLine)), cv::Scalar(255, 255, 255), CV_FILLED);
-				//cv::putText(frame, label, cv::Point(rect.x, rect.y), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
 				cv::putText(frame, label.str(), cv::Point(rect.x, rect.y), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
 			}
 		}
@@ -646,17 +662,20 @@ protected:
 		m_detector->CalcMotionMap(frame);
 	}
 
-	///
-	/// \brief GrayProcessing
-	/// \return
-	///
+	/**
+     * @brief image color change to gray scale or not
+     * 
+     * I followed SSDMobileNetExample code.
+     * @return always TRUE
+     * @author Shinung
+     */
 	bool GrayProcessing() const
 	{
 		return false;
 	}
 
 private:
-	cv::String mDeploy;
-	cv::String mWeights;
-	cv::String mLabelMap;
+	cv::String mDeploy; /**< deploy prototxt file path */
+	cv::String mWeights; /**< trained caffemodel file path */
+	cv::String mLabelMap; /**< label-map prototxt file path */
 };

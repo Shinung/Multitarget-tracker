@@ -1,0 +1,758 @@
+\hypertarget{classmwbmatching}{}\section{mwbmatching Class Reference}
+\label{classmwbmatching}\index{mwbmatching@{mwbmatching}}
+
+
+{\ttfamily \#include $<$mwbmatching.\+h$>$}
+
+
+
+Inheritance diagram for mwbmatching\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classmwbmatching__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for mwbmatching\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{G\+T\+L\+\_\+\+OK}} = 1, 
+\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{G\+T\+L\+\_\+\+E\+R\+R\+OR}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmwbmatching_a360da276965377cb3e97461e2d207537}{mwbmatching}} ()
+\item 
+virtual \mbox{\hyperlink{classmwbmatching_a93190f5d39643b3b8a3067a07abd520b}{$\sim$mwbmatching}} ()
+\item 
+void \mbox{\hyperlink{classmwbmatching_a0547cf2f00854d2548613c39eaf400a9}{set\+\_\+vars}} (const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&\mbox{\hyperlink{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}{edge\+\_\+weight}})
+\item 
+int \mbox{\hyperlink{classmwbmatching_adcb51caed21e77253940cd71bfd9a405}{run}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+virtual int \mbox{\hyperlink{classmwbmatching_af6b9e6ad6e77958ddd32301df96bae23}{check}} (\mbox{\hyperlink{classgraph}{graph}} \&G)
+\item 
+virtual void \mbox{\hyperlink{classmwbmatching_acb2171f09442f1d4170eaed5dc213865}{reset}} ()
+\item 
+int \mbox{\hyperlink{classmwbmatching_a19c5144f8a7c44e238743e6eaff8c228}{get\+\_\+mwbm}} () const
+\item 
+\mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} \mbox{\hyperlink{classmwbmatching_a30af3917c3d7257e4c13f0634c41d39d}{get\+\_\+match}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmwbmatching_adfb6ea829377c6ba08f6079d767d5a42}{augment}} (\mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classnode}{node}} a)
+\item 
+void \mbox{\hyperlink{classmwbmatching_a241fe1b645070b1f3e96c0b100fb8a6f}{augment\+\_\+path\+\_\+to}} (\mbox{\hyperlink{classgraph}{graph}} \&G, \mbox{\hyperlink{classnode}{node}} v)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classmwbmatching_a80e73b4ab7162ea265c48a93199fc172}{mwbm}}
+\item 
+bool \mbox{\hyperlink{classmwbmatching_ae871c52302b78ccf16a271ef099e0a3a}{set\+\_\+vars\+\_\+executed}}
+\item 
+\mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \mbox{\hyperlink{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}{edge\+\_\+weight}}
+\item 
+\mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} \mbox{\hyperlink{classmwbmatching_aa6483fb0f23c87f29bb08f7abff80144}{result}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ long $>$ \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ bool $>$ \mbox{\hyperlink{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}{free}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ long $>$ \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}
+\item 
+\mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$ long $>$ \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{classnode}{node}}, std\+::less$<$ int $>$ $>$ \mbox{\hyperlink{classmwbmatching_a805077195aac6c443b753b74da814c6f}{node\+\_\+from\+\_\+id}}
+\item 
+std\+::map$<$ int, \mbox{\hyperlink{classedge}{edge}}, std\+::less$<$ int $>$ $>$ \mbox{\hyperlink{classmwbmatching_afebc731e1dd5a37df6467258bfe07887}{edge\+\_\+from\+\_\+id}}
+\item 
+\mbox{\hyperlink{fheap_8h_a81491fcb8cde3f99611815852e42a9ad}{fheap\+\_\+t}} $\ast$ \mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 10 of file mwbmatching.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Return values for \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}!mwbmatching@{mwbmatching}}\index{mwbmatching@{mwbmatching}!G\+T\+L\+\_\+\+OK@{G\+T\+L\+\_\+\+OK}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}} 
+G\+T\+L\+\_\+\+OK&Used as (positive) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}!mwbmatching@{mwbmatching}}\index{mwbmatching@{mwbmatching}!G\+T\+L\+\_\+\+E\+R\+R\+OR@{G\+T\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}\label{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}} 
+G\+T\+L\+\_\+\+E\+R\+R\+OR&Used as (negative) return value of \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} and \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}}. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 40 of file algorithm.\+h.
+
+
+\begin{DoxyCode}
+40          \{
+41     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}} = 1,
+42     \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}} = 0
+43     \};
+\end{DoxyCode}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmwbmatching_a360da276965377cb3e97461e2d207537}\label{classmwbmatching_a360da276965377cb3e97461e2d207537}} 
+\index{mwbmatching@{mwbmatching}!mwbmatching@{mwbmatching}}
+\index{mwbmatching@{mwbmatching}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{mwbmatching()}{mwbmatching()}}
+{\footnotesize\ttfamily mwbmatching\+::mwbmatching (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 28 of file mwbmatching.\+cpp.
+
+
+\begin{DoxyCode}
+29     :
+30       \mbox{\hyperlink{classalgorithm_ab79e1ddec2f2afdf4b36b10724db8b15}{algorithm}}(),
+31       \mbox{\hyperlink{classmwbmatching_a80e73b4ab7162ea265c48a93199fc172}{mwbm}}(0),
+32       \mbox{\hyperlink{classmwbmatching_ae871c52302b78ccf16a271ef099e0a3a}{set\_vars\_executed}}(\textcolor{keyword}{false}),
+33       \mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}}(NULL)
+34 \{
+35 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classmwbmatching_a93190f5d39643b3b8a3067a07abd520b}\label{classmwbmatching_a93190f5d39643b3b8a3067a07abd520b}} 
+\index{mwbmatching@{mwbmatching}!````~mwbmatching@{$\sim$mwbmatching}}
+\index{````~mwbmatching@{$\sim$mwbmatching}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{$\sim$mwbmatching()}{~mwbmatching()}}
+{\footnotesize\ttfamily mwbmatching\+::$\sim$mwbmatching (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 38 of file mwbmatching.\+cpp.
+
+
+\begin{DoxyCode}
+39 \{
+40 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classmwbmatching_adfb6ea829377c6ba08f6079d767d5a42}\label{classmwbmatching_adfb6ea829377c6ba08f6079d767d5a42}} 
+\index{mwbmatching@{mwbmatching}!augment@{augment}}
+\index{augment@{augment}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{augment()}{augment()}}
+{\footnotesize\ttfamily int mwbmatching\+::augment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 138 of file mwbmatching.\+cpp.
+
+
+\begin{DoxyCode}
+139 \{
+140     \textcolor{comment}{// Initialise}
+141     \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}}(G, -1);
+142     \mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}} = \mbox{\hyperlink{fheap_8c_a8a4f7ba67a3d47a511e1af128d59f7cb}{fh\_alloc}}(G.\mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}());
+143     
+144     \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[a] = 0;
+145     \mbox{\hyperlink{classnode}{node}} best\_node\_in\_A = a;
+146     \textcolor{keywordtype}{long} minA = \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[a];
+147     \textcolor{keywordtype}{long} delta;
+148     
+149     std::stack<node, std::vector<node> > RA;
+150     RA.push(a);
+151     std::stack<node, std::vector<node> > RB;
+152     
+153     \mbox{\hyperlink{classnode}{node}} a1 = a;
+154     \mbox{\hyperlink{classedge}{edge}} e;
+155     
+156     \textcolor{comment}{// Relax}
+157     \mbox{\hyperlink{node_8h_ae53910b86f6343c6d82c56aad0107e0b}{forall\_adj\_edges}} (e, a1)
+158     \{
+159         \textcolor{keyword}{const} \mbox{\hyperlink{classnode}{node}}& b = e.\mbox{\hyperlink{classedge_aa8e46723982d3e630377fb75669711de}{target\_}}();
+160         \textcolor{keywordtype}{long} db = \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[a1] + (\mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[a1] + \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[b] - \mbox{\hyperlink{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}{edge\_weight}}[e]);
+161         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[b] == -1)
+162         \{
+163             \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[b] = db;
+164             \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[b] = e.\mbox{\hyperlink{classedge_aa7635988ab396748d6081ae5d273923b}{id}}();
+165             RB.push(b);
+166             
+167             \mbox{\hyperlink{fheap_8c_a4489cad6a8830374aaa7db8705d222a1}{fh\_insert}} (\mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}}, b.\mbox{\hyperlink{classnode_a5d38b4152c3cedb235e45de7eb3f4469}{id}}(), db);    
+168         \}
+169         \textcolor{keywordflow}{else}
+170         \{
+171             \textcolor{keywordflow}{if} (db < \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[b])
+172             \{
+173                 \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[b] = db;
+174                 \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[b] = e.\mbox{\hyperlink{classedge_aa7635988ab396748d6081ae5d273923b}{id}}();
+175 
+176                 \mbox{\hyperlink{fheap_8c_aae5cdb4b5c64bb4597d36eb36d3d2c4b}{fh\_decrease\_key}} (\mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}}, b.id(), db);  
+177             \}
+178         \}
+179     \}
+180 
+181     \textcolor{keywordflow}{for} (;;)
+182     \{
+183         \textcolor{comment}{// Find node with minimum distance db}
+184         \textcolor{keywordtype}{int} node\_id;
+185         \textcolor{keywordtype}{long} db = 0;
+186         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}}->\mbox{\hyperlink{structfheap_af369ea8f1202800c582fe570803fea9f}{n}} == 0)
+187         \{
+188             node\_id = -1;
+189         \}
+190         \textcolor{keywordflow}{else}
+191         \{
+192             node\_id = \mbox{\hyperlink{fheap_8c_a1103efc45c2f1814139914353e684f1a}{fh\_delete\_min}} (\mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}});
+193             db = \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[\mbox{\hyperlink{classmwbmatching_a805077195aac6c443b753b74da814c6f}{node\_from\_id}}[node\_id]];
+194         \}
+195         
+196         \textcolor{keywordflow}{if} (node\_id == -1 || db >= minA)
+197         \{
+198             delta = minA;
+199             \textcolor{comment}{// augmentation by best node in A}
+200             \mbox{\hyperlink{classmwbmatching_a241fe1b645070b1f3e96c0b100fb8a6f}{augment\_path\_to}} (G, best\_node\_in\_A);  
+201             \mbox{\hyperlink{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}{free}}[a] = \textcolor{keyword}{false}; 
+202             \mbox{\hyperlink{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}{free}}[best\_node\_in\_A] = \textcolor{keyword}{true}; 
+203             \textcolor{keywordflow}{break};
+204         \}
+205         \textcolor{keywordflow}{else}
+206         \{
+207             \mbox{\hyperlink{classnode}{node}} b = \mbox{\hyperlink{classmwbmatching_a805077195aac6c443b753b74da814c6f}{node\_from\_id}}[node\_id];
+208             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}{free}}[b])
+209             \{
+210                 delta = db;
+211                 \textcolor{comment}{// augmentation by path to b, so a and b are now matched}
+212                 \mbox{\hyperlink{classmwbmatching_a241fe1b645070b1f3e96c0b100fb8a6f}{augment\_path\_to}} (G, b);
+213                 \mbox{\hyperlink{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}{free}}[a] = \textcolor{keyword}{false};
+214                 \mbox{\hyperlink{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}{free}}[b] = \textcolor{keyword}{false};
+215                 \textcolor{keywordflow}{break};
+216             \}
+217             \textcolor{keywordflow}{else}
+218             \{
+219                 \textcolor{comment}{// continue shortest path computation}
+220                 \mbox{\hyperlink{classedge}{edge}} e = (*b.adj\_edges\_begin()); 
+221                 \textcolor{keyword}{const} \mbox{\hyperlink{classnode}{node}}& a1 = e.\mbox{\hyperlink{classedge_aa8e46723982d3e630377fb75669711de}{target\_}}();
+222                 \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[a1] = e.\mbox{\hyperlink{classedge_aa7635988ab396748d6081ae5d273923b}{id}}(); 
+223                 RA.push(a1);
+224                 \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[a1] = db; 
+225                       
+226                 \textcolor{keywordflow}{if} (db + \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[a1] < minA)
+227                 \{ 
+228                     best\_node\_in\_A = a1;
+229                     minA = db + \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[a1];
+230                 \}
+231                 
+232                 \textcolor{comment}{// Relax}
+233                 \mbox{\hyperlink{node_8h_ae53910b86f6343c6d82c56aad0107e0b}{forall\_adj\_edges}} (e, a1)
+234                 \{
+235                     \textcolor{keyword}{const} \mbox{\hyperlink{classnode}{node}}& b = e.\mbox{\hyperlink{classedge_aa8e46723982d3e630377fb75669711de}{target\_}}();
+236                     \textcolor{keywordtype}{long} db = \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[a1] + (\mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[a1] + \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[b] - 
+      \mbox{\hyperlink{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}{edge\_weight}}[e]);
+237                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[b] == -1)
+238                     \{
+239                         \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[b] = db;
+240                         \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[b] = e.\mbox{\hyperlink{classedge_aa7635988ab396748d6081ae5d273923b}{id}}();
+241                         RB.push(b);
+242                         
+243                         \mbox{\hyperlink{fheap_8c_a4489cad6a8830374aaa7db8705d222a1}{fh\_insert}} (\mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}}, b.\mbox{\hyperlink{classnode_a5d38b4152c3cedb235e45de7eb3f4469}{id}}(), db);    
+244                     \}
+245                     \textcolor{keywordflow}{else}
+246                     \{
+247                         \textcolor{keywordflow}{if} (db < \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[b])
+248                         \{
+249                             \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[b] = db;
+250                             \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[b] = e.\mbox{\hyperlink{classedge_aa7635988ab396748d6081ae5d273923b}{id}}();
+251 
+252                             \mbox{\hyperlink{fheap_8c_aae5cdb4b5c64bb4597d36eb36d3d2c4b}{fh\_decrease\_key}} (\mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}}, b.id(), db);  
+253                         \}
+254                     \}
+255                 \}
+256                                 
+257             \}
+258         \}
+259     \}
+260     
+261     
+262     \textcolor{keywordflow}{while} (!RA.empty())
+263     \{
+264         \mbox{\hyperlink{classnode}{node}} a = RA.top();
+265         RA.pop();
+266         \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[a] = -1;
+267         \textcolor{keywordtype}{long} pot\_change = delta - \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[a];
+268         \textcolor{keywordflow}{if} (pot\_change <= 0) \textcolor{keywordflow}{continue};
+269         \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[a] = \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[a] - pot\_change;     
+270     \}
+271     \textcolor{keywordflow}{while} (!RB.empty())
+272     \{
+273         \mbox{\hyperlink{classnode}{node}} b = RB.top();
+274         RB.pop();
+275         \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[b] = -1;
+276         
+277         \textcolor{keywordtype}{long} pot\_change = delta - \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}[b];
+278         \textcolor{keywordflow}{if} (pot\_change <= 0) \textcolor{keywordflow}{continue};
+279         \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[b] = \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[b] + pot\_change;     
+280     \}
+281     
+282     \textcolor{comment}{// Clean up}
+283     \mbox{\hyperlink{fheap_8c_a11e6d24701acd9d4f1ffc8652dcfa340}{fh\_free}}(\mbox{\hyperlink{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}{pq}});
+284 
+285     \textcolor{keywordflow}{return} 0;
+286 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching_adfb6ea829377c6ba08f6079d767d5a42_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching_adfb6ea829377c6ba08f6079d767d5a42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmwbmatching_a241fe1b645070b1f3e96c0b100fb8a6f}\label{classmwbmatching_a241fe1b645070b1f3e96c0b100fb8a6f}} 
+\index{mwbmatching@{mwbmatching}!augment\+\_\+path\+\_\+to@{augment\+\_\+path\+\_\+to}}
+\index{augment\+\_\+path\+\_\+to@{augment\+\_\+path\+\_\+to}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{augment\+\_\+path\+\_\+to()}{augment\_path\_to()}}
+{\footnotesize\ttfamily void mwbmatching\+::augment\+\_\+path\+\_\+to (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G,  }\item[{\mbox{\hyperlink{classnode}{node}}}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 288 of file mwbmatching.\+cpp.
+
+
+\begin{DoxyCode}
+289 \{
+290     \textcolor{keywordtype}{int} i = \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[v];
+291     \textcolor{keywordflow}{while} (i != -1)
+292     \{
+293         \mbox{\hyperlink{classedge}{edge}} e = \mbox{\hyperlink{classmwbmatching_afebc731e1dd5a37df6467258bfe07887}{edge\_from\_id}}[i];
+294         e.\mbox{\hyperlink{classedge_ad62516eb40dbee9f57a2078cfd97b4c9}{reverse}}();
+295         i = \mbox{\hyperlink{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}{pred}}[e.\mbox{\hyperlink{classedge_a97563b611261478ee19c6ce055f1a3ee}{target}}()];
+296     \}   
+297 
+298 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classmwbmatching_a241fe1b645070b1f3e96c0b100fb8a6f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching_a241fe1b645070b1f3e96c0b100fb8a6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmwbmatching_af6b9e6ad6e77958ddd32301df96bae23}\label{classmwbmatching_af6b9e6ad6e77958ddd32301df96bae23}} 
+\index{mwbmatching@{mwbmatching}!check@{check}}
+\index{check@{check}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily int mwbmatching\+::check (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks whether the preconditions for maximum weight bipartite matching are satisfied.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$code$>$\+G$<$/code$>$} & graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}} on success, {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{algorithm\+::\+G\+T\+L\+\_\+\+E\+R\+R\+OR}}} otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm\+::check}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a76361fb03ad1cf643affc51821e43bed}{algorithm}}.
+
+
+
+Definition at line 49 of file mwbmatching.\+cpp.
+
+
+\begin{DoxyCode}
+50 \{
+51     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classmwbmatching_ae871c52302b78ccf16a271ef099e0a3a}{set\_vars\_executed}})
+52     \{
+53         \textcolor{keywordflow}{return}(\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}});
+54     \}
+55     \textcolor{keywordflow}{if} ((G.\mbox{\hyperlink{classgraph_a42c78e0a9f115655e3ff0efe35ebfc4e}{number\_of\_nodes}}() <= 1) || (!G.\mbox{\hyperlink{classgraph_a599e2bf967df8a2052a9892c94db98b7}{is\_connected}}()) || (!G.
+      \mbox{\hyperlink{classgraph_afc510be7479fa903fde9e0e615470ab0}{is\_directed}}()))
+56     \{
+57         \textcolor{keywordflow}{return}(\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{GTL\_ERROR}});
+58     \}
+59     \textcolor{keywordflow}{return} \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}};
+60 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching_af6b9e6ad6e77958ddd32301df96bae23_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmwbmatching_a30af3917c3d7257e4c13f0634c41d39d}\label{classmwbmatching_a30af3917c3d7257e4c13f0634c41d39d}} 
+\index{mwbmatching@{mwbmatching}!get\+\_\+match@{get\+\_\+match}}
+\index{get\+\_\+match@{get\+\_\+match}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{get\+\_\+match()}{get\_match()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} mwbmatching\+::get\+\_\+match (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the maximum weight bipartite matching for the graph G as a list of edges.
+
+\begin{DoxyReturn}{Returns}
+list of edges in maximum weight bipartite matching 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file mwbmatching.\+h.
+
+
+\begin{DoxyCode}
+66 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classmwbmatching_aa6483fb0f23c87f29bb08f7abff80144}{result}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching_a30af3917c3d7257e4c13f0634c41d39d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmwbmatching_a19c5144f8a7c44e238743e6eaff8c228}\label{classmwbmatching_a19c5144f8a7c44e238743e6eaff8c228}} 
+\index{mwbmatching@{mwbmatching}!get\+\_\+mwbm@{get\+\_\+mwbm}}
+\index{get\+\_\+mwbm@{get\+\_\+mwbm}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{get\+\_\+mwbm()}{get\_mwbm()}}
+{\footnotesize\ttfamily int mwbmatching\+::get\+\_\+mwbm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the value of the maximum weight bipartite matching for the graph G.
+
+\begin{DoxyReturn}{Returns}
+maximum weight bipartite matching value 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file mwbmatching.\+h.
+
+
+\begin{DoxyCode}
+57 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classmwbmatching_a80e73b4ab7162ea265c48a93199fc172}{mwbm}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{classmwbmatching_acb2171f09442f1d4170eaed5dc213865}\label{classmwbmatching_acb2171f09442f1d4170eaed5dc213865}} 
+\index{mwbmatching@{mwbmatching}!reset@{reset}}
+\index{reset@{reset}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void mwbmatching\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Reset.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm\+::reset}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a21aba63d066ae7897de6ca7d8425c408}{algorithm}}.
+
+
+
+Definition at line 49 of file mwbmatching.\+h.
+
+
+\begin{DoxyCode}
+49 \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{classmwbmatching_adcb51caed21e77253940cd71bfd9a405}\label{classmwbmatching_adcb51caed21e77253940cd71bfd9a405}} 
+\index{mwbmatching@{mwbmatching}!run@{run}}
+\index{run@{run}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int mwbmatching\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classgraph}{graph}} \&}]{G }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Finds a maximum weight bipartite matching of G.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$code$>$\+G$<$/code$>$} & graph. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{algorithm\+::\+G\+T\+L\+\_\+\+OK}}} on success, {\ttfamily \mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a6fcf574690bbd6cf710837a169510dd7}{algorithm\+::\+G\+T\+L\+\_\+\+E\+R\+R\+OR}}} otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm\+::run}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classalgorithm_a734b189509a8d6b56b65f8ff772d43ca}{algorithm}}.
+
+
+
+Definition at line 63 of file mwbmatching.\+cpp.
+
+
+\begin{DoxyCode}
+64 \{
+65     \textcolor{comment}{// Initialise}
+66     \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (G, 0);
+67     \mbox{\hyperlink{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}{free}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (G, \textcolor{keyword}{true});
+68     \mbox{\hyperlink{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}{dist}}.\mbox{\hyperlink{classne__map_a4ef2ab4aebcb57a7a101975bf6a88e24}{init}} (G, 0);
+69     
+70     \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\_t}} A;
+71     \mbox{\hyperlink{edge_8h_a22ac17689106ba21a84e7bc54d1199d6}{nodes\_t}} B;
+72     \mbox{\hyperlink{classnode}{node}} n;
+73     \textcolor{comment}{// Partition graph based on direction of edges}
+74     \mbox{\hyperlink{graph_8h_a1905bf4c6aa7167b9ee5a2e72f12ad2d}{forall\_nodes}} (n, G)
+75     \{
+76         \textcolor{keywordflow}{if} (n.\mbox{\hyperlink{classnode_a32adc45c4132e2642ccd2233d79ffe67}{outdeg}}() == 0)
+77         \{
+78             B.push\_back (n);
+79         \}
+80         \textcolor{keywordflow}{else}
+81         \{
+82             A.push\_back(n);
+83         \}
+84         
+85         \mbox{\hyperlink{classmwbmatching_a805077195aac6c443b753b74da814c6f}{node\_from\_id}}[n.\mbox{\hyperlink{classnode_a5d38b4152c3cedb235e45de7eb3f4469}{id}}()] = n;
+86     \}
+87     
+88     \textcolor{comment}{// Simple heuristic}
+89     \textcolor{keywordtype}{int} C = 0;
+90     \mbox{\hyperlink{classedge}{edge}} e;
+91     \mbox{\hyperlink{graph_8h_ac57b09543204dcb7a1e2c76c793cf038}{forall\_edges}} (e, G)
+92     \{
+93         \mbox{\hyperlink{classmwbmatching_afebc731e1dd5a37df6467258bfe07887}{edge\_from\_id}}[e.\mbox{\hyperlink{classedge_aa7635988ab396748d6081ae5d273923b}{id}}()] = e;
+94         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}{edge\_weight}}[e] > C) 
+95             C = \mbox{\hyperlink{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}{edge\_weight}}[e];  
+96     \}
+97 
+98     nodes\_t::iterator it = A.begin();
+99     nodes\_t::iterator end = A.end();
+100     \textcolor{keywordflow}{while} (it != end)
+101     \{
+102         \mbox{\hyperlink{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}{pot}}[*it] = C;
+103         it++;
+104     \}
+105     
+106     it = A.begin();
+107     
+108     \textcolor{keywordflow}{while} (it != end)
+109     \{
+110         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}{free}}[*it])
+111         \{
+112             \mbox{\hyperlink{classmwbmatching_adfb6ea829377c6ba08f6079d767d5a42}{augment}} (G, *it);
+113         \}
+114         it++;
+115     \}
+116 
+117     
+118     \textcolor{comment}{// Get edges in matching}
+119     it = B.begin();
+120     end = B.end();
+121     \textcolor{keywordflow}{while} (it != end)
+122     \{
+123         \mbox{\hyperlink{classedge}{edge}} e;
+124         \mbox{\hyperlink{node_8h_a5011d2a6e290aa0953ec5ff39fdec7c5}{forall\_out\_edges}} (e, *it)
+125         \{
+126             \mbox{\hyperlink{classmwbmatching_aa6483fb0f23c87f29bb08f7abff80144}{result}}.push\_back (e); 
+127             \mbox{\hyperlink{classmwbmatching_a80e73b4ab7162ea265c48a93199fc172}{mwbm}} += \mbox{\hyperlink{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}{edge\_weight}}[e];
+128         \}
+129         it++;
+130     \}
+131 
+132 
+133     \textcolor{keywordflow}{return}(\mbox{\hyperlink{classalgorithm_af1a0078e153aa99c24f9bdf0d97f6710a5114c20e4a96a76b5de9f28bf15e282b}{GTL\_OK}});
+134 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching_adcb51caed21e77253940cd71bfd9a405_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching_adcb51caed21e77253940cd71bfd9a405_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classmwbmatching_a0547cf2f00854d2548613c39eaf400a9}\label{classmwbmatching_a0547cf2f00854d2548613c39eaf400a9}} 
+\index{mwbmatching@{mwbmatching}!set\+\_\+vars@{set\+\_\+vars}}
+\index{set\+\_\+vars@{set\+\_\+vars}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{set\+\_\+vars()}{set\_vars()}}
+{\footnotesize\ttfamily void mwbmatching\+::set\+\_\+vars (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$ int $>$ \&}]{edge\+\_\+weight }\end{DoxyParamCaption})}
+
+Sets weight of every edge for maximum weight bipartite matching calculation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$code$>$edge\+\_\+weight$<$/code$>$} & weight of every edge. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file mwbmatching.\+cpp.
+
+
+\begin{DoxyCode}
+43 \{
+44     this->edge\_weight = \mbox{\hyperlink{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}{edge\_weight}};
+45     \mbox{\hyperlink{classmwbmatching_a80e73b4ab7162ea265c48a93199fc172}{mwbm}} = 0;
+46     \mbox{\hyperlink{classmwbmatching_ae871c52302b78ccf16a271ef099e0a3a}{set\_vars\_executed}} = \textcolor{keyword}{true};
+47 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmwbmatching_a0547cf2f00854d2548613c39eaf400a9_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}\label{classmwbmatching_aad0fd09452bf87f0e8e95c74441f5e8a}} 
+\index{mwbmatching@{mwbmatching}!dist@{dist}}
+\index{dist@{dist}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{dist}{dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$long$>$ mwbmatching\+::dist\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 88 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_afebc731e1dd5a37df6467258bfe07887}\label{classmwbmatching_afebc731e1dd5a37df6467258bfe07887}} 
+\index{mwbmatching@{mwbmatching}!edge\+\_\+from\+\_\+id@{edge\+\_\+from\+\_\+id}}
+\index{edge\+\_\+from\+\_\+id@{edge\+\_\+from\+\_\+id}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{edge\+\_\+from\+\_\+id}{edge\_from\_id}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{classedge}{edge}}, std\+::less$<$int$>$ $>$ mwbmatching\+::edge\+\_\+from\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 91 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}\label{classmwbmatching_a9624508c4944bffc6a349aa76ce6964c}} 
+\index{mwbmatching@{mwbmatching}!edge\+\_\+weight@{edge\+\_\+weight}}
+\index{edge\+\_\+weight@{edge\+\_\+weight}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{edge\+\_\+weight}{edge\_weight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classedge__map}{edge\+\_\+map}}$<$int$>$ mwbmatching\+::edge\+\_\+weight\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 82 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}\label{classmwbmatching_a109911f7997e2f1b3293e505deb4a4cb}} 
+\index{mwbmatching@{mwbmatching}!free@{free}}
+\index{free@{free}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{free}{free}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$bool$>$ mwbmatching\+::free\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 87 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_a80e73b4ab7162ea265c48a93199fc172}\label{classmwbmatching_a80e73b4ab7162ea265c48a93199fc172}} 
+\index{mwbmatching@{mwbmatching}!mwbm@{mwbm}}
+\index{mwbm@{mwbm}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{mwbm}{mwbm}}
+{\footnotesize\ttfamily long mwbmatching\+::mwbm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 66 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_a805077195aac6c443b753b74da814c6f}\label{classmwbmatching_a805077195aac6c443b753b74da814c6f}} 
+\index{mwbmatching@{mwbmatching}!node\+\_\+from\+\_\+id@{node\+\_\+from\+\_\+id}}
+\index{node\+\_\+from\+\_\+id@{node\+\_\+from\+\_\+id}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{node\+\_\+from\+\_\+id}{node\_from\_id}}
+{\footnotesize\ttfamily std\+::map$<$int, \mbox{\hyperlink{classnode}{node}}, std\+::less$<$int$>$ $>$ mwbmatching\+::node\+\_\+from\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 90 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}\label{classmwbmatching_ac44514154909580323c5d2e5c58e7d23}} 
+\index{mwbmatching@{mwbmatching}!pot@{pot}}
+\index{pot@{pot}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{pot}{pot}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$long$>$ mwbmatching\+::pot\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 86 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}\label{classmwbmatching_adeeeb1d1bc49ead5bce740bde6ae52bf}} 
+\index{mwbmatching@{mwbmatching}!pq@{pq}}
+\index{pq@{pq}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{pq}{pq}}
+{\footnotesize\ttfamily \mbox{\hyperlink{fheap_8h_a81491fcb8cde3f99611815852e42a9ad}{fheap\+\_\+t}}$\ast$ mwbmatching\+::pq\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 93 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}\label{classmwbmatching_acea3c6ca4ec946e87a2850c2dc20479f}} 
+\index{mwbmatching@{mwbmatching}!pred@{pred}}
+\index{pred@{pred}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{pred}{pred}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode__map}{node\+\_\+map}}$<$long$>$ mwbmatching\+::pred\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 89 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_aa6483fb0f23c87f29bb08f7abff80144}\label{classmwbmatching_aa6483fb0f23c87f29bb08f7abff80144}} 
+\index{mwbmatching@{mwbmatching}!result@{result}}
+\index{result@{result}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily \mbox{\hyperlink{edge_8h_a8f9587479bda6cf612c103494b3858e3}{edges\+\_\+t}} mwbmatching\+::result\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 84 of file mwbmatching.\+h.
+
+\mbox{\Hypertarget{classmwbmatching_ae871c52302b78ccf16a271ef099e0a3a}\label{classmwbmatching_ae871c52302b78ccf16a271ef099e0a3a}} 
+\index{mwbmatching@{mwbmatching}!set\+\_\+vars\+\_\+executed@{set\+\_\+vars\+\_\+executed}}
+\index{set\+\_\+vars\+\_\+executed@{set\+\_\+vars\+\_\+executed}!mwbmatching@{mwbmatching}}
+\subsubsection{\texorpdfstring{set\+\_\+vars\+\_\+executed}{set\_vars\_executed}}
+{\footnotesize\ttfamily bool mwbmatching\+::set\+\_\+vars\+\_\+executed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 77 of file mwbmatching.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\mbox{\hyperlink{mwbmatching_8h}{mwbmatching.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\mbox{\hyperlink{mwbmatching_8cpp}{mwbmatching.\+cpp}}\end{DoxyCompactItemize}

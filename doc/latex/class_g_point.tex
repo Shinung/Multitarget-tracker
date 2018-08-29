@@ -1,0 +1,284 @@
+\hypertarget{class_g_point}{}\section{G\+Point Class Reference}
+\label{class_g_point}\index{G\+Point@{G\+Point}}
+
+
+{\ttfamily \#include $<$gport.\+h$>$}
+
+
+
+Collaboration diagram for G\+Point\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_g_point__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_point_a8454b1fc2b2094d4cf5fd8d57a9114d9}{G\+Point}} ()
+\item 
+\mbox{\hyperlink{class_g_point_a8198edcc7b38e155c8f1e117ca912fcb}{G\+Point}} (const \mbox{\hyperlink{class_g_point}{G\+Point}} \&p)
+\item 
+\mbox{\hyperlink{class_g_point_a9344fd1bded86e274aad88fd85e0ee15}{G\+Point}} (const int x, const int y)
+\item 
+virtual int \mbox{\hyperlink{class_g_point_a1abafe0e52e3f7039bbe0c0acbb5a9a9}{GetX}} () const
+\item 
+virtual int \mbox{\hyperlink{class_g_point_a0b40736448fc178ac2406875bd524a2c}{GetY}} () const
+\item 
+virtual void \mbox{\hyperlink{class_g_point_a8098fbfa3ada3a81e07313b2b4de1427}{Offset}} (const int xoff, const int yoff)
+\item 
+virtual void \mbox{\hyperlink{class_g_point_ad6f78b03b847082c2e2feb0a3612f0c5}{Set\+Point}} (const int x, const int y)
+\item 
+virtual void \mbox{\hyperlink{class_g_point_aa2e1b46333fea1d31b1db8eea7a4bbd6}{SetX}} (int x)
+\item 
+virtual void \mbox{\hyperlink{class_g_point_a20d2d7826baf36fe4b8f73b88d75cf7d}{SetY}} (int y)
+\item 
+int \mbox{\hyperlink{class_g_point_ae28ae2bca94c3b0906c3336c10545c94}{operator==}} (const \mbox{\hyperlink{class_g_point}{G\+Point}} \&p)
+\item 
+int \mbox{\hyperlink{class_g_point_a7294abba5e2a5a7caa75e3967e07cbb5}{operator!=}} (const \mbox{\hyperlink{class_g_point}{G\+Point}} \&p)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}}
+\item 
+int \mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 54 of file gport.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_point_a8454b1fc2b2094d4cf5fd8d57a9114d9}\label{class_g_point_a8454b1fc2b2094d4cf5fd8d57a9114d9}} 
+\index{G\+Point@{G\+Point}!G\+Point@{G\+Point}}
+\index{G\+Point@{G\+Point}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{G\+Point()}{GPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily G\+Point\+::\+G\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 57 of file gport.\+h.
+
+
+\begin{DoxyCode}
+57 \{ \mbox{\hyperlink{class_g_point_ad6f78b03b847082c2e2feb0a3612f0c5}{SetPoint}} (0, 0); \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_g_point_a8454b1fc2b2094d4cf5fd8d57a9114d9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_point_a8198edcc7b38e155c8f1e117ca912fcb}\label{class_g_point_a8198edcc7b38e155c8f1e117ca912fcb}} 
+\index{G\+Point@{G\+Point}!G\+Point@{G\+Point}}
+\index{G\+Point@{G\+Point}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{G\+Point()}{GPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily G\+Point\+::\+G\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_g_point}{G\+Point}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 58 of file gport.\+h.
+
+
+\begin{DoxyCode}
+58 \{ \mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}} = p.\mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}}; \mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}} = p.\mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_point_a9344fd1bded86e274aad88fd85e0ee15}\label{class_g_point_a9344fd1bded86e274aad88fd85e0ee15}} 
+\index{G\+Point@{G\+Point}!G\+Point@{G\+Point}}
+\index{G\+Point@{G\+Point}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{G\+Point()}{GPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily G\+Point\+::\+G\+Point (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 59 of file gport.\+h.
+
+
+\begin{DoxyCode}
+59 \{ \mbox{\hyperlink{class_g_point_ad6f78b03b847082c2e2feb0a3612f0c5}{SetPoint}} (x, y); \};
+\end{DoxyCode}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_g_point_a9344fd1bded86e274aad88fd85e0ee15_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_point_a1abafe0e52e3f7039bbe0c0acbb5a9a9}\label{class_g_point_a1abafe0e52e3f7039bbe0c0acbb5a9a9}} 
+\index{G\+Point@{G\+Point}!GetX@{GetX}}
+\index{GetX@{GetX}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{Get\+X()}{GetX()}}
+{\footnotesize\ttfamily virtual int G\+Point\+::\+GetX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 60 of file gport.\+h.
+
+
+\begin{DoxyCode}
+60 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_point_a1abafe0e52e3f7039bbe0c0acbb5a9a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_point_a0b40736448fc178ac2406875bd524a2c}\label{class_g_point_a0b40736448fc178ac2406875bd524a2c}} 
+\index{G\+Point@{G\+Point}!GetY@{GetY}}
+\index{GetY@{GetY}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{Get\+Y()}{GetY()}}
+{\footnotesize\ttfamily virtual int G\+Point\+::\+GetY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 61 of file gport.\+h.
+
+
+\begin{DoxyCode}
+61 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}}; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_point_a0b40736448fc178ac2406875bd524a2c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_point_a8098fbfa3ada3a81e07313b2b4de1427}\label{class_g_point_a8098fbfa3ada3a81e07313b2b4de1427}} 
+\index{G\+Point@{G\+Point}!Offset@{Offset}}
+\index{Offset@{Offset}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{Offset()}{Offset()}}
+{\footnotesize\ttfamily virtual void G\+Point\+::\+Offset (\begin{DoxyParamCaption}\item[{const int}]{xoff,  }\item[{const int}]{yoff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 62 of file gport.\+h.
+
+
+\begin{DoxyCode}
+62 \{ \mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}} += xoff; \mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}} += yoff; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_g_point_a8098fbfa3ada3a81e07313b2b4de1427_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_point_a7294abba5e2a5a7caa75e3967e07cbb5}\label{class_g_point_a7294abba5e2a5a7caa75e3967e07cbb5}} 
+\index{G\+Point@{G\+Point}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily int G\+Point\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_g_point}{G\+Point}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 68 of file gport.\+h.
+
+
+\begin{DoxyCode}
+68 \{ \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) ( (\mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}} != p.\mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}}) || ( \mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}} != p.\mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}})); \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_point_ae28ae2bca94c3b0906c3336c10545c94}\label{class_g_point_ae28ae2bca94c3b0906c3336c10545c94}} 
+\index{G\+Point@{G\+Point}!operator==@{operator==}}
+\index{operator==@{operator==}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily int G\+Point\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_g_point}{G\+Point}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 67 of file gport.\+h.
+
+
+\begin{DoxyCode}
+67 \{ \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int}) ( (\mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}} == p.\mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}}) && ( \mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}} == p.\mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}})); \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_point_ad6f78b03b847082c2e2feb0a3612f0c5}\label{class_g_point_ad6f78b03b847082c2e2feb0a3612f0c5}} 
+\index{G\+Point@{G\+Point}!Set\+Point@{Set\+Point}}
+\index{Set\+Point@{Set\+Point}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{Set\+Point()}{SetPoint()}}
+{\footnotesize\ttfamily virtual void G\+Point\+::\+Set\+Point (\begin{DoxyParamCaption}\item[{const int}]{x,  }\item[{const int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 63 of file gport.\+h.
+
+
+\begin{DoxyCode}
+63 \{ \mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}} = x; \mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}} = y; \};
+\end{DoxyCode}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_g_point_ad6f78b03b847082c2e2feb0a3612f0c5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_point_aa2e1b46333fea1d31b1db8eea7a4bbd6}\label{class_g_point_aa2e1b46333fea1d31b1db8eea7a4bbd6}} 
+\index{G\+Point@{G\+Point}!SetX@{SetX}}
+\index{SetX@{SetX}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{Set\+X()}{SetX()}}
+{\footnotesize\ttfamily virtual void G\+Point\+::\+SetX (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 64 of file gport.\+h.
+
+
+\begin{DoxyCode}
+64 \{ \mbox{\hyperlink{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}{X}} = x; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_point_a20d2d7826baf36fe4b8f73b88d75cf7d}\label{class_g_point_a20d2d7826baf36fe4b8f73b88d75cf7d}} 
+\index{G\+Point@{G\+Point}!SetY@{SetY}}
+\index{SetY@{SetY}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{Set\+Y()}{SetY()}}
+{\footnotesize\ttfamily virtual void G\+Point\+::\+SetY (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 65 of file gport.\+h.
+
+
+\begin{DoxyCode}
+65 \{ \mbox{\hyperlink{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}{Y}} = y; \};
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}\label{class_g_point_a0a26572e08c37a5e7e6854ae8c7fee66}} 
+\index{G\+Point@{G\+Point}!X@{X}}
+\index{X@{X}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily int G\+Point\+::X\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 68 of file gport.\+h.
+
+\mbox{\Hypertarget{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}\label{class_g_point_aca224bb9b30fab3b59cd25a9261c1069}} 
+\index{G\+Point@{G\+Point}!Y@{Y}}
+\index{Y@{Y}!G\+Point@{G\+Point}}
+\subsubsection{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily int G\+Point\+::Y\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 71 of file gport.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Tracker/graph/\mbox{\hyperlink{gport_8h}{gport.\+h}}\end{DoxyCompactItemize}

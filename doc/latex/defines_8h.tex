@@ -1,0 +1,156 @@
+\hypertarget{defines_8h}{}\section{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/defines.h File Reference}
+\label{defines_8h}\index{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/defines.\+h@{D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/defines.\+h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+Include dependency graph for defines.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{defines_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{defines_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_c_region}{C\+Region}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_c_region}{C\+Region}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetracking}{tracking}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{defines_8h_ab1a8d0e1d0eb73f62b8beee8a243475e}{Mat\+\_\+t}}~C\+V\+\_\+32\+FC
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef float \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}}
+\item 
+typedef cv\+::\+Point\+\_\+$<$ \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}} $>$ \mbox{\hyperlink{defines_8h_a8c42696da8f098b91374a8e8bb84b430}{Point\+\_\+t}}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em config\+\_\+t \end{DoxyCompactList}\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{class_c_region}{C\+Region}} $>$ \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760}{tracking\+::\+Detectors}} \{ \newline
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a87b70978153a0274b03015d9390db7ae}{tracking\+::\+Motion\+\_\+\+V\+I\+BE}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a924d297b40e8c4518aa2e0553f6f8f61}{tracking\+::\+Motion\+\_\+\+M\+OG}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760aff944e05b5f591282b599c4d97ab8ab0}{tracking\+::\+Motion\+\_\+\+G\+MG}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760af40f12386e08503dd5d82774d5e36617}{tracking\+::\+Motion\+\_\+\+C\+NT}}, 
+\newline
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760ad699aae73e9117bdd3aee641a3a6e7fe}{tracking\+::\+Motion\+\_\+\+Su\+B\+S\+E\+N\+SE}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a9d3afb434e136e0b4e413cca1d893484}{tracking\+::\+Motion\+\_\+\+L\+O\+B\+S\+T\+ER}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a44ff25b64c66d3d3700ffbfa5b8b9330}{tracking\+::\+Motion\+\_\+\+M\+O\+G2}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a4988e24edd891887cab51c40c8766469}{tracking\+::\+Face\+\_\+\+H\+A\+AR}}, 
+\newline
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a115099e7e10e6d96d1d98c2b49846deb}{tracking\+::\+Pedestrian\+\_\+\+H\+OG}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a9ac24174fd8e83cd08a363fdac49d0d4}{tracking\+::\+Pedestrian\+\_\+\+C4}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a8f03b394ce89f3180f060df35483348e}{tracking\+::\+S\+S\+D\+\_\+\+Mobile\+Net}}, 
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760a89a6bc82129abb9692c1a368724c4791}{tracking\+::\+Yolo}}, 
+\newline
+\mbox{\hyperlink{namespacetracking_a1edf574df68abf048988b7cbacc52760aad91e73b0e787896ba30df4540e992e7}{tracking\+::\+S\+S\+D\+\_\+\+Custom\+Net}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacetracking_a55743c5e18b9b228c4ba2587260b2502}{tracking\+::\+Dist\+Type}} \{ \mbox{\hyperlink{namespacetracking_a55743c5e18b9b228c4ba2587260b2502a30176bdc0b4f965c6812767a2fa52e1e}{tracking\+::\+Dist\+Centers}} = 0, 
+\mbox{\hyperlink{namespacetracking_a55743c5e18b9b228c4ba2587260b2502a43af27628a9ee8e94a23c079eab5d448}{tracking\+::\+Dist\+Rects}} = 1, 
+\mbox{\hyperlink{namespacetracking_a55743c5e18b9b228c4ba2587260b2502a731b827afcbde6eb19624ad6130b1798}{tracking\+::\+Dist\+Jaccard}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em The Dist\+Type enum. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacetracking_a9b3e7d16c86cd8b781ab214e396b0ebf}{tracking\+::\+Filter\+Goal}} \{ \mbox{\hyperlink{namespacetracking_a9b3e7d16c86cd8b781ab214e396b0ebfafac394783c1196957768400bc53ba491}{tracking\+::\+Filter\+Center}} = 0, 
+\mbox{\hyperlink{namespacetracking_a9b3e7d16c86cd8b781ab214e396b0ebfabb259eae9513c55b313c553ce6249aea}{tracking\+::\+Filter\+Rect}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em The Filter\+Goal enum. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacetracking_a83f2c4d58ea2737f7d6296dce3eb722a}{tracking\+::\+Kalman\+Type}} \{ \mbox{\hyperlink{namespacetracking_a83f2c4d58ea2737f7d6296dce3eb722aa889eca583e371386c92e05814797a885}{tracking\+::\+Kalman\+Linear}} = 0, 
+\mbox{\hyperlink{namespacetracking_a83f2c4d58ea2737f7d6296dce3eb722aa39d914d61ae37e52ad325f55d199dabc}{tracking\+::\+Kalman\+Unscented}} = 1, 
+\mbox{\hyperlink{namespacetracking_a83f2c4d58ea2737f7d6296dce3eb722aa442bc8be9c68f72f1bc7952153cbf4c7}{tracking\+::\+Kalman\+Augmented\+Unscented}}
+ \}
+\begin{DoxyCompactList}\small\item\em The Kalman\+Type enum. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacetracking_a491e50c9261ab820965d871a217d4f13}{tracking\+::\+Match\+Type}} \{ \mbox{\hyperlink{namespacetracking_a491e50c9261ab820965d871a217d4f13a8c97315e46df8c0716a9538655fc967d}{tracking\+::\+Match\+Hungrian}} = 0, 
+\mbox{\hyperlink{namespacetracking_a491e50c9261ab820965d871a217d4f13a41d2324dafb3393ff2cb54671c8b06ef}{tracking\+::\+Match\+Bipart}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em The Match\+Type enum. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{namespacetracking_a5377d69122ad915004ef68a518d22be3}{tracking\+::\+Lost\+Track\+Type}} \{ \newline
+\mbox{\hyperlink{namespacetracking_a5377d69122ad915004ef68a518d22be3a3bd92892a83828375b9fce502732c491}{tracking\+::\+Track\+None}} = 0, 
+\mbox{\hyperlink{namespacetracking_a5377d69122ad915004ef68a518d22be3a9bba8e4377e562caa976576d47c5eb2e}{tracking\+::\+Track\+K\+CF}} = 1, 
+\mbox{\hyperlink{namespacetracking_a5377d69122ad915004ef68a518d22be3a98b9586c66bb9e4b1e0fed027700a197}{tracking\+::\+Track\+M\+IL}}, 
+\mbox{\hyperlink{namespacetracking_a5377d69122ad915004ef68a518d22be3a637634260348d3b28ff4e28661bb417a}{tracking\+::\+Track\+Median\+Flow}}, 
+\newline
+\mbox{\hyperlink{namespacetracking_a5377d69122ad915004ef68a518d22be3a674ec8effe560545c87b0c14bd40f7f3}{tracking\+::\+Track\+G\+O\+T\+U\+RN}}, 
+\mbox{\hyperlink{namespacetracking_a5377d69122ad915004ef68a518d22be3aa3948447c2ea9d8e9efef9b9433c70e2}{tracking\+::\+Track\+M\+O\+S\+SE}}
+ \}
+\begin{DoxyCompactList}\small\item\em The Lost\+Track\+Type enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{defines_8h_ab1a8d0e1d0eb73f62b8beee8a243475e}\label{defines_8h_ab1a8d0e1d0eb73f62b8beee8a243475e}} 
+\index{defines.\+h@{defines.\+h}!Mat\+\_\+t@{Mat\+\_\+t}}
+\index{Mat\+\_\+t@{Mat\+\_\+t}!defines.\+h@{defines.\+h}}
+\subsubsection{\texorpdfstring{Mat\+\_\+t}{Mat\_t}}
+{\footnotesize\ttfamily \#define Mat\+\_\+t~C\+V\+\_\+32\+FC}
+
+
+
+Definition at line 14 of file defines.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{defines_8h_a81d657237a541d02f8eeefdd40191920}\label{defines_8h_a81d657237a541d02f8eeefdd40191920}} 
+\index{defines.\+h@{defines.\+h}!config\+\_\+t@{config\+\_\+t}}
+\index{config\+\_\+t@{config\+\_\+t}!defines.\+h@{defines.\+h}}
+\subsubsection{\texorpdfstring{config\+\_\+t}{config\_t}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, std\+::string$>$ \mbox{\hyperlink{defines_8h_a81d657237a541d02f8eeefdd40191920}{config\+\_\+t}}}
+
+
+
+config\+\_\+t 
+
+
+
+Definition at line 19 of file defines.\+h.
+
+\mbox{\Hypertarget{defines_8h_a8c42696da8f098b91374a8e8bb84b430}\label{defines_8h_a8c42696da8f098b91374a8e8bb84b430}} 
+\index{defines.\+h@{defines.\+h}!Point\+\_\+t@{Point\+\_\+t}}
+\index{Point\+\_\+t@{Point\+\_\+t}!defines.\+h@{defines.\+h}}
+\subsubsection{\texorpdfstring{Point\+\_\+t}{Point\_t}}
+{\footnotesize\ttfamily typedef cv\+::\+Point\+\_\+$<$\mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}}$>$ \mbox{\hyperlink{defines_8h_a8c42696da8f098b91374a8e8bb84b430}{Point\+\_\+t}}}
+
+
+
+Definition at line 13 of file defines.\+h.
+
+\mbox{\Hypertarget{defines_8h_a01db0de56a20f4342820a093c5154536}\label{defines_8h_a01db0de56a20f4342820a093c5154536}} 
+\index{defines.\+h@{defines.\+h}!regions\+\_\+t@{regions\+\_\+t}}
+\index{regions\+\_\+t@{regions\+\_\+t}!defines.\+h@{defines.\+h}}
+\subsubsection{\texorpdfstring{regions\+\_\+t}{regions\_t}}
+{\footnotesize\ttfamily typedef std\+::vector$<$\mbox{\hyperlink{class_c_region}{C\+Region}}$>$ \mbox{\hyperlink{defines_8h_a01db0de56a20f4342820a093c5154536}{regions\+\_\+t}}}
+
+
+
+Definition at line 51 of file defines.\+h.
+
+\mbox{\Hypertarget{defines_8h_a7ce9c8817b42ab418e61756f579549ab}\label{defines_8h_a7ce9c8817b42ab418e61756f579549ab}} 
+\index{defines.\+h@{defines.\+h}!track\+\_\+t@{track\+\_\+t}}
+\index{track\+\_\+t@{track\+\_\+t}!defines.\+h@{defines.\+h}}
+\subsubsection{\texorpdfstring{track\+\_\+t}{track\_t}}
+{\footnotesize\ttfamily typedef float \mbox{\hyperlink{defines_8h_a7ce9c8817b42ab418e61756f579549ab}{track\+\_\+t}}}
+
+
+
+Definition at line 12 of file defines.\+h.
+

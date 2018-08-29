@@ -1,0 +1,628 @@
+\hypertarget{class_background_subtractor_l_b_s_p}{}\section{Background\+Subtractor\+L\+B\+SP Class Reference}
+\label{class_background_subtractor_l_b_s_p}\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+
+
+{\ttfamily \#include $<$Background\+Subtractor\+L\+B\+S\+P.\+h$>$}
+
+
+
+Inheritance diagram for Background\+Subtractor\+L\+B\+SP\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_background_subtractor_l_b_s_p__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Background\+Subtractor\+L\+B\+SP\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_background_subtractor_l_b_s_p__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_background_subtractor_l_b_s_p_1_1_px_info_base}{Px\+Info\+Base}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a5f7f42ea5c9697479cbe237b49ca6ae9}{Background\+Subtractor\+L\+B\+SP}} (float f\+Rel\+L\+B\+S\+P\+Threshold, size\+\_\+t n\+L\+B\+S\+P\+Threshold\+Offset=0)
+\begin{DoxyCompactList}\small\item\em full constructor \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a027bdf387b28e5532d78b5bf4e7c08eb}{$\sim$\+Background\+Subtractor\+L\+B\+SP}} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ac6b854f94414497b143375d4a0ae8b6f}{initialize}} (const cv\+::\+Mat \&o\+Init\+Img)
+\begin{DoxyCompactList}\small\item\em (re)initiaization method; needs to be called before starting background subtraction \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a3644bc10ec3beda6fad22c633fe0f8fb}{initialize}} (const cv\+::\+Mat \&o\+Init\+Img, const cv\+::\+Mat \&o\+R\+OI)=0
+\begin{DoxyCompactList}\small\item\em (re)initiaization method; needs to be called before starting background subtraction \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a4771cac59b7ac865d6ec25cbf049948e}{operator()}} (cv\+::\+Input\+Array image, cv\+::\+Output\+Array fgmask, double learning\+Rate=0)=0
+\begin{DoxyCompactList}\small\item\em primary model update function; the learning param is used to override the internal learning speed (ignored when $<$= 0) \end{DoxyCompactList}\item 
+virtual cv\+::\+Mat \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a9843f87f8adcd0e85274303f9210b883}{get\+R\+O\+I\+Copy}} () const
+\begin{DoxyCompactList}\small\item\em unused, always returns nullptr \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a34dc38d3d925d46d289c750786f232dc}{set\+R\+OI}} (cv\+::\+Mat \&o\+R\+OI)
+\begin{DoxyCompactList}\small\item\em sets the R\+OI to be used for descriptor extraction (note\+: this function will reinit the model and return the usable R\+OI) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a31b8474f8b4ffa6ef08ec682cfcef9b0}{set\+Automatic\+Model\+Reset}} (bool)
+\begin{DoxyCompactList}\small\item\em turns automatic model reset on or off \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a49771cd7b2c8354cde3da6e593d3febe}{n\+Debug\+CoordX}}
+\item 
+int \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a8e1451fd90eb4459aa84ea5e7133268a}{n\+Debug\+CoordY}}
+\item 
+std\+::string \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ada55b4a5eec8c82d0e05b0f9f1600ecb}{s\+Debug\+Name}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a53fe98bd2489d95de5292467145901e9}{m\+\_\+o\+R\+OI}}
+\begin{DoxyCompactList}\small\item\em background model R\+OI used for \mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} descriptor extraction (specific to the input image size) \end{DoxyCompactList}\item 
+cv\+::\+Size \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a732d5e6ae35fb0e858cadb3af5ce08a2}{m\+\_\+o\+Img\+Size}}
+\begin{DoxyCompactList}\small\item\em input image size \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ab3467ebee2c5d1249061ccd704cc0584}{m\+\_\+n\+Img\+Channels}}
+\begin{DoxyCompactList}\small\item\em input image channel size \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a7d2f52ecd5ff56e42da86f97e0ad93b5}{m\+\_\+n\+Img\+Type}}
+\begin{DoxyCompactList}\small\item\em input image type \end{DoxyCompactList}\item 
+const size\+\_\+t \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a209eb6aaa34e8ad8e565e79f85404e24}{m\+\_\+n\+L\+B\+S\+P\+Threshold\+Offset}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} internal threshold offset value, used to reduce texture noise in dark regions. \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ad759c645b14e9b16bf3940cae862df32}{m\+\_\+f\+Rel\+L\+B\+S\+P\+Threshold}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} relative internal threshold (kept here since we don\textquotesingle{}t keep an \mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} object) \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a9d1e247267afbddb7032bdcabd67d931}{m\+\_\+n\+Tot\+Px\+Count}}
+\begin{DoxyCompactList}\small\item\em total number of pixels (depends on the input frame size) \& total number of relevant pixels \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ac3b54f4d2dfa3a576475214f26501d85}{m\+\_\+n\+Tot\+Relevant\+Px\+Count}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a8a2350cad84f19c68ef61b7aaf91c43f}{m\+\_\+n\+Frame\+Index}}
+\begin{DoxyCompactList}\small\item\em current frame index, frame count since last model reset \& model reset cooldown counters \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ab56bf775dfdf0579e834e45210c3a92a}{m\+\_\+n\+Frames\+Since\+Last\+Reset}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a5ea18d388afacf8285c46ba0f754e7ee}{m\+\_\+n\+Model\+Reset\+Cooldown}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_background_subtractor_l_b_s_p_aefe69d94f08b2c4ba73ad1d254ad9153}{m\+\_\+an\+L\+B\+S\+P\+Threshold\+\_\+8bit\+L\+UT}} \mbox{[}U\+C\+H\+A\+R\+\_\+\+M\+AX+1\mbox{]}
+\begin{DoxyCompactList}\small\item\em pre-\/allocated internal \mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} threshold values L\+UT for all possible 8-\/bit intensities \end{DoxyCompactList}\item 
+size\+\_\+t $\ast$ \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a06b4f0d3f24fa08bccd3c9eca085713e}{m\+\_\+a\+Px\+Idx\+L\+UT}}
+\begin{DoxyCompactList}\small\item\em internal pixel index L\+UT for all relevant analysis regions (based on the provided R\+OI) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_background_subtractor_l_b_s_p_1_1_px_info_base}{Px\+Info\+Base}} $\ast$ \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a74e73d4832ccdef652d93756582024db}{m\+\_\+a\+Px\+Info\+L\+UT}}
+\begin{DoxyCompactList}\small\item\em internal pixel info L\+UT for all possible pixel indexes \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a2585fe6e41e10af6da3e325dc20fe7f1}{m\+\_\+n\+Default\+Median\+Blur\+Kernel\+Size}}
+\begin{DoxyCompactList}\small\item\em default kernel size for median blur post-\/proc filtering \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a55cea104a0924fd50d5bed0912828a7e}{m\+\_\+b\+Initialized}}
+\begin{DoxyCompactList}\small\item\em specifies whether the algorithm is fully initialized or not \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a9d260f4e42e3fc79fb21af950ca9087a}{m\+\_\+b\+Auto\+Model\+Reset\+Enabled}}
+\begin{DoxyCompactList}\small\item\em specifies whether automatic model resets are enabled or not \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a5b1ec2694ae59661bb146ad0d4d49811}{m\+\_\+b\+Using\+Moving\+Camera}}
+\begin{DoxyCompactList}\small\item\em specifies whether the camera is considered moving or not \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ab1dc003792ab1d0b881a6fd10e0e29b3}{m\+\_\+o\+Last\+Color\+Frame}}
+\begin{DoxyCompactList}\small\item\em copy of latest pixel intensities (used when refreshing model) \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a9c637c0b87cac495887295690d83ba13}{m\+\_\+o\+Last\+Desc\+Frame}}
+\begin{DoxyCompactList}\small\item\em copy of latest descriptors (used when refreshing model) \end{DoxyCompactList}\item 
+cv\+::\+Mat \mbox{\hyperlink{class_background_subtractor_l_b_s_p_adb6dc0af596c5592c91f9d8faa5c8a4b}{m\+\_\+o\+Last\+F\+G\+Mask}}
+\begin{DoxyCompactList}\small\item\em the foreground mask generated by the method at \mbox{[}t-\/1\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Local Binary Similarity Pattern (\mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}})-\/based change detection algorithm (abstract version/base class).
+
+For more details on the different parameters, see P.-\/L. St-\/\+Charles and G.-\/A. Bilodeau, \char`\"{}\+Improving Background
+\+Subtraction using Local Binary Similarity Patterns\char`\"{}, in W\+A\+CV 2014, or G.-\/A. Bilodeau et al, \char`\"{}\+Change Detection
+in Feature Space Using Local Binary Similarity Patterns\char`\"{}, in C\+RV 2013.
+
+This algorithm is currently N\+OT thread-\/safe. 
+
+Definition at line 15 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a5f7f42ea5c9697479cbe237b49ca6ae9}\label{class_background_subtractor_l_b_s_p_a5f7f42ea5c9697479cbe237b49ca6ae9}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{Background\+Subtractor\+L\+B\+S\+P()}{BackgroundSubtractorLBSP()}}
+{\footnotesize\ttfamily Background\+Subtractor\+L\+B\+S\+P\+::\+Background\+Subtractor\+L\+B\+SP (\begin{DoxyParamCaption}\item[{float}]{f\+Rel\+L\+B\+S\+P\+Threshold,  }\item[{size\+\_\+t}]{n\+L\+B\+S\+P\+Threshold\+Offset = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+full constructor 
+
+
+
+Definition at line 11 of file Background\+Subtractor\+L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+12     :    \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ab3467ebee2c5d1249061ccd704cc0584}{m\_nImgChannels}}(0)
+13         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a7d2f52ecd5ff56e42da86f97e0ad93b5}{m\_nImgType}}(0)
+14         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a209eb6aaa34e8ad8e565e79f85404e24}{m\_nLBSPThresholdOffset}}(nLBSPThresholdOffset)
+15         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_ad759c645b14e9b16bf3940cae862df32}{m\_fRelLBSPThreshold}}(fRelLBSPThreshold)
+16         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a9d1e247267afbddb7032bdcabd67d931}{m\_nTotPxCount}}(0)
+17         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_ac3b54f4d2dfa3a576475214f26501d85}{m\_nTotRelevantPxCount}}(0)
+18         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a8a2350cad84f19c68ef61b7aaf91c43f}{m\_nFrameIndex}}(SIZE\_MAX)
+19         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_ab56bf775dfdf0579e834e45210c3a92a}{m\_nFramesSinceLastReset}}(0)
+20         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a5ea18d388afacf8285c46ba0f754e7ee}{m\_nModelResetCooldown}}(0)
+21         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a06b4f0d3f24fa08bccd3c9eca085713e}{m\_aPxIdxLUT}}(\textcolor{keyword}{nullptr})
+22         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a74e73d4832ccdef652d93756582024db}{m\_aPxInfoLUT}}(\textcolor{keyword}{nullptr})
+23         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a2585fe6e41e10af6da3e325dc20fe7f1}{m\_nDefaultMedianBlurKernelSize}}(
+      \mbox{\hyperlink{_background_subtractor_l_b_s_p_8cpp_a65c2052e888a5df64135f3dea480a74a}{DEFAULT\_MEDIAN\_BLUR\_KERNEL\_SIZE}})
+24         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a55cea104a0924fd50d5bed0912828a7e}{m\_bInitialized}}(\textcolor{keyword}{false})
+25         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a9d260f4e42e3fc79fb21af950ca9087a}{m\_bAutoModelResetEnabled}}(\textcolor{keyword}{true})
+26         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a5b1ec2694ae59661bb146ad0d4d49811}{m\_bUsingMovingCamera}}(\textcolor{keyword}{false})
+27         ,\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a49771cd7b2c8354cde3da6e593d3febe}{nDebugCoordX}}(0),\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a8e1451fd90eb4459aa84ea5e7133268a}{nDebugCoordY}}(0) \{
+28     CV\_Assert(\mbox{\hyperlink{class_background_subtractor_l_b_s_p_ad759c645b14e9b16bf3940cae862df32}{m\_fRelLBSPThreshold}}>=0);
+29 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a027bdf387b28e5532d78b5bf4e7c08eb}\label{class_background_subtractor_l_b_s_p_a027bdf387b28e5532d78b5bf4e7c08eb}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!````~Background\+Subtractor\+L\+B\+SP@{$\sim$\+Background\+Subtractor\+L\+B\+SP}}
+\index{````~Background\+Subtractor\+L\+B\+SP@{$\sim$\+Background\+Subtractor\+L\+B\+SP}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{$\sim$\+Background\+Subtractor\+L\+B\+S\+P()}{~BackgroundSubtractorLBSP()}}
+{\footnotesize\ttfamily Background\+Subtractor\+L\+B\+S\+P\+::$\sim$\+Background\+Subtractor\+L\+B\+SP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+default destructor 
+
+
+
+Definition at line 31 of file Background\+Subtractor\+L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+31 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a9843f87f8adcd0e85274303f9210b883}\label{class_background_subtractor_l_b_s_p_a9843f87f8adcd0e85274303f9210b883}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!get\+R\+O\+I\+Copy@{get\+R\+O\+I\+Copy}}
+\index{get\+R\+O\+I\+Copy@{get\+R\+O\+I\+Copy}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{get\+R\+O\+I\+Copy()}{getROICopy()}}
+{\footnotesize\ttfamily cv\+::\+Mat Background\+Subtractor\+L\+B\+S\+P\+::get\+R\+O\+I\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+unused, always returns nullptr 
+
+returns a copy of the R\+OI used for descriptor extraction 
+
+Definition at line 41 of file Background\+Subtractor\+L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+41                                                  \{
+42     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a53fe98bd2489d95de5292467145901e9}{m\_oROI}}.clone();
+43 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_ac6b854f94414497b143375d4a0ae8b6f}\label{class_background_subtractor_l_b_s_p_ac6b854f94414497b143375d4a0ae8b6f}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!initialize@{initialize}}
+\index{initialize@{initialize}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Background\+Subtractor\+L\+B\+S\+P\+::initialize (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{o\+Init\+Img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+(re)initiaization method; needs to be called before starting background subtraction 
+
+
+
+Definition at line 33 of file Background\+Subtractor\+L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+33                                                                \{
+34     this->\mbox{\hyperlink{class_background_subtractor_l_b_s_p_ac6b854f94414497b143375d4a0ae8b6f}{initialize}}(oInitImg,cv::Mat());
+35 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_background_subtractor_l_b_s_p_ac6b854f94414497b143375d4a0ae8b6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a3644bc10ec3beda6fad22c633fe0f8fb}\label{class_background_subtractor_l_b_s_p_a3644bc10ec3beda6fad22c633fe0f8fb}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!initialize@{initialize}}
+\index{initialize@{initialize}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Background\+Subtractor\+L\+B\+S\+P\+::initialize (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{o\+Init\+Img,  }\item[{const cv\+::\+Mat \&}]{o\+R\+OI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+(re)initiaization method; needs to be called before starting background subtraction 
+
+
+
+Implemented in \mbox{\hyperlink{class_background_subtractor_l_o_b_s_t_e_r_a452bea31dcbd2e10efc701cc2cd25776}{Background\+Subtractor\+L\+O\+B\+S\+T\+ER}}, and \mbox{\hyperlink{class_background_subtractor_su_b_s_e_n_s_e_ac84aa66030b04a72435ef473cf0e6a3f}{Background\+Subtractor\+Su\+B\+S\+E\+N\+SE}}.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a4771cac59b7ac865d6ec25cbf049948e}\label{class_background_subtractor_l_b_s_p_a4771cac59b7ac865d6ec25cbf049948e}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!operator()@{operator()}}
+\index{operator()@{operator()}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual void Background\+Subtractor\+L\+B\+S\+P\+::operator() (\begin{DoxyParamCaption}\item[{cv\+::\+Input\+Array}]{image,  }\item[{cv\+::\+Output\+Array}]{fgmask,  }\item[{double}]{learning\+Rate = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+primary model update function; the learning param is used to override the internal learning speed (ignored when $<$= 0) 
+
+
+
+Implemented in \mbox{\hyperlink{class_background_subtractor_l_o_b_s_t_e_r_a0c0faf2754a7a74a6ae56cea47207070}{Background\+Subtractor\+L\+O\+B\+S\+T\+ER}}, and \mbox{\hyperlink{class_background_subtractor_su_b_s_e_n_s_e_aaa60e2883c2b2cf130820b10104a653b}{Background\+Subtractor\+Su\+B\+S\+E\+N\+SE}}.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a31b8474f8b4ffa6ef08ec682cfcef9b0}\label{class_background_subtractor_l_b_s_p_a31b8474f8b4ffa6ef08ec682cfcef9b0}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!set\+Automatic\+Model\+Reset@{set\+Automatic\+Model\+Reset}}
+\index{set\+Automatic\+Model\+Reset@{set\+Automatic\+Model\+Reset}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{set\+Automatic\+Model\+Reset()}{setAutomaticModelReset()}}
+{\footnotesize\ttfamily void Background\+Subtractor\+L\+B\+S\+P\+::set\+Automatic\+Model\+Reset (\begin{DoxyParamCaption}\item[{bool}]{b\+Val }\end{DoxyParamCaption})}
+
+
+
+turns automatic model reset on or off 
+
+
+
+Definition at line 57 of file Background\+Subtractor\+L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+57                                                                \{
+58     \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a9d260f4e42e3fc79fb21af950ca9087a}{m\_bAutoModelResetEnabled}} = bVal;
+59 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a34dc38d3d925d46d289c750786f232dc}\label{class_background_subtractor_l_b_s_p_a34dc38d3d925d46d289c750786f232dc}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!set\+R\+OI@{set\+R\+OI}}
+\index{set\+R\+OI@{set\+R\+OI}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{set\+R\+O\+I()}{setROI()}}
+{\footnotesize\ttfamily void Background\+Subtractor\+L\+B\+S\+P\+::set\+R\+OI (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{o\+R\+OI }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+sets the R\+OI to be used for descriptor extraction (note\+: this function will reinit the model and return the usable R\+OI) 
+
+
+
+Definition at line 45 of file Background\+Subtractor\+L\+B\+S\+P.\+cpp.
+
+
+\begin{DoxyCode}
+45                                                  \{
+46     \mbox{\hyperlink{class_l_b_s_p_ad97557be4bc6cfd7b0fa4b01ab8f8c55}{LBSP::validateROI}}(oROI);
+47     CV\_Assert(cv::countNonZero(oROI)>0);
+48     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_background_subtractor_l_b_s_p_a55cea104a0924fd50d5bed0912828a7e}{m\_bInitialized}}) \{
+49         cv::Mat oLatestBackgroundImage;
+50         getBackgroundImage(oLatestBackgroundImage);
+51         \mbox{\hyperlink{class_background_subtractor_l_b_s_p_ac6b854f94414497b143375d4a0ae8b6f}{initialize}}(oLatestBackgroundImage,oROI);
+52     \}
+53     \textcolor{keywordflow}{else}
+54         \mbox{\hyperlink{class_background_subtractor_l_b_s_p_a53fe98bd2489d95de5292467145901e9}{m\_oROI}} = oROI.clone();
+55 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_background_subtractor_l_b_s_p_a34dc38d3d925d46d289c750786f232dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_aefe69d94f08b2c4ba73ad1d254ad9153}\label{class_background_subtractor_l_b_s_p_aefe69d94f08b2c4ba73ad1d254ad9153}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+an\+L\+B\+S\+P\+Threshold\+\_\+8bit\+L\+UT@{m\+\_\+an\+L\+B\+S\+P\+Threshold\+\_\+8bit\+L\+UT}}
+\index{m\+\_\+an\+L\+B\+S\+P\+Threshold\+\_\+8bit\+L\+UT@{m\+\_\+an\+L\+B\+S\+P\+Threshold\+\_\+8bit\+L\+UT}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+an\+L\+B\+S\+P\+Threshold\+\_\+8bit\+L\+UT}{m\_anLBSPThreshold\_8bitLUT}}
+{\footnotesize\ttfamily size\+\_\+t Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+an\+L\+B\+S\+P\+Threshold\+\_\+8bit\+L\+UT\mbox{[}U\+C\+H\+A\+R\+\_\+\+M\+AX+1\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+pre-\/allocated internal \mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} threshold values L\+UT for all possible 8-\/bit intensities 
+
+
+
+Definition at line 59 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a06b4f0d3f24fa08bccd3c9eca085713e}\label{class_background_subtractor_l_b_s_p_a06b4f0d3f24fa08bccd3c9eca085713e}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+a\+Px\+Idx\+L\+UT@{m\+\_\+a\+Px\+Idx\+L\+UT}}
+\index{m\+\_\+a\+Px\+Idx\+L\+UT@{m\+\_\+a\+Px\+Idx\+L\+UT}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+a\+Px\+Idx\+L\+UT}{m\_aPxIdxLUT}}
+{\footnotesize\ttfamily size\+\_\+t$\ast$ Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+a\+Px\+Idx\+L\+UT\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+internal pixel index L\+UT for all relevant analysis regions (based on the provided R\+OI) 
+
+
+
+Definition at line 61 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a74e73d4832ccdef652d93756582024db}\label{class_background_subtractor_l_b_s_p_a74e73d4832ccdef652d93756582024db}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+a\+Px\+Info\+L\+UT@{m\+\_\+a\+Px\+Info\+L\+UT}}
+\index{m\+\_\+a\+Px\+Info\+L\+UT@{m\+\_\+a\+Px\+Info\+L\+UT}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+a\+Px\+Info\+L\+UT}{m\_aPxInfoLUT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_background_subtractor_l_b_s_p_1_1_px_info_base}{Px\+Info\+Base}}$\ast$ Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+a\+Px\+Info\+L\+UT\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+internal pixel info L\+UT for all possible pixel indexes 
+
+
+
+Definition at line 63 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a9d260f4e42e3fc79fb21af950ca9087a}\label{class_background_subtractor_l_b_s_p_a9d260f4e42e3fc79fb21af950ca9087a}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+b\+Auto\+Model\+Reset\+Enabled@{m\+\_\+b\+Auto\+Model\+Reset\+Enabled}}
+\index{m\+\_\+b\+Auto\+Model\+Reset\+Enabled@{m\+\_\+b\+Auto\+Model\+Reset\+Enabled}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+b\+Auto\+Model\+Reset\+Enabled}{m\_bAutoModelResetEnabled}}
+{\footnotesize\ttfamily bool Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+b\+Auto\+Model\+Reset\+Enabled\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+specifies whether automatic model resets are enabled or not 
+
+
+
+Definition at line 69 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a55cea104a0924fd50d5bed0912828a7e}\label{class_background_subtractor_l_b_s_p_a55cea104a0924fd50d5bed0912828a7e}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+b\+Initialized@{m\+\_\+b\+Initialized}}
+\index{m\+\_\+b\+Initialized@{m\+\_\+b\+Initialized}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+b\+Initialized}{m\_bInitialized}}
+{\footnotesize\ttfamily bool Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+b\+Initialized\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+specifies whether the algorithm is fully initialized or not 
+
+
+
+Definition at line 67 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a5b1ec2694ae59661bb146ad0d4d49811}\label{class_background_subtractor_l_b_s_p_a5b1ec2694ae59661bb146ad0d4d49811}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+b\+Using\+Moving\+Camera@{m\+\_\+b\+Using\+Moving\+Camera}}
+\index{m\+\_\+b\+Using\+Moving\+Camera@{m\+\_\+b\+Using\+Moving\+Camera}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+b\+Using\+Moving\+Camera}{m\_bUsingMovingCamera}}
+{\footnotesize\ttfamily bool Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+b\+Using\+Moving\+Camera\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+specifies whether the camera is considered moving or not 
+
+
+
+Definition at line 71 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_ad759c645b14e9b16bf3940cae862df32}\label{class_background_subtractor_l_b_s_p_ad759c645b14e9b16bf3940cae862df32}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+f\+Rel\+L\+B\+S\+P\+Threshold@{m\+\_\+f\+Rel\+L\+B\+S\+P\+Threshold}}
+\index{m\+\_\+f\+Rel\+L\+B\+S\+P\+Threshold@{m\+\_\+f\+Rel\+L\+B\+S\+P\+Threshold}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+f\+Rel\+L\+B\+S\+P\+Threshold}{m\_fRelLBSPThreshold}}
+{\footnotesize\ttfamily const float Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+f\+Rel\+L\+B\+S\+P\+Threshold\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} relative internal threshold (kept here since we don\textquotesingle{}t keep an \mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} object) 
+
+
+
+Definition at line 53 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a2585fe6e41e10af6da3e325dc20fe7f1}\label{class_background_subtractor_l_b_s_p_a2585fe6e41e10af6da3e325dc20fe7f1}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+Default\+Median\+Blur\+Kernel\+Size@{m\+\_\+n\+Default\+Median\+Blur\+Kernel\+Size}}
+\index{m\+\_\+n\+Default\+Median\+Blur\+Kernel\+Size@{m\+\_\+n\+Default\+Median\+Blur\+Kernel\+Size}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Default\+Median\+Blur\+Kernel\+Size}{m\_nDefaultMedianBlurKernelSize}}
+{\footnotesize\ttfamily const int Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+Default\+Median\+Blur\+Kernel\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+default kernel size for median blur post-\/proc filtering 
+
+
+
+Definition at line 65 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a8a2350cad84f19c68ef61b7aaf91c43f}\label{class_background_subtractor_l_b_s_p_a8a2350cad84f19c68ef61b7aaf91c43f}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+Frame\+Index@{m\+\_\+n\+Frame\+Index}}
+\index{m\+\_\+n\+Frame\+Index@{m\+\_\+n\+Frame\+Index}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Frame\+Index}{m\_nFrameIndex}}
+{\footnotesize\ttfamily size\+\_\+t Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+Frame\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+current frame index, frame count since last model reset \& model reset cooldown counters 
+
+
+
+Definition at line 57 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_ab56bf775dfdf0579e834e45210c3a92a}\label{class_background_subtractor_l_b_s_p_ab56bf775dfdf0579e834e45210c3a92a}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+Frames\+Since\+Last\+Reset@{m\+\_\+n\+Frames\+Since\+Last\+Reset}}
+\index{m\+\_\+n\+Frames\+Since\+Last\+Reset@{m\+\_\+n\+Frames\+Since\+Last\+Reset}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Frames\+Since\+Last\+Reset}{m\_nFramesSinceLastReset}}
+{\footnotesize\ttfamily size\+\_\+t Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+Frames\+Since\+Last\+Reset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_ab3467ebee2c5d1249061ccd704cc0584}\label{class_background_subtractor_l_b_s_p_ab3467ebee2c5d1249061ccd704cc0584}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+Img\+Channels@{m\+\_\+n\+Img\+Channels}}
+\index{m\+\_\+n\+Img\+Channels@{m\+\_\+n\+Img\+Channels}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Img\+Channels}{m\_nImgChannels}}
+{\footnotesize\ttfamily size\+\_\+t Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+Img\+Channels\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+input image channel size 
+
+
+
+Definition at line 47 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a7d2f52ecd5ff56e42da86f97e0ad93b5}\label{class_background_subtractor_l_b_s_p_a7d2f52ecd5ff56e42da86f97e0ad93b5}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+Img\+Type@{m\+\_\+n\+Img\+Type}}
+\index{m\+\_\+n\+Img\+Type@{m\+\_\+n\+Img\+Type}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Img\+Type}{m\_nImgType}}
+{\footnotesize\ttfamily int Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+Img\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+input image type 
+
+
+
+Definition at line 49 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a209eb6aaa34e8ad8e565e79f85404e24}\label{class_background_subtractor_l_b_s_p_a209eb6aaa34e8ad8e565e79f85404e24}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+L\+B\+S\+P\+Threshold\+Offset@{m\+\_\+n\+L\+B\+S\+P\+Threshold\+Offset}}
+\index{m\+\_\+n\+L\+B\+S\+P\+Threshold\+Offset@{m\+\_\+n\+L\+B\+S\+P\+Threshold\+Offset}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+L\+B\+S\+P\+Threshold\+Offset}{m\_nLBSPThresholdOffset}}
+{\footnotesize\ttfamily const size\+\_\+t Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+L\+B\+S\+P\+Threshold\+Offset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} internal threshold offset value, used to reduce texture noise in dark regions. 
+
+
+
+Definition at line 51 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a5ea18d388afacf8285c46ba0f754e7ee}\label{class_background_subtractor_l_b_s_p_a5ea18d388afacf8285c46ba0f754e7ee}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+Model\+Reset\+Cooldown@{m\+\_\+n\+Model\+Reset\+Cooldown}}
+\index{m\+\_\+n\+Model\+Reset\+Cooldown@{m\+\_\+n\+Model\+Reset\+Cooldown}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Model\+Reset\+Cooldown}{m\_nModelResetCooldown}}
+{\footnotesize\ttfamily size\+\_\+t Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+Model\+Reset\+Cooldown\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a9d1e247267afbddb7032bdcabd67d931}\label{class_background_subtractor_l_b_s_p_a9d1e247267afbddb7032bdcabd67d931}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+Tot\+Px\+Count@{m\+\_\+n\+Tot\+Px\+Count}}
+\index{m\+\_\+n\+Tot\+Px\+Count@{m\+\_\+n\+Tot\+Px\+Count}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Tot\+Px\+Count}{m\_nTotPxCount}}
+{\footnotesize\ttfamily size\+\_\+t Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+Tot\+Px\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+total number of pixels (depends on the input frame size) \& total number of relevant pixels 
+
+
+
+Definition at line 55 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_ac3b54f4d2dfa3a576475214f26501d85}\label{class_background_subtractor_l_b_s_p_ac3b54f4d2dfa3a576475214f26501d85}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+n\+Tot\+Relevant\+Px\+Count@{m\+\_\+n\+Tot\+Relevant\+Px\+Count}}
+\index{m\+\_\+n\+Tot\+Relevant\+Px\+Count@{m\+\_\+n\+Tot\+Relevant\+Px\+Count}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+n\+Tot\+Relevant\+Px\+Count}{m\_nTotRelevantPxCount}}
+{\footnotesize\ttfamily size\+\_\+t Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+n\+Tot\+Relevant\+Px\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 55 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a732d5e6ae35fb0e858cadb3af5ce08a2}\label{class_background_subtractor_l_b_s_p_a732d5e6ae35fb0e858cadb3af5ce08a2}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+o\+Img\+Size@{m\+\_\+o\+Img\+Size}}
+\index{m\+\_\+o\+Img\+Size@{m\+\_\+o\+Img\+Size}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+o\+Img\+Size}{m\_oImgSize}}
+{\footnotesize\ttfamily cv\+::\+Size Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+o\+Img\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+input image size 
+
+
+
+Definition at line 45 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_ab1dc003792ab1d0b881a6fd10e0e29b3}\label{class_background_subtractor_l_b_s_p_ab1dc003792ab1d0b881a6fd10e0e29b3}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+o\+Last\+Color\+Frame@{m\+\_\+o\+Last\+Color\+Frame}}
+\index{m\+\_\+o\+Last\+Color\+Frame@{m\+\_\+o\+Last\+Color\+Frame}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+o\+Last\+Color\+Frame}{m\_oLastColorFrame}}
+{\footnotesize\ttfamily cv\+::\+Mat Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+o\+Last\+Color\+Frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+copy of latest pixel intensities (used when refreshing model) 
+
+
+
+Definition at line 73 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a9c637c0b87cac495887295690d83ba13}\label{class_background_subtractor_l_b_s_p_a9c637c0b87cac495887295690d83ba13}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+o\+Last\+Desc\+Frame@{m\+\_\+o\+Last\+Desc\+Frame}}
+\index{m\+\_\+o\+Last\+Desc\+Frame@{m\+\_\+o\+Last\+Desc\+Frame}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+o\+Last\+Desc\+Frame}{m\_oLastDescFrame}}
+{\footnotesize\ttfamily cv\+::\+Mat Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+o\+Last\+Desc\+Frame\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+copy of latest descriptors (used when refreshing model) 
+
+
+
+Definition at line 75 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_adb6dc0af596c5592c91f9d8faa5c8a4b}\label{class_background_subtractor_l_b_s_p_adb6dc0af596c5592c91f9d8faa5c8a4b}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+o\+Last\+F\+G\+Mask@{m\+\_\+o\+Last\+F\+G\+Mask}}
+\index{m\+\_\+o\+Last\+F\+G\+Mask@{m\+\_\+o\+Last\+F\+G\+Mask}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+o\+Last\+F\+G\+Mask}{m\_oLastFGMask}}
+{\footnotesize\ttfamily cv\+::\+Mat Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+o\+Last\+F\+G\+Mask\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the foreground mask generated by the method at \mbox{[}t-\/1\mbox{]} 
+
+
+
+Definition at line 77 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a53fe98bd2489d95de5292467145901e9}\label{class_background_subtractor_l_b_s_p_a53fe98bd2489d95de5292467145901e9}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!m\+\_\+o\+R\+OI@{m\+\_\+o\+R\+OI}}
+\index{m\+\_\+o\+R\+OI@{m\+\_\+o\+R\+OI}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{m\+\_\+o\+R\+OI}{m\_oROI}}
+{\footnotesize\ttfamily cv\+::\+Mat Background\+Subtractor\+L\+B\+S\+P\+::m\+\_\+o\+R\+OI\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+background model R\+OI used for \mbox{\hyperlink{class_l_b_s_p}{L\+B\+SP}} descriptor extraction (specific to the input image size) 
+
+
+
+Definition at line 43 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a49771cd7b2c8354cde3da6e593d3febe}\label{class_background_subtractor_l_b_s_p_a49771cd7b2c8354cde3da6e593d3febe}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!n\+Debug\+CoordX@{n\+Debug\+CoordX}}
+\index{n\+Debug\+CoordX@{n\+Debug\+CoordX}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{n\+Debug\+CoordX}{nDebugCoordX}}
+{\footnotesize\ttfamily int Background\+Subtractor\+L\+B\+S\+P\+::n\+Debug\+CoordX}
+
+
+
+Definition at line 81 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_a8e1451fd90eb4459aa84ea5e7133268a}\label{class_background_subtractor_l_b_s_p_a8e1451fd90eb4459aa84ea5e7133268a}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!n\+Debug\+CoordY@{n\+Debug\+CoordY}}
+\index{n\+Debug\+CoordY@{n\+Debug\+CoordY}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{n\+Debug\+CoordY}{nDebugCoordY}}
+{\footnotesize\ttfamily int Background\+Subtractor\+L\+B\+S\+P\+::n\+Debug\+CoordY}
+
+
+
+Definition at line 81 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+\mbox{\Hypertarget{class_background_subtractor_l_b_s_p_ada55b4a5eec8c82d0e05b0f9f1600ecb}\label{class_background_subtractor_l_b_s_p_ada55b4a5eec8c82d0e05b0f9f1600ecb}} 
+\index{Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}!s\+Debug\+Name@{s\+Debug\+Name}}
+\index{s\+Debug\+Name@{s\+Debug\+Name}!Background\+Subtractor\+L\+B\+SP@{Background\+Subtractor\+L\+B\+SP}}
+\subsubsection{\texorpdfstring{s\+Debug\+Name}{sDebugName}}
+{\footnotesize\ttfamily std\+::string Background\+Subtractor\+L\+B\+S\+P\+::s\+Debug\+Name}
+
+
+
+Definition at line 82 of file Background\+Subtractor\+L\+B\+S\+P.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Subsense/\mbox{\hyperlink{_background_subtractor_l_b_s_p_8h}{Background\+Subtractor\+L\+B\+S\+P.\+h}}\item 
+D\+:/\+Roy/\+Git\+Hub/\+Multitarget-\/tracker/\+Detector/\+Subsense/\mbox{\hyperlink{_background_subtractor_l_b_s_p_8cpp}{Background\+Subtractor\+L\+B\+S\+P.\+cpp}}\end{DoxyCompactItemize}
