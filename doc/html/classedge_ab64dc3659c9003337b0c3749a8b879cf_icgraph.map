@@ -1,5 +1,0 @@
-<map id="edge::opposite" name="edge::opposite">
-<area shape="rect" id="node2" href="$classbellman__ford.html#a403e286ec8cbe3c30a7a729c5041155e" title="predecessor of node n on the shortest path from source " alt="" coords="160,5,369,32"/>
-<area shape="rect" id="node3" href="$classbid__dijkstra.html#a279264a4cee9a4a8ad45ec957245e90a" title="bid_dijkstra::fill\l_node_edge_lists" alt="" coords="203,57,326,98"/>
-<area shape="rect" id="node4" href="$classbid__dijkstra.html#a1d2f36d3977ef90285442a269a03b919" title="Runs shortest path algorithm on G. " alt="" coords="417,64,532,91"/>
-</map>

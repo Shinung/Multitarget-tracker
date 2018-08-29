@@ -1,4 +1,0 @@
-<map id="bid_dijkstra::reset_algorithm" name="bid_dijkstra::reset_algorithm">
-<area shape="rect" id="node2" href="$classbid__dijkstra.html#a1f9ddd95b88b24f45afe0966c2ae181b" title="Default constructor. " alt="" coords="179,5,341,32"/>
-<area shape="rect" id="node3" href="$classbid__dijkstra.html#a6df2769941bc73fc5626b084745a2258" title="Resets Dijkstra&#39;s bidirectional algorithm. " alt="" coords="197,56,323,83"/>
-</map>

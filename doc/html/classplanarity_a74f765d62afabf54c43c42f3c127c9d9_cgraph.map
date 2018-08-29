@@ -1,6 +1,0 @@
-<map id="planarity::case_C" name="planarity::case_C">
-<area shape="rect" id="node2" href="$classplanarity.html#a86f10c5faa107a5a672028e0c34b4a08" title="planarity::up_until\l_marked" alt="" coords="183,5,307,47"/>
-<area shape="rect" id="node3" href="$classnode.html#a13dbd1809a33a5efede64a359e53a363" title="node::opposite" alt="" coords="361,42,468,69"/>
-<area shape="rect" id="node4" href="$classst__number.html#aa607c9aaa5a4d9c45e5854ce672f0fda" title="Sets node s for next run. " alt="" coords="178,122,311,149"/>
-<area shape="rect" id="node5" href="$classst__number.html#a1564af6f603160105643f22bf2f6955b" title="Sets edge st for the next run. " alt="" coords="176,173,313,199"/>
-</map>

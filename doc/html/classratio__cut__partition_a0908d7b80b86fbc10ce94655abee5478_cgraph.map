@@ -1,8 +1,0 @@
-<map id="ratio_cut_partition::restore" name="ratio_cut_partition::restore">
-<area shape="rect" id="node2" href="$classgraph.html#ad9356508c49c542dfd4b7169297387c6" title="graph::del_edge" alt="" coords="179,122,293,149"/>
-<area shape="rect" id="node3" href="$classgraph.html#a2cd0986dc5bcbfdbf0635c39e610784b" title="graph::pre_del_edge\l_handler" alt="" coords="345,5,484,47"/>
-<area shape="rect" id="node4" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="366,71,463,98"/>
-<area shape="rect" id="node5" href="$classedge.html#a97563b611261478ee19c6ce055f1a3ee" title="edge::target" alt="" coords="369,122,460,149"/>
-<area shape="rect" id="node6" href="$classedge.html#abcd4eeaf23327d026beac9ee1d0fa7e9" title="edge::remove_from" alt="" coords="349,173,480,199"/>
-<area shape="rect" id="node7" href="$classgraph.html#ab9ac8bcc7288986de69cd467beb33600" title="graph::post_del_edge\l_handler" alt="" coords="341,224,488,265"/>
-</map>

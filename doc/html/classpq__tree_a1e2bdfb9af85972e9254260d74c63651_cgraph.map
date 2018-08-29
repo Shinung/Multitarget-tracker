@@ -1,9 +1,0 @@
-<map id="pq_tree::reset" name="pq_tree::reset">
-<area shape="rect" id="node2" href="$class_g_t_l__debug.html#aca4c2fb24203b5fba5e4ffa9c2fa263f" title="GTL_debug::debug_message" alt="" coords="156,5,347,32"/>
-<area shape="rect" id="node4" href="$classpq__node.html#a13100e0b030cc047f382d9ddf6a44f4a" title="pq_node::clear" alt="" coords="198,56,305,83"/>
-<area shape="rect" id="node5" href="$classsymlist.html#afd4b55616fc20033d4a47684551866e8" title="First element in list. " alt="" coords="203,107,300,133"/>
-<area shape="rect" id="node6" href="$classsymlist.html#abc0570ff78ded9210ac26865519d36e3" title="Last element in list. " alt="" coords="201,157,301,184"/>
-<area shape="rect" id="node7" href="$classsymlist.html#a784f81bf9dfbfc1865f188a82681779f" title="symlist::detach_sublist" alt="" coords="173,208,329,235"/>
-<area shape="rect" id="node8" href="$classsymlist.html#aca11cd6c621376bc52a18828ef92e753" title="Checks whether list is empty. " alt="" coords="197,259,305,285"/>
-<area shape="rect" id="node3" href="$class_g_t_l__debug.html#a40282dee89c7cd8ea6bd02856e6cd73f" title="GTL_debug::os" alt="" coords="395,5,505,32"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="hdist" name="hdist">
-<area shape="rect" id="node2" href="$class_background_subtractor_l_o_b_s_t_e_r.html#a0c0faf2754a7a74a6ae56cea47207070" title="primary model update function; the learning param is reinterpreted as an integer and should be &gt; 0 (s..." alt="" coords="109,5,320,47"/>
-<area shape="rect" id="node3" href="$class_background_subtractor_su_b_s_e_n_s_e.html#aaa60e2883c2b2cf130820b10104a653b" title="primary model update function; the learning param is used to override the internal learning threshold..." alt="" coords="104,71,325,112"/>
-<area shape="rect" id="node4" href="$class_l_b_s_p.html#a5d390a2a6f3d94a4edadae3718daf884" title="utility function, used to illustrate the difference between two descriptor images ..." alt="" coords="136,137,293,163"/>
-</map>

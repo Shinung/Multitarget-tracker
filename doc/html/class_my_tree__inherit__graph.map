@@ -1,4 +1,0 @@
-<map id="MyTree" name="MyTree">
-<area shape="rect" id="node2" href="$class_my_graph.html" title="{MyGraph\n|# weight\l# edge_label\l# label\l# labels_as_weights\l# node_colour\l# edge_colour\l|+ MyGraph()\l+ get_edge_weight()\l+ set_edge_weight()\l+ get_edge_label()\l+ set_edge_label()\l+ edge_exists()\l+ delete_edge()\l+ read_labels_as_weights()\l+ load_edge_info_handler()\l+ store_edge_double()\land 18 more...\l}" alt="" coords="5,527,185,824"/>
-<area shape="rect" id="node3" href="$classgraph.html" title="A directed or undirected graph. " alt="" coords="21,5,170,479"/>
-</map>

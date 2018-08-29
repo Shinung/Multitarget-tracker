@@ -1,6 +1,0 @@
-<map id="st_number::rbegin" name="st_number::rbegin">
-<area shape="rect" id="node2" href="$classplanarity.html#a77eed115ba38b173357a3d8be8990f81" title="planarity::correct\l_embedding" alt="" coords="180,5,299,47"/>
-<area shape="rect" id="node3" href="$classplanarity.html#a0a1949c82648889d188b2e748bc461da" title="planarity::run_on_biconnected" alt="" coords="523,13,717,39"/>
-<area shape="rect" id="node5" href="$classplanarity.html#ab43c7267ba8b0895b8ef71b66c7863a0" title="planarity::examine\l_obstruction" alt="" coords="347,35,475,76"/>
-<area shape="rect" id="node4" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="765,13,863,39"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="graph::restore_node" name="graph::restore_node">
-<area shape="rect" id="node2" href="$classgraph.html#a3a305d240ab5237a2adae315b50105a6" title="graph::pre_restore\l_node_handler" alt="" coords="195,5,321,47"/>
-<area shape="rect" id="node3" href="$classnode.html#af948e15fd00a31e67928c9061acda582" title="node::is_hidden" alt="" coords="201,71,315,98"/>
-<area shape="rect" id="node4" href="$classgraph.html#a2d555506de6aa30bb981f0b60375762d" title="graph::post_restore\l_node_handler" alt="" coords="191,123,325,164"/>
-</map>

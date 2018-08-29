@@ -1,4 +1,0 @@
-<map id="LBSP::computeRGBDescriptor" name="LBSP::computeRGBDescriptor">
-<area shape="rect" id="node2" href="$class_background_subtractor_l_o_b_s_t_e_r.html#a0c0faf2754a7a74a6ae56cea47207070" title="primary model update function; the learning param is reinterpreted as an integer and should be &gt; 0 (s..." alt="" coords="260,5,471,47"/>
-<area shape="rect" id="node3" href="$class_background_subtractor_su_b_s_e_n_s_e.html#aaa60e2883c2b2cf130820b10104a653b" title="primary model update function; the learning param is used to override the internal learning threshold..." alt="" coords="255,71,476,112"/>
-</map>

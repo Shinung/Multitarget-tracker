@@ -1,9 +1,0 @@
-<map id="planarity::attachment_cycle" name="planarity::attachment_cycle">
-<area shape="rect" id="node2" href="$classplanar__embedding.html#a151a1e7cf6cfbbd0a09c467ec8bc61d1" title="planar_embedding::adjacency" alt="" coords="201,5,395,32"/>
-<area shape="rect" id="node3" href="$classsymlist.html#afd4b55616fc20033d4a47684551866e8" title="First element in list. " alt="" coords="249,56,347,83"/>
-<area shape="rect" id="node4" href="$classnode.html#a13dbd1809a33a5efede64a359e53a363" title="node::opposite" alt="" coords="245,107,351,133"/>
-<area shape="rect" id="node5" href="$classplanar__embedding.html#a4498733be831e1468044db038452efa4" title="planar_embedding::cyclic_next" alt="" coords="197,157,399,184"/>
-<area shape="rect" id="node6" href="$classplanar__embedding.html#aaba1216e3c7497267573cc56b4368929" title="planar_embedding::pos" alt="" coords="447,157,603,184"/>
-<area shape="rect" id="node7" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="651,132,748,159"/>
-<area shape="rect" id="node8" href="$classedge.html#a97563b611261478ee19c6ce055f1a3ee" title="edge::target" alt="" coords="654,183,745,209"/>
-</map>

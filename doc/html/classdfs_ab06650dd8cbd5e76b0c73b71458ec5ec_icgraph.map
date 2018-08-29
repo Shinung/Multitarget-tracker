@@ -1,5 +1,0 @@
-<map id="dfs::begin" name="dfs::begin">
-<area shape="rect" id="node2" href="$classbiconnectivity.html#ac0b7253533edc3f1412f771cb35bf04a" title="Start iteration over all biconnected components (if enabled during last call to run). " alt="" coords="132,5,311,47"/>
-<area shape="rect" id="node4" href="$classbiconnectivity.html#a4393dd1e626887472f6967722349abc6" title="Resets algorithm. " alt="" coords="153,71,290,98"/>
-<area shape="rect" id="node3" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="359,13,456,39"/>
-</map>

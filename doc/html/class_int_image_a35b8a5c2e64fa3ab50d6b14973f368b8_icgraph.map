@@ -1,6 +1,0 @@
-<map id="IntImage::Sobel" name="IntImage::Sobel">
-<area shape="rect" id="node2" href="$class_detection_scanner.html#af275e1362a1bc351f9a92323e0860d27" title="DetectionScanner::InitImage" alt="" coords="165,5,351,32"/>
-<area shape="rect" id="node5" href="$class_detection_scanner.html#a01790349ec7aef4ff03335d5e76f183a" title="DetectionScanner::Resize\lImage" alt="" coords="171,57,345,98"/>
-<area shape="rect" id="node3" href="$class_detection_scanner.html#aa27d494b253975922d853070aab7ce4d" title="DetectionScanner::FastScan" alt="" coords="399,35,588,61"/>
-<area shape="rect" id="node4" href="$class_pedestrian_detector.html#a27a7c2c3b358f6e44a7de71f808597c2" title="PedestrianDetector::Detect. " alt="" coords="636,27,769,69"/>
-</map>

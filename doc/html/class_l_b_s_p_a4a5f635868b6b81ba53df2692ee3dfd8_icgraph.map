@@ -1,6 +1,0 @@
-<map id="LBSP::computeGrayscaleDescriptor" name="LBSP::computeGrayscaleDescriptor">
-<area shape="rect" id="node2" href="$class_background_subtractor_l_o_b_s_t_e_r.html#a452bea31dcbd2e10efc701cc2cd25776" title="(re)initiaization method; needs to be called before starting background subtraction ..." alt="" coords="291,5,501,47"/>
-<area shape="rect" id="node3" href="$class_background_subtractor_l_o_b_s_t_e_r.html#a0c0faf2754a7a74a6ae56cea47207070" title="primary model update function; the learning param is reinterpreted as an integer and should be &gt; 0 (s..." alt="" coords="291,71,501,112"/>
-<area shape="rect" id="node4" href="$class_background_subtractor_su_b_s_e_n_s_e.html#ac84aa66030b04a72435ef473cf0e6a3f" title="(re)initiaization method; needs to be called before starting background subtraction ..." alt="" coords="285,136,507,177"/>
-<area shape="rect" id="node5" href="$class_background_subtractor_su_b_s_e_n_s_e.html#aaa60e2883c2b2cf130820b10104a653b" title="primary model update function; the learning param is used to override the internal learning threshold..." alt="" coords="285,201,507,243"/>
-</map>

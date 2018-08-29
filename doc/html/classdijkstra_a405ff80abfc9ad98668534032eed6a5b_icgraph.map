@@ -1,9 +1,0 @@
-<map id="dijkstra::reached" name="dijkstra::reached">
-<area shape="rect" id="node2" href="$classdijkstra.html#a99c17ee7c2b55574ea8c2952fac09faf" title="Predecessor node of node n on the shortest path from the source node. " alt="" coords="172,206,351,233"/>
-<area shape="rect" id="node3" href="$classdijkstra.html#a71ad317c485ce76d3d22399f1a8c83fe" title="dijkstra::fill_node_list" alt="" coords="399,54,541,81"/>
-<area shape="rect" id="node4" href="$classdijkstra.html#ae30c66319d925387ed858aab9ce419ae" title="Returns an iterator to the beginning (to the source node) of a shortest node path to node dest..." alt="" coords="589,5,724,47"/>
-<area shape="rect" id="node5" href="$classdijkstra.html#ae9846beeabd53a8cf0c0c1af328235b2" title="Returns an iterator one after the end (one after node dest) of a shortest node path to node dest..." alt="" coords="595,88,719,129"/>
-<area shape="rect" id="node6" href="$classdijkstra.html#ab2dfb6e0c2b9084fa17e2e6349e20ad9" title="dijkstra::fill_edge_list" alt="" coords="399,238,541,265"/>
-<area shape="rect" id="node7" href="$classdijkstra.html#ad7ef6f747b68f8951322b265844dbb8a" title="Returns an iterator to the beginning edge of a shortest edge path to node dest. " alt="" coords="589,163,724,204"/>
-<area shape="rect" id="node8" href="$classdijkstra.html#a031e6fef10aa40aad10edc1053ad9cf0" title="Returns an iterator one after the end of a shortest edge path to node dest. " alt="" coords="595,245,719,287"/>
-</map>

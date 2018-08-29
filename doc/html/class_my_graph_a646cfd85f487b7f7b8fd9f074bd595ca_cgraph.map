@@ -1,9 +1,0 @@
-<map id="MyGraph::save_dot" name="MyGraph::save_dot">
-<area shape="rect" id="node2" href="$rings_8cpp.html#a77369fc4d5326a16d2c603e032023528" title="f" alt="" coords="419,5,457,32"/>
-<area shape="rect" id="node3" href="$class_my_graph.html#acf68ca166eebb43a80b722c6ef15d22c" title="MyGraph::save_dot" alt="" coords="188,107,323,133"/>
-<area shape="rect" id="node4" href="$classgraph.html#aec053a4b509d1be804237a80044c54c0" title="graph::nodes_begin" alt="" coords="371,56,505,83"/>
-<area shape="rect" id="node5" href="$classgraph.html#abbf9c0cb5629e98e1142254911238173" title="graph::nodes_end" alt="" coords="375,107,501,133"/>
-<area shape="rect" id="node6" href="$classgraph.html#afc510be7479fa903fde9e0e615470ab0" title="graph::is_directed" alt="" coords="375,157,501,184"/>
-<area shape="rect" id="node7" href="$classgraph.html#a7ba35a4c4e8343ffb27ed6d9703c6f18" title="graph::edges_begin" alt="" coords="371,208,505,235"/>
-<area shape="rect" id="node8" href="$classgraph.html#aea8d7f976b85b6137f52d915e26639f6" title="graph::edges_end" alt="" coords="375,259,501,285"/>
-</map>

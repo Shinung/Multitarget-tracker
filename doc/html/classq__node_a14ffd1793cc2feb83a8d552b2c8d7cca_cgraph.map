@@ -1,6 +1,0 @@
-<map id="q_node::merge" name="q_node::merge">
-<area shape="rect" id="node2" href="$classsymlist.html#afd4b55616fc20033d4a47684551866e8" title="First element in list. " alt="" coords="166,5,263,32"/>
-<area shape="rect" id="node3" href="$classsymlist.html#abc0570ff78ded9210ac26865519d36e3" title="Last element in list. " alt="" coords="165,56,265,83"/>
-<area shape="rect" id="node4" href="$classsymlist.html#ac2bd4d9db62ea6a3282662c62a97c3b2" title="Inserts the element it points to before pos into this list. " alt="" coords="161,107,268,133"/>
-<area shape="rect" id="node5" href="$classsymlist.html#a75fc1fc7db7b20cc430ddb8577608904" title="Deletes element at position pos from list. " alt="" coords="163,157,267,184"/>
-</map>

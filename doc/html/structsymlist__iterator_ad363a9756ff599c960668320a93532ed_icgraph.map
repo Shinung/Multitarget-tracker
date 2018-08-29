@@ -1,5 +1,0 @@
-<map id="symlist_iterator::next" name="symlist_iterator::next">
-<area shape="rect" id="node2" href="$classsymlist.html#a8b3327b8a33b180bf1eb802856f755c3" title="Inserts data before pos in list. " alt="" coords="197,5,340,47"/>
-<area shape="rect" id="node3" href="$classsymlist.html#a526206a1d6fd2f2cef9f73ec499b6315" title="symlist\&lt; pq_node *\&gt;\l::attach_sublist" alt="" coords="197,71,340,112"/>
-<area shape="rect" id="node4" href="$classsymlist.html#a784f81bf9dfbfc1865f188a82681779f" title="symlist\&lt; pq_node *\&gt;\l::detach_sublist" alt="" coords="197,136,340,177"/>
-</map>

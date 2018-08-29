@@ -1,6 +1,0 @@
-<map id="biconnectivity::new_start_handler" name="biconnectivity::new_start_handler">
-<area shape="rect" id="node2" href="$classnode.html#a1e5e94e426da180a069cf307616e38e3" title="node::degree" alt="" coords="184,31,281,57"/>
-<area shape="rect" id="node5" href="$classdfs.html#af847633fa642258d3522e8deb26aef37" title="End&#45;Iterator for iteration through all (reached) nodes in DFS&#45;order. " alt="" coords="199,81,267,108"/>
-<area shape="rect" id="node3" href="$classnode.html#a32adc45c4132e2642ccd2233d79ffe67" title="node::outdeg" alt="" coords="329,5,427,32"/>
-<area shape="rect" id="node4" href="$classnode.html#a749bfd1316584b96f8c9b0e44ad512f0" title="node::indeg" alt="" coords="333,56,423,83"/>
-</map>

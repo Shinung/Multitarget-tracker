@@ -1,8 +1,0 @@
-<map id="DetectionScanner" name="DetectionScanner">
-<area shape="rect" id="node2" href="$class_int_image.html" title="{IntImage\&lt; int \&gt;\n|+ variance\l+ label\l|+ IntImage()\l+ ~IntImage()\l+ Clear()\l+ SetSize()\l+ Load()\l+ Save()\l+ Swap()\l+ CalcIntegralImageInPlace()\l+ Resize()\l+ Resize()\l+ operator=()\l+ Sobel()\l&#45; IntImage()\l}" alt="" coords="91,861,279,1129"/>
-<area shape="rect" id="node3" href="$class_array2d_c.html" title="{Array2dC\&lt; int \&gt;\n|+ nrow\l+ ncol\l+ p\l+ buf\l|+ Array2dC()\l+ Array2dC()\l+ Array2dC()\l+ ~Array2dC()\l+ operator=()\l+ Create()\l+ Swap()\l+ Zero()\l+ Clear()\l}" alt="" coords="53,307,168,545"/>
-<area shape="rect" id="node4" href="$class_cascade_detector.html" title="{CascadeDetector\n|+ size\l+ length\l|+ CascadeDetector()\l+ ~CascadeDetector()\l+ AddNode()\l}" alt="" coords="410,935,561,1056"/>
-<area shape="rect" id="node5" href="$class_node_detector.html" title="{NodeDetector\n|+ type\l+ thresh\l+ featurelength\l+ upper_bound\l+ index\l&#45; minvalue\l&#45; maxvalue\l|+ NodeDetector()\l+ ~NodeDetector()\l+ Load()\l+ Classify()\l+ SetValues()\l}" alt="" coords="417,314,546,538"/>
-<area shape="rect" id="node6" href="$class_array2d_c.html" title="{Array2dC\&lt; double \&gt;\n|+ nrow\l+ ncol\l+ p\l+ buf\l|+ Array2dC()\l+ Array2dC()\l+ Array2dC()\l+ ~Array2dC()\l+ operator=()\l+ Create()\l+ Swap()\l+ Zero()\l+ Clear()\l}" alt="" coords="268,5,407,244"/>
-<area shape="rect" id="node8" href="$class_int_image.html" title="{IntImage\&lt; double \&gt;\n|+ variance\l+ label\l|+ IntImage()\l+ ~IntImage()\l+ Clear()\l+ SetSize()\l+ Load()\l+ Save()\l+ Swap()\l+ CalcIntegralImageInPlace()\l+ Resize()\l+ Resize()\l+ operator=()\l+ Sobel()\l&#45; IntImage()\l}" alt="" coords="235,569,423,837"/>
-</map>

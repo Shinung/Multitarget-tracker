@@ -1,8 +1,0 @@
-<map id="SSDCustomNetDetector::Init" name="SSDCustomNetDetector::Init">
-<area shape="rect" id="node2" href="$rings_8cpp.html#a77369fc4d5326a16d2c603e032023528" title="f" alt="" coords="290,5,329,32"/>
-<area shape="rect" id="node3" href="$class_exec_context.html#ae0873cef48079986d31639654f915bd0" title="ExecContext::IsCompatible" alt="" coords="219,56,399,83"/>
-<area shape="rect" id="node4" href="$class_queue.html#ace62235edaffc6f375d040c32c0ab651" title="Queue::Push" alt="" coords="260,107,359,133"/>
-<area shape="rect" id="node5" href="$class_queue.html#a5e59f2b97d5dea8ad0314b6239816055" title="Queue::Size" alt="" coords="262,157,357,184"/>
-<area shape="rect" id="node6" href="$class_exec_context.html#a6c596880b2a6a4c8df7e8ca639f2a1b7" title="ExecContext::CaffeClassifier" alt="" coords="216,208,403,235"/>
-<area shape="rect" id="node7" href="$class_s_s_d.html#a20f17f5f9dbdc816f7b3ae4e30428427" title="SSD::GetInputGeometry" alt="" coords="228,259,391,285"/>
-</map>

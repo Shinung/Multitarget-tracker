@@ -1,5 +1,0 @@
-<map id="fm_partition::inital_gain_of_node_on_sideA" name="fm_partition::inital_gain_of_node_on_sideA">
-<area shape="rect" id="node2" href="$classnode.html#a12cb1a2167f5f03c054de5e707d3156f" title="node::adj_edges_iterator" alt="" coords="423,22,587,49"/>
-<area shape="rect" id="node3" href="$classnode.html#a788d3e932a5c164caa5ec82aa47551b2" title="node::adj_edges_begin" alt="" coords="220,22,375,49"/>
-<area shape="rect" id="node4" href="$classnode.html#aa1e7887d29390297580769454f769ad6" title="node::adj_edges_end" alt="" coords="225,73,370,100"/>
-</map>

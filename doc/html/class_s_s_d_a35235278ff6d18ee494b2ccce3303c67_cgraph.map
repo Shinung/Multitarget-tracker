@@ -1,7 +1,0 @@
-<map id="SSD::Detect" name="SSD::Detect">
-<area shape="rect" id="node2" href="$class_s_s_d.html#a58c0ef81b4b24424fd967d90da5c6045" title="SSD::Predict" alt="" coords="148,56,247,83"/>
-<area shape="rect" id="node5" href="$_s_s_d_8cpp.html#a9ad3e3d3a4acacc7312fe108b8de242a" title="Argmax" alt="" coords="164,107,231,133"/>
-<area shape="rect" id="node3" href="$class_s_s_d.html#aec550d5312257216d93955cdee13a73e" title="SSD::WrapInputLayer" alt="" coords="295,5,443,32"/>
-<area shape="rect" id="node4" href="$class_s_s_d.html#a83cb8c64cda9b3792c5612613b56c828" title="SSD::Preprocess" alt="" coords="307,56,430,83"/>
-<area shape="rect" id="node6" href="$_s_s_d_8cpp.html#a1c5265d4b3c840d36f7660588fc969d1" title="PairCompare" alt="" coords="320,107,417,133"/>
-</map>

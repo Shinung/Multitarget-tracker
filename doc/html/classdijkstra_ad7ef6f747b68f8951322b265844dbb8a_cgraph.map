@@ -1,6 +1,0 @@
-<map id="dijkstra::shortest_path_edges_begin" name="dijkstra::shortest_path_edges_begin">
-<area shape="rect" id="node2" href="$classdijkstra.html#a405ff80abfc9ad98668534032eed6a5b" title="Returns whether n is reachable from source node. " alt="" coords="605,38,724,65"/>
-<area shape="rect" id="node3" href="$classdijkstra.html#ab2dfb6e0c2b9084fa17e2e6349e20ad9" title="dijkstra::fill_edge_list" alt="" coords="188,63,331,90"/>
-<area shape="rect" id="node4" href="$classdijkstra.html#aa3ef1a7d7dfc33e4a39aff309f873929" title="Predecessor edge of node n on the shortest path from the source node. " alt="" coords="379,89,557,115"/>
-<area shape="rect" id="node5" href="$classdijkstra.html#a99c17ee7c2b55574ea8c2952fac09faf" title="Predecessor node of node n on the shortest path from the source node. " alt="" coords="379,139,557,166"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="lbsp_computeImpl2" name="lbsp_computeImpl2">
-<area shape="rect" id="node2" href="$class_l_b_s_p.html#ab61148341758dbc004660761bca04f84" title="similar to DescriptorExtractor::compute(const cv::Mat&amp; image, ...), but in this case, the descriptors matrix has the same shape as the input matrix (possibly slower, but the result can be displayed) " alt="" coords="188,5,309,32"/>
-<area shape="rect" id="node3" href="$class_l_b_s_p.html#af02407f0a1657cd3e2b955aa250d064e" title="batch version of LBSP::compute2(const cv::Mat&amp; image, ...), also similar to DescriptorExtractor::comp..." alt="" coords="357,5,479,32"/>
-</map>

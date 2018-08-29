@@ -1,9 +1,0 @@
-<map id="planar_embedding::push_back" name="planar_embedding::push_back">
-<area shape="rect" id="node2" href="$classplanar__embedding.html#a4266c731fced0768c0aff40fc6761ecf" title="planar_embedding::planar\l_embedding" alt="" coords="262,5,433,47"/>
-<area shape="rect" id="node3" href="$classplanar__embedding.html#afb772a5c6a3a03fafa6bbc17a4c42a23" title="planar_embedding::operator=" alt="" coords="252,71,443,98"/>
-<area shape="rect" id="node4" href="$classpq__tree.html#a60d97d712c79b072693f75de3f0d328e" title="pq_tree::dfs" alt="" coords="302,122,393,149"/>
-<area shape="rect" id="node5" href="$classpq__tree.html#ae98dec503a8e312db7fd5f28360f3f0e" title="Replaces all the pertinent parts of the PQ&#45;tree after a (successful) reduction by a new P&#45;node..." alt="" coords="491,97,635,123"/>
-<area shape="rect" id="node8" href="$classpq__tree.html#a7b4e6037469858019336255cdbd38fa1" title="Scans whole tree from left to right and stores edges (in the graph) represented by the leaves in em..." alt="" coords="494,147,631,174"/>
-<area shape="rect" id="node6" href="$classplanarity.html#a0a1949c82648889d188b2e748bc461da" title="planarity::run_on_biconnected" alt="" coords="683,122,877,149"/>
-<area shape="rect" id="node7" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="925,122,1023,149"/>
-</map>

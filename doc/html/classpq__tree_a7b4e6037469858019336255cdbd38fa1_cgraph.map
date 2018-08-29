@@ -1,8 +1,0 @@
-<map id="pq_tree::get_frontier" name="pq_tree::get_frontier">
-<area shape="rect" id="node2" href="$classpq__tree.html#a60d97d712c79b072693f75de3f0d328e" title="pq_tree::dfs" alt="" coords="191,107,281,133"/>
-<area shape="rect" id="node3" href="$classpq__node.html#aa9873c0cfad88bc4404857ce57d422e4" title="pq_node::kind" alt="" coords="377,5,480,32"/>
-<area shape="rect" id="node4" href="$classplanar__embedding.html#a20da54f43d855cf81bdd5b09839c4295" title="planar_embedding::push_back" alt="" coords="329,56,528,83"/>
-<area shape="rect" id="node5" href="$classsymlist.html#a525b8d44af5d771fe15916372515cce0" title="Start iteration through elements of list. " alt="" coords="377,107,480,133"/>
-<area shape="rect" id="node6" href="$classsymlist.html#a7283589fa01f79d722f8256d7a6a7883" title="End of iteration through elements of list. " alt="" coords="382,157,475,184"/>
-<area shape="rect" id="node7" href="$classdirection__indicator.html#aef2ff42f0a64c7d10fbf42059c008f38" title="direction_indicator::D" alt="" coords="357,208,501,235"/>
-</map>

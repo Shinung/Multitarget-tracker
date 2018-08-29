@@ -1,4 +1,0 @@
-<map id="MyGraph" name="MyGraph">
-<area shape="rect" id="node3" href="$class_my_tree.html" title="{MyTree\n|# order\l# number\l|+ MyTree()\l+ parent()\l+ root()\l+ is_root()\l+ is_leaf()\l+ get_left_child()\l+ get_right_child()\l+ postorder_traversal()\l+ postorder()\l}" alt="" coords="20,872,171,1081"/>
-<area shape="rect" id="node2" href="$classgraph.html" title="A directed or undirected graph. " alt="" coords="21,5,170,479"/>
-</map>

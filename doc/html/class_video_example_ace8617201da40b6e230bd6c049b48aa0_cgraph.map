@@ -1,6 +1,0 @@
-<map id="VideoExample::CaptureAndDetect" name="VideoExample::CaptureAndDetect">
-<area shape="rect" id="node2" href="$rings_8cpp.html#a77369fc4d5326a16d2c603e032023528" title="f" alt="" coords="304,5,343,32"/>
-<area shape="rect" id="node3" href="$class_video_example.html#a93e23d64075fb2f508423e45d15c5421" title="VideoExample::InitTracker" alt="" coords="236,56,411,83"/>
-<area shape="rect" id="node4" href="$class_video_example.html#a5ea4a212997371399b01aed1d59a80b8" title="VideoExample::Detection. " alt="" coords="239,107,408,133"/>
-<area shape="rect" id="node5" href="$class_video_example.html#af8ea44f17711129d2b954d1f01fee1f0" title="VideoExample::GrayProcessing. " alt="" coords="459,107,665,133"/>
-</map>

@@ -1,9 +1,0 @@
-<map id="L1dist" name="L1dist">
-<area shape="rect" id="node2" href="$class_background_subtractor_l_o_b_s_t_e_r.html#a0c0faf2754a7a74a6ae56cea47207070" title="primary model update function; the learning param is reinterpreted as an integer and should be &gt; 0 (s..." alt="" coords="116,5,327,47"/>
-<area shape="rect" id="node3" href="$class_background_subtractor_su_b_s_e_n_s_e.html#aaa60e2883c2b2cf130820b10104a653b" title="primary model update function; the learning param is used to override the internal learning threshold..." alt="" coords="111,71,332,112"/>
-<area shape="rect" id="node4" href="$_distance_utils_8h.html#a0c9c69badc14ad52f84c924826c8f412" title="computes the L1 distance between two generic arrays " alt="" coords="193,137,250,163"/>
-<area shape="rect" id="node5" href="$_distance_utils_8h.html#a07d56fc246495b7670f9d1dceb9cda28" title="computes the squared L2 distance between two generic variables " alt="" coords="184,187,259,214"/>
-<area shape="rect" id="node8" href="$_distance_utils_8h.html#aac2e775a57cc0c0630a2f25f278df10b" title="computes the gradient magnitude distance between two N&#45;byte vectors using an 8&#45;bit popcount LUT ..." alt="" coords="196,238,247,265"/>
-<area shape="rect" id="node6" href="$_distance_utils_8h.html#ad1f38be237c1ac20984c217ffcd05e06" title="computes the squared L2 distance between two generic arrays " alt="" coords="380,162,455,189"/>
-<area shape="rect" id="node7" href="$_distance_utils_8h.html#a2d0d83af4f531dd9efd02c49f933e3c1" title="computes the L2 distance between two generic arrays " alt="" coords="389,213,446,239"/>
-</map>

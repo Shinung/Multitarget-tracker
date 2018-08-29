@@ -1,5 +1,0 @@
-<map id="MyTree::parent" name="MyTree::parent">
-<area shape="rect" id="node2" href="$classnode.html#a749bfd1316584b96f8c9b0e44ad512f0" title="node::indeg" alt="" coords="192,5,281,32"/>
-<area shape="rect" id="node3" href="$classnode.html#a0c32377f370ae52ed2134ff8d4dac584" title="node::in_edges_begin" alt="" coords="163,56,311,83"/>
-<area shape="rect" id="node4" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="188,107,285,133"/>
-</map>

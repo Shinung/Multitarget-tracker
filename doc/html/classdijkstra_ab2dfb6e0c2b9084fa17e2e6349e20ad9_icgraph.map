@@ -1,4 +1,0 @@
-<map id="dijkstra::fill_edge_list" name="dijkstra::fill_edge_list">
-<area shape="rect" id="node2" href="$classdijkstra.html#ad7ef6f747b68f8951322b265844dbb8a" title="Returns an iterator to the beginning edge of a shortest edge path to node dest. " alt="" coords="196,5,331,47"/>
-<area shape="rect" id="node3" href="$classdijkstra.html#a031e6fef10aa40aad10edc1053ad9cf0" title="Returns an iterator one after the end of a shortest edge path to node dest. " alt="" coords="201,71,325,112"/>
-</map>
