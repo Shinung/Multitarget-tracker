@@ -1,5 +1,0 @@
-<map id="SSDCustomNetDetector" name="SSDCustomNetDetector">
-<area shape="rect" id="node2" href="$class_base_detector.html" title="The BaseDetector class. " alt="" coords="5,233,152,457"/>
-<area shape="rect" id="node3" href="$struct_custom_s_s_d__ctx.html" title="{CustomSSD_ctx\n||}" alt="" coords="177,307,295,384"/>
-<area shape="rect" id="node4" href="$class_queue.html" title="{Queue\&lt; ExecContext \&gt;\n|&#45; mutex_\l&#45; queue_\l&#45; cond_\l|+ Queue()\l+ Queue()\l+ Push()\l+ Pop()\l+ Size()\l}" alt="" coords="157,5,315,171"/>
-</map>

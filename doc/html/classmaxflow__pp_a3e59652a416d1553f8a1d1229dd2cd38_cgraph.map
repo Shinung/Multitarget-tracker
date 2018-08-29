@@ -1,9 +1,0 @@
-<map id="maxflow_pp::single_edge_update" name="maxflow_pp::single_edge_update">
-<area shape="rect" id="node2" href="$classmaxflow__pp.html#a20abf72dadaac19acb027ff5fa62de2a" title="maxflow_pp::create\l_back_edge" alt="" coords="185,115,320,156"/>
-<area shape="rect" id="node3" href="$classgraph.html#a02a0c3a219f75d68caa408ef339d4a1c" title="graph::new_edge" alt="" coords="368,71,488,98"/>
-<area shape="rect" id="node7" href="$classedge.html#a97563b611261478ee19c6ce055f1a3ee" title="edge::target" alt="" coords="383,122,473,149"/>
-<area shape="rect" id="node8" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="379,173,477,199"/>
-<area shape="rect" id="node4" href="$classgraph.html#a0a7a68fa0baa47ef955525c445fa1a04" title="graph::pre_new_edge\l_handler" alt="" coords="539,5,685,47"/>
-<area shape="rect" id="node5" href="$classgraph.html#a3f3121c481746ab0a19eb187da5c0246" title="graph::new_edge_id" alt="" coords="543,71,681,98"/>
-<area shape="rect" id="node6" href="$classgraph.html#a443182426b461aa9f4b1c9f5ac535179" title="graph::post_new_edge\l_handler" alt="" coords="536,123,688,164"/>
-</map>

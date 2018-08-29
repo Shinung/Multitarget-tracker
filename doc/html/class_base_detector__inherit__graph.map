@@ -1,8 +1,0 @@
-<map id="BaseDetector" name="BaseDetector">
-<area shape="rect" id="node2" href="$class_face_detector.html" title="The FaceDetector class. " alt="" coords="5,343,133,465"/>
-<area shape="rect" id="node3" href="$class_motion_detector.html" title="The MotionDetector class. " alt="" coords="157,314,307,494"/>
-<area shape="rect" id="node4" href="$class_pedestrian_detector.html" title="The PedestrianDetector class. " alt="" coords="331,299,493,509"/>
-<area shape="rect" id="node5" href="$class_s_s_d_custom_net_detector.html" title="Detector class for custom caffe&#45;ssd net. " alt="" coords="517,285,707,523"/>
-<area shape="rect" id="node6" href="$class_s_s_d_mobile_net_detector.html" title="The SSDMobileNetDetector class. " alt="" coords="732,277,916,531"/>
-<area shape="rect" id="node7" href="$class_yolo_detector.html" title="The YoloDetector class. " alt="" coords="941,277,1107,531"/>
-</map>

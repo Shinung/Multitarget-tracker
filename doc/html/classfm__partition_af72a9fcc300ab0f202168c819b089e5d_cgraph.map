@@ -1,7 +1,0 @@
-<map id="fm_partition::check" name="fm_partition::check">
-<area shape="rect" id="node2" href="$classgraph.html#aba427ff8ba0f70c68416ec1351344cd8" title="graph::is_undirected" alt="" coords="185,5,324,32"/>
-<area shape="rect" id="node3" href="$classgraph.html#a7ba35a4c4e8343ffb27ed6d9703c6f18" title="graph::edges_begin" alt="" coords="187,56,322,83"/>
-<area shape="rect" id="node4" href="$classgraph.html#aea8d7f976b85b6137f52d915e26639f6" title="graph::edges_end" alt="" coords="192,107,317,133"/>
-<area shape="rect" id="node5" href="$classgraph.html#aec053a4b509d1be804237a80044c54c0" title="graph::nodes_begin" alt="" coords="187,157,322,184"/>
-<area shape="rect" id="node6" href="$classgraph.html#abbf9c0cb5629e98e1142254911238173" title="graph::nodes_end" alt="" coords="192,208,317,235"/>
-</map>

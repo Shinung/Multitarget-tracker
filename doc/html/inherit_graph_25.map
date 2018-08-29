@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_g_base_port.html" title="GBasePort" alt="" coords="5,56,92,83"/>
-<area shape="rect" id="node2" href="$class_g_mac_port.html" title="GMacPort" alt="" coords="157,5,238,32"/>
-<area shape="rect" id="node3" href="$class_g_postscript_port.html" title="GPostscriptPort" alt="" coords="140,56,255,83"/>
-<area shape="rect" id="node4" href="$class_s_v_g_port.html" title="SVGPort" alt="" coords="160,107,235,133"/>
-</map>

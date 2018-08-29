@@ -1,7 +1,0 @@
-<map id="SSD::Preprocess" name="SSD::Preprocess">
-<area shape="rect" id="node2" href="$class_s_s_d.html#a58c0ef81b4b24424fd967d90da5c6045" title="SSD::Predict" alt="" coords="176,31,275,57"/>
-<area shape="rect" id="node3" href="$class_s_s_d.html#a35235278ff6d18ee494b2ccce3303c67" title="Forwarding SSD with a image. " alt="" coords="342,5,437,32"/>
-<area shape="rect" id="node4" href="$class_s_s_d.html#a68c76ba1ebc94d222c1fd624db060f62" title="Forwarding SSD with a image. " alt="" coords="323,56,456,83"/>
-<area shape="rect" id="node5" href="$class_s_s_d_custom_net_detector.html#a9e87debb1ee3634724914830d6c2079d" title="Making cropped images and fowarding SSD net. " alt="" coords="504,49,667,90"/>
-<area shape="rect" id="node6" href="$class_s_s_d_custom_net_detector.html#abcd14fa695e46fab1eab8ea5524c0ba5" title="Detecting with SSD net. " alt="" coords="715,49,877,90"/>
-</map>

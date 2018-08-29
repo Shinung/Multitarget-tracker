@@ -1,5 +1,0 @@
-<map id="GBasePort" name="GBasePort">
-<area shape="rect" id="node2" href="$class_g_mac_port.html" title="{GMacPort\n||+ BeginGroup()\l+ EndGroup()\l}" alt="" coords="5,402,116,494"/>
-<area shape="rect" id="node3" href="$class_g_postscript_port.html" title="{GPostscriptPort\n|# PostscriptStream\l# DocumentFonts\l# fill_r\l# fill_g\l# fill_b\l|+ GPostscriptPort()\l+ ~GPostscriptPort()\l+ DrawArc()\l+ DrawCircle()\l+ DrawLine()\l+ DrawRect()\l+ DrawText()\l+ FillCircle()\l+ SetPenWidth()\l+ SetCurrentFont()\land 6 more...\l}" alt="" coords="140,307,283,589"/>
-<area shape="rect" id="node4" href="$class_s_v_g_port.html" title="{SVGPort\n|# svgStream\l# fontString\l|+ SVGPort()\l+ DrawArc()\l+ DrawCircle()\l+ DrawLine()\l+ DrawRect()\l+ DrawText()\l+ SetPenWidth()\l+ SetCurrentFont()\l+ StartPicture()\l+ EndPicture()\l+ BeginGroup()\l+ EndGroup()\l+ GetPrintingRect()\l}" alt="" coords="307,314,441,582"/>
-</map>

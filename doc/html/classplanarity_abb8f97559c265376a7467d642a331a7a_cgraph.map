@@ -1,6 +1,0 @@
-<map id="planarity::dfs_bushform" name="planarity::dfs_bushform">
-<area shape="rect" id="node2" href="$classnode.html#a12cb1a2167f5f03c054de5e707d3156f" title="node::adj_edges_iterator" alt="" coords="412,24,576,51"/>
-<area shape="rect" id="node3" href="$classnode.html#a788d3e932a5c164caa5ec82aa47551b2" title="node::adj_edges_begin" alt="" coords="209,24,364,51"/>
-<area shape="rect" id="node4" href="$classnode.html#aa1e7887d29390297580769454f769ad6" title="node::adj_edges_end" alt="" coords="214,75,359,102"/>
-<area shape="rect" id="node5" href="$classnode.html#a13dbd1809a33a5efede64a359e53a363" title="node::opposite" alt="" coords="233,126,340,152"/>
-</map>

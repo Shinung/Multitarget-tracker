@@ -1,5 +1,0 @@
-<map id="planar_embedding::write_st" name="planar_embedding::write_st">
-<area shape="rect" id="node2" href="$classst__number.html#a1eddb2577b16109d22cde98a8ffde057" title="Iteration through the nodes of graph st&#45;numbered in last run in st&#45;number order, i.e. from 1 to highest st&#45;number. " alt="" coords="233,5,356,32"/>
-<area shape="rect" id="node3" href="$classst__number.html#a3912b83a8cbddcb1fc804d20be528d52" title="Iteration through nodes of graph in st&#45;number order. " alt="" coords="239,56,351,83"/>
-<area shape="rect" id="node4" href="$classnode.html#a13dbd1809a33a5efede64a359e53a363" title="node::opposite" alt="" coords="241,107,348,133"/>
-</map>

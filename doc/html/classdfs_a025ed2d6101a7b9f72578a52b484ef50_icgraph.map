@@ -1,7 +1,0 @@
-<map id="dfs::scan_whole_graph" name="dfs::scan_whole_graph">
-<area shape="rect" id="node2" href="$classcomponents.html#af6a1be8a61478e8c8115cb66a40c9636" title="Creates connected components algorithm object. " alt="" coords="215,5,387,32"/>
-<area shape="rect" id="node3" href="$classbiconnectivity.html#ab7c9e256a4d7a4ffea33b20f014e1f69" title="Enables or disables the storing of biconnected components. " alt="" coords="233,57,370,98"/>
-<area shape="rect" id="node4" href="$classbiconnectivity.html#a774fd08203a6d164605afc4cdc8b9201" title="If enabled edges will be added to the graph in order to make it biconnected, if cutpoints are discove..." alt="" coords="231,122,371,163"/>
-<area shape="rect" id="node6" href="$classbiconnectivity.html#a2ac204c72d74090e4e24e83a98351f6a" title="Creates biconnectivity algorithm object. " alt="" coords="208,188,395,215"/>
-<area shape="rect" id="node5" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="443,129,540,156"/>
-</map>

@@ -9,3 +9,4 @@ yolov3-urbantracker_13300.weights
 *.caffemodel
 *.weights
 data/videos/
+doc/

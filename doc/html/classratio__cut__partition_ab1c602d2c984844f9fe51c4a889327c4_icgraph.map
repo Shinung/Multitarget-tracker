@@ -1,8 +1,0 @@
-<map id="ratio_cut_partition::inital_gain_of_node_on_sideB" name="ratio_cut_partition::inital_gain_of_node_on_sideB">
-<area shape="rect" id="node2" href="$classratio__cut__partition.html#a19fc538dbdaf8b1e0810a5bcde348c38" title="ratio_cut_partition\l::init_filling_buckets" alt="" coords="193,62,329,103"/>
-<area shape="rect" id="node3" href="$classratio__cut__partition.html#a53b8ad2845ed39cc2677721c747bdce6" title="ratio_cut_partition\l::init_data_structure" alt="" coords="377,62,515,103"/>
-<area shape="rect" id="node4" href="$classratio__cut__partition.html#a4ab180ca4cf57c811e3478c3de4c4dc3" title="ratio_cut_partition::run" alt="" coords="736,69,887,96"/>
-<area shape="rect" id="node5" href="$classratio__cut__partition.html#af4723810ece28284c79001b9ccf42ca4" title="ratio_cut_partition\l::initialization" alt="" coords="563,29,688,70"/>
-<area shape="rect" id="node6" href="$classratio__cut__partition.html#a758382177ff8be996d0be78a3cca069b" title="ratio_cut_partition\l::iterative_shifting" alt="" coords="563,94,688,135"/>
-<area shape="rect" id="node7" href="$classratio__cut__partition.html#ae257dadc6cea5aef11badb68eadba0a5" title="ratio_cut_partition\l::group_swapping" alt="" coords="563,159,688,201"/>
-</map>

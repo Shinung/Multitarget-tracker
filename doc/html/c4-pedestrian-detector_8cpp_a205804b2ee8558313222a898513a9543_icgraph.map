@@ -1,6 +1,0 @@
-<map id="ComputeCT" name="ComputeCT">
-<area shape="rect" id="node2" href="$class_detection_scanner.html#af275e1362a1bc351f9a92323e0860d27" title="DetectionScanner::InitImage" alt="" coords="144,5,329,32"/>
-<area shape="rect" id="node5" href="$class_detection_scanner.html#a01790349ec7aef4ff03335d5e76f183a" title="DetectionScanner::Resize\lImage" alt="" coords="150,57,323,98"/>
-<area shape="rect" id="node3" href="$class_detection_scanner.html#aa27d494b253975922d853070aab7ce4d" title="DetectionScanner::FastScan" alt="" coords="377,35,567,61"/>
-<area shape="rect" id="node4" href="$class_pedestrian_detector.html#a27a7c2c3b358f6e44a7de71f808597c2" title="PedestrianDetector::Detect. " alt="" coords="615,27,748,69"/>
-</map>

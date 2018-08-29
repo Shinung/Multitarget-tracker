@@ -1,8 +1,0 @@
-<map id="BackgroundSubtractorLOBSTER::initialize" name="BackgroundSubtractorLOBSTER::initialize">
-<area shape="rect" id="node2" href="$class_l_b_s_p.html#ad97557be4bc6cfd7b0fa4b01ab8f8c55" title="utility function, used to filter out bad pixels in a ROI that would trigger out of bounds error becau..." alt="" coords="318,5,447,32"/>
-<area shape="rect" id="node3" href="$class_l_b_s_p.html#a4a5f635868b6b81ba53df2692ee3dfd8" title="utility function, shortcut/lightweight/direct single&#45;point LBSP computation function for extra flexib..." alt="" coords="267,56,499,83"/>
-<area shape="rect" id="node4" href="$class_l_b_s_p.html#a35f2abfacc0d540810d678ff5e8cd619" title="utility function, shortcut/lightweight/direct single&#45;point LBSP computation function for extra flexib..." alt="" coords="264,107,501,133"/>
-<area shape="rect" id="node5" href="$class_background_subtractor_l_o_b_s_t_e_r.html#aeb3b23c1f47cfe71a73f3ca47ec06a75" title="refreshes all samples based on the last analyzed frame " alt="" coords="277,209,488,250"/>
-<area shape="rect" id="node6" href="$rings_8cpp.html#a77369fc4d5326a16d2c603e032023528" title="f" alt="" coords="611,161,649,188"/>
-<area shape="rect" id="node7" href="$_rand_utils_8h.html#aad1feb1fa9a8e94c8fac60b9a01e1a5b" title="returns a random init/sampling position for the specified pixel position; also guards against out&#45;of&#45;..." alt="" coords="549,216,711,243"/>
-</map>

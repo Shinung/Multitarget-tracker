@@ -1,8 +1,0 @@
-<map id="CreateDetector" name="CreateDetector">
-<area shape="rect" id="node2" href="$class_motion_detector_example.html#ae814c565a7d6a9dbab9e8a99c790a77f" title="InitTracker. " alt="" coords="183,5,345,47"/>
-<area shape="rect" id="node3" href="$class_face_detector_example.html#a605d06dff8405d78a99ef3c383e88ad5" title="InitTracker. " alt="" coords="189,71,339,112"/>
-<area shape="rect" id="node4" href="$class_pedestrian_detector_example.html#aae97de4cc14d29aa81b446ea66fa9abc" title="InitTracker. " alt="" coords="172,136,356,177"/>
-<area shape="rect" id="node5" href="$class_s_s_d_mobile_net_example.html#a1583e70ecd77cf3c67a062a848acc044" title="InitTracker. " alt="" coords="185,201,343,243"/>
-<area shape="rect" id="node6" href="$class_yolo_example.html#a60980995a54b8bcfcf94bd4e04d0eeaa" title="InitTracker. " alt="" coords="181,267,347,294"/>
-<area shape="rect" id="node7" href="$class_custom_s_s_d_mobile_net_example.html#a5d5c5184860ac247bd2f562d6678e5e2" title="Tracker and Detector will be initilaized in this function. " alt="" coords="163,319,365,360"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="MyTree::parent" name="MyTree::parent">
-<area shape="rect" id="node2" href="$gml2nestedsql_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="371,5,422,32"/>
-<area shape="rect" id="node3" href="$class_my_tree.html#a04b0f390bb74c3bdb157cad08872076e" title="MyTree::root" alt="" coords="163,56,257,83"/>
-<area shape="rect" id="node4" href="$class_my_tree.html#ac375615ebccedd180aee25c5ea3f8ef1" title="MyTree::postorder_traversal" alt="" coords="305,56,488,83"/>
-</map>

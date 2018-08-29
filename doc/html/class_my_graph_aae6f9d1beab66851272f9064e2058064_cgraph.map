@@ -1,5 +1,0 @@
-<map id="MyGraph::load_edge_info_handler" name="MyGraph::load_edge_info_handler">
-<area shape="rect" id="node2" href="$class_my_graph.html#a3f10b4d50b97fc6f33a767e9db7fdd8b" title="MyGraph::store_edge\l_string" alt="" coords="196,5,343,47"/>
-<area shape="rect" id="node3" href="$class_my_graph.html#a116ec287755233fe20469b6df4062ccc" title="MyGraph::store_edge\l_integer" alt="" coords="196,71,343,112"/>
-<area shape="rect" id="node4" href="$class_my_graph.html#a5814b5aa19c45ba8cf5004c8b9ae3667" title="MyGraph::store_edge\l_double" alt="" coords="196,136,343,177"/>
-</map>

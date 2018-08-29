@@ -1,7 +1,0 @@
-<map id="getRandSamplePosition" name="getRandSamplePosition">
-<area shape="rect" id="node2" href="$class_background_subtractor_l_o_b_s_t_e_r.html#aeb3b23c1f47cfe71a73f3ca47ec06a75" title="refreshes all samples based on the last analyzed frame " alt="" coords="220,5,431,47"/>
-<area shape="rect" id="node4" href="$class_background_subtractor_su_b_s_e_n_s_e.html#abe80bf042f2b7a1f72942460d74b1f02" title="refreshes all samples based on the last analyzed frame " alt="" coords="215,71,436,112"/>
-<area shape="rect" id="node3" href="$class_background_subtractor_l_o_b_s_t_e_r.html#a452bea31dcbd2e10efc701cc2cd25776" title="(re)initiaization method; needs to be called before starting background subtraction ..." alt="" coords="489,5,700,47"/>
-<area shape="rect" id="node5" href="$class_background_subtractor_su_b_s_e_n_s_e.html#ac84aa66030b04a72435ef473cf0e6a3f" title="(re)initiaization method; needs to be called before starting background subtraction ..." alt="" coords="484,71,705,112"/>
-<area shape="rect" id="node6" href="$class_background_subtractor_su_b_s_e_n_s_e.html#aaa60e2883c2b2cf130820b10104a653b" title="primary model update function; the learning param is used to override the internal learning threshold..." alt="" coords="484,136,705,177"/>
-</map>

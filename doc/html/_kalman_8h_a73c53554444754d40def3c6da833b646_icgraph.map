@@ -1,8 +1,0 @@
-<map id="sqr" name="sqr">
-<area shape="rect" id="node2" href="$_kalman_8h.html#a956aedf9af504c89aa2ca585a168dc47" title="get_lin_regress_params " alt="" coords="93,56,253,83"/>
-<area shape="rect" id="node7" href="$class_c_track.html#ab16e6724f0e9d22301d46efda587f567" title="CTrack::CheckStatic. " alt="" coords="305,107,448,133"/>
-<area shape="rect" id="node3" href="$class_t_kalman_filter.html#a0c25b9a1a9676956aed0db44ad56696a" title="TKalmanFilter::Update" alt="" coords="301,56,452,83"/>
-<area shape="rect" id="node4" href="$class_c_track.html#a0f4fc1dc488e8ae339e988962dae6873" title="CTrack::RectUpdate" alt="" coords="502,5,641,32"/>
-<area shape="rect" id="node6" href="$class_c_track.html#a19453a750a9ec71d6f3465f6031ad64b" title="PointUpdate. " alt="" coords="500,56,643,83"/>
-<area shape="rect" id="node5" href="$class_c_track.html#a582c4e1ad42d5985e0f395fa5a48bdbc" title="Update. " alt="" coords="691,56,803,83"/>
-</map>

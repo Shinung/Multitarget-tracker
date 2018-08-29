@@ -1,9 +1,0 @@
-<map id="graph::pre_hide_node_handler" name="graph::pre_hide_node_handler">
-<area shape="rect" id="node2" href="$classgraph.html#a214618b5e3c02695779350532506e225" title="graph::hide_node" alt="" coords="200,93,321,120"/>
-<area shape="rect" id="node3" href="$classgraph.html#a15b766094bb0b97ef53e06e7c26b2197" title="graph::induced_subgraph" alt="" coords="385,64,552,91"/>
-<area shape="rect" id="node7" href="$classmaxflow__pp.html#a93bb037fd3fc83c6558b560fc4da2340" title="maxflow_pp::hide_unreachable\l_nodes" alt="" coords="369,115,568,157"/>
-<area shape="rect" id="node4" href="$components_8cpp.html#ac0f2228420376f4db7e1274f2b41667c" title="main" alt="" coords="658,5,709,32"/>
-<area shape="rect" id="node5" href="$classplanarity.html#a8a66dd6682b3111e39be103db127e6b0" title="planarity::switch_to\l_component" alt="" coords="616,57,751,98"/>
-<area shape="rect" id="node6" href="$classplanarity.html#a93232e765c08dd2a4c00d192bb48b5fc" title="Runs planarity test on G. " alt="" coords="799,64,896,91"/>
-<area shape="rect" id="node8" href="$classmaxflow__pp.html#a07c7cb1ae5db23d87cf49ce7769b2814" title="maxflow_pp::run" alt="" coords="625,123,741,149"/>
-</map>

@@ -1,8 +1,0 @@
-<map id="CTrack::RectUpdate" name="CTrack::RectUpdate">
-<area shape="rect" id="node2" href="$class_t_kalman_filter.html#af112feed15a064055987a1faedf9673d" title="TKalmanFilter::GetRectPrediction" alt="" coords="192,5,408,32"/>
-<area shape="rect" id="node3" href="$class_c_track.html#ab7ffab3c66234eeb542d0411abfa24e6" title="CreateExternalTracker. " alt="" coords="200,56,400,83"/>
-<area shape="rect" id="node4" href="$class_t_kalman_filter.html#a0c25b9a1a9676956aed0db44ad56696a" title="TKalmanFilter::Update" alt="" coords="225,107,375,133"/>
-<area shape="rect" id="node5" href="$_kalman_8h.html#a956aedf9af504c89aa2ca585a168dc47" title="get_lin_regress_params " alt="" coords="467,81,627,108"/>
-<area shape="rect" id="node7" href="$class_t_kalman_filter.html#a6b1bb8fb881f82ce0a766e6ea41f159c" title="TKalmanFilter::CreateLinear" alt="" coords="456,132,639,159"/>
-<area shape="rect" id="node6" href="$_kalman_8h.html#a73c53554444754d40def3c6da833b646" title="sqr " alt="" coords="687,81,727,108"/>
-</map>

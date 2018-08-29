@@ -1,9 +1,0 @@
-<map id="planarity::add_to_embedding" name="planarity::add_to_embedding">
-<area shape="rect" id="node2" href="$classplanar__embedding.html#ac0b41dd43adb80ed898b597e791230d8" title="planar_embedding::adj\l_edges_begin" alt="" coords="263,5,415,47"/>
-<area shape="rect" id="node3" href="$classplanar__embedding.html#a1345ee93995019d81cc78fb2806acc88" title="planar_embedding::adj\l_edges_end" alt="" coords="263,71,415,112"/>
-<area shape="rect" id="node4" href="$classplanar__embedding.html#aaba1216e3c7497267573cc56b4368929" title="planar_embedding::pos" alt="" coords="261,137,417,163"/>
-<area shape="rect" id="node7" href="$classplanar__embedding.html#a151a1e7cf6cfbbd0a09c467ec8bc61d1" title="planar_embedding::adjacency" alt="" coords="241,187,436,214"/>
-<area shape="rect" id="node8" href="$classsymlist.html#ac2bd4d9db62ea6a3282662c62a97c3b2" title="Inserts the element it points to before pos into this list. " alt="" coords="285,238,392,265"/>
-<area shape="rect" id="node5" href="$classedge.html#ae82d5701f7e6f71edc3c8b0e34bcd2b7" title="edge::source" alt="" coords="484,111,581,138"/>
-<area shape="rect" id="node6" href="$classedge.html#a97563b611261478ee19c6ce055f1a3ee" title="edge::target" alt="" coords="487,162,578,189"/>
-</map>

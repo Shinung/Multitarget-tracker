@@ -1,8 +1,0 @@
-<map id="ratio_cut_partition::check" name="ratio_cut_partition::check">
-<area shape="rect" id="node2" href="$classgraph.html#aba427ff8ba0f70c68416ec1351344cd8" title="graph::is_undirected" alt="" coords="191,5,330,32"/>
-<area shape="rect" id="node3" href="$classgraph.html#a7ba35a4c4e8343ffb27ed6d9703c6f18" title="graph::edges_begin" alt="" coords="193,56,328,83"/>
-<area shape="rect" id="node4" href="$classgraph.html#aea8d7f976b85b6137f52d915e26639f6" title="graph::edges_end" alt="" coords="198,107,323,133"/>
-<area shape="rect" id="node5" href="$classgraph.html#aec053a4b509d1be804237a80044c54c0" title="graph::nodes_begin" alt="" coords="193,157,328,184"/>
-<area shape="rect" id="node6" href="$classgraph.html#abbf9c0cb5629e98e1142254911238173" title="graph::nodes_end" alt="" coords="198,208,323,235"/>
-<area shape="rect" id="node7" href="$classgraph.html#a42c78e0a9f115655e3ff0efe35ebfc4e" title="graph::number_of_nodes" alt="" coords="179,259,343,285"/>
-</map>

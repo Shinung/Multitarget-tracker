@@ -1,6 +1,0 @@
-<map id="GPostscriptPort::DrawRect" name="GPostscriptPort::DrawRect">
-<area shape="rect" id="node2" href="$class_g_rect.html#a2095ad1d204b942a45bc8ed1546df937" title="GRect::GetLeft" alt="" coords="240,5,349,32"/>
-<area shape="rect" id="node3" href="$class_g_rect.html#ac346895770ff4c98c672485a05819f55" title="GRect::GetTop" alt="" coords="240,56,349,83"/>
-<area shape="rect" id="node4" href="$class_g_rect.html#af36a407452070f2e93a25dbafd3b4314" title="GRect::GetWidth" alt="" coords="233,107,356,133"/>
-<area shape="rect" id="node5" href="$class_g_rect.html#a8d2b0a2c06688c2dad74bd0789f57d73" title="GRect::GetHeight" alt="" coords="232,157,357,184"/>
-</map>

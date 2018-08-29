@@ -1,4 +1,0 @@
-<map id="CascadeDetector" name="CascadeDetector">
-<area shape="rect" id="node2" href="$class_node_detector.html" title="{NodeDetector\n|+ type\l+ thresh\l+ featurelength\l+ upper_bound\l+ index\l&#45; minvalue\l&#45; maxvalue\l|+ NodeDetector()\l+ ~NodeDetector()\l+ Load()\l+ Classify()\l+ SetValues()\l}" alt="" coords="70,307,199,531"/>
-<area shape="rect" id="node3" href="$class_array2d_c.html" title="{Array2dC\&lt; double \&gt;\n|+ nrow\l+ ncol\l+ p\l+ buf\l|+ Array2dC()\l+ Array2dC()\l+ Array2dC()\l+ ~Array2dC()\l+ operator=()\l+ Create()\l+ Swap()\l+ Zero()\l+ Clear()\l}" alt="" coords="5,5,144,244"/>
-</map>

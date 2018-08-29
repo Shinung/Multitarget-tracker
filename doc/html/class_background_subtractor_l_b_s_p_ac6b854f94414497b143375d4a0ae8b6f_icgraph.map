@@ -1,3 +1,0 @@
-<map id="BackgroundSubtractorLBSP::initialize" name="BackgroundSubtractorLBSP::initialize">
-<area shape="rect" id="node2" href="$class_background_subtractor_l_b_s_p.html#a34dc38d3d925d46d289c750786f232dc" title="sets the ROI to be used for descriptor extraction (note: this function will reinit the model and retu..." alt="" coords="239,5,424,47"/>
-</map>

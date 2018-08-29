@@ -1,9 +1,0 @@
-<map id="MyGraph" name="MyGraph">
-<area shape="rect" id="node2" href="$classgraph.html" title="A directed or undirected graph. " alt="" coords="5,235,155,708"/>
-<area shape="rect" id="node3" href="$classnode__map.html" title="{node_map\&lt; std::string \&gt;\n||+ node_map()\l+ node_map()\l}" alt="" coords="179,425,343,517"/>
-<area shape="rect" id="node4" href="$classne__map.html" title="{ne_map\&lt; node, std::\lstring, graph, std::\lallocator\&lt; std::string \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="168,5,333,185"/>
-<area shape="rect" id="node5" href="$classedge__map.html" title="{edge_map\&lt; int \&gt;\n||+ edge_map()\l+ edge_map()\l}" alt="" coords="368,425,488,517"/>
-<area shape="rect" id="node6" href="$classne__map.html" title="{ne_map\&lt; edge, int,\l graph, std::allocator\l\&lt; int \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="357,5,499,185"/>
-<area shape="rect" id="node7" href="$classedge__map.html" title="{edge_map\&lt; std::string \&gt;\n||+ edge_map()\l+ edge_map()\l}" alt="" coords="518,425,682,517"/>
-<area shape="rect" id="node8" href="$classne__map.html" title="{ne_map\&lt; edge, std::\lstring, graph, std::\lallocator\&lt; std::string \&gt; \&gt;\n|&#45; data\l|+ init()\l+ operator[]()\l+ operator[]()\l+ clear()\l# ne_map()\l# ne_map()\l}" alt="" coords="523,5,688,185"/>
-</map>

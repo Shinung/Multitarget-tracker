@@ -1,8 +1,0 @@
-<map id="VideoExample" name="VideoExample">
-<area shape="rect" id="node2" href="$class_custom_s_s_d_mobile_net_example.html" title="This class is for customized caffe library It is need to build caffe library. " alt="" coords="5,483,228,633"/>
-<area shape="rect" id="node3" href="$class_face_detector_example.html" title="The FaceDetectorExample class. " alt="" coords="253,505,423,611"/>
-<area shape="rect" id="node4" href="$class_motion_detector_example.html" title="The MotionDetectorExample class. " alt="" coords="447,505,629,611"/>
-<area shape="rect" id="node5" href="$class_pedestrian_detector_example.html" title="The PedestrianDetectorExample class. " alt="" coords="653,505,857,611"/>
-<area shape="rect" id="node6" href="$class_s_s_d_mobile_net_example.html" title="The SSDMobileNetExample class. " alt="" coords="882,497,1061,619"/>
-<area shape="rect" id="node7" href="$class_yolo_example.html" title="The YoloExample class. " alt="" coords="1085,497,1220,619"/>
-</map>
